@@ -35,12 +35,12 @@ https://www.netapp.com/us/media/patents-page.pdf[^]
 
 https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
+== Astra API license
+
+https://docs.netapp.com/us-en/astra-automation/media/astra-api-license.pdf[^]
+
 == Open source
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
 https://docs.netapp.com/us-en/astra/media/notice.pdf[Notice for Astra^]
-
-== License for the Astra API
-
-link:./media/astra-api-license.pdf[Astra API License]
