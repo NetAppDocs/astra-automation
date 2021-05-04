@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Hello word
+= Hello world
 :hardbreaks:
 :nofooter:
 :icons: font
