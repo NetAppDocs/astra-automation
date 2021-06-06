@@ -17,7 +17,7 @@ You can issue a simple Curl command at your workstation’s CLI to get started u
 
 .Before you begin
 
-The Curl utility must be available on your local workstation. You must also have an API token and the associated account identifier. See link:get_api_token.html[Getting an API access token] for more information.
+The Curl utility must be available on your local workstation. You must also have an API token and the associated account identifier. See link:get_api_token.html[Get an API access token] for more information.
 
 .Curl example
 

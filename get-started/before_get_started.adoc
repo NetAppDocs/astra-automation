@@ -22,6 +22,6 @@ Make sure to review link:../rest-core/rest_implementation.html[Core REST impleme
 ===== Have Cloud Central account credentials
 You'll need the *Auth0* account credentials to sign in to the Astra web user interface and generate an API token.
 
-===== Getting more information
+===== Get more information
 
 You should be aware of the additional information resources as suggested in link:../information/additional_resources.html[Additional resources].

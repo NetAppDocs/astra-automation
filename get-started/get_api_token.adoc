@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Getting an API access token
+= Get an API access token
 :hardbreaks:
 :nofooter:
 :icons: font

@@ -26,7 +26,7 @@ To use the Astra REST API, you must provide an API token on every request in the
 * A token never expires after it is created.
 * You can revoke a token at any time at the Astra web user interface.
 
-See link:../get-started/get_api_token.html[Getting an API access token] for more information.
+See link:../get-started/get_api_token.html[Get an API access token] for more information.
 
 == Revoking an API access token
 

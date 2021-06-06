@@ -4,7 +4,7 @@ url: /get-started/get-started.html
 entries:
   - title: Before you begin
     url: /get-started/before_get_started.html
-  - title: Getting an API token
+  - title: Get an API token
     url: /get-started/get_api_token.html
   - title: Hello world
     url: /get-started/hello_world.html
