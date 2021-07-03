@@ -60,21 +60,20 @@ The HTTP methods or verbs supported by the API are presented in the table below.
 |Delete
 |Deletes an existing resource instance.
 
-|HEAD
-|Read
-|Essentially issues a GET request but only returns the HTTP response headers.
-
 |===
 
 === Request and response headers
 
-The following table summaries the HTTP headers used with the Astra REST API. See https://www.rfc-editor.org/rfc/rfc7232.txt[RFC 7232^] for more information.
+The following table summaries the HTTP headers used with the Astra REST API.
+
+[NOTE]
+See https://www.rfc-editor.org/rfc/rfc7232.txt[RFC 7232^] and https://www.rfc-editor.org/rfc/rfc7233.txt[RFC 7233^] for more information.
 
 [cols="30,15,55"*,options="header"]
 |===
 |Header
 |Type
-|Notes
+|Usage notes
 
 |Accept
 |Request

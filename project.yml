@@ -7,6 +7,8 @@ sidebar:
     - section: rest-core
     - section: additional
     - section: endpoints
+    - section: workflows
+    - section: python
     - section: reference
     - section: information
     - title: Legal notices
@@ -58,3 +60,19 @@ homepage:
         - title: Details of the Astra REST API resources
           summary: Review a concise introduction to the various Astra resources.
           url: /endpoints/resources.html
+    - title: Workflows
+      links:
+        - title: Preparation
+          summary: Prepare to use the Astra workflows.
+          url: /get-started/prepare_to_use_workflows.html
+        - title: Workflows by category
+          summary: The workflows are organized in several different categories.
+          url: /workflows/workflows.html
+    - title: Python
+      links:
+        - title: Before you begin
+          summary: Prepare to run the sample Python scripts.
+          url: /python/python_before.html
+        - title: List the managed apps
+          summary: Run a sample script to list the managed apps.
+          url: /python/py_list_man_apps.html

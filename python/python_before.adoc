@@ -1,0 +1,49 @@
+---
+sidebar: sidebar
+permalink: python/python_before.html
+keywords:
+summary:
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You must prepare the environment and the required input files before running the sample Python scripts.
+
+== Prepare the environment
+
+The basic configuration requirements to run the Python scripts are described below.
+
+===== Python 3
+You need to have the latest version of Python 3 installed.
+
+===== Additional libraries
+The *Requests* and *urllib3* libraries must be installed. You can use pip or another Python management tool as appropriate for your environment.
+
+===== Network access
+The client workstation where the scripts run must have network access to the internet and be able to reach the Astra site at `https://astra.netapp.io`.
+
+===== Identity information
+You need a valid Astra account with the account identifier and API token. See link:../get-started/get_api_token.html[Get an API token] for more information.
+
+== Create the JSON input files
+
+The Python scripts rely on configuration information contained in JSON input files. Sample files are provided below.
+
+[NOTE]
+You need to update the samples as appropriate for your environment.
+
+===== Identity information
+
+The following file contains the API token and Astra account. You need to pass this file to Python scripts using the `-i` (or `--identity`) CLI parameter.
+
+[source,json]
+{
+  "api_token": "kH4CA_uVIa8q9UuPzhJaAHaGlaR7-no901DkkrVjIXk=",
+  "account_id": "5131dfdf-03a4-5218-ad4b-fe84442b9786"
+}

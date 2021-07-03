@@ -1,0 +1,103 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_list_unman_apps.html
+keywords:
+summary:
+---
+
+= List the unmanaged apps
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can list the applications that are currently not managed by Astra. You might do this as part of selecting an app to be managed.
+
+[NOTE]
+This workflow lists all the Astra applications. You can look at the output to determine which apps are unmanaged by examining the `managedState` field.
+
+=== 1. List the applications
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{accountID}/topology/v1/apps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|include
+|Query
+|No
+|Optionally select the values you want returned in the response.
+|===
+
+===== Curl example: Return all data for all apps
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/apps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== Curl example: Return the name, id, and managedState for all apps
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/apps?include=name,id,managedState' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== JSON output example
+[source,json]
+{{
+  "items": [
+    [
+      "maria",
+      "eed19f78-0884-4792-bb7a-313258c6b0b1",
+      "unmanaged"
+    ],
+    [
+      "mariadb-mariadb",
+      "8da20fff-c69c-4170-bb0d-e4f91c5a1333",
+      "managed"
+    ],
+    [
+      "test-postgres-app",
+      "1ee6235b-cda1-45cb-8d4c-630bdb8b41a5",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql",
+      "e591ee59-ea90-4a9f-8e6c-d2b6e8647096",
+      "unmanaged"
+    ],
+    [
+      "kube-system",
+      "077a2f73-4b51-4d04-8c6c-f63b3b069755",
+      "unmanaged"
+    ],
+    [
+      "trident",
+      "5b6fc28f-e308-4653-b9d2-6d66a764d2e1",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql-clone",
+      "06be05c5-763e-4d73-bd06-1f27f5f2e130",
+      "unmanaged"
+    ],
+    [
+      "davidns-postgres-app",
+      "11e046b7-ec64-4184-85b3-debcc3b1da4d",
+      "managed"
+    ]
+  ],
+  "metadata": {}
+}

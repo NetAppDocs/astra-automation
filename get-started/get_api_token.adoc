@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Get an API access token
+= Get an API token
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -38,7 +38,7 @@ https://astra.netapp.io/[https://astra.netapp.io^]
 
 . Click the icon to copy the token string to the clipboard and save it in your editor.
 
-. Copy and save the account id.
+. Copy and save the account id which is available on the same page.
 
 .After you finish
 

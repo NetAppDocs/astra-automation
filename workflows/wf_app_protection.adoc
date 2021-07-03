@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_app_protection.html
+keywords:
+summary:
+---
+
+= Application protection
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use these workflows to protect your managed applications through snapshots and backups.

@@ -1,0 +1,54 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_unmanage_app.html
+keywords:
+summary:
+---
+
+= Unmanage an app
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can remove a managed app when it's no longer needed. Removing a managed application also deletes the associated schedules.
+
+=== Before you begin
+
+You must have the ID of the managed app you want to unmanage. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+
+The application's backups and snapshots are not automatically removed when it is deleted. If you no longer need the backups and snapshots, you should delete them before removing the application.
+
+=== 1. Unmanaged the app
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|DELETE
+|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|managed app id
+|Path
+|Yes
+|Identifies the managed application to remove.
+|===
+
+===== Curl example: Remove a managed app
+[source,curl]
+curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

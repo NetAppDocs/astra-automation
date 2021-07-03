@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_app_control.html
+keywords:
+summary:
+---
+
+= Application control
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+These workflows allow you to control the managed and unmanaged applications. You can list the apps as well as create and remove a managed app.

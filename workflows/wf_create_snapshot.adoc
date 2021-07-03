@@ -1,0 +1,64 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_create_snapshot.html
+keywords:
+summary:
+---
+
+= Create a snapshot for a managed app
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a snapshot for a specific managed application.
+
+=== Before you begin
+
+You must have the ID of the managed app you want to create a snapshot for. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+
+=== 1. Create a snapshot
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appSnaps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|managed app id
+|Path
+|Yes
+|Identifies the managed application where the snapshot will be created.
+|JSON
+|Body
+|Yes
+|Provides the parameters for the snapshot. See the example below.
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-appSnap",
+  "version": "1.0",
+  "name": "snapshot-david-1"
+}
+
+===== Curl example: Create a snapshot for the app
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput

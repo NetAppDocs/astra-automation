@@ -1,0 +1,60 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_manage_app.html
+keywords:
+summary:
+---
+
+= Manage an app
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a managed application based on an application already known to Astra. When an application is managed, you can protect it by taking regular backups and snapshots.
+
+=== Before you begin
+
+You must have the ID of the discovered app you want to manage. If needed you can use the workflow link:wf_list_unman_apps.html[List the unmanaged apps] to locate the application.
+
+=== 1. Manage the application
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/account/{accountID}/k8s/v1/managedApps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|JSON
+|Body
+|Yes
+|Provides the parameters needed to identify the application to be managed. See the example below.
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-managedApp",
+  "version": "1.1",
+  "id": "7da20fff-c69d-4270-bb0d-a4f91c5a1333"
+}
+
+===== Curl example: Manage an app
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --d @JSONinput

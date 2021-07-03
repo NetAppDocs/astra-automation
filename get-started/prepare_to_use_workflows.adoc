@@ -1,0 +1,79 @@
+---
+sidebar: sidebar
+permalink: get-started/prepare_to_use_workflows.html
+keywords:
+summary:
+---
+
+= Prepare to use the workflows
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You should be familiar with the organization and format of the Astra workflows before using them with a live deployment.
+
+== Introduction
+
+A _workflow_ is a sequence of one or more steps needed to accomplish a specific administrative task or goal. Each step in an Astra workflow is one of the following:
+
+* REST API call (with details such as curl and JSON examples)
+* Invocation of another Astra workflow
+* Miscellaneous related task (such as making a required design decision)
+
+The workflows include the core steps and parameters needed to accomplish each task. They provide a starting point for customizing your automation environment.
+
+== Common input parameters
+
+The input parameters described below are common to all the curl samples used to illustrate a REST API call.
+
+[NOTE]
+Because these input parameters are universally required, they are not described further in the individual workflows. If additional input parameters are used for a specific curl example, they are described in the section *Additional input parameters*.
+
+=== Path parameters
+
+The endpoint path used with every REST API call includes the following parameters. Also see link:../rest-core/url_format.html[URL format] for more information.
+
+Account ID::
+This is the UUIDv4 value identifying the Astra account where the API operation runs. See link:../get-started/get_api_token.html[Get an API token] for more information about locating your account ID.
+
+=== Request headers
+
+There are several request headers that you may need to include depending on the REST API call.
+
+Authorization::
+All the API calls in the workflows need an API token to identify the user. You must include the token in the `Authorization` request header. See link:../get-started/get_api_token.html[Get an API token] for more information about generating an API token.
+
+Content type::
+With the HTTP POST and PUT requests where JSON is included in the request body, you should declare the media type based on the Astra resource. For example, you can include the header `Content-Type: application/astra-appSnap+json` when creating a snapshot for a managed application.
+
+Accept::
+You can declare the specific media type of the content you expect in the response based on the Astra resource. For example, you can include the header `Accept: application/astra-appBackup+json` when listing the backups for a managed application. However, for simplicity the curl samples in the workflows accept all media types.
+
+== Presentation of tokens and identifiers
+
+The API token and other ID values used with the curl examples are opaque with no discernible meaning. And so to improve the readability of the samples, the actual token and ID values are not used. Rather, smaller reserved keywords are used which has several benefits:
+
+* The curl and JSON samples are clearer and easier to understand.
+* Because all the keywords use the same format with brackets and capital letters, you can quickly identify the location and content to insert or extract.
+* No value is lost because the original parameters cannot be copied and used with an actual deployment.
+
+Here are some of the common reserved keywords used in the curl examples. This list is not exhaustive and additional keywords are used as needed. Their meaning should be obvious based on the context.
+
+[cols="25,15,60"*,options="header"]
+|===
+|Keyword
+|Type
+|Description
+|<ACCOUNT_ID>
+|Path
+|The UUIDv4 value identifying the account where the API operation runs.
+|<API_TOKEN>
+|Header
+|The bearer token identifying and authorizing the caller.
+|<MANAGED_APP_ID>
+|Path
+|The UUIDv4 value identifying the managed application for the API call.
+|===

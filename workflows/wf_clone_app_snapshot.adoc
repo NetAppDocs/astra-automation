@@ -1,0 +1,79 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_clone_app_snapshot.html
+keywords:
+summary:
+---
+
+= Clone a managed app from a snapshot
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a new application by cloning it from an app snapshot.
+
+=== Before you begin
+
+Note the following about this workflow:
+
+* An app snapshot is used
+* The clone operation is performed within the same cluster
+
+[NOTE]
+To clone an app to a different cluster, you need to update the `clusterId` parameter in the JSON input as appropriate for your environment.
+
+=== 1. Select the managed app to clone
+
+Perform the workflow link:wf_list_man_apps.html[List the managed apps] and select application you want to clone. Several of the resource values are needed for the REST call used to clone the app.
+
+=== 2. Select the snapshot to use
+
+Perform the workflow link:wf_list_snapshots.html[List the snapshots] and select snapshot you want to use.
+
+=== 3. Clone the app
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/account/{accountID}/k8s/v1/managedApps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|JSON
+|Body
+|Yes
+|Provides the parameters for the cloned app. See the example below.
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-managedApp",
+  "version": "1.0",
+  "name": "postgres1-postgresql-clone",
+  "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
+  "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
+  "namespace": "davidns-postgres-app",
+  "snapshotID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
+  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+}
+
+===== Curl example: Clone an app from a snapshot
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput

@@ -1,0 +1,50 @@
+section: workflows
+title: Workflows
+url: /workflows/workflows.html
+entries:
+  - title: App control
+    url: /workflows/wf_app_control.html
+    entries:
+      - title: List unmanaged apps
+        url: /workflows/wf_list_unman_apps.html
+      - title: List managed apps
+        url: /workflows/wf_list_man_apps.html
+      - title: Get a managed app
+        url: /workflows/wf_get_man_app.html
+      - title: Manage an app
+        url: /workflows/wf_manage_app.html
+      - title: Unmanage an app
+        url: /workflows/wf_unmanage_app.html
+  - title: App protection
+    url: /workflows/wf_app_protection.html
+    entries:
+      - title: List snapshots
+        url: /workflows/wf_list_snapshots.html
+      - title: List backups
+        url: /workflows/wf_list_backups.html
+      - title: Create snapshot
+        url: /workflows/wf_create_snapshot.html
+      - title: Create backup
+        url: /workflows/wf_create_backup.html
+      - title: Delete snapshot
+        url: /workflows/wf_delete_snapshot.html
+      - title: Delete backup
+        url: /workflows/wf_delete_backup.html
+  - title: Cloning and restoring an app
+    url: /workflows/wf_app_cloning.html
+    entries:
+      - title: Clone an app
+        url: /workflows/wf_clone_app.html
+      - title: Clone an app from a snapshot
+        url: /workflows/wf_clone_app_snapshot.html
+      - title: Clone an app from a backup
+        url: /workflows/wf_clone_app_backup.html
+      - title: Restore an app from a backup
+        url: /workflows/wf_restore_app_backup.html
+  - title: Support
+    url: /workflows/wf_support.html
+    entries:
+      - title: List notifications
+        url: /workflows/wf_list_notifications.html
+      - title: Delete a failed app
+        url: /workflows/wf_delete_failed_app.html

@@ -1,0 +1,159 @@
+---
+sidebar: sidebar
+permalink: python/py_list_man_apps.html
+keywords:
+summary:
+---
+
+= List the managed apps
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use the following script to list the managed applications for your Astra account.
+
+[source,python,%autofill]
+---------------------------------------------------------------------
+#!/usr/bin/env python3
+##------------------------------------------------------------------------------
+#
+# Usage: python3 list_man_apps.py -i identity_file.json
+#
+# (C) Copyright 2021 NetApp, Inc.
+#
+# This sample code is provided AS IS, with no support or warranties of
+# any kind, including but not limited for warranties of merchantability
+# or fitness of any kind, expressed or implied. Permission to use,
+# reproduce, modify and create derivatives of the sample code is granted
+# solely for the purpose of researching, designing, developing and
+# testing a software application product for use with NetApp products,
+# provided that the above copyright notice appears in all copies and
+# that the software application product is distributed pursuant to terms
+# no less restrictive than those set forth herein.
+#
+##------------------------------------------------------------------------------
+
+import argparse
+import json
+import requests
+import urllib3
+import sys
+
+# Global variables
+api_token = ""
+account_id = ""
+
+def get_managed_apps():
+    ''' Get and print the list of managed apps '''
+
+    # Global variables
+    global api_token
+    global account_id
+
+    # Create an HTTP session
+    sess1 = requests.Session()
+
+    # Suppress SSL unsigned certificate warning
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+    # Create URL
+    url1 = "https://astra.netapp.io/accounts/" + account_id + "/k8s/v1/managedApps"
+
+    # Headers and response output
+    req_headers  = {}
+    resp_headers = {}
+    resp_data    = {}
+
+    # Prepare the request headers
+    req_headers.clear
+    req_headers['Authorization'] = "Bearer " + api_token
+    req_headers['Content-Type'] = "application/astra-managedApp+json"
+    req_headers['Accept'] = "application/astra-managedApp+json"
+
+    # Make the REST call
+    try:
+        resp1 = sess1.request('get', url1, headers=req_headers, allow_redirects=True, verify=False)
+
+    except requests.exceptions.ConnectionError:
+        print("Connection failed")
+        sys.exit(1)
+
+    # Retrieve the output
+    http_code = resp1.status_code
+    resp_headers = resp1.headers
+
+    # Print the list of managed apps
+    if http_code == 200:
+        resp_data = json.loads(resp1.text)
+        items = resp_data['items']
+        for i in items:
+            print(" ")
+            print("Name: " + i['name'])
+            print("ID: " + i['id'])
+            print("State: " + i['state'])
+    else:
+        print("Failed with HTTP status code: " + str(http_code))
+
+    print(" ")
+
+    # Close the session
+    sess1.close()
+
+    return
+
+def read_id_file(idf):
+    ''' Read the identity file and save values '''
+
+    # Global variables
+    global api_token
+    global account_id
+
+    with open(idf) as f:
+        data = json.load(f)
+
+    api_token = data['api_token']
+    account_id = data['account_id']
+
+    return
+
+def main(args):
+    ''' Main top level function '''
+
+    # Global variables
+    global api_token
+    global account_id
+
+    # Retrieve name of JSON input file
+    identity_file = args.id_file
+
+    # Get token and account
+    read_id_file(identity_file)
+
+    # Issue REST call
+    get_managed_apps()
+
+    return
+
+def parseArgs():
+        ''' Parse the CLI input parameters '''
+
+        parser = argparse.ArgumentParser(description='Astra REST API - List the managed apps',
+                          add_help = True)
+        parser.add_argument("-i", "--identity", action="store", dest="id_file", default=None,
+                          help='(Req) Name of the identity input file', required=True)
+
+        return parser.parse_args()
+
+if __name__ == '__main__':
+    ''' Begin here '''
+
+    # Parse input parameters
+    args = parseArgs()
+
+    # Call main function
+    main(args)
+
+---------------------------------------------------------------------

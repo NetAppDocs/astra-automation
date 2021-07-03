@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_list_snapshots.html
+keywords:
+summary:
+---
+
+= List the snapshots
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can list the snapshots that have been taken for a specific managed application.
+
+=== Before you begin
+
+You must have the ID of the managed app you want to list the snapshots for. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+
+=== 1. List the snapshots
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appSnaps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="15,10,10,65"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|managed app id
+|Path
+|Yes
+|Identifies the managed application owning the listed snapshots.
+|count
+|Query
+|No
+|If `count=true` the number of snapshots is included in the metadata section of the response.
+|===
+
+===== Curl example: Return all snapshots for the app
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== Curl example: Return all snapshots for the app and the count
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps?count=true' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== JSON output example
+[source,json]
+{
+  "items": [
+    {
+      "id": "dc2974ae-f71d-4c81-91b5-f96cf72dc3ba",
+      "metadata": {
+        "createdBy": "fb093413-b6fc-4a64-a48a-afc32ada8537",
+        "creationTimestamp": "2021-06-04T21:23:14Z",
+        "modificationTimestamp": "2021-06-04T21:23:14Z",
+        "labels": []
+      },
+      "snapshotAppAsset": "4547658d-cc06-4c1d-ad8a-4a05274d0db0",
+      "snapshotCreationTimestamp": "2021-06-04T21:23:47Z",
+      "name": "test-postgres-app-snapshot-20210604212213",
+      "state": "completed",
+      "stateUnready": [],
+      "type": "application/astra-appSnap",
+      "version": "1.0"
+    }
+  ],
+  "metadata": {
+    "count": 1
+  }
+}
