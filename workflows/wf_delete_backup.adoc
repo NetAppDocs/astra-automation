@@ -15,6 +15,9 @@ summary:
 [.lead]
 You can delete a backup associated with a managed application.
 
+[IMPORTANT]
+Update with input from Michael with the foce header.
+
 === Before you begin
 
 You must have the following:

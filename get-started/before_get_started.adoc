@@ -13,14 +13,15 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-There are several steps you should take to prepare to use the Astra REST API.
+You can quickly prepare to get started using the Astra REST API by reviewing the steps described below.
 
 ===== Review REST concepts and implementation
 
 Make sure to review link:../rest-core/rest_implementation.html[Core REST implementation] for information about REST concepts and the details regarding how the Astra REST API is designed.
 
-===== Have Cloud Central account credentials
-You'll need the *Auth0* account credentials to sign in to the Astra web user interface and generate an API token.
+===== Have Astra account credentials
+
+You'll need Astra credentials to sign in to the Astra web user interface and generate an API token. With Astra Control Center, you manage these credentials locally. With Astra Control Service the account credentials are maintained by the *Auth0* service.
 
 ===== Get more information
 

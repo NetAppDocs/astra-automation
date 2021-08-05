@@ -1,6 +1,5 @@
 section: python
 title: Using Python
-url: /python/python.html
 entries:
   - title: Before you begin
     url: /python/python_before.html

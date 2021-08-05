@@ -1,0 +1,21 @@
+section: workflows_infra
+title: Infrastructure workflows
+entries:
+  - title: Before you begin
+    url: /workflows_infra/workflows_infra_before.html
+  - title: Identity and access
+    entries:
+      - title: List users
+        url: /workflows_infra/wf_list_users.html
+  - title: Buckets
+    entries:
+      - title: List buckets
+        url: /workflows_infra/wf_list_buckets.html
+  - title: Storage
+    entries:
+      - title: List storage backends
+        url: /workflows_infra/wf_list_storage_backends.html
+  - title: Clusters
+    entries:
+      - title: List managed clusters
+        url: /workflows_infra/wf_list_man_clusters.html

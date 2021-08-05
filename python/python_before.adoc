@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You must prepare the environment and the required input files before running the sample Python scripts.
+Python is a popular development language especially for datacenter automation. Before using Python to access the Astra REST API, you need to prepare the environment and the required input files.
 
 == Prepare the environment
 

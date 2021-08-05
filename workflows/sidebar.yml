@@ -1,9 +1,9 @@
 section: workflows
-title: Workflows
-url: /workflows/workflows.html
+title: Management workflows
 entries:
+  - title: Before you begin
+    url: /workflows/workflows_before.html
   - title: App control
-    url: /workflows/wf_app_control.html
     entries:
       - title: List unmanaged apps
         url: /workflows/wf_list_unman_apps.html
@@ -16,7 +16,6 @@ entries:
       - title: Unmanage an app
         url: /workflows/wf_unmanage_app.html
   - title: App protection
-    url: /workflows/wf_app_protection.html
     entries:
       - title: List snapshots
         url: /workflows/wf_list_snapshots.html
@@ -31,7 +30,6 @@ entries:
       - title: Delete backup
         url: /workflows/wf_delete_backup.html
   - title: Cloning and restoring an app
-    url: /workflows/wf_app_cloning.html
     entries:
       - title: Clone an app
         url: /workflows/wf_clone_app.html
@@ -42,7 +40,6 @@ entries:
       - title: Restore an app from a backup
         url: /workflows/wf_restore_app_backup.html
   - title: Support
-    url: /workflows/wf_support.html
     entries:
       - title: List notifications
         url: /workflows/wf_list_notifications.html

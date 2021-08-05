@@ -2,11 +2,13 @@ sidebar:
   entries:
     - title: Astra automation docs
       url: /index.html
+    - section: rn
     - section: intro
     - section: get-started
     - section: rest-core
     - section: additional
     - section: endpoints
+    - section: workflows_infra
     - section: workflows
     - section: python
     - section: reference
@@ -22,10 +24,10 @@ homepage:
           summary: Get an overview of the Astra REST API.
           url: /intro/introduction.html
         - title: Before you begin
-          summary: Prepare to start using the API.
+          summary: Prepare to start using the REST API.
           url: /get-started/before_get_started.html
         - title: Get an API token
-          summary: Generate a token you need for API access.
+          summary: Generate a token you need to access the API.
           url: /get-started/get_api_token.html
         - title: Hello world
           summary: Test basic access to the REST API.
@@ -41,7 +43,7 @@ homepage:
         - title: URL format
           summary: Understand the URL format and how it is composed of multiple values.
           url: /rest-core/url_format.html
-    - title: Additional usage considerations
+    - title: Additional considerations
       links:
         - title: Security
           summary: Explore the security provided with the REST API.
@@ -65,9 +67,12 @@ homepage:
         - title: Preparation
           summary: Prepare to use the Astra workflows.
           url: /get-started/prepare_to_use_workflows.html
-        - title: Workflows by category
-          summary: The workflows are organized in several different categories.
-          url: /workflows/workflows.html
+        - title: Infrastructure workflows
+          summary: The workflows needed to maintain the Astra runtime infrastructure.
+          url: /workflows_infra/workflows_infra_before.html
+        - title: Management workflows
+          summary: The common workflows used to administer the managed applications.
+          url: /workflows/workflows_before.html
     - title: Python
       links:
         - title: Before you begin

@@ -1,0 +1,38 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/workflows_infra_before.html
+keywords:
+summary:
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use these workflows to create and maintain the infrastructure used with the Astra Control Center deployment model. In most case, the workflows can also be used with Astra Control Service.
+
+== General preparation
+
+Before using any of the Astra workflows, make sure to review link:../get-started/prepare_to_use_workflows.html[Prepare to use the workflows].
+
+== Workflow categories
+
+The infrastructure workflows are organized in different categories to make it easier to locate the one you want.
+
+[cols="25,75"*,options="header"]
+|===
+|Category
+|Description
+|Identity and access
+|These workflows allow you to manage identity and how Astra is accessed. The resources include users, credentials, and tokens.
+|Buckets
+|You can use these workflows to create and manage the S3 buckets used to store backups.
+|Storage
+|These workflows allow you to add and maintain storage backends and volumes.
+|Clusters
+|You can add managed Kubernetes clusters which allows you to protect and support the applications they contain.
+|===

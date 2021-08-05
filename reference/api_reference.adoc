@@ -16,17 +16,17 @@ summary:
 You can access the details of all the Astra REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
 
 [NOTE]
-The REST API reference documentation is currently available online with the Astra service.
+The REST API reference documentation is currently provided with Astra and is available online.
 
 .Before you begin
 
-You need an account for the Astra service.
+You need an account for Astra Control Center or Astra Control Service.
 
 .Steps
 
-. Sign in to the Astra service using your account credentials.
+. Sign in to Astra using your account credentials.
 +
-link:https://astra.netapp.io[https://astra.netapp.io^]
+Access the following site for Astra Control Service: link:https://astra.netapp.io[https://astra.netapp.io^]
 
 . Click the figure icon at the top right of the page and select *API access*.
 

@@ -1,6 +1,5 @@
 section: additional
-title: Additional usage considerations
-url: /additional/additional_considerations.html
+title: Additional REST considerations
 entries:
   - title: Security
     url: /additional/security.html

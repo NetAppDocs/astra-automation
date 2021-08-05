@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_list_buckets.html
+keywords:
+summary:
+---
+
+= List buckets
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can list the S3 buckets defined for a specific Astra account.
+
+=== 1. List the buckets
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{accountID}/topology/v1/buckets
+|===
+
+===== Curl example: Return all data for all buckets
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

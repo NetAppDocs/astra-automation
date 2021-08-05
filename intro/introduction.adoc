@@ -13,16 +13,18 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Astra service provides a REST API that you can access directly through a programming language or utility such as Curl. The major highlights and benefits of the API are presented below.
-
-// Add workflow section
+Astra Control Center and Astra Control Service provide a common REST API that you can access directly through a programming language or utility such as Curl. The major highlights and benefits of the API are presented below.
 
 [NOTE]
-To access the REST API, you need to first sign in to the Astra web user interface and generate an API token. You must include the token on each API request.
+To access the REST API, you need to first sign in to the Astra web user interface and generate an API token. You must include the token with each API request.
 
 ==== Built on REST technology
 
 The Astra API has been created using REST technology and current best practices. The core technology includes HTTP, JSON, and RBAC.
+
+==== Support for the two Astra deployment models
+
+Astra Control Service is used within the public cloud environment while Astra Control Center is for your on-premises deployments. There is one Astra REST API supporting both of these deployment models.
 
 ==== Clear mapping between REST endpoint resources and object model
 
@@ -30,7 +32,7 @@ The external REST endpoints used to access the resources map to a consistent obj
 
 ==== Rich set of query parameters
 
-The REST API provides a rich set of query parameters that can be used to access the resources collections. Some of the supported operations include filtering, sorting, and pagination.
+The REST API provides a rich set of query parameters that you can use to access the resources collections. Some of the supported operations include filtering, sorting, and pagination.
 
 ==== Alignment with the Astra web UI
 
@@ -38,8 +40,12 @@ The design of the Astra web user interface is aligned with the REST API and so t
 
 ==== Robust debugging and problem determination data
 
-The Astra REST API provides a robust debugging and problem determination capability, including events and notifications generated internally.
+The Astra REST API provides a robust debugging and problem determination capability, including system events and user notifications.
+
+==== Workflow processes
+
+A set of workflows is provided to assist with the development of your automation code. The workflows are organized in two major categories: infrastructure and management.
 
 ==== Foundation for advanced automation technologies
 
-In addition to accessing the REST API directly, you can use other automation technologies that are based on the REST API.
+In addition to accessing the REST API directly, you can use other automation technologies which are based on the REST API.

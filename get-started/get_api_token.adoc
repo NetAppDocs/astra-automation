@@ -13,24 +13,24 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You must have an API access token to access the Astra REST API.
+You must have an API access token to use the Astra REST API.
 
 [NOTE]
 The Astra API tokens never expire, however you can revoke a token when it is no longer needed.
 
 .Before you begin
 
-You need an account for the Astra service.
+You need credentials for an Astra account.
 
 .About this task
 
-This task generates an API token at the Astra web interface. You should also retrieve the account ID.
+This task generates an API token at the Astra web interface. You should also retrieve the account ID which is also needed to make an API call.
 
 .Steps
 
-. Sign in to the Astra service using your account credentials.
+. Sign in to Astra using your account credentials.
 +
-https://astra.netapp.io/[https://astra.netapp.io^]
+Access the following site for Astra Control Service: https://astra.netapp.io/[https://astra.netapp.io^]
 
 . Click the figure icon at the top right of the page and select *API access*.
 

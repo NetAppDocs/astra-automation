@@ -1,0 +1,68 @@
+---
+sidebar: sidebar
+permalink: workflows/workflows_before.html
+keywords:
+summary:
+---
+
+= Before you begin
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can use these workflows as part of administering the applications within an Astra managed cluster.
+
+== General preparation
+
+Before using any of the Astra workflows, make sure to review link:../get-started/prepare_to_use_workflows.html[Prepare to use the workflows].
+
+== Workflow categories
+
+The management workflows are organized in different categories to make it easier to locate the one you want.
+
+[cols="25,75"*,options="header"]
+|===
+|Category
+|Description
+|Application control
+|These workflows allow you to control the managed and unmanaged applications. You can list the apps as well as create and remove a managed app.
+|Application protection
+|You can use these workflows to protect your managed applications through snapshots and backups.
+|Cloning and restoring apps
+|These workflow describe how to clone and restore your managed applications.
+|Support
+|There are several workflows available to debug and support your applications as well as the general Kubernetes environment.
+|===
+
+== Additional considerations
+
+There are a several additional considerations when using the management workflows.
+
+=== Cloning an app
+
+There are a few things to consider when cloning an application. The parameters described below are part of the JSON input.
+
+Source cluster identifier::
+The value of `sourceClusterID` always identifies the cluster where the original app is installed.
+
+Cluster identifier::
+The value of `clusterID` identifies the cluster where the new app will be installed.
+
+* When cloning within the same cluster, `clusterID` and `sourceClusterID` have the same value.
+* When cloning across clusters, the two values are different and `clusterID` should be the ID of the target cluster.
+
+Namespaces::
+The `namespace` value must be different than the original source app. Further, the namespace for the clone cannot exist and Astra will create it.
+
+Backups and snapshots::
+You can optionally clone an application from an existing backup or snapshot using the `backupID` or `snapshotID` parameters. If you don't provide a backup or snapshot, Astra will create a backup of the application first and then clone from the backup.
+
+==== Restoring an app
+
+Here are a few things to consider when restoring an application.
+
+* Restoring an application is very similar to the clone operation.
+* When restoring an app, you must provide either a backup or snapshot.
