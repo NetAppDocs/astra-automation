@@ -15,6 +15,9 @@ summary:
 [.lead]
 You can use these workflows to create and maintain the infrastructure used with the Astra Control Center deployment model. In most case, the workflows can also be used with Astra Control Service.
 
+[NOTE]
+These workflows can be expanded and enhanced by NetApp at any time and so you should review them periodically.
+
 == General preparation
 
 Before using any of the Astra workflows, make sure to review link:../get-started/prepare_to_use_workflows.html[Prepare to use the workflows].

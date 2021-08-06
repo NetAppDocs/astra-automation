@@ -15,6 +15,16 @@ summary:
 [.lead]
 There are additional resources you can access to get help and find more information about NetApp cloud services and support as well as general REST and cloud concepts.
 
+=== Astra
+
+* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center documentation^]
++
+Documentation for the Astra Control Center software deployed on the customer premises.
+
+* https://docs.netapp.com/us-en/astra/[Astra Control Service documentation^]
++
+Documentation for the Astra Control Service software available in the public cloud.
+
 === NetApp cloud resources
 
 * https://cloud.netapp.com/[NetApp Cloud Solutions^]
