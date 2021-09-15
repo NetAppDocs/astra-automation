@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can list the applications that are defined for a specific Astra account.
+You can list the users that are defined for a specific Astra account.
 
 === 1. List the users
 
