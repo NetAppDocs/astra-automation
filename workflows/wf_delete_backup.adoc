@@ -26,6 +26,9 @@ You must have the following:
 
 Perform the following REST API call.
 
+[NOTE]
+You can force the deletion of a failed backup using the optional request header as described below.
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
