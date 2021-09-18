@@ -26,6 +26,9 @@ You must have the following:
 
 Perform the following REST API call.
 
+[NOTE]
+You can force the deletion of a failed backup using the optional request header as described below.
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
@@ -52,8 +55,16 @@ In addition to the parameters common with all REST API calls, the following para
 |Path
 |Yes
 |Identifies the backup to be deleted.
+|force delete
+|Header
+|No
+|Used to force the deletion of a failed backup.
 |===
 
 ===== Curl example: Delete a single backup for the app
 [source,curl]
 curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups/<BACKUP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== Curl example: Delete a single backup for the app with the force option
+[source,curl]
+curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups/<BACKUP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Force-Delete: true'
