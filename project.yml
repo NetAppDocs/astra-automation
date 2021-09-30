@@ -32,7 +32,7 @@ homepage:
         - title: Hello world
           summary: Test basic access to the REST API.
           url: /get-started/hello_world.html
-    - title: Core REST implementation
+    - title: REST implementation
       links:
         - title: REST web services
           summary: Understand the technology foundations of REST web services.
