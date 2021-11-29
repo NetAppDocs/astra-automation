@@ -13,18 +13,18 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API provides access to resource instances and collections of resource instances.
+The Astra Control REST API provides access to resource instances and collections of resource instances.
 
 [NOTE]
 Conceptually a REST *resource* is similar to an *object* as defined with the object-oriented programming (OOP) languages and systems. Sometimes these terms are used interchangeably. But in general, "resource" is preferred when used in the context of the external REST API while "object" is used for the corresponding stateful instance data stored at the server.
 
 == Attributes of the Astra resources
 
-The Astra REST API conforms to RESTful design principles. Each Astra resource instance is created based on a well-defined resource type. A set of resource instances of the same type is referred to as a *collection*. The API calls act on individual resources or collections of resources.
+The Astra Control REST API conforms to RESTful design principles. Each Astra resource instance is created based on a well-defined resource type. A set of resource instances of the same type is referred to as a *collection*. The API calls act on individual resources or collections of resources.
 
 ===== Resource types
 
-The resource types included with the Astra REST API have the following characteristics:
+The resource types included with the Astra Control REST API have the following characteristics:
 
 * Every resource type is defined using a schema (typically in JSON)
 * Every resource schema includes the resource type and version
@@ -32,7 +32,7 @@ The resource types included with the Astra REST API have the following character
 
 ===== Resource instances
 
-Resource instances available through the Astra REST API have the following characteristics:
+Resource instances available through the Astra Control REST API have the following characteristics:
 
 * Resource instances are created based on a single resource type
 * The resource type is indicated using the Media Type value

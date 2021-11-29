@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API provides several different ways to access resource collections through the defined query parameters.
+The Astra Control REST API provides several different ways to access resource collections through the defined query parameters.
 
 ==== Selecting values
 
