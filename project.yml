@@ -68,7 +68,7 @@ homepage:
         - title: Resources and collections
           summary: Become familiar with the design of REST resources and collections.
           url: /rest-core/resources_collections.html
-        - title: Details of the Astra REST API resources
+        - title: Astra Control REST API resources
           summary: Review a concise introduction to the various Astra resources.
           url: /endpoints/resources.html
     - title: Workflows
