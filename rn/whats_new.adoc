@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= What's new with the Astra REST API
+= What's new with the Astra Control REST API
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-NetApp periodically updates Astra REST API to bring you new features, enhancements, and bug fixes.
+NetApp periodically updates Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
 == 5 August 2021
 
@@ -25,7 +25,7 @@ In addition to the existing Astra Control Service offering provided as a public 
 
 === Expansion of the REST resource types
 
-The number of resources accessible through the Astra REST API has greatly expanded, with many of the new resources providing a foundation for the on-premises Astra Control Center offering. The new resources include: ASUP, entitlement, feature, license, setting, subscription, bucket, cloud, cluster, managed cluster, storage backend, and storage class. See link:../endpoints/resources.html[Resources] for more information.
+The number of resources accessible through the Astra Control REST API has greatly expanded, with many of the new resources providing a foundation for the on-premises Astra Control Center offering. The new resources include: ASUP, entitlement, feature, license, setting, subscription, bucket, cloud, cluster, managed cluster, storage backend, and storage class. See link:../endpoints/resources.html[Resources] for more information.
 
 === Additional endpoints supporting an Astra deployment
 
@@ -43,7 +43,7 @@ This release includes the following new features and enhancements.
 
 === Introduction of the REST API
 
-The Astra REST API is available for use with the Astra Control Service offering. It has been created based on REST technologies and current best practices. The API provides a foundation for the automation of your Astra deployments and includes the following features and benefits.
+The Astra Control REST API is available for use with the Astra Control Service offering. It has been created based on REST technologies and current best practices. The API provides a foundation for the automation of your Astra deployments and includes the following features and benefits.
 
 Resources::
 There are fourteen REST resource types available.

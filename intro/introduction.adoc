@@ -5,7 +5,7 @@ keywords: introduction, Astra REST API
 summary:
 ---
 
-= Introduction to the Astra REST API
+= Introduction to the Astra Control REST API
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -20,11 +20,11 @@ To access the REST API, you need to first sign in to the Astra web user interfac
 
 === Built on REST technology
 
-The Astra API has been created using REST technology and current best practices. The core technology includes HTTP, JSON, and RBAC.
+The Astra Control API has been created using REST technology and current best practices. The core technology includes HTTP, JSON, and RBAC.
 
-=== Support for the two Astra deployment models
+=== Support for the two Astra Control deployment models
 
-Astra Control Service is used within the public cloud environment while Astra Control Center is for your on-premises deployments. There is one Astra REST API supporting both of these deployment models.
+Astra Control Service is used within the public cloud environment while Astra Control Center is for your on-premises deployments. There is one REST API supporting both of these deployment models.
 
 === Clear mapping between REST endpoint resources and object model
 
@@ -34,13 +34,13 @@ The external REST endpoints used to access the resources map to a consistent obj
 
 The REST API provides a rich set of query parameters that you can use to access the resources collections. Some of the supported operations include filtering, sorting, and pagination.
 
-=== Alignment with the Astra web UI
+=== Alignment with the Astra Control web UI
 
 The design of the Astra web user interface is aligned with the REST API and so there is consistency between the two access paths and user experience.
 
 === Robust debugging and problem determination data
 
-The Astra REST API provides a robust debugging and problem determination capability, including system events and user notifications.
+The Astra Control REST API provides a robust debugging and problem determination capability, including system events and user notifications.
 
 === Workflow processes
 
