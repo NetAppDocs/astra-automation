@@ -17,7 +17,7 @@ You should be familiar with the organization and format of the Astra workflows b
 
 == Introduction
 
-A _workflow_ is a sequence of one or more steps needed to accomplish a specific administrative task or goal. Each step in an Astra workflow is one of the following:
+A _workflow_ is a sequence of one or more steps needed to accomplish a specific administrative task or goal. Each step in an Astra Control workflow is one of the following:
 
 * REST API call (with details such as curl and JSON examples)
 * Invocation of another Astra workflow

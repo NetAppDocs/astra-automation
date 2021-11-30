@@ -13,11 +13,11 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API uses HTTP and related parameters to act on the resources and collections. Details of the Astra HTTP implementation are presented below.
+The Astra Control REST API uses HTTP and related parameters to act on the resources and collections. Details of the HTTP implementation are presented below.
 
 == API transactions and the CRUD model
 
-The Astra REST API implements a transactional model with well-defined operations and state transitions.
+The Astra Control REST API implements a transactional model with well-defined operations and state transitions.
 
 ===== Request and response API transaction
 
@@ -25,7 +25,7 @@ Every REST API call is performed as an HTTP request to the Astra service. Each r
 
 ===== Support for CRUD operational model
 
-Each of the resource instances and collections available through the Astra REST API is accessed based on the *CRUD* model. There are four operations, each of which maps to a single HTTP method. The operations include:
+Each of the resource instances and collections available through the Astra Control REST API is accessed based on the *CRUD* model. There are four operations, each of which maps to a single HTTP method. The operations include:
 
 * Create
 * Read
@@ -64,7 +64,7 @@ The HTTP methods or verbs supported by the API are presented in the table below.
 
 === Request and response headers
 
-The following table summaries the HTTP headers used with the Astra REST API.
+The following table summaries the HTTP headers used with the Astra Control REST API.
 
 [NOTE]
 See https://www.rfc-editor.org/rfc/rfc7232.txt[RFC 7232^] and https://www.rfc-editor.org/rfc/rfc7233.txt[RFC 7233^] for more information.
@@ -135,7 +135,7 @@ The following query parameters are available for use with resource collections. 
 
 === HTTP status codes
 
-The HTTP status codes used by the Astra REST API are described below.
+The HTTP status codes used by the Astra Control REST API are described below.
 
 [NOTE]
 The Astra REST API also uses the *Problem Details for HTTP APIs* standard. See link:diagnostics_support.html[Diagnostics and support] for more information.
