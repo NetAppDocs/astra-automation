@@ -42,7 +42,7 @@ Resource instances available through the Astra Control REST API have the followi
 
 ===== Resource collections
 
-Resource collections available through the Astra REST API have the following characteristics:
+Resource collections available through the Astra Control REST API have the following characteristics:
 
 * The set of resource instances of a single resource type is known as a collection
 * Collections of resources have a unique and long-lived URL
@@ -56,7 +56,7 @@ The resource identifier is the primary key used for collections.
 
 == Common structure for Astra resources
 
-Every Astra resource is defined using a common structure.
+Every Astra Control resource is defined using a common structure.
 
 ===== Common data
 

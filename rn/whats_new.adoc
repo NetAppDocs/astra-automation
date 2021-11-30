@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-NetApp periodically updates Astra Control REST API to bring you new features, enhancements, and bug fixes.
+NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
 == 5 August 2021
 
@@ -21,7 +21,7 @@ This release includes the introduction of a new Astra deployment model and a maj
 
 === Astra Control Center deployment model
 
-In addition to the existing Astra Control Service offering provided as a public cloud service, this release also includes the Astra Control Center on-premises deployment model. You can install Astra Control Center at your site to manage your local Kubernetes environment. The two deployment models share the same REST API, with minor differences noted as needed in the documentation.
+In addition to the existing Astra Control Service offering provided as a public cloud service, this release also includes the Astra Control Center on-premises deployment model. You can install Astra Control Center at your site to manage your local Kubernetes environment. The two Astra Control deployment models share the same REST API, with minor differences noted as needed in the documentation.
 
 === Expansion of the REST resource types
 
@@ -29,7 +29,7 @@ The number of resources accessible through the Astra Control REST API has greatl
 
 === Additional endpoints supporting an Astra deployment
 
-In addition to the expanded Astra REST resources, there are several other new API endpoints available to support an Astra deployment.
+In addition to the expanded REST resources, there are several other new API endpoints available to support an Astra Control deployment.
 
 OpenAPI support::
 The OpenAPI endpoints provide access to the current OpenAPI JSON document and other related resources.
