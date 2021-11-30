@@ -25,6 +25,10 @@ Documentation for the Astra Control Center software deployed on the customer pre
 +
 Documentation for the Astra Control Service software available in the public cloud.
 
+* https://docs.netapp.com/us-en/trident/[Astra Trident documentation^]
++
+Documentation for the Astra Trident open source storage orchestrator maintained by NetApp.
+
 === NetApp cloud resources
 
 * https://cloud.netapp.com/[NetApp Cloud Solutions^]
