@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-There are several support features available with the Astra REST API that can be used for diagnostics and debugging.
+There are several support features available with the Astra Control REST API that can be used for diagnostics and debugging.
 
 == API resources
 

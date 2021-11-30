@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You must have an API access token to use the Astra REST API.
+You must have an API access token to use the Astra Control REST API.
 
 [NOTE]
 The Astra API tokens never expire, however you can revoke a token when it is no longer needed.
@@ -42,4 +42,4 @@ Access the following site for Astra Control Service: https://astra.netapp.io/[ht
 
 .After you finish
 
-When you access the Astra REST API through Curl or a programming language, you must include in the API bearer token in the `Authorization` request header. To revoke the token, see link:../additional/security.html[Security].
+When you access the Astra Control REST API through Curl or a programming language, you must include in the API bearer token in the `Authorization` request header. To revoke the token, see link:../additional/security.html[Security].

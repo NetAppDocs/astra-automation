@@ -21,7 +21,7 @@ There are additional resources you can access to get help and find more informat
 +
 Documentation for the Astra Control Center software deployed on the customer premises.
 
-* https://docs.netapp.com/us-en/astra/[Astra Control Service documentation^]
+* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service documentation^]
 +
 Documentation for the Astra Control Service software available in the public cloud.
 

@@ -13,14 +13,14 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can use the resources provided through REST API to automate an Astra deployment. Each resource is access through one or more endpoints. This section provides an introduction to the REST resources which you can use as part of planning an automation deployment.
+You can use the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is access through one or more endpoints. This section provides an introduction to the REST resources which you can use as part of planning an automation deployment.
 
 [NOTE]
-The format of the path and full URL used to access the Astra resources is based on several values. See link:../rest-core/url_format.html[URL format] for more information. Also see link:../reference/api_reference.html[API reference] for details about using the Astra resources and endpoints.
+The format of the path and full URL used to access the Astra Control resources is based on several values. See link:../rest-core/url_format.html[URL format] for more information. Also see link:../reference/api_reference.html[API reference] for details about using the Astra resources and endpoints.
 
-== Astra REST resources and endpoints
+== Astra Control REST resources and endpoints
 
-The primary resource endpoints provided in the Astra REST API are organized in three categories. Each resource can be accessed with the full set of CRUD operations (create, read, update, delete) except where noted.
+The primary resource endpoints provided in the Astra Control REST API are organized in three categories. Each resource can be accessed with the full set of CRUD operations (create, read, update, delete) except where noted.
 
 === Core resources
 
@@ -117,7 +117,7 @@ The volume resources represent the Kubernetes storage volumes associated with th
 There are several additional resources and endpoints that you can use to support an Astra deployment.
 
 [NOTE]
-These resources and endpoints are not currently included with the Astra API reference documentation.
+These resources and endpoints are not currently included with the Astra Control API reference documentation.
 
 OpenAPI::
 The OpenAPI endpoints provide access to the current OpenAPI JSON document and other related resources.

@@ -13,14 +13,14 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API provides multiple layers of security.
+The Astra Control REST API provides multiple layers of security.
 
 [NOTE]
 All HTTP network traffic is protected using the transport layer security (TLS) standard.
 
 == Astra API tokens
 
-To use the Astra REST API, you must provide an API token on every request in the `Authorization` request header. Note the following:
+To use the Astra Control REST API, you must provide an API token on every request in the `Authorization` request header. Note the following:
 
 * You can generate an API token at the Astra web user interface.
 * A token never expires after it is created.
