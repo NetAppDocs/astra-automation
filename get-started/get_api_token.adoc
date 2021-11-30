@@ -42,4 +42,4 @@ Access the following site for Astra Control Service: https://astra.netapp.io/[ht
 
 .After you finish
 
-When you access the Astra Control REST API through Curl or a programming language, you must include in the API bearer token in the `Authorization` request header. To revoke the token, see link:../additional/security.html[Security].
+When you access the Astra Control REST API through Curl or a programming language, you must include the API bearer token in the `Authorization` request header. To revoke the token, see link:../additional/security.html[Security].

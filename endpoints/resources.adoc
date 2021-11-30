@@ -57,7 +57,7 @@ Subscription::
 The subscription resources represent the active subscriptions for an Astra account.
 
 Token::
-The token resources represent the tokens available to programmatically access the Astra REST API.
+The token resources represent the tokens available to programmatically access the Astra Control REST API.
 
 Unread notification::
 The unread notification resources represent notifications assigned to a specific user but not yet read.
@@ -117,7 +117,7 @@ The volume resources represent the Kubernetes storage volumes associated with th
 There are several additional resources and endpoints that you can use to support an Astra deployment.
 
 [NOTE]
-These resources and endpoints are not currently included with the Astra Control API reference documentation.
+These resources and endpoints are not currently included with the Astra Control REST API reference documentation.
 
 OpenAPI::
 The OpenAPI endpoints provide access to the current OpenAPI JSON document and other related resources.
