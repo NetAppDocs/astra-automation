@@ -1,0 +1,18 @@
+---
+sidebar: sidebar
+permalink: aa-earlier-versions.html
+keywords:
+summary:
+---
+
+= Earlier versions of Astra Automation documentation
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can access the automation documentation for previous Astra releases at the links below.
+
+* https://docs.netapp.com/us-en/astra-automation-2108_main/[Astra Automation 21.08 documentation REVIEW^]
