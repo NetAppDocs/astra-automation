@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: python/astra_toolkit.html
+permalink: python/astra_toolkits.html
 keywords:
 summary:
 ---
 
-= NetApp Astra toolkit
+= NetApp Astra toolkits
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,3 +13,8 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
+XXX
+
+>> Two (base Python and wrapper)
+>> PyPI
+>> Links
