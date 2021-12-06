@@ -26,8 +26,23 @@ The primary resource endpoints provided in the Astra Control REST API are organi
 
 The core resource endpoints provide the foundational services needed to establish and maintain the Astra runtime environment.
 
+[cols="20,10,70"*,options="header"]
+|===
+|Resource
+|Introduced
+|Description
+|Account
+|21.12
+|The account resources allow you to manage the isolated tenants within the multitenant Astra Control deployment environment.
+|ASUP
+|21.08
+|The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
+|===
+
+>>>
+
 Account [red big]^21.12^::
-The account xxx
+The account resources allow you to manage the isolated tenants within the multitenant Astra Control deployment environment.
 
 ASUP::
 The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
@@ -41,8 +56,14 @@ The entitlement resources represent the features and capacities available for an
 Event::
 The event resources represent all the events occurring in the system, including the subset classified as notifications.
 
+Execution hook [red]^21.12^::
+The execution hook xxx
+
 Feature::
 The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
+
+Hook source [red big]^21.12^::
+The hook source xxx
 
 License::
 The license resources represent the licenses available for an Astra account.
