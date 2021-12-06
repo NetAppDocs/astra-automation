@@ -26,6 +26,9 @@ The primary resource endpoints provided in the Astra Control REST API are organi
 
 The core resource endpoints provide the foundational services needed to establish and maintain the Astra runtime environment.
 
+Account ^21.21^::
+The account xxx
+
 ASUP::
 The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
 
