@@ -33,7 +33,7 @@ The core resource endpoints provide the foundational services needed to establis
 |Description
 
 |Account
-|21.12
+|*21.12*
 |The account resources allow you to manage the isolated tenants within the multitenant Astra Control deployment environment.
 
 |ASUP
@@ -53,16 +53,16 @@ The core resource endpoints provide the foundational services needed to establis
 |The event resources represent all the events occurring in the system, including the subset classified as notifications.
 
 |Execution hook
-|21.12
-|The execution hook xxx
+|*21.12*
+|xxx
 
 |Feature
 |21.00
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
 |Hook source
-|21.12
-|The hook source resources xxx
+|*21.12*
+|xxx
 
 |License
 |21.00
@@ -101,48 +101,99 @@ The core resource endpoints provide the foundational services needed to establis
 
 The managed application resource endpoints provide access to the managed Kubernetes applications.
 
-Application asset::
-The application asset resources represent internal collections of state information needed to manage the Astra applications.
+[cols="20,10,70"*,options="header"]
+|===
+|Resource
+|Release
+|Description
 
-Application backup::
-The application backup resources represent backups of the managed applications.
+|Application asset
+|21.00
+|The application asset resources represent internal collections of state information needed to manage the Astra applications.
 
-Application snapshot::
-The application snapshot resources represent snapshots of the managed applications.
+|Application backup
+|21.00
+|The application backup resources represent backups of the managed applications.
 
-Managed application::
-The managed app resources represent Kubernetes applications that are managed by Astra.
+|Application snapshot
+|21.00
+|The application snapshot resources represent snapshots of the managed applications.
 
-Schedule::
-The schedule resources represent data protection operations that are scheduled for the managed applications as part of a data protection policy.
+|Execution hook override
+|*21.12*
+|xxx
+
+|Managed application
+|21.00
+|The managed app resources represent Kubernetes applications that are managed by Astra.
+
+|Schedule
+|21.00
+|The schedule resources represent data protection operations that are scheduled for the managed applications as part of a data protection policy.
+|===
 
 === Topology resources
 
 The topology resource endpoints provide access to the unmanaged applications and storage resources.
 
-App::
-The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
+[cols="20,10,70"*,options="header"]
+|===
+|Resource
+|Release
+|Description
 
-Bucket::
-The bucket resources represent the S3 cloud buckets used to store backups of the applications managed by Astra.
+|App
+|21.00
+|The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
 
-Cloud::
-The cloud resources represent clouds that Astra clients can connect to in order to manage clusters and applications.
+|Bucket
+|21.00
+|The bucket resources represent the S3 cloud buckets used to store backups of the applications managed by Astra.
 
-Cluster::
-The cluster resources represent the Kubernetes clusters not managed by Kubernetes.
+|Cloud
+|21.00
+|The cloud resources represent clouds that Astra clients can connect to in order to manage clusters and applications.
 
-Managed cluster::
-The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
+|Cluster
+|21.00
+|The cluster resources represent the Kubernetes clusters not managed by Kubernetes.
 
-Storage backend::
-The storage backend resources represent providers of storage services that can be used by the Astra managed clusters and applications.
+|Cluster node
+|*21.12*
+|xxx
 
-Storage class::
-The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
+|Managed cluster
+|21.00
+|The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
 
-Volume::
-The volume resources represent the Kubernetes storage volumes associated with the managed applications.
+|Managed storage backend
+|*21.12*
+|xxx
+
+|Namespace
+|*21.12*
+|xxx
+
+|Storage backend
+|21.00
+|The storage backend resources represent providers of storage services that can be used by the Astra managed clusters and applications.
+
+|Storage class
+|21.00
+|The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
+
+|Storage device
+|*21.12*
+|xxx
+
+|Storage node
+|*21.12*
+|xxx
+
+|Volume
+|21.00
+|The volume resources represent the Kubernetes storage volumes associated with the managed applications.
+|===
 
 == Additional resources and endpoints
 
