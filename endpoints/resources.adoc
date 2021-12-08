@@ -22,6 +22,8 @@ The format of the path and full URL used to access the Astra Control resources i
 
 The primary resource endpoints provided in the Astra Control REST API are organized in three categories. Each resource can be accessed with the full set of CRUD operations (create, read, update, delete) except where noted.
 
+The *Release* column indicates the Astra release when the resource was first introduced. This field is bolded for resources newly added with the current release.
+
 === Core resources
 
 The core resource endpoints provide the foundational services needed to establish and maintain the Astra runtime environment.
@@ -54,7 +56,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Execution hook
 |*21.12*
-|xxx
+|The execution hook resources represent custom scripts that you can run either before or after a snapshot of a managed app is performed.
 
 |Feature
 |21.00
@@ -62,7 +64,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Hook source
 |*21.12*
-|xxx
+|The hook source resources represent the actual source code used with an execution hook. Separating the source from the execution has several benefits such as allowing the scripts to be shared.
 
 |License
 |21.00
@@ -121,7 +123,7 @@ The managed application resource endpoints provide access to the managed Kuberne
 
 |Execution hook override
 |*21.12*
-|xxx
+|The execution hook override resources allows you to disable the preloaded NetApp default execution hooks for specific applications as needed.
 
 |Managed application
 |21.00
