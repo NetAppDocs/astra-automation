@@ -64,7 +64,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Hook source
 |*21.12*
-|The hook source resources represent the actual source code used with an execution hook. Separating the source from the execution has several benefits such as allowing the scripts to be shared.
+|The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
 
 |License
 |21.00
@@ -123,7 +123,7 @@ The managed application resource endpoints provide access to the managed Kuberne
 
 |Execution hook override
 |*21.12*
-|The execution hook override resources allows you to disable the preloaded NetApp default execution hooks for specific applications as needed.
+|The execution hook override resources allow you to disable the preloaded NetApp default execution hooks for specific applications as needed.
 
 |Managed application
 |21.00
@@ -162,7 +162,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 |Cluster node
 |*21.12*
-|xxx
+|The cluster node resources provide additional resolution by allowing you to access the individual nodes within a Kubernetes cluster.
 
 |Managed cluster
 |21.00
@@ -170,11 +170,11 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 |Managed storage backend
 |*21.12*
-|xxx
+|The managed storage backend resources allow you to access abstracted representations of the backend storage providers. These storage backends can be used by the managed clusters and applications.
 
 |Namespace
 |*21.12*
-|xxx
+|The namespace resources provide access to the namespaces used within a Kubernetes cluster.
 
 |Storage backend
 |21.00
@@ -186,11 +186,11 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 |Storage device
 |*21.12*
-|xxx
+|The storage device resources provide access to the disks associated with a specific storage node for Astra Data Store (ADS) type storage backends. An ADS storage backends is deployed as a Kubernetes clusters.
 
 |Storage node
 |*21.12*
-|xxx
+|The storage node resources represent the nodes that are part of an ADS cluster.
 
 |Volume
 |21.00
