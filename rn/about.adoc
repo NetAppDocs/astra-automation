@@ -1,0 +1,23 @@
+---
+sidebar: sidebar
+permalink: rn/about.html
+keywords:
+summary:
+---
+
+= About this release
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The documentation at this site describes the Astra Control REST API and other related automation technologies available with the December 2021 (21.12) release of Astra Control.
+
+See the following for additional information:
+
+* link:../rn/whats_new.html[Whats new with the Astra Control REST API]
+* link:../intro/introduction.html[Introduction to the Astra Control REST API]
+* link:../endpoints/resources.html[Resources and endpoints]
+* link:../information/additional_resources.html[Additional resources]

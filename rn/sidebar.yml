@@ -1,5 +1,7 @@
 section: rn
 title: Release notes
 entries:
+  - title: About
+    url: /rn/about.html
   - title: What's new
     url: /rn/whats_new.html
