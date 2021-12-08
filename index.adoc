@@ -6,7 +6,7 @@ lead: Astra is a NetApp software service that provides data lifecycle management
 summary: This is the summary for Astra Automation.
 ---
 
-= Astra Automation documentation
+= Astra Control Automation documentation
 :hardbreaks:
 :nofooter:
 :icons: font

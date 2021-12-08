@@ -19,7 +19,7 @@ NetApp periodically updates the Astra Control REST API to bring you new features
 
 This release includes XXX
 
-=== Separate documentation for each release of Astra Control Center
+=== Separate documentation for each release of Astra Control REST API
 
 xxx
 >> Establish a series xxx

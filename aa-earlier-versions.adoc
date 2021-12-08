@@ -15,4 +15,4 @@ summary:
 [.lead]
 You can access the automation documentation for previous Astra releases at the links below.
 
-* https://docs.netapp.com/us-en/astra-automation-2108/[Astra Automation 21.08 documentation^]
+* https://docs.netapp.com/us-en/astra-automation-2108/[Astra Control Automation 21.08 documentation^]
