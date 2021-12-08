@@ -39,19 +39,19 @@ The core resource endpoints provide the foundational services needed to establis
 |The account resources allow you to manage the isolated tenants within the multitenant Astra Control deployment environment.
 
 |ASUP
-|21.00
+|21.08
 |The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
 
 |Credential
-|21.00
+|21.04
 |The credential resources contain security related information which can be used with Astra users, clusters, buckets, and storage backends.
 
 |Entitlement
-|21.00
+|21.08
 |The entitlement resources represent the features and capacities available for an account based on the active licenses and subscriptions.
 
 |Event
-|21.00
+|21.04
 |The event resources represent all the events occurring in the system, including the subset classified as notifications.
 
 |Execution hook
@@ -59,7 +59,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The execution hook resources represent custom scripts that you can run either before or after a snapshot of a managed app is performed.
 
 |Feature
-|21.00
+|21.08
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
 |Hook source
@@ -67,35 +67,35 @@ The core resource endpoints provide the foundational services needed to establis
 |The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
 
 |License
-|21.00
+|21.08
 |The license resources represent the licenses available for an Astra account.
 
 |Notification
-|21.00
+|21.04
 |The notification resources represent Astra events that have a notification destination. Access is provided on a per-user basis.
 
 |Role binding
-|21.00
+|21.04
 |The role binding resources represent the relationships between specific pairs of users and accounts. In addition to the linkage between the two, a set of permissions is specified for each through a specific role.
 
 |Setting
-|21.00
+|21.08
 |The setting resources represent a collection of key-value pairs which describe a feature for a specific Astra account.
 
 |Subscription
-|21.00
+|21.08
 |The subscription resources represent the active subscriptions for an Astra account.
 
 |Token
-|21.00
+|21.04
 |The token resources represent the tokens available to programmatically access the Astra Control REST API.
 
 |Unread notification
-|21.00
+|21.04
 |The unread notification resources represent notifications assigned to a specific user but not yet read.
 
 |User
-|21.00
+|21.04
 |The user resources represent Astra users able to access the system based on their defined role.
 |===
 
@@ -110,15 +110,15 @@ The managed application resource endpoints provide access to the managed Kuberne
 |Description
 
 |Application asset
-|21.00
+|21.04
 |The application asset resources represent internal collections of state information needed to manage the Astra applications.
 
 |Application backup
-|21.00
+|21.04
 |The application backup resources represent backups of the managed applications.
 
 |Application snapshot
-|21.00
+|21.04
 |The application snapshot resources represent snapshots of the managed applications.
 
 |Execution hook override
@@ -126,11 +126,11 @@ The managed application resource endpoints provide access to the managed Kuberne
 |The execution hook override resources allow you to disable the preloaded NetApp default execution hooks for specific applications as needed.
 
 |Managed application
-|21.00
+|21.04
 |The managed app resources represent Kubernetes applications that are managed by Astra.
 
 |Schedule
-|21.00
+|21.04
 |The schedule resources represent data protection operations that are scheduled for the managed applications as part of a data protection policy.
 |===
 
@@ -145,19 +145,19 @@ The topology resource endpoints provide access to the unmanaged applications and
 |Description
 
 |App
-|21.00
+|21.04
 |The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
 
 |Bucket
-|21.00
+|21.08
 |The bucket resources represent the S3 cloud buckets used to store backups of the applications managed by Astra.
 
 |Cloud
-|21.00
+|21.08
 |The cloud resources represent clouds that Astra clients can connect to in order to manage clusters and applications.
 
 |Cluster
-|21.00
+|21.08
 |The cluster resources represent the Kubernetes clusters not managed by Kubernetes.
 
 |Cluster node
@@ -165,7 +165,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The cluster node resources provide additional resolution by allowing you to access the individual nodes within a Kubernetes cluster.
 
 |Managed cluster
-|21.00
+|21.08
 |The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
 
 |Managed storage backend
@@ -177,11 +177,11 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The namespace resources provide access to the namespaces used within a Kubernetes cluster.
 
 |Storage backend
-|21.00
+|21.08
 |The storage backend resources represent providers of storage services that can be used by the Astra managed clusters and applications.
 
 |Storage class
-|21.00
+|21.08
 |The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
 
 |Storage device
@@ -193,7 +193,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The storage node resources represent the nodes that are part of an ADS cluster.
 
 |Volume
-|21.00
+|21.04
 |The volume resources represent the Kubernetes storage volumes associated with the managed applications.
 |===
 
