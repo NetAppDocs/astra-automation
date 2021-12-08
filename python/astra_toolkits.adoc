@@ -13,8 +13,84 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-XXX
+The NetApp Astra toolkits are a set of related software tools that allow you to more easily access and use the Astra Control REST API. They are provided as open source and supported by NetApp.
 
+== Introduction
+
+xxx
+>> Can use to explore the API or use as a basis for the automaton of your Astra Control environment
+
+=== Two related tools
+
+xxx
 >> Two (base Python and wrapper)
+
+===== Astra Python SDK
+
+xxx
+>> categories
+>> classes
+
+===== Toolkit
+
+xxx
+>> In addition direct class to the classes in xxx,
+>> CLI
+>> includes extensive internal documentation, learning
+
+=== How to access
+
+xxx
+===== Python package
+xx
 >> PyPI
->> Links
+
+The name of the Python client library package is *netapp-ontap*. The version associated with the package is a combination of the ONTAP major and minor version numbers the library was generated from, along with a minor version for the client within the ONTAP release. For example,  valid version numbers include: 9.6.1, 9.6.2, and 9.7.1.
+
+You must use pip to install the netapp_ontap package from the Python Package Index (PyPi) web site.
+
+===== GitHub
+
+xxx
+
+== Basic requirements
+
+There are several requirements that you should consider before using the Astra toolkits. The basic requirements fall into two categories.
+
+=== Astra Control environment
+
+xxx
+>> credentials, token etc.
+
+=== Astra toolkits
+
+You must use Python 3.5 or later. In addition, the following packages are also required:
+
+* Pip 21.1.2 or later
+* Virtualenv 20.4.7 or later
+* Git 2.30.2 or later
+* Kubectl 1.17 or later
+* One of the following:
+** Azure CLI (az) 2.25.0 or later
+** Google Cloud SDK (gcloud) 345.0.0 or later
+* Helm 3.2.1 or later
+
+== Installation options
+
+xxx
+>> PyPI
+
+=== Docker container
+
+xxx
+
+=== xxx
+
+xxx
+
+== Summary of documentation and related resources
+
+xxx
+>> Some links already mentioned, this is a summary
+
+* https://pypi.org/project/netapp-astra-toolkits/[PyPI: NetApp Astra Toolkits^]
