@@ -15,4 +15,10 @@ summary:
 [.lead]
 You should review all the known issues for the current release. The known issues identify problems that might prevent you from using the product successfully.
 
->> Add 3804 and anything from ACC
+== Not all storage devices in a backend storage node are discovere
+
+When issuing a REST API call to retrieve the storage devices in a node, only the ADS devices are discovered.
+
+== ADS storage backend in unknown state
+
+An ADS storage backend will appear in an unknown state when one of the status conditions in ADS is in error state.

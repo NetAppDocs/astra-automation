@@ -13,87 +13,68 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-NetApp Astra Toolkits is an open source package you can use to develop code to more easily automate your Astra Control environment.
+NetApp Astra Toolkits is an open source package you can use to automate an Astra Control deployment. The package is also a valuable resource for learning about the Astra Control REST API perhaps as part of creating your own automation platform.
 
-== Introduction
+== Two related software tools
 
-xxx
->> Can use to explore the API or use as a basis for the automaton of your Astra Control environment
+The package includes two different though related tools which operate at different levels of abstraction to access the Astra Control REST API.
 
->>
-At the core is the Astra Control Python SDK which includes a set of classes to abstract the REST API calls. There is also a wrapper toolkit to execute specific predefined functions based on the Python classes. See link:../python/astra_toolkits.html[NetApp Astra toolkits] for more information.
+==== Astra Python SDK
 
-=== Two related tools
+The Astra Control Python SDK provides the core platform functionality. It includes a set of classes which abstract the underlying REST API calls. The classes support administrative actions on various Astra Control resources, including apps, backups, snapshots, and clusters.
 
-xxx
->> Two (base Python and wrapper)
+The SDK is provided in the single `astraSDK.py` file. You can import the code into your environment and use it directly.
 
-===== Astra Python SDK
+==== Toolkit script
 
-xxx
->> categories
->> classes
+In addition to the Astra Python SDK, the `toolkit.py` script is also available. This script operates at a higher level abstraction by providing specific administrative actions defined internally as Python functions. The script imports the Astra Python SDK and makes calls to the underlying SDK classes as needed.
 
-===== Toolkit
+== How to access
 
-xxx
->> In addition direct class to the classes in xxx,
->> CLI
->> includes extensive internal documentation, learning
+You can access the NetApp Astra Control Python SDK in one of two ways.
 
-=== How to access
+==== Python package
 
-xxx
-===== Python package
-xx
->> PyPI
+The NetApp Astra Control Python SDK is available at https://pypi.org/[Python Package Index^] under the name *netapp-astra-toolkits*. The package is assigned a version number and will continue to be updated as needed. You must use the *PiP* package management tool to install the package at this site into your environment.
 
-The name of the Python client library package is *netapp-ontap*. The version associated with the package is a combination of the ONTAP major and minor version numbers the library was generated from, along with a minor version for the client within the ONTAP release. For example,  valid version numbers include: 9.6.1, 9.6.2, and 9.7.1.
+==== GitHub source code
 
-You must use pip to install the netapp_ontap package from the Python Package Index (PyPi) web site.
+The source code for the Astra Control Python SDK is also available at GitHub. Some of the content includes:
 
-===== GitHub
+* `astraSDK.py` (Python classes)
+* `toolkit.py` (function-based script)
+* Detailed requirements and installation instructions
 
-xxx
+You can clone the https://github.com/NetApp/netapp-astra-toolkits[GitHub: Netapp/netapp-astra-toolkits^] repository to your local environment.
 
-== Basic requirements
+==== Installation and basic requirements
 
-There are several requirements that you should consider before using the Astra toolkits. The basic requirements fall into two categories.
+There are several options when installing the package and preparing to use it.
 
-=== Astra Control environment
+==== Summary of the installation options
 
-xxx
->> credentials, token etc.
+* Use Pip to install the package into your Python environment
+* Clone the Git Hub repository and either:
+** Copy the code files so that they are accessible to your client code
+** Deploy the package as a Docker container which includes everything you need
 
-=== Astra toolkits
+Refer to the PyPI and GitHub pages for more information.
 
-You must use Python 3.5 or later. In addition, the following packages are also required:
+==== Basic requirements
 
-* Pip 21.1.2 or later
-* Virtualenv 20.4.7 or later
-* Git 2.30.2 or later
-* Kubectl 1.17 or later
-* One of the following:
-** Azure CLI (az) 2.25.0 or later
-** Google Cloud SDK (gcloud) 345.0.0 or later
-* Helm 3.2.1 or later
+You must prepare to be able to install and use the SDK and related toolkit script. The requirements fall into two main categories.
 
-== Installation options
+==== Astra Control environment
 
-xxx
->> PyPI
+Whether directly using the Python classes in `astraSDK.py` or the functions in the higher level `toolkit.py` script, ultimately you will be accessing the REST API at an Astra Control deployment. Because of this you'll need an Astra account along with an API token. See link:../get-started/before_get_started.html[Before you begin] in the *Get started* section of the documentation for more information.
 
-=== Docker container
+==== NetApp Astra Control Python SDK
 
-xxx
+There are several prerequisites related to the Python environment. You must use Python 3.5 or later. In addition, there are several Python packages that are also required. See the GitHub repository page or PyPI package page for more information.
 
-=== xxx
+== Summary of helpful resources
 
-xxx
-
-== Summary of documentation and related resources
-
-xxx
->> Some links already mentioned, this is a summary
+A summary of the resources you'll need to get started is presented below.
 
 * https://pypi.org/project/netapp-astra-toolkits/[PyPI: NetApp Astra Toolkits^]
+* https://github.com/NetApp/netapp-astra-toolkits[GitHub: Netapp/netapp-astra-toolkits^]
