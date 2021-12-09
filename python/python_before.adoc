@@ -13,7 +13,10 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-Python is a popular development language especially for datacenter automation. Before using Python to access the Astra Control REST API, you need to prepare the environment and the required input files.
+Python is a popular development language especially for datacenter automation. Before using Python to direcly access the Astra Control REST API, you need to prepare the environment and the required input files.
+
+[NOTE]
+The information provided on this page assumes you will directly access the REST API through the native features provided with Python. However, NetApp also provides a toolkit package which abstracts the API and removes some of the complexities. See link:../python/astra_toolkits.html[NetApp Astra Toolkits] for more information.
 
 == Prepare the environment
 

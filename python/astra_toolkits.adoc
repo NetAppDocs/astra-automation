@@ -47,7 +47,7 @@ The source code for the Astra Control Python SDK is also available at GitHub. So
 
 You can clone the https://github.com/NetApp/netapp-astra-toolkits[GitHub: Netapp/netapp-astra-toolkits^] repository to your local environment.
 
-==== Installation and basic requirements
+== Installation and basic requirements
 
 There are several options when installing the package and preparing to use it.
 
@@ -55,20 +55,16 @@ There are several options when installing the package and preparing to use it.
 
 * Use Pip to install the package into your Python environment
 * Clone the Git Hub repository and either:
-** Copy the code files so that they are accessible to your client code
 ** Deploy the package as a Docker container which includes everything you need
+** Copy the code files so that they are accessible to your client code
 
 Refer to the PyPI and GitHub pages for more information.
 
-==== Basic requirements
-
-You must prepare to be able to install and use the SDK and related toolkit script. The requirements fall into two main categories.
-
-==== Astra Control environment
+==== Requirements for the Astra Control environment
 
 Whether directly using the Python classes in `astraSDK.py` or the functions in the higher level `toolkit.py` script, ultimately you will be accessing the REST API at an Astra Control deployment. Because of this you'll need an Astra account along with an API token. See link:../get-started/before_get_started.html[Before you begin] in the *Get started* section of the documentation for more information.
 
-==== NetApp Astra Control Python SDK
+==== Requirements for the NetApp Astra Control Python SDK
 
 There are several prerequisites related to the Python environment. You must use Python 3.5 or later. In addition, there are several Python packages that are also required. See the GitHub repository page or PyPI package page for more information.
 

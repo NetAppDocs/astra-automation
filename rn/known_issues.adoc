@@ -15,10 +15,10 @@ summary:
 [.lead]
 You should review all the known issues for the current release. The known issues identify problems that might prevent you from using the product successfully.
 
-== Not all storage devices in a backend storage node are discovere
+== Not all storage devices in a backend storage node are discovered
 
-When issuing a REST API call to retrieve the storage devices in a node, only the ADS devices are discovered.
+When issuing a REST API call to retrieve the storage devices defined in a storage node, only the ADS devices are discovered. Not all of the devices are returned.
 
 == ADS storage backend in unknown state
 
-An ADS storage backend will appear in an unknown state when one of the status conditions in ADS is in error state.
+An ADS storage backend will appear in an unknown state when one of the status conditions in ADS is in an error state.
