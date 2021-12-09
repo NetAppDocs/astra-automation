@@ -27,9 +27,9 @@ Every release of Astra Control includes a distinct REST API enhanced and tailore
 
 The number of REST resource types has continued to expand with an emphasis on execution hooks and storage backends. The new resources include: account, execution hook, hook source, execution hook override, cluster node, managed storage backend, namespace, storage device, and storage node. See link:../endpoints/resources.html[Resources] for more information.
 
-=== NetApp Astra Toolkits
+=== NetApp Astra Control Python SDK
 
-NetApp Astra Toolkits is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra Control Python SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit to execute specific predefined functions based on wrapping and abstracting the Python classes. See link:../python/astra_toolkits.html[NetApp Astra Toolkits] for more information.
+NetApp Astra Toolkits is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra Control Python SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit to execute specific predefined functions based on wrapping and abstracting the Python classes. See link:../python/astra_toolkits.html[NetApp Astra Control Python SDK] for more information.
 
 == 5 August 2021 (21.08)
 
