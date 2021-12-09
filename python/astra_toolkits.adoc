@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= NetApp Astra toolkits
+= NetApp Astra Toolkits
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,12 +13,15 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The NetApp Astra toolkits are a set of related software tools that allow you to more easily access and use the Astra Control REST API. They are provided as open source and supported by NetApp.
+NetApp Astra Toolkits is an open source package you can use to develop code to more easily automate your Astra Control environment.
 
 == Introduction
 
 xxx
 >> Can use to explore the API or use as a basis for the automaton of your Astra Control environment
+
+>>
+At the core is the Astra Control Python SDK which includes a set of classes to abstract the REST API calls. There is also a wrapper toolkit to execute specific predefined functions based on the Python classes. See link:../python/astra_toolkits.html[NetApp Astra toolkits] for more information.
 
 === Two related tools
 

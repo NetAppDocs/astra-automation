@@ -17,27 +17,19 @@ NetApp periodically updates the Astra Control REST API to bring you new features
 
 == 14 December 2021 (21.12)
 
-This release includes XXX
+This release includes an expansion of the REST API along with a change to the documentation structure to better support the evolution of Astra Control through multiple yearly updates.
 
 === Separate documentation for each release of Astra Control REST API
 
-xxx
->> Establish a series xxx
+Every major release of Astra Control includes a distinct REST API enhanced and tailored to the features of the release. The documentation for each release of the Astra Control REST API is now available at its own web site with an associated GitHub repository for the content. The main site (https://docs.netapp.com/us-en/astra-automation/[Astra Control Automation^] always contains the documentation for the most current release. See link:../aa-earlier-versions.html[Earlier versions of Astra Control Automation documentation] for information about prior releases.
 
 === Expansion of the REST resource types
 
-xxx
->> Bullet list with summary
-
-* Accounts
-* Event hooks
-* Storage backends
+The number of REST resource types has continued to expand with an emphasis on execution hooks and storage backends. The new resources include: account, execution hook, hook source, execution hook override, cluster node, managed storage backend, namespace, storage device and storage node. See link:../endpoints/resources.html[Resources] for more information.
 
 === NetApp Astra Toolkits
 
-xxx
->> Introduced prior to the current Astra release and now described
->> See xxx for more information
+NetApp Astra Toolkits is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra Control Python SDK which includes a set of classes to abstract the REST API calls. There is also a wrapper toolkit to execute specific predefined functions based on the Python classes. See link:../python/astra_toolkits.html[NetApp Astra toolkits] for more information.
 
 == 5 August 2021 (21.08)
 

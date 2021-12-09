@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Earlier versions of Astra Automation documentation
+= Earlier versions of Astra Control Automation documentation
 :hardbreaks:
 :nofooter:
 :icons: font
