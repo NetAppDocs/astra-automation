@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The documentation at this site describes the Astra Control REST API and related automation technologies available with the December 2021 (21.12) release of Astra Control.
+The documentation at this site describes the Astra Control REST API and related automation technologies available with the December 2021 (21.12) release of Astra Control. In particular, this release of the REST API is used with the corresponding 21.12 release of Astra Control Center.
 
 See the following pages for more information about this release as well as previous releases:
 
@@ -21,3 +21,4 @@ See the following pages for more information about this release as well as previ
 * link:../endpoints/resources.html[Resources and endpoints]
 * link:../information/additional_resources.html[Additional resources]
 * link:../aa-earlier-versions.html[Earlier versions of Astra Automation documentation]
+* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 21.12 documentation^]
