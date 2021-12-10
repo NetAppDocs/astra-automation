@@ -17,8 +17,8 @@ You should review all the known issues for the current release. The known issues
 
 == Not all storage devices in a backend storage node are discovered
 
-When issuing a REST API call to retrieve the storage devices defined in a storage node, only the ADS devices are discovered. Not all of the devices are returned.
+When issuing a REST API call to retrieve the storage devices defined in a storage node, only the ADS devices are discovered. Not all the devices are returned.
 
-== ADS storage backend in unknown state
+== ADS storage backend in an unknown state
 
 An ADS storage backend will appear in an unknown state when one of the status conditions in ADS is in an error state.
