@@ -64,6 +64,6 @@ In addition to the parameters common with all REST API calls, the following para
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
 
-===== Curl example: Clone an app from a backup
+===== Curl example: Restore an app in place from a backup
 [source,curl]
 curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput

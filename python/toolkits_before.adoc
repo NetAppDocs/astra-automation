@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: python/astra_toolkits.html
+permalink: python/toolkits_before.html
 keywords:
 summary:
 ---
