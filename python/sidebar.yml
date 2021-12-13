@@ -7,3 +7,7 @@ entries:
         url: /python/python_before.html
       - title: List the managed apps
         url: /python/py_list_man_apps.html
+  - title: NetApp Astra Control Python SDK
+    entries:
+      - title: Before you begin
+        url: /python/toolkits_before.html

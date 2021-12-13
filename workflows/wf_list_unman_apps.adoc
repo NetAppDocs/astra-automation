@@ -16,7 +16,7 @@ summary:
 You can list the applications that are currently not managed by Astra. You might do this as part of selecting an app to be managed.
 
 [NOTE]
-The REST endpoint used in this workflow returns all the Astra applications. You must examine the `managedState` field in the output to determine if an app is in the `unmanaged` state. As an alternative, you can use the `filter` query parameter on the API call to indicate that only the unmanaged apps be returned.
+The REST endpoint used in this workflow returns all the Astra applications by default. You must examine the `managedState` field in the output to determine which apps are in the `unmanaged` state. As an alternative, you can use the `filter` query parameter on the API call to request that only the unmanaged apps be returned.
 
 == List all the apps and select the unmanaged apps
 
@@ -106,7 +106,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 
 === 2. Select the unmanaged applications
 
-Review the output and manually select the apps with `managedState` equal to `unmanaged`.
+Review the output of the API call and manually select the apps with `managedState` equal to `unmanaged`.
 
 == List only the apps with managedState equal to unmanaged
 
