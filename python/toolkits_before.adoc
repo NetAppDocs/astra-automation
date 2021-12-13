@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= NetApp Astra Control Python SDK
+= Before you begin
 :hardbreaks:
 :nofooter:
 :icons: font

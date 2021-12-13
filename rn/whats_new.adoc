@@ -29,7 +29,7 @@ The number of REST resource types has continued to expand with an emphasis on ex
 
 === NetApp Astra Control Python SDK
 
-NetApp Astra Control Python SDK is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit script to execute specific administrative tasks by wrapping and abstracting the Python classes. See link:../python/astra_toolkits.html[NetApp Astra Control Python SDK] for more information.
+NetApp Astra Control Python SDK is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit script to execute specific administrative tasks by wrapping and abstracting the Python classes. See link:../python/toolkits_before.html[NetApp Astra Control Python SDK] for more information.
 
 == 5 August 2021 (21.08)
 
