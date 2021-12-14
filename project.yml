@@ -9,7 +9,7 @@ settings:
     langs: us-en,ja-jp,zh-cn
 sidebar:
   entries:
-    - title: Astra automation docs
+    - title: Astra Control Automation docs
       url: /index.html
     - section: rn
     - section: intro
