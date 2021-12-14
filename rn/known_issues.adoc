@@ -16,9 +16,11 @@ summary:
 You should review all the known issues for the current release. The known issues identify problems that might prevent you from using the product successfully.
 
 == Not all storage devices in a backend storage node are discovered
+// ASTRACTL-12058/DOC-3804
 
-When issuing a REST API call to retrieve the storage devices defined in a storage node, only the ADS devices are discovered. Not all the devices are returned.
+When issuing a REST API call to retrieve the storage devices defined in a storage node, only the Astra Data Store devices are discovered. Not all the devices are returned.
 
-== ADS storage backend in an unknown state
+== Astra Data Store storage backend in `Unknown` state
+//DOC-3916/ASTRACTL-13196/ASTRACTL-13134
 
-An ADS storage backend will appear in an unknown state when one of the status conditions in ADS is in an error state.
+The Astra Data Store storage backend is in an `Unknown` state after issuing a call to retrieve. In this condition, the storage backend is actually available and can be communicated with. A component within the storage backend is likely in an unhealthy state and needs to be returned to a healthy state for the storage backend to show as `Available`.
