@@ -2,10 +2,8 @@ section: python
 title: Using Python
 entries:
   - title: NetApp Astra Control Python SDK
-    entries:
-      - title: Before you begin
-        url: /python/toolkits_before.html
-  - title: Native Python packages
+    url: /python/astra_toolkits.html
+  - title: Native Python
     entries:
       - title: Before you begin
         url: /python/python_before.html

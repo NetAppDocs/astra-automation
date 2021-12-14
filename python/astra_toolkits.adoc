@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: python/toolkits_before.html
+permalink: python/astra_toolkits.html
 keywords:
 summary:
 ---
 
-= Before you begin
+= NetApp Astra Control Python SDK
 :hardbreaks:
 :nofooter:
 :icons: font
