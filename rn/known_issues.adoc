@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You should review all the known issues for the current release. The known issues identify problems that might prevent you from using the product successfully.
+You should review all the known issues for the current release related to the Astra Control REST API. The known issues identify problems that might prevent you from using the product successfully.
 
 == Not all storage devices in a backend storage node are discovered
 // ASTRACTL-12058/DOC-3804
@@ -23,4 +23,4 @@ When issuing a REST API call to retrieve the storage devices defined in a storag
 == Astra Data Store storage backend in `Unknown` state
 //DOC-3916/ASTRACTL-13196/ASTRACTL-13134
 
-The Astra Data Store storage backend is in an `Unknown` state after issuing a call to retrieve. In this condition, the storage backend is actually available and can be communicated with. A component within the storage backend is likely in an unhealthy state and needs to be returned to a healthy state for the storage backend to show as `Available`.
+The Astra Data Store storage backend is in the `Unknown` state after issuing an API call to retrieve the storage backend. In this condition, the storage backend is actually still available and can be communicated with. However, a component within the storage backend is likely in an unhealthy state and needs to be returned to a healthy state for the storage backend to show as `Available`.
