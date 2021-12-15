@@ -16,9 +16,91 @@ summary:
 You can list the applications that are currently not managed by Astra. You might do this as part of selecting an app to be managed.
 
 [NOTE]
-This workflow lists all the Astra applications. You can look at the output to determine which apps are unmanaged by examining the `managedState` field.
+The REST endpoint used in these workflows returns all the Astra applications by default. You can use the `filter` query parameter on the API call to request only the unmanaged apps be returned. As an alternative, you can omit the filter parameter to return all the apps and then examine the `managedState` field in the output to determine which apps are in the `unmanaged` state.
 
-=== 1. List the applications
+== List only the apps with managedState equal to unmanaged
+
+This workflow uses the `filter` query parameter to return only the unmanaged apps.
+
+=== 1. List the unmanaged applications
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{accountID}/topology/v1/apps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|filter
+|Query
+|No
+|Use a filter to specify which apps should be returned.
+|include
+|Query
+|No
+|Optionally select the values you want returned in the response.
+|===
+
+===== Curl example: Return the name, id, and managedState for the unmanaged apps
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/apps?filter=managedState%20eq%20'unmanaged'&include=name,id,managedState' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== JSON output example
+[source,json]
+{
+  "items": [
+    [
+      "maria",
+      "eed19f78-0884-4792-bb7a-313258c6b0b1",
+      "unmanaged"
+    ],
+    [
+      "test-postgres-app",
+      "1ee6235b-cda1-45cb-8d4c-630bdb8b41a5",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql",
+      "e591ee59-ea90-4a9f-8e6c-d2b6e8647096",
+      "unmanaged"
+    ],
+    [
+      "kube-system",
+      "077a2f73-4b51-4d04-8c6c-f63b3b069755",
+      "unmanaged"
+    ],
+    [
+      "trident",
+      "5b6fc28f-e308-4653-b9d2-6d66a764d2e1",
+      "unmanaged"
+    ],
+    [
+      "postgres1-postgresql-clone",
+      "06be05c5-763e-4d73-bd06-1f27f5f2e130",
+      "unmanaged"
+    ]
+  ],
+  "metadata": {}
+}
+
+== List all the apps and select the unmanaged apps
+
+This workflow returns all the apps. You must examine the output to determine which are unmanaged.
+
+=== 1. List all the applications
 
 Perform the following REST API call.
 
@@ -101,3 +183,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   ],
   "metadata": {}
 }
+
+=== 2. Select the unmanaged applications
+
+Review the output of the API call and manually select the apps with `managedState` equal to `unmanaged`.

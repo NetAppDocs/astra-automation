@@ -25,14 +25,14 @@ Perform the workflow link:wf_list_backups.html[List the backups] and select back
 
 === 3. Restore the app
 
-Perform the following REST API call.
+Perform the following REST API call. You must provide the ID for either a backup (as shown below) or snapshot.
 
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
 |Path
-|POST
-|/account/{accountID}/k8s/v1/managedApps
+|PUT
+|/account/{accountID}/k8s/v1/managedApps/{appID}
 |===
 
 ===== Additional input parameters
@@ -55,15 +55,10 @@ In addition to the parameters common with all REST API calls, the following para
 [source,json]
 {
   "type": "application/astra-managedApp",
-  "version": "1.0",
-  "name": "postgres1-postgresql-clone",
-  "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "davidns-postgres-app",
-  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
-  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+  "version": "1.2",
+  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 
-===== Curl example: Clone an app from a backup
+===== Curl example: Restore an app in place from a backup
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<APP_ID>' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
