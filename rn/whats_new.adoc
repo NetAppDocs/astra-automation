@@ -15,7 +15,23 @@ summary:
 [.lead]
 NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
-== 5 August 2021
+== 14 December 2021 (21.12)
+
+This release includes an expansion of the REST API along with a change to the documentation structure to better support the evolution of Astra Control through the future release updates.
+
+=== Separate Astra Automation documentation for each release of Astra Control
+
+Every release of Astra Control includes a distinct REST API that has been enhanced and tailored to the features of the specific release. The documentation for each release of the Astra Control REST API is now available at its own dedicated web site along with the associated GitHub content repository. The main doc site https://docs.netapp.com/us-en/astra-automation/[Astra Control Automation^] always contains the documentation for the most current release. See link:../aa-earlier-versions.html[Earlier versions of Astra Control Automation documentation] for information about prior releases.
+
+=== Expansion of the REST resource types
+
+The number of REST resource types has continued to expand with an emphasis on execution hooks and storage backends. The new resources include: account, execution hook, hook source, execution hook override, cluster node, managed storage backend, namespace, storage device, and storage node. See link:../endpoints/resources.html[Resources] for more information.
+
+=== NetApp Astra Control Python SDK
+
+NetApp Astra Control Python SDK is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit script to execute specific administrative tasks by wrapping and abstracting the Python classes. See link:../python/astra_toolkits.html[NetApp Astra Control Python SDK] for more information.
+
+== 5 August 2021 (21.08)
 
 This release includes the introduction of a new Astra deployment model and a major expansion of the REST API.
 
@@ -37,7 +53,7 @@ The OpenAPI endpoints provide access to the current OpenAPI JSON document and ot
 OpenMetrics support::
 The OpenMetrics endpoints provide access to account metrics through the OpenMetrics resource.
 
-== 15 April 2021
+== 15 April 2021 (21.04)
 
 This release includes the following new features and enhancements.
 

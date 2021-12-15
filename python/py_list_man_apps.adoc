@@ -15,6 +15,9 @@ summary:
 [.lead]
 You can use the following script to list the managed applications for your Astra account.
 
+[NOTE]
+See link:../python/python_before.html[Before you begin] for an example of the required JSON input file.
+
 [source,python,%autofill]
 ---------------------------------------------------------------------
 #!/usr/bin/env python3
@@ -86,7 +89,7 @@ def get_managed_apps():
     resp_headers = resp1.headers
 
     # Print the list of managed apps
-    if http_code == 200:
+    if resp1.ok:
         resp_data = json.loads(resp1.text)
         items = resp_data['items']
         for i in items:
