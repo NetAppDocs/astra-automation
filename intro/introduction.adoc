@@ -52,4 +52,4 @@ In addition to accessing the REST API directly, you can use other automation tec
 
 === Part of the Astra family documentation
 
-The Astra Control Automation documentation is part of the larger Astra family documentation. See https://docs.netapp.com/us-en/astra-family/[Astra family documentation^] for more information.
+The Astra Control Automation documentation is part of the larger Astra family documentation. See https://docs.netapp.com/us-en/astra-family/[Astra documentation^] for more information.
