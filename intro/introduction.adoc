@@ -49,3 +49,7 @@ A set of workflows is provided to assist with the development of your automation
 === Foundation for advanced automation technologies
 
 In addition to accessing the REST API directly, you can use other automation technologies which are based on the REST API.
+
+=== Part of the Astra family documentation
+
+The Astra Control Automation documentation is part of the larger Astra family documentation. See https://docs.netapp.com/us-en/astra-family/[Astra family documentation^] for more information.
