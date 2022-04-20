@@ -15,6 +15,48 @@ summary:
 [.lead]
 NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 26 April 2022 (22.04)
+
+This release includes an expansion and update of the REST API along with xxx
+
+>> a change to the documentation structure to better support the evolution of Astra Control through the future release updates.
+
+[TIP]
+Review DS (Jira list) and AH emails. Also ACC 22.04 review site. Which have nothing to do with the API, and might be removed? Rather than remove, maybe place under one "additional enhancements" section.
+
+=== Continued expansion of the REST API
+
+xxx
+>> Two new resource types
+>> Version of 12 existing resources updated
+
+=== Enhanced RBAC with namespace granularity
+
+xxx
+
+=== Generic ingress for Astra Control Center
+
+xxx
+>> deploy-time issue
+
+=== Private cluster in AKS
+
+xxx
+>> spell out AKS
+
+=== Bucket removal
+
+xxx
+
+=== Support for Kubernetes 1.22
+
+xxx
+
+=== Support for Cloud Volumes ONTAP
+
+xxx
+>> From ACC review
+
 == 14 December 2021 (21.12)
 
 This release includes an expansion of the REST API along with a change to the documentation structure to better support the evolution of Astra Control through the future release updates.
