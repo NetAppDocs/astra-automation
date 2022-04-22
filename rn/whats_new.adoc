@@ -48,16 +48,20 @@ xxx
 
 === Addition product enhancements
 
-There are several addition enhancements for the two Astra Control product implementations, including:
+There are several additional enhancements for the two Astra Control product implementations, including:
 
-* Generic ingress for Astra Control Center (deploy-time issue)
-* Private cluster in AKS *SPELL OUT*
+* Generic ingress for Astra Control Center
+* Private cluster in AKS
 * Support for Kubernetes 1.22
+* Support for VMware Tanzu portfolio
 
-See
-https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[ACC^]
+See the _What's new_ page at the Astra Control Center and Astra Control Service documentation sites.
 
-https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[ACC^]
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
+
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
 
 == 14 December 2021 (21.12)
 
