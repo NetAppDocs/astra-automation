@@ -18,7 +18,7 @@ You can use the resources provided through the Astra Control REST API to automat
 [NOTE]
 The format of the path and full URL used to access the Astra Control resources is based on several values. See link:../rest-core/url_format.html[URL format] for more information. Also see link:../reference/api_reference.html[API reference] for more details about using the Astra resources and endpoints.
 
-== Astra Control REST resources and endpoints
+== Summary of Astra Control REST resources
 
 The primary resource endpoints provided in the Astra Control REST API are organized in three categories. Each resource can be accessed with the full set of CRUD operations (create, read, update, delete) except where noted.
 
@@ -35,7 +35,7 @@ The core resource endpoints provide the foundational services needed to establis
 |Description
 
 |Account
-|*21.12*
+|21.12
 |The account resources allow you to manage the isolated tenants within the multitenant Astra Control deployment environment.
 
 |ASUP
@@ -55,7 +55,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The event resources represent all the events occurring in the system, including the subset classified as notifications.
 
 |Execution hook
-|*21.12*
+|21.12
 |The execution hook resources represent custom scripts that you can run either before or after a snapshot of a managed app is performed.
 
 |Feature
@@ -63,7 +63,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
 |Hook source
-|*21.12*
+|21.12
 |The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
 
 |License
@@ -73,6 +73,10 @@ The core resource endpoints provide the foundational services needed to establis
 |Notification
 |21.04
 |The notification resources represent Astra events that have a notification destination. Access is provided on a per-user basis.
+
+|Package
+|*22.04*
+|xxx
 
 |Role binding
 |21.04
@@ -93,6 +97,10 @@ The core resource endpoints provide the foundational services needed to establis
 |Unread notification
 |21.04
 |The unread notification resources represent notifications assigned to a specific user but not yet read.
+
+|Upgrade
+|*22.04*
+|xxx
 
 |User
 |21.04
@@ -122,7 +130,7 @@ The managed application resource endpoints provide access to the managed Kuberne
 |The application snapshot resources represent snapshots of the managed applications.
 
 |Execution hook override
-|*21.12*
+|21.12
 |The execution hook override resources allow you to disable the preloaded NetApp default execution hooks for specific applications as needed.
 
 |Managed application
@@ -161,7 +169,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The cluster resources represent the Kubernetes clusters not managed by Kubernetes.
 
 |Cluster node
-|*21.12*
+|21.12
 |The cluster node resources provide additional resolution by allowing you to access the individual nodes within a Kubernetes cluster.
 
 |Managed cluster
@@ -169,11 +177,11 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
 
 |Managed storage backend
-|*21.12*
+|21.12
 |The managed storage backend resources allow you to access abstracted representations of the backend storage providers. These storage backends can be used by the managed clusters and applications.
 
 |Namespace
-|*21.12*
+|21.12
 |The namespace resources provide access to the namespaces used within a Kubernetes cluster.
 
 |Storage backend
@@ -185,17 +193,37 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
 
 |Storage device
-|*21.12*
+|21.12
 |The storage device resources provide access to the disks associated with a specific storage node for Astra Data Store (ADS) type storage backends. An ADS storage backends is deployed as a Kubernetes clusters.
 
 |Storage node
-|*21.12*
+|21.12
 |The storage node resources represent the nodes that are part of an ADS cluster.
 
 |Volume
 |21.04
 |The volume resources represent the Kubernetes storage volumes associated with the managed applications.
 |===
+
+== New endpoints with the current release
+
+The following REST endpoints have been added with the current 22.04 Astra Control release.
+
+[NOTE]
+In addition to the new endpoints, the versions of several existing resources have been upgraded.
+
+* /accounts/{account_id}/core/v1/packages
+* /accounts/{account_id}/core/v1/packages/{package_id}
+* /accounts/{account_id}/core/v1/upgrades
+* /accounts/{account_id}/core/v1/upgrades//{upgrade_id}
+* /accounts/{account_id}/topology/v1/appBackups
+* /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}
+* /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes
+* /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}
+* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets
+* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}
+* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes
+* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}
 
 == Additional resources and endpoints
 
