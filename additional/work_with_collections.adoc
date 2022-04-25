@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: additional/working_with_collections.html
+permalink: additional/work_with_collections.html
 keywords: collections
 summary:
 ---
 
-= Working with collections
+= Work with collections
 :hardbreaks:
 :nofooter:
 :icons: font

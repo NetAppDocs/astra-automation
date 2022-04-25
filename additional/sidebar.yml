@@ -3,8 +3,8 @@ title: Additional usage considerations
 entries:
   - title: RBAC security
     url: /additional/rbac.html
-  - title: Working with collections
-    url: /additional/working_with_collections.html
+  - title: Work with collections
+    url: /additional/work_with_collections.html
   - title: Diagnostics
     url: /additional/diagnostics_support.html
   - title: Revoke an API token
