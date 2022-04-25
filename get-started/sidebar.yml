@@ -7,5 +7,7 @@ entries:
     url: /get-started/get_api_token.html
   - title: Hello world
     url: /get-started/hello_world.html
+  - title: Basic Kubernetes concepts
+    url: /get-started/kubernetes_concepts.html
   - title: Prepare to use the workflows
     url: /get-started/prepare_to_use_workflows.html

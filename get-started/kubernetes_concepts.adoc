@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: get-started/kubernetes_concepts.html
+keywords:
+summary:
+---
+
+= Basic Kubernetes concepts
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+xxx
