@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Astra API tokens
+= Revoke an API token
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,23 +13,6 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra Control REST API provides multiple layers of security.
-
-[NOTE]
-All HTTP network traffic is protected using the transport layer security (TLS) standard.
-
-== Astra API tokens
-
-To use the Astra Control REST API, you must provide an API token on every request in the `Authorization` request header. Note the following:
-
-* You can generate an API token at the Astra web user interface.
-* A token never expires after it is created.
-* You can revoke a token at any time at the Astra web user interface.
-
-See link:../get-started/get_api_token.html[Get an API token] for more information.
-
-== Revoking an API access token
-
 You can revoke an API token at the Astra web interface when it is no longer needed.
 
 .Before you begin

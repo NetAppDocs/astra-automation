@@ -51,7 +51,7 @@ NetApp Cloud Central service console with sign in.
 +
 Access troubleshooting tools, documentation, and technical support assistance.
 
-=== REST and Kubernetes concepts
+=== REST and cloud concepts
 
 * PhD https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[dissertation^] by Roy Fielding
 +
@@ -64,5 +64,3 @@ This is the authentication and authorization platform service used by the Astra 
 * https://www.rfc-editor.org/[RFC editor^]
 +
 Authoritative source for web and Internet standards maintained as a collection of uniquely numbered RFC documents.
-
-*MUST ADD K8S*

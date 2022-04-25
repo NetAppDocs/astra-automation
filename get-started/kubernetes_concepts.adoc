@@ -14,3 +14,19 @@ summary:
 
 [.lead]
 xxx
+
+=== Objects
+
+xxx
+
+=== Namespaces
+
+xxx
+
+=== Labels
+
+xxx
+
+.Related information
+
+<LINKS>

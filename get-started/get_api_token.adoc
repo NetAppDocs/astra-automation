@@ -13,10 +13,21 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You must have an API access token to use the Astra Control REST API.
+To use the Astra Control REST API, you need to generate an API token and include it with every API call in the `Authorization` request header.
 
-[NOTE]
-The Astra API tokens never expire, however you can revoke a token when it is no longer needed.
+== Introduction
+
+Note the following about the Astra API tokens:
+
+* You need to generate an API token at the Astra web user interface.
+* A token never expires after it is created.
+* You can revoke a token at any time at the Astra web user interface.
+
+.Related information
+
+* link:../additional/revoke_token.html[Revoke an API token]
+
+== Create an Astra API token
 
 .Before you begin
 
