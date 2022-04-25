@@ -7,6 +7,8 @@ entries:
     entries:
       - title: List users
         url: /workflows_infra/wf_list_users.html
+      - title: Create a user
+        url: /workflows_infra/wf_create_user.html
   - title: Buckets
     entries:
       - title: List buckets

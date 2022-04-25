@@ -14,8 +14,8 @@ sidebar:
     - section: intro
     - section: get-started
     - section: rest-core
-    - section: additional
     - section: endpoints
+    - section: additional
     - section: workflows_infra
     - section: workflows
     - section: python
@@ -74,5 +74,5 @@ homepage:
       links:
         - title: NetApp Astra Control Python SDK
           url: /python/astra_toolkits.html
-        - title: Use native Python
+        - title: Use Python natively
           url: /python/python_before.html

@@ -76,7 +76,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Package
 |*22.04*
-|xxx
+|The package resources provide registration and access to package definitions. Software packages consist of various components such as files, images, and other artifacts.
 
 |Role binding
 |21.04
@@ -100,7 +100,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Upgrade
 |*22.04*
-|xxx
+|The upgrade resources provide access to software components and the ability to initiate system upgrades.
 
 |User
 |21.04

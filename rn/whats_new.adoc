@@ -19,32 +19,21 @@ NetApp periodically updates the Astra Control REST API to bring you new features
 
 This release includes an expansion and update of the REST API along with enhanced security and administrative features.
 
-=== Continued expansion of the REST API
+=== New and enhanced Astra resources
 
-xxx
->> Two new resource types
-
-=== Version upgrade for selected existing resources
-
-xxx
->> Version of 12 existing resources updated (see DS note and review again)
+Two new resources types have been added, including *package* and *upgrade*. In addition, several of the version of several existing resources has been upgraded.
 
 === Enhanced RBAC with namespace granularity
 
-xxx
->> Refers to the ability to add role constraints to role bindings that limit which namespaces a user can see. See the roleBinding API documentation for more details
-
->> See ACS review
+When binding or associating a role with a user, you can now limit the cluster namespaces that the user has access to. See the link:../workflows_infra/workflows_infra_before.html[Infrastructure workflows] and the *Role Binding API* for more information.
 
 === Bucket removal
 
-xxx
->> See ACC and ACS review
+You can now remove a bucket that is no longer needed or not functioning properly.
 
 === Support for Cloud Volumes ONTAP
 
-xxx
->> Storage backend
+Cloud Volumes ONTAP can now be added as a storage backend.
 
 === Addition product enhancements
 
