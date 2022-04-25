@@ -50,8 +50,8 @@ homepage:
       links:
         - title: RBAC security
           url: /additional/rbac.html
-        - title: Working with collections
-          url: /additional/working_with_collections.html
+        - title: Work with collections
+          url: /additional/work_with_collections.html
         - title: Diagnostics and support
           url: /additional/diagnostics_support.html
         - title: Revoke an API token
@@ -72,7 +72,7 @@ homepage:
           url: /workflows/workflows_before.html
     - title: Python
       links:
-        - title: Before you begin
+        - title: NetApp Astra Control Python SDK
+          url: /python/astra_toolkits.html
+        - title: Use native Python
           url: /python/python_before.html
-        - title: List the managed apps
-          url: /python/py_list_man_apps.html
