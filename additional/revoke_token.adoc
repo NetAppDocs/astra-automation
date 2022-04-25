@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: additional/api_tokens.html
+permalink: additional/revoke_token.html
 keywords:
 summary:
 ---
