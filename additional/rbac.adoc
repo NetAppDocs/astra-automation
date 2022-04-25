@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: additional/security.html
+permalink: additional/rbac.html
 keywords:
 summary:
 ---
 
-= Security
+= RBAC security
 :hardbreaks:
 :nofooter:
 :icons: font

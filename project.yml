@@ -66,10 +66,10 @@ homepage:
           url: /additional/diagnostics_support.html
     - title: Resources
       links:
-        - title: Resources and collections
+        - title: REST resources and collections
           summary: Become familiar with the design of REST resources and collections.
           url: /rest-core/resources_collections.html
-        - title: Astra Control REST API resources
+        - title: Summary of Astra API resources
           summary: Review a concise introduction to the various Astra resources.
           url: /endpoints/resources.html
     - title: Workflows
