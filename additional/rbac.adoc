@@ -38,20 +38,18 @@ Every Astra user is assigned to a single role which determines the actions that 
 [NOTE]
 This feature was introduced with the 22.04 release of the Astra REST API.
 
-When a role binding is established for a specific user, a constraint can be defined to limit the namespaces the user has access to. There are several ways this constraint can be defined as described in the table below.
-
->> See the parameter `roleContraint` xxx
+When a role binding is established for a specific user, a constraint can be defined to limit the namespaces the user has access to. There are several ways this constraint can be defined as described in the table below. See the parameter `roleContraints` in the Role Binding API for more information.
 
 [cols="20,80"*,options="header"]
 |===
-|Type
+|Namespaces
 |Description
 |All
-|XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXX XXX
-|NONE
-|XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXX XXX
-|List
-|XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXX XXX
+|The user can access all the namespaces through the wildcard parameter `*`. This is the default value to maintain backwards compatibility.
+|None
+|The constraint list is specified although empty. This indicates the user cannot access any namespaces.
+|Namespace list
+|The UUID of a namespace is included which restricts the user to the single namespace. A comma separated list can also be used to allow access to multiple namespaces.
 |Label
-|XXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXX XXXXXXXXXXXXXXXXXXXXXXXXX XXX
+|A label is specified and access to all the matching namespaces is allowed.
 |===
