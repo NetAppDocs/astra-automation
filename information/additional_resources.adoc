@@ -51,7 +51,7 @@ NetApp Cloud Central service console with sign in.
 +
 Access troubleshooting tools, documentation, and technical support assistance.
 
-=== REST concepts and cloud technology
+=== REST and cloud concepts
 
 * PhD https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[dissertation^] by Roy Fielding
 +

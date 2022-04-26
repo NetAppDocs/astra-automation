@@ -15,6 +15,43 @@ summary:
 [.lead]
 NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 26 April 2022 (22.04)
+
+This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
+
+=== New and enhanced Astra resources
+
+Two new resources types have been added: *Package* and *Upgrade*. In addition, the versions of several existing resources have been upgraded.
+
+=== Enhanced RBAC with namespace granularity
+
+When binding a role to an associated user, you can limit the namespaces the user has access to. See the *Role Binding API* reference and link:../additional/rbac.html[RBAC security] for more information.
+
+=== Bucket removal
+
+You can remove a bucket when it is no longer needed or is not functioning properly.
+
+=== Support for Cloud Volumes ONTAP
+
+Cloud Volumes ONTAP is now supported as a storage backend.
+
+=== Additional product enhancements
+
+There are several additional enhancements to the two Astra Control product implementations, including:
+
+* Generic ingress for Astra Control Center
+* Private cluster in AKS
+* Support for Kubernetes 1.22
+* Support for VMware Tanzu portfolio
+
+See the *What's new* page at the Astra Control Center and Astra Control Service documentation sites.
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
+
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
+
 == 14 December 2021 (21.12)
 
 This release includes an expansion of the REST API along with a change to the documentation structure to better support the evolution of Astra Control through the future release updates.
