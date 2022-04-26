@@ -14,8 +14,8 @@ sidebar:
     - section: intro
     - section: get-started
     - section: rest-core
-    - section: additional
     - section: endpoints
+    - section: additional
     - section: workflows_infra
     - section: workflows
     - section: python
@@ -31,63 +31,48 @@ homepage:
     - title: Get started
       links:
         - title: Introduction
-          summary: Get an overview of the Astra REST API.
           url: /intro/introduction.html
         - title: Before you begin
-          summary: Prepare to start using the REST API.
           url: /get-started/before_get_started.html
         - title: Get an API token
-          summary: Generate a token you need to access the API.
           url: /get-started/get_api_token.html
         - title: Hello world
-          summary: Test basic access to the REST API.
           url: /get-started/hello_world.html
     - title: REST implementation
       links:
         - title: REST web services
-          summary: Understand the technology foundations of REST web services.
           url: /rest-core/rest_web_services.html
         - title: HTTP details
-          summary: Review the details of the HTTP implementation.
           url: /rest-core/http_details.html
         - title: URL format
-          summary: Understand the URL format and how it is composed of multiple values.
           url: /rest-core/url_format.html
     - title: Additional considerations
       links:
-        - title: Security
-          summary: Explore the security provided with the REST API.
-          url: /additional/security.html
-        - title: Working with collections
-          summary: Use query parameters to access the resource collections.
-          url: /additional/working_with_collections.html
+        - title: RBAC security
+          url: /additional/rbac.html
+        - title: Work with collections
+          url: /additional/work_with_collections.html
         - title: Diagnostics and support
-          summary: Prepare to support Astra applications.
           url: /additional/diagnostics_support.html
+        - title: Revoke an API token
+          url: /additional/revoke_token.html
     - title: Resources
       links:
-        - title: Resources and collections
-          summary: Become familiar with the design of REST resources and collections.
+        - title: REST resources and collections
           url: /rest-core/resources_collections.html
-        - title: Astra Control REST API resources
-          summary: Review a concise introduction to the various Astra resources.
+        - title: Summary of Astra API resources
           url: /endpoints/resources.html
     - title: Workflows
       links:
         - title: Preparation
-          summary: Prepare to use the Astra workflows.
           url: /get-started/prepare_to_use_workflows.html
         - title: Infrastructure workflows
-          summary: The workflows needed to maintain the Astra runtime infrastructure.
           url: /workflows_infra/workflows_infra_before.html
         - title: Management workflows
-          summary: The common workflows used to administer the managed applications.
           url: /workflows/workflows_before.html
     - title: Python
       links:
-        - title: Before you begin
-          summary: Prepare to run the sample Python scripts.
+        - title: NetApp Astra Control Python SDK
+          url: /python/astra_toolkits.html
+        - title: Use Python natively
           url: /python/python_before.html
-        - title: List the managed apps
-          summary: Run a sample script to list the managed apps.
-          url: /python/py_list_man_apps.html

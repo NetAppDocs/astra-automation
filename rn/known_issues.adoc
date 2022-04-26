@@ -15,6 +15,9 @@ summary:
 [.lead]
 You should review all the known issues for the current release related to the Astra Control REST API. The known issues identify problems that might prevent you from using the product successfully.
 
+[NOTE]
+There are no new known issues with the 22.04 release of the Astra Control REST API. The issues described below were discovered in previous releases and are still applicable with the current release.
+
 == Not all storage devices in a backend storage node are discovered
 // ASTRACTL-12058/DOC-3804
 

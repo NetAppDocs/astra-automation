@@ -3,9 +3,11 @@ title: Get started
 entries:
   - title: Before you begin
     url: /get-started/before_get_started.html
-  - title: Getting an API token
+  - title: Get an API token
     url: /get-started/get_api_token.html
   - title: Hello world
     url: /get-started/hello_world.html
   - title: Prepare to use the workflows
     url: /get-started/prepare_to_use_workflows.html
+  - title: Basic Kubernetes concepts
+    url: /get-started/kubernetes_concepts.html

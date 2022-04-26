@@ -1,0 +1,55 @@
+---
+sidebar: sidebar
+permalink: additional/rbac.html
+keywords:
+summary:
+---
+
+= RBAC security
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions.
+
+== Astra roles
+
+Every Astra user is assigned to a single role which determines the actions that can be performed. The roles are arranged in a hierarchy as described in the table below.
+
+[cols="15,85"*,options="header"]
+|===
+|Role
+|Description
+|Owner
+|Has all the permissions of the Admin role and can also delete Astra accounts.
+|Admin
+|Has all the permissions of the Member role and can also invite users to join an account.
+|Member
+|Can fully manage the Astra application and compute resources.
+|Viewer
+|Restricted to only viewing resources.
+|===
+
+== Enhanced RBAC with namespace granularity
+
+[NOTE]
+This feature was introduced with the 22.04 release of the Astra REST API.
+
+When a role binding is established for a specific user, a constraint can be applied to limit the namespaces the user has access to. There are several ways this constraint can be defined as described in the table below. See the parameter `roleContraints` in the Role Binding API for more information.
+
+[cols="20,80"*,options="header"]
+|===
+|Namespaces
+|Description
+|All
+|The user can access all the namespaces through the wildcard parameter "*"". This is the default value to maintain backwards compatibility.
+|None
+|The constraint list is specified although it is empty. This indicates the user cannot access any namespace.
+|Namespace list
+|The UUID of a namespace is included which restricts the user to the single namespace. A comma separated list can also be used to allow access to multiple namespaces.
+|Label
+|A label is specified and access is allowed to all the matching namespaces.
+|===

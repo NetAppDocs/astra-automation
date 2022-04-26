@@ -1,9 +1,11 @@
 section: additional
-title: Additional REST considerations
+title: Additional usage considerations
 entries:
-  - title: Security
-    url: /additional/security.html
-  - title: Working with collections
-    url: /additional/working_with_collections.html
+  - title: RBAC security
+    url: /additional/rbac.html
+  - title: Work with collections
+    url: /additional/work_with_collections.html
   - title: Diagnostics
     url: /additional/diagnostics_support.html
+  - title: Revoke an API token
+    url: /additional/revoke_token.html
