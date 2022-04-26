@@ -76,7 +76,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Package
 |*22.04*
-|The package resources provide registration and access to package definitions. Software packages consist of various components such as files, images, and other artifacts.
+|The package resources provide registration of and access to package definitions. Software packages consist of various components including files, images, and other artifacts.
 
 |Role binding
 |21.04
@@ -100,7 +100,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Upgrade
 |*22.04*
-|The upgrade resources provide access to software components and the ability to initiate system upgrades.
+|The upgrade resources provide access to software components and the ability to initiate upgrades.
 
 |User
 |21.04
@@ -207,10 +207,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 == New endpoints with the current release
 
-The following REST endpoints have been added with the current 22.04 Astra Control release.
-
-[NOTE]
-In addition to the new endpoints, the versions of several existing resources have been upgraded.
+The following REST endpoints have been added with the current 22.04 Astra Control release. In addition, the versions of several existing resources have been upgraded.
 
 * /accounts/{account_id}/core/v1/packages
 * /accounts/{account_id}/core/v1/packages/{package_id}

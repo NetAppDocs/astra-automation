@@ -21,7 +21,7 @@ You'll need Astra credentials to sign in to the Astra web user interface and gen
 
 ===== Be familiar with basic Kubernetes concepts
 
-xxx
+You should review the basic Kubernetes concepts. See link:kubernetes_concepts.html[Basic Kubernetes concepts] for more information.
 
 ===== Review REST concepts and implementation
 
