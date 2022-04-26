@@ -13,13 +13,13 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You need an Astra API token to use the Astra Control REST API.
+You need to obtain an Astra API token to use the Astra Control REST API.
 
 == Introduction
 
-The API token identifies a caller to Astra and must be included with every REST API call. Note the following:
+An API token identifies the caller to Astra and must be included with every REST API call.
 
-* You can generate an API token at the Astra web user interface.
+* You can generate an API token using the Astra web user interface.
 * The token must be carried in the `Authorization` HTTP request header.
 * A token never expires after it is created.
 * You can revoke a token at the Astra web user interface.

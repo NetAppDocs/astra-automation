@@ -21,21 +21,21 @@ This release includes an expansion and update of the REST API along with enhance
 
 === New and enhanced Astra resources
 
-Two new resources types have been added: *package* and *upgrade*. In addition, the version of existing resources has been upgraded.
+Two new resources types have been added: *package* and *upgrade*. In addition, the versions of several existing resources have been upgraded.
 
 === Enhanced RBAC with namespace granularity
 
-When binding a role to an associated user, you can limit the namespaces the user has access to. See the *Role Binding API* reference and link:../workflows_infra/workflows_infra_before.html[Infrastructure workflows] for more information.
+When binding a role to an associated user, you can limit the namespaces the user has access to. See the *Role Binding API* reference and link:../additional/rbac.html[RBAC security] for more information.
 
 === Bucket removal
 
-You can remove a bucket that is no longer needed or is not functioning properly.
+You can remove a bucket when it is no longer needed or is not functioning properly.
 
 === Support for Cloud Volumes ONTAP
 
-Cloud Volumes ONTAP is supported as a storage backend.
+Cloud Volumes ONTAP is now supported as a storage backend.
 
-=== Addition product enhancements
+=== Additional product enhancements
 
 There are several additional enhancements to the two Astra Control product implementations, including:
 
@@ -44,7 +44,7 @@ There are several additional enhancements to the two Astra Control product imple
 * Support for Kubernetes 1.22
 * Support for VMware Tanzu portfolio
 
-See the _What's new_ page at the Astra Control Center and Astra Control Service documentation sites.
+See the *What's new* page at the Astra Control Center and Astra Control Service documentation sites.
 
 .Related information
 

@@ -17,7 +17,7 @@ You can revoke an API token at the Astra web interface when it is no longer need
 
 .Before you begin
 
-You need an account for the Astra service. You should also identify the tokens you want to revoke.
+You need an Astra account. You should also identify the tokens you want to revoke.
 
 .About this task
 

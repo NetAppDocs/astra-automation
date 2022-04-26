@@ -13,16 +13,16 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-There are several Kubernetes concepts that are relevant to using the Astra REST API.
+There are several Kubernetes concepts that are relevant when using the Astra REST API.
 
 === Objects
 
-The objects maintained within a Kubernetes environment are persistent entities representing the cluster. These objects describe the state of the system including the cluster workload.
+The objects maintained within a Kubernetes environment are persistent entities representing the configuration of cluster. These objects describe the state of the system including the cluster workload.
 
 === Namespaces
 
-Namespaces provide a technique for isolating resources within a single cluster. This organizational structure is when dividing the types of work, users, and resources. Objects with a namespace scope need to be unique within the namespace, while those with a cluster scope must be unique across the entire cluster.
+Namespaces provide a technique for isolating resources within a single cluster. This organizational structure is useful when dividing the types of work, users, and resources. Objects with a _namespace scope_ need to be unique within the namespace, while those with a _cluster scope_ must be unique across the entire cluster.
 
 === Labels
 
-Labels can be associated with Kubernetes objects. They describe attributes as key-value pairs and can be used to enforce an arbitrary organization which is generally useful to the organization but outside the core Kubernetes operation.
+Labels can be associated with Kubernetes objects. They describe attributes using key-value pairs and can enforce an arbitrary organization on the cluster which can be useful to an organization but are outside the core Kubernetes operation.
