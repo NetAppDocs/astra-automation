@@ -13,11 +13,11 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions. and
+The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions.
 
 == Astra roles
 
-Each Astra user is assigned to a single role which determines the actions that can be performed. The roles are arranged in a hierarchy as described in the table below.
+Every Astra user is assigned to a single role which determines the actions that can be performed. The roles are arranged in a hierarchy as described in the table below.
 
 [cols="15,85"*,options="header"]
 |===
@@ -38,7 +38,7 @@ Each Astra user is assigned to a single role which determines the actions that c
 [NOTE]
 This feature was introduced with the 22.04 release of the Astra REST API.
 
-When a role binding is established for a specific user, a constraint is available to limit which namespaces the user has access to. There are several ways the constraint can be defined as described in the table below.
+When a role binding is established for a specific user, a constraint can be defined to limit the namespaces the user has access to. There are several ways this constraint can be defined as described in the table below.
 
 [cols="20,80"*,options="header"]
 |===

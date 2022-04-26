@@ -21,11 +21,11 @@ This release includes an expansion and update of the REST API along with enhance
 
 === New and enhanced Astra resources
 
-Two new resources types have been added: *package* and *upgrade*. In addition, several of the version of several existing resources has been upgraded.
+Two new resources types have been added: *package* and *upgrade*. In addition, the version of existing resources has been upgraded.
 
 === Enhanced RBAC with namespace granularity
 
-When binding a role with the associated user, you can limit the cluster namespaces the user has access to. See the *Role Binding API* reference and the link:../workflows_infra/workflows_infra_before.html[Infrastructure workflows] and for more information.
+When binding a role to an associated user, you can limit the namespaces the user has access to. See the *Role Binding API* reference and link:../workflows_infra/workflows_infra_before.html[Infrastructure workflows] for more information.
 
 === Bucket removal
 
@@ -33,7 +33,7 @@ You can remove a bucket that is no longer needed or is not functioning properly.
 
 === Support for Cloud Volumes ONTAP
 
-Cloud Volumes ONTAP can be added as a storage backend.
+Cloud Volumes ONTAP is supported as a storage backend.
 
 === Addition product enhancements
 
