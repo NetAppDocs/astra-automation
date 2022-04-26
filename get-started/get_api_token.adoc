@@ -20,7 +20,8 @@ You need to obtain an Astra API token to use the Astra Control REST API.
 An API token identifies the caller to Astra and must be included with every REST API call.
 
 * You can generate an API token using the Astra web user interface.
-* The token must be carried in the `Authorization` HTTP request header.
+* The user identity carried with the token is determined by the user creating the token.
+* The token must be included in the `Authorization` HTTP request header.
 * A token never expires after it is created.
 * You can revoke a token at the Astra web user interface.
 

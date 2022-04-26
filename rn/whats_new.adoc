@@ -17,11 +17,11 @@ NetApp periodically updates the Astra Control REST API to bring you new features
 
 == 26 April 2022 (22.04)
 
-This release includes an expansion and update of the REST API along with enhanced security and administrative features.
+This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
 
 === New and enhanced Astra resources
 
-Two new resources types have been added: *package* and *upgrade*. In addition, the versions of several existing resources have been upgraded.
+Two new resources types have been added: *Package* and *Upgrade*. In addition, the versions of several existing resources have been upgraded.
 
 === Enhanced RBAC with namespace granularity
 

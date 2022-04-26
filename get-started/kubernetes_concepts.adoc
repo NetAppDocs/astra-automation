@@ -17,7 +17,7 @@ There are several Kubernetes concepts that are relevant when using the Astra RES
 
 === Objects
 
-The objects maintained within a Kubernetes environment are persistent entities representing the configuration of cluster. These objects describe the state of the system including the cluster workload.
+The objects maintained within a Kubernetes environment are persistent entities representing the configuration of the cluster. These objects collectively describe the state of the system including the cluster workload.
 
 === Namespaces
 
@@ -25,4 +25,4 @@ Namespaces provide a technique for isolating resources within a single cluster. 
 
 === Labels
 
-Labels can be associated with Kubernetes objects. They describe attributes using key-value pairs and can enforce an arbitrary organization on the cluster which can be useful to an organization but are outside the core Kubernetes operation.
+Labels can be associated with the Kubernetes objects. They describe attributes using key-value pairs and can enforce an arbitrary organization on the cluster which can be useful to an organization but are outside the core Kubernetes operation.
