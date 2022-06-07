@@ -19,14 +19,14 @@ You can issue a simple Curl command at your workstation’s CLI to get started u
 
 The Curl utility must be available on your local workstation. You must also have an API token and the associated account identifier. See link:get_api_token.html[Get an API token] for more information.
 
-===== Curl example
+.Curl example
 
 The following Curl command retrieves a list of Astra users. Provide the appropriate <ACCOUNT_ID> and <API_TOKEN> as indicated.
 
 [source,curl]
 curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/json' --header 'Authorization: Bearer <API_TOKEN>'
 
-===== JSON output example
+.JSON output example
 [source,json]
 {
   "items": [

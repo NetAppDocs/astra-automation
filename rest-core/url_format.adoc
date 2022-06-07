@@ -15,15 +15,11 @@ summary:
 [.lead]
 The general structure of the URL used to access a resource instance or collection through the REST API is composed of several values. This structure reflects the underlying object model and system design.
 
-== Format of the URL
-
-The format of the URL with an example is presented below.
-
-===== Account as the root
+.Account as the root
 
 The root of the resource path to every REST endpoint is the Astra account. And so all paths in the URL begin with `/account/{account_id}` where `account_id` is the unique UUIDv4 value for the account. Internally structure this reflects a design where all resource access is based on a specific account.
 
-===== Endpoint resource category
+.Endpoint resource category
 
 The Astra resource endpoints fall into three different categories:
 
@@ -33,15 +29,15 @@ The Astra resource endpoints fall into three different categories:
 
 See link:../endpoints/resources.html[Resources] for more information.
 
-===== Category version
+.Category version
 
 Each of the three resource categories has a global version that controls the version of the resources accessed. By convention and definition, moving to a new major version of a resource category (such as, from `/v1` to `/v2`) will introduce breaking changes in the API.
 
-===== Resource instance or collection
+.Resource instance or collection
 
 A combination of resource types and identifiers can be used in the path, based on whether a resource instance or collection is accessed.
 
-===== Example
+.Example
 
 * Resource path
 +
