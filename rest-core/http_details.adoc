@@ -19,11 +19,11 @@ The Astra Control REST API uses HTTP and related parameters to act on the resour
 
 The Astra Control REST API implements a transactional model with well-defined operations and state transitions.
 
-===== Request and response API transaction
+.Request and response API transaction
 
 Every REST API call is performed as an HTTP request to the Astra service. Each request generates an associated response back to the client. This request-response pair can be considered an API transaction.
 
-===== Support for CRUD operational model
+.Support for CRUD operational model
 
 Each of the resource instances and collections available through the Astra Control REST API is accessed based on the *CRUD* model. There are four operations, each of which maps to a single HTTP method. The operations include:
 
@@ -62,7 +62,7 @@ The HTTP methods or verbs supported by the API are presented in the table below.
 
 |===
 
-=== Request and response headers
+== Request and response headers
 
 The following table summaries the HTTP headers used with the Astra Control REST API.
 
@@ -109,7 +109,7 @@ See https://www.rfc-editor.org/rfc/rfc7232.txt[RFC 7232^] and https://www.rfc-ed
 
 |===
 
-=== Query parameters
+== Query parameters
 
 The following query parameters are available for use with resource collections. See link:../additional/working_with_collections.html[Working with collections] for more information.
 
@@ -133,7 +133,7 @@ The following query parameters are available for use with resource collections. 
 |Indicates if the total number of resources should be returned in the metadata object.
 |===
 
-=== HTTP status codes
+== HTTP status codes
 
 The HTTP status codes used by the Astra Control REST API are described below.
 

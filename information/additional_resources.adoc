@@ -15,7 +15,7 @@ summary:
 [.lead]
 There are additional resources you can access to get help and find more information about NetApp cloud services and support as well as general REST and cloud concepts.
 
-=== Astra
+== Astra
 
 * https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center documentation^]
 +
@@ -37,7 +37,7 @@ Documentation for the current release of the Astra Trident software, an open sou
 +
 Central location for accessing all the Astra documentation for both on-premises and public cloud deployments.
 
-=== NetApp cloud resources
+== NetApp cloud resources
 
 * https://cloud.netapp.com/[NetApp Cloud Solutions^]
 +
@@ -51,7 +51,7 @@ NetApp Cloud Central service console with sign in.
 +
 Access troubleshooting tools, documentation, and technical support assistance.
 
-=== REST and cloud concepts
+== REST and cloud concepts
 
 * PhD https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[dissertation^] by Roy Fielding
 +
