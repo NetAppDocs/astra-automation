@@ -22,7 +22,7 @@ Conceptually a REST *resource* is similar to an *object* as defined with the obj
 
 The Astra Control REST API conforms to RESTful design principles. Each Astra resource instance is created based on a well-defined resource type. A set of resource instances of the same type is referred to as a *collection*. The API calls act on individual resources or collections of resources.
 
-===== Resource types
+.Resource types
 
 The resource types included with the Astra Control REST API have the following characteristics:
 
@@ -30,7 +30,7 @@ The resource types included with the Astra Control REST API have the following c
 * Every resource schema includes the resource type and version
 * Resource types are globally unique
 
-===== Resource instances
+.Resource instances
 
 Resource instances available through the Astra Control REST API have the following characteristics:
 
@@ -40,14 +40,14 @@ Resource instances available through the Astra Control REST API have the followi
 * Each instance is accessible through a unique and long-lived URL
 * In cases where a resource instance can have more than one representation, different media types can be used to request the desired representation
 
-===== Resource collections
+.Resource collections
 
 Resource collections available through the Astra Control REST API have the following characteristics:
 
 * The set of resource instances of a single resource type is known as a collection
 * Collections of resources have a unique and long-lived URL
 
-===== Instance identifiers
+.Instance identifiers
 
 Every resource instance is assigned an identifier when it is created. This identifier is a 128-bit UUIDv4 value. The assigned UUIDv4 values are globally unique and immutable. After issuing an API call that creates a new instance, a URL with the associated id is returned to the caller in a `Location` header of the HTTP response. You can extract the identifier and use it on subsequent calls when referring to the resource instance.
 
@@ -58,7 +58,7 @@ The resource identifier is the primary key used for collections.
 
 Every Astra Control resource is defined using a common structure.
 
-===== Common data
+.Common data
 
 Every Astra resource contains the key-values shown in the following table.
 
@@ -80,7 +80,7 @@ Every Astra resource contains the key-values shown in the following table.
 |A JSON object containing various information, including user and system labels.
 |===
 
-===== Metadata object
+.Metadata object
 
 The metadata JSON object included with each Astra resource contains the key-values shown in the following table.
 
@@ -103,6 +103,6 @@ The metadata JSON object included with each Astra resource contains the key-valu
 
 |===
 
-===== Resource state
+.Resource state
 
 Selected resources a `state` value which is used to orchestrate lifecycle transitions and control access.

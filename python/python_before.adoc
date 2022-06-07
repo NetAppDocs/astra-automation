@@ -22,19 +22,19 @@ In addition to accessing the Astra Control REST API directly using Python, NetAp
 
 The basic configuration requirements to run the Python scripts are described below.
 
-===== Python 3
+.Python 3
 
 You need to have the latest version of Python 3 installed.
 
-===== Additional libraries
+.Additional libraries
 
 The *Requests* and *urllib3* libraries must be installed. You can use pip or another Python management tool as appropriate for your environment.
 
-===== Network access
+.Network access
 
 The workstation where the scripts run must have network access and be able to reach Astra Control. When using Astra Control Service, you must be connected to the internet and be able to connect to the service at `https://astra.netapp.io`.
 
-===== Identity information
+.Identity information
 
 You need a valid Astra account with the account identifier and API token. See link:../get-started/get_api_token.html[Get an API token] for more information.
 
@@ -45,7 +45,7 @@ The Python scripts rely on configuration information contained in JSON input fil
 [NOTE]
 You need to update the samples as appropriate for your environment.
 
-===== Identity information
+.Identity information
 
 The following file contains the API token and Astra account. You need to pass this file to Python scripts using the `-i` (or `--identity`) CLI parameter.
 
