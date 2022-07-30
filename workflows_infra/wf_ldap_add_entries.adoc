@@ -15,7 +15,7 @@ summary:
 [.lead]
 After LDAP is configured as an authentication provider for Astra Control Center, you can select the LDAP users that Astra will authenticate using the LDAP credentials. Each user must have a role in Astra before they can access Astra through the Astra Control REST API.
 
-There are two ways you can configure Astra to assign roles.
+There are two ways you can configure Astra to assign roles. Choose the one that is appropriate for your environment.
 
 * link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-an-individual-user[Add and bind an individual user]
 * link:../workflows_infra/wf_ldap_add_entries.html#add-and-bind-a-group[Add and bind a group]
