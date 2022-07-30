@@ -7,6 +7,16 @@ entries:
     entries:
       - title: List users
         url: /workflows_infra/wf_list_users.html
+  - title: LDAP authentication
+    entries:
+      - title: Prepare for LDAP authentication
+        url: /workflows_infra/ldap_prepare.html
+      - title: Configure the LDAP server
+        url: /workflows_infra/wf_ldap_configure_server.html
+      - title: Add LDAP entries to Astra
+        url: /workflows_infra/wf_ldap_add_entries.html
+      - title: Disable and reset LDAP
+        url: /workflows_infra/wf_ldap_disable_reset.html
   - title: Buckets
     entries:
       - title: List buckets
