@@ -44,7 +44,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Certificate
 |*22.08*
-|The certificate resources represent the installed certificates used for stronger outgoing authentication and connections.
+|The certificate resources represent the installed certificates used for strong authentication for outgoing connections.
 
 |Credential
 |21.04
@@ -68,7 +68,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Group
 |*22.08*
-|The ASUP resources represent the Astra groups and associated resources. Only LDAP groups are available in the current release.
+|The group resources represent the Astra groups and associated resources. Only LDAP groups are supported in the current release.
 
 |Hook source
 |21.12
@@ -166,7 +166,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 |AppMirror
 |*22.08*
-|The ASUP resources represent the AppMirror resources to provide for the management of application mirroring relationships.
+|The AppMirror resources represent the AppMirror resources to provide for the management of application mirroring relationships.
 
 |Bucket
 |21.08

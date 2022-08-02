@@ -15,6 +15,28 @@ summary:
 [.lead]
 NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 4 August 2022 (22.08)
+
+This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
+
+=== New and enhanced Astra resources
+
+Two new resources types have been added: *Certificate*, *Group*, and *AppMirror*. In addition, the versions of several existing resources have been upgraded.
+
+=== LDAP authentication
+
+You can optionally configure Astra Control Center to integrate with an LDAP server to authenticate selected Astra users. See link:../workflows_infra/ldap_prepare.html[LDAP configuration] for more information.
+
+=== Enhanced execution hook
+
+xxx
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
+
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
+
 == 26 April 2022 (22.04)
 
 This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
