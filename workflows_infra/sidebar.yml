@@ -7,9 +7,9 @@ entries:
     entries:
       - title: List users
         url: /workflows_infra/wf_list_users.html
-  - title: LDAP authentication
+  - title: LDAP configuration
     entries:
-      - title: Prepare for LDAP authentication
+      - title: Prepare for LDAP configuration
         url: /workflows_infra/ldap_prepare.html
       - title: Configure the LDAP server
         url: /workflows_infra/wf_ldap_configure_server.html

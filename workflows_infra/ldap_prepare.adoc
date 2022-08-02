@@ -5,7 +5,7 @@ keywords:
 summary:
 ---
 
-= Prepare for LDAP authentication
+= Prepare for LDAP configuration
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -84,3 +84,7 @@ Astra synchronizes it's users and groups with the LDAP server approximately ever
 .Disabling and resetting the LDAP configuration
 
 Before attempting to reset the LDAP configuration, you must first disable LDAP authentication. Also, to change the LDAP server (`connectionHost`), you need to perform both operations. See link:../workflows_infra/wf_ldap_disable_reset.html[Disable and reset LDAP] for more information.
+
+.REST API parameters
+
+The LDAP workflows in this section make REST API calls to accomplish specific tasks. Each API call can include input parameters in the provided samples. See the link:../reference/api_reference.html[API reference] to get more information about the REST calls and parameters.

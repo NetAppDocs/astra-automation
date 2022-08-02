@@ -42,6 +42,10 @@ The core resource endpoints provide the foundational services needed to establis
 |21.08
 |The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
 
+|Certificate
+|*22.08*
+|The certificate resources represent the installed certificates used for stronger outgoing authentication and connections.
+
 |Credential
 |21.04
 |The credential resources contain security related information which can be used with Astra users, clusters, buckets, and storage backends.
@@ -62,6 +66,10 @@ The core resource endpoints provide the foundational services needed to establis
 |21.08
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
+|Group
+|*22.08*
+|The ASUP resources represent the Astra groups and associated resources. Only LDAP groups are available in the current release.
+
 |Hook source
 |21.12
 |The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
@@ -75,7 +83,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The notification resources represent Astra events that have a notification destination. Access is provided on a per-user basis.
 
 |Package
-|*22.04*
+|22.04
 |The package resources provide registration of and access to package definitions. Software packages consist of various components including files, images, and other artifacts.
 
 |Role binding
@@ -99,7 +107,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The unread notification resources represent notifications assigned to a specific user but not yet read.
 
 |Upgrade
-|*22.04*
+|22.04
 |The upgrade resources provide access to software components and the ability to initiate upgrades.
 
 |User
@@ -155,6 +163,10 @@ The topology resource endpoints provide access to the unmanaged applications and
 |App
 |21.04
 |The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
+
+|AppMirror
+|*22.08*
+|The ASUP resources represent the AppMirror resources to provide for the management of application mirroring relationships.
 
 |Bucket
 |21.08
