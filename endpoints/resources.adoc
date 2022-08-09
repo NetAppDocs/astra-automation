@@ -217,23 +217,6 @@ The topology resource endpoints provide access to the unmanaged applications and
 |The volume resources represent the Kubernetes storage volumes associated with the managed applications.
 |===
 
-== New endpoints with the current release
-
-The following REST endpoints have been added with the current 22.04 Astra Control release. In addition, the versions of several existing resources have been upgraded.
-
-* /accounts/{account_id}/core/v1/packages
-* /accounts/{account_id}/core/v1/packages/{package_id}
-* /accounts/{account_id}/core/v1/upgrades
-* /accounts/{account_id}/core/v1/upgrades//{upgrade_id}
-* /accounts/{account_id}/topology/v1/appBackups
-* /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}
-* /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes
-* /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes
-* /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}
-
 == Additional resources and endpoints
 
 There are several additional resources and endpoints that you can use to support an Astra deployment.
