@@ -62,7 +62,7 @@ The credentials used by LDAP include the username (email address) and the associ
 
 .Unique email addresses
 
-All email addresses acting as usernames in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra. See https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users[Remove users] at the Astra Control Center documentation site.
+All email addresses acting as usernames in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra. See https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users[Remove users^] at the Astra Control Center documentation site.
 
 .Optionally define LDAP users and groups first
 
@@ -87,4 +87,4 @@ Before attempting to reset the LDAP configuration, you must first disable LDAP a
 
 .REST API parameters
 
-The LDAP workflows in this section make REST API calls to accomplish specific tasks. Each API call can include input parameters in the provided samples. See the link:../reference/api_reference.html[API reference] to get more information about the REST calls and parameters.
+The LDAP configuration workflows make REST API calls to accomplish the specific tasks. Each API call can include input parameters in the provided samples. See link:../reference/api_reference.html[API reference] for information about how to locate the reference documentation.
