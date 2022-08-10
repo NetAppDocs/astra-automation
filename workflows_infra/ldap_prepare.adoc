@@ -62,7 +62,7 @@ The credentials used by LDAP include the username (email address) and the associ
 
 .Unique email addresses
 
-All email addresses acting as usernames in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra. See https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users[Remove users^] at the Astra Control Center documentation site.
+All email addresses acting as usernames in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra. See https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users[Remove users^] at the Astra Control Center documentation site for more information.
 
 .Optionally define LDAP users and groups first
 

@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/core/v1/users
+|/account/{account_id}/core/v1/users
 |===
 
 ===== Additional input parameters

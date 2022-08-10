@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/topology/v1/buckets
+|/account/{account_id}/topology/v1/buckets
 |===
 
 ===== Curl example: Return all data for all buckets
