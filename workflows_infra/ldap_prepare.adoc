@@ -47,7 +47,7 @@ The current release of Astra Control Center only supports configuration of LDAP 
 
 .LDAP server required
 
-You must have an LDAP server to accept and process the Astra authentication requests. Microsoft's Active Directory is the only vendor LDAP server supported with the current Astra release.
+You must have an LDAP server to accept and process the Astra authentication requests. Microsoft's Active Directory is supported with the current Astra Control Center release.
 
 .Secure connection to the LDAP server
 
@@ -62,7 +62,7 @@ The credentials used by LDAP include the username (email address) and the associ
 
 .Unique email addresses
 
-All email addresses used in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra.
+All email addresses acting as usernames in an Astra Control Center deployment must be unique. You cannot add an LDAP user with an email address that is already defined to Astra. If a duplicate email exists, you need to first delete it from Astra. See https://docs.netapp.com/us-en/astra-control-center/use/manage-users.html#remove-users[Remove users] at the Astra Control Center documentation site.
 
 .Optionally define LDAP users and groups first
 
