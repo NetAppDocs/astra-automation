@@ -1,0 +1,100 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_ldap_disable_reset.html
+keywords:
+summary:
+---
+
+= Disable and reset LDAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+There are two optional though related administrative tasks you can perform as needed for an Astra Control Center deployment. You can globally disable LDAP authentication and reset the LDAP configuration.
+
+Both workflow tasks require the id for the `astra.account.ldap` Astra setting. Details for how to retrieve the setting id are included in *Configure the LDAP server*. See link:../workflows_infra/wf_ldap_configure_server.html#3-retrieve-the-uuid-of-the-ldap-setting[Retrieve the UUID of the LDAP setting] for more information.
+
+* link:../workflows_infra/wf_ldap_disable_reset.html#disable-ldap-authentication[Disable LDAP authentication]
+* link:../workflows_infra/wf_ldap_disable_reset.html#reset-the-ldap-authentication-configuration[Reset the LDAP authentication configuration]
+
+== Disable LDAP authentication
+
+You can perform the following REST API call to globally disable LDAP authentication for a specific Astra deployment. The call updates the `astra.account.ldap` setting and the `isEnabled` value is set to `false`.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|PUT
+|/account/{account_id}/core/v1/settings/{setting_id}
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-setting",
+  "version": "1.0",
+  "desiredConfig": {
+    "connectionHost": "myldap.example.com",
+    "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "groupBaseDN": "OU=groups,OU=astra,DC=example,DC=com",
+    "isEnabled": "false",
+    "port": 686,
+    "secureMode": "LDAPS",
+    "userBaseDN": "OU=users,OU=astra,DC=example,dc=com",
+    "userSearchFilter": "((objectClass=User))",
+    "vendor": "Active Directory"
+    }
+}
+
+[source,curl]
+curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration settings again to confirm the change.
+
+== Reset the LDAP authentication configuration
+
+You can perform the following REST API call to disconnect Astra from the LDAP server and reset the LDAP configuration in Astra. The call updates the `astra.account.ldap` setting and the value of `connectionHost` is cleared.
+
+The value of `isEnabled` must also be set to `false`. You can either set this value before making the reset call or as part of making the reset call. In the second case, `connectionHost` should be cleared and `isEnabled` set to false on the same reset call.
+
+[CAUTION]
+This is a disruptive operation and you should proceed with caution. It deletes all the imported LDAP users and groups. It also deletes all the related Astra users, groups, and roleBindings (LDAP type) that you created in Astra Control Center.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|PUT
+|/account/{account_id}/core/v1/settings/{setting_id}
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-setting",
+  "version": "1.0",
+  "desiredConfig": {
+    "connectionHost": "",
+    "credentialId": "3bd9c8a7-f5a4-4c44-b778-90a85fc7d154",
+    "groupBaseDN": "OU=groups,OU=astra,DC=example,DC=com",
+    "isEnabled": "false",
+    "port": 686,
+    "secureMode": "LDAPS",
+    "userBaseDN": "OU=users,OU=astra,DC=example,dc=com",
+    "userSearchFilter": "((objectClass=User))",
+    "vendor": "Active Directory"
+    }
+}
+
+Note the following:
+
+* To change the LDAP server, you must both disable and reset LDAP changing `connectHost` to a null value as shown in the example above.
+
+[source,curl]
+curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration again to confirm the change.

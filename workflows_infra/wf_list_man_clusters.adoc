@@ -19,12 +19,12 @@ You can list the Kubernetes clusters currently managed by Astra.
 
 Perform the following REST API call.
 
-[cols="25,75"*,options="header"]
+[cols="1,6",options="header"]
 |===
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/topology/v1/managedClusters
+|/account/{account_id}/topology/v1/managedClusters
 |===
 
 ===== Curl example: Return all data for all clusters

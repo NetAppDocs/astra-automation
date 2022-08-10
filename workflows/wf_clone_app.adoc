@@ -38,7 +38,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |POST
-|/account/{accountID}/k8s/v1/managedApps
+|/account/{account_id}/k8s/v1/managedApps
 |===
 
 ===== Additional input parameters

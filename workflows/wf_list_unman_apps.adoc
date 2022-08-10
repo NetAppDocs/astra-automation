@@ -31,7 +31,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/topology/v1/apps
+|/account/{account_id}/topology/v1/apps
 |===
 
 ===== Additional input parameters
@@ -109,7 +109,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/topology/v1/apps
+|/account/{account_id}/topology/v1/apps
 |===
 
 ===== Additional input parameters

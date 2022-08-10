@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{accountID}/core/v1/users
+|/account/{account_id}/core/v1/users
 |===
 
 ===== Additional input parameters
@@ -57,12 +57,12 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   "items": [
     [
     "David",
-    "Peterson",
+    "Anderson",
     "844ec6234-11e0-49ea-8434-a992a6270ec1"
     ],
     [
-      "Scott",
-      "Morris",
+      "Jane",
+      "Cohen",
       "2a3e227c-fda7-4145-a86c-ed9aa0183a6c"
     ]
   ],

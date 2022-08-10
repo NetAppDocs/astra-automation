@@ -15,6 +15,38 @@ summary:
 [.lead]
 NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 10 August 2022 (22.08)
+
+This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
+
+=== New and enhanced Astra resources
+
+Three new resources types have been added: *Certificate*, *Group*, and *AppMirror*. In addition, the versions of several existing resources have been updated.
+
+=== LDAP authentication
+
+You can optionally configure Astra Control Center to integrate with an LDAP server to authenticate selected Astra users. See link:../workflows_infra/ldap_prepare.html[LDAP configuration] for more information.
+
+=== Enhanced execution hook
+
+Support for execution hooks was added with the Astra Control 21.12 release. In addition to the existing pre-snapshot and post-snapshot execution hooks, you can now configure the following types of execution hooks with the 22.08 release:
+
+* Pre-backup
+* Post-backup
+* Post-restore
+
+Astra Control now also allows same script to be used for multiple execution hooks.
+
+=== Application replication using SnapMirror
+
+You can now replicate data and application changes among clusters using NetApp SnapMirror technology. This enhancement can be used to improve your business continuity and recovery capabilities.
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
+
+* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
+
 == 26 April 2022 (22.04)
 
 This release includes an expansion and update of the REST API as well as enhanced security and administrative features.

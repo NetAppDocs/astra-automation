@@ -32,7 +32,7 @@ Perform the following REST API call. You must provide the ID for either a backup
 |HTTP method
 |Path
 |PUT
-|/account/{accountID}/k8s/v1/managedApps/{appID}
+|/account/{account_id}/k8s/v1/managedApps/{app_id}
 |===
 
 ===== Additional input parameters
