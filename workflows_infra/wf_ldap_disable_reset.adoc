@@ -15,7 +15,7 @@ summary:
 [.lead]
 There are two optional though related administrative tasks you can perform as needed for an Astra Control Center deployment. You can globally disable LDAP authentication and reset the LDAP configuration.
 
-Both workflow tasks require the id for the `astra.account.ldap` Astra setting. Details for how to retrieve the setting id are included in *Configure the LDAP server*. See link:../workflows_infra/wf_ldap_configure_server.html#3-retrieve-the-uuid-of-the-ldap-setting[3. Retrieve the UUID of the LDAP setting] for more information.
+Both workflow tasks require the id for the `astra.account.ldap` Astra setting. Details for how to retrieve the setting id are included in *Configure the LDAP server*. See link:../workflows_infra/wf_ldap_configure_server.html#3-retrieve-the-uuid-of-the-ldap-setting[Retrieve the UUID of the LDAP setting] for more information.
 
 * link:../workflows_infra/wf_ldap_disable_reset.html#disable-ldap-authentication[Disable LDAP authentication]
 * link:../workflows_infra/wf_ldap_disable_reset.html#reset-the-ldap-authentication-configuration[Reset the LDAP authentication configuration]
@@ -59,8 +59,7 @@ If the call is successful, the `HTTP 204` response is returned. You can optional
 
 You can perform the following REST API call to disconnect Astra from the LDAP server and reset the LDAP configuration in Astra. The call updates the `astra.account.ldap` setting and the value of `connectionHost` is cleared.
 
-[NOTE]
-The value of `isEnabled` must also be set to `false`. You can either set this value before making the reset call or as part of making the reset call. In the second case, `connectionHost` should be cleared and `isEnabled` set to false on the single reset call.
+The value of `isEnabled` must also be set to `false`. You can either set this value before making the reset call or as part of making the reset call. In the second case, `connectionHost` should be cleared and `isEnabled` set to false on the same reset call.
 
 [CAUTION]
 This is a disruptive operation and you should proceed with caution. It deletes all the imported LDAP users and groups. It also deletes all the related Astra users, groups, and roleBindings (LDAP type) that you created in Astra Control Center.
