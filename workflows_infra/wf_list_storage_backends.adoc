@@ -15,11 +15,11 @@ summary:
 [.lead]
 You can list the available storage backends.
 
-=== 1. List the buckets
+=== 1. List the backends
 
 Perform the following REST API call.
 
-[cols="25,75"*,options="header"]
+[cols="1,6",options="header"]
 |===
 |HTTP method
 |Path

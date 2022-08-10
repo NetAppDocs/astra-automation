@@ -59,7 +59,7 @@ You need to select the users to be authenticated using LDAP. You can do this eit
 
 .Role constraint when binding a user or group
 
-With the current release of Astra Control Center, the only supported value for `roleConstraint` is "*". This indicates the user is not restricted to a limited set of namespaces and can access them all. See link:../workflows_infra/wf_ldap_add_entries.html[Add LDAP entries to Astra] for more information.
+With the current release of Astra Control Center, the only supported value for `roleConstraint` is "*". This indicates the user is not restricted to a limited set of namespaces and can access all of them. See link:../workflows_infra/wf_ldap_add_entries.html[Add LDAP entries to Astra] for more information.
 
 .LDAP credentials
 The credentials used by LDAP include the username (email address) and the associated password.
@@ -91,4 +91,4 @@ Before attempting to reset the LDAP configuration, you must first disable LDAP a
 
 .REST API parameters
 
-The LDAP configuration workflows make REST API calls to accomplish the specific tasks. Each API call can include input parameters in the provided samples. See link:../reference/api_reference.html[API reference] for information about how to locate the reference documentation.
+The LDAP configuration workflows make REST API calls to accomplish the specific tasks. Each API call can include input parameters as shown in the provided samples. See link:../reference/api_reference.html[API reference] for information about how to locate the reference documentation.
