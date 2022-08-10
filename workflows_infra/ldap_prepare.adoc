@@ -57,6 +57,10 @@ When configuring the LDAP server in Astra, you can optionally define a secure co
 
 You need to select the users to be authenticated using LDAP. You can do this either by identifying the individual users or a group of users. The accounts must be defined at the LDAP server. They also need to be identified in Astra (type LDAP) which allows the authentication requests to be forwarded to LDAP.
 
+.Role constraint when binding a user or group
+
+With the current release of Astra Control Center, the only supported value for `roleConstraint` is "*". This indicates the user is not restricted to a limited set of namespaces and can access them all. See link:../workflows_infra/wf_ldap_add_entries.html[Add LDAP entries to Astra] for more information.
+
 .LDAP credentials
 The credentials used by LDAP include the username (email address) and the associated password.
 

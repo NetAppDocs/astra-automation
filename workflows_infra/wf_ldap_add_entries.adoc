@@ -118,7 +118,7 @@ Perform the following REST API call to bind the user to a specific role. You nee
 {
   "type": "application/astra-roleBinding",
   "version": "1.1",
-  "accountID": "{{accountid}}",
+  "accountID": "{account_id}",
   "userID": "a7b5e674-a1b1-48f6-9729-6a571426d49f",
   "role": "member",
   "roleConstraints": ["*"]
@@ -226,7 +226,7 @@ Perform the following REST API call to bind the group to a specific role. You ne
 {
   "type": "application/astra-roleBinding",
   "version": "1.1",
-  "accountID": "{{accountid}}",
+  "accountID": "{account_id}",
   "groupID": "8b5b54da-ae53-497a-963d-1fc89990525b",
   "role": "viewer",
   "roleConstraints": ["*"]

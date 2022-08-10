@@ -122,7 +122,7 @@ Perform the following REST API call to add the bind credentials.
 
 Note the following about the input parameters:
 
-* `bindDn` and `password` are the base64 encoded bind credentials of the LDAP admin user that is able to connect and search the LDAP directory.
+* `bindDn` and `password` are the base64 encoded bind credentials of the LDAP admin user that is able to connect and search the LDAP directory. `bindDn` is the LDAP user's email address.
 
 ===== Curl example
 [source,curl]
