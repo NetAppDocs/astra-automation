@@ -37,7 +37,7 @@ Perform the following REST API call to add a user to Astra and indicate that LDA
 |HTTP method
 |Path
 |POST
-|/account/{accountID}/core/v1/users
+|/account/{account_id}/core/v1/users
 |===
 
 ===== JSON input example
@@ -110,7 +110,7 @@ Perform the following REST API call to bind the user to a specific role. You nee
 |HTTP method
 |Path
 |POST
-|/account/{accountID}/core/v1/roleBindings
+|/account/{account_id}/core/v1/roleBindings
 |===
 
 ===== JSON input example
@@ -169,7 +169,7 @@ Perform the following REST API call to add a group to Astra and indicate that LD
 |HTTP method
 |Path
 |POST
-|/account/{accountID}/core/v1/groups
+|/account/{account_id}/core/v1/groups
 |===
 
 ===== JSON input example
@@ -218,7 +218,7 @@ Perform the following REST API call to bind the group to a specific role. You ne
 |HTTP method
 |Path
 |POST
-|/account/{accountID}/core/v1/roleBindings
+|/account/{account_id}/core/v1/roleBindings
 |===
 
 ===== JSON input example

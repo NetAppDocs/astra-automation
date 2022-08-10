@@ -28,7 +28,7 @@ You can perform the following REST API call to globally disable LDAP authenticat
 |HTTP method
 |Path
 |PUT
-|/account/{accountID}/core/v1/settings/<SETTING_ID>
+|/account/{account_id}/core/v1/settings/{setting_id}
 |===
 
 ===== JSON input example
@@ -68,7 +68,7 @@ This is a disruptive operation and you should proceed with caution. It deletes a
 |HTTP method
 |Path
 |PUT
-|/account/{accountID}/core/v1/settings/<SETTING_ID>
+|/account/{account_id}/core/v1/settings/{setting_id}
 |===
 
 ===== JSON input example
