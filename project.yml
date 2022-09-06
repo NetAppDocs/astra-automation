@@ -6,6 +6,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: true
+  rss_page: "rn/whats_new.html"
 sidebar:
   entries:
     - title: Astra Control Automation docs
@@ -79,4 +80,3 @@ homepage:
           url: /python/astra_toolkits.html
         - title: Use Python natively
           url: /python/python_before.html
-
