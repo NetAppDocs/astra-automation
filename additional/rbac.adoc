@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: additional/rbac.html
 keywords:
-summary:
+summary: The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions.
 ---
 
 = RBAC security
