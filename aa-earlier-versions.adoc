@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: aa-earlier-versions.html
 keywords:
-summary:
+summary: You can access the automation documentation for previous Astra Control releases at the links below.
 ---
 
 = Earlier versions of Astra Control Automation documentation

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: rn/whats_new.html
 keywords:
-summary:
+summary: NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 ---
 
 = What's new with the Astra Control REST API

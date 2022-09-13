@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: rn/about.html
 keywords:
-summary:
+summary: The documentation at this site describes the Astra Control REST API and related automation technologies available with Astra Control.
 ---
 
 = About this release
