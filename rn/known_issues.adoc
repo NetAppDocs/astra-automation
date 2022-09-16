@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rn/known_issues.html
-keywords:
-summary:
+keywords: known issues, bugs, fixes, issues
+summary: You should review all the known issues for the current release related to the Astra Control REST API. The known issues identify problems that might prevent you from using the product successfully.
 ---
 
 = Known issues

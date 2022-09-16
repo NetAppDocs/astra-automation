@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: python/python_before.html
-keywords:
-summary:
+keywords: python3, requests, urllib3, identity, json
+summary: Python is a popular development language especially for datacenter automation. Before using the native features of Python together with several common packages, you need to prepare the environment and the required input files.
 ---
 
 = Before you begin
