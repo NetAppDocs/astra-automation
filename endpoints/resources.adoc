@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: endpoints/resources.html
-keywords:
+keywords: resources, endpoints, core, managed application, topology. openapi, openmetrics
 summary: You can access the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is available through one or more endpoints. The information presented below provides an introduction to the REST resources you can use as part of an automation deployment.
 ---
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: rn/about.html
-keywords:
+keywords: about, current release
 summary: The documentation at this site describes the Astra Control REST API and related automation technologies available with Astra Control.
 ---
 
@@ -22,3 +22,5 @@ See the following pages and sites for more information about this release as wel
 * https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 22.08 documentation^]
 * https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 22.08 documentation^]
 * link:../aa-earlier-versions.html[Earlier versions of Astra Automation documentation]
+
+Follow us on Twitter @NetAppDoc. Send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending an email to doccomments@netapp.com.
