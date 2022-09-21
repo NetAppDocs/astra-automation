@@ -41,9 +41,11 @@ You can access the SDK in the following ways.
 
 .Python package
 
-The SDK is available at https://pypi.org/[Python Package Index^] under the name *netapp-astra-toolkits*. The package is assigned a version number and will continue to be updated as needed. You must use the *PiP* package management utility to install the package into your environment.
+The SDK is available at https://pypi.org/[Python Package Index^] under the name *actoolkit*. The package is assigned a version number and will continue to be updated as needed. You must use the *PiP* package management utility to install the package into your environment.
 
-See https://pypi.org/project/netapp-astra-toolkits/[PyPI: NetApp Astra Control Python SDK^] for more information.
+Once installed, the astraSDK.py classes can be utilized by placing `import astraSDK` in your scripts. Additionally, `actoolkit` can be invoked directly on your command prompt, and is equivalent to `toolkit.py` (`actoolkit list clusters` is the same as `./toolkit.py list clusters`).
+
+See https://pypi.org/project/actoolkit/[PyPI: NetApp Astra Control Python SDK^] for more information.
 
 .GitHub source code
 
@@ -65,10 +67,9 @@ There are several options and requirements to consider as part of installing the
 
 You can install the SDK in one of the following ways:
 
-* Use Pip to install the package from PyPI into your Python environment
-* Clone the Git Hub repository and either:
-** Deploy the package as a Docker container (which includes everything you need)
-** Copy the two core Python files so they are accessible to your Python client code
+* Use the prepared https://hub.docker.com/r/netapp/astra-toolkits[Docker: NetApp/astra-toolkits^] image, which has all necessary dependencies installed, including `actoolkit`
+* Use Pip to install the `actoolkit` package from PyPI into your Python environment
+* Clone the GitHub repository and copy/modify the two core Python files so they are accessible to your Python client code
 
 Refer to the PyPI and GitHub pages for more information.
 
@@ -78,7 +79,7 @@ Whether directly using the Python classes in the Astra SDK or the functions in t
 
 .Requirements for the NetApp Astra Control Python SDK
 
-The SDK has several prerequisites related to the local Python environment. For example, you must use Python 3.5 or later. In addition, there are several Python packages that are required. See the GitHub repository page or PyPI package page for more information.
+The SDK has several prerequisites related to the local Python environment. For example, you must use Python 3.8 or later. In addition, there are several Python packages that are required. See the GitHub repository page or PyPI package page for more information.
 
 == Summary of helpful resources
 
@@ -86,3 +87,4 @@ Here are some the resources you'll need to get started.
 
 * https://pypi.org/project/netapp-astra-toolkits/[PyPI: NetApp Astra Control Python SDK^]
 * https://github.com/NetApp/netapp-astra-toolkits[GitHub: Netapp/netapp-astra-toolkits^]
+* https://hub.docker.com/r/netapp/astra-toolkits[Docker: NetApp/astra-toolkits^]
