@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: intro/introduction.html
-keywords: introduction, Astra REST API
-summary:
+keywords: introduction, features, benefits, deployment models, object model, query parameters, automation, family
+summary: Astra Control Center and Astra Control Service provide a common REST API that you can access directly through a programming language or utility such as Curl. The major highlights and benefits of the API are presented below.
 ---
 
-= Introduction to the Astra Control REST API
+= Introduction to the features and benefits
 :hardbreaks:
 :nofooter:
 :icons: font
