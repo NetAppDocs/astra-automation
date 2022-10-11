@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: endpoints/resources.html
-keywords: resources, endpoints, core, managed application, topology. openapi, openmetrics
-summary: You can access the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is available through one or more endpoints. The information presented below provides an introduction to the REST resources you can use as part of an automation deployment.
+keywords: resources, endpoints, core, managed application, topology, openapi, openmetrics
+summary: You can access the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is available through one or more endpoints. An introduction to the REST resources you can use as part of an automation deployment is provided on this page.
 ---
 
 = Resources and endpoints
@@ -13,7 +13,7 @@ summary: You can access the resources provided through the Astra Control REST AP
 :imagesdir: ./media/
 
 [.lead]
-You can access the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is available through one or more endpoints. The information presented below provides an introduction to the REST resources you can use as part of an automation deployment.
+You can access the resources provided through the Astra Control REST API to automate an Astra deployment. Each resource is available through one or more endpoints. An introduction to the REST resources you can use as part of an automation deployment is provided below.
 
 [NOTE]
 The format of the path and full URL used to access the Astra Control resources is based on several values. See link:../rest-core/url_format.html[URL format] for more information. Also see link:../reference/api_reference.html[API reference] for more details about using the Astra resources and endpoints.

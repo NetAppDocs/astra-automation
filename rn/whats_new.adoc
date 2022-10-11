@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: rn/whats_new.html
 keywords: whats new, enhancements, new features
-summary: NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
+summary: NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 ---
 
 = What's new with the Astra Control REST API
@@ -13,7 +13,7 @@ summary: NetApp periodically updates the Astra Control REST API to bring you new
 :imagesdir: ./media/
 
 [.lead]
-NetApp periodically updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
+NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
 == 10 August 2022 (22.08)
 

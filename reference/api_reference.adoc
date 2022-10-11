@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference/api_reference.html
 keywords: reference, api reference
-summary: You can access the details of all the Astra Control REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
+summary: You can access the details of the Astra Control REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
 ---
 
 = API reference
@@ -13,7 +13,7 @@ summary: You can access the details of all the Astra Control REST API calls, inc
 :imagesdir: ./media/
 
 [.lead]
-You can access the details of all the Astra Control REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
+You can access the details of the Astra Control REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
 
 [NOTE]
 The REST API reference documentation is currently provided with Astra Control and is available online.
