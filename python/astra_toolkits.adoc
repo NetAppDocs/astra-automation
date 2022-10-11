@@ -85,6 +85,6 @@ The SDK has several prerequisites related to the local Python environment. For e
 
 Here are some the resources you'll need to get started.
 
-* https://pypi.org/project/netapp-astra-toolkits/[PyPI: NetApp Astra Control Python SDK^]
+* https://pypi.org/project/actoolkit[PyPI: NetApp Astra Control Python SDK^]
 * https://github.com/NetApp/netapp-astra-toolkits[GitHub: Netapp/netapp-astra-toolkits^]
 * https://hub.docker.com/r/netapp/astra-toolkits[Docker: NetApp/astra-toolkits^]
