@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: additional/rbac.html
-keywords:
-summary: The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions.
+keywords: rbac, roles, namespace granularity
+summary: The Astra REST API supports role-based access control (RBAC) to grant and restrict access to the system functions.
 ---
 
 = RBAC security
@@ -13,7 +13,7 @@ summary: The Astra REST API supports role-based access control (RBAC) to restric
 :imagesdir: ./media/
 
 [.lead]
-The Astra REST API supports role-based access control (RBAC) to restrict access to the system functions.
+The Astra REST API supports role-based access control (RBAC) to grant and restrict access to the system functions.
 
 == Astra roles
 

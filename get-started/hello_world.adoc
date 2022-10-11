@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: get-started/hello_world.html
-keywords:
-summary:
+keywords: get started, simple example
+summary: You can issue a simple curl command at your workstation’s CLI to get started using the Astra Control REST API and confirm its availability.
 ---
 
 = Hello world
