@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: python/py_list_man_apps.html
-keywords: python script, list apps, managed apps
+keywords: python script, list apps, list managed apps
 summary: You can use the following script to list the managed applications for your Astra account.
 ---
 
