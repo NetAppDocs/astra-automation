@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: get-started/before_get_started.html
-keywords:
-summary:
+keywords: get started, planning
+summary: You can quickly prepare to get started with the Astra Control REST API.
 ---
 
 = Before you begin

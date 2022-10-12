@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: get-started/prepare_to_use_workflows.html
-keywords:
-summary:
+keywords: workflows, prepare workflows, use workflows
+summary: You should be familiar with the organization and format of the Astra workflows before using them with a live deployment.
 ---
 
 = Prepare to use the workflows

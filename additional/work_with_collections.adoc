@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: additional/work_with_collections.html
-keywords: collections
-summary:
+keywords: collections, filtering, pagination, count
+summary: The Astra Control REST API provides several different ways to access resource collections through the defined query parameters.
 ---
 
 = Work with collections
