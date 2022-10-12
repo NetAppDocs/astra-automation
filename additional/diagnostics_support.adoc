@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: additional/diagnostics_support.html
-keywords:
-summary:
+keywords: diagnostics, support, debugging
+summary: There are several support features available with the Astra Control REST API that can be used for diagnostics and debugging.
 ---
 
 = Diagnostics and support

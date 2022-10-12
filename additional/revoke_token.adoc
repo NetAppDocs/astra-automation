@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: additional/revoke_token.html
-keywords:
-summary:
+keywords: token, revoke token
+summary: You can revoke an API token at the Astra web interface when it is no longer needed.
 ---
 
 = Revoke an API token

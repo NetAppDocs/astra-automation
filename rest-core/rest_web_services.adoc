@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rest-core/rest_web_services.html
-keywords:
-summary:
+keywords: rest, web, web services
+summary: Representational State Transfer (REST) is a style for creating distributed web applications. When applied to the design of a web services API, it establishes a set of mainstream technologies and best practices for exposing server-based resources and managing their states.
 ---
 
 = REST web services
