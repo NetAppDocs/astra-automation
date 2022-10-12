@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: get-started/get_api_token.html
-keywords:
-summary:
+keywords: token, obtain token
+summary: You need to obtain an Astra API token to use the Astra Control REST API.
 ---
 
 = Get an API token

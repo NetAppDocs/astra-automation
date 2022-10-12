@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rest-core/resources_collections.html
-keywords: concepts
-summary:
+keywords: resources, instances, collections, uuid, uuidv4, state
+summary: The Astra Control REST API provides access to resource instances and collections of resource instances.
 ---
 
 = Resources and collections

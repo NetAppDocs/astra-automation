@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rest-core/url_format.html
-keywords:
-summary:
+keywords: url, url format, endpoint, version
+summary: The general structure of the URL used to access a resource instance or collection through the REST API is composed of several values. This structure reflects the underlying object model and system design.
 ---
 
 = URL format

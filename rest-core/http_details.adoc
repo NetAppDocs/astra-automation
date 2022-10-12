@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: rest-core/http_details.html
-keywords: http
-summary:
+keywords: http, http details, uri, json
+summary: The Astra Control REST API uses HTTP and related parameters to act on the resource instances and collections.
 ---
 
 = HTTP details
@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-The Astra Control REST API uses HTTP and related parameters to act on the resources and collections. Details of the HTTP implementation are presented below.
+The Astra Control REST API uses HTTP and related parameters to act on the resource instances and collections. Details of the HTTP implementation are presented below.
 
 == API transactions and the CRUD model
 
