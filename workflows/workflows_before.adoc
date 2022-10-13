@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: workflows/workflows_before.html
-keywords:
-summary:
+keywords: workflows, management workflows, preparation
+summary: You can use these workflows as part of administering the applications in an Astra managed cluster.
 ---
 
 = Before you begin
@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can use these workflows as part of administering the applications within an Astra managed cluster.
+You can use these workflows as part of administering the applications in an Astra managed cluster.
 
 [NOTE]
 These workflows can be expanded and enhanced by NetApp at any time and so you should review them periodically.
