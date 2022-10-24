@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows/wf_list_man_apps.html
 keywords:
-summary:
+summary: You can list the applications that are currently managed by Astra. You might do this as part of finding the snapshots or backups for a specific app.
 ---
 
-= List the managed apps
+= List the apps
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/k8s/v1/managedApps
+|/account/{account_id}/k8s/v2/apps
 |===
 
 ===== Additional input parameters
@@ -45,21 +45,8 @@ In addition to the parameters common with all REST API calls, the following para
 
 ===== Curl example: Return all data for all apps
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
 ===== Curl example: Return the name, id, and state for all apps
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps?include=name,id,state' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-
-===== JSON output example
-[source,json]
-{
-  "items": [
-    [
-      "test-postgres-app",
-      "1ee6235b-cda1-45cb-8d4c-630bdb8b41a5",
-      "running"
-    ]
-  ],
-  "metadata": {}
-}
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps?include=name,id,state' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
