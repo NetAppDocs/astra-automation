@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows/wf_create_backup.html
 keywords:
-summary:
+summary: You can create a backup for a specific application and then use the backup to restore or clone the app.
 ---
 
-= Create a backup for a managed app
+= Create a backup for an app
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,11 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can create a backup for a specific managed application. You can use the backup to restore or clone the app.
+You can create a backup for a specific application and then use the backup to restore or clone the app.
 
 === Before you begin
 
-You must have the ID of the managed app you want to create a backup for. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+You must have the ID of the app you want to back up. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
 === 1. Create a backup
 
@@ -28,7 +28,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |POST
-|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appBackups
+|/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups
 |===
 
 ===== Additional input parameters
@@ -41,10 +41,10 @@ In addition to the parameters common with all REST API calls, the following para
 |Type
 |Required
 |Description
-|managed app id
+|app id
 |Path
 |Yes
-|Identifies the managed application where the backup will be created.
+|Identifies the application where the backup will be created.
 |JSON
 |Body
 |Yes
@@ -61,4 +61,4 @@ In addition to the parameters common with all REST API calls, the following para
 
 ===== Curl example: Create a backup for the app
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appBackups' --header 'Content-Type: application/astra-appBackup+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups' --header 'Content-Type: application/astra-appBackup+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput

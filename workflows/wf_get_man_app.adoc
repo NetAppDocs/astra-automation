@@ -17,7 +17,7 @@ You can retrieve all the resource variables describing a single application.
 
 === Before you begin
 
-You must have the ID of the managed app you want to retrieve. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
+You must have the ID of the app you want to retrieve. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
 === 1. Get the application
 
