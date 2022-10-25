@@ -73,9 +73,9 @@ Here are some of the common reserved keywords used in the curl examples. This li
 |<API_TOKEN>
 |Header
 |The bearer token identifying and authorizing the caller.
-|<MANAGED_APP_ID>
+|<APP_ID>
 |Path
-|The UUIDv4 value identifying the managed application for the API call.
+|The UUIDv4 value identifying the application for the API call.
 |===
 
 == Workflow categories
@@ -91,4 +91,4 @@ These workflows deal with the Astra infrastructure, including credentials, bucke
 
 === Management workflows
 
-You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning a managed app.
+You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
