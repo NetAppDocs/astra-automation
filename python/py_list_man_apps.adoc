@@ -25,7 +25,7 @@ See link:../python/python_before.html[Before you begin] for an example of the re
 #
 # Usage: python3 list_man_apps.py -i identity_file.json
 #
-# (C) Copyright 2021-2022 NetApp, Inc.
+# (C) Copyright 2022 NetApp, Inc.
 #
 # This sample code is provided AS IS, with no support or warranties of
 # any kind, including but not limited for warranties of merchantability
@@ -88,7 +88,7 @@ def get_managed_apps():
     http_code = resp1.status_code
     resp_headers = resp1.headers
 
-    # Print the list of managed apps
+    # Print the list of apps
     if resp1.ok:
         resp_data = json.loads(resp1.text)
         items = resp_data['items']

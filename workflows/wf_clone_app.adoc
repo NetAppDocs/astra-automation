@@ -5,7 +5,7 @@ keywords:
 summary: You can create a new application by cloning an existing app.
 ---
 
-= Clone a managed app
+= Clone an app
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -63,13 +63,13 @@ In addition to the parameters common with all REST API calls, the following para
 {
   "type": "application/astra-app",
   "version": "2.0",
-  "name": "mysql-clone1",
+  "name": "mysql-clone",
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "ns-mysql",
+  "namespace": "mysql-ns",
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
 
 ===== Curl example: Clone an app
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
