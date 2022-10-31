@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_list_clouds.html
+keywords:
+summary: You can list the clouds defined and available a specific Astra account.
+---
+
+= List the clouds
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can list the clouds defined and available a specific Astra account.
+
+=== 1. List the clouds
+
+Perform the following REST API call to list the clouds.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{account_id}/topology/v1/clouds
+|===
+
+===== Curl example: Return all data for all clouds
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

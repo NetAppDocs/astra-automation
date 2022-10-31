@@ -66,7 +66,7 @@ In addition to the parameters common with all REST API calls, the following para
 {
   "type": "application/astra-app",
   "version": "2.0",
-  "name": "mysql-clone3",
+  "name": "mysql-clone2",
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "namespace": "mysql",
