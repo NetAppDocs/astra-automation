@@ -54,23 +54,32 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 ===== JSON output example
 [source,json]
 {
-  "items": [
-    {
-      "type": "application/astra-appBackup",
-      "version": "1.0",
-      "id": "ed39fdb0-12db-497b-9e46-20036c1fb0d2",
-      "name": "mariadb-mariadb-backup-20210617175900",
-      "state": "completed",
-      "stateUnready": [],
-      "bytesDone": 0,
-      "percentDone": 100,
-      "metadata": {
-        "labels": [],
-        "creationTimestamp": "2021-06-17T17:59:09Z",
-        "modificationTimestamp": "2021-06-17T17:59:09Z",
-        "createdBy": "fb093413-b6fc-4a64-a48a-afc32ada8537"
-      }
-    }
-  ],
-  "metadata": {}
+    "items": [
+        {
+            "type": "application/astra-appBackup",
+            "version": "1.1",
+            "id": "8edeb4a4-fd8b-4222-a559-1013145b28fc",
+            "name": "backup-david-oct28-1",
+            "bucketID": "a443e58f-59bd-4d45-835a-1bc7813f659a",
+            "snapshotID": "dfe237cb-57b7-4576-af4d-00ba3a8f2828",
+            "state": "completed",
+            "stateUnready": [],
+            "hookState": "success",
+            "totalBytes": 205219132,
+            "bytesDone": 205219132,
+            "percentDone": 100,
+            "metadata": {
+                "labels": [
+                    {
+                        "name": "astra.netapp.io/labels/read-only/triggerType",
+                        "value": "backup"
+                    }
+                ],
+                "creationTimestamp": "2022-10-28T21:58:37Z",
+                "modificationTimestamp": "2022-10-28T21:58:55Z",
+                "createdBy": "a530e865-23e8-4e2e-8020-e92c419a3867"
+            }
+        }
+    ],
+    "metadata": {}
 }

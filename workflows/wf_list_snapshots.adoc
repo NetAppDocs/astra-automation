@@ -21,7 +21,7 @@ You must have the ID of the app you want to list the snapshots for. If needed yo
 
 === 1. List the snapshots
 
-Perform the following REST API call.
+Perform the following REST API call to list the snapshots.
 
 [cols="25,75"*,options="header"]
 |===
@@ -66,23 +66,20 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
         {
             "type": "application/astra-appSnap",
             "version": "1.1",
-            "id": "b8b88603-1026-4031-a705-ce357e62e72c",
+            "id": "1ce34da4-bb0a-4926-b925-4a5d85dda8c2",
             "hookState": "success",
             "metadata": {
-                "createdBy": "240cda43-2679-4c2c-9bc7-364383ce463d",
-                "creationTimestamp": "2022-10-25T11:44:10Z",
-                "modificationTimestamp": "2022-10-25T11:44:10Z",
+                "createdBy": "a530e865-23e8-4e2e-8020-e92c419a3867",
+                "creationTimestamp": "2022-10-30T22:44:20Z",
+                "modificationTimestamp": "2022-10-30T22:44:20Z",
                 "labels": []
             },
-            "snapshotCreationTimestamp": "2022-10-25T11:44:10Z",
+            "snapshotAppAsset": "0ebfe3f8-40ed-4bdc-88c4-2144fbda85a0",
+            "snapshotCreationTimestamp": "2022-10-30T22:44:33Z",
             "name": "snapshot-david-1",
-            "state": "failed",
-            "stateUnready": [
-                "Converting (v1.APIGroup) to (v1.APIResourceList): unknown conversion."
-            ]
+            "state": "completed",
+            "stateUnready": []
         }
     ],
-    "metadata": {
-        "count": 1
-    }
+    "metadata": {}
 }
