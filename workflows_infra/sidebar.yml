@@ -29,7 +29,13 @@ entries:
     entries:
       - title: List buckets
         url: /workflows_infra/wf_list_buckets.html
+  - title: Namespaces
+    entries:
+      - title: List namespaces
+        url: /workflows_infra/wf_list_namespaces.html
   - title: Storage
     entries:
+      - title: List storage classes
+        url: /workflows_infra/wf_list_storage_classes.html
       - title: List storage backends
         url: /workflows_infra/wf_list_storage_backends.html
