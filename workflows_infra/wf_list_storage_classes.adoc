@@ -15,21 +15,29 @@ summary: You can list the available storage classes.
 [.lead]
 You can list the available storage classes.
 
-=== 1. List the storage classes
+=== 1. Select the cloud
 
-Perform the following REST API call to list the storage classes.
+Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud you'll be working in.
+
+=== 2. Select the cluster
+
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clusters] and select the clusters.
+
+=== 3. List the storage classes for a specific cluster
+
+Perform the following REST API call to list the storage classes for a specific cluster.
 
 [cols="1,6",options="header"]
 |===
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/topology/v1/managedClusters/{managed_cluster_id}/storageClasses
+|/account/{account_id}/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses
 |===
 
 ===== Curl example: Return all data for all storage classes
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters/<MANAGED_CLUSTER_ID>/storageClasses' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
 ===== JSON output example
 [source,json]
@@ -59,13 +67,13 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
             "id": "150fe657-4a42-47a3-abc6-5dafba3de8bf",
             "name": "thin",
             "provisioner": "kubernetes.io/vsphere-volume",
-            "available": "eligible",
+            "available": "ineligible",
             "reclaimPolicy": "Delete",
             "volumeBindingMode": "Immediate",
             "metadata": {
                 "createdBy": "system",
                 "creationTimestamp": "2022-10-26T04:46:08Z",
-                "modificationTimestamp": "2022-10-26T04:46:08Z",
+                "modificationTimestamp": "2022-11-04T14:58:19Z",
                 "labels": []
             }
         },
@@ -83,6 +91,23 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
                 "createdBy": "system",
                 "creationTimestamp": "2022-10-26T04:46:17Z",
                 "modificationTimestamp": "2022-10-26T04:46:17Z",
+                "labels": []
+            }
+        },
+        {
+            "type": "application/astra-storageClass",
+            "version": "1.1",
+            "id": "7010ef09-92a5-4c90-a5e5-3118e02dc9a7",
+            "name": "vsim-san",
+            "provisioner": "csi.trident.netapp.io",
+            "available": "eligible",
+            "allowVolumeExpansion": "true",
+            "reclaimPolicy": "Delete",
+            "volumeBindingMode": "Immediate",
+            "metadata": {
+                "createdBy": "system",
+                "creationTimestamp": "2022-11-03T18:40:03Z",
+                "modificationTimestamp": "2022-11-03T18:40:03Z",
                 "labels": []
             }
         }

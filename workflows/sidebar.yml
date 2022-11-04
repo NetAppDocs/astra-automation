@@ -33,6 +33,10 @@ entries:
         url: /workflows/wf_clone_app_backup.html
       - title: Restore an app from a backup
         url: /workflows/wf_restore_app_backup.html
+  - title: Namespaces
+    entries:
+      - title: List namespaces
+        url: /workflows/wf_list_namespaces.html
   - title: Support
     entries:
       - title: List notifications

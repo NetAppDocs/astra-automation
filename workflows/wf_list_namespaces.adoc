@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: workflows_infra/wf_list_namespaces.html
+permalink: workflows/wf_list_namespaces.html
 keywords:
 summary: You can list the available namespaces.
 ---

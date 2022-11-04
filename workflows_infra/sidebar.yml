@@ -19,6 +19,8 @@ entries:
         url: /workflows_infra/wf_ldap_disable_reset.html
   - title: Clusters
     entries:
+      - title: List clusters
+        url: /workflows_infra/wf_list_lusters.html
       - title: List managed clusters
         url: /workflows_infra/wf_list_man_clusters.html
   - title: Clouds
@@ -29,10 +31,6 @@ entries:
     entries:
       - title: List buckets
         url: /workflows_infra/wf_list_buckets.html
-  - title: Namespaces
-    entries:
-      - title: List namespaces
-        url: /workflows_infra/wf_list_namespaces.html
   - title: Storage
     entries:
       - title: List storage classes
