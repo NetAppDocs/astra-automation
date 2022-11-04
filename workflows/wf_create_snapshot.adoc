@@ -61,4 +61,4 @@ In addition to the parameters common with all REST API calls, the following para
 
 ===== Curl example: Create a snapshot for the app
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Content-Type: application/astra-appSnap+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

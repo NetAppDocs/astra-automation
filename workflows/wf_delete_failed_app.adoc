@@ -15,9 +15,9 @@ summary:
 [.lead]
 You might be unable to remove a managed app if it has a backup or snapshot in a failed state. In this case you can manually remove the app using the workflow described below.
 
-=== 1. Select the managed app to delete
+=== 1. Select the app to delete
 
-Perform the workflow link:wf_list_man_apps.html[List the managed apps] and select application you want to remove.
+Perform the workflow link:wf_list_man_apps.html[List the apps] and select application you want to remove.
 
 === 2. List the existing backups for the app
 
