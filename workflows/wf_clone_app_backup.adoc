@@ -70,8 +70,7 @@ In addition to the parameters common with all REST API calls, the following para
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "namespace": "mysql",
-  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb",
-  "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
+  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 
 ===== Curl example: Clone an app from a backup

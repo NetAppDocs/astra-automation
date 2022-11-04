@@ -9,6 +9,10 @@ entries:
         url: /workflows/wf_list_man_apps.html
       - title: Get an app
         url: /workflows/wf_get_man_app.html
+      - title: Manage an app
+        url: /workflows/wf_manage_app.html
+      - title: Unmanage an app
+        url: /workflows/wf_unmanage_app.html
   - title: App protection
     entries:
       - title: List snapshots

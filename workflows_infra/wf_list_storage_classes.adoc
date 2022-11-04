@@ -21,7 +21,7 @@ Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds
 
 === 2. Select the cluster
 
-Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clusters] and select the clusters.
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clusters] and select the cluster.
 
 === 3. List the storage classes for a specific cluster
 

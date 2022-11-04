@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_manage_app.html
+keywords:
+summary:
+---
+
+= Manage an app
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a managed application based on an application already known to Astra. When an application is managed (or defined), you can protect it by taking regular backups and snapshots.
+
+=== 1. Select the namespace
+
+Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespace.
+
+=== 2. Select the cluster
+
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clusters] and select the cluster.
+
+=== 3. Manage the application
+
+Perform the following REST API call.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/account/{account_id}/k8s/v2/apps
+|===
+
+===== Additional input parameters
+
+In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
+
+[cols="25,10,10,55"*,options="header"]
+|===
+|Parameter
+|Type
+|Required
+|Description
+|JSON
+|Body
+|Yes
+|Provides the parameters needed to identify the application to be managed. See the example below.
+|===
+
+===== JSON input example
+[source,json]
+{
+  "clusterID": "7ce83fba-6aa1-4e0c-a194-26e714f5eb46",
+  "name": "subtext",
+  "namespaceScopedResources": [{"namespace": "kube-matrix"}],
+  "type": "application/astra-app",
+  "version": "1.1"
+}
+
+===== Curl example: Manage an app
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'  --data @JSONinput
