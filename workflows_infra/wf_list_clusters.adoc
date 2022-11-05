@@ -19,7 +19,7 @@ You can list the available clusters in a specific cloud.
 
 Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud containing the clusters.
 
-=== 2. Select the clusters
+=== 2. List the clusters
 
 Perform the following REST API call to list the clusters in a specific cloud.
 
