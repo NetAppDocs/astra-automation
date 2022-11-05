@@ -17,15 +17,23 @@ entries:
         url: /workflows_infra/wf_ldap_add_entries.html
       - title: Disable and reset LDAP
         url: /workflows_infra/wf_ldap_disable_reset.html
+  - title: Clusters
+    entries:
+      - title: List clusters
+        url: /workflows_infra/wf_list_clusters.html
+      - title: List managed clusters
+        url: /workflows_infra/wf_list_man_clusters.html
+  - title: Clouds
+    entries:
+      - title: List clouds
+        url: /workflows_infra/wf_list_clouds.html
   - title: Buckets
     entries:
       - title: List buckets
         url: /workflows_infra/wf_list_buckets.html
   - title: Storage
     entries:
+      - title: List storage classes
+        url: /workflows_infra/wf_list_storage_classes.html
       - title: List storage backends
         url: /workflows_infra/wf_list_storage_backends.html
-  - title: Clusters
-    entries:
-      - title: List managed clusters
-        url: /workflows_infra/wf_list_man_clusters.html

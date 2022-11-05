@@ -141,10 +141,6 @@ The managed application resource endpoints provide access to the managed Kuberne
 |21.12
 |The execution hook override resources allow you to disable the preloaded NetApp default execution hooks for specific applications as needed.
 
-|Managed application
-|21.04
-|The managed app resources represent Kubernetes applications that are managed by Astra.
-
 |Schedule
 |21.04
 |The schedule resources represent data protection operations that are scheduled for the managed applications as part of a data protection policy.

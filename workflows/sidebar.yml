@@ -5,11 +5,9 @@ entries:
     url: /workflows/workflows_before.html
   - title: App control
     entries:
-      - title: List unmanaged apps
-        url: /workflows/wf_list_unman_apps.html
-      - title: List managed apps
+      - title: List apps
         url: /workflows/wf_list_man_apps.html
-      - title: Get a managed app
+      - title: Get an app
         url: /workflows/wf_get_man_app.html
       - title: Manage an app
         url: /workflows/wf_manage_app.html
@@ -39,6 +37,10 @@ entries:
         url: /workflows/wf_clone_app_backup.html
       - title: Restore an app from a backup
         url: /workflows/wf_restore_app_backup.html
+  - title: Namespaces
+    entries:
+      - title: List namespaces
+        url: /workflows/wf_list_namespaces.html
   - title: Support
     entries:
       - title: List notifications

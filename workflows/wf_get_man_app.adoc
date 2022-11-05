@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows/wf_get_man_app.html
 keywords:
-summary:
+summary: You can retrieve all the resource variables describing a single application.
 ---
 
-= Get a managed app
+= Get an app
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,11 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can retrieve all the resource variables describing a single managed application.
+You can retrieve all the resource variables describing a single application.
 
 === Before you begin
 
-You must have the ID of the managed app you want to retrieve. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+You must have the ID of the app you want to retrieve. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
 === 1. Get the application
 
@@ -28,7 +28,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}
+|/accounts/{account_id}/k8s/v2/apps/{app_id}
 |===
 
 ===== Additional input parameters
@@ -41,12 +41,12 @@ In addition to the parameters common with all REST API calls, the following para
 |Type
 |Required
 |Description
-|managed app id
+|app id
 |Path
 |Yes
-|ID value of the managed application to retrieve.
+|ID value of the application to retrieve.
 |===
 
 ===== Curl example: Return all data for the application
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_list_buckets.html
 keywords:
-summary:
+summary: You can list the S3 buckets defined for a specific Astra account.
 ---
 
-= List buckets
+= List the buckets
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -17,7 +17,7 @@ You can list the S3 buckets defined for a specific Astra account.
 
 === 1. List the buckets
 
-Perform the following REST API call.
+Perform the following REST API call to list the buckets.
 
 [cols="25,75"*,options="header"]
 |===

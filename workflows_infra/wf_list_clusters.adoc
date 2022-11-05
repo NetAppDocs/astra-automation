@@ -1,0 +1,161 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_list_clusters.html
+keywords:
+summary:
+---
+
+= List the clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can list the available clusters in a specific cloud.
+
+=== 1. Select the cloud
+
+Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud containing the clusters.
+
+=== 2. List the clusters
+
+Perform the following REST API call to list the clusters in a specific cloud.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{account_id}/topology/v1/clouds/{cloud_id}/clusters
+|===
+
+===== Curl example: Return all data for all clusters
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+===== JSON output example
+[source,json]
+{
+    "items": [
+        {
+            "type": "application/astra-cluster",
+            "version": "1.1",
+            "id": "7ce83fba-6aa1-4e0c-a194-26e714f5eb46",
+            "name": "openshift-clstr-ol-07",
+            "state": "running",
+            "stateUnready": [],
+            "managedState": "managed",
+            "protectionState": "full",
+            "protectionStateDetails": [],
+            "restoreTargetSupported": "true",
+            "snapshotSupported": "true",
+            "managedStateUnready": [],
+            "managedTimestamp": "2022-11-03T15:50:59Z",
+            "inUse": "true",
+            "clusterType": "openshift",
+            "accHost": "true",
+            "clusterVersion": "1.23",
+            "clusterVersionString": "v1.23.12+6b34f32",
+            "namespaces": [
+                "default",
+                "kube-node-lease",
+                "kube-public",
+                "kube-system",
+                "metallb-system",
+                "mysql",
+                "mysql-clone1",
+                "mysql-clone2",
+                "mysql-clone3",
+                "mysql-clone4",
+                "netapp-acc-operator",
+                "netapp-monitoring",
+                "openshift",
+                "openshift-apiserver",
+                "openshift-apiserver-operator",
+                "openshift-authentication",
+                "openshift-authentication-operator",
+                "openshift-cloud-controller-manager",
+                "openshift-cloud-controller-manager-operator",
+                "openshift-cloud-credential-operator",
+                "openshift-cloud-network-config-controller",
+                "openshift-cluster-csi-drivers",
+                "openshift-cluster-machine-approver",
+                "openshift-cluster-node-tuning-operator",
+                "openshift-cluster-samples-operator",
+                "openshift-cluster-storage-operator",
+                "openshift-cluster-version",
+                "openshift-config",
+                "openshift-config-managed",
+                "openshift-config-operator",
+                "openshift-console",
+                "openshift-console-operator",
+                "openshift-console-user-settings",
+                "openshift-controller-manager",
+                "openshift-controller-manager-operator",
+                "openshift-dns",
+                "openshift-dns-operator",
+                "openshift-etcd",
+                "openshift-etcd-operator",
+                "openshift-host-network",
+                "openshift-image-registry",
+                "openshift-infra",
+                "openshift-ingress",
+                "openshift-ingress-canary",
+                "openshift-ingress-operator",
+                "openshift-insights",
+                "openshift-kni-infra",
+                "openshift-kube-apiserver",
+                "openshift-kube-apiserver-operator",
+                "openshift-kube-controller-manager",
+                "openshift-kube-controller-manager-operator",
+                "openshift-kube-scheduler",
+                "openshift-kube-scheduler-operator",
+                "openshift-kube-storage-version-migrator",
+                "openshift-kube-storage-version-migrator-operator",
+                "openshift-machine-api",
+                "openshift-machine-config-operator",
+                "openshift-marketplace",
+                "openshift-monitoring",
+                "openshift-multus",
+                "openshift-network-diagnostics",
+                "openshift-network-operator",
+                "openshift-node",
+                "openshift-oauth-apiserver",
+                "openshift-openstack-infra",
+                "openshift-operator-lifecycle-manager",
+                "openshift-operators",
+                "openshift-ovirt-infra",
+                "openshift-sdn",
+                "openshift-service-ca",
+                "openshift-service-ca-operator",
+                "openshift-user-workload-monitoring",
+                "openshift-vsphere-infra",
+                "pcloud",
+                "postgreql",
+                "trident"
+            ],
+            "defaultStorageClass": "4bacbb3c-0727-4f58-b13c-3a2a069baf89",
+            "cloudID": "4f1e1086-f415-4451-a051-c7299cd672ff",
+            "credentialID": "7ffd7354-b6c2-4efa-8e7b-cf64d5598463",
+            "isMultizonal": "false",
+            "tridentManagedStateAllowed": [
+                "unmanaged"
+            ],
+            "tridentVersion": "22.10.0",
+            "apiServiceID": "98df44dc-2baf-40d5-8826-e198b1b40909",
+            "metadata": {
+                "labels": [
+                    {
+                        "name": "astra.netapp.io/labels/read-only/cloudName",
+                        "value": "private"
+                    }
+                ],
+                "creationTimestamp": "2022-11-03T15:50:59Z",
+                "modificationTimestamp": "2022-11-04T14:42:32Z",
+                "createdBy": "00000000-0000-0000-0000-000000000000"
+            }
+        }
+    ]
+}

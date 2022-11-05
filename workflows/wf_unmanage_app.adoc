@@ -17,20 +17,20 @@ You can remove a managed app when it's no longer needed. Removing a managed appl
 
 === Before you begin
 
-You must have the ID of the managed app you want to unmanage. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+You must have the ID of the app you want to unmanage. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
 The application's backups and snapshots are not automatically removed when it is deleted. If you no longer need the backups and snapshots, you should delete them before removing the application.
 
 === 1. Unmanaged the app
 
-Perform the following REST API call.
+Perform the following REST API call to remove the app.
 
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
 |Path
 |DELETE
-|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}
+|/accounts/{account_id}/k8s/v2/apps/{app_id}
 |===
 
 ===== Additional input parameters
@@ -43,12 +43,12 @@ In addition to the parameters common with all REST API calls, the following para
 |Type
 |Required
 |Description
-|managed app id
+|app id
 |Path
 |Yes
-|Identifies the managed application to remove.
+|Identifies the application to remove.
 |===
 
 ===== Curl example: Remove a managed app
 [source,curl]
-curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request DELETE 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

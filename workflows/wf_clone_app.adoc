@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows/wf_clone_app.html
 keywords:
-summary:
+summary: You can create a new application by cloning an existing app.
 ---
 
-= Clone a managed app
+= Clone an app
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can create a new application by cloning an existing managed app.
+You can create a new application by cloning an existing app.
 
 === Before you begin
 
@@ -21,24 +21,25 @@ Note the following about this workflow:
 
 * An app backup or snapshot is not used
 * The clone operation is performed within the same cluster
+* The new app is placed in a different namespace
 
 [NOTE]
 To clone an app to a different cluster, you need to update the `clusterId` parameter in the JSON input as appropriate for your environment.
 
-=== 1. Select the managed app to clone
+=== 1. Select the app to clone
 
-Perform the workflow link:wf_list_man_apps.html[List the managed apps] and select application you want to clone. Several of the resource values are needed for the REST call used to clone the app.
+Perform the workflow link:wf_list_man_apps.html[List the apps] and select application you want to clone. Several of the resource values are needed for the REST call used to clone the app.
 
 === 2. Clone the app
 
-Perform the following REST API call.
+Perform the following REST API call to clone the app.
 
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
 |Path
 |POST
-|/account/{account_id}/k8s/v1/managedApps
+|/account/{account_id}/k8s/v2/apps
 |===
 
 ===== Additional input parameters
@@ -60,15 +61,15 @@ In addition to the parameters common with all REST API calls, the following para
 ===== JSON input example
 [source,json]
 {
-  "type": "application/astra-managedApp",
-  "version": "1.0",
-  "name": "postgres1-postgresql-clone",
+  "type": "application/astra-app",
+  "version": "2.0",
+  "name": "mysql-clone",
   "clusterID": "30880586-d579-4d27-930f-a9633e59173b",
   "sourceClusterID": "30880586-d579-4d27-930f-a9633e59173b",
-  "namespace": "davidns-postgres-app",
+  "namespace": "mysql-ns",
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
 
 ===== Curl example: Clone an app
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps' --header 'Content-Type: application/astra-managedApp+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --d @JSONinput
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
