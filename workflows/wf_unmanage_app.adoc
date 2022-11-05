@@ -23,7 +23,7 @@ The application's backups and snapshots are not automatically removed when it is
 
 === 1. Unmanaged the app
 
-Perform the following REST API call.
+Perform the following REST API call to remove the app.
 
 [cols="25,75"*,options="header"]
 |===
@@ -46,7 +46,7 @@ In addition to the parameters common with all REST API calls, the following para
 |app id
 |Path
 |Yes
-|Identifies the managed application to remove.
+|Identifies the application to remove.
 |===
 
 ===== Curl example: Remove a managed app

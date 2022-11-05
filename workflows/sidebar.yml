@@ -3,7 +3,7 @@ title: Management workflows
 entries:
   - title: Before you begin
     url: /workflows/workflows_before.html
-  - title: Apps
+  - title: App control
     entries:
       - title: List apps
         url: /workflows/wf_list_man_apps.html

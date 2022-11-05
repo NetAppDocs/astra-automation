@@ -13,7 +13,7 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can create a managed application based on an application already known to Astra. When an application is managed (or defined), you can protect it by taking regular backups and snapshots.
+You can create a managed application based on an application already known to Astra in a specific namespace. When an application is managed or defined to Astra, you can protect it by taking backups and snapshots.
 
 === 1. Select the namespace
 
@@ -25,7 +25,7 @@ Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clus
 
 === 3. Manage the application
 
-Perform the following REST API call.
+Perform the following REST API call to manage the application.
 
 [cols="25,75"*,options="header"]
 |===
@@ -58,7 +58,7 @@ In addition to the parameters common with all REST API calls, the following para
   "name": "subtext",
   "namespaceScopedResources": [{"namespace": "kube-matrix"}],
   "type": "application/astra-app",
-  "version": "1.1"
+  "version": "2.0"
 }
 
 ===== Curl example: Manage an app

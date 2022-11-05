@@ -25,7 +25,7 @@ Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clus
 
 === 3. List the storage classes for a specific cluster
 
-Perform the following REST API call to list the storage classes for a specific cluster.
+Perform the following REST API call to list the storage classes for a specific cluster and cloud.
 
 [cols="1,6",options="header"]
 |===
