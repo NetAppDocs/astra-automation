@@ -15,7 +15,7 @@ summary:
 [.lead]
 You can list the Kubernetes clusters currently managed by Astra.
 
-=== 1. List the clusters
+=== 1. List the managed clusters
 
 Perform the following REST API call.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_list_snapshots.html
 keywords:
-summary:
+summary: You can list the snapshots that have been taken for a specific application.
 ---
 
 = List the snapshots
@@ -13,22 +13,22 @@ summary:
 :imagesdir: ./media/
 
 [.lead]
-You can list the snapshots that have been taken for a specific managed application.
+You can list the snapshots that have been taken for a specific application.
 
 === Before you begin
 
-You must have the ID of the managed app you want to list the snapshots for. If needed you can use the workflow link:wf_list_man_apps.html[List the managed apps] to locate the application.
+You must have the ID of the app you want to list the snapshots for. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
 === 1. List the snapshots
 
-Perform the following REST API call.
+Perform the following REST API call to list the snapshots.
 
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
 |Path
 |GET
-|/accounts/{account_id}/k8s/v1/managedApps/{managedApp_id}/appSnaps
+|/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps
 |===
 
 ===== Additional input parameters
@@ -41,10 +41,10 @@ In addition to the parameters common with all REST API calls, the following para
 |Type
 |Required
 |Description
-|managed app id
+|app id
 |Path
 |Yes
-|Identifies the managed application owning the listed snapshots.
+|Identifies the application owning the listed snapshots.
 |count
 |Query
 |No
@@ -53,34 +53,33 @@ In addition to the parameters common with all REST API calls, the following para
 
 ===== Curl example: Return all snapshots for the app
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
 ===== Curl example: Return all snapshots for the app and the count
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/managedApps/<MANAGED_APP_ID>/appSnaps?count=true' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps?count=true' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
 ===== JSON output example
 [source,json]
 {
-  "items": [
-    {
-      "id": "dc2974ae-f71d-4c81-91b5-f96cf72dc3ba",
-      "metadata": {
-        "createdBy": "fb093413-b6fc-4a64-a48a-afc32ada8537",
-        "creationTimestamp": "2021-06-04T21:23:14Z",
-        "modificationTimestamp": "2021-06-04T21:23:14Z",
-        "labels": []
-      },
-      "snapshotAppAsset": "4547658d-cc06-4c1d-ad8a-4a05274d0db0",
-      "snapshotCreationTimestamp": "2021-06-04T21:23:47Z",
-      "name": "test-postgres-app-snapshot-20210604212213",
-      "state": "completed",
-      "stateUnready": [],
-      "type": "application/astra-appSnap",
-      "version": "1.0"
-    }
-  ],
-  "metadata": {
-    "count": 1
-  }
+    "items": [
+        {
+            "type": "application/astra-appSnap",
+            "version": "1.1",
+            "id": "1ce34da4-bb0a-4926-b925-4a5d85dda8c2",
+            "hookState": "success",
+            "metadata": {
+                "createdBy": "a530e865-23e8-4e2e-8020-e92c419a3867",
+                "creationTimestamp": "2022-10-30T22:44:20Z",
+                "modificationTimestamp": "2022-10-30T22:44:20Z",
+                "labels": []
+            },
+            "snapshotAppAsset": "0ebfe3f8-40ed-4bdc-88c4-2144fbda85a0",
+            "snapshotCreationTimestamp": "2022-10-30T22:44:33Z",
+            "name": "snapshot-david-1",
+            "state": "completed",
+            "stateUnready": []
+        }
+    ],
+    "metadata": {}
 }
