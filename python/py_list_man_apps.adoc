@@ -73,8 +73,8 @@ def get_managed_apps():
     # Prepare the request headers
     req_headers.clear
     req_headers['Authorization'] = "Bearer " + api_token
-    req_headers['Content-Type'] = "application/astra-managedApp+json"
-    req_headers['Accept'] = "application/astra-managedApp+json"
+    req_headers['Content-Type'] = "application/astra-app+json"
+    req_headers['Accept'] = "application/astra-app+json"
 
     # Make the REST call
     try:
