@@ -184,10 +184,6 @@ The topology resource endpoints provide access to the unmanaged applications and
 |21.08
 |The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
 
-|Managed storage backend
-|21.12
-|The managed storage backend resources allow you to access abstracted representations of the backend storage providers. These storage backends can be used by the managed clusters and applications.
-
 |Namespace
 |21.12
 |The namespace resources provide access to the namespaces used within a Kubernetes cluster.
@@ -199,14 +195,6 @@ The topology resource endpoints provide access to the unmanaged applications and
 |Storage class
 |21.08
 |The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
-
-|Storage device
-|21.12
-|The storage device resources provide access to the disks associated with a specific storage node for Astra Data Store (ADS) type storage backends. An ADS storage backends is deployed as a Kubernetes clusters.
-
-|Storage node
-|21.12
-|The storage node resources represent the nodes that are part of an ADS cluster.
 
 |Volume
 |21.04

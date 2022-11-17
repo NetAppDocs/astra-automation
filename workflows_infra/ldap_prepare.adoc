@@ -41,9 +41,9 @@ You should review the Astra configuration essentials presented below, including 
 
 The Astra Control platform provides two deployment models. LDAP authentication is only supported with Astra Control Center deployments.
 
-.REST API configuration only
+.Configuration using REST API or web user interface
 
-The current release of Astra Control Center only supports configuration of LDAP authentication using the Astra Control REST API. An important aspect of this limitation is the LDAP users are not displayed in the users tab of the Astra web interface. They are available through the REST API at the endpoint `../core/v1/users`.
+The current release of Astra Control Center supports configuration of LDAP authentication using both the Astra Control REST API as well as the Astra web user interface.
 
 .LDAP server required
 

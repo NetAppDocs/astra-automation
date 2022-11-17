@@ -13,14 +13,14 @@ summary: The documentation at this site describes the Astra Control REST API and
 :imagesdir: ./media/
 
 [.lead]
-The documentation at this site describes the Astra Control REST API and related automation technologies available with the August 2022 (22.08) release of Astra Control. In particular, this release of the REST API is included with the corresponding 22.08 releases of Astra Control Center and Astra Control Service.
+The documentation at this site describes the Astra Control REST API and related automation technologies available with the November 2022 (22.11) release of Astra Control. In particular, this release of the REST API is included with the corresponding 22.11 releases of Astra Control Center and Astra Control Service.
 
 See the following pages and sites for more information about this release as well as previous releases:
 
 * link:../rn/whats_new.html[What's new with the Astra Control REST API]
 * link:../endpoints/resources.html[REST resources and endpoints]
-* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 22.08 documentation^]
-* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 22.08 documentation^]
+* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 22.11 documentation^]
+* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service documentation^]
 * link:../aa-earlier-versions.html[Earlier versions of Astra Automation documentation]
 
 Follow us on Twitter @NetAppDoc. Send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending an email to doccomments@netapp.com.

@@ -15,6 +15,18 @@ summary: NetApp regularly updates the Astra Control REST API to bring you new fe
 [.lead]
 NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 22 November 2022 (22.11)
+
+This release includes an expansion and update of the REST API as well as enhanced namespace and LDAP support.
+
+=== New and enhanced Astra resources
+
+Three new resources types have been added: *apiResource*, *ldapGroup*, *ldapUser*, and *task*. In addition, the versions of several existing resources have been updated.
+
+=== xxx
+
+xxx
+
 == 10 August 2022 (22.08)
 
 This release includes an expansion and update of the REST API as well as enhanced security and administrative features.
