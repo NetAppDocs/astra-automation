@@ -1,0 +1,44 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_man_cluster.html
+keywords:
+summary: You can manage a Kubernetes cluster so that data protection can be performed.
+---
+
+= Manage a cluster
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can manage a Kubernetes cluster so that data protection can be performed.
+
+=== 1. List the clusters
+
+Perform the following REST API call to list all the known clusters.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/account/{account_id}/topology/v1/managedClusters
+|===
+
+===== Curl example: Return all data for all clusters
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+=== 2. Select the desired cluster
+
+xxx
+
+=== 3. Optionally list the storage classes
+
+xxx
+
+=== 4. Manage the cluster
+
+Perform the following REST API call to manage the desired cluster.
