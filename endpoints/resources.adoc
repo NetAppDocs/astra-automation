@@ -43,7 +43,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
 
 |Certificate
-|*22.08*
+|22.08
 |The certificate resources represent the installed certificates used for strong authentication for outgoing connections.
 
 |Credential
@@ -67,12 +67,20 @@ The core resource endpoints provide the foundational services needed to establis
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
 |Group
-|*22.08*
+|22.08
 |The group resources represent the Astra groups and associated resources. Only LDAP groups are supported in the current release.
 
 |Hook source
 |21.12
 |The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
+
+|LDAP group
+|*22.11*
+|xxx
+
+|LDAP user
+|*22.11*
+|xxx
 
 |License
 |21.08
@@ -97,6 +105,10 @@ The core resource endpoints provide the foundational services needed to establis
 |Subscription
 |21.08
 |The subscription resources represent the active subscriptions for an Astra account.
+
+|Task
+|*22.11*
+|xxx
 
 |Token
 |21.04
@@ -156,12 +168,16 @@ The topology resource endpoints provide access to the unmanaged applications and
 |Release
 |Description
 
+|API resource
+|*22.11*
+|xxx
+
 |App
 |21.04
 |The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
 
 |AppMirror
-|*22.08*
+|22.08
 |The AppMirror resources represent the AppMirror resources to provide for the management of application mirroring relationships.
 
 |Bucket
