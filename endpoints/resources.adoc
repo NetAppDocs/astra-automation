@@ -76,11 +76,11 @@ The core resource endpoints provide the foundational services needed to establis
 
 |LDAP group
 |*22.11*
-|xxx
+|You can list the groups within the configured LDAP server. Access to the LDAP groups is read-only.
 
 |LDAP user
 |*22.11*
-|xxx
+|You can list the users within the configured LDAP server. Access to the LDAP users is read-only.
 
 |License
 |21.08
@@ -108,7 +108,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Task
 |*22.11*
-|xxx
+|The task resources provide read-only access to managed task resources and can be used to display the status of the internal long-running tasks.
 
 |Token
 |21.04
@@ -170,7 +170,7 @@ The topology resource endpoints provide access to the unmanaged applications and
 
 |API resource
 |*22.11*
-|xxx
+|The API resource endpoints provide read-only access to the Kubernetes resources in a specific managed cluster.
 
 |App
 |21.04

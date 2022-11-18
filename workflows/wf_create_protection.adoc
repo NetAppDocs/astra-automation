@@ -1,0 +1,48 @@
+---
+sidebar: sidebar
+permalink: workflows/wf_create_protection.html
+keywords:
+summary: You can create a data protection policy based on one or more schedules.
+---
+
+= Create a data protection policy
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a data protection policy based on one or more schedules.
+
+=== 1. Select the managed app
+
+*COMPLETE*
+
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List clusters] and select the desired cluster. The property `managedState` of the cluster must be `unmanaged`.
+
+=== 2. Create the protection
+
+*COMPLETE*
+
+Perform the following REST API call to manage the cluster.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/account/{account_id}/topology/v1/managedClusters
+|===
+
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-managedCluster",
+  "version": "1.0",
+  "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

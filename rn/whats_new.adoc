@@ -25,7 +25,7 @@ Four new resources types have been added: *apiResource*, *ldapGroup*, *ldapUser*
 
 === Monitoring support for long-running tasks
 
-The new task endpoints provide access to managed task resources and can be used to displays the status of long-running tasks.
+The new task endpoints provide access to managed task resources and can be used to display the status of internal long-running tasks.
 
 === Enhanced namespace usage scenarios
 
@@ -33,7 +33,7 @@ Support has been added for apps that span multiple namespaces as well as cluster
 
 === Expanded cloud subscriptions
 
-Multiple account subscriptions can be used for each of the cloud providers.
+Multiple account subscriptions can now be added for each of the cloud providers.
 
 .Related information
 

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_man_cluster.html
 keywords:
-summary: You can manage a Kubernetes cluster so that data protection can be performed.
+summary: You can manage a Kubernetes cluster so that data protection operations can be performed.
 ---
 
 = Manage a cluster
@@ -17,15 +17,18 @@ You can manage a Kubernetes cluster so that data protection can be performed.
 
 === 1. Select the cluster to manage
 
-Perform the workflow link:../workflows_infra/wf_list_clusters.html[List clusters] and select the desired cluster. The property `managedState` must be `unmanaged`.
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List clusters] and select the desired cluster. The property `managedState` of the cluster must be `unmanaged`.
 
 === 2. Optionally select the storage class
 
-Perform the workflow link:../workflows_infra/wf_list_storage_classes.html[List storage classes] and select the desired storage class.
+Optionally perform the workflow link:../workflows_infra/wf_list_storage_classes.html[List storage classes] and select the desired storage class.
+
+[NOTE]
+If you don't provide a storage class on the call to manage the cluster, your default storage class will be used.
 
 === 3. Manage the cluster
 
-Perform the following REST API call to manage the cluster using the default storage class.
+Perform the following REST API call to manage the cluster.
 
 [cols="1,6",options="header"]
 |===
