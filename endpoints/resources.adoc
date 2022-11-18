@@ -108,7 +108,7 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Task
 |*22.11*
-|The task resources provide read-only access to managed task resources and can be used to display the status of the internal long-running tasks.
+|The task resources provide read-only access to managed task and can be used to display the status of the internal long-running tasks.
 
 |Token
 |21.04
