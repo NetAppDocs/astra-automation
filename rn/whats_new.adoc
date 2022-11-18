@@ -21,11 +21,23 @@ This release includes an expansion and update of the REST API as well as enhance
 
 === New and enhanced Astra resources
 
-Three new resources types have been added: *apiResource*, *ldapGroup*, *ldapUser*, and *task*. In addition, the versions of several existing resources have been updated.
+Four new resources types have been added: *apiResource*, *ldapGroup*, *ldapUser*, and *task*. In addition, several existing resources and endpoints have been enhanced.
 
-=== xxx
+=== Monitoring support for long-running tasks
 
-xxx
+The new task endpoints provide access to managed task resources and can be used to displays the status of long-running tasks.
+
+=== Enhanced namespace usage scenarios
+
+Support has been added for apps that span multiple namespaces as well as cluster resources associated with namespace-qualified resources.
+
+=== Expanded cloud subscriptions
+
+Multiple account subscriptions can be used for each of the cloud providers.
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
 
 == 10 August 2022 (22.08)
 
@@ -55,9 +67,7 @@ You can now replicate data and application changes among clusters using NetApp S
 
 .Related information
 
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
-
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
+* https://docs.netapp.com/us-en/astra-control-center-2208/release-notes/whats-new.html[Astra Control Center 22.08: What's new^]
 
 == 26 April 2022 (22.04)
 
@@ -92,9 +102,7 @@ See the *What's new* page at the Astra Control Center and Astra Control Service 
 
 .Related information
 
-* https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
-
-* https://docs.netapp.com/us-en/astra-control-service/release-notes/whats-new.html[Astra Control Service: What's new^]
+* https://docs.netapp.com/us-en/astra-control-center-2204/release-notes/whats-new.html[Astra Control Center 22.04: What's new^]
 
 == 14 December 2021 (21.12)
 
@@ -111,6 +119,10 @@ The number of REST resource types has continued to expand with an emphasis on ex
 === NetApp Astra Control Python SDK
 
 NetApp Astra Control Python SDK is an open source package that makes it easier to develop automation code for your Astra Control environment. At the core is the Astra SDK which includes a set of classes to abstract the complexity of the REST API calls. There is also a toolkit script to execute specific administrative tasks by wrapping and abstracting the Python classes. See link:../python/astra_toolkits.html[NetApp Astra Control Python SDK] for more information.
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center-2112/release-notes/whats-new.html[Astra Control Center 21.12: What's new^]
 
 == 5 August 2021 (21.08)
 
@@ -133,6 +145,10 @@ The OpenAPI endpoints provide access to the current OpenAPI JSON document and ot
 
 OpenMetrics support::
 The OpenMetrics endpoints provide access to account metrics through the OpenMetrics resource.
+
+.Related information
+
+* https://docs.netapp.com/us-en/astra-control-center-2108/release-notes/whats-new.html[Astra Control Center 21.08: What's new^]
 
 == 15 April 2021 (21.04)
 

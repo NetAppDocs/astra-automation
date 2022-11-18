@@ -15,30 +15,34 @@ summary: You can manage a Kubernetes cluster so that data protection can be perf
 [.lead]
 You can manage a Kubernetes cluster so that data protection can be performed.
 
-=== 1. List the clusters
+=== 1. Select the cluster to manage
 
-Perform the following REST API call to list all the known clusters.
+Perform the workflow link:../workflows_infra/wf_list_clusters.html[List clusters] and select the desired cluster. The property `managedState` must be `unmanaged`.
+
+=== 2. Optionally select the storage class
+
+Perform the workflow link:../workflows_infra/wf_list_storage_classes.html[List storage classes] and select the desired storage class.
+
+=== 3. Manage the cluster
+
+Perform the following REST API call to manage the cluster using the default storage class.
 
 [cols="1,6",options="header"]
 |===
 |HTTP method
 |Path
-|GET
+|POST
 |/account/{account_id}/topology/v1/managedClusters
 |===
 
-===== Curl example: Return all data for all clusters
+===== JSON input example
+[source,json]
+{
+  "type": "application/astra-managedCluster",
+  "version": "1.0",
+  "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
+}
+
+===== Curl example
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-
-=== 2. Select the desired cluster
-
-xxx
-
-=== 3. Optionally list the storage classes
-
-xxx
-
-=== 4. Manage the cluster
-
-Perform the following REST API call to manage the desired cluster.
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/managedClusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
