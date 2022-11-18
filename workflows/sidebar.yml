@@ -27,7 +27,7 @@ entries:
         url: /workflows/wf_delete_snapshot.html
       - title: Delete backup
         url: /workflows/wf_delete_backup.html
-      - title: Create protection polict
+      - title: Create protection policy
         url: /workflows/wf_create_protection.html
   - title: Cloning and restoring an app
     entries:

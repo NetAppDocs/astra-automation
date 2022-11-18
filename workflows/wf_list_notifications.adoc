@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/core/v1/notifications
+|/accounts/{account_id}/core/v1/notifications
 |===
 
 ===== Additional input parameters

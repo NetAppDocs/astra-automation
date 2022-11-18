@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/topology/v1/storageBackends
+|/accounts/{account_id}/topology/v1/storageBackends
 |===
 
 ===== Curl example: Return all data for all storage backends

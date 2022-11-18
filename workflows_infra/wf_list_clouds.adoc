@@ -24,7 +24,7 @@ Perform the following REST API call to list the clouds.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/topology/v1/clouds
+|/accounts/{account_id}/topology/v1/clouds
 |===
 
 ===== Curl example: Return all data for all clouds

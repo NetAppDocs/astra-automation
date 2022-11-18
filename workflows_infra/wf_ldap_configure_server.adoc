@@ -28,7 +28,7 @@ This step is optional and only required if you want Astra and the LDAP to commun
 |HTTP method
 |Path
 |POST
-|/account/{account_id}/core/v1/certificates
+|/accounts/{account_id}/core/v1/certificates
 |===
 
 ===== JSON input example
@@ -105,7 +105,7 @@ Perform the following REST API call to add the bind credentials.
 |HTTP method
 |Path
 |POST
-|/account/{account_id}/core/v1/credentials
+|/accounts/{account_id}/core/v1/credentials
 |===
 
 ===== JSON input example
@@ -158,7 +158,7 @@ The curl example below uses a query parameter to filter the settings collection.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/core/v1/settings
+|/accounts/{account_id}/core/v1/settings
 |===
 
 ===== Curl example
@@ -188,7 +188,7 @@ You can issue a GET request for the specific setting first to see the configSche
 |HTTP method
 |Path
 |PUT
-|/account/{account_id}/core/v1/settings/{setting_id}
+|/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
 ===== JSON input example
@@ -231,7 +231,7 @@ You can optionally perform the following REST API call to retrieve the LDAP sett
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/core/v1/settings/{setting_id}
+|/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
 ===== Curl example

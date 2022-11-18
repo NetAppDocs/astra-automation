@@ -35,7 +35,7 @@ Perform the following REST API call to manage the cluster.
 |HTTP method
 |Path
 |POST
-|/account/{account_id}/topology/v1/managedClusters
+|/accounts/{account_id}/topology/v1/managedClusters
 |===
 
 ===== JSON input example
