@@ -1,0 +1,86 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_add_cluster.html
+keywords:
+summary: You can add a cluster so that Astra can then manage it to protect the various apps and resources.
+---
+
+= Add a cluster using credentials
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can add a cluster so that Astra can then manage it to protect the various apps and resources.
+
+[NOTE]
+Beginning with the Astra 22.11, you can add a cluster using either Astra Control Center or Astra Control Service.
+
+=== 1. Obtain the Kubeconfig file
+
+You need to obtain a copy of the kubconfig file from your Kubernetes administrator or service.
+
+=== 2. Prepare the Kubeconfig file
+
+Before using the kubeconfig file, you need to perform the following operations:
+
+. If needed, convert the file from YAML format to JSON
+. Encode the JSON file in base64.
+
+=== 3. Select the cloud
+
+Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud where the cluster will be added.
+
+=== 4. Create a credential
+
+Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/credentials
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-credential",
+  "version" : "1.1",
+  "name" : "Cloud One",
+  "keyType" : "kubeconfig",
+  "keyStore" : kubeconfige_file
+  },
+  "valid" : "true"
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+
+=== 5. Add the cluster
+
+Perform the following REST API call to add the cluster to the cloud.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|GET
+|/accounts/{account_id}/core/v1/users
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-credential",
+  "version" : "1.0",
+  "credentialID": credential_id
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'

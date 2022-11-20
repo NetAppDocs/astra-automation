@@ -95,7 +95,7 @@ Perform the following REST API call to create a credential and associate it with
 [source,curl]
 {
   "type" :  "application/astra-credential",
-  "version" : "1.0",
+  "version" : "1.1",
   "name" : "d07dac0a-a328-4840-a216-12de16bbd484",
   "keyType" : "passwordHash",
   "keyStore" : {
