@@ -27,7 +27,7 @@ The following Curl command retrieves a list of Astra users. Provide the appropri
 curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/json' --header 'Authorization: Bearer <API_TOKEN>'
 
 .JSON output example
-[source,json]
+----
 {
   "items": [
     [
@@ -43,3 +43,4 @@ curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/cor
   ],
   "metadata": {}
 }
+----
