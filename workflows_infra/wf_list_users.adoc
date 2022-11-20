@@ -52,7 +52,7 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
 curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users?include=firstName,lastName,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
 ===== JSON output example
-[source,json]
+----
 {
   "items": [
     [
@@ -68,3 +68,6 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   ],
   "metadata": {}
 }
+----
+
+Test

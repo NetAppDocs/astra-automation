@@ -5,8 +5,8 @@ entries:
     url: /get-started/before_get_started.html
   - title: Get an API token
     url: /get-started/get_api_token.html
-  - title: Hello world
-    url: /get-started/hello_world.html
+  - title: Your first API call
+    url: /get-started/first_call.html
   - title: Prepare to use the workflows
     url: /get-started/prepare_to_use_workflows.html
   - title: Basic Kubernetes concepts
