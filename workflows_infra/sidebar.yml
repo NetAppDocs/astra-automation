@@ -27,6 +27,8 @@ entries:
         url: /workflows_infra/wf_list_man_clusters.html
       - title: Manage a cluster
         url: /workflows_infra/wf_man_cluster.html
+      - title: Add a cluster
+        url: /workflows_infra/wf_add_cluster.html
   - title: Clouds
     entries:
       - title: List clouds
