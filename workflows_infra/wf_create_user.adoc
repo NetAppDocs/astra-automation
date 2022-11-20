@@ -81,7 +81,7 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
 
 === 3. Create a credential
 
-Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
+Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The `name` property should contain the ID of the user returned in the previous step. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
 
 [cols="25,75"*,options="header"]
 |===
@@ -111,7 +111,7 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
 
 === 4. Optionally select the allowed namespaces
 
-Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict the user access to.
+Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict access to.
 
 === 5. Bind the user to a role
 
