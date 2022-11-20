@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_manage_app.html
 keywords:
-summary:
+summary: You can create a managed application based on an application already known to Astra in a specific namespace. When an application is managed or defined to Astra, you can protect it by taking backups and snapshots.
 ---
 
 = Manage an app

@@ -17,7 +17,7 @@ You can create a user with specific credentials and a pre-defined role. You can 
 
 === 1. Select a user name
 
-Perform the workflow link:../workflows_infra/wf_list_users.html[List users] and select an available name not currently used.
+Perform the workflow link:../workflows_infra/wf_list_users.html[List users] and select an available name not currently in use.
 
 === 2. Create the user
 
@@ -37,32 +37,32 @@ Perform the following REST API call to create a user. After successful completio
   "type" :  "application/astra-user",
   "version" : "1.1",
   "firstName" : "John",
-  "lastName" : "Doe",
-  "email" : "jdoe@example.com"
+  "lastName" : "West",
+  "email" : "jwest@example.com"
 }
 
 ===== Curl example
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN> --data @JSONinput'
 
 ===== JSON output example
 [source,curl]
 {
     "metadata": {
-        "creationTimestamp": "2022-11-20T16:55:45Z",
-        "modificationTimestamp": "2022-11-20T16:55:45Z",
+        "creationTimestamp": "2022-11-20T17:23:15Z",
+        "modificationTimestamp": "2022-11-20T17:23:15Z",
         "createdBy": "a20e91f3-2c49-443b-b240-615d940ec5f3",
         "labels": []
     },
     "type": "application/astra-user",
     "version": "1.2",
-    "id": "e2415776-947a-42a3-b8e0-1b99e23104cb",
+    "id": "d07dac0a-a328-4840-a216-12de16bbd484",
     "authProvider": "local",
-    "authID": "jj@example.com",
-    "firstName": "James",
-    "lastName": "Joyce",
+    "authID": "jwest@example.com",
+    "firstName": "John",
+    "lastName": "West",
     "companyName": "",
-    "email": "jj@example.com",
+    "email": "jwest@example.com",
     "postalAddress": {
         "addressCountry": "",
         "addressLocality": "",
@@ -75,13 +75,13 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
     "sendWelcomeEmail": "false",
     "isEnabled": "true",
     "isInviteAccepted": "true",
-    "enableTimestamp": "2022-11-20T16:55:45Z",
+    "enableTimestamp": "2022-11-20T17:23:15Z",
     "lastActTimestamp": ""
 }
 
 === 3. Create a credential
 
-Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true`) or not (`false`).
+Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
 
 [cols="25,75"*,options="header"]
 |===
@@ -96,7 +96,7 @@ Perform the following REST API call to create a credential and associate it with
 {
   "type" :  "application/astra-credential",
   "version" : "1.0",
-  "name" : "e2415776-947a-42a3-b8e0-1b99e23104cb",
+  "name" : "d07dac0a-a328-4840-a216-12de16bbd484",
   "keyType" : "passwordHash",
   "keyStore" : {
       "cleartext" : "TmV0QXBwMTIz",
@@ -109,15 +109,13 @@ Perform the following REST API call to create a credential and associate it with
 [source,curl]
 curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 
-=== 4. Optionally select the namespaces
+=== 4. Optionally select the allowed namespaces
 
-Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict the user to.
+Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict the user access to.
 
 === 5. Bind the user to a role
 
-Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access.
-
-See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
+Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
 
 [cols="25,75"*,options="header"]
 |===
@@ -132,7 +130,7 @@ See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanc
 {
   "type" :  "application/astra-roleBinding",
   "version" : "1.1",
-  "userID" : "e2415776-947a-42a3-b8e0-1b99e23104cb",
+  "userID" : "id": "d07dac0a-a328-4840-a216-12de16bbd484",
   "accountID" : "29e1f39f-2bf4-44ba-a191-5b84ef414c95",
   "role" : "viewer",
   "roleConstraints": [ "*" ]

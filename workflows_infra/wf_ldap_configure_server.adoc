@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_ldap_configure_server.html
 keywords:
-summary:
+summary: You need to select an LDAP server and configure Astra to use the server as an authentication provider.
 ---
 
 = Configure Astra to use an LDAP server

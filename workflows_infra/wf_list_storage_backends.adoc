@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_list_storage_backends.html
 keywords:
-summary:
+summary: You can list the available storage backends.
 ---
 
 = List storage backends

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_list_notifications.html
 keywords:
-summary:
+summary: You can list the notifications for a specific Astra account. You might do this as part of monitoring the system activity or debugging an issue.
 ---
 
 = List the notifications

@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_list_users.html
 keywords:
-summary:
+summary: You can list the users that are defined for a specific Astra account.
 ---
 
-= List users
+= List the users
 :hardbreaks:
 :nofooter:
 :icons: font

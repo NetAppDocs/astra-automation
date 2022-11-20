@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_ldap_add_entries.html
 keywords:
-summary:
+summary: After LDAP is configured as an authentication provider for Astra Control Center, you can select the LDAP users that Astra will authenticate using the LDAP credentials.
 ---
 
 = Add LDAP entries to Astra

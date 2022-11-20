@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_list_clusters.html
 keywords:
-summary:
+summary: You can list the available clusters in a specific cloud.
 ---
 
 = List the clusters

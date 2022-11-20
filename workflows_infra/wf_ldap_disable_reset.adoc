@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_ldap_disable_reset.html
 keywords:
-summary:
+summary: There are two optional though related administrative tasks you can perform as needed for an Astra Control Center deployment. You can globally disable LDAP authentication and reset the LDAP configuration.
 ---
 
 = Disable and reset LDAP
