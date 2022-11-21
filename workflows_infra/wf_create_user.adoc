@@ -43,7 +43,7 @@ Perform the following REST API call to create a user. After successful completio
 
 ===== Curl example
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN> --data @JSONinput'
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
 
 ===== JSON output example
 [source,curl]
@@ -79,9 +79,43 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
     "lastActTimestamp": ""
 }
 
-=== 3. Create a credential
+=== 3. Optionally select the allowed namespaces
+
+Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict access to.
+
+=== 4. Bind the user to a role
+
+Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/roleBindings
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-roleBinding",
+  "version" : "1.1",
+  "userID" : "d07dac0a-a328-4840-a216-12de16bbd484",
+  "accountID" : "29e1f39f-2bf4-44ba-a191-5b84ef414c95",
+  "role" : "viewer",
+  "roleConstraints": [ "*" ]
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+
+=== 5. Create a credential
 
 Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The `name` property should contain the ID of the user returned in the previous step. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
+
+[NOTE]
+This step is only required with Astra Control Center deployments using local authentication. It is not needed with Astra Control Center deployments using LDAP or with Astra Control Service deployments.
 
 [cols="25,75"*,options="header"]
 |===
@@ -108,34 +142,3 @@ Perform the following REST API call to create a credential and associate it with
 ===== Curl example
 [source,curl]
 curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
-
-=== 4. Optionally select the allowed namespaces
-
-Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict access to.
-
-=== 5. Bind the user to a role
-
-Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
-
-[cols="25,75"*,options="header"]
-|===
-|HTTP method
-|Path
-|POST
-|/accounts/{account_id}/core/v1/roleBindings
-|===
-
-===== JSON input example
-[source,curl]
-{
-  "type" :  "application/astra-roleBinding",
-  "version" : "1.1",
-  "userID" : "id": "d07dac0a-a328-4840-a216-12de16bbd484",
-  "accountID" : "29e1f39f-2bf4-44ba-a191-5b84ef414c95",
-  "role" : "viewer",
-  "roleConstraints": [ "*" ]
-}
-
-===== Curl example
-[source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

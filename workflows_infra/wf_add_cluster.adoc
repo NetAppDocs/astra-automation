@@ -13,10 +13,10 @@ summary: You can add a cluster so it will be available to be managed by Astra.
 :imagesdir: ./media/
 
 [.lead]
-You can add a cluster so it will be available to be managed by Astra.
+You can add a cluster so it will be available to be managed by Astra. And beginning with the Astra 22.11, you can add a cluster with either Astra Control Center or Astra Control Service.
 
 [NOTE]
-Beginning with the Astra 22.11, you can add a cluster using either Astra Control Center or Astra Control Service.
+Adding a cluster is not required when using a Kubernetes service from one of the major cloud providers (AKS, EKS, GKE).
 
 === 1. Obtain the kubeconfig file
 
@@ -26,12 +26,20 @@ You need to obtain a copy of the *kubconfig* file from your Kubernetes administr
 
 Before using the *kubeconfig* file, you should perform the following operations:
 
-. If needed, convert the file from YAML format to JSON
-. Encode the JSON file using base64
+.Convert file from YAML format to JSON
+If you receive the kubeconfig file formatted as YAML, you must convert it to JSON.
+
+.Encode JSON in base64
+You must encode the JSON file in base64. a sample command is provided below.
+
+`yq -o=json ~/.kube/config | base64`
 
 === 3. Select the cloud
 
 Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud where the cluster will be added.
+
+[NOTE]
+The only cloud you can select is the *private* cloud.
 
 === 4. Create a credential
 
@@ -52,7 +60,8 @@ Perform the following REST API call to create a credential using the kubeconfig 
   "version" : "1.1",
   "name" : "Cloud One",
   "keyType" : "kubeconfig",
-  "keyStore" : kubeconfige_file
+  "keyStore" : {
+    "base64": kubeconfige_file
   },
   "valid" : "true"
 }
@@ -83,4 +92,4 @@ Perform the following REST API call to add the cluster to the cloud.
 
 ===== Curl example
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN> --data JSONinput'
+curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'' --data @JSONinput
