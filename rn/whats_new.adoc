@@ -35,6 +35,10 @@ Support has been added for apps that span multiple namespaces as well as cluster
 
 Multiple account subscriptions can now be added for each of the cloud providers.
 
+=== Additional workflows
+
+Additional workflows illustrating the Astra Control REST API have been added. See link:../workflows_infra/workflows_infra_before.html[Infrastructure workflows] and link:../workflows/workflows_before.html[Management workflows] for more information.
+
 .Related information
 
 * https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^]
