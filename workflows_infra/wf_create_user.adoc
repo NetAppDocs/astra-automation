@@ -1,0 +1,144 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_create_user.html
+keywords:
+summary: You can create a user with specific credentials and a pre-defined role. You can also optionally restrict the user's access to specific namespaces.
+---
+
+= Create a user
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can create a user with specific credentials and a pre-defined role. You can also optionally restrict the user's access to specific namespaces.
+
+=== 1. Select a user name
+
+Perform the workflow link:../workflows_infra/wf_list_users.html[List users] and select an available name not currently in use.
+
+=== 2. Create the user
+
+Perform the following REST API call to create a user. After successful completion of the call, the new user will not yet be usable.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/users
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-user",
+  "version" : "1.1",
+  "firstName" : "John",
+  "lastName" : "West",
+  "email" : "jwest@example.com"
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+
+===== JSON output example
+[source,curl]
+{
+    "metadata": {
+        "creationTimestamp": "2022-11-20T17:23:15Z",
+        "modificationTimestamp": "2022-11-20T17:23:15Z",
+        "createdBy": "a20e91f3-2c49-443b-b240-615d940ec5f3",
+        "labels": []
+    },
+    "type": "application/astra-user",
+    "version": "1.2",
+    "id": "d07dac0a-a328-4840-a216-12de16bbd484",
+    "authProvider": "local",
+    "authID": "jwest@example.com",
+    "firstName": "John",
+    "lastName": "West",
+    "companyName": "",
+    "email": "jwest@example.com",
+    "postalAddress": {
+        "addressCountry": "",
+        "addressLocality": "",
+        "addressRegion": "",
+        "streetAddress1": "",
+        "streetAddress2": "",
+        "postalCode": ""
+    },
+    "state": "active",
+    "sendWelcomeEmail": "false",
+    "isEnabled": "true",
+    "isInviteAccepted": "true",
+    "enableTimestamp": "2022-11-20T17:23:15Z",
+    "lastActTimestamp": ""
+}
+
+=== 3. Optionally select the allowed namespaces
+
+Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict access to.
+
+=== 4. Bind the user to a role
+
+Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/roleBindings
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-roleBinding",
+  "version" : "1.1",
+  "userID" : "d07dac0a-a328-4840-a216-12de16bbd484",
+  "accountID" : "29e1f39f-2bf4-44ba-a191-5b84ef414c95",
+  "role" : "viewer",
+  "roleConstraints": [ "*" ]
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+
+=== 5. Create a credential
+
+Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The `name` property should contain the ID of the user returned in the previous step. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
+
+[NOTE]
+This step is only required with Astra Control Center deployments using local authentication. It is not needed with Astra Control Center deployments using LDAP or with Astra Control Service deployments.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/credentials
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-credential",
+  "version" : "1.1",
+  "name" : "d07dac0a-a328-4840-a216-12de16bbd484",
+  "keyType" : "passwordHash",
+  "keyStore" : {
+      "cleartext" : "TmV0QXBwMTIz",
+      "change" : "ZmFsc2U="
+  },
+  "valid" : "true"
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

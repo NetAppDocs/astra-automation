@@ -41,8 +41,8 @@ homepage:
           url: /get-started/before_get_started.html
         - title: Get an API token
           url: /get-started/get_api_token.html
-        - title: Hello world
-          url: /get-started/hello_world.html
+        - title: First API call
+          url: /get-started/first_call.html
     - title: REST implementation
       links:
         - title: REST web services

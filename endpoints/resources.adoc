@@ -43,7 +43,7 @@ The core resource endpoints provide the foundational services needed to establis
 |The ASUP resources represent the AutoSupport bundles forwarded to NetApp support.
 
 |Certificate
-|*22.08*
+|22.08
 |The certificate resources represent the installed certificates used for strong authentication for outgoing connections.
 
 |Credential
@@ -67,12 +67,20 @@ The core resource endpoints provide the foundational services needed to establis
 |The feature resources represent selected Astra features that you can query to determine if they are enabled or disabled in the system. Access is limited to read-only.
 
 |Group
-|*22.08*
+|22.08
 |The group resources represent the Astra groups and associated resources. Only LDAP groups are supported in the current release.
 
 |Hook source
 |21.12
 |The hook source resources represent the actual source code used with an execution hook. Separating the source code from the execution control has several benefits such as allowing the scripts to be shared.
+
+|LDAP group
+|*22.11*
+|You can list the groups within the configured LDAP server. Access to the LDAP groups is read-only.
+
+|LDAP user
+|*22.11*
+|You can list the users within the configured LDAP server. Access to the LDAP users is read-only.
 
 |License
 |21.08
@@ -97,6 +105,10 @@ The core resource endpoints provide the foundational services needed to establis
 |Subscription
 |21.08
 |The subscription resources represent the active subscriptions for an Astra account.
+
+|Task
+|*22.11*
+|The task resources provide read-only access to managed task and can be used to display the status of the internal long-running tasks.
 
 |Token
 |21.04
@@ -156,12 +168,16 @@ The topology resource endpoints provide access to the unmanaged applications and
 |Release
 |Description
 
+|API resource
+|*22.11*
+|The API resource endpoints provide read-only access to the Kubernetes resources in a specific managed cluster.
+
 |App
 |21.04
 |The app resources represent all of the Kubernetes applications, including those unmanaged by Astra.
 
 |AppMirror
-|*22.08*
+|22.08
 |The AppMirror resources represent the AppMirror resources to provide for the management of application mirroring relationships.
 
 |Bucket
@@ -184,10 +200,6 @@ The topology resource endpoints provide access to the unmanaged applications and
 |21.08
 |The managed cluster resources represent the Kubernetes clusters currently managed by Kubernetes.
 
-|Managed storage backend
-|21.12
-|The managed storage backend resources allow you to access abstracted representations of the backend storage providers. These storage backends can be used by the managed clusters and applications.
-
 |Namespace
 |21.12
 |The namespace resources provide access to the namespaces used within a Kubernetes cluster.
@@ -199,14 +211,6 @@ The topology resource endpoints provide access to the unmanaged applications and
 |Storage class
 |21.08
 |The storage class resources represent different classes or types of storage discovered and available to a specific managed cluster.
-
-|Storage device
-|21.12
-|The storage device resources provide access to the disks associated with a specific storage node for Astra Data Store (ADS) type storage backends. An ADS storage backends is deployed as a Kubernetes clusters.
-
-|Storage node
-|21.12
-|The storage node resources represent the nodes that are part of an ADS cluster.
 
 |Volume
 |21.04

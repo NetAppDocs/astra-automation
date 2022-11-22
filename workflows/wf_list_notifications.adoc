@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_list_notifications.html
 keywords:
-summary:
+summary: You can list the notifications for a specific Astra account. You might do this as part of monitoring the system activity or debugging an issue.
 ---
 
 = List the notifications
@@ -24,7 +24,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/core/v1/notifications
+|/accounts/{account_id}/core/v1/notifications
 |===
 
 ===== Additional input parameters

@@ -1,0 +1,95 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_add_cluster.html
+keywords:
+summary: You can add a cluster so it will be available to be managed by Astra.
+---
+
+= Add a cluster using credentials
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+You can add a cluster so it will be available to be managed by Astra. Beginning with the Astra 22.11, you can add a cluster with either Astra Control Center or Astra Control Service.
+
+[NOTE]
+Adding a cluster is not required when using a Kubernetes service from one of the major cloud providers (AKS, EKS, GKE).
+
+=== 1. Obtain the kubeconfig file
+
+You need to obtain a copy of the *kubconfig* file from your Kubernetes administrator or service.
+
+=== 2. Prepare the kubeconfig file
+
+Before using the *kubeconfig* file, you should perform the following operations:
+
+.Convert file from YAML format to JSON
+If you receive the kubeconfig file formatted as YAML, you need to convert it to JSON.
+
+.Encode JSON in base64
+You must encode the JSON file in base64. For example:
+
+`yq -o=json ~/.kube/config | base64`
+
+=== 3. Select the cloud
+
+Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud where the cluster will be added.
+
+[NOTE]
+The only cloud you can select is the *private* cloud.
+
+=== 4. Create a credential
+
+Perform the following REST API call to create a credential using the kubeconfig file.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/credentials
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-credential",
+  "version" : "1.1",
+  "name" : "Cloud One",
+  "keyType" : "kubeconfig",
+  "keyStore" : {
+    "base64": encoded_kubeconfig
+  },
+  "valid" : "true"
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+
+=== 5. Add the cluster
+
+Perform the following REST API call to add the cluster to the cloud. The value of the `credentialID` input field is obtained from the REST API call in the previous step.
+
+[cols="25,75"*,options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters
+|===
+
+===== JSON input example
+[source,curl]
+{
+  "type" :  "application/astra-cluster",
+  "version" : "1.1",
+  "credentialID": credential_id
+}
+
+===== Curl example
+[source,curl]
+curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

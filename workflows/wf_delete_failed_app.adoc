@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_delete_failed_app.html
 keywords:
-summary:
+summary: You might be unable to remove a managed app if it has a backup or snapshot in a failed state. In this case you can manually remove the app.
 ---
 
 = Delete a failed app

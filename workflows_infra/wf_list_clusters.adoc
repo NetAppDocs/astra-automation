@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_list_clusters.html
 keywords:
-summary:
+summary: You can list the available clusters in a specific cloud.
 ---
 
 = List the clusters
@@ -28,7 +28,7 @@ Perform the following REST API call to list the clusters in a specific cloud.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/topology/v1/clouds/{cloud_id}/clusters
+|/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters
 |===
 
 ===== Curl example: Return all data for all clusters
