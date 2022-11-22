@@ -22,8 +22,3 @@ There are no new known issues with the 22.08 release of the Astra Control REST A
 // ASTRACTL-12058/DOC-3804
 
 When issuing a REST API call to retrieve the storage devices defined in a storage node, only the Astra Data Store devices are discovered. Not all the devices are returned.
-
-== Astra Data Store storage backend in `Unknown` state
-//DOC-3916/ASTRACTL-13196/ASTRACTL-13134
-
-The Astra Data Store storage backend is in the `Unknown` state after issuing an API call to retrieve the storage backend. In this condition, the storage backend is actually still available and can be communicated with. However, a component within the storage backend is likely in an unhealthy state and needs to be returned to a healthy state for the storage backend to show as `Available`.
