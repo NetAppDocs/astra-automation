@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows/wf_unmanage_app.html
 keywords:
-summary:
+summary: You can remove a managed app when it's no longer needed. Removing a managed application also deletes the associated schedules.
 ---
 
 = Unmanage an app

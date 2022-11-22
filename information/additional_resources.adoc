@@ -25,10 +25,6 @@ Documentation for the current release of the Astra Control Center software deplo
 +
 Documentation for the current release of the Astra Control Service software available in the public cloud.
 
-* https://docs.netapp.com/us-en/astra-data-store/[Astra Data Store documentation^]
-+
-Documentation for the current release of the Astra Data Store software deployed on the customer premises.
-
 * https://docs.netapp.com/us-en/trident/[Astra Trident documentation^]
 +
 Documentation for the current release of the Astra Trident software, an open source storage orchestrator maintained by NetApp.
@@ -39,7 +35,7 @@ Central location for accessing all the Astra documentation for both on-premises 
 
 == NetApp cloud resources
 
-* https://cloud.netapp.com/[NetApp Cloud Solutions^]
+* https://bluexp.netapp.com/[NetApp BlueXP^]
 +
 Central site for the NetApp cloud solutions.
 

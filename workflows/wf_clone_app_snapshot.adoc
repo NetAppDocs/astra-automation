@@ -42,7 +42,7 @@ Perform the following REST API call.
 |HTTP method
 |Path
 |POST
-|/account/{account_id}/k8s/v2/apps
+|/accounts/{account_id}/k8s/v2/apps
 |===
 
 ===== Additional input parameters

@@ -24,7 +24,7 @@ Perform the following REST API call to list the namespaces.
 |HTTP method
 |Path
 |GET
-|/account/{account_id}/topology/v1/namespaces
+|/accounts/{account_id}/topology/v1/namespaces
 |===
 
 ===== Curl example: Return all data for all namespaces
