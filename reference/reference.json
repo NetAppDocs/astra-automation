@@ -10554,8 +10554,7 @@
                             "type": "string",
                             "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
                           }
-                        },
-                        "additionalProperties": false,
+                        }
                         "required": [
                           "relayServer",
                           "port",
@@ -10741,8 +10740,7 @@
                         "type": "string",
                         "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
                       }
-                    },
-                    "additionalProperties": false,
+                    }
                     "required": [
                       "relayServer",
                       "port",
@@ -37998,8 +37996,7 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  },
-                  "additionalProperties": false
+                  }
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38285,8 +38282,7 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  },
-                  "additionalProperties": false
+                  }
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38469,8 +38465,7 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  },
-                  "additionalProperties": false
+                  }
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38727,8 +38722,7 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  },
-                  "additionalProperties": false
+                  }
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -46230,8 +46224,7 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
@@ -46302,8 +46295,7 @@
                           "type": "string"
                         }
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
@@ -46561,8 +46553,7 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
@@ -46633,8 +46624,7 @@
                           "type": "string"
                         }
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
@@ -46898,8 +46888,7 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
@@ -46970,8 +46959,7 @@
                           "type": "string"
                         }
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
                 }
               }
