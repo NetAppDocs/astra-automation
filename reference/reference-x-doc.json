@@ -4,7 +4,7 @@
         "post": {
           "x-doc": {
             "title": "Create a new account resource in the accounts root collection",
-            "category": "Account", 
+            "category": "Account API", 
             "filename": "post-accounts.html"
           }
         },
