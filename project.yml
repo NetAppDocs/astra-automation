@@ -35,8 +35,8 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: Introduction
-          url: /intro/introduction.html
+        - title: Overview
+          url: /intro/overview.html
         - title: Before you begin
           url: /get-started/before_get_started.html
         - title: Get an API token
