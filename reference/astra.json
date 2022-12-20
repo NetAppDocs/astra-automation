@@ -10554,7 +10554,8 @@
                             "type": "string",
                             "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
                           }
-                        }
+                        },
+                        "additionalProperties": false,
                         "required": [
                           "relayServer",
                           "port",
@@ -10740,7 +10741,8 @@
                         "type": "string",
                         "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
                       }
-                    }
+                    },
+                    "additionalProperties": false,
                     "required": [
                       "relayServer",
                       "port",
@@ -35985,7 +35987,8 @@
                     "minLength": 1,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -36213,7 +36216,8 @@
                     "minLength": 1,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -36359,7 +36363,8 @@
                     "minLength": 1,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -36556,7 +36561,8 @@
                   "minLength": 1,
                   "maxLength": 63
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "assetName": {
@@ -37014,7 +37020,8 @@
                     "maxLength": 63
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "storageClasses": {
@@ -37035,7 +37042,8 @@
                   "minLength": 1,
                   "maxLength": 255
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "state": {
@@ -37220,7 +37228,8 @@
                     "maxLength": 63
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "storageClasses": {
@@ -37241,7 +37250,8 @@
                   "minLength": 1,
                   "maxLength": 255
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "stateDesired": {
@@ -37348,7 +37358,8 @@
                     "maxLength": 63
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "storageClasses": {
@@ -37369,7 +37380,8 @@
                   "minLength": 1,
                   "maxLength": 255
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "state": {
@@ -37543,7 +37555,8 @@
                     "maxLength": 63
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "storageClasses": {
@@ -37564,7 +37577,8 @@
                   "minLength": 1,
                   "maxLength": 255
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "state": {
@@ -37996,7 +38010,8 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38006,7 +38021,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "namespaceScopedResources": {
@@ -38035,7 +38051,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "lastResourceCollectionTimestamp": {
@@ -38127,7 +38144,8 @@
                   "minLength": 1,
                   "maxLength": 253
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "clusterName": {
@@ -38282,7 +38300,8 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38292,7 +38311,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "namespaceScopedResources": {
@@ -38320,7 +38340,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "namespaceMapping": {
@@ -38348,7 +38369,8 @@
                   "minLength": 1,
                   "maxLength": 253
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "clusterID": {
@@ -38465,7 +38487,8 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38475,7 +38498,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "namespaceScopedResources": {
@@ -38504,7 +38528,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "lastResourceCollectionTimestamp": {
@@ -38596,7 +38621,8 @@
                   "minLength": 1,
                   "maxLength": 253
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "clusterName": {
@@ -38722,7 +38748,8 @@
                       "type": "string",
                       "example": "v1"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 },
                 "labelSelectors": {
                   "description": "JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.\nEach element in this array is a Kubernetes label selector string and follows the same grammar for those values.\nExamples:\n* [ \"app=mysql\" ] – Select all resources that have a label whose name is app and whose value is mysql\nMore examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement",
@@ -38732,7 +38759,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "namespaceScopedResources": {
@@ -38757,7 +38785,8 @@
                     "type": "string"
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "lastResourceCollectionTimestamp": {
@@ -38845,7 +38874,8 @@
                   "minLength": 1,
                   "maxLength": 253
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "clusterName": {
@@ -39305,7 +39335,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "gcp": {
                 "description": "JSON object that provides Google Cloud protocol parameters.",
@@ -39320,7 +39351,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "azure": {
                 "description": "JSON object that provides Azure protocol parameters.",
@@ -39342,7 +39374,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -39457,7 +39490,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "gcp": {
                 "description": "JSON object that provides Google Cloud protocol parameters.",
@@ -39472,7 +39506,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "azure": {
                 "description": "JSON object that provides Azure protocol parameters.",
@@ -39494,7 +39529,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -39611,7 +39647,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "gcp": {
                 "description": "JSON object that provides Google Cloud protocol parameters.",
@@ -39626,7 +39663,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "azure": {
                 "description": "JSON object that provides Azure protocol parameters.",
@@ -39648,7 +39686,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -39753,7 +39792,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "gcp": {
                 "description": "JSON object that provides Google Cloud protocol parameters.",
@@ -39765,7 +39805,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               },
               "azure": {
                 "description": "JSON object that provides Azure protocol parameters.",
@@ -39783,7 +39824,8 @@
                     "minLength": 0,
                     "maxLength": 63
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
           },
@@ -40653,7 +40695,8 @@
                   "minLength": 1,
                   "maxLength": 63
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "creationTime": {
@@ -42761,7 +42804,8 @@
                   "description": "JSON string containing a regex to match for the given match type.\nRegex syntax: https://github.com/google/re2/wiki/Syntax",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "matchingImages": {
@@ -42929,7 +42973,8 @@
                   "description": "JSON string containing a regex to match for the given match type.\nRegex syntax: https://github.com/google/re2/wiki/Syntax",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "action": {
@@ -43074,7 +43119,8 @@
                   "description": "JSON string containing a regex to match for the given match type.\nRegex syntax: https://github.com/google/re2/wiki/Syntax",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "matchingImages": {
@@ -43216,7 +43262,8 @@
                   "description": "JSON string containing a regex to match for the given match type.\nRegex syntax: https://github.com/google/re2/wiki/Syntax",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "action": {
@@ -44327,7 +44374,8 @@
                   "description": "JSON string containing the license protocol associated with this add-on.\nDefined values are:\n* String contents not validated by the schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -44564,7 +44612,8 @@
                   "description": "JSON string containing the license protocol associated with this add-on.\nDefined values are:\n* String contents not validated by the schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -44713,7 +44762,8 @@
                   "description": "JSON string containing the license protocol associated with this add-on.\nDefined values are:\n* String contents not validated by the schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -45742,7 +45792,8 @@
                   "description": "JSON string containing the link.\nDefined values are:",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -46224,10 +46275,12 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "artifacts": {
@@ -46295,10 +46348,12 @@
                           "type": "string"
                         }
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "files": {
@@ -46336,7 +46391,8 @@
                   "description": "JSON string containing the file content.\nDefined values are:\n* Conforms to the Base64 Schema\nFIXME - How do we specify that this is compressed? What algorithm ,etc?",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "upgradableVersions": {
@@ -46381,7 +46437,8 @@
                   "description": "JSON string describing the maximum version required of that component.\nDefined values are:\n* Conforms to the SemVer Schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -46553,10 +46610,12 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "artifacts": {
@@ -46624,10 +46683,12 @@
                           "type": "string"
                         }
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "files": {
@@ -46665,7 +46726,8 @@
                   "description": "JSON string containing the file content.\nDefined values are:\n* Conforms to the Base64 Schema\nFIXME - How do we specify that this is compressed? What algorithm ,etc?",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "upgradableVersions": {
@@ -46710,7 +46772,8 @@
                   "description": "JSON string describing the maximum version required of that component.\nDefined values are:\n* Conforms to the SemVer Schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
@@ -46888,10 +46951,12 @@
                         "minLength": 1,
                         "maxLength": 31
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "artifacts": {
@@ -46959,10 +47024,12 @@
                           "type": "string"
                         }
                       }
-                    }
+                    },
+                    "additionalProperties": false
                   }
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "files": {
@@ -47000,7 +47067,8 @@
                   "description": "JSON string containing the file content.\nDefined values are:\n* Conforms to the Base64 Schema\nFIXME - How do we specify that this is compressed? What algorithm ,etc?",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "upgradableVersions": {
@@ -47045,7 +47113,8 @@
                   "description": "JSON string describing the maximum version required of that component.\nDefined values are:\n* Conforms to the SemVer Schema",
                   "type": "string"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "metadata": {
