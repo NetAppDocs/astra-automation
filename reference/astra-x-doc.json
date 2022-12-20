@@ -10,7 +10,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists all account resources",
+          "title": "List all account resources",
           "category": "Account API",
           "filename": "get-accounts.html"
         }
@@ -19,21 +19,21 @@
     "/accounts/{account_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific account resource",
+          "title": "Retrieve a specific account resource",
           "category": "Account API",
           "filename": "get-accounts-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific account resource",
+          "title": "Modify a specific account resource",
           "category": "Account API",
           "filename": "put-accounts-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific account resource",
+          "title": "Delete a specific account resource",
           "category": "Account API",
           "filename": "delete-accounts-.html"
         }
@@ -42,7 +42,7 @@
     "/accounts/{account_id}/metrics": {
       "get": {
         "x-doc": {
-          "title": "Returns all metrics for the account",
+          "title": "Return all metrics for the account",
           "category": "Metrics api",
           "filename": "get-accounts-metrics.html"
         }
@@ -51,7 +51,7 @@
     "/accounts/{account_id}/core/v1/asups": {
       "post": {
         "x-doc": {
-          "title": "Creates a new asup resource in the asups root collection",
+          "title": "Create a new asup resource in the asups root collection",
           "category": "ASUP API",
           "filename": "post-accounts-core-v1-asups.html"
         }
@@ -67,7 +67,7 @@
     "/accounts/{account_id}/core/v1/asups/{asup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific asup resource",
+          "title": "Retrieve a specific asup resource",
           "category": "ASUP API",
           "filename": "get-accounts-core-v1-asups-.html"
         }
@@ -83,7 +83,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists all certificate resources",
+          "title": "List all certificate resources",
           "category": "Certificate API",
           "filename": "get-accounts-core-v1-certificates.html"
         }
@@ -92,21 +92,21 @@
     "/accounts/{account_id}/core/v1/certificates/{certificate_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific certificate resource",
+          "title": "Retrieve a specific certificate resource",
           "category": "Certificate API",
           "filename": "get-accounts-core-v1-certificates-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific certificate resource",
+          "title": "Modify a specific certificate resource",
           "category": "Certificate API",
           "filename": "put-accounts-core-v1-certificates-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific certificate resource",
+          "title": "Delete a specific certificate resource",
           "category": "Certificate API",
           "filename": "delete-accounts-core-v1-certificates-.html"
         }
@@ -115,14 +115,14 @@
     "/accounts/{account_id}/core/v1/credentials": {
       "post": {
         "x-doc": {
-          "title": "Creates a new credential resource in the credentials root collection",
+          "title": "Create a new credential resource in the credentials root collection",
           "category": "Credential API",
           "filename": "post-accounts-core-v1-credentials.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all credential resources",
+          "title": "List all credential resources",
           "category": "Credential API",
           "filename": "get-accounts-core-v1-credentials.html"
         }
@@ -131,21 +131,21 @@
     "/accounts/{account_id}/core/v1/credentials/{credential_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific credential resource",
+          "title": "Retrieve a specific credential resource",
           "category": "Credential API",
           "filename": "get-accounts-core-v1-credentials-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific credential resource",
+          "title": "Modify a specific credential resource",
           "category": "Credential API",
           "filename": "put-accounts-core-v1-credentials-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific credential resource",
+          "title": "Delete a specific credential resource",
           "category": "Credential API",
           "filename": "delete-accounts-core-v1-credentials-.html"
         }
@@ -154,7 +154,7 @@
     "/accounts/{account_id}/core/v1/entitlements": {
       "get": {
         "x-doc": {
-          "title": "Lists all entitlement resources",
+          "title": "List all entitlement resources",
           "category": "Entitlement API",
           "filename": "get-accounts-core-v1-entitlements.html"
         }
@@ -163,7 +163,7 @@
     "/accounts/{account_id}/core/v1/entitlements/{entitlement_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific entitlement resource",
+          "title": "Retrieve a specific entitlement resource",
           "category": "Entitlement API",
           "filename": "get-accounts-core-v1-entitlements-.html"
         }
