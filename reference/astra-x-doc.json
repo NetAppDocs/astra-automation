@@ -4,14 +4,14 @@
       "post": {
         "x-doc": {
           "title": "Create a new account resource",
-          "category": "Account",
+          "category": "Account API",
           "filename": "post-accounts.html"
         }
       },
       "get": {
         "x-doc": {
           "title": "List all account resources",
-          "category": "Account",
+          "category": "Account API",
           "filename": "get-accounts.html"
         }
       }
@@ -19,22 +19,22 @@
     "/accounts/{account_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific account",
-          "category": "Account",
+          "title": "Retrieve a specific account resource",
+          "category": "Account API",
           "filename": "get-accounts-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific account",
-          "category": "Account",
+          "title": "Modify a specific account resource",
+          "category": "Account API",
           "filename": "put-accounts-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific account",
-          "category": "Account",
+          "title": "Delete a specific account resource",
+          "category": "Account API",
           "filename": "delete-accounts-.html"
         }
       }
@@ -43,7 +43,7 @@
       "get": {
         "x-doc": {
           "title": "Return all metrics for the account",
-          "category": "Metrics",
+          "category": "Metrics api",
           "filename": "get-accounts-metrics.html"
         }
       }
@@ -52,14 +52,14 @@
       "post": {
         "x-doc": {
           "title": "Create a new ASUP resource",
-          "category": "ASUP",
+          "category": "ASUP API",
           "filename": "post-accounts-core-v1-asups.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all ASUP resources",
-          "category": "ASUP",
+          "title": "List all ASUP resources",
+          "category": "ASUP API",
           "filename": "get-accounts-core-v1-asups.html"
         }
       }
@@ -68,7 +68,7 @@
       "get": {
         "x-doc": {
           "title": "Retrieve a specific ASUP resource",
-          "category": "ASUP",
+          "category": "ASUP API",
           "filename": "get-accounts-core-v1-asups-.html"
         }
       }
@@ -76,15 +76,15 @@
     "/accounts/{account_id}/core/v1/certificates": {
       "post": {
         "x-doc": {
-          "title": "Create a new certificate",
-          "category": "Certificate",
+          "title": "Create a new certificate resource",
+          "category": "Certificate API",
           "filename": "post-accounts-core-v1-certificates.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all certificates",
-          "category": "Certificate",
+          "title": "List all certificate resources",
+          "category": "Certificate API",
           "filename": "get-accounts-core-v1-certificates.html"
         }
       }
@@ -92,22 +92,22 @@
     "/accounts/{account_id}/core/v1/certificates/{certificate_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific certificate",
-          "category": "Certificate",
+          "title": "Retrieve a specific certificate resource",
+          "category": "Certificate API",
           "filename": "get-accounts-core-v1-certificates-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific certificate",
-          "category": "Certificate",
+          "title": "Modify a specific certificate resource",
+          "category": "Certificate API",
           "filename": "put-accounts-core-v1-certificates-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific certificate",
-          "category": "Certificate",
+          "title": "Delete a specific certificate resource",
+          "category": "Certificate API",
           "filename": "delete-accounts-core-v1-certificates-.html"
         }
       }
@@ -115,15 +115,15 @@
     "/accounts/{account_id}/core/v1/credentials": {
       "post": {
         "x-doc": {
-          "title": "Create a new credential",
-          "category": "Credential",
+          "title": "Create a new credential resource",
+          "category": "Credential API",
           "filename": "post-accounts-core-v1-credentials.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all credentials",
-          "category": "Credential",
+          "title": "List all credential resources",
+          "category": "Credential API",
           "filename": "get-accounts-core-v1-credentials.html"
         }
       }
@@ -131,15 +131,15 @@
     "/accounts/{account_id}/core/v1/credentials/{credential_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific credential",
-          "category": "Credential",
+          "title": "Retrieve a specific credential resource",
+          "category": "Credential API",
           "filename": "get-accounts-core-v1-credentials-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific credential",
-          "category": "Credential",
+          "title": "Modify a specific credential resource",
+          "category": "Credential API",
           "filename": "put-accounts-core-v1-credentials-.html"
         }
       },
@@ -172,14 +172,14 @@
     "/accounts/{account_id}/core/v1/groups": {
       "post": {
         "x-doc": {
-          "title": "Creates a new group resource in the groups root collection",
+          "title": "Create a new group resource",
           "category": "Group API",
           "filename": "post-accounts-core-v1-groups.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all group resources",
+          "title": "List all group resources",
           "category": "Group API",
           "filename": "get-accounts-core-v1-groups.html"
         }
@@ -188,21 +188,21 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific group resource",
+          "title": "Retrieve a specific group resource",
           "category": "Group API",
           "filename": "get-accounts-core-v1-groups-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific group resource",
+          "title": "Modify a specific group resource",
           "category": "Group API",
           "filename": "put-accounts-core-v1-groups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific group resource",
+          "title": "Delete a specific group resource",
           "category": "Group API",
           "filename": "delete-accounts-core-v1-groups-.html"
         }
@@ -211,14 +211,14 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Creates a new rolebinding resource for a specific group",
+          "title": "Create a new role binding resource for a specific group",
           "category": "Role Binding API",
           "filename": "post-accounts-core-v1-groups-rolebindings.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists the rolebinding resources associated with a specific group",
+          "title": "List the role binding resources associated with a specific group",
           "category": "Role Binding API",
           "filename": "get-accounts-core-v1-groups-rolebindings.html"
         }
@@ -227,21 +227,21 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific rolebinding resource",
+          "title": "Retrieve a specific role binding resource",
           "category": "Role Binding API",
           "filename": "get-accounts-core-v1-groups-rolebindings-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific rolebinding resource",
+          "title": "Modify a specific role binding resource",
           "category": "Role Binding API",
           "filename": "put-accounts-core-v1-groups-rolebindings-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific rolebinding resource",
+          "title": "Delete a specific role binding resource",
           "category": "Role Binding API",
           "filename": "delete-accounts-core-v1-groups-rolebindings-.html"
         }
@@ -250,14 +250,14 @@
     "/accounts/{account_id}/core/v1/executionHooks": {
       "post": {
         "x-doc": {
-          "title": "Creates a new executionhook resource in the executionhooks root collection",
+          "title": "Create a new execution hook resource",
           "category": "Execution Hook API",
           "filename": "post-accounts-core-v1-executionhooks.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all executionhook resources",
+          "title": "List all execution hook resources",
           "category": "Execution Hook API",
           "filename": "get-accounts-core-v1-executionhooks.html"
         }
@@ -266,21 +266,21 @@
     "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific executionhook resource",
+          "title": "Retrieve a specific execution hook resource",
           "category": "Execution Hook API",
           "filename": "get-accounts-core-v1-executionhooks-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific executionhook resource",
+          "title": "Modify a specific execution hook resource",
           "category": "Execution Hook API",
           "filename": "put-accounts-core-v1-executionhooks-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific executionhook resource",
+          "title": "Delete a specific execution hook resource",
           "category": "Execution Hook API",
           "filename": "delete-accounts-core-v1-executionhooks-.html"
         }
@@ -289,7 +289,7 @@
     "/accounts/{account_id}/core/v1/events": {
       "get": {
         "x-doc": {
-          "title": "Lists all event resources",
+          "title": "List all event resources",
           "category": "Event API",
           "filename": "get-accounts-core-v1-events.html"
         }
@@ -298,7 +298,7 @@
     "/accounts/{account_id}/core/v1/events/{event_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific event resource",
+          "title": "Retrieve a specific event resource",
           "category": "Event API",
           "filename": "get-accounts-core-v1-events-.html"
         }
@@ -307,7 +307,7 @@
     "/accounts/{account_id}/core/v1/features": {
       "get": {
         "x-doc": {
-          "title": "Lists all feature resources",
+          "title": "List all feature resources",
           "category": "Feature API",
           "filename": "get-accounts-core-v1-features.html"
         }
@@ -316,7 +316,7 @@
     "/accounts/{account_id}/core/v1/features/{feature_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific feature resource",
+          "title": "Retrieve a specific feature resource",
           "category": "Feature API",
           "filename": "get-accounts-core-v1-features-.html"
         }
@@ -325,14 +325,14 @@
     "/accounts/{account_id}/core/v1/hookSources": {
       "post": {
         "x-doc": {
-          "title": "Creates a new hooksource resource in the hooksources root collection",
+          "title": "Create a new hook source resource",
           "category": "Hook Source API",
           "filename": "post-accounts-core-v1-hooksources.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all hooksource resources",
+          "title": "List all hook source resources",
           "category": "Hook Source API",
           "filename": "get-accounts-core-v1-hooksources.html"
         }
@@ -341,21 +341,21 @@
     "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific hooksource resource",
+          "title": "Retrieve a specific hook source resource",
           "category": "Hook Source API",
           "filename": "get-accounts-core-v1-hooksources-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific hooksource resource",
+          "title": "Modify a specific hook source resource",
           "category": "Hook Source API",
           "filename": "put-accounts-core-v1-hooksources-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific hooksource resource",
+          "title": "Delete a specific hook source resource",
           "category": "Hook Source API",
           "filename": "delete-accounts-core-v1-hooksources-.html"
         }
@@ -364,14 +364,14 @@
     "/accounts/{account_id}/core/v1/licenses": {
       "post": {
         "x-doc": {
-          "title": "Creates a new license resource in the licenses root collection",
+          "title": "Create a new license resource",
           "category": "License API",
           "filename": "post-accounts-core-v1-licenses.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all license resources",
+          "title": "List all license resources",
           "category": "License API",
           "filename": "get-accounts-core-v1-licenses.html"
         }
@@ -380,21 +380,21 @@
     "/accounts/{account_id}/core/v1/licenses/{license_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific license resource",
+          "title": "Retrieve a specific license resource",
           "category": "License API",
           "filename": "get-accounts-core-v1-licenses-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific license resource",
+          "title": "Modify a specific license resource",
           "category": "License API",
           "filename": "put-accounts-core-v1-licenses-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific license resource",
+          "title": "Delete a specific license resource",
           "category": "License API",
           "filename": "delete-accounts-core-v1-licenses-.html"
         }
@@ -403,7 +403,7 @@
     "/accounts/{account_id}/core/v1/notifications": {
       "get": {
         "x-doc": {
-          "title": "Lists all notification resources",
+          "title": "List all notification resources",
           "category": "Notification API",
           "filename": "get-accounts-core-v1-notifications.html"
         }
@@ -412,7 +412,7 @@
     "/accounts/{account_id}/core/v1/notifications/{notification_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific notification resource",
+          "title": "Retrieve a specific notification resource",
           "category": "Notification API",
           "filename": "get-accounts-core-v1-notifications-.html"
         }
@@ -421,14 +421,14 @@
     "/accounts/{account_id}/core/v1/packages": {
       "post": {
         "x-doc": {
-          "title": "Creates a new package resource in the packages root collection",
+          "title": "Create a new package resource",
           "category": "Package API",
           "filename": "post-accounts-core-v1-packages.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all package resources",
+          "title": "List all package resources",
           "category": "Package API",
           "filename": "get-accounts-core-v1-packages.html"
         }
@@ -437,14 +437,14 @@
     "/accounts/{account_id}/core/v1/packages/{package_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific package resource",
+          "title": "Retrieve a specific package resource",
           "category": "Package API",
           "filename": "get-accounts-core-v1-packages-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific package resource",
+          "title": "Delete a specific package resource",
           "category": "Package API",
           "filename": "delete-accounts-core-v1-packages-.html"
         }
@@ -453,14 +453,14 @@
     "/accounts/{account_id}/core/v1/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Creates a new rolebinding resource in the rolebindings root collection",
+          "title": "Create a new role binding resource",
           "category": "Role Binding API",
           "filename": "post-accounts-core-v1-rolebindings.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "Lists all rolebinding resources",
+          "title": "List all role binding resources",
           "category": "Role Binding API",
           "filename": "get-accounts-core-v1-rolebindings.html"
         }
@@ -469,7 +469,7 @@
     "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific rolebinding resource(1)",
+          "title": "Retrieve a specific role binding resource(1)",
           "category": "Role Binding API",
           "filename": "get-accounts-core-v1-rolebindings-.html"
         }
