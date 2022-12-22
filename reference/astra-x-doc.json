@@ -764,7 +764,7 @@
     "/accounts/{account_id}/topology/v1/buckets/{bucket_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific bucket resource",
+          "title": "Retrieve a specific bucket resource",
           "category": "Bucket API",
           "filename": "get-accounts-topology-v1-buckets-.html"
         }
@@ -978,7 +978,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreives a specific storageclass resource(1)",
+          "title": "Retrieve a specific storage class resource(1)",
           "category": "Storage Class API",
           "filename": "get-accounts-topology-v1-clusters-storageclasses-.html"
         }
