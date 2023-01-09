@@ -3,14 +3,14 @@
     "/accounts": {
       "post": {
         "x-doc": {
-          "title": "Create a new account resource",
-          "category": "Account API",
+          "title": "Create a new account",
+          "category": "Account",
           "filename": "post-accounts.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all account resources",
+          "title": "List all accounts",
           "category": "Account API",
           "filename": "get-accounts.html"
         }
@@ -19,22 +19,22 @@
     "/accounts/{account_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific account resource",
-          "category": "Account API",
+          "title": "Retrieve an account",
+          "category": "Account",
           "filename": "get-accounts-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific account resource",
+          "title": "Modify a account",
           "category": "Account API",
           "filename": "put-accounts-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific account resource",
-          "category": "Account API",
+          "title": "Delete a account",
+          "category": "Account",
           "filename": "delete-accounts-.html"
         }
       }
@@ -43,7 +43,7 @@
       "get": {
         "x-doc": {
           "title": "Return all metrics for the account",
-          "category": "Metrics api",
+          "category": "Metrics",
           "filename": "get-accounts-metrics.html"
         }
       }
@@ -52,14 +52,14 @@
       "post": {
         "x-doc": {
           "title": "Create a new ASUP resource",
-          "category": "ASUP API",
+          "category": "ASUP",
           "filename": "post-accounts-core-v1-asups.html"
         }
       },
       "get": {
         "x-doc": {
           "title": "List all ASUP resources",
-          "category": "ASUP API",
+          "category": "ASUP",
           "filename": "get-accounts-core-v1-asups.html"
         }
       }
@@ -67,8 +67,8 @@
     "/accounts/{account_id}/core/v1/asups/{asup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific ASUP resource",
-          "category": "ASUP API",
+          "title": "Retrieve an ASUP resource",
+          "category": "ASUP",
           "filename": "get-accounts-core-v1-asups-.html"
         }
       }
@@ -76,15 +76,15 @@
     "/accounts/{account_id}/core/v1/certificates": {
       "post": {
         "x-doc": {
-          "title": "Create a new certificate resource",
-          "category": "Certificate API",
+          "title": "Create a new certificate",
+          "category": "Certificate",
           "filename": "post-accounts-core-v1-certificates.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all certificate resources",
-          "category": "Certificate API",
+          "title": "List all certificates",
+          "category": "Certificate",
           "filename": "get-accounts-core-v1-certificates.html"
         }
       }
@@ -92,22 +92,22 @@
     "/accounts/{account_id}/core/v1/certificates/{certificate_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific certificate resource",
-          "category": "Certificate API",
+          "title": "Retrieve a certificate",
+          "category": "Certificate",
           "filename": "get-accounts-core-v1-certificates-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific certificate resource",
-          "category": "Certificate API",
+          "title": "Modify a certificate",
+          "category": "Certificate",
           "filename": "put-accounts-core-v1-certificates-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific certificate resource",
-          "category": "Certificate API",
+          "title": "Delete a certificate",
+          "category": "Certificate",
           "filename": "delete-accounts-core-v1-certificates-.html"
         }
       }
@@ -115,15 +115,15 @@
     "/accounts/{account_id}/core/v1/credentials": {
       "post": {
         "x-doc": {
-          "title": "Create a new credential resource",
-          "category": "Credential API",
+          "title": "Create a new credential",
+          "category": "Credential",
           "filename": "post-accounts-core-v1-credentials.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all credential resources",
-          "category": "Credential API",
+          "title": "List all credentials",
+          "category": "Credential",
           "filename": "get-accounts-core-v1-credentials.html"
         }
       }
@@ -131,22 +131,22 @@
     "/accounts/{account_id}/core/v1/credentials/{credential_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific credential resource",
-          "category": "Credential API",
+          "title": "Retrieve a credential",
+          "category": "Credential",
           "filename": "get-accounts-core-v1-credentials-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific credential resource",
-          "category": "Credential API",
+          "title": "Modify a credential",
+          "category": "Credential",
           "filename": "put-accounts-core-v1-credentials-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific credential resource",
-          "category": "Credential API",
+          "title": "Delete a credential",
+          "category": "Credential",
           "filename": "delete-accounts-core-v1-credentials-.html"
         }
       }
@@ -154,8 +154,8 @@
     "/accounts/{account_id}/core/v1/entitlements": {
       "get": {
         "x-doc": {
-          "title": "List all entitlement resources",
-          "category": "Entitlement API",
+          "title": "List all entitlements",
+          "category": "Entitlement",
           "filename": "get-accounts-core-v1-entitlements.html"
         }
       }
@@ -163,8 +163,8 @@
     "/accounts/{account_id}/core/v1/entitlements/{entitlement_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific entitlement resource",
-          "category": "Entitlement API",
+          "title": "Retrieve an entitlement",
+          "category": "Entitlement",
           "filename": "get-accounts-core-v1-entitlements-.html"
         }
       }
@@ -172,15 +172,15 @@
     "/accounts/{account_id}/core/v1/groups": {
       "post": {
         "x-doc": {
-          "title": "Create a new group resource",
-          "category": "Group API",
+          "title": "Create a new group",
+          "category": "Group",
           "filename": "post-accounts-core-v1-groups.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all group resources",
-          "category": "Group API",
+          "title": "List all groups",
+          "category": "Group",
           "filename": "get-accounts-core-v1-groups.html"
         }
       }
@@ -188,22 +188,22 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific group resource",
-          "category": "Group API",
+          "title": "Retrieve a group",
+          "category": "Group",
           "filename": "get-accounts-core-v1-groups-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific group resource",
-          "category": "Group API",
+          "title": "Modify a group",
+          "category": "Group",
           "filename": "put-accounts-core-v1-groups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific group resource",
-          "category": "Group API",
+          "title": "Delete a group",
+          "category": "Group",
           "filename": "delete-accounts-core-v1-groups-.html"
         }
       }
