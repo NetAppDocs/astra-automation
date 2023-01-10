@@ -1595,7 +1595,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific execution hook override resource",
+          "title": "Retrieve an execution hook override resource",
           "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides-.html"
         }
