@@ -11,7 +11,7 @@
       "get": {
         "x-doc": {
           "title": "List all accounts",
-          "category": "Account API",
+          "category": "Account",
           "filename": "get-accounts.html"
         }
       }
@@ -26,14 +26,14 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modify a account",
-          "category": "Account API",
+          "title": "Modify an account",
+          "category": "Account",
           "filename": "put-accounts-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a account",
+          "title": "Delete an account",
           "category": "Account",
           "filename": "delete-accounts-.html"
         }
@@ -211,15 +211,15 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Create a new role binding resource for a specific group",
-          "category": "Role Binding API",
+          "title": "Create a new role binding for a group",
+          "category": "Role Binding",
           "filename": "post-accounts-core-v1-groups-rolebindings.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the role binding resources associated with a specific group",
-          "category": "Role Binding API",
+          "title": "List the role bindings for a group",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-rolebindings.html"
         }
       }
@@ -227,22 +227,22 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific role binding resource",
-          "category": "Role Binding API",
+          "title": "Retrieve a role binding for a group",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-rolebindings-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific role binding resource",
-          "category": "Role Binding API",
+          "title": "Modify a  role binding for a group",
+          "category": "Role Binding",
           "filename": "put-accounts-core-v1-groups-rolebindings-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific role binding resource",
-          "category": "Role Binding API",
+          "title": "Delete a role binding for a group",
+          "category": "Role Binding",
           "filename": "delete-accounts-core-v1-groups-rolebindings-.html"
         }
       }
@@ -250,15 +250,15 @@
     "/accounts/{account_id}/core/v1/executionHooks": {
       "post": {
         "x-doc": {
-          "title": "Create a new execution hook resource",
-          "category": "Execution Hook API",
+          "title": "Create a new execution hook",
+          "category": "Execution Hook",
           "filename": "post-accounts-core-v1-executionhooks.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all execution hook resources",
-          "category": "Execution Hook API",
+          "title": "List all execution hooks",
+          "category": "Execution Hook",
           "filename": "get-accounts-core-v1-executionhooks.html"
         }
       }
@@ -266,22 +266,22 @@
     "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific execution hook resource",
-          "category": "Execution Hook API",
+          "title": "Retrieve an execution hook",
+          "category": "Execution Hook",
           "filename": "get-accounts-core-v1-executionhooks-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific execution hook resource",
-          "category": "Execution Hook API",
+          "title": "Modify an execution hook",
+          "category": "Execution Hook",
           "filename": "put-accounts-core-v1-executionhooks-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific execution hook resource",
-          "category": "Execution Hook API",
+          "title": "Delete an execution hook",
+          "category": "Execution Hook",
           "filename": "delete-accounts-core-v1-executionhooks-.html"
         }
       }
@@ -289,8 +289,8 @@
     "/accounts/{account_id}/core/v1/events": {
       "get": {
         "x-doc": {
-          "title": "List all event resources",
-          "category": "Event API",
+          "title": "List all events",
+          "category": "Event",
           "filename": "get-accounts-core-v1-events.html"
         }
       }
@@ -298,8 +298,8 @@
     "/accounts/{account_id}/core/v1/events/{event_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific event resource",
-          "category": "Event API",
+          "title": "Retrieve an event",
+          "category": "Event",
           "filename": "get-accounts-core-v1-events-.html"
         }
       }
@@ -307,8 +307,8 @@
     "/accounts/{account_id}/core/v1/features": {
       "get": {
         "x-doc": {
-          "title": "List all feature resources",
-          "category": "Feature API",
+          "title": "List all features",
+          "category": "Feature",
           "filename": "get-accounts-core-v1-features.html"
         }
       }
@@ -316,8 +316,8 @@
     "/accounts/{account_id}/core/v1/features/{feature_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific feature resource",
-          "category": "Feature API",
+          "title": "Retrieve a feature",
+          "category": "Feature",
           "filename": "get-accounts-core-v1-features-.html"
         }
       }
@@ -325,15 +325,15 @@
     "/accounts/{account_id}/core/v1/hookSources": {
       "post": {
         "x-doc": {
-          "title": "Create a new hook source resource",
-          "category": "Hook Source API",
+          "title": "Create a new hook source",
+          "category": "Hook Source",
           "filename": "post-accounts-core-v1-hooksources.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all hook source resources",
-          "category": "Hook Source API",
+          "title": "List all hook sources",
+          "category": "Hook Source",
           "filename": "get-accounts-core-v1-hooksources.html"
         }
       }
@@ -341,22 +341,22 @@
     "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific hook source resource",
-          "category": "Hook Source API",
+          "title": "Retrieve a hook source",
+          "category": "Hook Source",
           "filename": "get-accounts-core-v1-hooksources-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific hook source resource",
-          "category": "Hook Source API",
+          "title": "Modify a hook source",
+          "category": "Hook Source",
           "filename": "put-accounts-core-v1-hooksources-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific hook source resource",
-          "category": "Hook Source API",
+          "title": "Delete a hook source",
+          "category": "Hook Source",
           "filename": "delete-accounts-core-v1-hooksources-.html"
         }
       }
@@ -364,15 +364,15 @@
     "/accounts/{account_id}/core/v1/licenses": {
       "post": {
         "x-doc": {
-          "title": "Create a new license resource",
-          "category": "License API",
+          "title": "Create a new license",
+          "category": "License",
           "filename": "post-accounts-core-v1-licenses.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all license resources",
-          "category": "License API",
+          "title": "List all licenses",
+          "category": "License",
           "filename": "get-accounts-core-v1-licenses.html"
         }
       }
@@ -380,22 +380,22 @@
     "/accounts/{account_id}/core/v1/licenses/{license_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific license resource",
-          "category": "License API",
+          "title": "Retrieve a license",
+          "category": "License",
           "filename": "get-accounts-core-v1-licenses-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific license resource",
-          "category": "License API",
+          "title": "Modify a license",
+          "category": "License",
           "filename": "put-accounts-core-v1-licenses-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific license resource",
-          "category": "License API",
+          "title": "Delete a license",
+          "category": "License",
           "filename": "delete-accounts-core-v1-licenses-.html"
         }
       }
@@ -403,8 +403,8 @@
     "/accounts/{account_id}/core/v1/notifications": {
       "get": {
         "x-doc": {
-          "title": "List all notification resources",
-          "category": "Notification API",
+          "title": "List all notifications",
+          "category": "Notification",
           "filename": "get-accounts-core-v1-notifications.html"
         }
       }
@@ -412,8 +412,8 @@
     "/accounts/{account_id}/core/v1/notifications/{notification_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific notification resource",
-          "category": "Notification API",
+          "title": "Retrieve a notification",
+          "category": "Notification",
           "filename": "get-accounts-core-v1-notifications-.html"
         }
       }
@@ -421,15 +421,15 @@
     "/accounts/{account_id}/core/v1/packages": {
       "post": {
         "x-doc": {
-          "title": "Create a new package resource",
-          "category": "Package API",
+          "title": "Create a new package",
+          "category": "Package",
           "filename": "post-accounts-core-v1-packages.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all package resources",
-          "category": "Package API",
+          "title": "List all packages",
+          "category": "Package",
           "filename": "get-accounts-core-v1-packages.html"
         }
       }
@@ -437,15 +437,15 @@
     "/accounts/{account_id}/core/v1/packages/{package_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific package resource",
-          "category": "Package API",
+          "title": "Retrieve a package",
+          "category": "Package",
           "filename": "get-accounts-core-v1-packages-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific package resource",
-          "category": "Package API",
+          "title": "Delete a package",
+          "category": "Package",
           "filename": "delete-accounts-core-v1-packages-.html"
         }
       }
@@ -453,15 +453,15 @@
     "/accounts/{account_id}/core/v1/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Create a new role binding resource",
-          "category": "Role Binding API",
+          "title": "Create a new role binding",
+          "category": "Role Binding",
           "filename": "post-accounts-core-v1-rolebindings.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all role binding resources",
-          "category": "Role Binding API",
+          "title": "List all role bindings",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-rolebindings.html"
         }
       }
@@ -469,22 +469,22 @@
     "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific role binding resource(1)",
-          "category": "Role Binding API",
+          "title": "Retrieve a role binding",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-rolebindings-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific rolebinding resource(1)",
-          "category": "Role Binding API",
+          "title": "Modify a role binding",
+          "category": "Role Binding",
           "filename": "put-accounts-core-v1-rolebindings-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific role binding resource(1)",
-          "category": "Role Binding API",
+          "title": "Delete a role binding",
+          "category": "Role Binding",
           "filename": "delete-accounts-core-v1-rolebindings-.html"
         }
       }
@@ -492,8 +492,8 @@
     "/accounts/{account_id}/core/v1/settings": {
       "get": {
         "x-doc": {
-          "title": "List all setting resources",
-          "category": "Setting API",
+          "title": "List all settings",
+          "category": "Setting",
           "filename": "get-accounts-core-v1-settings.html"
         }
       }
@@ -501,15 +501,15 @@
     "/accounts/{account_id}/core/v1/settings/{setting_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific setting resource",
-          "category": "Setting API",
+          "title": "Retrieve a setting",
+          "category": "Setting",
           "filename": "get-accounts-core-v1-settings-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific setting resource",
-          "category": "Setting API",
+          "title": "Modify a setting",
+          "category": "Setting",
           "filename": "put-accounts-core-v1-settings-.html"
         }
       }
@@ -517,15 +517,15 @@
     "/accounts/{account_id}/core/v1/subscriptions": {
       "post": {
         "x-doc": {
-          "title": "Create a new subscription resource",
-          "category": "Subscription API",
+          "title": "Create a new subscription",
+          "category": "Subscription",
           "filename": "post-accounts-core-v1-subscriptions.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all subscription resources",
-          "category": "Subscription API",
+          "title": "List all subscriptions",
+          "category": "Subscription",
           "filename": "get-accounts-core-v1-subscriptions.html"
         }
       }
@@ -533,22 +533,22 @@
     "/accounts/{account_id}/core/v1/subscriptions/{subscription_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific subscription resource",
-          "category": "Subscription API",
+          "title": "Retrieve a subscription",
+          "category": "Subscription",
           "filename": "get-accounts-core-v1-subscriptions-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific subscription resource",
-          "category": "Subscription API",
+          "title": "Modify a subscription",
+          "category": "Subscription",
           "filename": "put-accounts-core-v1-subscriptions-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific subscription resource",
-          "category": "Subscription API",
+          "title": "Delete a subscription",
+          "category": "Subscription",
           "filename": "delete-accounts-core-v1-subscriptions-.html"
         }
       }
@@ -556,8 +556,8 @@
     "/accounts/{account_id}/core/v1/upgrades": {
       "get": {
         "x-doc": {
-          "title": "List all upgrade resources",
-          "category": "Upgrade API",
+          "title": "List all upgrades",
+          "category": "Upgrade",
           "filename": "get-accounts-core-v1-upgrades.html"
         }
       }
@@ -565,15 +565,15 @@
     "/accounts/{account_id}/core/v1/upgrades/{upgrade_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific upgrade resource",
-          "category": "Upgrade API",
+          "title": "Retrieve an upgrade resource",
+          "category": "Upgrade",
           "filename": "get-accounts-core-v1-upgrades-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific upgrade resource",
-          "category": "Upgrade API",
+          "title": "Modify an upgrade resource",
+          "category": "Upgrade",
           "filename": "put-accounts-core-v1-upgrades-.html"
         }
       }
@@ -581,15 +581,15 @@
     "/accounts/{account_id}/core/v1/users": {
       "post": {
         "x-doc": {
-          "title": "Create a new user resource",
-          "category": "User API",
+          "title": "Create a new user",
+          "category": "User",
           "filename": "post-accounts-core-v1-users.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all user resources",
-          "category": "User API",
+          "title": "List all users",
+          "category": "User",
           "filename": "get-accounts-core-v1-users.html"
         }
       }
@@ -597,22 +597,22 @@
     "/accounts/{account_id}/core/v1/users/{user_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific user resource",
-          "category": "User API",
+          "title": "Retrieve a user",
+          "category": "User",
           "filename": "get-accounts-core-v1-users-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific user resource",
-          "category": "User API",
+          "title": "Modify a user",
+          "category": "User",
           "filename": "put-accounts-core-v1-users-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific user resource",
-          "category": "User API",
+          "title": "Delete a user",
+          "category": "User",
           "filename": "delete-accounts-core-v1-users-.html"
         }
       }
@@ -620,15 +620,15 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Create a new role binding resource for a specific user",
-          "category": "Role Binding API",
+          "title": "Create a new role binding for a user",
+          "category": "Role Binding",
           "filename": "post-accounts-core-v1-users-rolebindings.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the role binding resources associated with a specific user",
-          "category": "Role Binding API",
+          "title": "List the role bindings for a user",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-rolebindings.html"
         }
       }
@@ -636,22 +636,22 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific role binding resource(2)",
-          "category": "Role Binding API",
+          "title": "Retrieve a role binding for a user",
+          "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-rolebindings-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific role binding resource(2)",
-          "category": "Role Binding API",
+          "title": "Modify a role binding for a user",
+          "category": "Role Binding",
           "filename": "put-accounts-core-v1-users-rolebindings-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific role binding resource(2)",
-          "category": "Role Binding API",
+          "title": "Delete a role binding for a user",
+          "category": "Role Binding",
           "filename": "delete-accounts-core-v1-users-rolebindings-.html"
         }
       }
@@ -659,15 +659,15 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/tokens": {
       "post": {
         "x-doc": {
-          "title": "Create a new token resource for a specific user",
-          "category": "Token API",
+          "title": "Create a new token for a user",
+          "category": "Token",
           "filename": "post-accounts-core-v1-users-tokens.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the token resources associated with a specific user",
-          "category": "Token API",
+          "title": "List the tokens for a user",
+          "category": "Token",
           "filename": "get-accounts-core-v1-users-tokens.html"
         }
       }
@@ -675,22 +675,22 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific token resource",
-          "category": "Token API",
+          "title": "Retrieve a token",
+          "category": "Token",
           "filename": "get-accounts-core-v1-users-tokens-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific token resource",
-          "category": "Token API",
+          "title": "Modify a token",
+          "category": "Token",
           "filename": "put-accounts-core-v1-users-tokens-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific token resource",
-          "category": "Token API",
+          "title": "Delete a token",
+          "category": "Token",
           "filename": "delete-accounts-core-v1-users-tokens-.html"
         }
       }
@@ -698,8 +698,8 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications": {
       "get": {
         "x-doc": {
-          "title": "List the unread notification resources associated with a specific user",
-          "category": "Unread Notification API",
+          "title": "List the unread notifications for a user",
+          "category": "Unread Notification",
           "filename": "get-accounts-core-v1-users-unreadnotifications.html"
         }
       }
@@ -707,15 +707,15 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific unread notification resource",
-          "category": "Unread Notification API",
+          "title": "Retrieve an unread notification",
+          "category": "Unread Notification",
           "filename": "get-accounts-core-v1-users-unreadnotifications-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific unread notification resource",
-          "category": "Unread Notification API",
+          "title": "Delete an unread notification",
+          "category": "Unread Notification",
           "filename": "delete-accounts-core-v1-users-unreadnotifications-.html"
         }
       }
@@ -723,8 +723,8 @@
     "/accounts/{account_id}/topology/v1/appBackups": {
       "get": {
         "x-doc": {
-          "title": "List all application backup resources",
-          "category": "Application Backup API",
+          "title": "List all application backups",
+          "category": "Application Backup",
           "filename": "get-accounts-topology-v1-appbackups.html"
         }
       }
@@ -732,15 +732,15 @@
     "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application backup resource",
-          "category": "Application Backup API",
+          "title": "Retrieve an application backup",
+          "category": "Application Backup",
           "filename": "get-accounts-topology-v1-appbackups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific application backup resource",
-          "category": "Application Backup API",
+          "title": "Delete an application backup",
+          "category": "Application Backup",
           "filename": "delete-accounts-topology-v1-appbackups-.html"
         }
       }
@@ -748,15 +748,15 @@
     "/accounts/{account_id}/topology/v1/buckets": {
       "post": {
         "x-doc": {
-          "title": "Create a new bucket resource",
-          "category": "Bucket API",
+          "title": "Create a new bucket",
+          "category": "Bucket",
           "filename": "post-accounts-topology-v1-buckets.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all bucket resources",
-          "category": "Bucket API",
+          "title": "List all buckets",
+          "category": "Bucket",
           "filename": "get-accounts-topology-v1-buckets.html"
         }
       }
@@ -764,22 +764,22 @@
     "/accounts/{account_id}/topology/v1/buckets/{bucket_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific bucket resource",
-          "category": "Bucket API",
+          "title": "Retrieve a bucket",
+          "category": "Bucket",
           "filename": "get-accounts-topology-v1-buckets-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific bucket resource",
-          "category": "Bucket API",
+          "title": "Modify a bucket",
+          "category": "Bucket",
           "filename": "put-accounts-topology-v1-buckets-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific bucket resource",
-          "category": "Bucket API",
+          "title": "Delete a bucket",
+          "category": "Bucket",
           "filename": "delete-accounts-topology-v1-buckets-.html"
         }
       }
@@ -788,14 +788,14 @@
       "post": {
         "x-doc": {
           "title": "Create a new cloud resource",
-          "category": "Cloud API",
+          "category": "Cloud",
           "filename": "post-accounts-topology-v1-clouds.html"
         }
       },
       "get": {
         "x-doc": {
           "title": "List all cloud resources",
-          "category": "Cloud API",
+          "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds.html"
         }
       }
@@ -803,22 +803,22 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific cloud resource",
-          "category": "Cloud API",
+          "title": "Retrieve a cloud resource",
+          "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific cloud resource",
-          "category": "Cloud API",
+          "title": "Modify a cloud resource",
+          "category": "Cloud",
           "filename": "put-accounts-topology-v1-clouds-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific cloud resource",
-          "category": "Cloud API",
+          "title": "Delete a cloud resource",
+          "category": "Cloud",
           "filename": "delete-accounts-topology-v1-clouds-.html"
         }
       }
@@ -826,15 +826,15 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters": {
       "post": {
         "x-doc": {
-          "title": "Create a new cluster resource for a specific cloud",
-          "category": "Cluster API",
+          "title": "Create a new cluster for a cloud",
+          "category": "Cluster",
           "filename": "post-accounts-topology-v1-clouds-clusters.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the cluster resources associated with a specific cloud",
-          "category": "Cluster API",
+          "title": "List the clusters for a cloud",
+          "category": "Cluster",
           "filename": "get-accounts-topology-v1-clouds-clusters.html"
         }
       }
@@ -842,22 +842,22 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific cluster resource",
-          "category": "Cluster API",
+          "title": "Retrieve a cluster for a cloud",
+          "category": "Cluster",
           "filename": "get-accounts-topology-v1-clouds-clusters-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific cluster resource",
-          "category": "Cluster API",
+          "title": "Modify a cluster for a cloud",
+          "category": "Cluster",
           "filename": "put-accounts-topology-v1-clouds-clusters-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific cluster resource",
-          "category": "Cluster API",
+          "title": "Delete a cluster for a cloud",
+          "category": "Cluster",
           "filename": "delete-accounts-topology-v1-clouds-clusters-.html"
         }
       }
@@ -865,8 +865,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "List the cluster node resources associated with a specific cluster",
-          "category": "Cluster Node API",
+          "title": "List the cluster nodes for a cluster",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes.html"
         }
       }
@@ -874,8 +874,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retreive a specific cluster node resource",
-          "category": "Cluster Node API",
+          "title": "Retrieve a cluster node for a cloud",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes-.html"
         }
       }
@@ -883,8 +883,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage class resources associated with a specific cluster",
-          "category": "Storage Class API",
+          "title": "List the storage classes for a specific cluster",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses.html"
         }
       }
@@ -892,8 +892,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific storage class resource",
-          "category": "Storage Class API",
+          "title": "Retrieve a storage class",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses-.html"
         }
       }
@@ -901,8 +901,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespace resources associated with a specific cluster",
-          "category": "Namespace API",
+          "title": "List the namespaces for a cluster",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-clouds-clusters-namespaces.html"
         }
       }
@@ -910,8 +910,8 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific namespace resource",
-          "category": "Namespace API",
+          "title": "Retrieve a namespace for a cloud",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-clouds-clusters-namespaces-.html"
         }
       }
@@ -919,8 +919,8 @@
     "/accounts/{account_id}/topology/v1/clusters": {
       "get": {
         "x-doc": {
-          "title": "List all cluster resources",
-          "category": "Cluster API",
+          "title": "List all clusters",
+          "category": "Cluster",
           "filename": "get-accounts-topology-v1-clusters.html"
         }
       }
@@ -928,22 +928,22 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific cluster resource(1)",
-          "category": "Cluster API",
+          "title": "Retrieve a cluster",
+          "category": "Cluster",
           "filename": "get-accounts-topology-v1-clusters-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific cluster resource(1)",
-          "category": "Cluster API",
+          "title": "Modify a cluster",
+          "category": "Cluster",
           "filename": "put-accounts-topology-v1-clusters-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific cluster resource(1)",
-          "category": "Cluster API",
+          "title": "Delete a cluster(1)",
+          "category": "Cluster",
           "filename": "delete-accounts-topology-v1-clusters-.html"
         }
       }
@@ -951,8 +951,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "List the cluster node resources associated with a specific cluster(1)",
-          "category": "Cluster Node API",
+          "title": "List the cluster nodes associated with a cluster(1)",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes.html"
         }
       }
@@ -960,8 +960,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific cluster node resource(1)",
-          "category": "Cluster Node API",
+          "title": "Retrieve a cluster node(1)",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes-.html"
         }
       }
@@ -969,8 +969,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage class resources associated with a specific cluster(1)",
-          "category": "Storage Class API",
+          "title": "List the storage classes associated with a cluster(1)",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses.html"
         }
       }
@@ -978,8 +978,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific storage class resource(1)",
-          "category": "Storage Class API",
+          "title": "Retrieve a storage class(1)",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses-.html"
         }
       }
@@ -987,8 +987,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespace resources associated with a specific cluster(1)",
-          "category": "Namespace API",
+          "title": "List the namespaces associated with a cluster(1)",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces.html"
         }
       }
@@ -996,8 +996,8 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific namespace resource(1)",
-          "category": "Namespace API",
+          "title": "Retrieve a specific namespace(1)",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces-.html"
         }
       }
@@ -1005,8 +1005,8 @@
     "/accounts/{account_id}/topology/v1/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List all namespace resources",
-          "category": "Namespace API",
+          "title": "List all namespaces",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-namespaces.html"
         }
       }
@@ -1014,8 +1014,8 @@
     "/accounts/{account_id}/topology/v1/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific namespace resource(2)",
-          "category": "Namespace API",
+          "title": "Retrieve a namespace (2)",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-namespaces-.html"
         }
       }
@@ -1023,15 +1023,15 @@
     "/accounts/{account_id}/topology/v1/managedClusters": {
       "post": {
         "x-doc": {
-          "title": "Create a new managed cluster resource",
-          "category": "Managed Cluster API",
+          "title": "Create a new managed cluster",
+          "category": "Managed Cluster",
           "filename": "post-accounts-topology-v1-managedclusters.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all managed cluster resources",
-          "category": "Managed Cluster API",
+          "title": "List all managed clusters",
+          "category": "Managed Cluster",
           "filename": "get-accounts-topology-v1-managedclusters.html"
         }
       }
@@ -1039,22 +1039,22 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific managed cluster resource",
-          "category": "Managed Cluster API",
+          "title": "Retrieve a managed cluster",
+          "category": "Managed Cluster",
           "filename": "get-accounts-topology-v1-managedclusters-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific managed cluster resource",
-          "category": "Managed Cluster API",
+          "title": "Modify a managed cluster",
+          "category": "Managed Cluster",
           "filename": "put-accounts-topology-v1-managedclusters-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific managed cluster resource",
-          "category": "Managed Cluster API",
+          "title": "Delete a managed cluster",
+          "category": "Managed Cluster",
           "filename": "delete-accounts-topology-v1-managedclusters-.html"
         }
       }
@@ -1062,15 +1062,15 @@
     "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps": {
       "post": {
         "x-doc": {
-          "title": "Create a new app resource for a specific managed cluster",
-          "category": "App API",
+          "title": "Create a new app for a managed cluster",
+          "category": "App",
           "filename": "post-accounts-topology-v2-managedclusters-apps.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the app resources associated with a specific managed cluster",
-          "category": "App API",
+          "title": "List the apps for a managed cluster",
+          "category": "App",
           "filename": "get-accounts-topology-v2-managedclusters-apps.html"
         }
       }
@@ -1078,22 +1078,22 @@
     "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific app resource",
-          "category": "App API",
+          "title": "Retrieve an app",
+          "category": "App",
           "filename": "get-accounts-topology-v2-managedclusters-apps-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific app resource",
-          "category": "App API",
+          "title": "Modify an app",
+          "category": "App",
           "filename": "put-accounts-topology-v2-managedclusters-apps-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific app resource",
-          "category": "App API",
+          "title": "Delete an app",
+          "category": "App",
           "filename": "delete-accounts-topology-v2-managedclusters-apps-.html"
         }
       }
@@ -1101,8 +1101,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application asset resources associated with a specific app",
-          "category": "Application Asset API",
+          "title": "List the application assets associated with an app",
+          "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets.html"
         }
       }
@@ -1110,8 +1110,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application asset resource",
-          "category": "Application Asset API",
+          "title": "Retrieve an application asset",
+          "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets-.html"
         }
       }
@@ -1119,8 +1119,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "Lists the cluster node resources associated with a specific managed cluster",
-          "category": "Cluster Node API",
+          "title": "List the cluster nodes associated with a managed cluster",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes.html"
         }
       }
@@ -1128,8 +1128,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific cluster node resource(2)",
-          "category": "Cluster Node API",
+          "title": "Retrieve a cluster node(2)",
+          "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes-.html"
         }
       }
@@ -1137,8 +1137,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage class resources associated with a specific managed cluster",
-          "category": "Storage Class API",
+          "title": "List the storage classes associated with a managed cluster",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses.html"
         }
       }
@@ -1146,8 +1146,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific storage class resource(2)",
-          "category": "Storage Class API",
+          "title": "Retrieve a storage class(2)",
+          "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses-.html"
         }
       }
@@ -1155,8 +1155,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes": {
       "get": {
         "x-doc": {
-          "title": "List the volume resources associated with a specific managed cluster",
-          "category": "Volume API",
+          "title": "List the volumes associated with a managed cluster",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes.html"
         }
       }
@@ -1164,8 +1164,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific volume resource",
-          "category": "Volume API",
+          "title": "Retrieve a volume",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes-.html"
         }
       }
@@ -1173,8 +1173,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespace resources associated with a specific managed cluster",
-          "category": "Namespace API",
+          "title": "List the namespaces associated with a managed cluster",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-managedclusters-namespaces.html"
         }
       }
@@ -1182,8 +1182,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific namespace resource(3)",
-          "category": "Namespace API",
+          "title": "Retrieve a namespace for a managed cluster",
+          "category": "Namespace",
           "filename": "get-accounts-topology-v1-managedclusters-namespaces-.html"
         }
       }
@@ -1191,8 +1191,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources": {
       "get": {
         "x-doc": {
-          "title": "List the API resource resources associated with a specific managed cluster",
-          "category": "Kubernetes API Resource API",
+          "title": "List the K8s API resources associated with a managed cluster",
+          "category": "Kubernetes API Resource",
           "filename": "get-accounts-topology-v1-managedclusters-apiresources.html"
         }
       }
@@ -1200,8 +1200,8 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific API resource resource",
-          "category": "Kubernetes API Resource API",
+          "title": "Retrieve a K8s API resource",
+          "category": "Kubernetes API Resource",
           "filename": "get-accounts-topology-v1-managedclusters-apiresources-.html"
         }
       }
@@ -1209,15 +1209,15 @@
     "/accounts/{account_id}/topology/v1/storageBackends": {
       "post": {
         "x-doc": {
-          "title": "Create a new storage backend resource",
-          "category": "Storage Backend API",
+          "title": "Create a new storage backend",
+          "category": "Storage Backend",
           "filename": "post-accounts-topology-v1-storagebackends.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all storage backend resources",
-          "category": "Storage Backend API",
+          "title": "List all storage backends",
+          "category": "Storage Backend",
           "filename": "get-accounts-topology-v1-storagebackends.html"
         }
       }
@@ -1225,22 +1225,22 @@
     "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific storage backend resource",
-          "category": "Storage Backend API",
+          "title": "Retrieve a storage backend",
+          "category": "Storage Backend",
           "filename": "get-accounts-topology-v1-storagebackends-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific storage backend resource",
-          "category": "Storage Backend API",
+          "title": "Modify a storage backend",
+          "category": "Storage Backend",
           "filename": "put-accounts-topology-v1-storagebackends-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific storage backend resource",
-          "category": "Storage Backend API",
+          "title": "Delete a storage backend",
+          "category": "Storage Backend",
           "filename": "delete-accounts-topology-v1-storagebackends-.html"
         }
       }
@@ -1248,8 +1248,8 @@
     "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes": {
       "get": {
         "x-doc": {
-          "title": "List the volume resources associated with a specific storage backend",
-          "category": "Volume API",
+          "title": "List the volumes associated with a storage backend",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes.html"
         }
       }
@@ -1257,8 +1257,8 @@
     "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific volume resource(1)",
-          "category": "Volume API",
+          "title": "Retrieve a volume resource(1)",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes-.html"
         }
       }
@@ -1266,8 +1266,8 @@
     "/accounts/{account_id}/topology/v1/volumes": {
       "get": {
         "x-doc": {
-          "title": "List all volume resources",
-          "category": "Volume API",
+          "title": "List all volumes",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-volumes.html"
         }
       }
@@ -1275,8 +1275,8 @@
     "/accounts/{account_id}/topology/v1/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific volume resource(2)",
-          "category": "Volume API",
+          "title": "Retrieve a volume resource(2)",
+          "category": "Volume",
           "filename": "get-accounts-topology-v1-volumes-.html"
         }
       }
@@ -1284,15 +1284,15 @@
     "/accounts/{account_id}/k8s/v1/appMirrors": {
       "post": {
         "x-doc": {
-          "title": "Create a new AppMirror resource",
-          "category": "AppMirror API",
+          "title": "Create a new AppMirror",
+          "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-appmirrors.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all AppMirror resources",
-          "category": "AppMirror API",
+          "title": "List all AppMirrors",
+          "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors.html"
         }
       }
@@ -1300,22 +1300,22 @@
     "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific AppMirror resource",
-          "category": "AppMirror API",
+          "title": "Retrieve an AppMirror",
+          "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific AppMirror resource",
-          "category": "AppMirror API",
+          "title": "Modify an AppMirror resource",
+          "category": "AppMirror",
           "filename": "put-accounts-k8s-v1-appmirrors-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific AppMirror resource",
-          "category": "AppMirror API",
+          "title": "Delete an AppMirror resource",
+          "category": "AppMirror",
           "filename": "delete-accounts-k8s-v1-appmirrors-.html"
         }
       }
@@ -1323,15 +1323,15 @@
     "/accounts/{account_id}/k8s/v2/apps": {
       "post": {
         "x-doc": {
-          "title": "Create a new app resource",
-          "category": "App API",
+          "title": "Create a new app",
+          "category": "App",
           "filename": "post-accounts-k8s-v2-apps.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all app resources",
-          "category": "App API",
+          "title": "List all apps",
+          "category": "App",
           "filename": "get-accounts-k8s-v2-apps.html"
         }
       }
@@ -1339,22 +1339,22 @@
     "/accounts/{account_id}/k8s/v2/apps/{app_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific app resource(1)",
-          "category": "App API",
+          "title": "Retrieve an app resource(1)",
+          "category": "App",
           "filename": "get-accounts-k8s-v2-apps-.html"
         }
       },
       "put": {
         "x-doc": {
           "title": "Modify a specific app resource(1)",
-          "category": "App API",
+          "category": "App",
           "filename": "put-accounts-k8s-v2-apps-.html"
         }
       },
       "delete": {
         "x-doc": {
           "title": "Delete a specific app resource(1)",
-          "category": "App API",
+          "category": "App",
           "filename": "delete-accounts-k8s-v2-apps-.html"
         }
       }
@@ -1363,7 +1363,7 @@
       "get": {
         "x-doc": {
           "title": "List the application asset resources associated with a specific app(1)",
-          "category": "Application Asset API",
+          "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets.html"
         }
       }
@@ -1372,7 +1372,7 @@
       "get": {
         "x-doc": {
           "title": "Retrieve a specific application asset resource(1)",
-          "category": "Application Asset API",
+          "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets-.html"
         }
       }
@@ -1381,14 +1381,14 @@
       "post": {
         "x-doc": {
           "title": "Create a new AppMirror resource for a specific app",
-          "category": "AppMirror API",
+          "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-apps-appmirrors.html"
         }
       },
       "get": {
         "x-doc": {
           "title": "List the AppMirror resources associated with a specific app",
-          "category": "AppMirror API",
+          "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors.html"
         }
       }
@@ -1397,21 +1397,21 @@
       "get": {
         "x-doc": {
           "title": "Retrieve a specific AppMirror resource(1)",
-          "category": "AppMirror API",
+          "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors-.html"
         }
       },
       "put": {
         "x-doc": {
           "title": "Modify a specific AppMirror resource(1)",
-          "category": "AppMirror API",
+          "category": "AppMirror",
           "filename": "put-accounts-k8s-v1-apps-appmirrors-.html"
         }
       },
       "delete": {
         "x-doc": {
           "title": "Delete a specific AppMirror resource(1)",
-          "category": "AppMirror API",
+          "category": "AppMirror",
           "filename": "delete-accounts-k8s-v1-apps-appmirrors-.html"
         }
       }
@@ -1419,8 +1419,8 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes": {
       "get": {
         "x-doc": {
-          "title": "List the volume resources associated with a specific app",
-          "category": "Volume API",
+          "title": "List the volumes for an app",
+          "category": "Volume",
           "filename": "get-accounts-k8s-v1-apps-volumes.html"
         }
       }
@@ -1429,7 +1429,7 @@
       "get": {
         "x-doc": {
           "title": "Retrieve a specific volume resource(3)",
-          "category": "Volume API",
+          "category": "Volume",
           "filename": "get-accounts-k8s-v1-apps-volumes-.html"
         }
       }
@@ -1437,15 +1437,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules": {
       "post": {
         "x-doc": {
-          "title": "Create a new schedule resource for a specific app",
-          "category": "Schedule API",
+          "title": "Create a new schedule for an app",
+          "category": "Schedule",
           "filename": "post-accounts-k8s-v1-apps-schedules.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the schedule resources associated with a specific app",
-          "category": "Schedule API",
+          "title": "List the schedules for an app",
+          "category": "Schedule",
           "filename": "get-accounts-k8s-v1-apps-schedules.html"
         }
       }
@@ -1453,22 +1453,22 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific schedule resource",
-          "category": "Schedule API",
+          "title": "Retrieve a schedule",
+          "category": "Schedule",
           "filename": "get-accounts-k8s-v1-apps-schedules-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific schedule resource",
-          "category": "Schedule API",
+          "title": "Modify a schedule",
+          "category": "Schedule",
           "filename": "put-accounts-k8s-v1-apps-schedules-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific schedule resource",
-          "category": "Schedule API",
+          "title": "Delete a schedule",
+          "category": "Schedule",
           "filename": "delete-accounts-k8s-v1-apps-schedules-.html"
         }
       }
@@ -1476,15 +1476,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups": {
       "post": {
         "x-doc": {
-          "title": "Create a new application backup resource for a specific app",
-          "category": "Application Backup API",
+          "title": "Create a new application backup for an app",
+          "category": "Application Backup",
           "filename": "post-accounts-k8s-v1-apps-appbackups.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the application backup resources associated with a specific app",
-          "category": "Application Backup API",
+          "title": "List the application backups for an app",
+          "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups.html"
         }
       }
@@ -1492,15 +1492,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application backup resource(1)",
-          "category": "Application Backup API",
+          "title": "Retrieve a specific application backup(1)",
+          "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific application backup resource(1)",
-          "category": "Application Backup API",
+          "title": "Delete a specific application backup(1)",
+          "category": "Application Backup",
           "filename": "delete-accounts-k8s-v1-apps-appbackups-.html"
         }
       }
@@ -1508,15 +1508,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps": {
       "post": {
         "x-doc": {
-          "title": "Create a new application snapshot resource for a specific app",
-          "category": "Application Snapshot API",
+          "title": "Create a new application snapshot for an app",
+          "category": "Application Snapshot",
           "filename": "post-accounts-k8s-v1-apps-appsnaps.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the application snapshot resources associated with a specific app",
-          "category": "Application Snapshot API",
+          "title": "List the application snapshots for an app",
+          "category": "Application Snapshot",
           "filename": "get-accounts-k8s-v1-apps-appsnaps.html"
         }
       }
@@ -1524,15 +1524,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application snapshot resource",
-          "category": "Application Snapshot API",
+          "title": "Retrieve an application snapshot",
+          "category": "Application Snapshot",
           "filename": "get-accounts-k8s-v1-apps-appsnaps-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific application snapshot resource",
-          "category": "Application Snapshot API",
+          "title": "Delete an application snapshot",
+          "category": "Application Snapshot",
           "filename": "delete-accounts-k8s-v1-apps-appsnaps-.html"
         }
       }
@@ -1540,15 +1540,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks": {
       "post": {
         "x-doc": {
-          "title": "Create a new execution hook resource for a specific app",
-          "category": "Execution Hook API",
+          "title": "Create a new execution hook for an app",
+          "category": "Execution Hook",
           "filename": "post-accounts-k8s-v1-apps-executionhooks.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the execution hook resources associated with a specific app",
-          "category": "Execution Hook API",
+          "title": "List the execution hooks associated with an app",
+          "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks.html"
         }
       }
@@ -1556,22 +1556,22 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific execution hook resource(1)",
-          "category": "Execution Hook API",
+          "title": "Retrieve an execution hook(1)",
+          "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific execution hook resource(1)",
-          "category": "Execution Hook API",
+          "title": "Modify an execution hook(1)",
+          "category": "Execution Hook",
           "filename": "put-accounts-k8s-v1-apps-executionhooks-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific execution hook resource(1)",
-          "category": "Execution Hook API",
+          "title": "Delete an execution hook(1)",
+          "category": "Execution Hook",
           "filename": "delete-accounts-k8s-v1-apps-executionhooks-.html"
         }
       }
@@ -1579,15 +1579,15 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides": {
       "post": {
         "x-doc": {
-          "title": "Create a new execution hook override resource for a specific app",
-          "category": "Execution Hook Override API",
+          "title": "Create a new execution hook override for an app",
+          "category": "Execution Hook Override",
           "filename": "post-accounts-k8s-v1-apps-executionhookoverrides.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the execution hook override resources associated with a specific app",
-          "category": "Execution Hook Override API",
+          "title": "List the execution hook overrides associated with an app",
+          "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides.html"
         }
       }
@@ -1596,21 +1596,21 @@
       "get": {
         "x-doc": {
           "title": "Retrieve a specific execution hook override resource",
-          "category": "Execution Hook Override API",
+          "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific execution hook override resource",
-          "category": "Execution Hook Override API",
+          "title": "Modify an execution hook override resource",
+          "category": "Execution Hook Override",
           "filename": "put-accounts-k8s-v1-apps-executionhookoverrides-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific execution hook override resource",
-          "category": "Execution Hook Override API",
+          "title": "Delete an execution hook override resource",
+          "category": "Execution Hook Override",
           "filename": "delete-accounts-k8s-v1-apps-executionhookoverrides-.html"
         }
       }
@@ -1618,8 +1618,8 @@
     "/accounts/{account_id}/core/v1/ldapGroups": {
       "get": {
         "x-doc": {
-          "title": "List all LDAP group resources",
-          "category": "LDAP Group API",
+          "title": "List all LDAP groups",
+          "category": "LDAP Group",
           "filename": "get-accounts-core-v1-ldapgroups.html"
         }
       }
@@ -1627,8 +1627,8 @@
     "/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific LDAP group resource",
-          "category": "LDAP Group API",
+          "title": "Retrieve a specific LDAP group",
+          "category": "LDAP Group",
           "filename": "get-accounts-core-v1-ldapgroups-.html"
         }
       }
@@ -1636,8 +1636,8 @@
     "/accounts/{account_id}/core/v1/ldapUsers": {
       "get": {
         "x-doc": {
-          "title": "List all LDAP user resources",
-          "category": "LDAP User API",
+          "title": "List all LDAP users",
+          "category": "LDAP User",
           "filename": "get-accounts-core-v1-ldapusers.html"
         }
       }
@@ -1645,8 +1645,8 @@
     "/accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific LDAP user resource",
-          "category": "LDAP User API",
+          "title": "Retrieve a LDAP user",
+          "category": "LDAP User",
           "filename": "get-accounts-core-v1-ldapusers-.html"
         }
       }
@@ -1654,8 +1654,8 @@
     "/accounts/{account_id}/core/v1/tasks": {
       "get": {
         "x-doc": {
-          "title": "List all task resources",
-          "category": "Task API",
+          "title": "List all tasks",
+          "category": "Task",
           "filename": "get-accounts-core-v1-tasks.html"
         }
       }
@@ -1663,8 +1663,8 @@
     "/accounts/{account_id}/core/v1/tasks/{task_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific task resource",
-          "category": "Task API",
+          "title": "Retrieve a task",
+          "category": "Task",
           "filename": "get-accounts-core-v1-tasks-.html"
         }
       }
