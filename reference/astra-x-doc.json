@@ -1492,14 +1492,14 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application backup for K8s",
+          "title": "Retrieve an application backup for an app",
           "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete an application backup for K8s",
+          "title": "Delete an application backup for an app",
           "category": "Application Backup",
           "filename": "delete-accounts-k8s-v1-apps-appbackups-.html"
         }
