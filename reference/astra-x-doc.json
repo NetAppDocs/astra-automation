@@ -565,14 +565,14 @@
     "/accounts/{account_id}/core/v1/upgrades/{upgrade_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an upgrade resource",
+          "title": "Retrieve an upgrade",
           "category": "Upgrade",
           "filename": "get-accounts-core-v1-upgrades-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify an upgrade resource",
+          "title": "Modify an upgrade",
           "category": "Upgrade",
           "filename": "put-accounts-core-v1-upgrades-.html"
         }
@@ -787,14 +787,14 @@
     "/accounts/{account_id}/topology/v1/clouds": {
       "post": {
         "x-doc": {
-          "title": "Create a new cloud resource",
+          "title": "Create a new cloud",
           "category": "Cloud",
           "filename": "post-accounts-topology-v1-clouds.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all cloud resources",
+          "title": "List all clouds",
           "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds.html"
         }
@@ -803,21 +803,21 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a cloud resource",
+          "title": "Retrieve a cloud",
           "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a cloud resource",
+          "title": "Modify a cloud",
           "category": "Cloud",
           "filename": "put-accounts-topology-v1-clouds-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a cloud resource",
+          "title": "Delete a cloud",
           "category": "Cloud",
           "filename": "delete-accounts-topology-v1-clouds-.html"
         }
@@ -865,7 +865,7 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "List the cluster nodes for a cluster",
+          "title": "List the cluster nodes for a cloud",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes.html"
         }
@@ -942,7 +942,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a cluster(1)",
+          "title": "Delete a cluster",
           "category": "Cluster",
           "filename": "delete-accounts-topology-v1-clusters-.html"
         }
@@ -951,7 +951,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "List the cluster nodes associated with a cluster(1)",
+          "title": "List the cluster nodes for a cluster",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes.html"
         }
@@ -960,7 +960,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a cluster node(1)",
+          "title": "Retrieve a cluster node",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes-.html"
         }
@@ -1078,21 +1078,21 @@
     "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an app",
+          "title": "Retrieve an app for a managed cluster",
           "category": "App",
           "filename": "get-accounts-topology-v2-managedclusters-apps-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify an app",
+          "title": "Modify an app for a managed cluster",
           "category": "App",
           "filename": "put-accounts-topology-v2-managedclusters-apps-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete an app",
+          "title": "Delete an app for a managed cluster",
           "category": "App",
           "filename": "delete-accounts-topology-v2-managedclusters-apps-.html"
         }
@@ -1101,7 +1101,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application assets associated with an app",
+          "title": "List the application assets associated with an app for a managed cluster",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets.html"
         }
@@ -1110,7 +1110,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application asset",
+          "title": "Retrieve an application asset for a managed cluster",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets-.html"
         }
@@ -1119,7 +1119,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes": {
       "get": {
         "x-doc": {
-          "title": "List the cluster nodes associated with a managed cluster",
+          "title": "List the cluster nodes for a managed cluster",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes.html"
         }
@@ -1128,7 +1128,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a cluster node(2)",
+          "title": "Retrieve a cluster node for a managed cluster",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes-.html"
         }
@@ -1191,7 +1191,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources": {
       "get": {
         "x-doc": {
-          "title": "List the K8s API resources associated with a managed cluster",
+          "title": "List the K8s API resources for a managed cluster",
           "category": "Kubernetes API Resource",
           "filename": "get-accounts-topology-v1-managedclusters-apiresources.html"
         }
@@ -1284,14 +1284,14 @@
     "/accounts/{account_id}/k8s/v1/appMirrors": {
       "post": {
         "x-doc": {
-          "title": "Create a new AppMirror",
+          "title": "Create a new AppMirror resource",
           "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-appmirrors.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List all AppMirrors",
+          "title": "List all AppMirror resources",
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors.html"
         }
@@ -1300,7 +1300,7 @@
     "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an AppMirror",
+          "title": "Retrieve an AppMirror resource",
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors-.html"
         }
@@ -1339,21 +1339,21 @@
     "/accounts/{account_id}/k8s/v2/apps/{app_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an app resource(1)",
+          "title": "Retrieve an app",
           "category": "App",
           "filename": "get-accounts-k8s-v2-apps-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific app resource(1)",
+          "title": "Modify an app",
           "category": "App",
           "filename": "put-accounts-k8s-v2-apps-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific app resource(1)",
+          "title": "Delete an app",
           "category": "App",
           "filename": "delete-accounts-k8s-v2-apps-.html"
         }
@@ -1362,7 +1362,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application asset resources associated with a specific app(1)",
+          "title": "List the application asset resources for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets.html"
         }
@@ -1371,7 +1371,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application asset resource(1)",
+          "title": "Retrieve an application asset",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets-.html"
         }
@@ -1380,14 +1380,14 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors": {
       "post": {
         "x-doc": {
-          "title": "Create a new AppMirror resource for a specific app",
+          "title": "Create a new AppMirror resource for an app",
           "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-apps-appmirrors.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the AppMirror resources associated with a specific app",
+          "title": "List the AppMirror resources for an app",
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors.html"
         }
@@ -1396,21 +1396,21 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific AppMirror resource(1)",
+          "title": "Retrieve an AppMirror resource for an app",
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify a specific AppMirror resource(1)",
+          "title": "Modify an AppMirror resource for an app",
           "category": "AppMirror",
           "filename": "put-accounts-k8s-v1-apps-appmirrors-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific AppMirror resource(1)",
+          "title": "Delete an AppMirror resource for an app",
           "category": "AppMirror",
           "filename": "delete-accounts-k8s-v1-apps-appmirrors-.html"
         }
@@ -1492,14 +1492,14 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific application backup(1)",
+          "title": "Retrieve an application backup for K8s",
           "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific application backup(1)",
+          "title": "Delete an application backup for K8s",
           "category": "Application Backup",
           "filename": "delete-accounts-k8s-v1-apps-appbackups-.html"
         }
@@ -1547,7 +1547,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "List the execution hooks associated with an app",
+          "title": "List the execution hooks for an app",
           "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks.html"
         }
@@ -1556,21 +1556,21 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an execution hook(1)",
+          "title": "Retrieve an execution hook for an app",
           "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks-.html"
         }
       },
       "put": {
         "x-doc": {
-          "title": "Modify an execution hook(1)",
+          "title": "Modify an execution hook for an app",
           "category": "Execution Hook",
           "filename": "put-accounts-k8s-v1-apps-executionhooks-.html"
         }
       },
       "delete": {
         "x-doc": {
-          "title": "Delete an execution hook(1)",
+          "title": "Delete an execution hook for an app",
           "category": "Execution Hook",
           "filename": "delete-accounts-k8s-v1-apps-executionhooks-.html"
         }
@@ -1579,14 +1579,14 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides": {
       "post": {
         "x-doc": {
-          "title": "Create a new execution hook override for an app",
+          "title": "Create a new execution hook override resource for an app",
           "category": "Execution Hook Override",
           "filename": "post-accounts-k8s-v1-apps-executionhookoverrides.html"
         }
       },
       "get": {
         "x-doc": {
-          "title": "List the execution hook overrides associated with an app",
+          "title": "List the execution hook override resources for an app",
           "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides.html"
         }
