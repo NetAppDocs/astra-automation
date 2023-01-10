@@ -883,7 +883,7 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage classes for a specific cluster",
+          "title": "List the storage classes for a cloud",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses.html"
         }
@@ -892,7 +892,7 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a storage class",
+          "title": "Retrieve a storage class for a cloud",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses-.html"
         }
@@ -901,7 +901,7 @@
     "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespaces for a cluster",
+          "title": "List the namespaces for a cloud",
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clouds-clusters-namespaces.html"
         }
@@ -969,7 +969,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage classes associated with a cluster(1)",
+          "title": "List the storage classes for a cluster",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses.html"
         }
@@ -978,7 +978,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a storage class(1)",
+          "title": "Retrieve a storage class for a cluster",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses-.html"
         }
@@ -987,7 +987,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespaces associated with a cluster(1)",
+          "title": "List the namespaces for a cluster",
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces.html"
         }
@@ -996,7 +996,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific namespace(1)",
+          "title": "Retrieve a namespace for a cluster",
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces-.html"
         }
@@ -1014,7 +1014,7 @@
     "/accounts/{account_id}/topology/v1/namespaces/{namespace_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a namespace (2)",
+          "title": "Retrieve a namespace",
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-namespaces-.html"
         }
@@ -1146,7 +1146,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a storage class(2)",
+          "title": "Retrieve a storage class for a managed cluster",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses-.html"
         }
@@ -1155,7 +1155,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes": {
       "get": {
         "x-doc": {
-          "title": "List the volumes associated with a managed cluster",
+          "title": "List the volumes for a managed cluster",
           "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes.html"
         }
@@ -1164,7 +1164,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a volume",
+          "title": "Retrieve a volume for a managed cluster",
           "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes-.html"
         }
@@ -1248,7 +1248,7 @@
     "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes": {
       "get": {
         "x-doc": {
-          "title": "List the volumes associated with a storage backend",
+          "title": "List the volumes for a storage backend",
           "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes.html"
         }
@@ -1257,7 +1257,7 @@
     "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a volume resource(1)",
+          "title": "Retrieve a volume for a storage backend",
           "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes-.html"
         }
@@ -1275,7 +1275,7 @@
     "/accounts/{account_id}/topology/v1/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a volume resource(2)",
+          "title": "Retrieve a volume",
           "category": "Volume",
           "filename": "get-accounts-topology-v1-volumes-.html"
         }
@@ -1428,7 +1428,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific volume resource(3)",
+          "title": "Retrieve a volume for an app",
           "category": "Volume",
           "filename": "get-accounts-k8s-v1-apps-volumes-.html"
         }
