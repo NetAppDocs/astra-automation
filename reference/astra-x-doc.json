@@ -47,7 +47,7 @@
     "/accounts/{account_id}/metrics": {
       "get": {
         "x-doc": {
-          "title": "Return all metrics for the account",
+          "title": "Retrieve all metrics for an account",
           "category": "Metrics",
           "filename": "get-accounts-metrics.html",
           "explorer": false
