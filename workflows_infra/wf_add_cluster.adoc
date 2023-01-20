@@ -13,7 +13,7 @@ summary: You can add a cluster so it will be available to be managed by Astra.
 :imagesdir: ./media/
 
 [.lead]
-You can add a cluster so it will be available to be managed by Astra. Beginning with the Astra 22.11, you can add a cluster with either Astra Control Center or Astra Control Service.
+You can add a cluster so it will be available to be managed by Astra. Beginning with the Astra 22.11 release, you can add a cluster with either Astra Control Center or Astra Control Service.
 
 [NOTE]
 Adding a cluster is not required when using a Kubernetes service from one of the major cloud providers (AKS, EKS, GKE).

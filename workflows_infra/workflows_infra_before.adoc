@@ -37,7 +37,7 @@ The infrastructure workflows are organized in different categories to make it ea
 |Clusters
 |You can add managed Kubernetes clusters which allows you to protect and support the applications they contain.
 |Clouds
-|This workflows provide access to the clouds available through the Astra Control REST API.
+|These workflows provide access to the clouds available through the Astra Control REST API.
 |Buckets
 |You can use these workflows to create and manage the S3 buckets used to store backups.
 |Storage
