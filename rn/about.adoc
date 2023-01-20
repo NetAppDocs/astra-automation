@@ -13,13 +13,13 @@ summary: The documentation at this site describes the Astra Control REST API and
 :imagesdir: ./media/
 
 [.lead]
-The documentation at this site describes the Astra Control REST API and related automation technologies included with the most recent releases of the two Astra deployment models.
+The documentation at this site describes the Astra Control REST API and related automation technologies included with the most recent release of the two Astra deployment models.
 
 .Release cadence
 
 In general, updates for Astra Control Service and Astra Control Center are released at the same time. However, Astra Control Service uses an accelerated release cadence which can result in one or more incremental updates beyond the most recent Astra Control Center release.
 
-Because this site documents the REST API for both deployment models, there may be some features or changes included that apply only to the most recent Astra Control Service release. Differences are noted as needed.
+Because this site documents the REST API for both deployment models, there may be some features or changes included that apply only to the most recent Astra Control Service release. Differences between the two are noted in this site as needed.
 
 .Astra Control deployments
 
@@ -31,7 +31,7 @@ The documentation at this site applies to the Astra deployment models as indicat
 
 .More information
 
-See the following for more information about the current as well as earlier releases of Astra Control, including the REST AP and two deployment models.
+See the following for more information about the current as well as earlier releases of Astra Control including the REST API.
 
 * link:../rn/whats_new.html[What's new with the Astra Control REST API]
 * link:../endpoints/resources.html[REST resources and endpoints]
@@ -41,4 +41,4 @@ See the following for more information about the current as well as earlier rele
 
 .Get involved
 
-Follow us on Twitter *@NetAppDoc*. You can also send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending email to doccomments@netapp.com.
+Follow us on Twitter *@NetAppDoc*. You can also send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending email to mailto:doccomments@netapp.com[doccomments@netapp.com].

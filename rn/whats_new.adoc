@@ -18,11 +18,11 @@ NetApp regularly updates the Astra Control REST API to bring you new features, e
 
 == 17 January 2023 (23.01)
 
-This release includes a minor update of the REST API.
+This release includes a minor update to the REST API.
 
-=== Enhanced execution hooks functionality
+=== Enhanced execution hooks functionality with filters
 
-When using execution hooks, you can now add filters to control which containers a hook will match. If you create multiple filters for a single execution hook, they are combined with a logical AND operator. You can have up to 10 active filters per execution hook.
+When using execution hooks, you can now add filters to control which containers a hook will match. If you create multiple filters for a single execution hook, they are combined with a logical AND operator. You can define up to 10 active filters per execution hook.
 
 == 22 November 2022 (22.11)
 
