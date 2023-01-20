@@ -41,4 +41,4 @@ See the following for more information about the current as well as earlier rele
 
 .Get involved
 
-Follow us on Twitter *@NetAppDoc*. You can also send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending email to mailto:doccomments@netapp.com[doccomments@netapp.com].
+Follow us on Twitter *@NetAppDoc*. You can also send feedback about documentation by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending email to _doccomments@netapp.com_.
