@@ -17,7 +17,9 @@ The documentation at this site describes the Astra Control REST API and related 
 
 .Release cadence
 
-In general, updates for Astra Control Service and Astra Control Center are released at the same time. However, Astra Control Service uses an accelerated release cadence which can result in one or more incremental updates beyond the most recent Astra Control Center release. Because this site documents both deployment models, there may be some features or changes that apply only to the most recent Astra Control Service release. Differences are noted where needed, either through the product deployment type or release number.
+In general, updates for Astra Control Service and Astra Control Center are released at the same time. However, Astra Control Service uses an accelerated release cadence which can result in one or more incremental updates beyond the most recent Astra Control Center release.
+
+Because this site documents the REST API for both deployment models, there may be some features or changes included that apply only to the most recent Astra Control Service release. Differences are noted as needed.
 
 .Astra Control deployments
 
@@ -29,7 +31,7 @@ The documentation at this site applies to the Astra deployment models as indicat
 
 .More information
 
-See the following for more information about the current as well as previous releases of Astra Control.
+See the following for more information about the current as well as earlier releases of Astra Control, including the REST AP and two deployment models.
 
 * link:../rn/whats_new.html[What's new with the Astra Control REST API]
 * link:../endpoints/resources.html[REST resources and endpoints]
