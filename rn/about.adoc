@@ -13,20 +13,20 @@ summary: The documentation at this site describes the Astra Control REST API and
 :imagesdir: ./media/
 
 [.lead]
-The documentation at this site describes the Astra Control REST API and related automation technologies included with the most recent releases of the two Astra deployment models.
+The documentation at this site describes the Astra Control REST API and related automation technologies included with the most recent releases of the two Astra Control deployment models.
 
 [NOTE]
-Every Astra release is assigned a version of the form *YY.MM*. This value identities the release based on year (_YY_) and month (_MM_) when it became available. For example, Astra Control Service 23.01 became available in January 2023.
+Every Astra release is assigned a version number of the form *YY.MM*. This value identities the version based on the year (_YY_) and month (_MM_) it became available. For example, Astra Control Service 23.01 was released in January 2023.
 
 .Release cadence
 
-In general, updates to Astra Control Service and Astra Control Center occur at the same time. However, Astra Control Service has an accelerated release cadence which can result in one or more incremental updates beyond the most recent Astra Control Center release.
+In general, updates to Astra Control Service and Astra Control Center occur at the same time. However, Astra Control Service has an accelerated release cadence which can result in one or more incremental updates beyond the most recent Astra Control Center version.
 
-Because this site documents the REST API for both deployment models, there may be some features only available with the most recent Astra Control Service release. Any differences between the two deployment models are noted where needed.
+Because this site documents the REST API for both deployment models, there may be some features only available with the most recent Astra Control Service release. Any differences between the two deployment models are noted as needed.
 
 .Astra Control deployments
 
-The documentation at this site applies to the following Astra releases:
+The documentation at this site applies to the following Astra Control releases:
 
 * Astra Control Service 23.01
 
@@ -44,4 +44,4 @@ See the following pages and sites for more information about the current as well
 
 .Help us improve the documentation
 
-Follow us on Twitter *@NetAppDoc* for notifications about the NetApp documentation. You can also send us feedback by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending an email to _doccomments@netapp.com_.
+Follow us on Twitter *@NetAppDoc* for notifications about the NetApp documentation. You can also provide feedback by becoming a link:https://docs.netapp.com/us-en/contribute/[GitHub contributor^] or sending an email to _doccomments@netapp.com_.
