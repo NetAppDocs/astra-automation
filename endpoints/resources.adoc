@@ -22,7 +22,7 @@ The format of the path and full URL used to access the Astra Control resources i
 
 The primary resource endpoints provided in the Astra Control REST API are organized in three categories. Each resource can be accessed with the full set of CRUD operations (create, read, update, delete) except where noted.
 
-The *Release* column indicates the Astra release when the resource was first introduced. This field is bolded for resources newly added with the current release.
+The *Release* column indicates the Astra release when the resource was first introduced. This field is bolded for the resources most recently added to the REST API.
 
 === Core resources
 
