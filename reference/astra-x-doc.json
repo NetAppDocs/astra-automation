@@ -1827,7 +1827,7 @@
     "/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a specific LDAP group",
+          "title": "Retrieve an LDAP group",
           "category": "LDAP Group",
           "filename": "get-accounts-core-v1-ldapgroups-.html",
           "explorer": false
