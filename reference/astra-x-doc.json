@@ -1847,7 +1847,7 @@
     "/accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a LDAP user",
+          "title": "Retrieve an LDAP user",
           "category": "LDAP User",
           "filename": "get-accounts-core-v1-ldapusers-.html",
           "explorer": false
