@@ -1277,7 +1277,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses": {
       "get": {
         "x-doc": {
-          "title": "List the storage classes associated with a managed cluster",
+          "title": "List the storage classes for a managed cluster",
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses.html",
           "explorer": false
@@ -1317,7 +1317,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces": {
       "get": {
         "x-doc": {
-          "title": "List the namespaces associated with a managed cluster",
+          "title": "List the namespaces for a managed cluster",
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-managedclusters-namespaces.html",
           "explorer": false
