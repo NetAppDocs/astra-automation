@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Astra API",
-    "description": "The Astra API reference contains the details describing all the Astra Control REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the Astra REST API,"
+    "description": "The Astra API reference contains the details describing all the Astra Control REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the Astra REST API",
     "termsOfService": "https://www.netapp.com/media/10784-cloud-data-services-terms.pdf",
     "license": {
       "name": "Astra API License",
