@@ -11,5 +11,5 @@ entries:
     url: /get-started/prepare_to_use_workflows.html
   - title: Basic Kubernetes concepts
     url: /get-started/kubernetes_concepts.html
-  - title: API reference
-    url: /get-started/get-started.html
+  - title: Online API reference
+    url: /get-started/online-api-ref.html
