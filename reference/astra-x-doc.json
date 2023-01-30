@@ -1237,7 +1237,7 @@
     "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application assets associated with an app for a managed cluster",
+          "title": "List the application assets for a managed cluster",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets.html",
           "explorer": false
