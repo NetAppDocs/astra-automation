@@ -12,4 +12,4 @@ entries:
   - title: Basic Kubernetes concepts
     url: /get-started/kubernetes_concepts.html
   - title: Online API reference
-    url: /get-started/online-api-ref.html
+    url: /get-started/online_api_ref.html
