@@ -1529,7 +1529,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application asset resources for an app",
+          "title": "List the application assets for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets.html",
           "explorer": false
