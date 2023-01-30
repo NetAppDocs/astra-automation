@@ -5,7 +5,7 @@ keywords: reference, api reference
 summary: You can access the details of the Astra Control REST API calls, including the HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the REST API.
 ---
 
-= API reference
+= Online API reference
 :hardbreaks:
 :nofooter:
 :icons: font
