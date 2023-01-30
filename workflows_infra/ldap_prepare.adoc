@@ -91,4 +91,4 @@ Before attempting to reset the LDAP configuration, you must first disable LDAP a
 
 .REST API parameters
 
-The LDAP configuration workflows make REST API calls to accomplish the specific tasks. Each API call can include input parameters as shown in the provided samples. See link:../reference/api_reference.html[API reference] for information about how to locate the reference documentation.
+The LDAP configuration workflows make REST API calls to accomplish the specific tasks. Each API call can include input parameters as shown in the provided samples. See link:../get-started/online_api_ref.html[Online API reference] for information about how to locate the reference documentation.

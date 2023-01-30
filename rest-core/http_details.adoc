@@ -32,7 +32,7 @@ Each of the resource instances and collections available through the Astra Contr
 * Update
 * Delete
 
-For some of the Astra resources, only a subset of these operations is supported. You should review the link:../reference/api_reference.html[API reference] for more information about a specific API call.
+For some of the Astra resources, only a subset of these operations is supported. You should review the link:../get-started/online_api_ref.html[Online API reference] for more information about a specific API call.
 
 == HTTP methods
 
