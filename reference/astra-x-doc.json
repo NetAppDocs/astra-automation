@@ -1079,7 +1079,7 @@
     "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a cluster node",
+          "title": "Retrieve a cluster node for a cluster",
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes-.html",
           "explorer": false
@@ -1539,7 +1539,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application asset",
+          "title": "Retrieve an application asset for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets-.html",
           "explorer": false
