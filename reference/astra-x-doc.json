@@ -1,0 +1,1878 @@
+{
+  "paths": {
+    "/accounts": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new account",
+          "category": "Account",
+          "filename": "post-accounts.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all accounts", 
+          "category": "Account",
+          "filename": "get-accounts.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an account",
+          "category": "Account",
+          "filename": "get-accounts-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an account",
+          "category": "Account",
+          "filename": "put-accounts-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an account",
+          "category": "Account",
+          "filename": "delete-accounts-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/metrics": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve all metrics for an account",
+          "category": "Metrics",
+          "filename": "get-accounts-metrics.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/asups": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new ASUP resource",
+          "category": "ASUP",
+          "filename": "post-accounts-core-v1-asups.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all ASUP resources",
+          "category": "ASUP",
+          "filename": "get-accounts-core-v1-asups.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/asups/{asup_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an ASUP resource",
+          "category": "ASUP",
+          "filename": "get-accounts-core-v1-asups-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/certificates": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new certificate",
+          "category": "Certificate",
+          "filename": "post-accounts-core-v1-certificates.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all certificates",
+          "category": "Certificate",
+          "filename": "get-accounts-core-v1-certificates.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/certificates/{certificate_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a certificate",
+          "category": "Certificate",
+          "filename": "get-accounts-core-v1-certificates-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a certificate",
+          "category": "Certificate",
+          "filename": "put-accounts-core-v1-certificates-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a certificate",
+          "category": "Certificate",
+          "filename": "delete-accounts-core-v1-certificates-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/credentials": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new credential",
+          "category": "Credential",
+          "filename": "post-accounts-core-v1-credentials.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all credentials",
+          "category": "Credential",
+          "filename": "get-accounts-core-v1-credentials.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/credentials/{credential_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a credential",
+          "category": "Credential",
+          "filename": "get-accounts-core-v1-credentials-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a credential",
+          "category": "Credential",
+          "filename": "put-accounts-core-v1-credentials-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a credential",
+          "category": "Credential",
+          "filename": "delete-accounts-core-v1-credentials-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/entitlements": {
+      "get": {
+        "x-doc": {
+          "title": "List all entitlements",
+          "category": "Entitlement",
+          "filename": "get-accounts-core-v1-entitlements.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/entitlements/{entitlement_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an entitlement",
+          "category": "Entitlement",
+          "filename": "get-accounts-core-v1-entitlements-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/groups": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new group",
+          "category": "Group",
+          "filename": "post-accounts-core-v1-groups.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all groups",
+          "category": "Group",
+          "filename": "get-accounts-core-v1-groups.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/groups/{group_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a group",
+          "category": "Group",
+          "filename": "get-accounts-core-v1-groups-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a group",
+          "category": "Group",
+          "filename": "put-accounts-core-v1-groups-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a group",
+          "category": "Group",
+          "filename": "delete-accounts-core-v1-groups-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new role binding for a group",
+          "category": "Role Binding",
+          "filename": "post-accounts-core-v1-groups-rolebindings.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the role bindings for a group",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-groups-rolebindings.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a role binding for a group",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-groups-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a  role binding for a group",
+          "category": "Role Binding",
+          "filename": "put-accounts-core-v1-groups-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a role binding for a group",
+          "category": "Role Binding",
+          "filename": "delete-accounts-core-v1-groups-rolebindings-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/executionHooks": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new execution hook",
+          "category": "Execution Hook",
+          "filename": "post-accounts-core-v1-executionhooks.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all execution hooks",
+          "category": "Execution Hook",
+          "filename": "get-accounts-core-v1-executionhooks.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an execution hook",
+          "category": "Execution Hook",
+          "filename": "get-accounts-core-v1-executionhooks-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an execution hook",
+          "category": "Execution Hook",
+          "filename": "put-accounts-core-v1-executionhooks-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an execution hook",
+          "category": "Execution Hook",
+          "filename": "delete-accounts-core-v1-executionhooks-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/events": {
+      "get": {
+        "x-doc": {
+          "title": "List all events",
+          "category": "Event",
+          "filename": "get-accounts-core-v1-events.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/events/{event_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an event",
+          "category": "Event",
+          "filename": "get-accounts-core-v1-events-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/features": {
+      "get": {
+        "x-doc": {
+          "title": "List all features",
+          "category": "Feature",
+          "filename": "get-accounts-core-v1-features.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/features/{feature_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a feature",
+          "category": "Feature",
+          "filename": "get-accounts-core-v1-features-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/hookSources": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new hook source",
+          "category": "Hook Source",
+          "filename": "post-accounts-core-v1-hooksources.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all hook sources",
+          "category": "Hook Source",
+          "filename": "get-accounts-core-v1-hooksources.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a hook source",
+          "category": "Hook Source",
+          "filename": "get-accounts-core-v1-hooksources-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a hook source",
+          "category": "Hook Source",
+          "filename": "put-accounts-core-v1-hooksources-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a hook source",
+          "category": "Hook Source",
+          "filename": "delete-accounts-core-v1-hooksources-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/licenses": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new license",
+          "category": "License",
+          "filename": "post-accounts-core-v1-licenses.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all licenses",
+          "category": "License",
+          "filename": "get-accounts-core-v1-licenses.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/licenses/{license_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a license",
+          "category": "License",
+          "filename": "get-accounts-core-v1-licenses-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a license",
+          "category": "License",
+          "filename": "put-accounts-core-v1-licenses-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a license",
+          "category": "License",
+          "filename": "delete-accounts-core-v1-licenses-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/notifications": {
+      "get": {
+        "x-doc": {
+          "title": "List all notifications",
+          "category": "Notification",
+          "filename": "get-accounts-core-v1-notifications.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/notifications/{notification_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a notification",
+          "category": "Notification",
+          "filename": "get-accounts-core-v1-notifications-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/packages": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new package",
+          "category": "Package",
+          "filename": "post-accounts-core-v1-packages.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all packages",
+          "category": "Package",
+          "filename": "get-accounts-core-v1-packages.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/packages/{package_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a package",
+          "category": "Package",
+          "filename": "get-accounts-core-v1-packages-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a package",
+          "category": "Package",
+          "filename": "delete-accounts-core-v1-packages-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/roleBindings": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new role binding",
+          "category": "Role Binding",
+          "filename": "post-accounts-core-v1-rolebindings.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all role bindings",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-rolebindings.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a role binding",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a role binding",
+          "category": "Role Binding",
+          "filename": "put-accounts-core-v1-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a role binding",
+          "category": "Role Binding",
+          "filename": "delete-accounts-core-v1-rolebindings-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/settings": {
+      "get": {
+        "x-doc": {
+          "title": "List all settings",
+          "category": "Setting",
+          "filename": "get-accounts-core-v1-settings.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/settings/{setting_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a setting",
+          "category": "Setting",
+          "filename": "get-accounts-core-v1-settings-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a setting",
+          "category": "Setting",
+          "filename": "put-accounts-core-v1-settings-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/subscriptions": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new subscription",
+          "category": "Subscription",
+          "filename": "post-accounts-core-v1-subscriptions.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all subscriptions",
+          "category": "Subscription",
+          "filename": "get-accounts-core-v1-subscriptions.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/subscriptions/{subscription_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a subscription",
+          "category": "Subscription",
+          "filename": "get-accounts-core-v1-subscriptions-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a subscription",
+          "category": "Subscription",
+          "filename": "put-accounts-core-v1-subscriptions-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a subscription",
+          "category": "Subscription",
+          "filename": "delete-accounts-core-v1-subscriptions-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/upgrades": {
+      "get": {
+        "x-doc": {
+          "title": "List all upgrades",
+          "category": "Upgrade",
+          "filename": "get-accounts-core-v1-upgrades.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/upgrades/{upgrade_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an upgrade",
+          "category": "Upgrade",
+          "filename": "get-accounts-core-v1-upgrades-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an upgrade",
+          "category": "Upgrade",
+          "filename": "put-accounts-core-v1-upgrades-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new user",
+          "category": "User",
+          "filename": "post-accounts-core-v1-users.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all users",
+          "category": "User",
+          "filename": "get-accounts-core-v1-users.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a user",
+          "category": "User",
+          "filename": "get-accounts-core-v1-users-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a user",
+          "category": "User",
+          "filename": "put-accounts-core-v1-users-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a user",
+          "category": "User",
+          "filename": "delete-accounts-core-v1-users-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new role binding for a user",
+          "category": "Role Binding",
+          "filename": "post-accounts-core-v1-users-rolebindings.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the role bindings for a user",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-users-rolebindings.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a role binding for a user",
+          "category": "Role Binding",
+          "filename": "get-accounts-core-v1-users-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a role binding for a user",
+          "category": "Role Binding",
+          "filename": "put-accounts-core-v1-users-rolebindings-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a role binding for a user",
+          "category": "Role Binding",
+          "filename": "delete-accounts-core-v1-users-rolebindings-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/tokens": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new token for a user",
+          "category": "Token",
+          "filename": "post-accounts-core-v1-users-tokens.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the tokens for a user",
+          "category": "Token",
+          "filename": "get-accounts-core-v1-users-tokens.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a token",
+          "category": "Token",
+          "filename": "get-accounts-core-v1-users-tokens-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a token",
+          "category": "Token",
+          "filename": "put-accounts-core-v1-users-tokens-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a token",
+          "category": "Token",
+          "filename": "delete-accounts-core-v1-users-tokens-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications": {
+      "get": {
+        "x-doc": {
+          "title": "List the unread notifications for a user",
+          "category": "Unread Notification",
+          "filename": "get-accounts-core-v1-users-unreadnotifications.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an unread notification",
+          "category": "Unread Notification",
+          "filename": "get-accounts-core-v1-users-unreadnotifications-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an unread notification",
+          "category": "Unread Notification",
+          "filename": "delete-accounts-core-v1-users-unreadnotifications-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/appBackups": {
+      "get": {
+        "x-doc": {
+          "title": "List all application backups",
+          "category": "Application Backup",
+          "filename": "get-accounts-topology-v1-appbackups.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an application backup",
+          "category": "Application Backup",
+          "filename": "get-accounts-topology-v1-appbackups-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an application backup",
+          "category": "Application Backup",
+          "filename": "delete-accounts-topology-v1-appbackups-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/buckets": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new bucket",
+          "category": "Bucket",
+          "filename": "post-accounts-topology-v1-buckets.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all buckets",
+          "category": "Bucket",
+          "filename": "get-accounts-topology-v1-buckets.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/buckets/{bucket_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a bucket",
+          "category": "Bucket",
+          "filename": "get-accounts-topology-v1-buckets-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a bucket",
+          "category": "Bucket",
+          "filename": "put-accounts-topology-v1-buckets-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a bucket",
+          "category": "Bucket",
+          "filename": "delete-accounts-topology-v1-buckets-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new cloud",
+          "category": "Cloud",
+          "filename": "post-accounts-topology-v1-clouds.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all clouds",
+          "category": "Cloud",
+          "filename": "get-accounts-topology-v1-clouds.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cloud",
+          "category": "Cloud",
+          "filename": "get-accounts-topology-v1-clouds-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a cloud",
+          "category": "Cloud",
+          "filename": "put-accounts-topology-v1-clouds-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a cloud",
+          "category": "Cloud",
+          "filename": "delete-accounts-topology-v1-clouds-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new cluster for a cloud",
+          "category": "Cluster",
+          "filename": "post-accounts-topology-v1-clouds-clusters.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the clusters for a cloud",
+          "category": "Cluster",
+          "filename": "get-accounts-topology-v1-clouds-clusters.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cluster for a cloud",
+          "category": "Cluster",
+          "filename": "get-accounts-topology-v1-clouds-clusters-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a cluster for a cloud",
+          "category": "Cluster",
+          "filename": "put-accounts-topology-v1-clouds-clusters-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a cluster for a cloud",
+          "category": "Cluster",
+          "filename": "delete-accounts-topology-v1-clouds-clusters-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes": {
+      "get": {
+        "x-doc": {
+          "title": "List the cluster nodes for a cloud",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cluster node for a cloud",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses": {
+      "get": {
+        "x-doc": {
+          "title": "List the storage classes for a cloud",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a storage class for a cloud",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces": {
+      "get": {
+        "x-doc": {
+          "title": "List the namespaces for a cloud",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-clouds-clusters-namespaces.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a namespace for a cloud",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-clouds-clusters-namespaces-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters": {
+      "get": {
+        "x-doc": {
+          "title": "List all clusters",
+          "category": "Cluster",
+          "filename": "get-accounts-topology-v1-clusters.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cluster",
+          "category": "Cluster",
+          "filename": "get-accounts-topology-v1-clusters-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a cluster",
+          "category": "Cluster",
+          "filename": "put-accounts-topology-v1-clusters-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a cluster",
+          "category": "Cluster",
+          "filename": "delete-accounts-topology-v1-clusters-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes": {
+      "get": {
+        "x-doc": {
+          "title": "List the cluster nodes for a cluster",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-clusters-clusternodes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cluster node for a cluster",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-clusters-clusternodes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses": {
+      "get": {
+        "x-doc": {
+          "title": "List the storage classes for a cluster",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-clusters-storageclasses.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a storage class for a cluster",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-clusters-storageclasses-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces": {
+      "get": {
+        "x-doc": {
+          "title": "List the namespaces for a cluster",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-clusters-namespaces.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces/{namespace_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a namespace for a cluster",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-clusters-namespaces-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/namespaces": {
+      "get": {
+        "x-doc": {
+          "title": "List all namespaces",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-namespaces.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/namespaces/{namespace_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a namespace",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-namespaces-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new managed cluster",
+          "category": "Managed Cluster",
+          "filename": "post-accounts-topology-v1-managedclusters.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all managed clusters",
+          "category": "Managed Cluster",
+          "filename": "get-accounts-topology-v1-managedclusters.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a managed cluster",
+          "category": "Managed Cluster",
+          "filename": "get-accounts-topology-v1-managedclusters-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a managed cluster",
+          "category": "Managed Cluster",
+          "filename": "put-accounts-topology-v1-managedclusters-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a managed cluster",
+          "category": "Managed Cluster",
+          "filename": "delete-accounts-topology-v1-managedclusters-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new app for a managed cluster",
+          "category": "App",
+          "filename": "post-accounts-topology-v2-managedclusters-apps.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the apps for a managed cluster",
+          "category": "App",
+          "filename": "get-accounts-topology-v2-managedclusters-apps.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an app for a managed cluster",
+          "category": "App",
+          "filename": "get-accounts-topology-v2-managedclusters-apps-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an app for a managed cluster",
+          "category": "App",
+          "filename": "put-accounts-topology-v2-managedclusters-apps-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an app for a managed cluster",
+          "category": "App",
+          "filename": "delete-accounts-topology-v2-managedclusters-apps-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets": {
+      "get": {
+        "x-doc": {
+          "title": "List the application assets for a managed cluster",
+          "category": "Application Asset",
+          "filename": "get-accounts-topology-v1-managedclusters-apps-appassets.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an application asset for a managed cluster",
+          "category": "Application Asset",
+          "filename": "get-accounts-topology-v1-managedclusters-apps-appassets-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes": {
+      "get": {
+        "x-doc": {
+          "title": "List the cluster nodes for a managed cluster",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-managedclusters-clusternodes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a cluster node for a managed cluster",
+          "category": "Cluster Node",
+          "filename": "get-accounts-topology-v1-managedclusters-clusternodes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses": {
+      "get": {
+        "x-doc": {
+          "title": "List the storage classes for a managed cluster",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-managedclusters-storageclasses.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a storage class for a managed cluster",
+          "category": "Storage Class",
+          "filename": "get-accounts-topology-v1-managedclusters-storageclasses-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes": {
+      "get": {
+        "x-doc": {
+          "title": "List the volumes for a managed cluster",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-managedclusters-volumes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a volume for a managed cluster",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-managedclusters-volumes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces": {
+      "get": {
+        "x-doc": {
+          "title": "List the namespaces for a managed cluster",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-managedclusters-namespaces.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a namespace for a managed cluster",
+          "category": "Namespace",
+          "filename": "get-accounts-topology-v1-managedclusters-namespaces-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources": {
+      "get": {
+        "x-doc": {
+          "title": "List the K8s API resources for a managed cluster",
+          "category": "Kubernetes API Resource",
+          "filename": "get-accounts-topology-v1-managedclusters-apiresources.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a K8s API resource",
+          "category": "Kubernetes API Resource",
+          "filename": "get-accounts-topology-v1-managedclusters-apiresources-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/storageBackends": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new storage backend",
+          "category": "Storage Backend",
+          "filename": "post-accounts-topology-v1-storagebackends.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all storage backends",
+          "category": "Storage Backend",
+          "filename": "get-accounts-topology-v1-storagebackends.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a storage backend",
+          "category": "Storage Backend",
+          "filename": "get-accounts-topology-v1-storagebackends-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a storage backend",
+          "category": "Storage Backend",
+          "filename": "put-accounts-topology-v1-storagebackends-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a storage backend",
+          "category": "Storage Backend",
+          "filename": "delete-accounts-topology-v1-storagebackends-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes": {
+      "get": {
+        "x-doc": {
+          "title": "List the volumes for a storage backend",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-storagebackends-volumes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a volume for a storage backend",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-storagebackends-volumes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/volumes": {
+      "get": {
+        "x-doc": {
+          "title": "List all volumes",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-volumes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/topology/v1/volumes/{volume_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a volume",
+          "category": "Volume",
+          "filename": "get-accounts-topology-v1-volumes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/appMirrors": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new AppMirror resource",
+          "category": "AppMirror",
+          "filename": "post-accounts-k8s-v1-appmirrors.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all AppMirror resources",
+          "category": "AppMirror",
+          "filename": "get-accounts-k8s-v1-appmirrors.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an AppMirror resource",
+          "category": "AppMirror",
+          "filename": "get-accounts-k8s-v1-appmirrors-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an AppMirror resource",
+          "category": "AppMirror",
+          "filename": "put-accounts-k8s-v1-appmirrors-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an AppMirror resource",
+          "category": "AppMirror",
+          "filename": "delete-accounts-k8s-v1-appmirrors-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v2/apps": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new app",
+          "category": "App",
+          "filename": "post-accounts-k8s-v2-apps.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List all apps",
+          "category": "App",
+          "filename": "get-accounts-k8s-v2-apps.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v2/apps/{app_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an app",
+          "category": "App",
+          "filename": "get-accounts-k8s-v2-apps-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an app",
+          "category": "App",
+          "filename": "put-accounts-k8s-v2-apps-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an app",
+          "category": "App",
+          "filename": "delete-accounts-k8s-v2-apps-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets": {
+      "get": {
+        "x-doc": {
+          "title": "List the application assets for an app",
+          "category": "Application Asset",
+          "filename": "get-accounts-k8s-v1-apps-appassets.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets/{appAsset_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an application asset for an app",
+          "category": "Application Asset",
+          "filename": "get-accounts-k8s-v1-apps-appassets-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new AppMirror resource for an app",
+          "category": "AppMirror",
+          "filename": "post-accounts-k8s-v1-apps-appmirrors.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the AppMirror resources for an app",
+          "category": "AppMirror",
+          "filename": "get-accounts-k8s-v1-apps-appmirrors.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an AppMirror resource for an app",
+          "category": "AppMirror",
+          "filename": "get-accounts-k8s-v1-apps-appmirrors-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an AppMirror resource for an app",
+          "category": "AppMirror",
+          "filename": "put-accounts-k8s-v1-apps-appmirrors-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an AppMirror resource for an app",
+          "category": "AppMirror",
+          "filename": "delete-accounts-k8s-v1-apps-appmirrors-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes": {
+      "get": {
+        "x-doc": {
+          "title": "List the volumes for an app",
+          "category": "Volume",
+          "filename": "get-accounts-k8s-v1-apps-volumes.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a volume for an app",
+          "category": "Volume",
+          "filename": "get-accounts-k8s-v1-apps-volumes-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new schedule for an app",
+          "category": "Schedule",
+          "filename": "post-accounts-k8s-v1-apps-schedules.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the schedules for an app",
+          "category": "Schedule",
+          "filename": "get-accounts-k8s-v1-apps-schedules.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a schedule",
+          "category": "Schedule",
+          "filename": "get-accounts-k8s-v1-apps-schedules-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify a schedule",
+          "category": "Schedule",
+          "filename": "put-accounts-k8s-v1-apps-schedules-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete a schedule",
+          "category": "Schedule",
+          "filename": "delete-accounts-k8s-v1-apps-schedules-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new application backup for an app",
+          "category": "Application Backup",
+          "filename": "post-accounts-k8s-v1-apps-appbackups.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the application backups for an app",
+          "category": "Application Backup",
+          "filename": "get-accounts-k8s-v1-apps-appbackups.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an application backup for an app",
+          "category": "Application Backup",
+          "filename": "get-accounts-k8s-v1-apps-appbackups-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an application backup for an app",
+          "category": "Application Backup",
+          "filename": "delete-accounts-k8s-v1-apps-appbackups-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new application snapshot for an app",
+          "category": "Application Snapshot",
+          "filename": "post-accounts-k8s-v1-apps-appsnaps.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the application snapshots for an app",
+          "category": "Application Snapshot",
+          "filename": "get-accounts-k8s-v1-apps-appsnaps.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an application snapshot",
+          "category": "Application Snapshot",
+          "filename": "get-accounts-k8s-v1-apps-appsnaps-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an application snapshot",
+          "category": "Application Snapshot",
+          "filename": "delete-accounts-k8s-v1-apps-appsnaps-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new execution hook for an app",
+          "category": "Execution Hook",
+          "filename": "post-accounts-k8s-v1-apps-executionhooks.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the execution hooks for an app",
+          "category": "Execution Hook",
+          "filename": "get-accounts-k8s-v1-apps-executionhooks.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an execution hook for an app",
+          "category": "Execution Hook",
+          "filename": "get-accounts-k8s-v1-apps-executionhooks-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an execution hook for an app",
+          "category": "Execution Hook",
+          "filename": "put-accounts-k8s-v1-apps-executionhooks-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an execution hook for an app",
+          "category": "Execution Hook",
+          "filename": "delete-accounts-k8s-v1-apps-executionhooks-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides": {
+      "post": {
+        "x-doc": {
+          "title": "Create a new execution hook override resource for an app",
+          "category": "Execution Hook Override",
+          "filename": "post-accounts-k8s-v1-apps-executionhookoverrides.html",
+          "explorer": false
+        }
+      },
+      "get": {
+        "x-doc": {
+          "title": "List the execution hook override resources for an app",
+          "category": "Execution Hook Override",
+          "filename": "get-accounts-k8s-v1-apps-executionhookoverrides.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an execution hook override resource",
+          "category": "Execution Hook Override",
+          "filename": "get-accounts-k8s-v1-apps-executionhookoverrides-.html",
+          "explorer": false
+        }
+      },
+      "put": {
+        "x-doc": {
+          "title": "Modify an execution hook override resource",
+          "category": "Execution Hook Override",
+          "filename": "put-accounts-k8s-v1-apps-executionhookoverrides-.html",
+          "explorer": false
+        }
+      },
+      "delete": {
+        "x-doc": {
+          "title": "Delete an execution hook override resource",
+          "category": "Execution Hook Override",
+          "filename": "delete-accounts-k8s-v1-apps-executionhookoverrides-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/ldapGroups": {
+      "get": {
+        "x-doc": {
+          "title": "List all LDAP groups",
+          "category": "LDAP Group",
+          "filename": "get-accounts-core-v1-ldapgroups.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an LDAP group",
+          "category": "LDAP Group",
+          "filename": "get-accounts-core-v1-ldapgroups-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/ldapUsers": {
+      "get": {
+        "x-doc": {
+          "title": "List all LDAP users",
+          "category": "LDAP User",
+          "filename": "get-accounts-core-v1-ldapusers.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve an LDAP user",
+          "category": "LDAP User",
+          "filename": "get-accounts-core-v1-ldapusers-.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/tasks": {
+      "get": {
+        "x-doc": {
+          "title": "List all tasks",
+          "category": "Task",
+          "filename": "get-accounts-core-v1-tasks.html",
+          "explorer": false
+        }
+      }
+    },
+    "/accounts/{account_id}/core/v1/tasks/{task_id}": {
+      "get": {
+        "x-doc": {
+          "title": "Retrieve a task",
+          "category": "Task",
+          "filename": "get-accounts-core-v1-tasks-.html",
+          "explorer": false
+        }
+      }
+    }
+  }
+}

@@ -3,9 +3,11 @@ settings:
   name: Astra Automation
   internal:
     pdf_enabled: true
+    api_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
+    api_enabled: true
   rss_page: "rn/whats_new.html"
 sidebar:
   entries:
