@@ -45,4 +45,4 @@ Based on the structure presented above, a typical path to an endpoint is: `/acco
 
 * Complete URL
 +
-The full URL for the corresponding endpoint is: `https://astra.netapp.io/accounts/{account_id}/core/v1/users`.
+The full URL for the corresponding endpoint is: `\https://astra.netapp.io/accounts/{account_id}/core/v1/users`.
