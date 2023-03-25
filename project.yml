@@ -14,7 +14,7 @@ settings:
       url: /astra-automation
       version-number: "23.01"
     - name: Astra Automation
-      url: /astra-automation-2208
+      url: https://docs.netapp.com/us-en/astra-automation-2208/
       version-number: "22.08"
 sidebar:
   entries:
