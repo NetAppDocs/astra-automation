@@ -9,6 +9,13 @@ settings:
     harmony_enabled: true
     api_enabled: true
   rss_page: "rn/whats_new.html"
+  versions:
+    - name: Astra Automation
+      url: /astra-automation
+      version-number: "23.01"
+    - name: Astra Automation
+      url: /astra-automation-2208
+      version-number: "22.08"
 sidebar:
   entries:
     - title: Astra Control Automation docs
