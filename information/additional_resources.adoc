@@ -33,6 +33,10 @@ Documentation for the current release of the Astra Trident software, an open sou
 +
 Central location for accessing all the Astra documentation for both on-premises and public cloud deployments.
 
+* https://discord.gg/NetApp[Discord^]
++
+Community support for Astra Control and other NetApp products.
+
 == NetApp cloud resources
 
 * https://bluexp.netapp.com/[NetApp BlueXP^]
