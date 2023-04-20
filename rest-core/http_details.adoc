@@ -111,7 +111,7 @@ See https://www.rfc-editor.org/rfc/rfc7232.txt[RFC 7232^] and https://www.rfc-ed
 
 == Query parameters
 
-The following query parameters are available for use with resource collections. See link:../additional/working_with_collections.html[Working with collections] for more information.
+The following query parameters are available for use with resource collections. See link:../additional/work_with_collections.html[Work with collections] for more information.
 
 // got from oav_v1.py -o top-c1
 
@@ -138,7 +138,7 @@ The following query parameters are available for use with resource collections. 
 The HTTP status codes used by the Astra Control REST API are described below.
 
 [NOTE]
-The Astra Control REST API also uses the *Problem Details for HTTP APIs* standard. See link:diagnostics_support.html[Diagnostics and support] for more information.
+The Astra Control REST API also uses the *Problem Details for HTTP APIs* standard. See link:../additional/diagnostics_support.html[Diagnostics and support] for more information.
 
 [cols="15,20,65"*,options="header"]
 |===
