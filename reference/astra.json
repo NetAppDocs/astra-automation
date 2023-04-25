@@ -44489,7 +44489,7 @@
               "type": "object",
               "properties": {
                 "$ref": {
-                  "$ref": "#/components/schemas/type_astra_api_uri"
+                  "$ref": "#/components/schemas/type_astra_api_relative_uri"
                 }
               },
               "required": [
