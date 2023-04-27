@@ -21,15 +21,13 @@ This release includes selective updates to the REST API.
 
 === Selective restore operations
 
-xxx
+You can selectively include or exclude application resources during restore operations. This is done using a filter rule based on a specific namespace, label, or `GroupVersionKind` value.
 
 === Support for data-only applications
 
-xxx
+Support for managing applications has been extended to data-only apps.
 
-=== Enhanced execution hook use
-
-xxx
+//=== Enhanced execution hook use (ACC)
 
 == 17 January 2023 (23.01)
 
