@@ -9,3 +9,5 @@ entries:
     url: /additional/diagnostics_support.html
   - title: Revoke an API token
     url: /additional/revoke_token.html
+  - title: Rotate credentials
+    url: /additional/rotate_credentials.html
