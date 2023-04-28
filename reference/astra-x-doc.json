@@ -2082,7 +2082,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users": {
       "post": {
         "x-doc": {
-          "title": "Create a new user in a group",
+          "title": "Create a new user for a group",
           "category": "User",
           "filename": "post-accounts-core-v1-groups-users.html",
           "subcategory": null
@@ -2090,7 +2090,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "List the users in a group",
+          "title": "List the users for a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users.html",
           "subcategory": null
@@ -2100,7 +2100,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a user in a group",
+          "title": "Retrieve a user for a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2108,7 +2108,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modify a user in a group",
+          "title": "Modify a user for a group",
           "category": "User",
           "filename": "put-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2116,7 +2116,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a user in a group",
+          "title": "Delete a user for a group",
           "category": "User",
           "filename": "delete-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2382,7 +2382,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "List the users in a group associated with a user",
+          "title": "List the users for group associated with a user",
           "category": "User",
           "filename": "get-accounts-core-v1-users-groups-users.html",
           "subcategory": null
@@ -2392,7 +2392,7 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/users/{user_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a user in a group associated with a user",
+          "title": "Retrieve a user for a group associated with a user",
           "category": "User",
           "filename": "get-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
@@ -2400,7 +2400,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modify a user in a group associated with a user",
+          "title": "Modify a user for a group associated with a user",
           "category": "User",
           "filename": "put-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
@@ -2408,7 +2408,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a user in a group associated with a user",
+          "title": "Delete a user for a group associated with a user",
           "category": "User",
           "filename": "delete-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
