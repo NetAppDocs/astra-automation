@@ -30,7 +30,11 @@ Before using the *kubeconfig* file, you should perform the following operations:
 If you receive the kubeconfig file formatted as YAML, you need to convert it to JSON.
 
 .Encode JSON in base64
-You must encode the JSON file in base64. For example:
+You must encode the JSON file in base64.
+
+.Example
+
+Here is an example of converting the kubeconfig file from YAML to JSON and then encoding it in base64:
 
 `yq -o=json ~/.kube/config | base64`
 
