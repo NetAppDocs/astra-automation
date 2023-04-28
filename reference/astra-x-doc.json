@@ -2250,7 +2250,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the groups for a user in a group",
+          "title": "List the groups for a user in a group",
           "category": "Group",
           "filename": "get-accounts-core-v1-groups-users-groups.html",
           "subcategory": null
@@ -2338,7 +2338,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the role bindings for a group associated with a user",
+          "title": "List the role bindings for a group associated with a user",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-groups-rolebindings.html",
           "subcategory": null
