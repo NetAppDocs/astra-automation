@@ -2082,7 +2082,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users": {
       "post": {
         "x-doc": {
-          "title": "Creates a new user resource for a specific group",
+          "title": "Create a new user for a group",
           "category": "User",
           "filename": "post-accounts-core-v1-groups-users.html",
           "subcategory": null
@@ -2126,7 +2126,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Creates a new rolebinding resource for a specific user",
+          "title": "Create a new role binding resource for a user in a group",
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-groups-users-rolebindings.html",
           "subcategory": null
@@ -2134,7 +2134,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the rolebinding resources associated with a specific user",
+          "title": "List the role bindings for a user in a group",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-users-rolebindings.html",
           "subcategory": null
@@ -2144,7 +2144,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific rolebinding resource",
+          "title": "Retrieve a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-users-rolebindings-.html",
           "subcategory": null
@@ -2152,7 +2152,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific rolebinding resource",
+          "title": "Modify a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-groups-users-rolebindings-.html",
           "subcategory": null
@@ -2160,7 +2160,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific rolebinding resource",
+          "title": "Delete a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-groups-users-rolebindings-.html",
           "subcategory": null
@@ -2170,7 +2170,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens": {
       "post": {
         "x-doc": {
-          "title": "Creates a new token resource for a specific user",
+          "title": "Create a new token for a user in a group",
           "category": "Token",
           "filename": "post-accounts-core-v1-groups-users-tokens.html",
           "subcategory": null
@@ -2178,7 +2178,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the token resources associated with a specific user",
+          "title": "List the tokens for a user in a group",
           "category": "Token",
           "filename": "get-accounts-core-v1-groups-users-tokens.html",
           "subcategory": null
@@ -2188,7 +2188,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific token resource",
+          "title": "Retrieve a token for a user in a group",
           "category": "Token",
           "filename": "get-accounts-core-v1-groups-users-tokens-.html",
           "subcategory": null
@@ -2196,7 +2196,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific token resource",
+          "title": "Modify a token for a user in a group",
           "category": "Token",
           "filename": "put-accounts-core-v1-groups-users-tokens-.html",
           "subcategory": null
@@ -2204,7 +2204,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific token resource",
+          "title": "Delete a token for a user in a group",
           "category": "Token",
           "filename": "delete-accounts-core-v1-groups-users-tokens-.html",
           "subcategory": null
@@ -2214,7 +2214,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications": {
       "get": {
         "x-doc": {
-          "title": "Lists the unreadnotification resources associated with a specific user",
+          "title": "List the unread notifications for a user in a group",
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-groups-users-unreadnotifications.html",
           "subcategory": null
@@ -2224,7 +2224,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific unreadnotification resource",
+          "title": "Retrieve an unread notification for a user in a group",
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-groups-users-unreadnotifications-.html",
           "subcategory": null
@@ -2232,7 +2232,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific unreadnotification resource",
+          "title": "Delete an unread notification for a user in a group",
           "category": "Unread Notification",
           "filename": "delete-accounts-core-v1-groups-users-unreadnotifications-.html",
           "subcategory": null
@@ -2242,7 +2242,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/groups": {
       "post": {
         "x-doc": {
-          "title": "Create a new group resource for a user in a group",
+          "title": "Create a new group for a user in a group",
           "category": "Group",
           "filename": "post-accounts-core-v1-groups-users-groups.html",
           "subcategory": null
@@ -2250,7 +2250,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the group resources for a user in a group",
+          "title": "Lists the groups for a user in a group",
           "category": "Group",
           "filename": "get-accounts-core-v1-groups-users-groups.html",
           "subcategory": null
@@ -2260,7 +2260,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/groups/{group_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve a group resource for a user in a group",
+          "title": "Retrieve a group for a user in a group",
           "category": "Group",
           "filename": "get-accounts-core-v1-groups-users-groups-.html",
           "subcategory": null
@@ -2268,7 +2268,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modify a group resource for a user in a group",
+          "title": "Modify a group for a user in a group",
           "category": "Group",
           "filename": "put-accounts-core-v1-groups-users-groups-.html",
           "subcategory": null
@@ -2276,7 +2276,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Delete group resource for a user in a group",
+          "title": "Delete a group for a user in a group",
           "category": "Group",
           "filename": "delete-accounts-core-v1-groups-users-groups-.html",
           "subcategory": null
@@ -2294,7 +2294,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "List group resources for a user",
+          "title": "List groups for a user",
           "category": "Group",
           "filename": "get-accounts-core-v1-users-groups.html",
           "subcategory": null
@@ -2330,7 +2330,7 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Create a new rolebinding for a group",
+          "title": "Create a new role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-users-groups-rolebindings.html",
           "subcategory": null
@@ -2338,7 +2338,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the rolebinding resources associated with a specific group",
+          "title": "Lists the role bindings for a group associated with a user",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-groups-rolebindings.html",
           "subcategory": null
@@ -2348,7 +2348,7 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific rolebinding resource(1)",
+          "title": "Retrieve a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-groups-rolebindings-.html",
           "subcategory": null
@@ -2356,7 +2356,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific rolebinding resource(1)",
+          "title": "Modify a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-users-groups-rolebindings-.html",
           "subcategory": null
@@ -2364,7 +2364,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific rolebinding resource(1)",
+          "title": "Delete a specific role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-users-groups-rolebindings-.html",
           "subcategory": null
@@ -2374,7 +2374,7 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/users": {
       "post": {
         "x-doc": {
-          "title": "Creates a new user resource for a specific group(1)",
+          "title": "Create a new user for a group associated with a user",
           "category": "User",
           "filename": "post-accounts-core-v1-users-groups-users.html",
           "subcategory": null
@@ -2382,7 +2382,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the user resources associated with a specific group(1)",
+          "title": "List the users in a group associated with a user",
           "category": "User",
           "filename": "get-accounts-core-v1-users-groups-users.html",
           "subcategory": null
@@ -2392,7 +2392,7 @@
     "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/users/{user_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific user resource(1)",
+          "title": "Retrieve a user in a group associated with a user",
           "category": "User",
           "filename": "get-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
@@ -2400,7 +2400,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific user resource(1)",
+          "title": "Modify a user in a group associated with a user",
           "category": "User",
           "filename": "put-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
@@ -2408,7 +2408,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific user resource(1)",
+          "title": "Delete a user in a group associated with a user",
           "category": "User",
           "filename": "delete-accounts-core-v1-users-groups-users-.html",
           "subcategory": null
@@ -2418,7 +2418,7 @@
     "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application assets for a specific application backup",
+          "title": "List the application assets for an application backup",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-appbackups-appassets.html",
           "subcategory": null
@@ -2428,7 +2428,7 @@
     "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application asset resource",
+          "title": "Retrieve an application asset from an application backup",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-appbackups-appassets-.html",
           "subcategory": null
@@ -2438,7 +2438,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets": {
       "get": {
         "x-doc": {
-          "title": "List the application assets for an app associated with an application backup",
+          "title": "List the application assets from an application backup for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appbackups-appassets.html",
           "subcategory": null
@@ -2448,7 +2448,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application asset for an app from an application backup",
+          "title": "Retrieve an application asset from an application backup for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appbackups-appassets-.html",
           "subcategory": null
@@ -2468,7 +2468,7 @@
     "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieve an application asset for an application and an application snapshot",
+          "title": "Retrieve an application asset for an application snapshot and app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appsnaps-appassets-.html",
           "subcategory": null
