@@ -2082,7 +2082,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users": {
       "post": {
         "x-doc": {
-          "title": "Create a new user for a group",
+          "title": "Create a new user in a group",
           "category": "User",
           "filename": "post-accounts-core-v1-groups-users.html",
           "subcategory": null
@@ -2090,7 +2090,7 @@
       },
       "get": {
         "x-doc": {
-          "title": "Lists the user resources associated with a specific group",
+          "title": "List the users in a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users.html",
           "subcategory": null
@@ -2100,7 +2100,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}": {
       "get": {
         "x-doc": {
-          "title": "Retrieves a specific user resource",
+          "title": "Retrieve a user in a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2108,7 +2108,7 @@
       },
       "put": {
         "x-doc": {
-          "title": "Modifies a specific user resource",
+          "title": "Modify a user in a group",
           "category": "User",
           "filename": "put-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2116,7 +2116,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Deletes a specific user resource",
+          "title": "Delete a user in a group",
           "category": "User",
           "filename": "delete-accounts-core-v1-groups-users-.html",
           "subcategory": null
@@ -2126,7 +2126,7 @@
     "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings": {
       "post": {
         "x-doc": {
-          "title": "Create a new role binding resource for a user in a group",
+          "title": "Create a new role binding for a user in a group",
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-groups-users-rolebindings.html",
           "subcategory": null
@@ -2364,7 +2364,7 @@
       },
       "delete": {
         "x-doc": {
-          "title": "Delete a specific role binding for a group associated with a user",
+          "title": "Delete a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-users-groups-rolebindings-.html",
           "subcategory": null
