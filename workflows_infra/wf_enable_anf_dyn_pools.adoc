@@ -1,0 +1,54 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_enable_anf_dyn_pools.html
+keywords: Azure NetApp Files, ANF, dynamic ANF pools, subscription id
+summary: When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the pools.
+---
+
+= Enable dynamic ANF pools for self-managed clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the pools.
+
+[NOTE]
+Dynamic ANF pools is feature of the Astra managed apps that use an Azure NetApp Files (ANF) storage backend. When backing up these apps, Astra automatically expands and contracts the persistent volume by a factor of 1.5. This ensures there is enough space for the backup without incurring an additional permanent charge. See https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups[Azure application backups^] for more information.
+
+=== 1. Add the Azure subscription identifier
+
+Perform the following REST API call.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/credentials
+|===
+
+.JSON input example
+[source,json]
+{
+  "name": "astra.netapp.io/labels/read-only/azure/subscriptionID",
+  "value": "b200155f-001a-43be-87be-3edde83acef4"
+}
+
+.Curl example: Return all data for all storage backends
+[source,curl]
+curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+
+=== 2. Add a bucket if needed
+
+You should add a bucket to the managed application if needed.
+
+=== 3. Take a backup of the managed app
+
+Perform the workflow link:../workflows/wf_create_backup.html[Create a backup for an app]. The capacity pool where the original persistent volume is present will expand and shrink automatically.
+
+=== 4. Review the event log
+
+Activity events are logged during the backup. Perform the workflow link:../workflows/wf_list_notifications.html[List the notifications] to view the messages.
