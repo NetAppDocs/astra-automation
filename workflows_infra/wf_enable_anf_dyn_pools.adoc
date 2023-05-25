@@ -31,15 +31,38 @@ Perform the following REST API call.
 |===
 
 .JSON input example
+[%collapsible%closed]
 [source,json]
 {
-  "name": "astra.netapp.io/labels/read-only/azure/subscriptionID",
-  "value": "b200155f-001a-43be-87be-3edde83acef4"
+  "keyStore": {
+    "privKey": "SGkh",
+    "pubKey": "UGhpcyCpcyBhbiBleGFtcGxlLg==",
+    "base64": "fwogICAgJmFwcElkIjogIjY4ZmSiODFiLTY0YWYtNDdjNC04ZjUzLWE2NDdlZTUzMGZkZCIsCiAgICAiZGlzcGxheU5hbWUiOiAic3AtYXN0cmEtZGV2LXFhIiwKICAgICJuYW1lIjogImh0dHA6Ly9zcC1hc3RyYS1kZXYtcWEiLAogICAgInBhc3N3b3JkIjogIllLQThRfk9IVVJkZWZYM0pSTWJlLnpUeFBleVE0UnNwTG9DcUJjazAiLAogICAgInRlbmFudCI6ICIwMTFjZGY2Yy03NTEyLTQ3MDUtYjI0ZS03NzIxYWZkOGNhMzciLAogICAgInN1YnNjcmlwdGlvbklkIjogImIyMDAxNTVmLTAwMWEtNDNiZS04N2JlLTNlZGRlODNhY2VmNCIKfQ=="
+  },
+  "name": "myCert",
+  "type": "application/astra-credential",
+  "version": "1.1",
+  "metadata": {
+    "labels": [
+      {
+        "name": "astra.netapp.io/labels/read-only/credType",
+        "value": "service-account"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/cloudName",
+        "value": "OCP"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/azure/subscriptionID",
+        "value": "b212156f-001a-43be-87be-3edde83acef5"
+      }
+    ]
+  }
 }
 
-.Curl example: Return all data for all storage backends
+.Curl example
 [source,curl]
-curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Content-Type: application/astra-credential+json'
 
 === 2. Add a bucket if needed
 
