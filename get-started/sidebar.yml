@@ -13,7 +13,7 @@ entries:
     url: /get-started/kubernetes_concepts.html
   - title: Online API reference
     entries:
-      - title: Access the API reference documentation
+      - title: Access the reference doc
         url: /get-started/online_api_ref.html
-      - title: Issue an API call
+      - title: Issue a REST API call
         url: /get-started/online_api_call.html
