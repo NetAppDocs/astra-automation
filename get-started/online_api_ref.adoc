@@ -17,11 +17,12 @@ You can access the details of the Astra Control REST API calls, including the HT
 
 .Before you begin
 
-You need credentials to sign into the web user interface for your Astra deployment. An API token is not required to access and view the reference documentation. The procedure for accessing the reference doc is the same for Astra Control Service and Astra Control Center. Only the URL is different.
+You need credentials to sign in to the Astra web user interface for your deployment. The procedure for accessing the reference documentation is the same for Astra Control Service and Astra Control Center. Only the URL is different. An API token is not required to access and view the reference doc.
+
 
 .Steps
 
-. Sign in to Astra using your account credentials.
+. Sign in to Astra using your account credentials as follows:
 +
 * Astra Control Service: link:https://astra.netapp.io[https://astra.netapp.io^]
 * Astra Control Center: Use the URL for your local environment as established during installation
@@ -32,8 +33,8 @@ You need credentials to sign into the web user interface for your Astra deployme
 
 .Result
 
-The Swagger page is launched in a new window or tab. Notice the URL includes the ID for the account you signed in with.
+The Swagger page is launched in a new window or tab. Notice the URL includes the account ID for the account you signed in with.
 
 .What's next?
 
-You can optionally execute an API call from the Swagger page. See link:../get-started/online_api_call.html[Issue a REST API call] for more information.
+You can optionally execute an API call from the Swagger page. See link:../get-started/online_api_call.html[Issue an Astra REST API call] for more information.

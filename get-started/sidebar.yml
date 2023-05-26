@@ -15,5 +15,5 @@ entries:
     entries:
       - title: Access the reference doc
         url: /get-started/online_api_ref.html
-      - title: Issue a REST API call
+      - title: Issue an Astra REST API call
         url: /get-started/online_api_call.html
