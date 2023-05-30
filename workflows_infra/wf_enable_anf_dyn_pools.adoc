@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: workflows_infra/wf_enable_anf_dyn_pools.html
 keywords: Azure NetApp Files, ANF, dynamic ANF pools, subscription id
-summary: When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the pools.
+summary: When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the capacity pools.
 ---
 
 = Enable dynamic ANF pools for self-managed clusters
@@ -13,14 +13,17 @@ summary: When backing up a managed app in a private on-premises cluster that has
 :imagesdir: ./media/
 
 [.lead]
-When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the pools.
+When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the capacity pools.
 
 [NOTE]
-Dynamic ANF pools is feature of the Astra managed apps that use an Azure NetApp Files (ANF) storage backend. When backing up these apps, Astra automatically expands and contracts the persistent volume by a factor of 1.5. This ensures there is enough space for the backup without incurring an additional permanent charge. See https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups[Azure application backups^] for more information.
+Dynamic ANF pools is feature of the Astra managed apps that use an Azure NetApp Files (ANF) storage backend. When backing up these apps, Astra automatically expands and contracts the capacity pools the persistent volumes belong to by a factor of 1.5. This ensures there is enough space for the backup without incurring an additional permanent charge. See https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups[Azure application backups^] for more information.
 
 === 1. Add the Azure subscription identifier
 
 Perform the following REST API call.
+
+[NOTE]
+You need to update the JSON input example as appropriate for your environment, including the subscription ID and the base64 value for the service principal.
 
 [cols="1,6",options="header"]
 |===

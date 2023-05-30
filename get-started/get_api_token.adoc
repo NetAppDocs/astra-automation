@@ -44,11 +44,10 @@ This task generates an API token at the Astra web interface. You should also ret
 
 .Steps
 
-. Sign in to Astra using your account credentials.
+. Sign in to Astra using your account credentials as follows:
 +
-Access the following site for Astra Control Service: https://astra.netapp.io/[https://astra.netapp.io^].
-+
-For Astra Control Center on-premises deployments, use the URL for your local environment as established during installation and initial configuration.
+* Astra Control Service: link:https://astra.netapp.io[https://astra.netapp.io^]
+* Astra Control Center: Use the URL for your local environment as established during installation
 
 . Click the figure icon at the top right of the page and select *API access*.
 

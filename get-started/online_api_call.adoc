@@ -17,7 +17,7 @@ You can issue an Astra Control REST API call from the API reference documentatio
 
 .Before you begin
 
-You must sign into Astra and access the API reference page. See link:../get-started/online_api_ref.html[Access the Astra API reference documentation] for more information. You also need a token to use the REST API. See link:../get-started/get_api_token.html[Get an API token] for details about generating an API token.
+You must sign in to Astra and access the API reference page. See link:../get-started/online_api_ref.html[Access the Astra API reference documentation] for more information. You also need a token to use the REST API. See link:../get-started/get_api_token.html[Get an API token] for details about generating an API token.
 
 .Steps
 
