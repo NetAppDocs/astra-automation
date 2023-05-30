@@ -19,8 +19,9 @@ You need to obtain an Astra API token to use the Astra Control REST API.
 
 An API token identifies the caller to Astra and must be included with every REST API call.
 
-* You can generate an API token using the Astra web user interface.
-* The user identity carried with the token is determined by the user creating the token.
+* You need to generate an API token using the Astra web user interface.
+* The procedure for generating a token is the same for both Astra deployment models. Only the URL used to access Astra is different.
+* The user identity carried with the token and associated permissions are determined by the user that created the token.
 * The token must be included in the `Authorization` HTTP request header.
 * A token never expires after it is created.
 * You can revoke a token at the Astra web user interface.
@@ -43,13 +44,14 @@ This task generates an API token at the Astra web interface. You should also ret
 
 .Steps
 
-. Sign in to Astra using your account credentials.
+. Sign in to Astra using your account credentials as follows:
 +
-Access the following site for Astra Control Service: https://astra.netapp.io/[https://astra.netapp.io^]
+* Astra Control Service: link:https://astra.netapp.io[https://astra.netapp.io^]
+* Astra Control Center: Use the URL for your local environment as established during installation
 
 . Click the figure icon at the top right of the page and select *API access*.
 
-. Click *Generate API token* on the page and in the popup window click *Generate API token*.
+. Click *Generate API token* on the page and then click *Generate API token* in the popup window.
 
 . Click the icon to copy the token string to the clipboard and save it in your editor.
 
@@ -57,4 +59,4 @@ Access the following site for Astra Control Service: https://astra.netapp.io/[ht
 
 .After you finish
 
-When you access the Astra Control REST API through Curl or a programming language, you must include the API bearer token in the HTTP `Authorization` request header.
+When you access the Astra Control REST API through curl or a programming language, you must include the API bearer token in the HTTP `Authorization` request header.
