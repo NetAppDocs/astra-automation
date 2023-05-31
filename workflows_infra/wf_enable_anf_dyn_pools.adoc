@@ -1,0 +1,80 @@
+---
+sidebar: sidebar
+permalink: workflows_infra/wf_enable_anf_dyn_pools.html
+keywords: Azure NetApp Files, ANF, dynamic ANF pools, subscription id
+summary: When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the capacity pools.
+---
+
+= Enable dynamic ANF pools for self-managed clusters
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+When backing up a managed app in a private on-premises cluster that has an ANF storage backend, you must enable the dynamic ANF pools feature. This is done by providing a subscription ID to use when expanding and contracting the capacity pools.
+
+[NOTE]
+Dynamic ANF pools is feature of the Astra managed apps that use an Azure NetApp Files (ANF) storage backend. When backing up these apps, Astra automatically expands and contracts the capacity pools the persistent volumes belong to by a factor of 1.5. This ensures there is enough space for the backup without incurring an additional permanent charge. See https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups[Azure application backups^] for more information.
+
+=== 1. Add the Azure subscription identifier
+
+Perform the following REST API call.
+
+[NOTE]
+You need to update the JSON input example as appropriate for your environment, including the subscription ID and the base64 value for the service principal.
+
+[cols="1,6",options="header"]
+|===
+|HTTP method
+|Path
+|POST
+|/accounts/{account_id}/core/v1/credentials
+|===
+
+.JSON input example
+[%collapsible%closed]
+[source,json]
+{
+  "keyStore": {
+    "privKey": "SGkh",
+    "pubKey": "UGhpcyCpcyBhbiBleGFtcGxlLg==",
+    "base64": "fwogICAgJmFwcElkIjogIjY4ZmSiODFiLTY0YWYtNDdjNC04ZjUzLWE2NDdlZTUzMGZkZCIsCiAgICAiZGlzcGxheU5hbWUiOiAic3AtYXN0cmEtZGV2LXFhIiwKICAgICJuYW1lIjogImh0dHA6Ly9zcC1hc3RyYS1kZXYtcWEiLAogICAgInBhc3N3b3JkIjogIllLQThRfk9IVVJkZWZYM0pSTWJlLnpUeFBleVE0UnNwTG9DcUJjazAiLAogICAgInRlbmFudCI6ICIwMTFjZGY2Yy03NTEyLTQ3MDUtYjI0ZS03NzIxYWZkOGNhMzciLAogICAgInN1YnNjcmlwdGlvbklkIjogImIyMDAxNTVmLTAwMWEtNDNiZS04N2JlLTNlZGRlODNhY2VmNCIKfQ=="
+  },
+  "name": "myCert",
+  "type": "application/astra-credential",
+  "version": "1.1",
+  "metadata": {
+    "labels": [
+      {
+        "name": "astra.netapp.io/labels/read-only/credType",
+        "value": "service-account"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/cloudName",
+        "value": "OCP"
+      },
+      {
+        "name": "astra.netapp.io/labels/read-only/azure/subscriptionID",
+        "value": "b212156f-001a-43be-87be-3edde83acef5"
+      }
+    ]
+  }
+}
+
+.Curl example
+[source,curl]
+curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Content-Type: application/astra-credential+json'
+
+=== 2. Add a bucket if needed
+
+You should add a bucket to the managed application if needed.
+
+=== 3. Take a backup of the managed app
+
+Perform the workflow link:../workflows/wf_create_backup.html[Create a backup for an app]. The capacity pool where the original persistent volume is present will expand and shrink automatically.
+
+=== 4. Review the event log
+
+Activity events are logged during the backup. Perform the workflow link:../workflows/wf_list_notifications.html[List the notifications] to view the messages.
