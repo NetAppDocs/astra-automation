@@ -2,13 +2,13 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Astra API",
-    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.04.0 release of Astra Control Center and Astra Control Service.",
+    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.04.0 release of Astra Control Center and the 23.05.0 release of Astra Control Service.",
     "termsOfService": "https://www.netapp.com/media/10784-cloud-data-services-terms.pdf",
     "license": {
       "name": "Astra API License",
       "url": "https://docs.netapp.com/us-en/astra-automation/media/astra-api-license.pdf"
     },
-    "version": "23.04.0"
+    "version": "23.05.0"
   },
   "servers": [
     {
@@ -21,6 +21,10 @@
     }
   ],
   "tags": [
+    {
+      "name": "Metrics",
+      "description": "The Metrics API represents metrics associated with a given account."
+    },
     {
       "name": "Account",
       "description": "The Account API represents isolated tenants in a multitenant system."
@@ -91,7 +95,7 @@
     },
     {
       "name": "Execution Hook",
-      "description": "The Execution Hook API enables simple management of execution hooks. Execution hooks contain additional configuration and references to a hook source resource. (**NOTE BELOW API DEPRECATIONS**)"
+      "description": "The Execution Hook API enables simple management of execution hooks. Execution hooks contain additional configuration and references to a hook source resource."
     },
     {
       "name": "Feature",
@@ -975,6 +979,7 @@
       "description": "Represents metrics. A user can use this to retreive metrics for accounts they have access to.\nThis endpoint returns all metrics for a given account.",
       "get": {
         "description": "Returns all metrics for the account",
+        "summary": "Lists all metrics",
         "tags": [
           "Metrics"
         ],
@@ -8453,836 +8458,12 @@
         }
       }
     },
-    "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/groups": {
-      "post": {
-        "tags": [
-          "Group"
-        ],
-        "description": "Indicates the desired values for the Group API resource to be created.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Creates a new group resource for a specific user",
-        "requestBody": {
-          "description": "Indicates the desired values for the Group API resource to be created.",
-          "required": true,
-          "content": {
-            "application/astra-group+json": {
-              "example": {
-                "type": "application/astra-group",
-                "version": "1.0",
-                "name": "engineering-group",
-                "authProvider": "ldap",
-                "authID": "CN=Engineering,CN=Groups,DC=example,DC=com"
-              },
-              "schema": {
-                "$ref": "#/components/schemas/group_1.0_post_request_body"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Returns the newly created group resource in the JSON response body.",
-            "headers": {
-              "Location": {
-                "description": "Location of the newly created resource",
-                "schema": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            },
-            "content": {
-              "application/astra-group+json": {
-                "example": {
-                  "type": "application/astra-group",
-                  "version": "1.0",
-                  "id": "d8560bb2-7c87-5331-a78d-4e870b22e9a9",
-                  "name": "engineering-group",
-                  "authProvider": "ldap",
-                  "authID": "CN=Engineering,CN=Groups,DC=example,DC=com",
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/group_1.0_post_response_body"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/7",
-                  "title": "Invalid JSON payload",
-                  "detail": "The request body is not valid JSON.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_7"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_12"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/10",
-                  "title": "JSON resource conflict",
-                  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
-                  "status": "409"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_10"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/14",
-                  "title": "Unauthorized access",
-                  "detail": "The user isn't enabled.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_14"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "406": {
-            "description": "Not Acceptable",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/32",
-                  "title": "Unsupported content type",
-                  "detail": "The response can't be returned in the requested format.",
-                  "status": "406"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_32"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/34",
-                  "title": "Internal server error",
-                  "detail": "The server was unable to process this request.",
-                  "status": "500"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_34"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Group"
-        ],
-        "description": "Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "include",
-            "in": "query",
-            "description": "Indicates which fields should be returned when listing a collection.\n\n\nURL examples: \"include=id\", \"include=id,name\"\n\n\nOpenAPI examples: \"id\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_include"
-            },
-            "example": "id,authProvider,authID"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Indicates the maximum number of resources to return when listing a collection.\n\n\nURL examples: \"limit=2\"\n\n\nOpenAPI examples: \"2\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_limit"
-            }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "description": "Indicates which fields should be matched in order to return a resource when listing a collection.\n\n\nSupported operators are:\n* eq - Equality\n* lt/gt - Less than/Greater than\n* lte/gte - Less than or equals to/Greater than or equals to\n\n\nURL example: \"filter=field%20eq%20%27value%27\"\n\n\nOpenAPI examples: \"field eq 'value'\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_filter"
-            }
-          },
-          {
-            "name": "orderBy",
-            "in": "query",
-            "description": "Indicates the sort order of resource when listing a collection.\n\n\nURL examples: \"orderBy=name\", \"orderBy=name%20desc\"\n\n\nOpenAPI examples: \"name desc\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_orderBy"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "description": "Indicates the number of resources to skip over when listing a collection.\n\n\nURL examples: \"skip=1\"\n\n\nOpenAPI examples: \"1\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_skip"
-            }
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "description": "Indicates if the total number of resources should be returned in the metadata object.\n\n\nURL examples: \"count=true\"\n\n\nOpenAPI examples: \"true\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_count"
-            }
-          },
-          {
-            "name": "continue",
-            "in": "query",
-            "description": "Indicates the token to resume listing from.\n\n\nURL examples: \"continue=<Continue Token from Collection Metadata>\"\n\n\nOpenAPI examples: \"<Continue Token from Collection Metadata>\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_continue"
-            }
-          }
-        ],
-        "summary": "Lists the group resources associated with a specific user",
-        "responses": {
-          "200": {
-            "description": "Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.",
-            "content": {
-              "application/json": {
-                "example": {
-                  "type": "application/astra-groups",
-                  "version": "1.0",
-                  "items": [
-                    [
-                      "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa",
-                      "ldap",
-                      "CN=Testers,CN=groups,DC=example,DC=com"
-                    ],
-                    [
-                      "e324ec3a-706d-4f57-a95d-1d88c03e7b73",
-                      "ldap",
-                      "CN=Admins,CN=groups,DC=example,DC=com"
-                    ],
-                    [
-                      "3070c84d-129b-4017-82a8-2c26a42dd77e",
-                      "ldap",
-                      "CN=SREs,CN=groups,DC=example,DC=com"
-                    ]
-                  ],
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/group_1.0_list_response_body"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/1",
-                  "title": "Resource not found",
-                  "detail": "The resource specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_1"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_12"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/34",
-                  "title": "Internal server error",
-                  "detail": "The server was unable to process this request.",
-                  "status": "500"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_34"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/groups/{group_id}": {
-      "get": {
-        "tags": [
-          "Group"
-        ],
-        "description": "Returns the stored Group API resource in the JSON response body.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Retrieves a specific group resource",
-        "responses": {
-          "200": {
-            "description": "Returns the stored Group API resource in the JSON response body.",
-            "content": {
-              "application/astra-group+json": {
-                "example": {
-                  "type": "application/astra-group",
-                  "version": "1.0",
-                  "id": "d8560bb2-7c87-5331-a78d-4e870b22e9a9",
-                  "name": "engineering-group",
-                  "authProvider": "ldap",
-                  "authID": "CN=Engineering,CN=groups,DC=example,DC=com",
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/group_1.0_get_response_body"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/1",
-                  "title": "Resource not found",
-                  "detail": "The resource specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_1"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/12",
-                  "title": "Invalid headers",
-                  "detail": "The request headers are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_12"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_35"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/34",
-                  "title": "Internal server error",
-                  "detail": "The server was unable to process this request.",
-                  "status": "500"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_34"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Group"
-        ],
-        "description": "Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Modifies a specific group resource",
-        "requestBody": {
-          "description": "Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.",
-          "required": true,
-          "content": {
-            "application/astra-group+json": {
-              "example": {
-                "type": "application/astra-group",
-                "version": "1.0",
-                "name": "my-qa-group",
-                "authID": "CN=QA,CN=Groups,DC=example,DC=com"
-              },
-              "schema": {
-                "$ref": "#/components/schemas/group_1.0_put_request_body"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "Indicates if the group resource was updated."
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/1",
-                  "title": "Resource not found",
-                  "detail": "The resource specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_1"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/7",
-                  "title": "Invalid JSON payload",
-                  "detail": "The request body is not valid JSON.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_7"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_12"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_35"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/34",
-                  "title": "Internal server error",
-                  "detail": "The server was unable to process this request.",
-                  "status": "500"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_34"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Group"
-        ],
-        "description": "Removes the specified Group API resource.\n\n**Side Effects**\n* The following resources associated with the group are deleted:   \n* Role bindings referring to the group",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the group collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Deletes a specific group resource",
-        "responses": {
-          "204": {
-            "description": "Indicates if the group resource was deleted."
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/12",
-                  "title": "Invalid headers",
-                  "detail": "The request headers are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_12"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_35"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/34",
-                  "title": "Internal server error",
-                  "detail": "The server was unable to process this request.",
-                  "status": "500"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_34"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/accounts/{account_id}/core/v1/executionHooks": {
       "post": {
         "tags": [
           "Execution Hook"
         ],
         "description": "Indicates the desired values for the Execution Hook API resource to be created.",
-        "deprecated": true,
         "parameters": [
           {
             "name": "account_id",
@@ -9454,6 +8635,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_10"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_162"
                     }
                   ]
                 }
@@ -9490,7 +8674,6 @@
           "Execution Hook"
         ],
         "description": "Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.",
-        "deprecated": true,
         "parameters": [
           {
             "name": "account_id",
@@ -9771,7 +8954,6 @@
           "Execution Hook"
         ],
         "description": "Returns the stored Execution Hook API resource in the JSON response body. Also populates matchingContainers and matchingImages based on the current matchingCriteria and the defined app.",
-        "deprecated": true,
         "parameters": [
           {
             "name": "account_id",
@@ -9968,7 +9150,6 @@
           "Execution Hook"
         ],
         "description": "Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.\n\n**Side Effects**\n* Updating an existing execution hook will impact any future actions of applications that use the updated execution hook.",
-        "deprecated": true,
         "parameters": [
           {
             "name": "account_id",
@@ -10103,6 +9284,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_10"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_162"
                     }
                   ]
                 }
@@ -10139,7 +9323,6 @@
           "Execution Hook"
         ],
         "description": "Removes the specified Execution Hook API resource.\n\n**Side Effects**\n* The deleted execution hook will no longer run as part of future actions.",
-        "deprecated": true,
         "parameters": [
           {
             "name": "account_id",
@@ -12576,7 +11759,7 @@
         "tags": [
           "License"
         ],
-        "description": "Removes the specified License API resource.\n\n**Side Effects**\n* Entitlements are recalculated to remove the license entitlements visible through the Entitlement API.",
+        "description": "Removes the specified License API resource. The automatically installed evaluation license cannot be deleted.\n\n**Side Effects**\n* Entitlements are recalculated to remove the license entitlements visible through the Entitlement API. If the automatically installed evaluation license was present on this system before deletion, it is reapplied to the system automatically.",
         "parameters": [
           {
             "name": "account_id",
@@ -12683,6 +11866,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_163"
                     }
                   ]
                 }
@@ -21439,939 +20625,6 @@
         "responses": {
           "204": {
             "description": "Indicates if the roleBinding resource was deleted."
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/1",
-                  "title": "Resource not found",
-                  "detail": "The resource specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_1"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/3",
-                  "title": "Missing bearer token",
-                  "detail": "The request is missing the required bearer token.",
-                  "status": "401"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_3"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_4"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_6"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/users": {
-      "post": {
-        "tags": [
-          "User"
-        ],
-        "description": "Indicates desired values for the User API resource to be created.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Creates a new user resource for a specific group",
-        "requestBody": {
-          "description": "Indicates desired values for the User API resource to be created.",
-          "required": true,
-          "content": {
-            "application/astra-user+json": {
-              "example": {
-                "type": "application/astra-user",
-                "version": "1.2",
-                "firstName": "John",
-                "lastName": "Doe",
-                "email": "jdoe@example.com"
-              },
-              "schema": {
-                "$ref": "#/components/schemas/user_1.2_post_request_body"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Returns the newly created user resource in the JSON response body.",
-            "headers": {
-              "Location": {
-                "description": "Location of the newly created resource",
-                "schema": {
-                  "type": "string",
-                  "format": "uri"
-                }
-              }
-            },
-            "content": {
-              "application/astra-user+json": {
-                "example": {
-                  "type": "application/astra-user",
-                  "version": "1.2",
-                  "id": "5bad8e04-e2fd-5c43-98d7-300580993f49",
-                  "state": "pending",
-                  "isEnabled": "true",
-                  "authID": "HteLK3hk28sdbDLKHReB",
-                  "authProvider": "cloud-central",
-                  "firstName": "John",
-                  "lastName": "Doe",
-                  "email": "jdoe@example.com",
-                  "sendWelcomeEmail": "true",
-                  "lastActTimestamp": "2020-08-05T14:24:54.128427Z",
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/user_1.2_post_response_body"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/2",
-                  "title": "Collection not found",
-                  "detail": "The collection specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_2"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/3",
-                  "title": "Missing bearer token",
-                  "detail": "The request is missing the required bearer token.",
-                  "status": "401"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_3"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_4"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_6"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_7"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_8"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_9"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/10",
-                  "title": "JSON resource conflict",
-                  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
-                  "status": "409"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_10"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "description": "Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the containing user resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "include",
-            "in": "query",
-            "description": "Indicates which fields should be returned when listing a collection.\n\n\nURL examples: \"include=id\", \"include=id,name\"\n\n\nOpenAPI examples: \"id\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_include"
-            },
-            "example": "id,email"
-          },
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "Indicates the maximum number of resources to return when listing a collection.\n\n\nURL examples: \"limit=2\"\n\n\nOpenAPI examples: \"2\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_limit"
-            }
-          },
-          {
-            "name": "filter",
-            "in": "query",
-            "description": "Indicates which fields should be matched in order to return a resource when listing a collection.\n\n\nSupported operators are:\n* eq - Equality\n* lt/gt - Less than/Greater than\n* lte/gte - Less than or equals to/Greater than or equals to\n\n\nURL example: \"filter=field%20eq%20%27value%27\"\n\n\nOpenAPI examples: \"field eq 'value'\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_filter"
-            }
-          },
-          {
-            "name": "orderBy",
-            "in": "query",
-            "description": "Indicates the sort order of resource when listing a collection.\n\n\nURL examples: \"orderBy=name\", \"orderBy=name%20desc\"\n\n\nOpenAPI examples: \"name desc\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_orderBy"
-            }
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "description": "Indicates the number of resources to skip over when listing a collection.\n\n\nURL examples: \"skip=1\"\n\n\nOpenAPI examples: \"1\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_skip"
-            }
-          },
-          {
-            "name": "count",
-            "in": "query",
-            "description": "Indicates if the total number of resources should be returned in the metadata object.\n\n\nURL examples: \"count=true\"\n\n\nOpenAPI examples: \"true\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_count"
-            }
-          },
-          {
-            "name": "continue",
-            "in": "query",
-            "description": "Indicates the token to resume listing from.\n\n\nURL examples: \"continue=<Continue Token from Collection Metadata>\"\n\n\nOpenAPI examples: \"<Continue Token from Collection Metadata>\"",
-            "required": false,
-            "schema": {
-              "$ref": "#/components/schemas/query_continue"
-            }
-          }
-        ],
-        "summary": "Lists the user resources associated with a specific group",
-        "responses": {
-          "200": {
-            "description": "Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.",
-            "content": {
-              "application/json": {
-                "example": {
-                  "type": "application/astra-users",
-                  "version": "1.2",
-                  "items": [
-                    [
-                      "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa",
-                      "jdoe@example.com"
-                    ],
-                    [
-                      "e324ec3a-706d-4f57-a95d-1d88c03e7b73",
-                      "ssmith@example.com"
-                    ],
-                    [
-                      "3070c84d-129b-4017-82a8-2c26a42dd77e",
-                      "wjohns@example.com"
-                    ]
-                  ],
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/user_1.2_list_response_body"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/2",
-                  "title": "Collection not found",
-                  "detail": "The collection specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_2"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/3",
-                  "title": "Missing bearer token",
-                  "detail": "The request is missing the required bearer token.",
-                  "status": "401"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_3"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_4"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_6"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/users/{user_id}": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "description": "Returns the stored User API resource in the JSON response body.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Retrieves a specific user resource",
-        "responses": {
-          "200": {
-            "description": "Returns the stored User API resource in the JSON response body.",
-            "content": {
-              "application/astra-user+json": {
-                "example": {
-                  "type": "application/astra-user",
-                  "version": "1.2",
-                  "id": "5bad8e04-e2fd-5c43-98d7-300580993f49",
-                  "state": "active",
-                  "isEnabled": "true",
-                  "authID": "HteLK3hk28sdbDLKHReB",
-                  "authProvider": "cloud-central",
-                  "firstName": "John",
-                  "lastName": "Doe",
-                  "companyName": "NetApp, Inc.",
-                  "email": "jdoe@example.com",
-                  "phone": "408-555-22222",
-                  "postalAddress": {
-                    "addressCountry": "US",
-                    "addressLocality": "Sunnyvale",
-                    "addressRegion": "California",
-                    "postalCode": "94089",
-                    "streetAddress1": "495 East Java Drive"
-                  },
-                  "sendWelcomeEmail": "true",
-                  "enableTimestamp": "2020-08-05T14:24:54.128427Z",
-                  "lastActTimestamp": "2020-08-05T14:24:54.128427Z",
-                  "metadata": {
-                    "labels": [],
-                    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
-                    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
-                  }
-                },
-                "schema": {
-                  "$ref": "#/components/schemas/user_1.2_get_response_body"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/2",
-                  "title": "Collection not found",
-                  "detail": "The collection specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_2"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/3",
-                  "title": "Missing bearer token",
-                  "detail": "The request is missing the required bearer token.",
-                  "status": "401"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_3"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_4"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_6"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "User"
-        ],
-        "description": "Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Modifies a specific user resource",
-        "requestBody": {
-          "description": "Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.",
-          "required": true,
-          "content": {
-            "application/astra-user+json": {
-              "example": {
-                "type": "application/astra-user",
-                "version": "1.2",
-                "firstName": "John",
-                "lastName": "Dale",
-                "email": "jdale@example.com"
-              },
-              "schema": {
-                "$ref": "#/components/schemas/user_1.2_put_request_body"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "Indicates if the user resource was updated."
-          },
-          "404": {
-            "description": "Not Found",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/1",
-                  "title": "Resource not found",
-                  "detail": "The resource specified in the request URI wasn't found.",
-                  "status": "404"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_1"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/3",
-                  "title": "Missing bearer token",
-                  "detail": "The request is missing the required bearer token.",
-                  "status": "401"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_3"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_4"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/5",
-                  "title": "Invalid query parameters",
-                  "detail": "The supplied query parameters are invalid.",
-                  "status": "400"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_5"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_6"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_7"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_8"
-                    },
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_9"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "409": {
-            "description": "Conflict",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/10",
-                  "title": "JSON resource conflict",
-                  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
-                  "status": "409"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_10"
-                    }
-                  ]
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/problem+json": {
-                "example": {
-                  "type": "https://astra.netapp.io/problems/11",
-                  "title": "Operation not permitted",
-                  "detail": "The requested operation isn't permitted.",
-                  "status": "403"
-                },
-                "schema": {
-                  "anyOf": [
-                    {
-                      "$ref": "#/components/schemas/astra_problem_detail_11"
-                    }
-                  ]
-                }
-              }
-            }
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "User"
-        ],
-        "description": "Removes the specified User API resource.\n\n**Side Effects**\n* The following resources associated with the user are deleted: notificationMarks, tokens, and all roleBindings referring to the user.  \n* For a user with \"authProvider\" as \"local\", the linked credential with \"keyType\" as \"passwordHash\" will also be deleted.",
-        "parameters": [
-          {
-            "name": "account_id",
-            "in": "path",
-            "description": "ID of the containing account resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            },
-            "example": "{{.Account}}"
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "group_id",
-            "in": "path",
-            "description": "ID of the containing group resource",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          },
-          {
-            "name": "user_id",
-            "in": "path",
-            "description": "ID of the user collection to list",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/type_astra_identifier"
-            }
-          }
-        ],
-        "summary": "Deletes a specific user resource",
-        "responses": {
-          "204": {
-            "description": "Indicates if the user resource was deleted."
           },
           "404": {
             "description": "Not Found",
@@ -41439,6 +39692,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_10"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_162"
                     }
                   ]
                 }
@@ -42112,6 +40368,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_10"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_162"
                     }
                   ]
                 }
@@ -44325,55 +42584,62 @@
         "minItems": 0,
         "uniqueItems": true,
         "items": {
-          "type": "object",
-          "required": [
-            "from",
-            "to"
-          ],
-          "properties": {
-            "from": {
-              "type": "string"
-            },
-            "to": {
-              "type": "array",
-              "minItems": 0,
-              "uniqueItems": true,
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "additionalProperties": false
+          "$ref": "#/components/schemas/type_astra_stateTransition"
         }
+      },
+      "type_astra_stateTransition": {
+        "type": "object",
+        "required": [
+          "from",
+          "to"
+        ],
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "array",
+            "minItems": 0,
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "type_astra_stateDetail": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 511
+          }
+        },
+        "additionalProperties": false
       },
       "type_astra_stateDetails": {
         "type": "array",
         "minItems": 0,
         "uniqueItems": true,
         "items": {
-          "type": "object",
-          "required": [
-            "type",
-            "title",
-            "detail"
-          ],
-          "properties": {
-            "type": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 40
-            },
-            "detail": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 511
-            }
-          },
-          "additionalProperties": false
-        }
+          "$ref": "#/components/schemas/type_astra_stateDetail"
+        },
+        "additionalProperties": false
       },
       "type_astra_metadata": {
         "type": "object",
@@ -44456,113 +42722,90 @@
       },
       "type_astra_links": {
         "type": "array",
+        "uniqueItems": true,
         "items": {
-          "type": "object",
-          "properties": {
-            "rel": {
-              "type": "string",
-              "enum": [
-                "self",
-                "canonical",
-                "collection",
-                "up",
-                "related",
-                "service-doc",
-                "service-desc"
-              ]
-            },
-            "href": {
-              "$ref": "#/components/schemas/type_astra_api_relative_uri"
-            },
-            "type": {
-              "type": "string",
-              "anyOf": [
-                {
-                  "pattern": "^((application\\/vnd\\.netapp(\\.(([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$"
-                },
-                {
-                  "pattern": "^((application\\/astra-((([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$"
-                }
-              ]
-            },
-            "targetSchema": {
-              "type": "object",
-              "properties": {
-                "$ref": {
-                  "$ref": "#/components/schemas/type_astra_api_relative_uri"
-                }
+          "$ref": "#/components/schemas/type_astra_link"
+        },
+        "additionalProperties": false
+      },
+      "type_astra_link": {
+        "type": "object",
+        "properties": {
+          "rel": {
+            "type": "string",
+            "enum": [
+              "self",
+              "canonical",
+              "collection",
+              "up",
+              "related",
+              "service-doc",
+              "service-desc"
+            ]
+          },
+          "href": {
+            "$ref": "#/components/schemas/type_astra_api_relative_uri"
+          },
+          "type": {
+            "type": "string",
+            "anyOf": [
+              {
+                "pattern": "^((application\\/vnd\\.netapp(\\.(([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$"
               },
-              "required": [
-                "$ref"
-              ]
-            },
-            "title": {
-              "type": "string",
-              "minLength": 1,
-              "maxLength": 1023
-            },
-            "hints": {
-              "type": "object",
-              "properties": {
-                "status": {
+              {
+                "pattern": "^((application\\/astra-((([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$"
+              }
+            ]
+          },
+          "targetSchema": {
+            "type": "object"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1023
+          },
+          "hints": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "deprecated"
+                ]
+              },
+              "allow": {
+                "type": "array",
+                "items": {
                   "type": "string",
                   "enum": [
-                    "deprecated"
+                    "POST",
+                    "GET",
+                    "PUT",
+                    "DELETE"
                   ]
-                },
-                "allow": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "enum": [
-                      "POST",
-                      "GET",
-                      "PUT",
-                      "DELETE"
-                    ]
-                  }
-                },
-                "accept-post": {
-                  "type": "object",
-                  "patternProperties": {
-                    "^((application\\/vnd\\.netapp(\\.(([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$": {
-                      "type": "object",
-                      "properties": {
-                        "links": {
-                          "$ref": "#/components/schemas/type_astra_links"
-                        }
-                      }
-                    }
-                  }
-                },
-                "permissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string",
-                    "pattern": "^([a-z]([a-zA-Z])*)(-[a-z]([a-zA-Z])*){1,2}$"
-                  }
-                },
-                "accept-put": {
-                  "type": "object",
-                  "patternProperties": {
-                    "^((application\\/vnd\\.netapp(\\.(([a-z])([a-zA-Z0-9]){0,30})){1,3})(-v(([0-9]){1,3}))?)$": {
-                      "type": "object",
-                      "properties": {
-                        "links": {
-                          "$ref": "#/components/schemas/type_astra_links"
-                        }
-                      }
-                    }
-                  }
                 }
+              },
+              "accept-post": {
+                "type": "object"
+              },
+              "permissions": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^([a-z]([a-zA-Z])*)(-[a-z]([a-zA-Z])*){1,2}$"
+                }
+              },
+              "accept-put": {
+                "type": "object"
               }
             }
-          },
-          "required": [
-            "rel",
-            "href"
-          ]
-        }
+          }
+        },
+        "required": [
+          "rel",
+          "href"
+        ]
       },
       "type_unready": {
         "type": "array",
@@ -44579,11 +42822,11 @@
       },
       "query_filter": {
         "type": "string",
-        "pattern": "^(([0-9a-zA-Z]+(\\[\\*\\])?)((\\.[0-9a-zA-Z]+(\\[\\*\\])?)+)? (eq|lt|gt|lte|gte|in) '([0-9a-zA-Z.,-_:@ {}\\\"])+')(,(\\1))*$"
+        "pattern": "^(([0-9a-zA-Z]+(\\[\\*\\])?)((\\.[0-9a-zA-Z]+(\\[\\*\\])?)+)?( |%20)(eq|lt|gt|lte|gte|in)( |%20)'([0-9a-zA-Z.,-_:@ {}\\\"])+')(,(\\1))*$"
       },
       "query_orderBy": {
         "type": "string",
-        "pattern": "^(([0-9a-zA-Z]+)( desc)?)$"
+        "pattern": "^(([0-9a-zA-Z]+)(( |%20)desc)?)$"
       },
       "query_limit": {
         "type": "string",
@@ -47046,7 +45289,7 @@
                 "example": "include"
               },
               "GVKN": {
-                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matching any single filter will be included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects will result in a validation error.",
+                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matches a single GVKN filter element if all of the specified filter fields match the corresponding resource field. Filter fields that are arrays (for example, namespaces and names) match if any of its elements match the corresponding resource field. The labelSelectors field requires that all selectors match. A resource that matches any filter in the array of GVKN filter objects is included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects results in a validation error.",
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -47351,7 +45594,7 @@
                 "example": "include"
               },
               "GVKN": {
-                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matching any single filter will be included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects will result in a validation error.",
+                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matches a single GVKN filter element if all of the specified filter fields match the corresponding resource field. Filter fields that are arrays (for example, namespaces and names) match if any of its elements match the corresponding resource field. The labelSelectors field requires that all selectors match. A resource that matches any filter in the array of GVKN filter objects is included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects results in a validation error.",
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -47738,7 +45981,7 @@
                 "example": "include"
               },
               "GVKN": {
-                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matching any single filter will be included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects will result in a validation error.",
+                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matches a single GVKN filter element if all of the specified filter fields match the corresponding resource field. Filter fields that are arrays (for example, namespaces and names) match if any of its elements match the corresponding resource field. The labelSelectors field requires that all selectors match. A resource that matches any filter in the array of GVKN filter objects is included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects results in a validation error.",
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -48094,7 +46337,7 @@
                 "example": "include"
               },
               "GVKN": {
-                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matching any single filter will be included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects will result in a validation error.",
+                "description": "JSON array of JSON objects that describe resources to filter during a selective restore. A resource matches a single GVKN filter element if all of the specified filter fields match the corresponding resource field. Filter fields that are arrays (for example, namespaces and names) match if any of its elements match the corresponding resource field. The labelSelectors field requires that all selectors match. A resource that matches any filter in the array of GVKN filter objects is included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects results in a validation error.",
                 "type": "array",
                 "uniqueItems": true,
                 "items": {
@@ -50145,7 +48388,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects which lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -50513,7 +48756,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects which lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -50781,7 +49024,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects which lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -54254,7 +52497,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects that lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -54619,7 +52862,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects that lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -54888,7 +53131,7 @@
               "partial",
               "atRisk"
             ],
-            "example": "protected"
+            "example": "full"
           },
           "protectionStateDetails": {
             "description": "JSON array of JSON objects that lists additional details about the current protection state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
@@ -59303,9 +57546,9 @@
             "example": "2020-08-06T12:26:52.256624Z"
           },
           "metadata": {
-            "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.",
+            "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema",
             "type": "object",
-            "$ref": "#/components/schemas/type_astra_metadata_update"
+            "$ref": "#/components/schemas/type_astra_metadata"
           }
         },
         "additionalProperties": false
@@ -60819,7 +59062,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -60858,7 +59101,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -60897,7 +59140,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -60936,7 +59179,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -60975,7 +59218,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61037,7 +59280,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61099,7 +59342,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61138,7 +59381,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61181,7 +59424,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61243,7 +59486,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61305,7 +59548,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61344,7 +59587,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61406,7 +59649,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61445,7 +59688,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61484,7 +59727,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61523,7 +59766,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61562,7 +59805,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61601,7 +59844,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61640,7 +59883,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61679,7 +59922,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61741,7 +59984,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61780,7 +60023,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61842,7 +60085,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61904,7 +60147,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61943,7 +60186,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -61982,7 +60225,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62021,7 +60264,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62060,7 +60303,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62099,7 +60342,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62138,7 +60381,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62200,7 +60443,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62262,7 +60505,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62301,7 +60544,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62340,7 +60583,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62379,7 +60622,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62418,7 +60661,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62480,7 +60723,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62519,7 +60762,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62558,7 +60801,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62597,7 +60840,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62636,7 +60879,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62675,7 +60918,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62737,7 +60980,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62776,7 +61019,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62815,7 +61058,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62854,7 +61097,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62893,7 +61136,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62932,7 +61175,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -62971,7 +61214,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63010,7 +61253,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63049,7 +61292,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63088,7 +61331,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63127,7 +61370,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63166,7 +61409,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63205,7 +61448,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63244,7 +61487,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63283,7 +61526,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63322,7 +61565,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63361,7 +61604,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63400,7 +61643,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63439,7 +61682,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63478,7 +61721,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63517,7 +61760,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63556,7 +61799,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63595,7 +61838,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63634,7 +61877,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63673,7 +61916,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -63712,7 +61955,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64226,6 +62469,12 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_161"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_162"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_163"
                 }
               ]
             }
@@ -64238,7 +62487,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64277,7 +62526,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64316,7 +62565,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64355,7 +62604,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64394,7 +62643,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64433,7 +62682,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64472,7 +62721,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64511,7 +62760,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64550,7 +62799,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64589,7 +62838,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64628,7 +62877,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64667,7 +62916,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64706,7 +62955,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64745,7 +62994,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64784,7 +63033,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64823,7 +63072,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64862,7 +63111,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64901,7 +63150,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64940,7 +63189,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -64979,7 +63228,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65018,7 +63267,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65057,7 +63306,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65096,7 +63345,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65135,7 +63384,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65174,7 +63423,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65213,7 +63462,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65252,7 +63501,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65291,7 +63540,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65330,7 +63579,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65369,7 +63618,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65408,7 +63657,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65447,7 +63696,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65486,7 +63735,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65525,7 +63774,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65564,7 +63813,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65603,7 +63852,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65642,7 +63891,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65681,7 +63930,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65720,7 +63969,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65759,7 +64008,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65798,7 +64047,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65837,7 +64086,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65876,7 +64125,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65915,7 +64164,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -65954,7 +64203,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66468,6 +64717,12 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_161"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_162"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_163"
                 }
               ]
             }
@@ -66480,7 +64735,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66519,7 +64774,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66558,7 +64813,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66597,7 +64852,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66636,7 +64891,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66675,7 +64930,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66714,7 +64969,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66753,7 +65008,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66792,7 +65047,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66831,7 +65086,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66870,7 +65125,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66909,7 +65164,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66948,7 +65203,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -66987,7 +65242,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67026,7 +65281,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67065,7 +65320,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67104,7 +65359,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67143,7 +65398,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67182,7 +65437,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67221,7 +65476,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67260,7 +65515,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67299,7 +65554,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67342,7 +65597,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67381,7 +65636,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67420,7 +65675,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67459,7 +65714,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67498,7 +65753,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67537,7 +65792,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67576,7 +65831,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67615,7 +65870,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67654,7 +65909,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67693,7 +65948,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67732,7 +65987,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67771,7 +66026,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67810,7 +66065,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67849,7 +66104,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67888,7 +66143,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67927,7 +66182,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -67966,7 +66221,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68005,7 +66260,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68044,7 +66299,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68083,7 +66338,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68122,7 +66377,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68161,7 +66416,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68200,7 +66455,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68239,7 +66494,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68278,7 +66533,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68317,7 +66572,7 @@
         "required": [
           "type",
           "title",
-          "description",
+          "detail",
           "status"
         ],
         "properties": {
@@ -68343,6 +66598,84 @@
             "type": "string",
             "enum": [
               "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_162": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/162"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Post-failover execution hooks not supported"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The application isn't eligible for post-failover execution hooks."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_163": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/163"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Automatically installed evaluation license deletion not allowed"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The automatically installed evaluation license can't be deleted."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "403"
             ]
           },
           "correlationID": {
