@@ -25,7 +25,7 @@ The Azure Marketplace subscriptions are now billed per hour instead of per minut
 
 === Restic optimization
 
-You can enable optimization for Restic backups using the flag `useResticParallel` in the `astra.datamover` settings resource. When set to `true`, the number of backendConnections restic uses is increased when backing up large volumes to an Azure container. For volumes of 1TB through 4TB, 128 connections are used. For volumes larger than 4TB, 512 backend connections are used.
+You can enable optimization for Restic backups using the flag `useResticParallel` in the `astra.datamover` settings resource. When set to `true`, the number of backendConnections Restic uses is increased when backing up large volumes to an Azure container. For volumes of 1TB through 4TB, 128 connections are used. For volumes larger than 4TB, 512 backend connections are used.
 
 == 30 May 2023 (23.05)
 
