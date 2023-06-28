@@ -15,6 +15,18 @@ summary: NetApp regularly updates the Astra Control REST API to bring you new fe
 [.lead]
 NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 27 June 2023 (23.06)
+
+This release includes selective updates to the REST API.
+
+=== Azure Marketplace
+
+The Azure Marketplace subscriptions are now billed per hour instead of per minute. Also see https://docs.netapp.com/us-en/astra-control-service/use/set-up-billing.html[Set up billing^].
+
+=== Restic optimization
+
+You can enable performance optimization for restic backups using the flag `useResticParallel` in the new `astra.datamover` settings API resource. When set to `true`, the number of `backendConnections` that restic uses is increased when backing up large volumes to an Azure container. For volumes of 1TB through 4TB, 128 connections are used. For volumes larger than 4TB, 512 backend connections are used.
+
 == 30 May 2023 (23.05)
 
 This release includes selective updates to the REST API.
