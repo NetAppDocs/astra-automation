@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Astra API (ACS)",
-    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.06.0 release of Astra Control REST API.",
+    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.06 release of Astra Control REST API.",
     "termsOfService": "https://www.netapp.com/media/10784-cloud-data-services-terms.pdf",
     "license": {
       "name": "Astra API License",
