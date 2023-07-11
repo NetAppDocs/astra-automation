@@ -29,7 +29,7 @@ You must sign in to Astra and access the API reference page. See link:../get-sta
 
 . On the right click *Try it out*.
 
-. Scroll down within the same API call and click *Execute*.
+. Scroll down within the same API call. Provide any required parameter values and then click *Execute* to issue the call.
 
 .Result
 
