@@ -13,10 +13,10 @@ summary: The documentation at this site describes the Astra Control REST API and
 :imagesdir: ./media/
 
 [.lead]
-The documentation at this site describes the Astra Control REST API and related automation technologies included with the most recent releases of the two Astra Control deployment models.
+The documentation at this site describes the Astra Control REST API and related automation technologies included with the two Astra Control deployment models as described below.
 
 [NOTE]
-Every Astra Control release is assigned a version number of the form *YY.MM*. This value identities the version based on the year (_YY_) and month (_MM_) it became available. For example, Astra Control Center 23.04 was released in April 2023.
+Every Astra Control release is assigned a version number of the form *YY.MM*. This value identities the version based on the year (_YY_) and month (_MM_) it became available. For example, Astra Control Center 23.07 was released in July 2023.
 
 .Release cadence
 
@@ -28,9 +28,9 @@ Because this site documents the REST API for both deployment models, there may b
 
 The documentation at this site applies to the following Astra Control releases:
 
-* Astra Control Service 23.06
+* Astra Control Service 23.07
 
-* Astra Control Center 23.04
+* Astra Control Center 23.07
 
 .More information
 
@@ -38,8 +38,8 @@ See the following pages and sites for more information about the current as well
 
 * link:../rn/whats_new.html[What's new with the Astra Control REST API]
 * link:../endpoints/resources.html[REST resources and endpoints]
-* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 23.04 documentation^]
-* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 23.06 documentation^]
+* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 23.07 documentation^]
+* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 23.07 documentation^]
 * link:../aa-earlier-versions.html[Earlier versions of Astra Automation documentation]
 
 .Help us improve the documentation
