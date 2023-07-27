@@ -17,7 +17,7 @@ NetApp regularly updates the Astra Control REST API to bring you new features, e
 
 == 27 July 2023 (23.07)
 
-This release includes selective enhancements to the REST API. Both the Astra Control Service and Astra Control Center deployments have been updated with the 23.07 release.
+This release includes selective enhancements to the REST API. Both Astra Control Service and Astra Control Center have been updated with the 23.07 release.
 
 === Clone and replication operations
 
@@ -25,14 +25,14 @@ The clone operation now supports live clones only (the current state of the mana
 
 === Expanded storage backends
 
-Support for additional storage backends is now included with Astra Control Center as follows:
+Additional storage backends can now be used with Astra Control Center including:
 
 * NetApp MetroCluster in a stretch configuration
 * https://longhorn.io/[Longhorn^] 1.5.0 and later
 
 === New execution hook type
 
-The new execution hook *post-failover* is available with Astra Control Center.
+The new execution hook type *post-failover* is available with Astra Control Center.
 
 == 27 June 2023 (23.06)
 
