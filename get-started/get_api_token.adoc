@@ -15,7 +15,7 @@ summary: You need to obtain an Astra API token to use the Astra Control REST API
 [.lead]
 You need to obtain an Astra API token to use the Astra Control REST API.
 
-== Introduction
+== Overview
 
 An API token identifies the caller to Astra and must be included with every REST API call.
 

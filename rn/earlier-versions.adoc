@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: aa-earlier-versions.html
+permalink: rn/earlier-versions.html
 keywords: earlier versions, earlier releases
 summary: You can access the automation documentation for previous Astra Control releases.
 ---

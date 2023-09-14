@@ -1,0 +1,4 @@
+---
+permalink: aa-earlier-versions.html
+redirect: astra-automation/rn/earlier-versions.html
+---

@@ -1,5 +1,5 @@
 section: rest-core
-title: Core REST implementation
+title: Core design
 entries:
   - title: REST web services
     url: /rest-core/rest_web_services.html
