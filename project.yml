@@ -35,16 +35,16 @@ sidebar:
     - section: rn
     - section: intro
     - section: get-started
-    - section: rest-core
-    - section: endpoints
-    - section: additional
+    - title: Astra REST implementation
+      entries:
+         - section: rest-core
+         - section: endpoints
+         - section: additional
     - section: workflows_infra
     - section: workflows
     - section: python
     - section: reference
     - section: information
-    - title: Earlier versions
-      url: /aa-earlier-versions.html
     - title: Legal notices
       url: /legal-notices.html
 product-family:

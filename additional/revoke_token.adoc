@@ -17,7 +17,7 @@ You can revoke an API token at the Astra web interface when it is no longer need
 
 .Before you begin
 
-You need an Astra account. You should also identify the tokens you want to revoke.
+You need credentials to sign in to the Astra web user interface for your deployment.  You should also identify the tokens you want to revoke.
 
 .About this task
 
@@ -25,9 +25,9 @@ After a token is revoked, it is immediately and permanently unusable.
 
 .Steps
 
-. Sign in to Astra using your account credentials.
-+
-Access the following site for Astra Control Service: https://astra.netapp.io/[https://astra.netapp.io^]
+. Sign in to Astra using your account credentials as follows:
+.. Astra Control Service: https://astra.netapp.io/[https://astra.netapp.io^]
+.. Astra Control Center: Use the URL for your local environment as established during installation
 
 . Click the figure icon at the top right of the page and select *API access*.
 

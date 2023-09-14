@@ -1,5 +1,5 @@
 section: additional
-title: Additional usage considerations
+title: Additional considerations
 entries:
   - title: RBAC security
     url: /additional/rbac.html
