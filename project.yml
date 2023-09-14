@@ -64,7 +64,7 @@ homepage:
           url: /get-started/get_api_token.html
         - title: First API call
           url: /get-started/first_call.html
-    - title: REST implementation
+    - title: Core REST design
       links:
         - title: REST web services
           url: /rest-core/rest_web_services.html
