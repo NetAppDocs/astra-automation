@@ -1,14 +1,14 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Astra API (ACS)",
-    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.07 release of Astra Control REST API.",
+    "title": "Astra API (ACC)",
+    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.10 release of Astra Control REST API.",
     "termsOfService": "https://www.netapp.com/media/10784-cloud-data-services-terms.pdf",
     "license": {
       "name": "Astra API License",
       "url": "https://docs.netapp.com/us-en/astra-automation/media/astra-api-license.pdf"
     },
-    "version": "23.07.0"
+    "version": "23.10.0"
   },
   "servers": [
     {
@@ -8704,6 +8704,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -8982,6 +8985,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -9180,6 +9186,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -9353,6 +9362,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -9475,6 +9487,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -10433,6 +10448,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -10641,6 +10659,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -10787,6 +10808,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -10955,6 +10979,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_71"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -11080,6 +11107,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_72"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -11250,6 +11280,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_20"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_169"
                     }
                   ]
                 }
@@ -11750,6 +11783,12 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_9"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_20"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_169"
                     }
                   ]
                 }
@@ -21991,6 +22030,7 @@
                   "credentialID": "8f039324-7795-40bf-a5ca-4442580f7ab0",
                   "state": "available",
                   "stateDetails": [],
+                  "retentionTime": 57627,
                   "provider": "gcp",
                   "bucketParameters": {
                     "gcp": {
@@ -23234,12 +23274,12 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.5",
+                "version": "1.6",
                 "name": "GKE-22",
                 "credentialID": "6fa2f917-f730-41b8-9c15-17f531843b31"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.5_post_request_body"
+                "$ref": "#/components/schemas/cluster_1.6_post_request_body"
               }
             }
           }
@@ -23260,8 +23300,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.5",
-                  "id": "547e24b9-ddf4-558f-8397-e97e732868e4",
+                  "version": "1.6",
+                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -23269,7 +23309,8 @@
                   "managedStateUnready": [],
                   "protectionState": "full",
                   "protectionStateDetails": [],
-                  "tridentVersion": "21.07.2",
+                  "tridentVersion": "23.10.0",
+                  "acpVersion": "23.10.0",
                   "tridentManagedState": "managed",
                   "tridentManagedStateDetails": [],
                   "inUse": "false",
@@ -23296,7 +23337,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.5_post_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_post_response_body"
                 }
               }
             }
@@ -23515,7 +23556,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-clusters",
-                  "version": "1.5",
+                  "version": "1.6",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -23536,7 +23577,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.5_list_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_list_response_body"
                 }
               }
             }
@@ -23674,8 +23715,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.5",
-                  "id": "547e24b9-ddf4-558f-8397-e97e732868e4",
+                  "version": "1.6",
+                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -23683,7 +23724,8 @@
                   "managedStateUnready": [],
                   "protectionState": "full",
                   "protectionStateDetails": [],
-                  "tridentVersion": "21.07.2",
+                  "tridentVersion": "23.10.0",
+                  "acpVersion": "23.10.0",
                   "tridentManagedState": "managed",
                   "tridentManagedStateDetails": [],
                   "inUse": "false",
@@ -23710,7 +23752,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.5_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
                 }
               }
             }
@@ -23866,10 +23908,10 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.5"
+                "version": "1.6"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.5_put_request_body"
+                "$ref": "#/components/schemas/cluster_1.6_put_request_body"
               }
             }
           }
@@ -25256,7 +25298,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-clusters",
-                  "version": "1.5",
+                  "version": "1.6",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -25277,7 +25319,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.5_list_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_list_response_body"
                 }
               }
             }
@@ -25406,8 +25448,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.5",
-                  "id": "547e24b9-ddf4-558f-8397-e97e732868e4",
+                  "version": "1.6",
+                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -25415,7 +25457,8 @@
                   "managedStateUnready": [],
                   "protectionState": "full",
                   "protectionStateDetails": [],
-                  "tridentVersion": "21.07.2",
+                  "tridentVersion": "23.10.0",
+                  "acpVersion": "23.10.0",
                   "tridentManagedState": "managed",
                   "tridentManagedStateDetails": [],
                   "inUse": "false",
@@ -25442,7 +25485,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.5_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
                 }
               }
             }
@@ -25589,10 +25632,10 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.5"
+                "version": "1.6"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.5_put_request_body"
+                "$ref": "#/components/schemas/cluster_1.6_put_request_body"
               }
             }
           }
@@ -27235,13 +27278,13 @@
             "application/astra-managedCluster+json": {
               "example": {
                 "type": "application/astra-managedCluster",
-                "version": "1.2",
-                "id": "6f2fa469-cdae-54be-a451-d0e94a47fa62",
+                "version": "1.3",
+                "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
                 "defaultStorageClass": "e280ff62-be35-4f31-a31b-a210a1ad1b33",
                 "tridentManagedStateDesired": "managed"
               },
               "schema": {
-                "$ref": "#/components/schemas/managedCluster_1.2_post_request_body"
+                "$ref": "#/components/schemas/managedCluster_1.3_post_request_body"
               }
             }
           }
@@ -27262,8 +27305,8 @@
               "application/astra-managedCluster+json": {
                 "example": {
                   "type": "application/astra-managedCluster",
-                  "version": "1.2",
-                  "id": "6f2fa469-cdae-54be-a451-d0e94a47fa62",
+                  "version": "1.3",
+                  "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -27272,7 +27315,8 @@
                   "managedTimestamp": "2020-08-06T12:24:52.256624Z",
                   "protectionState": "full",
                   "protectionStateDetails": [],
-                  "tridentVersion": "21.07.2",
+                  "tridentVersion": "23.10.0",
+                  "acpVersion": "23.10.0",
                   "tridentManagedState": "managed",
                   "tridentManagedStateDesired": "managed",
                   "tridentManagedStateDetails": [],
@@ -27300,7 +27344,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.2_post_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.3_post_response_body"
                 }
               }
             }
@@ -27475,7 +27519,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-managedClusters",
-                  "version": "1.2",
+                  "version": "1.3",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -27496,7 +27540,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.2_list_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.3_list_response_body"
                 }
               }
             }
@@ -27625,8 +27669,8 @@
               "application/astra-managedCluster+json": {
                 "example": {
                   "type": "application/astra-managedCluster",
-                  "version": "1.2",
-                  "id": "6f2fa469-cdae-54be-a451-d0e94a47fa62",
+                  "version": "1.3",
+                  "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -27635,7 +27679,8 @@
                   "managedTimestamp": "2020-08-06T12:24:52.256624Z",
                   "protectionState": "full",
                   "protectionStateDetails": [],
-                  "tridentVersion": "21.07.2",
+                  "tridentVersion": "23.10.0",
+                  "acpVersion": "23.10.0",
                   "tridentManagedState": "managed",
                   "tridentManagedStateDesired": "managed",
                   "tridentManagedStateDetails": [],
@@ -27663,7 +27708,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.2_get_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.3_get_response_body"
                 }
               }
             }
@@ -27790,11 +27835,11 @@
             "application/astra-managedCluster+json": {
               "example": {
                 "type": "application/astra-managedCluster",
-                "version": "1.2",
+                "version": "1.3",
                 "defaultStorageClass": "0b146cda-7fc1-4f32-804c-8130a38a7e1c"
               },
               "schema": {
-                "$ref": "#/components/schemas/managedCluster_1.2_put_request_body"
+                "$ref": "#/components/schemas/managedCluster_1.3_put_request_body"
               }
             }
           }
@@ -39993,6 +40038,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -40280,6 +40328,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -40487,6 +40538,9 @@
                   "anyOf": [
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_11"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -40669,6 +40723,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -40800,6 +40857,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_73"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_168"
                     }
                   ]
                 }
@@ -43974,7 +44034,7 @@
             "example": "1fe83650-9b3c-41ef-bb25-a2910c19c33e"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the backup.\nDefined values are:\n* \"pending\" - The application backup is scheduled for discovery\n* \"discovering\" - The application backup is in the process of being discovered\n* \"running\" - The application backup is running normally\n* \"completed\" - The application backup has completed successfully\n* \"failed\" - The application backup is in a permanent failure state\n* \"removed\" - The application backup is not currently accessible\n* \"unknown\" - The application backup state cannot be determined",
+            "description": "JSON string containing a value indicating the operational state of the backup.\nDefined values are:\n* \"pending\" - The application backup is scheduled for discovery\n* \"discovering\" - The application backup is in the process of being discovered\n* \"running\" - The application backup is running normally\n* \"completed\" - The application backup has completed successfully\n* \"failed\" - The application backup is in a permanent failure state\n* \"removed\" - The application backup is not currently accessible\n* \"unknown\" - The application backup state cannot be determined\n* \"deleting\" - The application backup is scheduled for deletion",
             "type": "string",
             "enum": [
               "pending",
@@ -43983,7 +44043,8 @@
               "completed",
               "failed",
               "removed",
-              "unknown"
+              "unknown",
+              "deleting"
             ],
             "example": "completed"
           },
@@ -44177,7 +44238,7 @@
             "example": "1fe83650-9b3c-41ef-bb25-a2910c19c33e"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the backup.\nDefined values are:\n* \"pending\" - The application backup is scheduled for discovery\n* \"discovering\" - The application backup is in the process of being discovered\n* \"running\" - The application backup is running normally\n* \"completed\" - The application backup has completed successfully\n* \"failed\" - The application backup is in a permanent failure state\n* \"removed\" - The application backup is not currently accessible\n* \"unknown\" - The application backup state cannot be determined",
+            "description": "JSON string containing a value indicating the operational state of the backup.\nDefined values are:\n* \"pending\" - The application backup is scheduled for discovery\n* \"discovering\" - The application backup is in the process of being discovered\n* \"running\" - The application backup is running normally\n* \"completed\" - The application backup has completed successfully\n* \"failed\" - The application backup is in a permanent failure state\n* \"removed\" - The application backup is not currently accessible\n* \"unknown\" - The application backup state cannot be determined\n* \"deleting\" - The application backup is scheduled for deletion",
             "type": "string",
             "enum": [
               "pending",
@@ -44186,7 +44247,8 @@
               "completed",
               "failed",
               "removed",
-              "unknown"
+              "unknown",
+              "deleting"
             ],
             "example": "completed"
           },
@@ -47118,6 +47180,11 @@
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
+          "retentionTime": {
+            "description": "Number of seconds representing the time a file on this bucket will be retained for. Defined values are:\n* -1 (Unsupported bucket)\n* 0 (No known retention policy)\n* >0 (Known retention policy)",
+            "type": "number",
+            "example": 1853647
+          },
           "provider": {
             "description": "JSON string indicating the bucket protocol that can be used to access the bucket.\nDefined values are:\n* \"ontap-s3\"\n* \"storagegrid-s3\"\n* \"generic-s3\"\n* \"gcp\"\n* \"azure\"\n* \"aws\"",
             "type": "string",
@@ -47433,6 +47500,11 @@
             "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"removed\" or \"failed\".\nIf no details are available, this array will be empty.\n* Minimum items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
+          },
+          "retentionTime": {
+            "description": "Number of seconds representing the time a file on this bucket will be retained for. Defined values are:\n* -1 (Unsupported bucket)\n* 0 (No known retention policy)\n* >0 (Known retention policy)",
+            "type": "number",
+            "example": 1853647
           },
           "provider": {
             "description": "JSON string indicating the bucket protocol that can be used to access the bucket.\nDefined values are:\n* \"ontap-s3\"\n* \"storagegrid-s3\"\n* \"generic-s3\"\n* \"gcp\"\n* \"azure\"\n* \"aws\"",
@@ -48655,7 +48727,7 @@
           }
         }
       },
-      "cluster_1.5_get_response_body": {
+      "cluster_1.6_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -48683,9 +48755,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
             "type": "string",
             "enum": [
+              "1.6",
               "1.5",
               "1.4",
               "1.3",
@@ -48693,13 +48766,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.5"
+            "example": "1.6"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "547e24b9-ddf4-558f-8397-e97e732868e4"
+            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -48786,7 +48859,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -48840,16 +48919,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -48950,7 +49030,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.5_list_response_body": {
+      "cluster_1.6_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -48963,7 +49043,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/cluster_1.5_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
                 },
                 {
                   "type": "array"
@@ -48976,7 +49056,7 @@
           }
         }
       },
-      "cluster_1.5_post_request_body": {
+      "cluster_1.6_post_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -48992,9 +49072,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
             "type": "string",
             "enum": [
+              "1.6",
               "1.5",
               "1.4",
               "1.3",
@@ -49002,7 +49083,7 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.5"
+            "example": "1.6"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49052,7 +49133,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.5_post_response_body": {
+      "cluster_1.6_post_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -49080,9 +49161,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
             "type": "string",
             "enum": [
+              "1.6",
               "1.5",
               "1.4",
               "1.3",
@@ -49090,13 +49172,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.5"
+            "example": "1.6"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "547e24b9-ddf4-558f-8397-e97e732868e4"
+            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49183,7 +49265,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -49237,16 +49325,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -49347,7 +49436,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.5_put_request_body": {
+      "cluster_1.6_put_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -49363,9 +49452,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
             "type": "string",
             "enum": [
+              "1.6",
               "1.5",
               "1.4",
               "1.3",
@@ -49373,13 +49463,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.5"
+            "example": "1.6"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "547e24b9-ddf4-558f-8397-e97e732868e4"
+            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49466,7 +49556,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -49520,16 +49616,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -52815,7 +52912,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.2_get_response_body": {
+      "managedCluster_1.3_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -52847,20 +52944,21 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "6f2fa469-cdae-54be-a451-d0e94a47fa62"
+            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -52948,7 +53046,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -53002,16 +53106,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -53100,7 +53205,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.2_list_response_body": {
+      "managedCluster_1.3_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -53113,7 +53218,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/managedCluster_1.2_get_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.3_get_response_body"
                 },
                 {
                   "type": "array"
@@ -53126,7 +53231,7 @@
           }
         }
       },
-      "managedCluster_1.2_post_request_body": {
+      "managedCluster_1.3_post_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -53143,20 +53248,21 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "6f2fa469-cdae-54be-a451-d0e94a47fa62"
+            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
           },
           "tridentManagedStateDesired": {
             "description": "JSON string containing a value indicating the desired management state for Trident.\nDefined values are:\n* \"managed\" - Manage Trident on this cluster\n* \"unmanaged\" - Do not manage Trident on this cluster",
@@ -53180,7 +53286,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.2_post_response_body": {
+      "managedCluster_1.3_post_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -53212,20 +53318,21 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "6f2fa469-cdae-54be-a451-d0e94a47fa62"
+            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -53313,7 +53420,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -53367,16 +53480,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -53465,7 +53579,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.2_put_request_body": {
+      "managedCluster_1.3_put_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -53481,20 +53595,21 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "6f2fa469-cdae-54be-a451-d0e94a47fa62"
+            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -53582,7 +53697,13 @@
             "description": "JSON string containing the version of Trident installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_swver",
-            "example": "21.07.2"
+            "example": "23.10.0"
+          },
+          "acpVersion": {
+            "description": "JSON string containing the version of Astra Control Provisioner installed on the cluster.\nDefined values are:\n* Conforms to the Software Version Schema",
+            "type": "string",
+            "$ref": "#/components/schemas/type_swver",
+            "example": "23.10.0"
           },
           "tridentManagedState": {
             "description": "JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.\nDefined values are:\n* \"managed\" - Trident instance on the cluster is managed by Astra\n* \"unmanaged\" - Trident instance on the cluster is not managed by Astra",
@@ -53636,16 +53757,17 @@
             "example": "true"
           },
           "clusterType": {
-            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
             "type": "string",
             "enum": [
-              "gke",
               "aks",
+              "anthos",
               "eks",
-              "rke",
-              "tanzu",
+              "gke",
+              "kubernetes",
               "openshift",
-              "kubernetes"
+              "rke",
+              "tanzu"
             ],
             "example": "kubernetes"
           },
@@ -62916,6 +63038,21 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_167"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_168"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_169"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_172"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_173"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_174"
                 }
               ]
             }
@@ -65176,6 +65313,21 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_167"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_168"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_169"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_172"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_173"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_174"
                 }
               ]
             }
@@ -67285,6 +67437,201 @@
             "type": "string",
             "enum": [
               "400"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_168": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/168"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Execution hook action not permitted"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "Execution hooks are not enabled in feature settings."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "403"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_169": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/169"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Unsupported license definition"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The NetApp License File provided contains more than one license."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "400"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_172": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/172"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Application backup not supported"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The application isn't eligible for backups because Astra Control Provisioner is not running on the associated managed cluster. Migrate the associated managed cluster to Astra Control Provisioner and retry the request."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_173": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/173"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Application backup not supported without SnapDir"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The application isn't eligible for backups because the snapshot directory is not enabled on some of the Astra Control Provisioner volumes."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_174": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/174"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Backup deletion in progress"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "Backup deletion is currently in progress."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
             ]
           },
           "correlationID": {
