@@ -10,8 +10,10 @@ settings:
     api_enabled: true
   rss_page: "rn/whats_new.html"
   versions:
-    - version-number: "23.07"
+    - version-number: "23.10"
       url: /astra-automation
+    - version-number: "23.07"
+      url: https://docs.netapp.com/us-en/astra-automation-2307/
     - version-number: "23.04"
       url: https://docs.netapp.com/us-en/astra-automation-2304/
     - version-number: "22.11"
