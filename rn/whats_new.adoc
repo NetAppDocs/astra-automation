@@ -15,6 +15,10 @@ summary: NetApp regularly updates the Astra Control REST API to bring you new fe
 [.lead]
 NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 7 November 2023 (23.10)
+
+xxx
+
 == 27 July 2023 (23.07)
 
 This release includes selective enhancements to the REST API. Both Astra Control Service and Astra Control Center have been updated with the 23.07 release.
