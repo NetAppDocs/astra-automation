@@ -96,11 +96,11 @@ The core resource endpoints provide the foundational services needed to establis
 
 |Permission
 |23.06
-|xxx
+|The permission resources represent permissions related to operations within the system. The API provides read-only access to the permissions.
 
 |Role
 |23.06
-|xxx
+|The role resources represent roles available in the system. The API provides read-only access to the roles.
 
 |Role binding
 |21.04
