@@ -15,6 +15,22 @@ summary: NetApp regularly updates the Astra Control REST API to bring you new fe
 [.lead]
 NetApp regularly updates the Astra Control REST API to bring you new features, enhancements, and bug fixes.
 
+== 7 November 2023 (23.10)
+
+Both Astra Control Service and Astra Control Center have been updated with the 23.10 release. There are selective enhancements to the REST API to support the new features.
+
+=== Expanded storage backends
+
+You can enable backup and restore operations for `ontap-nas-economy` storage backends.
+
+=== Immutable backups
+
+Astra Control now supports unalterable, read-only backups as an additional security layer against malware and other threats.
+
+=== Enhanced control over execution hooks
+
+Beginning with this release, execution hooks functionality can be enabled or disabled for additional security (it is disabled by default). If you have not yet created execution hooks for use with Astra Control, you need to enable the execution hooks feature to begin creating hooks. If you created execution hooks prior to this release, the execution hooks functionality stays enabled and you can use hooks as you would normally.
+
 == 27 July 2023 (23.07)
 
 This release includes selective enhancements to the REST API. Both Astra Control Service and Astra Control Center have been updated with the 23.07 release.

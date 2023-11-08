@@ -15,6 +15,7 @@ summary: You can access the automation documentation for previous Astra Control 
 [.lead]
 You can access the automation documentation for previous Astra Control releases at the links below.
 
+* https://docs.netapp.com/us-en/astra-automation-2307/[Astra Control Automation 23.07 documentation^]
 * https://docs.netapp.com/us-en/astra-automation-2304/[Astra Control Automation 23.04 documentation^]
 * https://docs.netapp.com/us-en/astra-automation-2211/[Astra Control Automation 22.11 documentation^]
 * https://docs.netapp.com/us-en/astra-automation-2208/[Astra Control Automation 22.08 documentation^]
