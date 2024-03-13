@@ -63,7 +63,7 @@
     },
     {
       "name": "Certificate",
-      "description": "The Certificate App API represents admin-trusted certificates that are used for establishing outgoing connections."
+      "description": "The Certificate API represents admin-trusted certificates that are used for establishing outgoing connections."
     },
     {
       "name": "Cloud",
