@@ -21,11 +21,11 @@ Both Astra Control Service and Astra Control Center have been updated with the 2
 
 === Minor bug fixes
 
-The 24.02 focuses primarily on fixing a number of minor bugs. No new resource types have been added to the Astra Control API.
+The 24.02 release focuses primarily on fixing a number of minor bugs. No new resource types have been added to the Astra Control API.
 
 === Tech preview: Declarative Kubernetes workflows
 
-Astra Control Center 24.02 includes declarative Kubernetes functionality that enables you to perform data management from a native Kubernetes custom resource (CR). This feature is not yet generally available. See https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^] for more information as needed.
+Astra Control Center 24.02 includes declarative Kubernetes functionality that enables you to perform data management from a native Kubernetes custom resource (CR). This feature is not yet generally available. See https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html[Astra Control Center: What's new^] for more information if needed.
 
 == 7 November 2023 (23.10)
 
