@@ -2,13 +2,13 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Astra API (ACC)",
-    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 23.10 release of Astra Control REST API.",
+    "description": "The Astra Control REST API reference documentation contains the details of all the REST API calls, including the endpoints, HTTP methods, input parameters, and responses. This complete reference is helpful when developing automation applications using the API.\nThe Astra REST API provides CRUD (Create-Read-Update-Delete) access to all the Astra Control resources except where noted for a specific resource category. This reference documentation applies to the 24.02 release of Astra Control REST API.",
     "termsOfService": "https://www.netapp.com/media/10784-cloud-data-services-terms.pdf",
     "license": {
       "name": "Astra API License",
       "url": "https://docs.netapp.com/us-en/astra-automation/media/astra-api-license.pdf"
     },
-    "version": "23.10.0"
+    "version": "24.02.0"
   },
   "servers": [
     {
@@ -63,7 +63,7 @@
     },
     {
       "name": "Certificate",
-      "description": "The Certificate App API represents admin-trusted certificates that are used for establishing outgoing connections."
+      "description": "The Certificate API represents admin-trusted certificates that are used for establishing outgoing connections."
     },
     {
       "name": "Cloud",
@@ -23274,12 +23274,12 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.6",
+                "version": "1.7",
                 "name": "GKE-22",
                 "credentialID": "6fa2f917-f730-41b8-9c15-17f531843b31"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.6_post_request_body"
+                "$ref": "#/components/schemas/cluster_1.7_post_request_body"
               }
             }
           }
@@ -23300,8 +23300,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.6",
-                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
+                  "version": "1.7",
+                  "id": "dd95ce34-55ce-5f74-bb49-2f734fe5da30",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -23337,7 +23337,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.6_post_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_post_response_body"
                 }
               }
             }
@@ -23556,7 +23556,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-clusters",
-                  "version": "1.6",
+                  "version": "1.7",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -23577,7 +23577,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.6_list_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_list_response_body"
                 }
               }
             }
@@ -23715,8 +23715,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.6",
-                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
+                  "version": "1.7",
+                  "id": "dd95ce34-55ce-5f74-bb49-2f734fe5da30",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -23752,7 +23752,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_get_response_body"
                 }
               }
             }
@@ -23908,10 +23908,10 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.6"
+                "version": "1.7"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.6_put_request_body"
+                "$ref": "#/components/schemas/cluster_1.7_put_request_body"
               }
             }
           }
@@ -24933,7 +24933,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-namespaces",
-                  "version": "1.1",
+                  "version": "1.2",
                   "items": [
                     [
                       "7d451d2f-196e-4234-aee9-7e2376047e63",
@@ -24964,7 +24964,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_list_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_list_response_body"
                 }
               }
             }
@@ -25111,8 +25111,8 @@
               "application/astra-namespace+json": {
                 "example": {
                   "type": "application/astra-namespace",
-                  "version": "1.1",
-                  "id": "2de811a6-ce8f-512c-9c3a-9585ca66de22",
+                  "version": "1.2",
+                  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
                   "links": [
                     {
                       "rel": "canonical",
@@ -25141,6 +25141,7 @@
                     }
                   ],
                   "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+                  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
                   "systemType": "kubernetes",
                   "metadata": {
                     "labels": [],
@@ -25150,7 +25151,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_get_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_get_response_body"
                 }
               }
             }
@@ -25298,7 +25299,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-clusters",
-                  "version": "1.6",
+                  "version": "1.7",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -25319,7 +25320,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.6_list_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_list_response_body"
                 }
               }
             }
@@ -25448,8 +25449,8 @@
               "application/astra-cluster+json": {
                 "example": {
                   "type": "application/astra-cluster",
-                  "version": "1.6",
-                  "id": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6",
+                  "version": "1.7",
+                  "id": "dd95ce34-55ce-5f74-bb49-2f734fe5da30",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -25485,7 +25486,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_get_response_body"
                 }
               }
             }
@@ -25632,10 +25633,10 @@
             "application/astra-cluster+json": {
               "example": {
                 "type": "application/astra-cluster",
-                "version": "1.6"
+                "version": "1.7"
               },
               "schema": {
-                "$ref": "#/components/schemas/cluster_1.6_put_request_body"
+                "$ref": "#/components/schemas/cluster_1.7_put_request_body"
               }
             }
           }
@@ -26603,7 +26604,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-namespaces",
-                  "version": "1.1",
+                  "version": "1.2",
                   "items": [
                     [
                       "7d451d2f-196e-4234-aee9-7e2376047e63",
@@ -26634,7 +26635,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_list_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_list_response_body"
                 }
               }
             }
@@ -26772,8 +26773,8 @@
               "application/astra-namespace+json": {
                 "example": {
                   "type": "application/astra-namespace",
-                  "version": "1.1",
-                  "id": "2de811a6-ce8f-512c-9c3a-9585ca66de22",
+                  "version": "1.2",
+                  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
                   "links": [
                     {
                       "rel": "canonical",
@@ -26802,6 +26803,7 @@
                     }
                   ],
                   "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+                  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
                   "systemType": "kubernetes",
                   "metadata": {
                     "labels": [],
@@ -26811,7 +26813,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_get_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_get_response_body"
                 }
               }
             }
@@ -26959,7 +26961,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-namespaces",
-                  "version": "1.1",
+                  "version": "1.2",
                   "items": [
                     [
                       "7d451d2f-196e-4234-aee9-7e2376047e63",
@@ -26990,7 +26992,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_list_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_list_response_body"
                 }
               }
             }
@@ -27119,8 +27121,8 @@
               "application/astra-namespace+json": {
                 "example": {
                   "type": "application/astra-namespace",
-                  "version": "1.1",
-                  "id": "2de811a6-ce8f-512c-9c3a-9585ca66de22",
+                  "version": "1.2",
+                  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
                   "links": [
                     {
                       "rel": "canonical",
@@ -27149,6 +27151,7 @@
                     }
                   ],
                   "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+                  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
                   "systemType": "kubernetes",
                   "metadata": {
                     "labels": [],
@@ -27158,7 +27161,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_get_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_get_response_body"
                 }
               }
             }
@@ -27278,13 +27281,13 @@
             "application/astra-managedCluster+json": {
               "example": {
                 "type": "application/astra-managedCluster",
-                "version": "1.3",
-                "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
+                "version": "1.7",
+                "id": "241e9d94-eb8b-5c25-ba20-9292baac2396",
                 "defaultStorageClass": "e280ff62-be35-4f31-a31b-a210a1ad1b33",
                 "tridentManagedStateDesired": "managed"
               },
               "schema": {
-                "$ref": "#/components/schemas/managedCluster_1.3_post_request_body"
+                "$ref": "#/components/schemas/managedCluster_1.7_post_request_body"
               }
             }
           }
@@ -27305,8 +27308,8 @@
               "application/astra-managedCluster+json": {
                 "example": {
                   "type": "application/astra-managedCluster",
-                  "version": "1.3",
-                  "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
+                  "version": "1.7",
+                  "id": "241e9d94-eb8b-5c25-ba20-9292baac2396",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -27336,6 +27339,7 @@
                   "location": "europe-west4",
                   "isMultizonal": "false",
                   "apiServiceID": "6bf33af2-872a-4553-a891-26b510c3edbe",
+                  "defaultBucketID": "a549b757-2be1-494f-aafa-4ee399ca3f00",
                   "metadata": {
                     "labels": [],
                     "creationTimestamp": "2022-10-06T20:58:16.305662Z",
@@ -27344,7 +27348,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.3_post_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.7_post_response_body"
                 }
               }
             }
@@ -27418,6 +27422,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_9"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_171"
                     }
                   ]
                 }
@@ -27519,7 +27526,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-managedClusters",
-                  "version": "1.3",
+                  "version": "1.7",
                   "items": [
                     [
                       "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
@@ -27540,7 +27547,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.3_list_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.7_list_response_body"
                 }
               }
             }
@@ -27669,8 +27676,8 @@
               "application/astra-managedCluster+json": {
                 "example": {
                   "type": "application/astra-managedCluster",
-                  "version": "1.3",
-                  "id": "b82af145-054d-5f0d-bf47-3d22457a8b99",
+                  "version": "1.7",
+                  "id": "241e9d94-eb8b-5c25-ba20-9292baac2396",
                   "name": "GKE-22",
                   "state": "running",
                   "stateUnready": [],
@@ -27700,6 +27707,7 @@
                   "location": "europe-west4",
                   "isMultizonal": "false",
                   "apiServiceID": "6bf33af2-872a-4553-a891-26b510c3edbe",
+                  "defaultBucketID": "a549b757-2be1-494f-aafa-4ee399ca3f00",
                   "metadata": {
                     "labels": [],
                     "creationTimestamp": "2022-10-06T20:58:16.305662Z",
@@ -27708,7 +27716,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/managedCluster_1.3_get_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.7_get_response_body"
                 }
               }
             }
@@ -27835,11 +27843,11 @@
             "application/astra-managedCluster+json": {
               "example": {
                 "type": "application/astra-managedCluster",
-                "version": "1.3",
+                "version": "1.7",
                 "defaultStorageClass": "0b146cda-7fc1-4f32-804c-8130a38a7e1c"
               },
               "schema": {
-                "$ref": "#/components/schemas/managedCluster_1.3_put_request_body"
+                "$ref": "#/components/schemas/managedCluster_1.7_put_request_body"
               }
             }
           }
@@ -27917,6 +27925,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_9"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_171"
                     }
                   ]
                 }
@@ -30570,7 +30581,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-namespaces",
-                  "version": "1.1",
+                  "version": "1.2",
                   "items": [
                     [
                       "7d451d2f-196e-4234-aee9-7e2376047e63",
@@ -30601,7 +30612,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_list_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_list_response_body"
                 }
               }
             }
@@ -30739,8 +30750,8 @@
               "application/astra-namespace+json": {
                 "example": {
                   "type": "application/astra-namespace",
-                  "version": "1.1",
-                  "id": "2de811a6-ce8f-512c-9c3a-9585ca66de22",
+                  "version": "1.2",
+                  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
                   "links": [
                     {
                       "rel": "canonical",
@@ -30769,6 +30780,7 @@
                     }
                   ],
                   "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+                  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
                   "systemType": "kubernetes",
                   "metadata": {
                     "labels": [],
@@ -30778,7 +30790,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/namespace_1.1_get_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_get_response_body"
                 }
               }
             }
@@ -32811,7 +32823,7 @@
                     {
                       "type": "https://astra.netapp.io/stateDetails/4",
                       "title": "AppMirror not yet established",
-                      "detail": "The relationship is in the process of being established, so it's not protecting the app data yet."
+                      "detail": "The AppMirror relationship is not protecting the app data yet because the relationship is in the process of being established."
                     }
                   ],
                   "metadata": {
@@ -35393,7 +35405,7 @@
                     {
                       "type": "https://astra.netapp.io/stateDetails/4",
                       "title": "AppMirror not yet established",
-                      "detail": "The relationship is in the process of being established, so it's not protecting the app data yet."
+                      "detail": "The AppMirror relationship is not protecting the app data yet because the relationship is in the process of being established."
                     }
                   ],
                   "metadata": {
@@ -38824,11 +38836,11 @@
             "application/astra-appSnap+json": {
               "example": {
                 "type": "application/astra-appSnap",
-                "version": "1.2",
+                "version": "1.3",
                 "name": "app-name-245"
               },
               "schema": {
-                "$ref": "#/components/schemas/appSnap_1.2_post_request_body"
+                "$ref": "#/components/schemas/appSnap_1.3_post_request_body"
               }
             }
           }
@@ -38849,9 +38861,10 @@
               "application/astra-appSnap+json": {
                 "example": {
                   "type": "application/astra-appSnap",
-                  "version": "1.2",
-                  "id": "4f56a1df-8f47-541a-bd81-77260053a2f6",
+                  "version": "1.3",
+                  "id": "c2cc5c22-ed0e-5c2b-8b7e-0fb81727f617",
                   "name": "app-name-245",
+                  "bucketID": "0afbe357-a717-4c7a-8b3d-d0368959c8de",
                   "scheduleID": "1fe83650-9b3c-41ef-bb25-a2910c19c33e",
                   "state": "pending",
                   "stateUnready": [],
@@ -38863,7 +38876,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/appSnap_1.2_post_response_body"
+                  "$ref": "#/components/schemas/appSnap_1.3_post_response_body"
                 }
               }
             }
@@ -38937,6 +38950,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_9"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_177"
                     }
                   ]
                 }
@@ -38963,6 +38979,9 @@
                     },
                     {
                       "$ref": "#/components/schemas/astra_problem_detail_149"
+                    },
+                    {
+                      "$ref": "#/components/schemas/astra_problem_detail_176"
                     }
                   ]
                 }
@@ -39044,7 +39063,7 @@
               "application/json": {
                 "example": {
                   "type": "application/astra-appSnaps",
-                  "version": "1.2",
+                  "version": "1.3",
                   "items": [
                     [
                       "2b6dafc3-2172-4431-a482-6306b2703130",
@@ -39065,7 +39084,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/appSnap_1.2_list_response_body"
+                  "$ref": "#/components/schemas/appSnap_1.3_list_response_body"
                 }
               }
             }
@@ -39203,9 +39222,10 @@
               "application/astra-appSnap+json": {
                 "example": {
                   "type": "application/astra-appSnap",
-                  "version": "1.2",
-                  "id": "4f56a1df-8f47-541a-bd81-77260053a2f6",
+                  "version": "1.3",
+                  "id": "c2cc5c22-ed0e-5c2b-8b7e-0fb81727f617",
                   "name": "app-name-245",
+                  "bucketID": "0afbe357-a717-4c7a-8b3d-d0368959c8de",
                   "scheduleID": "1fe83650-9b3c-41ef-bb25-a2910c19c33e",
                   "state": "pending",
                   "stateUnready": [],
@@ -39217,7 +39237,7 @@
                   }
                 },
                 "schema": {
-                  "$ref": "#/components/schemas/appSnap_1.2_get_response_body"
+                  "$ref": "#/components/schemas/appSnap_1.3_get_response_body"
                 }
               }
             }
@@ -44053,6 +44073,11 @@
             "type": "array",
             "$ref": "#/components/schemas/type_unready"
           },
+          "stateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
+          },
           "hookState": {
             "description": "JSON string containing a value indicating the state of any execution hooks run as part of a snapshot.\nDefined values are:\n* \"failed\" - One or more execution hooks have failed\n* \"success\" - There were zero or more applicable hooks and all were successful",
             "type": "string",
@@ -44256,6 +44281,11 @@
             "description": "JSON array of JSON strings, each indicating a reason why an application backup is unable to transition to \"running\", or why it has transitioned to \"failed\" or \"removed\".\nDefined values are:\n* Minimum length: 1\n* Maximum length: 127",
             "type": "array",
             "$ref": "#/components/schemas/type_unready"
+          },
+          "stateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "hookState": {
             "description": "JSON string containing a value indicating the state of any execution hooks run as part of a snapshot.\nDefined values are:\n* \"failed\" - One or more execution hooks have failed\n* \"success\" - There were zero or more applicable hooks and all were successful",
@@ -45122,7 +45152,7 @@
         },
         "additionalProperties": false
       },
-      "appSnap_1.2_get_response_body": {
+      "appSnap_1.3_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -45143,20 +45173,21 @@
             "example": "application/astra-appSnap"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "4f56a1df-8f47-541a-bd81-77260053a2f6"
+            "example": "c2cc5c22-ed0e-5c2b-8b7e-0fb81727f617"
           },
           "name": {
             "description": "JSON string containing a user-specified name for the snapshot. If not specified, or when snapshots are initiated by a schedule, the system assigns a name for the snapshot.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* Conforms to the DNS 1123 Label Schema",
@@ -45165,6 +45196,12 @@
             "minLength": 1,
             "maxLength": 63,
             "example": "app-name-245"
+          },
+          "bucketID": {
+            "description": "JSON string containing an optional bucket ID that indicates where the snapshot will be stored on create. If not specified, a default bucket on the cluster is used. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.\nIf the cloud default bucket is not available, an error will be returned on create. Defined values are:\n* Conforms to the Astra Identifier Schema",
+            "type": "application/vnd.netapp.astra.bucket",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "0afbe357-a717-4c7a-8b3d-d0368959c8de"
           },
           "scheduleID": {
             "description": "JSON string containing an optional schedule ID that indicates that the snapshot was triggered by a schedule and specifies which schedule triggered the snapshot. Only present for snapshots initiated by a schedule.\nDefined values are:\n* Conforms to the Astra Identifier Schema",
@@ -45179,7 +45216,7 @@
             "example": "f0d519ed-28e6-4c14-a421-f51a0f9a4162"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the snapshot.\nDefined values are:\n* \"pending\" - The application snapshot is scheduled for discovery\n* \"discovering\" - The application snapshot is in the process of being discovered\n* \"running\" - The application snapshot is running normally\n* \"completed\" - The application snapshot has completed\n* \"failed\" - The application snapshot is in a permanent failure state\n* \"removed\" - The application snapshot is not currently accessible\n* \"unknown\" - The application snapshot state cannot be determined",
+            "description": "JSON string containing a value indicating the operational state of the snapshot.\nDefined values are:\n* \"pending\" - The application snapshot is scheduled for discovery\n* \"discovering\" - The application snapshot is in the process of being discovered\n* \"running\" - The application snapshot is running normally\n* \"completed\" - The application snapshot has completed\n* \"failed\" - The application snapshot is in a permanent failure state\n* \"removed\" - The application snapshot is not currently accessible\n* \"deleting\" - The application snapshot is being deleted\n* \"unknown\" - The application snapshot state cannot be determined",
             "type": "string",
             "enum": [
               "pending",
@@ -45188,6 +45225,7 @@
               "completed",
               "failed",
               "removed",
+              "deleting",
               "unknown"
             ],
             "example": "completed"
@@ -45196,6 +45234,11 @@
             "description": "JSON array of JSON strings, each indicating a reason why an application snapshot is unable to transition to \"running\", or why it has transitioned to \"failed\".\nDefined values are:\n* Minimum length: 1\n* Maximum length: 127",
             "type": "array",
             "$ref": "#/components/schemas/type_unready"
+          },
+          "stateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "hookState": {
             "description": "JSON string containing a value indicating the state of any execution hook or hooks running as a part of a snapshot.\nDefined values are:\n* \"failed\" - One or more execution hooks have failed\n* \"success\" - There were zero or more applicable hooks and all were successful",
@@ -45218,7 +45261,7 @@
         },
         "additionalProperties": false
       },
-      "appSnap_1.2_list_response_body": {
+      "appSnap_1.3_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -45231,7 +45274,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/appSnap_1.2_get_response_body"
+                  "$ref": "#/components/schemas/appSnap_1.3_get_response_body"
                 },
                 {
                   "type": "array"
@@ -45244,7 +45287,7 @@
           }
         }
       },
-      "appSnap_1.2_post_request_body": {
+      "appSnap_1.3_post_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -45260,14 +45303,15 @@
             "example": "application/astra-appSnap"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "name": {
             "description": "JSON string containing a user-specified name for the snapshot. If not specified, or when snapshots are initiated by a schedule, the system assigns a name for the snapshot.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* Conforms to the DNS 1123 Label Schema",
@@ -45277,6 +45321,12 @@
             "maxLength": 63,
             "example": "app-name-245"
           },
+          "bucketID": {
+            "description": "JSON string containing an optional bucket ID that indicates where the snapshot will be stored on create. If not specified, a default bucket on the cluster is used. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.\nIf the cloud default bucket is not available, an error will be returned on create. Defined values are:\n* Conforms to the Astra Identifier Schema",
+            "type": "application/vnd.netapp.astra.bucket",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "0afbe357-a717-4c7a-8b3d-d0368959c8de"
+          },
           "metadata": {
             "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on create, a metadata object will be created with no labels.",
             "type": "object",
@@ -45285,7 +45335,7 @@
         },
         "additionalProperties": false
       },
-      "appSnap_1.2_post_response_body": {
+      "appSnap_1.3_post_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -45306,20 +45356,21 @@
             "example": "application/astra-appSnap"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
             "type": "string",
             "enum": [
+              "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.2"
+            "example": "1.3"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "4f56a1df-8f47-541a-bd81-77260053a2f6"
+            "example": "c2cc5c22-ed0e-5c2b-8b7e-0fb81727f617"
           },
           "name": {
             "description": "JSON string containing a user-specified name for the snapshot. If not specified, or when snapshots are initiated by a schedule, the system assigns a name for the snapshot.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* Conforms to the DNS 1123 Label Schema",
@@ -45328,6 +45379,12 @@
             "minLength": 1,
             "maxLength": 63,
             "example": "app-name-245"
+          },
+          "bucketID": {
+            "description": "JSON string containing an optional bucket ID that indicates where the snapshot will be stored on create. If not specified, a default bucket on the cluster is used. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.\nIf the cloud default bucket is not available, an error will be returned on create. Defined values are:\n* Conforms to the Astra Identifier Schema",
+            "type": "application/vnd.netapp.astra.bucket",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "0afbe357-a717-4c7a-8b3d-d0368959c8de"
           },
           "scheduleID": {
             "description": "JSON string containing an optional schedule ID that indicates that the snapshot was triggered by a schedule and specifies which schedule triggered the snapshot. Only present for snapshots initiated by a schedule.\nDefined values are:\n* Conforms to the Astra Identifier Schema",
@@ -45342,7 +45399,7 @@
             "example": "f0d519ed-28e6-4c14-a421-f51a0f9a4162"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the snapshot.\nDefined values are:\n* \"pending\" - The application snapshot is scheduled for discovery\n* \"discovering\" - The application snapshot is in the process of being discovered\n* \"running\" - The application snapshot is running normally\n* \"completed\" - The application snapshot has completed\n* \"failed\" - The application snapshot is in a permanent failure state\n* \"removed\" - The application snapshot is not currently accessible\n* \"unknown\" - The application snapshot state cannot be determined",
+            "description": "JSON string containing a value indicating the operational state of the snapshot.\nDefined values are:\n* \"pending\" - The application snapshot is scheduled for discovery\n* \"discovering\" - The application snapshot is in the process of being discovered\n* \"running\" - The application snapshot is running normally\n* \"completed\" - The application snapshot has completed\n* \"failed\" - The application snapshot is in a permanent failure state\n* \"removed\" - The application snapshot is not currently accessible\n* \"deleting\" - The application snapshot is being deleted\n* \"unknown\" - The application snapshot state cannot be determined",
             "type": "string",
             "enum": [
               "pending",
@@ -45351,6 +45408,7 @@
               "completed",
               "failed",
               "removed",
+              "deleting",
               "unknown"
             ],
             "example": "completed"
@@ -45359,6 +45417,11 @@
             "description": "JSON array of JSON strings, each indicating a reason why an application snapshot is unable to transition to \"running\", or why it has transitioned to \"failed\".\nDefined values are:\n* Minimum length: 1\n* Maximum length: 127",
             "type": "array",
             "$ref": "#/components/schemas/type_unready"
+          },
+          "stateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "hookState": {
             "description": "JSON string containing a value indicating the state of any execution hook or hooks running as a part of a snapshot.\nDefined values are:\n* \"failed\" - One or more execution hooks have failed\n* \"success\" - There were zero or more applicable hooks and all were successful",
@@ -48727,7 +48790,7 @@
           }
         }
       },
-      "cluster_1.6_get_response_body": {
+      "cluster_1.7_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -48755,9 +48818,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
               "1.6",
               "1.5",
               "1.4",
@@ -48766,13 +48830,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.6"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
+            "example": "dd95ce34-55ce-5f74-bb49-2f734fe5da30"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -48801,16 +48865,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state, and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
-            "example": "unmanaged"
+            "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The clusters default storage class supports snapshots\n* \"partial\" - The cluster has only storageClasses that do not support snapshots\n* \"atRisk\" - The default storage class of the cluster does not support snapshots",
@@ -48976,7 +49046,7 @@
             "example": "548bdc1f-f00e-4a23-a062-83265d224d46"
           },
           "credentialID": {
-            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with at least the relay option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
+            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with the connectorV2 option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
             "type": "application/vnd.netapp.astra.credential",
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6fa2f917-f730-41b8-9c15-17f531843b31"
@@ -49011,7 +49081,7 @@
               "enum": [
                 "neptuneV1",
                 "proxyV1",
-                "relayV1",
+                "connectorV2",
                 "watcherV1"
               ]
             }
@@ -49030,7 +49100,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.6_list_response_body": {
+      "cluster_1.7_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -49043,7 +49113,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/cluster_1.6_get_response_body"
+                  "$ref": "#/components/schemas/cluster_1.7_get_response_body"
                 },
                 {
                   "type": "array"
@@ -49056,7 +49126,7 @@
           }
         }
       },
-      "cluster_1.6_post_request_body": {
+      "cluster_1.7_post_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -49072,9 +49142,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
               "1.6",
               "1.5",
               "1.4",
@@ -49083,7 +49154,7 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.6"
+            "example": "1.7"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49100,8 +49171,23 @@
             ],
             "example": "true"
           },
+          "clusterType": {
+            "description": "JSON string containing a value indicating the type of cluster.\nDefined values are:\n* \"gke\" - Kubernetes hosted on Google Kubernetes Engine\n* \"aks\" - Kubernetes hosted on Microsoft Azure Kubernetes Service\n* \"eks\" - Kubernetes hosted on Amazon Elastic Kubernetes Service\n* \"rke\" - The cluster is of type Rancher\n* \"tanzu\" -The cluster is of type Tanzu Kubernetes Grid\n* \"openshift\" - The cluster is of type OpenShift\n* \"anthos\" - The cluster is of type GKE Anthos\n* \"kubernetes\" - The cluster is generic Kubernetes",
+            "type": "string",
+            "enum": [
+              "aks",
+              "anthos",
+              "eks",
+              "gke",
+              "kubernetes",
+              "openshift",
+              "rke",
+              "tanzu"
+            ],
+            "example": "kubernetes"
+          },
           "credentialID": {
-            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with at least the relay option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
+            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with the connectorV2 option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
             "type": "application/vnd.netapp.astra.credential",
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6fa2f917-f730-41b8-9c15-17f531843b31"
@@ -49120,7 +49206,7 @@
               "enum": [
                 "neptuneV1",
                 "proxyV1",
-                "relayV1",
+                "connectorV2",
                 "watcherV1"
               ]
             }
@@ -49133,7 +49219,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.6_post_response_body": {
+      "cluster_1.7_post_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -49161,9 +49247,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
               "1.6",
               "1.5",
               "1.4",
@@ -49172,13 +49259,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.6"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
+            "example": "dd95ce34-55ce-5f74-bb49-2f734fe5da30"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49207,16 +49294,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state, and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
-            "example": "unmanaged"
+            "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The clusters default storage class supports snapshots\n* \"partial\" - The cluster has only storageClasses that do not support snapshots\n* \"atRisk\" - The default storage class of the cluster does not support snapshots",
@@ -49382,7 +49475,7 @@
             "example": "548bdc1f-f00e-4a23-a062-83265d224d46"
           },
           "credentialID": {
-            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with at least the relay option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
+            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with the connectorV2 option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
             "type": "application/vnd.netapp.astra.credential",
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6fa2f917-f730-41b8-9c15-17f531843b31"
@@ -49417,7 +49510,7 @@
               "enum": [
                 "neptuneV1",
                 "proxyV1",
-                "relayV1",
+                "connectorV2",
                 "watcherV1"
               ]
             }
@@ -49436,7 +49529,7 @@
         },
         "additionalProperties": false
       },
-      "cluster_1.6_put_request_body": {
+      "cluster_1.7_put_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -49452,9 +49545,10 @@
             "example": "application/astra-cluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
               "1.6",
               "1.5",
               "1.4",
@@ -49463,13 +49557,13 @@
               "1.1",
               "1.0"
             ],
-            "example": "1.6"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b8c3bce9-5f8f-5f5a-a456-2b2eb6cfd2b6"
+            "example": "dd95ce34-55ce-5f74-bb49-2f734fe5da30"
           },
           "name": {
             "description": "JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks",
@@ -49498,16 +49592,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state, and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in \"running\" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
-            "example": "unmanaged"
+            "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The clusters default storage class supports snapshots\n* \"partial\" - The cluster has only storageClasses that do not support snapshots\n* \"atRisk\" - The default storage class of the cluster does not support snapshots",
@@ -49673,7 +49773,7 @@
             "example": "548bdc1f-f00e-4a23-a062-83265d224d46"
           },
           "credentialID": {
-            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with at least the relay option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
+            "description": "JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.\nDefined values are:\n* Conforms to the Astra Identifier Schema\n If privateRouteID and connectorCapabilities with the connectorV2 option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.\nIf credentialID and a relay capable connector is provided, an error is generated.",
             "type": "application/vnd.netapp.astra.credential",
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6fa2f917-f730-41b8-9c15-17f531843b31"
@@ -49708,7 +49808,7 @@
               "enum": [
                 "neptuneV1",
                 "proxyV1",
-                "relayV1",
+                "connectorV2",
                 "watcherV1"
               ]
             }
@@ -52912,7 +53012,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.3_get_response_body": {
+      "managedCluster_1.7_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -52944,21 +53044,25 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
+              "1.6",
+              "1.5",
+              "1.4",
               "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.3"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
+            "example": "241e9d94-eb8b-5c25-ba20-9292baac2396"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -52977,7 +53081,8 @@
               "running",
               "failed",
               "removed",
-              "unknown"
+              "unknown",
+              "deleting"
             ],
             "example": "running"
           },
@@ -53005,16 +53110,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
             "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The cluster's default storage class supports snapshots\n* \"partial\" - The cluster has only storage classes that do not support snapshots\n* \"atRisk\" - The cluster's default storage class does not support snapshots",
@@ -53197,6 +53308,12 @@
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6bf33af2-872a-4553-a891-26b510c3edbe"
           },
+          "defaultBucketID": {
+            "description": "JSON string containing the ID of a bucket that will be used by default for persisting application metadata for a managed Neptune cluster. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.",
+            "type": "string",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "a549b757-2be1-494f-aafa-4ee399ca3f00"
+          },
           "metadata": {
             "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on create, a metadata object will be created with no labels.\nIf not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.",
             "type": "object",
@@ -53205,7 +53322,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.3_list_response_body": {
+      "managedCluster_1.7_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -53218,7 +53335,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/managedCluster_1.3_get_response_body"
+                  "$ref": "#/components/schemas/managedCluster_1.7_get_response_body"
                 },
                 {
                   "type": "array"
@@ -53231,7 +53348,7 @@
           }
         }
       },
-      "managedCluster_1.3_post_request_body": {
+      "managedCluster_1.7_post_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -53248,21 +53365,25 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
+              "1.6",
+              "1.5",
+              "1.4",
               "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.3"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
+            "example": "241e9d94-eb8b-5c25-ba20-9292baac2396"
           },
           "tridentManagedStateDesired": {
             "description": "JSON string containing a value indicating the desired management state for Trident.\nDefined values are:\n* \"managed\" - Manage Trident on this cluster\n* \"unmanaged\" - Do not manage Trident on this cluster",
@@ -53278,6 +53399,12 @@
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "e280ff62-be35-4f31-a31b-a210a1ad1b33"
           },
+          "defaultBucketID": {
+            "description": "JSON string containing the ID of a bucket that will be used by default for persisting application metadata for a managed Neptune cluster. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.",
+            "type": "string",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "a549b757-2be1-494f-aafa-4ee399ca3f00"
+          },
           "metadata": {
             "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on create, a metadata object will be created with no labels.\nIf not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.",
             "type": "object",
@@ -53286,7 +53413,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.3_post_response_body": {
+      "managedCluster_1.7_post_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -53318,21 +53445,25 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
+              "1.6",
+              "1.5",
+              "1.4",
               "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.3"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
+            "example": "241e9d94-eb8b-5c25-ba20-9292baac2396"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -53351,7 +53482,8 @@
               "running",
               "failed",
               "removed",
-              "unknown"
+              "unknown",
+              "deleting"
             ],
             "example": "running"
           },
@@ -53379,16 +53511,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
             "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The cluster's default storage class supports snapshots\n* \"partial\" - The cluster has only storage classes that do not support snapshots\n* \"atRisk\" - The cluster's default storage class does not support snapshots",
@@ -53571,6 +53709,12 @@
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6bf33af2-872a-4553-a891-26b510c3edbe"
           },
+          "defaultBucketID": {
+            "description": "JSON string containing the ID of a bucket that will be used by default for persisting application metadata for a managed Neptune cluster. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.",
+            "type": "string",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "a549b757-2be1-494f-aafa-4ee399ca3f00"
+          },
           "metadata": {
             "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on create, a metadata object will be created with no labels.\nIf not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.",
             "type": "object",
@@ -53579,7 +53723,7 @@
         },
         "additionalProperties": false
       },
-      "managedCluster_1.3_put_request_body": {
+      "managedCluster_1.7_put_request_body": {
         "type": "object",
         "required": [
           "type",
@@ -53595,21 +53739,25 @@
             "example": "application/astra-managedCluster"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"\n* \"1.3\"\n* \"1.4\"\n* \"1.5\"\n* \"1.6\"\n* \"1.7\"",
             "type": "string",
             "enum": [
+              "1.7",
+              "1.6",
+              "1.5",
+              "1.4",
               "1.3",
               "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.3"
+            "example": "1.7"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "b82af145-054d-5f0d-bf47-3d22457a8b99"
+            "example": "241e9d94-eb8b-5c25-ba20-9292baac2396"
           },
           "name": {
             "description": "JSON string containing a name for the cluster.\nDefined values are:\n* Minimum length: 1\n* Maximum length: 63\n* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.",
@@ -53628,7 +53776,8 @@
               "running",
               "failed",
               "removed",
-              "unknown"
+              "unknown",
+              "deleting"
             ],
             "example": "running"
           },
@@ -53656,16 +53805,22 @@
             "$ref": "#/components/schemas/type_unready"
           },
           "managedState": {
-            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
+            "description": "JSON string containing a value indicating the management state of the cluster.\nDefined values are:\n* \"pending\" - The cluster is scheduled to be discovered or added\n* \"ineligible\" - The cluster is in a \"running\" state, is not under management, and is not eligible for management. The reason or reasons for this ineligibility are provided in the unready key's value\n* \"deleting\" - The cluster is in the process of being deleted\n* \"unmanaged\" - The cluster is in a \"running\" or \"failed\" state, is not under management, and is eligible for management\n* \"managing\" - The cluster is in a \"running\" state and is in the process of being managed\n* \"managed\" - The cluster is in a \"running\", \"failed\", or \"removed\" state and is under management",
             "type": "string",
             "enum": [
               "pending",
               "ineligible",
+              "deleting",
               "unmanaged",
               "managing",
               "managed"
             ],
             "example": "managed"
+          },
+          "managedStateDetails": {
+            "description": "JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.\nIf no details are available, this array will be empty.\nDefined values are:\n* Minimum Items: 0",
+            "type": "array",
+            "$ref": "#/components/schemas/type_astra_stateDetails"
           },
           "protectionState": {
             "description": "JSON string containing a value indicating the protection state of the cluster.\nDefined values are:\n* \"full\" - The cluster's default storage class supports snapshots\n* \"partial\" - The cluster has only storage classes that do not support snapshots\n* \"atRisk\" - The cluster's default storage class does not support snapshots",
@@ -53848,6 +54003,12 @@
             "$ref": "#/components/schemas/type_astra_identifier",
             "example": "6bf33af2-872a-4553-a891-26b510c3edbe"
           },
+          "defaultBucketID": {
+            "description": "JSON string containing the ID of a bucket that will be used by default for persisting application metadata for a managed Neptune cluster. If no default bucket is specified on the cluster, the corresponding cloud default bucket will be used.",
+            "type": "string",
+            "$ref": "#/components/schemas/type_astra_identifier",
+            "example": "a549b757-2be1-494f-aafa-4ee399ca3f00"
+          },
           "metadata": {
             "description": "Client and service-specified metadata associated with the resource.\nDefined values are:\n* Conforms to the Astra Metadata Schema\nIf not specified on create, a metadata object will be created with no labels.\nIf not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.",
             "type": "object",
@@ -53856,7 +54017,7 @@
         },
         "additionalProperties": false
       },
-      "namespace_1.1_get_response_body": {
+      "namespace_1.2_get_response_body": {
         "type": "object",
         "required": [
           "type",
@@ -53866,6 +54027,7 @@
           "name",
           "namespaceState",
           "namespaceStateDetails",
+          "kubernetesUID",
           "clusterID",
           "metadata"
         ],
@@ -53879,19 +54041,20 @@
             "example": "application/astra-namespace"
           },
           "version": {
-            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"",
+            "description": "Version of the resource.\nDefined values are:\n* \"1.0\"\n* \"1.1\"\n* \"1.2\"",
             "type": "string",
             "enum": [
+              "1.2",
               "1.1",
               "1.0"
             ],
-            "example": "1.1"
+            "example": "1.2"
           },
           "id": {
             "description": "Globally unique identifier of the resource.\nDefined values are:\n* Conforms to the UUIDv4 Schema",
             "type": "string",
             "$ref": "#/components/schemas/type_astra_identifier",
-            "example": "2de811a6-ce8f-512c-9c3a-9585ca66de22"
+            "example": "214dc2eb-19a6-5444-b156-f4b6b551a81a"
           },
           "links": {
             "description": "Links describing supported operations against the resource.",
@@ -53924,6 +54087,11 @@
             "type": "array",
             "$ref": "#/components/schemas/type_astra_labels"
           },
+          "kubernetesUID": {
+            "description": "JSON string containing the Kubernetes generated UID of the namespace resource",
+            "type": "string",
+            "example": "c617b889-65af-407f-adac-bde3ec743283"
+          },
           "clusterID": {
             "description": "JSON string containing a globally unique identifier of the cluster that the namespace is contained in.\nDefined values are:\n* Conforms to the Astra Identifier Schema",
             "type": "application/vnd.netapp.astra.cluster",
@@ -53950,7 +54118,7 @@
         },
         "additionalProperties": false
       },
-      "namespace_1.1_list_response_body": {
+      "namespace_1.2_list_response_body": {
         "type": "object",
         "required": [
           "items",
@@ -53963,7 +54131,7 @@
             "items": {
               "anyOf": [
                 {
-                  "$ref": "#/components/schemas/namespace_1.1_get_response_body"
+                  "$ref": "#/components/schemas/namespace_1.2_get_response_body"
                 },
                 {
                   "type": "array"
@@ -63046,6 +63214,12 @@
                   "$ref": "#/components/schemas/astra_problem_detail_169"
                 },
                 {
+                  "$ref": "#/components/schemas/astra_problem_detail_170"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_171"
+                },
+                {
                   "$ref": "#/components/schemas/astra_problem_detail_172"
                 },
                 {
@@ -63053,6 +63227,15 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_174"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_175"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_176"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_177"
                 }
               ]
             }
@@ -65321,6 +65504,12 @@
                   "$ref": "#/components/schemas/astra_problem_detail_169"
                 },
                 {
+                  "$ref": "#/components/schemas/astra_problem_detail_170"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_171"
+                },
+                {
                   "$ref": "#/components/schemas/astra_problem_detail_172"
                 },
                 {
@@ -65328,6 +65517,15 @@
                 },
                 {
                   "$ref": "#/components/schemas/astra_problem_detail_174"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_175"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_176"
+                },
+                {
+                  "$ref": "#/components/schemas/astra_problem_detail_177"
                 }
               ]
             }
@@ -67523,6 +67721,84 @@
         },
         "additionalProperties": true
       },
+      "astra_problem_detail_170": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/170"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Default bucket not assigned"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The requested operation is not possible because there is no default bucket for this cluster."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "400"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_171": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/171"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Default bucket assignment not allowed"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "This cluster isn't eligible for default bucket assignment because it doesn't have the 'neptuneV1' capability."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "400"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
       "astra_problem_detail_172": {
         "type": "object",
         "required": [
@@ -67632,6 +67908,123 @@
             "type": "string",
             "enum": [
               "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_175": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/175"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Bucket deletion not allowed"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The bucket can't be deleted because it is currently set as the default bucket for a cluster."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_176": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/176"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Snapshot name already exists"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "The resource wasn't created because a snapshot with the same name already exists."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "409"
+            ]
+          },
+          "correlationID": {
+            "$ref": "#/components/schemas/type_astra_identifier"
+          }
+        },
+        "additionalProperties": true
+      },
+      "astra_problem_detail_177": {
+        "type": "object",
+        "required": [
+          "type",
+          "title",
+          "detail",
+          "status"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "https://astra.netapp.io/problems/177"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "enum": [
+              "Bucket assignment for snapshot not allowed"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "enum": [
+              "This snapshot isn't eligible for bucket assignment because the associated cluster doesn't have the 'neptuneV1' capability."
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "400"
             ]
           },
           "correlationID": {
