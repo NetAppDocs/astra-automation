@@ -17,19 +17,19 @@ The documentation at this site describes the Astra Control REST API and related 
 
 .Release versioning
 
-Every Astra Control release is assigned a version number of the form *YY.MM*. This value identities the version based on the year (_YY_) and month (_MM_) it became available. For example, Astra Control Center 23.07 was released in July 2023.
+Every Astra Control release is assigned a version number of the form *YY.MM*. As a general rule, this value identities the Astra version based on the year (_YY_) and month (_MM_) it became available. For example, Astra Control Center 23.07 was released in July 2023.
 
 .Release cadence
 
-Updates to Astra Control Service and Astra Control Center generally occur at the same time. However, in the past Astra Control Service had an accelerated release cadence. This resulted in one or more incremental updates beyond the most current Astra Control Center release.
+Updates to Astra Control Service and Astra Control Center generally occur at the same time. However in the past, Astra Control Service has had an accelerated release cadence. This resulted in one or more incremental updates between the major Astra Control Center releases.
 
 .Astra Control deployments
 
 The documentation at this site applies to the following Astra Control releases:
 
-* Astra Control Service 23.10
+* Astra Control Service 24.02
 
-* Astra Control Center 23.10
+* Astra Control Center 24.02
 
 Because this site documents the REST API for both deployment models, there may be some features available only with one deployment model or the other. Any significant differences between the two are noted as needed.
 
@@ -39,8 +39,8 @@ See the following pages and sites for more information about the current as well
 
 * link:../rn/whats_new.html[What's new with the Astra Control REST API]
 * link:../endpoints/resources.html[REST resources and endpoints]
-* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 23.10 documentation^]
-* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 23.10 documentation^]
+* https://docs.netapp.com/us-en/astra-control-center/[Astra Control Center 24.02 documentation^]
+* https://docs.netapp.com/us-en/astra-control-service/[Astra Control Service 24.02 documentation^]
 * link:../rn/earlier-versions.html[Earlier versions of Astra Automation documentation]
 
 .Help us improve the documentation
