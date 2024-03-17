@@ -1,0 +1,3123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  
+    
+    
+  
+
+  
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/aa-earlier-versions.html</loc>
+        
+      
+      <lastmod>2023-09-14T00:00:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rn/about.html</loc>
+        
+      
+      <lastmod>2024-03-14T18:45:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/account_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/information/additional_resources.html</loc>
+        
+      
+      <lastmod>2023-03-26T22:21:49+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/app_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/application_asset_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/application_backup_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/application_snapshot_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/appmirror_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/python/astra_toolkits.html</loc>
+        
+      
+      <lastmod>2022-10-11T16:36:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/asup_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/before_get_started.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/bucket_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/certificate_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/cloud_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/cluster_node_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/cluster_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/credential_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-certificates-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-credentials-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-groups-users-unreadnotifications-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-hooksources-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-licenses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-packages-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-subscriptions-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-core-v1-users-unreadnotifications-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-appbackups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-appsnaps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-executionhookoverrides-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v1-apps-schedules-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-k8s-v2-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-appbackups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-buckets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-clouds-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-clouds-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-managedclusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v1-storagebackends-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/delete-accounts-topology-v2-managedclusters-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/additional/diagnostics_support.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rn/earlier-versions.html</loc>
+        
+      
+      <lastmod>2024-03-14T18:45:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/entitlement_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/event_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/execution_hook_override_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/execution_hook_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/feature_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/first_call.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:13:09+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-asups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-asups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-certificates-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-certificates.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-credentials-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-credentials.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-entitlements-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-entitlements.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-events-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-events.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-executionhooks.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-features-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-features.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-tokens.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-unreadnotifications-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users-unreadnotifications.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups-users.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-groups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-hooksources-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-hooksources.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-ldapgroups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-ldapgroups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-ldapusers-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-ldapusers.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-licenses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-licenses.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-notifications-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-notifications.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-packages-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-packages.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-settings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-settings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-subscriptions-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-subscriptions.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-tasks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-tasks.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-upgrades-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-upgrades.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-groups-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-groups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-tokens.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-unreadnotifications-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users-unreadnotifications.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-core-v1-users.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-appmirrors.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appassets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appassets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appbackups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appbackups-appassets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appbackups-appassets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appbackups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appmirrors.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appsnaps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appsnaps-appassets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-appsnaps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-executionhookoverrides-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-executionhookoverrides.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-executionhooks.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-schedules-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-schedules.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-volumes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v1-apps-volumes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v2-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-k8s-v2-apps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-metrics.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-appbackups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-appbackups-appassets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-appbackups-appassets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-appbackups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-buckets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-buckets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-clusternodes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-clusternodes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-namespaces-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-namespaces.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-storageclasses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters-storageclasses.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds-clusters.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clouds.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-clusternodes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-clusternodes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-namespaces-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-namespaces.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-storageclasses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters-storageclasses.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-clusters.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-apiresources-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-apiresources.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-apps-appassets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-apps-appassets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-clusternodes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-clusternodes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-namespaces-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-namespaces.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-storageclasses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-storageclasses.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-volumes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters-volumes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-managedclusters.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-namespaces-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-namespaces.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-storagebackends-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-storagebackends-volumes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-storagebackends-volumes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-storagebackends.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-volumes-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v1-volumes.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v2-managedclusters-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts-topology-v2-managedclusters-apps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/get-accounts.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html</loc>
+        
+      
+      <lastmod>2023-09-14T00:00:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/group_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/hook_source_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rest-core/http_details.html</loc>
+        
+      
+      <lastmod>2023-04-20T14:22:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/</loc>
+        
+      
+      <lastmod>2024-03-17T15:01:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rn/known_issues.html</loc>
+        
+      
+      <lastmod>2023-09-14T00:35:02+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/kubernetes_api_resource_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/kubernetes_concepts.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/ldap_group_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/ldap_prepare.html</loc>
+        
+      
+      <lastmod>2023-01-30T23:00:53+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/ldap_user_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/legal-notices.html</loc>
+        
+      
+      <lastmod>2021-09-15T19:49:11+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/license_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/managed_cluster_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/metrics_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/namespace_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/notification_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/online_api_call.html</loc>
+        
+      
+      <lastmod>2023-07-11T17:58:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/online_api_ref.html</loc>
+        
+      
+      <lastmod>2023-05-26T17:54:06+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/intro/overview.html</loc>
+        
+      
+      <lastmod>2022-10-11T12:18:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/package_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-asups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-certificates.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-credentials.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-executionhooks.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-groups-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-groups-users-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-groups-users-tokens.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-groups-users.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-groups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-hooksources.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-licenses.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-packages.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-subscriptions.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-users-groups-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-users-groups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-users-rolebindings.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-users-tokens.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-core-v1-users.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-appmirrors.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-appbackups.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-appmirrors.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-appsnaps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-executionhookoverrides.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-executionhooks.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v1-apps-schedules.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-k8s-v2-apps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v1-buckets.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v1-clouds-clusters.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v1-clouds.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v1-managedclusters.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v1-storagebackends.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts-topology-v2-managedclusters-apps.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/post-accounts.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/get-started/prepare_to_use_workflows.html</loc>
+        
+      
+      <lastmod>2022-10-25T14:06:57+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-certificates-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-credentials-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-groups-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-groups-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-groups-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:36+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-hooksources-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-licenses-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-settings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-subscriptions-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-upgrades-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-users-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-users-groups-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-users-groups-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-users-rolebindings-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-core-v1-users-tokens-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:38+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v1-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v1-apps-appmirrors-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v1-apps-executionhooks-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:43+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v1-apps-schedules-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-k8s-v2-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-buckets-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-clouds-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-clouds-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-clusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-managedclusters-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v1-storagebackends-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:41+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/put-accounts-topology-v2-managedclusters-apps-.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/python/py_list_man_apps.html</loc>
+        
+      
+      <lastmod>2022-11-05T17:40:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/python/python_before.html</loc>
+        
+      
+      <lastmod>2022-10-11T12:18:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/additional/rbac.html</loc>
+        
+      
+      <lastmod>2022-10-11T12:18:14+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/endpoints/resources.html</loc>
+        
+      
+      <lastmod>2023-11-07T20:43:05+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rest-core/resources_collections.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rest-core/rest_web_services.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/additional/revoke_token.html</loc>
+        
+      
+      <lastmod>2023-09-14T00:00:42+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/role_binding_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/schedule_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//search.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:51:10+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/setting_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/storage_backend_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/storage_class_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/subscription_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/task_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/token_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/unread_notification_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/upgrade_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rest-core/url_format.html</loc>
+        
+      
+      <lastmod>2023-03-20T16:34:25+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/user_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation//reference/volume_overview.html</loc>
+        
+      
+      <lastmod>2024-03-17T15:53:35+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_add_cluster.html</loc>
+        
+      
+      <lastmod>2023-04-27T00:12:37+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_clone_app.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_clone_app_backup.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_clone_app_snapshot.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_create_backup.html</loc>
+        
+      
+      <lastmod>2022-11-04T15:23:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_create_protection.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_create_snapshot.html</loc>
+        
+      
+      <lastmod>2022-11-04T15:23:39+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_create_user.html</loc>
+        
+      
+      <lastmod>2022-11-21T18:42:08+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_delete_backup.html</loc>
+        
+      
+      <lastmod>2022-10-25T11:56:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_delete_failed_app.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_delete_snapshot.html</loc>
+        
+      
+      <lastmod>2022-10-25T12:10:00+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_enable_anf_dyn_pools.html</loc>
+        
+      
+      <lastmod>2023-05-30T20:33:15+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_get_man_app.html</loc>
+        
+      
+      <lastmod>2022-10-25T11:56:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_ldap_add_entries.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_ldap_configure_server.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_ldap_disable_reset.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_list_backups.html</loc>
+        
+      
+      <lastmod>2022-10-31T10:55:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_buckets.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_clouds.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_clusters.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_list_man_apps.html</loc>
+        
+      
+      <lastmod>2022-10-31T10:55:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_man_clusters.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_list_namespaces.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_list_notifications.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_list_snapshots.html</loc>
+        
+      
+      <lastmod>2022-10-31T10:55:48+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_storage_backends.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_storage_classes.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_list_users.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/wf_man_cluster.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_manage_app.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_restore_app_backup.html</loc>
+        
+      
+      <lastmod>2022-11-18T12:58:40+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/wf_unmanage_app.html</loc>
+        
+      
+      <lastmod>2022-11-20T17:39:31+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/rn/whats_new.html</loc>
+        
+      
+      <lastmod>2024-03-14T18:45:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/additional/work_with_collections.html</loc>
+        
+      
+      <lastmod>2022-10-12T15:14:16+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html</loc>
+        
+      
+      <lastmod>2022-10-13T10:28:47+00:00</lastmod>
+      
+    </url>
+  
+    <url>
+      
+        <loc>https://docs.netapp.com/us-en/astra-automation/workflows_infra/workflows_infra_before.html</loc>
+        
+      
+      <lastmod>2023-01-20T14:48:40+00:00</lastmod>
+      
+    </url>
+  
+
+  
+  
+</urlset>
