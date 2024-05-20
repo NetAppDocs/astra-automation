@@ -15,9 +15,13 @@ summary: You can list the S3 buckets defined for a specific Astra account.
 [.lead]
 You can list the S3 buckets defined for a specific Astra account.
 
-=== 1. List the buckets
+== Step 1: List the buckets
 
 Perform the following REST API call to list the buckets.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -27,6 +31,10 @@ Perform the following REST API call to list the buckets.
 |/accounts/{account_id}/topology/v1/buckets
 |===
 
-===== Curl example: Return all data for all buckets
+.Curl example: Return all data for all buckets
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 

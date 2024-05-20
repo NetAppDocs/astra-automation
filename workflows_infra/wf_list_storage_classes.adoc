@@ -15,17 +15,20 @@ summary: You can list the available storage classes.
 [.lead]
 You can list the available storage classes.
 
-=== 1. Select the cloud
+== Step 1. Select the cloud
 
 Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud you'll be working in.
 
-=== 2. Select the cluster
+== Step 2: Select the cluster
 
 Perform the workflow link:../workflows_infra/wf_list_clusters.html[List the clusters] and select the cluster.
 
-=== 3. List the storage classes for a specific cluster
+== Step 3: List the storage classes for a specific cluster
 
 Perform the following REST API call to list the storage classes for a specific cluster and cloud.
+
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint.
 
 [cols="1,6",options="header"]
 |===
@@ -35,12 +38,18 @@ Perform the following REST API call to list the storage classes for a specific c
 |/accounts/{account_id}/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses
 |===
 
-===== Curl example: Return all data for all storage classes
-[source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+.Curl example: Return all data for all storage classes
 
-===== JSON output example
-[source,json]
+[source,curl]
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters/<CLUSTER_ID>/storageClasses" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+
+
+.JSON output example
+----
 {
     "items": [
         {
@@ -113,3 +122,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
         }
     ]
 }
+----

@@ -53,6 +53,8 @@ Perform the following REST API call to create a credential using the kubeconfig 
 
 .HTTP method and endpoint
 
+This REST API call uses the following method and endpoint.
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
@@ -88,6 +90,8 @@ curl --request POST \
 Perform the following REST API call to add the cluster to the cloud. The value of the `credentialID` input field is obtained from the REST API call in the previous step.
 
 .HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===

@@ -18,12 +18,15 @@ When backing up a managed app in a private on-premises cluster that has an ANF s
 [NOTE]
 Dynamic ANF pools is feature of the Astra managed apps that use an Azure NetApp Files (ANF) storage backend. When backing up these apps, Astra automatically expands and contracts the capacity pools the persistent volumes belong to by a factor of 1.5. This ensures there is enough space for the backup without incurring an additional permanent charge. See https://docs.netapp.com/us-en/astra-control-service/learn/azure-storage.html#application-backups[Azure application backups^] for more information.
 
-=== 1. Add the Azure subscription identifier
+== Step 1: Add the Azure subscription identifier
 
 Perform the following REST API call.
 
 [NOTE]
 You need to update the JSON input example as appropriate for your environment, including the subscription ID and the base64 value for the service principal.
+
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint.
 
 [cols="1,6",options="header"]
 |===
@@ -65,16 +68,22 @@ You need to update the JSON input example as appropriate for your environment, i
 
 .Curl example
 [source,curl]
-curl --location -i --request POST --data @JSONinput 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --header 'Content-Type: application/astra-credential+json'
+curl --request POST \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-credential+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
 
-=== 2. Add a bucket if needed
+== Step 2: Add a bucket if needed
 
 You should add a bucket to the managed application if needed.
 
-=== 3. Take a backup of the managed app
+== Step 3: Take a backup of the managed app
 
 Perform the workflow link:../workflows/wf_create_backup.html[Create a backup for an app]. The capacity pool where the original persistent volume is present will expand and shrink automatically.
 
-=== 4. Review the event log
+== Step 4: Review the event log
 
 Activity events are logged during the backup. Perform the workflow link:../workflows/wf_list_notifications.html[List the notifications] to view the messages.

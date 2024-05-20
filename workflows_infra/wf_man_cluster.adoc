@@ -32,6 +32,8 @@ Perform the following REST API call to manage the cluster.
 
 .HTTP method and endpoint
 
+This REST API call uses the following method and endpoint.
+
 [cols="1,6",options="header"]
 |===
 |HTTP method
