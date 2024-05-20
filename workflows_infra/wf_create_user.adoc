@@ -49,7 +49,7 @@ curl --request POST \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
--- data  @JSONinput
+--data  @JSONinput
 
 .JSON output example
 
@@ -121,7 +121,7 @@ curl --request POST \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
--- data  @JSONinput
+--data  @JSONinput
 
 == Step 5: Create a credential
 
@@ -159,4 +159,4 @@ curl --request POST \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
--- data  @JSONinput
+--data  @JSONinput
