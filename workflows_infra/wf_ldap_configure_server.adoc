@@ -22,6 +22,8 @@ Perform the following REST API call to add a CA certificate to Astra.
 [NOTE]
 This step is optional and only required if you want Astra and the LDAP to communicate over a secure channel using LDAPS.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
 //[cols="25,75"*,options="header"]
 [cols="1,6",options="header"]
 |===
@@ -107,6 +109,9 @@ curl --request POST \
 
 Perform the following REST API call to add the bind credentials.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
+
 [cols="1,6",options="header"]
 |===
 |HTTP method
@@ -167,6 +172,9 @@ Perform the following REST API call to retrieve the UUID of the `astra.account.l
 [NOTE]
 The curl example below uses a query parameter to filter the settings collection. You can instead remove the filter to get all the settings and then search for `astra.account.ldap`.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
+
 [cols="1,6",options="header"]
 |===
 |HTTP method
@@ -202,6 +210,9 @@ Perform the following REST API call to update the LDAP setting and complete the 
 
 [NOTE]
 You can issue a GET request for the specific setting first to see the configSchema. This will provide more information about the required fields in the configuration.
+
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
 
 [cols="1,6",options="header"]
 |===
@@ -251,6 +262,9 @@ If the call is successful, the HTTP 204 response is returned.
 == Step 5: Retrieve the LDAP setting
 
 You can optionally perform the following REST API call to retrieve the LDAP settings and confirm the update.
+
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
 
 [cols="1,6",options="header"]
 |===

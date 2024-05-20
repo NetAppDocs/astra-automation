@@ -23,6 +23,9 @@ Perform the workflow link:../workflows_infra/wf_list_users.html[List users] and 
 
 Perform the following REST API call to create a user. After successful completion of the call, the new user will not yet be usable.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
@@ -32,7 +35,7 @@ Perform the following REST API call to create a user. After successful completio
 |===
 
 .JSON input example
-[source,curl]
+[source,json]
 {
   "type" :  "application/astra-user",
   "version" : "1.1",
@@ -95,6 +98,9 @@ Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespac
 
 Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint.
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
@@ -104,7 +110,7 @@ Perform the following REST API call to bind the user to a role. The example belo
 |===
 
 .JSON input example
-[source,curl]
+[source,json]
 {
   "type" :  "application/astra-roleBinding",
   "version" : "1.1",
@@ -130,6 +136,9 @@ Perform the following REST API call to create a credential and associate it with
 [NOTE]
 This step is only required with Astra Control Center deployments using local authentication. It is not needed with Astra Control Center deployments using LDAP or with Astra Control Service deployments.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint.
+
 [cols="25,75"*,options="header"]
 |===
 |HTTP method
@@ -139,7 +148,7 @@ This step is only required with Astra Control Center deployments using local aut
 |===
 
 .JSON input example
-[source,curl]
+[source,json]
 {
   "type" :  "application/astra-credential",
   "version" : "1.1",
