@@ -15,11 +15,11 @@ summary: You can create a user with specific credentials and a pre-defined role.
 [.lead]
 You can create a user with specific credentials and a pre-defined role. You can also optionally restrict the user's access to specific namespaces.
 
-=== 1. Select a user name
+== Step 1: Select a user name
 
 Perform the workflow link:../workflows_infra/wf_list_users.html[List users] and select an available name not currently in use.
 
-=== 2. Create the user
+== Step 2: Create the user
 
 Perform the following REST API call to create a user. After successful completion of the call, the new user will not yet be usable.
 
@@ -31,7 +31,7 @@ Perform the following REST API call to create a user. After successful completio
 |/accounts/{account_id}/core/v1/users
 |===
 
-===== JSON input example
+.JSON input example
 [source,curl]
 {
   "type" :  "application/astra-user",
@@ -41,12 +41,19 @@ Perform the following REST API call to create a user. After successful completio
   "email" : "jwest@example.com"
 }
 
-===== Curl example
-[source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+.Curl example
 
-===== JSON output example
 [source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+-- data  @JSONinput
+
+.JSON output example
+
+----
 {
     "metadata": {
         "creationTimestamp": "2022-11-20T17:23:15Z",
@@ -78,12 +85,13 @@ curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>
     "enableTimestamp": "2022-11-20T17:23:15Z",
     "lastActTimestamp": ""
 }
+----
 
-=== 3. Optionally select the allowed namespaces
+== Step 3: Optionally select the allowed namespaces
 
 Perform the workflow link:../workflows/wf_list_namespaces.html[List the namespaces] and select the namespaces you want to restrict access to.
 
-=== 4. Bind the user to a role
+== Step 4: Bind the user to a role
 
 Perform the following REST API call to bind the user to a role. The example below places no restrictions on the namespace access. See link:../additional/rbac.html#enhanced-rbac-with-namespace-granularity[Enhanced RBAC with namespace granularity] for more information.
 
@@ -95,7 +103,7 @@ Perform the following REST API call to bind the user to a role. The example belo
 |/accounts/{account_id}/core/v1/roleBindings
 |===
 
-===== JSON input example
+.JSON input example
 [source,curl]
 {
   "type" :  "application/astra-roleBinding",
@@ -106,11 +114,16 @@ Perform the following REST API call to bind the user to a role. The example belo
   "roleConstraints": [ "*" ]
 }
 
-===== Curl example
+.Curl example
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+curl --request POST \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+-- data  @JSONinput
 
-=== 5. Create a credential
+== Step 5: Create a credential
 
 Perform the following REST API call to create a credential and associate it with the user. This example uses a password which is provided as a base64 value. The `name` property should contain the ID of the user returned in the previous step. The input property `change` must also be encoded in base64 and determines if the user must change their password at first login (`true` or `false`).
 
@@ -125,7 +138,7 @@ This step is only required with Astra Control Center deployments using local aut
 |/accounts/{account_id}/core/v1/credentials
 |===
 
-===== JSON input example
+.JSON input example
 [source,curl]
 {
   "type" :  "application/astra-credential",
@@ -139,6 +152,11 @@ This step is only required with Astra Control Center deployments using local aut
   "valid" : "true"
 }
 
-===== Curl example
+.Curl example
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+curl --request POST \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+-- data  @JSONinput
