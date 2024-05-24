@@ -59,7 +59,7 @@ curl --request POST \
 --data  @JSONinput
 
 
-.JSON response example
+.JSON output example
 ----
 {
   "type": "application/astra-certificate",
@@ -146,7 +146,7 @@ curl --request POST \
 --header "Authorization: Bearer $API_TOKEN" \ 
 --data  @JSONinput
 
-.JSON response example
+.JSON output example
 ----
 {
     "type": "application/astra-credential",
@@ -192,7 +192,7 @@ curl --request GET \
 --header "Authorization: Bearer $API_TOKEN" \ 
 
 
-.JSON response example
+.JSON output example
 ----
 {
   "items": [
@@ -284,7 +284,7 @@ curl --request GET \
 --header "Authorization: Bearer $API_TOKEN" \ 
 
 
-.JSON response example
+.JSON output example
 ----
 {
   "items": [
