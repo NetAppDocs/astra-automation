@@ -15,13 +15,17 @@ summary: You can create a data protection policy based on one or more schedules.
 [.lead]
 You can create a data protection policy based on one or more schedules.
 
-=== 1. Select the app
+== Step 1: Select the app
 
 Perform the workflow link:../workflows/wf_list_man_apps.html[List the apps] and select the desired application.
 
-=== 2. Create the protection
+== Step 2: Create the protection
 
 Perform the following REST API call to create a protection policy for a specific app.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="1,6",options="header"]
 |===
@@ -31,7 +35,7 @@ Perform the following REST API call to create a protection policy for a specific
 |/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules
 |===
 
-===== JSON input example
+.JSON input example
 [source,json]
 {
   "type": "application/astra-schedule",
@@ -46,6 +50,11 @@ Perform the following REST API call to create a protection policy for a specific
   "backupRetention": "12"
 }
 
-===== Curl example
+.Curl example
 [source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/schedules' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+curl --request POST \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/schedules" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput

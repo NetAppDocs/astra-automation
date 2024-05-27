@@ -15,8 +15,6 @@ summary: You can list the available storage backends.
 [.lead]
 You can list the available storage backends.
 
-== Step 1: List the backends
-
 Perform the following REST API call.
 
 .HTTP method and endpoint
