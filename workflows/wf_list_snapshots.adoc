@@ -15,13 +15,17 @@ summary: You can list the snapshots that have been taken for a specific applicat
 [.lead]
 You can list the snapshots that have been taken for a specific application.
 
-=== Before you begin
+== Before you begin
 
 You must have the ID of the app you want to list the snapshots for. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
-=== 1. List the snapshots
+== Step 1: List the snapshots
 
 Perform the following REST API call to list the snapshots.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -31,7 +35,7 @@ Perform the following REST API call to list the snapshots.
 |/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -51,16 +55,25 @@ In addition to the parameters common with all REST API calls, the following para
 |If `count=true` the number of snapshots is included in the metadata section of the response.
 |===
 
-===== Curl example: Return all snapshots for the app
+.Curl example: Return all snapshots for the app
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
 
-===== Curl example: Return all snapshots for the app and the count
+.Curl example: Return all snapshots for the app and the count
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps?count=true' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps?count=true" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
 
-===== JSON output example
-[source,json]
+.JSON output example
+
+----
 {
     "items": [
         {
@@ -83,3 +96,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
     ],
     "metadata": {}
 }
+----

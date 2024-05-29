@@ -15,9 +15,11 @@ summary: You can list the available namespaces.
 [.lead]
 You can list the available namespaces.
 
-=== 1. List the namespaces
-
 Perform the following REST API call to list the namespaces.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="1,6",options="header"]
 |===
@@ -27,16 +29,26 @@ Perform the following REST API call to list the namespaces.
 |/accounts/{account_id}/topology/v1/namespaces
 |===
 
-===== Curl example: Return all data for all namespaces
-[source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+.Curl example: Return all data for all namespaces
 
-===== Curl example: Return name, state, and cluster ID for all namespaces
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces?include=name,namespaceState,clusterID' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
 
-===== JSON output example
-[source,json]
+.Curl example: Return name, state, and cluster ID for all namespaces
+
+[source,curl]
+curl --request GET \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces?include=name,namespaceState,clusterID" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \
+
+.JSON output example
+----
 {
     "items": [
         [
@@ -87,3 +99,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
     ],
     "metadata": {}
 }
+----

@@ -15,17 +15,21 @@ summary: You can restore an application by creating a new app from a backup.
 [.lead]
 You can restore an application by creating a new app from a backup.
 
-=== 1. Select the app to restore
+== Step 1: Select the app to restore
 
 Perform the workflow link:wf_list_man_apps.html[List the apps] and select application you want to clone. Several of the resource values are needed for the REST call used to restore the app.
 
-=== 2. Select the backup to use
+== Step 2: Select the backup to use
 
 Perform the workflow link:wf_list_backups.html[List the backups] and select backup you want to use.
 
-=== 3. Restore the app
+== Step 3: Restore the app
 
 Perform the following REST API call. You must provide the ID for either a backup (as shown below) or snapshot.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -35,7 +39,7 @@ Perform the following REST API call. You must provide the ID for either a backup
 |/accounts/{account_id}/k8s/v2/apps/{app_id}
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -51,7 +55,7 @@ In addition to the parameters common with all REST API calls, the following para
 |Provides the parameters for the cloned app. See the example below.
 |===
 
-===== JSON input example
+.JSON input example
 [source,json]
 {
   "type": "application/astra-app",
@@ -59,6 +63,14 @@ In addition to the parameters common with all REST API calls, the following para
   "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 
-===== Curl example: Restore an app in place from a backup
+.Curl example: Restore an app in place from a backup
+
 [source,curl]
-curl --location -i --request PUT 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'ForceUpdate: true' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput
+curl --request PUT \
+--location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "ForceUpdate: true" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data @JSONinput
