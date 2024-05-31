@@ -19,7 +19,7 @@ You can list the snapshots that have been taken for a specific application.
 
 You must have the ID of the app you want to list the snapshots for. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 
-== Step 1: List the snapshots
+== List the snapshots
 
 Perform the following REST API call to list the snapshots.
 

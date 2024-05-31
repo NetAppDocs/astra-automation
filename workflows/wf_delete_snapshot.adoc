@@ -22,7 +22,7 @@ You must have the following:
 * ID of the app that owns the snapshot. If needed you can use the workflow link:wf_list_man_apps.html[List the apps] to locate the application.
 * ID of the snapshot you want to delete. If needed you can use the workflow link:wf_list_snapshots.html[List the snapshots] to locate the snapshot.
 
-== Step 1: Delete the snapshot
+== Delete the snapshot
 
 Perform the following REST API call.
 

@@ -5,7 +5,7 @@ keywords: workflows, management workflows, preparation
 summary: You can use these workflows as part of administering the applications in an Astra managed cluster.
 ---
 
-= Before you begin
+= Prepare to use the management workflows
 :hardbreaks:
 :nofooter:
 :icons: font

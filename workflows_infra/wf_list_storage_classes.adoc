@@ -15,7 +15,7 @@ summary: You can list the available storage classes.
 [.lead]
 You can list the available storage classes.
 
-== Step 1. Select the cloud
+== Step 1: Select the cloud
 
 Perform the workflow link:../workflows_infra/wf_list_clouds.html[List the clouds] and select the cloud you'll be working in.
 
