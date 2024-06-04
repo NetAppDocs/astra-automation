@@ -92,3 +92,25 @@ These workflows deal with the Astra infrastructure, including credentials, bucke
 === Management workflows
 
 You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
+
+== Using the examples with Bash
+
+If you use the workflow curl examples directly, you must update the variables they contain with values appropriate for your environment. You can manually edit the examples or rely on the Bash shell to do the substitution for you as described below.
+
+NOTE: One advantage of using Bash is that you can set the variable values one time in a shell session instead of once per curl command. 
+
+.Steps
+
+. Open the Bash shell provided with Linux or similar operating system.
+
+. Set the variable values included in the curl example you want to run. For example:
++
+`CLUSTER_ID=ce559b75-4145-11ee-b51a-005056aee9fb`
+
+. Copy the curl example from the workflow page and paste it into the shell terminal.
+
+. Press *ENTER* which will do the following:
+
+.. Substitute the variable values you set.
+
+.. Execute the curl command.
