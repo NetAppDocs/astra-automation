@@ -21,10 +21,15 @@ The Curl utility must be available on your local workstation. You must also have
 
 .Curl example
 
-The following Curl command retrieves a list of Astra users. Provide the appropriate <ACCOUNT_ID> and <API_TOKEN> as indicated.
+The following Curl command retrieves a list of Astra users. Provide the appropriate $ACCOUNT_ID and $API_TOKEN as indicated.
 
 [source,curl]
-curl --location --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Content-Type: application/json' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET  \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Content-Type: application/json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
 
 .JSON output example
 ----

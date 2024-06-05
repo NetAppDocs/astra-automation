@@ -38,7 +38,7 @@ This REST API call uses the following method and endpoint.
 
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds/<CLOUD_ID>/clusters" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/clouds/<CLOUD_ID>/clusters" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

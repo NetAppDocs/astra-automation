@@ -68,7 +68,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Delete a single backup for the app
 [source,curl]
 curl --request DELETE \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups/<BACKUP_ID>" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appBackups/<BACKUP_ID>" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -77,7 +77,7 @@ curl --request DELETE \
 
 [source,curl]
 curl --request DELETE \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups/<BACKUP_ID>" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appBackups/<BACKUP_ID>" \
 --include \
 --header "Force-Delete: true" \
 --header "Accept: */*" \

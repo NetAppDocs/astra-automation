@@ -51,7 +51,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/certificates" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/certificates" \
 --include \
 --header "Content-Type: application/astra-certificate+json" \
 --header "Accept: */*" \
@@ -139,7 +139,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/credentials" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/credentials" \
 --include \
 --header "Content-Type: application/astra-certificate+json" \
 --header "Accept: */*" \
@@ -186,7 +186,7 @@ This REST API call uses the following method and endpoint.
 .Curl example
 [source,curl]
 curl --request GET \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings?filter=name%20eq%20'astra.account.ldap'&include=name,id" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -250,7 +250,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request PUT \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
 --include \
 --header "Content-Type: application/astra-setting+json" \
 --header "Accept: */*" \
@@ -278,7 +278,7 @@ This REST API call uses the following method and endpoint.
 .Curl example
 [source,curl]
 curl --request GET \
---location "'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>" \
+--location "'https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

@@ -33,7 +33,7 @@ This REST API call uses the following method and endpoint.
 
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/namespaces" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -42,7 +42,7 @@ curl --request GET \
 
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/namespaces?include=name,namespaceState,clusterID" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/namespaces?include=name,namespaceState,clusterID" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \

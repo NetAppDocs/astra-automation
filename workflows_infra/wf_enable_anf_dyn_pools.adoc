@@ -69,7 +69,7 @@ This REST API call uses the following method and endpoint.
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
 --include \
 --header "Content-Type: application/astra-credential+json"
 --header "Accept: */*" \

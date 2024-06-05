@@ -67,7 +67,7 @@ In addition to the parameters common with all REST API calls, the following para
 
 [source,curl]
 curl --request PUT \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps/<APP_ID>" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps/$APP_ID" \
 --include \
 --header "Content-Type: application/astra-app+json" \
 --header "ForceUpdate: true" \

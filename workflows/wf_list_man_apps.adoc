@@ -49,7 +49,7 @@ In addition to the parameters common with all REST API calls, the following para
 
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -58,7 +58,7 @@ curl --request GET \
 .Curl example: Return the name, id, and state for all apps
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps?include=name,id,state" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps?include=name,id,state" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

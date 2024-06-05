@@ -54,7 +54,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Return all backups for the app
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appBackups" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appBackups" \
 --include  \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

@@ -55,7 +55,7 @@ This REST API call uses the following method and endpoint.
 
 [source,curl]
 curl --request PUT \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
 --include \
 --header "Content-Type: application/astra-setting+json"
 --header "Accept: */*" \
@@ -108,7 +108,7 @@ Note the following:
 
 [source,curl]
 curl --request PUT \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
 --include \
 --header "Content-Type: application/astra-setting+json"
 --header "Accept: */*" \

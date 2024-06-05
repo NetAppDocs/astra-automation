@@ -48,7 +48,7 @@ This REST API call uses the following method and endpoint.
 
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -123,7 +123,7 @@ This REST API call uses the following method and endpoint.
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/roleBindings" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -164,7 +164,7 @@ This REST API call uses the following method and endpoint.
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/credentials" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

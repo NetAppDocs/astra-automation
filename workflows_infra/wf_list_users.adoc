@@ -47,7 +47,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Return all data for all users
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \
@@ -55,7 +55,7 @@ curl --request GET \
 .Curl example: Return the first name, last name, and id for all user
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users?include=firstName,lastName,id" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users?include=firstName,lastName,id" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \

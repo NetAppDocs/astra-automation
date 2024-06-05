@@ -67,13 +67,13 @@ Here are some of the common reserved keywords used in the curl examples. This li
 |Keyword
 |Type
 |Description
-|<ACCOUNT_ID>
+|$ACCOUNT_ID
 |Path
 |The UUIDv4 value identifying the account where the API operation runs.
-|<API_TOKEN>
+|$API_TOKEN
 |Header
 |The bearer token identifying and authorizing the caller.
-|<APP_ID>
+|$APP_ID
 |Path
 |The UUIDv4 value identifying the application for the API call.
 |===
@@ -105,7 +105,7 @@ NOTE: One advantage of using Bash is that you can set the variable values one ti
 
 . Set the variable values included in the curl example you want to run. For example:
 +
-`CLUSTER_ID=ce559b75-4145-11ee-b51a-005056aee9fb`
+`$API_TOKEN=ce559b75-4145-11ee-b51a-005056aee9fb`
 
 . Copy the curl example from the workflow page and paste it into the shell terminal.
 

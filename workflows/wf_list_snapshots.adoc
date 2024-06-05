@@ -58,7 +58,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Return all snapshots for the app
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -66,7 +66,7 @@ curl --request GET \
 .Curl example: Return all snapshots for the app and the count
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v1/apps/<APP_ID>/appSnaps?count=true" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps?count=true" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

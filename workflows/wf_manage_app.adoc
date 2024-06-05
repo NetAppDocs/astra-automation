@@ -69,7 +69,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Manage an app
 [source,curl]
 curl --request POST \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
 --include \
 --header "Content-Type: application/astra-app+json" \
 --header "Accept: */*" \

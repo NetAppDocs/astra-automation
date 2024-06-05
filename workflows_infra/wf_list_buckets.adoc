@@ -32,7 +32,7 @@ This REST API call uses the following method and endpoint.
 .Curl example: Return all data for all buckets
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/buckets" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/buckets" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

@@ -52,7 +52,7 @@ In addition to the parameters common with all REST API calls, the following para
 .Curl example: Return all notifications
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/notifications" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
@@ -60,7 +60,7 @@ curl --request GET \
 .Curl example: Return the description for notifications with severity of warning
 [source,curl]
 curl --request GET \
---location "https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications?filter=severity%20eq%20'warning'&include=description" \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/notifications?filter=severity%20eq%20'warning'&include=description" \
 --include \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 

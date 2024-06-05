@@ -71,7 +71,7 @@ If the `email` value is not unique, an error occurs and a 409 HTTP status code i
 
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/users" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/users" \
 --include \
 --header "Content-Type: application/astra-user+json" \
 --header "Accept: */*" \
@@ -148,7 +148,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
 --include \
 --header "Content-Type: application/astra-roleBinding+json" \
 --header "Accept: */*" \
@@ -219,7 +219,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/groups" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/groups" \
 --include \
 --header "Content-Type: application/astra-group+json" \
 --header "Accept: */*" \
@@ -278,7 +278,7 @@ Note the following about the input parameters:
 .Curl example
 [source,curl]
 curl --request POST \
---location "https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/roleBindings" \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
 --include \
 --header "Content-Type: application/astra-roleBinding+json" \
 --header "Accept: */*" \
