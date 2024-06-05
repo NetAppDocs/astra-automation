@@ -105,7 +105,7 @@ NOTE: One advantage of using Bash is that you can set the variable values one ti
 
 . Set the variable values included in the curl example you want to run. For example:
 +
-`$API_TOKEN=ce559b75-4145-11ee-b51a-005056aee9fb`
+`$API_TOKEN=SGgpXHeco6M8PLxzIlgbztA4k3_eX4UCa842hOXHBFA=`
 
 . Copy the curl example from the workflow page and paste it into the shell terminal.
 
