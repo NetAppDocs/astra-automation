@@ -129,6 +129,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/roleBindings
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Content-Type: application/astra-roleBinding+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -143,16 +153,6 @@ This REST API call uses the following method and endpoint.
 Note the following about the input parameters:
 
 * The value used above for `roleConstraint` is the only option available for the current release of Astra. It indicates the user is not restricted to a limited set of namespaces and can access them all.
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
---include \
---header "Content-Type: application/astra-roleBinding+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 .JSON response example
 ----
@@ -199,6 +199,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/groups
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/groups" \
+--include \
+--header "Content-Type: application/astra-group+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -214,16 +224,6 @@ Note the following about the input parameters:
 * The following parameters are required:
 ** `authProvider`
 ** `authID`
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/groups" \
---include \
---header "Content-Type: application/astra-group+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 .JSON response example
 ----
@@ -259,6 +259,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/roleBindings
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Content-Type: application/astra-roleBinding+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -273,16 +283,6 @@ This REST API call uses the following method and endpoint.
 Note the following about the input parameters:
 
 * The value used above for `roleConstraint` is the only option available for the current release of Astra. It indicates the user is not restricted to certain namespaces and can access them all.
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
---include \
---header "Content-Type: application/astra-roleBinding+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 .JSON response example
 ----

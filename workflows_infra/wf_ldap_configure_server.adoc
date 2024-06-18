@@ -33,6 +33,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/certificates
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/certificates" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -47,17 +57,6 @@ Note the following about the input parameters:
 
 * `cert` is a JSON string containing a base64 encoded PKCS-11 formatted certificate (PEM encoded).
 * `isSelfSigned` should be set to `true` if the certificate is self-signed. The default is `false`.
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/certificates" \
---include \
---header "Content-Type: application/astra-certificate+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
-
 
 .JSON output example
 ----
@@ -120,6 +119,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/credentials
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-certificate+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -135,16 +144,6 @@ This REST API call uses the following method and endpoint.
 Note the following about the input parameters:
 
 * `bindDn` and `password` are the base64 encoded bind credentials of the LDAP admin user that is able to connect and search the LDAP directory. `bindDn` is the LDAP user's email address.
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/credentials" \
---include \
---header "Content-Type: application/astra-certificate+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 .JSON output example
 ----
@@ -222,6 +221,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
+.Curl example
+[source,curl]
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -246,16 +255,6 @@ Note the following about the input parameters:
 * `credentialId` is the id of the bind credential created earlier.
 * `secureMode` should be set to `LDAP` or `LDAPS` based on your configuration in the earlier step.
 * Only 'Active Directory' is supported as a vendor.
-
-.Curl example
-[source,curl]
-curl --request PUT \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
---include \
---header "Content-Type: application/astra-setting+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data @JSONinput
 
 If the call is successful, the HTTP 204 response is returned.
 
