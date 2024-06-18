@@ -34,16 +34,6 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/users
 |===
 
-.JSON input example
-[source,json]
-{
-  "type" :  "application/astra-user",
-  "version" : "1.1",
-  "firstName" : "John",
-  "lastName" : "West",
-  "email" : "jwest@example.com"
-}
-
 .Curl example
 
 [source,curl]
@@ -53,6 +43,16 @@ curl --request POST \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
 --data  @JSONinput
+
+.JSON input example
+[source,json]
+{
+  "type" :  "application/astra-user",
+  "version" : "1.1",
+  "firstName" : "John",
+  "lastName" : "West",
+  "email" : "jwest@example.com"
+}
 
 .JSON output example
 
@@ -109,6 +109,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/roleBindings
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -119,15 +128,6 @@ This REST API call uses the following method and endpoint.
   "role" : "viewer",
   "roleConstraints": [ "*" ]
 }
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/roleBindings" \
---include \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 == Step 5: Create a credential
 
@@ -147,6 +147,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/credentials
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -161,11 +170,4 @@ This REST API call uses the following method and endpoint.
   "valid" : "true"
 }
 
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
---include \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
+

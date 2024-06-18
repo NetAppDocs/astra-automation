@@ -44,6 +44,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/users
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Content-Type: application/astra-user+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -67,18 +77,7 @@ Note the following about the input parameters:
 
 If the `email` value is not unique, an error occurs and a 409 HTTP status code is returned in the response.
 
-.Curl example
-
-[source,curl]
-curl --request POST \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/users" \
---include \
---header "Content-Type: application/astra-user+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
-
-.JSON response example
+.JSON output example
 
 ----
 {

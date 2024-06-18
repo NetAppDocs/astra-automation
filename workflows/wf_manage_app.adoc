@@ -55,6 +55,16 @@ In addition to the parameters common with all REST API calls, the following para
 |Provides the parameters needed to identify the application to be managed. See the example below.
 |===
 
+.Curl example: Manage an app
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -66,12 +76,3 @@ In addition to the parameters common with all REST API calls, the following para
 }
 
 
-.Curl example: Manage an app
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
---include \
---header "Content-Type: application/astra-app+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data @JSONinput

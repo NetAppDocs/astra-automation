@@ -281,7 +281,7 @@ curl --request GET \
 --location "'https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN" 
 
 
 .JSON output example

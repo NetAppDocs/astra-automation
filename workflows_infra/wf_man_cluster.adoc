@@ -42,14 +42,6 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/topology/v1/managedClusters
 |===
 
-.JSON input example
-[source,json]
-{
-  "type": "application/astra-managedCluster",
-  "version": "1.0",
-  "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
-}
-
 .Curl example
 [source,curl]
 curl --request POST \
@@ -58,3 +50,13 @@ curl --request POST \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
 --data  @JSONinput
+
+.JSON input example
+[source,json]
+{
+  "type": "application/astra-managedCluster",
+  "version": "1.0",
+  "id": "d0fdf455-4330-476d-bb5d-4d109714e07d"
+}
+
+

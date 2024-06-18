@@ -63,6 +63,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/credentials
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -75,15 +84,6 @@ This REST API call uses the following method and endpoint.
   },
   "valid" : "true"
 }
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
---include \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 == Step 5: Add the cluster
 
@@ -101,14 +101,6 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters
 |===
 
-.JSON input example
-[source,json]
-{
-  "type" :  "application/astra-cluster",
-  "version" : "1.1",
-  "credentialID": credential_id
-}
-
 .Curl example
 [source,curl]
 curl --request POST \
@@ -117,3 +109,11 @@ curl --request POST \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
 --data  @JSONinput
+
+.JSON input example
+[source,json]
+{
+  "type" :  "application/astra-cluster",
+  "version" : "1.1",
+  "credentialID": credential_id
+}

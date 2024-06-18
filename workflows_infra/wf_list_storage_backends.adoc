@@ -34,7 +34,7 @@ curl --request GET \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/storageBackends" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN"  
 
 
 .JSON output example

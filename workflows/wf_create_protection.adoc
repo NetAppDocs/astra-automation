@@ -35,6 +35,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/schedules" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -50,11 +59,3 @@ This REST API call uses the following method and endpoint.
   "backupRetention": "12"
 }
 
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/schedules" \
---include \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput

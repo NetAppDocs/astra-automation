@@ -64,6 +64,17 @@ In addition to the parameters common with all REST API calls, the following para
 |Provides the parameters for the cloned app. See the example below.
 |===
 
+.Curl example: Clone an app from a backup
+
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -76,13 +87,3 @@ In addition to the parameters common with all REST API calls, the following para
   "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
 }
 
-.Curl example: Clone an app from a backup
-
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
---include \
---header "Content-Type: application/astra-app+json" \
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput

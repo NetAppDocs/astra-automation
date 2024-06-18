@@ -65,4 +65,4 @@ curl --request DELETE \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps/<SNAPSHOT_ID>" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN" 

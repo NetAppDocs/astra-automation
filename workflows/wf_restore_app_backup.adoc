@@ -55,14 +55,6 @@ In addition to the parameters common with all REST API calls, the following para
 |Provides the parameters for the cloned app. See the example below.
 |===
 
-.JSON input example
-[source,json]
-{
-  "type": "application/astra-app",
-  "version": "2.0",
-  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
-}
-
 .Curl example: Restore an app in place from a backup
 
 [source,curl]
@@ -74,3 +66,11 @@ curl --request PUT \
 --header "Accept: */*" \
 --header "Authorization: Bearer $API_TOKEN" \ 
 --data @JSONinput
+
+.JSON input example
+[source,json]
+{
+  "type": "application/astra-app",
+  "version": "2.0",
+  "backupID": "e24515bd-a28e-4b28-b832-f3c74dbf32fb"
+}

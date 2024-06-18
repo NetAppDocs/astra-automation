@@ -36,7 +36,7 @@ curl --request GET \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/namespaces" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN"  
 
 .Curl example: Return name, state, and cluster ID for all namespaces
 
@@ -45,7 +45,7 @@ curl --request GET \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/namespaces?include=name,namespaceState,clusterID" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \
+--header "Authorization: Bearer $API_TOKEN" 
 
 .JSON output example
 ----

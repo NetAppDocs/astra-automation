@@ -61,7 +61,7 @@ curl --request GET \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN" 
 
 .Curl example: Return all snapshots for the app and the count
 [source,curl]
@@ -69,7 +69,7 @@ curl --request GET \
 --location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v1/apps/$APP_ID/appSnaps?count=true" \
 --include \
 --header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
+--header "Authorization: Bearer $API_TOKEN" 
 
 .JSON output example
 

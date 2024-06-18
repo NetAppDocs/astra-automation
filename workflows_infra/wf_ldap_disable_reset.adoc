@@ -35,6 +35,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
+[source,curl]
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -52,15 +61,6 @@ This REST API call uses the following method and endpoint.
     "vendor": "Active Directory"
     }
 }
-
-[source,curl]
-curl --request PUT \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
---include \
---header "Content-Type: application/astra-setting+json"
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration settings again to confirm the change.
 
@@ -84,6 +84,15 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
+[source,curl]
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
+--data  @JSONinput
+
 .JSON input example
 [source,json]
 {
@@ -106,13 +115,4 @@ Note the following:
 
 * To change the LDAP server, you must both disable and reset LDAP changing `connectHost` to a null value as shown in the example above.
 
-[source,curl]
-curl --request PUT \
---location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
---include \
---header "Content-Type: application/astra-setting+json"
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
-
-If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration again to confirm the change.
+* If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration again to confirm the change.

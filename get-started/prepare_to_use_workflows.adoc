@@ -25,6 +25,23 @@ A _workflow_ is a sequence of one or more steps needed to accomplish a specific 
 
 The workflows include the core steps and parameters needed to accomplish each task. They provide a starting point for customizing your automation environment.
 
+NOTE: A workflow can contain only one step. These single-step workflows are formatted slightly differently than workflows containing multiple steps. For example, the explicit step name is removed. The action or operation should be clear based on the workflow title.
+
+== Workflow categories
+
+There are two broad categories of Astra workflows available based on your deployment model. If you are using Astra Control Center, you should start with the infrastructure workflows and then proceed to the management workflows. When using Astra Control Service, you can typically go directly to the management workflows.
+
+[NOTE]
+The curl samples in the workflows use the URL for the Astra Control Service. You need to change the URL when using the on-premises Astra Control Center as appropriate for your environment.
+
+=== Infrastructure workflows
+
+These workflows deal with the Astra infrastructure, including credentials, buckets, and storage backends. They are needed with Astra Control Center but in most cases can also be used with Astra Control Service. The workflows focus on the tasks required to establish and maintain an Astra managed cluster.
+
+=== Management workflows
+
+You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
+
 == Common input parameters
 
 The input parameters described below are common to all the curl samples used to illustrate a REST API call.
@@ -60,6 +77,8 @@ The API token and other ID values used with the curl examples are opaque with no
 * Because all the keywords use the same format with brackets and capital letters, you can quickly identify the location and content to insert or extract.
 * No value is lost because the original parameters cannot be copied and used with an actual deployment.
 
+The variables are formatted to be used in a Bash shell environment. Each variable begins with a dollar sign and is enclosed in double quotes as needed. This makes them recognizable to Bash. Upper case is consistently used for the names.
+
 Here are some of the common reserved keywords used in the curl examples. This list is not exhaustive and additional keywords are used as needed. Their meaning should be obvious based on the context.
 
 [cols="25,15,60"*,options="header"]
@@ -77,21 +96,6 @@ Here are some of the common reserved keywords used in the curl examples. This li
 |Path
 |The UUIDv4 value identifying the application for the API call.
 |===
-
-== Workflow categories
-
-There are two broad categories of Astra workflows available based on your deployment model. If you are using Astra Control Center, you should start with the infrastructure workflows and then proceed to the management workflows. When using Astra Control Service, you can typically go directly to the management workflows.
-
-[NOTE]
-The curl samples in the workflows use the URL for the Astra Control Service. You need to change the URL when using the on-premises Astra Control Center as appropriate for your environment.
-
-=== Infrastructure workflows
-
-These workflows deal with the Astra infrastructure, including credentials, buckets, and storage backends. They are needed with Astra Control Center but in most cases can also be used with Astra Control Service. The workflows focus on the tasks required to establish and maintain an Astra managed cluster.
-
-=== Management workflows
-
-You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
 
 == Using the examples with Bash
 

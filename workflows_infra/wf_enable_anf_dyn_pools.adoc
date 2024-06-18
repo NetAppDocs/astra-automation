@@ -36,6 +36,16 @@ This REST API call uses the following method and endpoint.
 |/accounts/{account_id}/core/v1/credentials
 |===
 
+.Curl example
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
+--include \
+--header "Content-Type: application/astra-credential+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
 .JSON input example
 [%collapsible%closed]
 [source,json]
@@ -65,16 +75,6 @@ This REST API call uses the following method and endpoint.
     ]
   }
 }
-
-.Curl example
-[source,curl]
-curl --request POST \
---location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/credentials" \
---include \
---header "Content-Type: application/astra-credential+json"
---header "Accept: */*" \
---header "Authorization: Bearer $API_TOKEN" \ 
---data  @JSONinput
 
 == Step 2: Add a bucket if needed
 
