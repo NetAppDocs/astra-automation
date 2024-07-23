@@ -5,7 +5,7 @@ keywords:
 summary: You can create a user with specific credentials and a pre-defined role. You can also optionally restrict the user's access to specific namespaces.
 ---
 
-= Create a user
+= Create a user 
 :hardbreaks:
 :nofooter:
 :icons: font
