@@ -15,9 +15,11 @@ summary: You can list the notifications for a specific Astra account. You might 
 [.lead]
 You can list the notifications for a specific Astra account. You might do this as part of monitoring the system activity or debugging an issue.
 
-=== 1. List the notifications
-
 Perform the following REST API call.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -27,7 +29,7 @@ Perform the following REST API call.
 |/accounts/{account_id}/core/v1/notifications
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -47,16 +49,24 @@ In addition to the parameters common with all REST API calls, the following para
 |Optionally select the values you want returned in the response.
 |===
 
-===== Curl example: Return all notifications
+.Curl example: Return all notifications
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/notifications" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
 
-===== Curl example: Return the description for notifications with severity of warning
+.Curl example: Return the description for notifications with severity of warning
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/notifications?filter=severity%20eq%20'warning'&include=description' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/notifications?filter=severity%20eq%20'warning'&include=description" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
 
-===== JSON output example
-[source,json]
+.JSON output example
+----
 {
   "items": [
     [
@@ -68,3 +78,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   ],
   "metadata": {}
 }
+----

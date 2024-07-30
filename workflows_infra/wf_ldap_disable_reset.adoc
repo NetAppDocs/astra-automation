@@ -24,6 +24,9 @@ Both workflow tasks require the id for the `astra.account.ldap` Astra setting. D
 
 You can perform the following REST API call to globally disable LDAP authentication for a specific Astra deployment. The call updates the `astra.account.ldap` setting and the `isEnabled` value is set to `false`.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
+
 [cols="1,6",options="header"]
 |===
 |HTTP method
@@ -32,7 +35,16 @@ You can perform the following REST API call to globally disable LDAP authenticat
 |/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
-===== JSON input example
+[source,curl]
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
+.JSON input example
 [source,json]
 {
   "type": "application/astra-setting",
@@ -50,9 +62,6 @@ You can perform the following REST API call to globally disable LDAP authenticat
     }
 }
 
-[source,curl]
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-
 If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration settings again to confirm the change.
 
 == Reset the LDAP authentication configuration
@@ -64,6 +73,9 @@ The value of `isEnabled` must also be set to `false`. You can either set this va
 [CAUTION]
 This is a disruptive operation and you should proceed with caution. It deletes all the imported LDAP users and groups. It also deletes all the related Astra users, groups, and roleBindings (LDAP type) that you created in Astra Control Center.
 
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint. 
+
 [cols="1,6",options="header"]
 |===
 |HTTP method
@@ -72,7 +84,16 @@ This is a disruptive operation and you should proceed with caution. It deletes a
 |/accounts/{account_id}/core/v1/settings/{setting_id}
 |===
 
-===== JSON input example
+[source,curl]
+curl --request PUT \
+--location "https://astra.example.com/accounts/$ACCOUNT_ID/core/v1/settings/<SETTING_ID>" \
+--include \
+--header "Content-Type: application/astra-setting+json"
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
+--data  @JSONinput
+
+.JSON input example
 [source,json]
 {
   "type": "application/astra-setting",
@@ -94,7 +115,4 @@ Note the following:
 
 * To change the LDAP server, you must both disable and reset LDAP changing `connectHost` to a null value as shown in the example above.
 
-[source,curl]
-curl --location -i --request PUT --data @JSONinput 'https://astra.example.com/accounts/<ACCOUNT_ID>/core/v1/settings/<SETTING_ID>' --header 'Content-Type: application/astra-setting+json' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
-
-If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration again to confirm the change.
+* If the call is successful, the `HTTP 204` response is returned. You can optionally retrieve the configuration again to confirm the change.

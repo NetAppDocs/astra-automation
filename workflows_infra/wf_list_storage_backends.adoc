@@ -15,9 +15,10 @@ summary: You can list the available storage backends.
 [.lead]
 You can list the available storage backends.
 
-=== 1. List the backends
-
 Perform the following REST API call.
+
+.HTTP method and endpoint
+This REST API call uses the following method and endpoint.
 
 [cols="1,6",options="header"]
 |===
@@ -27,12 +28,17 @@ Perform the following REST API call.
 |/accounts/{account_id}/topology/v1/storageBackends
 |===
 
-===== Curl example: Return all data for all storage backends
+.Curl example: Return all data for all storage backends
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/storageBackends' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/storageBackends" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
 
-===== JSON output example
-[source,json]
+
+.JSON output example
+----
 {
   "items": [
     {
@@ -66,3 +72,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
     }
   ]
 }
+----

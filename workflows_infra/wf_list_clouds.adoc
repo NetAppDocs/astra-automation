@@ -15,9 +15,11 @@ summary: You can list the clouds defined and available a specific Astra account.
 [.lead]
 You can list the clouds defined and available a specific Astra account.
 
-=== 1. List the clouds
-
 Perform the following REST API call to list the clouds.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -27,6 +29,10 @@ Perform the following REST API call to list the clouds.
 |/accounts/{account_id}/topology/v1/clouds
 |===
 
-===== Curl example: Return all data for all clouds
+.Curl example: Return all data for all clouds
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/topology/v1/clouds' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/topology/v1/clouds" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" 
