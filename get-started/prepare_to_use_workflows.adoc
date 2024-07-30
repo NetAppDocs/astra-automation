@@ -32,7 +32,7 @@ NOTE: A workflow can contain only one step. These single-step workflows are form
 There are two broad categories of Astra workflows available based on your deployment model. If you are using Astra Control Center, you should start with the infrastructure workflows and then proceed to the management workflows. When using Astra Control Service, you can typically go directly to the management workflows.
 
 [NOTE]
-The curl samples in the workflows use the URL for the Astra Control Service. You need to change the URL when using the on-premises Astra Control Center as appropriate for your environment.
+The curl samples in the workflows use the URL for Astra Control Service. You need to change the URL when using the on-premises Astra Control Center as appropriate for your environment.
 
 === Infrastructure workflows
 
@@ -40,7 +40,7 @@ These workflows deal with the Astra infrastructure, including credentials, bucke
 
 === Management workflows
 
-You can use these workflows after you have a managed cluster. The workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
+You can use these workflows after you have a managed cluster. Management workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
 
 == Common input parameters
 
@@ -77,7 +77,7 @@ The API token and other ID values used with the curl examples are opaque with no
 * Because all the keywords use the same format with brackets and capital letters, you can quickly identify the location and content to insert or extract.
 * No value is lost because the original parameters cannot be copied and used with an actual deployment.
 
-The variables are formatted to be used in a Bash shell environment. Each variable begins with a dollar sign and is enclosed in double quotes as needed. This makes them recognizable to Bash. Upper case is consistently used for the names.
+The variables are formatted for use in a Bash shell environment. Each variable begins with a dollar sign and is enclosed in double quotes as needed. This makes them recognizable to Bash. Upper case is consistently used for the names.
 
 Here are some of the common reserved keywords used in the curl examples. This list is not exhaustive and additional keywords are used as needed. Their meaning should be obvious based on the context.
 
@@ -99,7 +99,7 @@ Here are some of the common reserved keywords used in the curl examples. This li
 
 == Using the examples with Bash
 
-If you use the workflow curl examples directly, you must update the variables they contain with values appropriate for your environment. You can manually edit the examples or rely on the Bash shell to do the substitution for you as described below.
+If you use the workflow curl examples directly, you must update the variables they contain with values appropriate for your environment. You can manually edit the examples or rely on the Bash shell to do the substitution for you, as described below.
 
 NOTE: One advantage of using Bash is that you can set the variable values one time in a shell session instead of once per curl command. 
 
@@ -113,7 +113,7 @@ NOTE: One advantage of using Bash is that you can set the variable values one ti
 
 . Copy the curl example from the workflow page and paste it into the shell terminal.
 
-. Press *ENTER* which will do the following:
+. Press *ENTER* to perform the following tasks:
 
 .. Substitute the variable values you set.
 
