@@ -40,7 +40,7 @@ These workflows deal with the Astra infrastructure, including credentials, bucke
 
 === Management workflows
 
-You can use these workflows after you have a managed cluster. Management workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
+You can use these workflows after you have set up a managed cluster. Management workflows focus on application protection and support operations such as backing up, restoring, and cloning an app.
 
 == Common input parameters
 
