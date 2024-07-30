@@ -15,7 +15,7 @@ summary: You can create a new application by cloning an existing app.
 [.lead]
 You can create a new application by cloning an existing app.
 
-=== Before you begin
+== Before you begin
 
 Note the following about this workflow:
 
@@ -26,13 +26,17 @@ Note the following about this workflow:
 [NOTE]
 To clone an app to a different cluster, you need to update the `clusterId` parameter in the JSON input as appropriate for your environment.
 
-=== 1. Select the app to clone
+== Step 1: Select the app to clone
 
 Perform the workflow link:wf_list_man_apps.html[List the apps] and select application you want to clone. Several of the resource values are needed for the REST call used to clone the app.
 
-=== 2. Clone the app
+== Step 2: Clone the app
 
 Perform the following REST API call to clone the app.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -42,7 +46,7 @@ Perform the following REST API call to clone the app.
 |/accounts/{account_id}/k8s/v2/apps
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -58,7 +62,17 @@ In addition to the parameters common with all REST API calls, the following para
 |Provides the parameters for the cloned app. See the example below.
 |===
 
-===== JSON input example
+.Curl example: Clone an app
+[source,curl]
+curl --request POST \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Content-Type: application/astra-app+json" \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" \ 
+--data  @JSONinput
+
+.JSON input example
 [source,json]
 {
   "type": "application/astra-app",
@@ -70,6 +84,3 @@ In addition to the parameters common with all REST API calls, the following para
   "sourceAppID": "e591ee59-ea90-4a9f-8e6c-d2b6e8647096"
 }
 
-===== Curl example: Clone an app
-[source,curl]
-curl --location -i --request POST 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Content-Type: application/astra-app+json' --header '*/*' --header 'Authorization: Bearer <API_TOKEN>' --data @JSONinput

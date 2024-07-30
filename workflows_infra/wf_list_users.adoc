@@ -15,9 +15,9 @@ summary: You can list the users that are defined for a specific Astra account.
 [.lead]
 You can list the users that are defined for a specific Astra account.
 
-=== 1. List the users
+.HTTP method and endpoint
 
-Perform the following REST API call.
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -27,7 +27,7 @@ Perform the following REST API call.
 |/accounts/{account_id}/core/v1/users
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -43,16 +43,26 @@ In addition to the parameters common with all REST API calls, the following para
 |Optionally select the values you want returned in the response.
 |===
 
-===== Curl example: Return all data for all users
-[source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
 
-===== Curl example: Return the first name, last name, and id for all users
+.Curl example: Return all data for all users
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/core/v1/users?include=firstName,lastName,id' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" 
 
-===== JSON output example
+.Curl example: Return the first name, last name, and id for all user
 [source,curl]
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/core/v1/users?include=firstName,lastName,id" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN" 
+
+.JSON output example
+
+----
 {
   "items": [
     [
@@ -68,3 +78,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
   ],
   "metadata": {}
 }
+----

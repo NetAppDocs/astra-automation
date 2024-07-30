@@ -15,9 +15,11 @@ summary: You can list the applications that are currently managed by Astra. You 
 [.lead]
 You can list the applications that are currently managed by Astra. You might do this as part of finding the snapshots or backups for a specific app.
 
-=== 1. List the applications
-
 Perform the following REST API call.
+
+.HTTP method and endpoint
+
+This REST API call uses the following method and endpoint.
 
 [cols="25,75"*,options="header"]
 |===
@@ -27,7 +29,7 @@ Perform the following REST API call.
 |/account/{account_id}/k8s/v2/apps
 |===
 
-===== Additional input parameters
+.Additional input parameters
 
 In addition to the parameters common with all REST API calls, the following parameters are also used in the curl examples for this step.
 
@@ -43,16 +45,26 @@ In addition to the parameters common with all REST API calls, the following para
 |Optionally select the values you want returned in the response.
 |===
 
-===== Curl example: Return all data for all apps
-[source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+.Curl example: Return all data for all apps
 
-===== Curl example: Return the name, id, and state for all apps
 [source,curl]
-curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/k8s/v2/apps?include=name,id,state' --header 'Accept: */*' --header 'Authorization: Bearer <API_TOKEN>'
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
 
-===== JSON output example
-[source,json]
+
+.Curl example: Return the name, id, and state for all apps
+[source,curl]
+curl --request GET \
+--location "https://astra.netapp.io/accounts/$ACCOUNT_ID/k8s/v2/apps?include=name,id,state" \
+--include \
+--header "Accept: */*" \
+--header "Authorization: Bearer $API_TOKEN"  
+
+.JSON output example
+----
 {
     "items": [
         [
@@ -68,3 +80,4 @@ curl --location -i --request GET 'https://astra.netapp.io/accounts/<ACCOUNT_ID>/
     ],
     "metadata": {}
 }
+----

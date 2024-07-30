@@ -1,7 +1,7 @@
 section: workflows
 title: Management workflows
 entries:
-  - title: Before you begin
+  - title: Prepare to use the management workflows
     url: /workflows/workflows_before.html
   - title: App control
     entries:

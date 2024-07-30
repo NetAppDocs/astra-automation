@@ -5,7 +5,7 @@ keywords: workflows, infrastructure workflows, preparation
 summary: You can use these workflows to create and maintain the infrastructure used with an Astra Control Center deployment. In many cases, the workflows can also be used with Astra Control Service.
 ---
 
-= Before you begin
+= Prepare to use the infrastructure workflows
 :hardbreaks:
 :nofooter:
 :icons: font
