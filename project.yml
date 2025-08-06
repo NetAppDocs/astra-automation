@@ -18,16 +18,6 @@ settings:
       url: /astra-automation-2307
     - version-number: "23.04"
       url: /astra-automation-2304      
-    - version-number: "22.11"
-      url: /astra-automation-2211
-    - version-number: "22.08"
-      url: /astra-automation-2208
-    - version-number: "22.04"
-      url: /astra-automation-2204
-    - version-number: "21.12"
-      url: /astra-automation-2112 
-    - version-number: "21.08"
-      url: /astra-automation-2108
 sidebar:
   entries:
     - title: Astra Control Automation docs
