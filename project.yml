@@ -8,6 +8,7 @@ settings:
     pdf_enabled: true
     harmony_enabled: true
     api_enabled: true
+    api_standardize: false
   rss_page: "rn/whats_new.html"
   versions:
     - version-number: "24.02"
