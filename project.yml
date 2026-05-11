@@ -3,43 +3,2996 @@ settings:
   name: Astra Automation
   internal:
     pdf_enabled: true
-    api_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
-    api_enabled: true
-    api_standardize: false
-  rss_page: "rn/whats_new.html"
+  rss_page: rn/whats_new.html
   versions:
-    - version-number: "24.02"
-      url: /astra-automation
-    - version-number: "23.10"
-      url: /astra-automation-2310
-    - version-number: "23.07"
-      url: /astra-automation-2307
-    - version-number: "23.04"
-      url: /astra-automation-2304      
+  - version-number: '24.02'
+    url: "/astra-automation"
+  - version-number: '23.10'
+    url: "/astra-automation-2310"
+  - version-number: '23.07'
+    url: "/astra-automation-2307"
+  - version-number: '23.04'
+    url: "/astra-automation-2304"
 sidebar:
   entries:
-    - title: Astra Control Automation docs
-      url: /index.html
-    - section: rn
-    - section: intro
-    - section: get-started
-    - title: Astra REST implementation
+  - title: Astra Control Automation docs
+    url: "/index.html"
+  - section: rn
+  - section: intro
+  - section: get-started
+  - title: Astra REST implementation
+    entries:
+    - section: rest-core
+    - section: endpoints
+    - section: additional
+  - section: workflows_infra
+  - section: workflows
+  - section: python
+  - title: API reference
+    entries:
+    - title: Overview
+      url: "/reference/astra_api_(acc)_overview.html"
+    - title: ASUP
       entries:
-         - section: rest-core
-         - section: endpoints
-         - section: additional
-    - section: workflows_infra
-    - section: workflows
-    - section: python
-    - section: reference
-    - section: information
-    - title: Legal notices
-      url: /legal-notices.html
+      - title: Overview
+        url: "/reference/asup_endpoints.html"
+      - title: Create a new ASUP resource
+        url: "/reference/post-accounts-core-v1-asups.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/asups
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/asups"
+        data-summary: Create a new ASUP resource for a specified account.
+        data-deprecated: false
+        data-category: ASUP
+        data-tag-description: The ASUP API provides access to ASUP resources in order
+          to create and optionally upload the AutoSupport bundles.
+        data-introduced: ''
+      - title: List all ASUP resources
+        url: "/reference/get-accounts-core-v1-asups.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/asups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/asups"
+        data-summary: Retrieve a list of resources for an account with optional field
+          selection and limit.
+        data-deprecated: false
+        data-category: ASUP
+        data-tag-description: The ASUP API provides access to ASUP resources in order
+          to create and optionally upload the AutoSupport bundles.
+        data-introduced: ''
+      - title: Retrieve an ASUP resource
+        url: "/reference/get-accounts-core-v1-asups-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/asups/{asup_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/asups/{asup_id}"
+        data-summary: Retrieve a specific AutoSupport bundle using account and ASUP
+          IDs.
+        data-deprecated: false
+        data-category: ASUP
+        data-tag-description: The ASUP API provides access to ASUP resources in order
+          to create and optionally upload the AutoSupport bundles.
+        data-introduced: ''
+    - title: Account
+      entries:
+      - title: Overview
+        url: "/reference/account_endpoints.html"
+      - title: Create a new account
+        url: "/reference/post-accounts.html"
+        swagger-title: POST /accounts
+        data-api-method: POST
+        data-api-path: "/accounts"
+        data-summary: Create a new account using the specified values.
+        data-deprecated: false
+        data-category: Account
+        data-tag-description: The Account API represents isolated tenants in a multitenant
+          system.
+        data-introduced: ''
+      - title: List all accounts
+        url: "/reference/get-accounts.html"
+        swagger-title: GET /accounts
+        data-api-method: GET
+        data-api-path: "/accounts"
+        data-summary: Retrieve a list of account resources with optional field, limit,
+          and order customization.
+        data-deprecated: false
+        data-category: Account
+        data-tag-description: The Account API represents isolated tenants in a multitenant
+          system.
+        data-introduced: ''
+      - title: Retrieve an account
+        url: "/reference/get-accounts-.html"
+        swagger-title: GET /accounts/{account_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}"
+        data-summary: Retrieve account details using the specified account ID.
+        data-deprecated: false
+        data-category: Account
+        data-tag-description: The Account API represents isolated tenants in a multitenant
+          system.
+        data-introduced: ''
+      - title: Modify an account
+        url: "/reference/put-accounts-.html"
+        swagger-title: PUT /accounts/{account_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}"
+        data-summary: Update account details by replacing stored data while preserving
+          unchangeable key values.
+        data-deprecated: false
+        data-category: Account
+        data-tag-description: The Account API represents isolated tenants in a multitenant
+          system.
+        data-introduced: ''
+      - title: Delete an account
+        url: "/reference/delete-accounts-.html"
+        swagger-title: DELETE /accounts/{account_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}"
+        data-summary: Delete an account resource, preventing further access by setting
+          it to pending deletion.
+        data-deprecated: false
+        data-category: Account
+        data-tag-description: The Account API represents isolated tenants in a multitenant
+          system.
+        data-introduced: ''
+    - title: App
+      entries:
+      - title: Overview
+        url: "/reference/app_endpoints.html"
+      - title: Create a new app for a managed cluster
+        url: "/reference/post-accounts-topology-v2-managedclusters-apps.html"
+        swagger-title: POST /accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps"
+        data-summary: Create a new app in the specified managed cluster account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: List the apps for a managed cluster
+        url: "/reference/get-accounts-topology-v2-managedclusters-apps.html"
+        swagger-title: GET /accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps"
+        data-summary: Retrieve a list of applications from a specific managed cluster
+          in an account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Retrieve an app for a managed cluster
+        url: "/reference/get-accounts-topology-v2-managedclusters-apps-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}"
+        data-summary: Retrieve app details from a specified managed cluster within
+          an account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Modify an app for a managed cluster
+        url: "/reference/put-accounts-topology-v2-managedclusters-apps-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}"
+        data-summary: Update an app in a managed cluster while preserving non-modifiable
+          values.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Delete an app for a managed cluster
+        url: "/reference/delete-accounts-topology-v2-managedclusters-apps-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}"
+        data-summary: Delete an app from a managed cluster and remove all associated
+          data.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Create a new app
+        url: "/reference/post-accounts-k8s-v2-apps.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v2/apps
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v2/apps"
+        data-summary: Create a new application for a specified account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: List all apps
+        url: "/reference/get-accounts-k8s-v2-apps.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v2/apps
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v2/apps"
+        data-summary: Retrieve a list of Kubernetes applications for a specific account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Retrieve an app
+        url: "/reference/get-accounts-k8s-v2-apps-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v2/apps/{app_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v2/apps/{app_id}"
+        data-summary: Retrieve details of a specific app within an account.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Modify an app
+        url: "/reference/put-accounts-k8s-v2-apps-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v2/apps/{app_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v2/apps/{app_id}"
+        data-summary: Update the entire resource for an app while keeping non-editable
+          values unchanged.
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+      - title: Delete an app
+        url: "/reference/delete-accounts-k8s-v2-apps-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v2/apps/{app_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v2/apps/{app_id}"
+        data-summary: Delete an app
+        data-deprecated: false
+        data-category: App
+        data-tag-description: The App API represents Kubernetes applications, including
+          those unmanaged by Astra.
+        data-introduced: ''
+    - title: AppMirror
+      entries:
+      - title: Overview
+        url: "/reference/appmirror_endpoints.html"
+      - title: Create a new AppMirror resource
+        url: "/reference/post-accounts-k8s-v1-appmirrors.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/appMirrors
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/appMirrors"
+        data-summary: Create a new AppMirror resource for a specified account.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: List all AppMirror resources
+        url: "/reference/get-accounts-k8s-v1-appmirrors.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/appMirrors
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/appMirrors"
+        data-summary: Retrieve a list of app mirror resources for a specified account.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Retrieve an AppMirror resource
+        url: "/reference/get-accounts-k8s-v1-appmirrors-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}"
+        data-summary: Retrieve AppMirror details for a specified account and appMirror
+          ID.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Modify an AppMirror resource
+        url: "/reference/put-accounts-k8s-v1-appmirrors-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}"
+        data-summary: Update an appMirror resource entirely while retaining non-modifiable
+          key values.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Delete an AppMirror resource
+        url: "/reference/delete-accounts-k8s-v1-appmirrors-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/appMirrors/{appMirror_id}"
+        data-summary: Delete an AppMirror resource
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Create a new AppMirror resource for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appmirrors.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors"
+        data-summary: Create a new AppMirror for a specified app within an account.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: List the AppMirror resources for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appmirrors.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors"
+        data-summary: List the AppMirror resources for an app
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Retrieve an AppMirror resource for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appmirrors-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}"
+        data-summary: Retrieve details of a specific AppMirror for a given account
+          and app.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Modify an AppMirror resource for an app
+        url: "/reference/put-accounts-k8s-v1-apps-appmirrors-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}"
+        data-summary: Update an appMirror resource with new data while maintaining
+          certain key values.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+      - title: Delete an AppMirror resource for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-appmirrors-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}"
+        data-summary: Delete an AppMirror resource and associated cluster resources
+          asynchronously.
+        data-deprecated: false
+        data-category: AppMirror
+        data-tag-description: The AppMirror API enables management of AppMirror relationships.
+        data-introduced: ''
+    - title: Application Snapshot
+      entries:
+      - title: Overview
+        url: "/reference/application_snapshot_endpoints.html"
+      - title: Create a new application snapshot for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appsnaps.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps"
+        data-summary: Create a new application snapshot for an app
+        data-deprecated: false
+        data-category: Application Snapshot
+        data-tag-description: The Application Snapshot API enables a user to create
+          and view snapshots of a managed application.
+        data-introduced: ''
+      - title: List the application snapshots for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps"
+        data-summary: Get a list of app snapshots for a specified account and app.
+        data-deprecated: false
+        data-category: Application Snapshot
+        data-tag-description: The Application Snapshot API enables a user to create
+          and view snapshots of a managed application.
+        data-introduced: ''
+      - title: Retrieve an application snapshot
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}"
+        data-summary: Retrieve an application snapshot
+        data-deprecated: false
+        data-category: Application Snapshot
+        data-tag-description: The Application Snapshot API enables a user to create
+          and view snapshots of a managed application.
+        data-introduced: ''
+      - title: Delete an application snapshot
+        url: "/reference/delete-accounts-k8s-v1-apps-appsnaps-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}"
+        data-summary: Delete a specified application snapshot and cancel if its in
+          progress.
+        data-deprecated: false
+        data-category: Application Snapshot
+        data-tag-description: The Application Snapshot API enables a user to create
+          and view snapshots of a managed application.
+        data-introduced: ''
+    - title: Application asset
+      entries:
+      - title: Overview
+        url: "/reference/application_asset_endpoints.html"
+      - title: List the application assets for an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-appassets.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets"
+        data-summary: Retrieve a list of app assets for a specified account and app
+          backup.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: Retrieve an application asset from an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-appassets-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets/{appAsset_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets/{appAsset_id}"
+        data-summary: Retrieve details of a specific application asset from an app
+          backup.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: List the application assets for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apps-appassets.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets"
+        data-summary: Retrieve a list of app assets for a specified managed cluster
+          and app within an account.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: Retrieve an application asset for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apps-appassets-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets/{appAsset_id}"
+        data-summary: Retrieve details of a specific application asset for a managed
+          cluster.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: List the application assets for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appassets.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets"
+        data-summary: Retrieve app assets for a specified account and app.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: Retrieve an application asset for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appassets-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets/{appAsset_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appAssets/{appAsset_id}"
+        data-summary: Retrieve details of a specific application asset by account,
+          app, and asset ID.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: List the application assets from an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-appassets.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets"
+        data-summary: Retrieve a list of app assets for a specific app backup in an
+          account.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: Retrieve an application asset from an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-appassets-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets/{appAsset_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets/{appAsset_id}"
+        data-summary: Retrieve the application asset details for a specified account
+          and backup.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: List application assets for an application snapshot
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets"
+        data-summary: Retrieve a list of specified resources for a given account,
+          app, and app snapshot.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+      - title: Retrieve an application asset for an application snapshot and app
+        url: "/reference/get-accounts-k8s-v1-apps-appsnaps-appassets-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}"
+        data-summary: Retrieve the details of a specific application asset by its
+          ID.
+        data-deprecated: false
+        data-category: Application Asset
+        data-tag-description: The Application Asset API provides access to internal
+          collections of state information used to manage applications.
+        data-introduced: ''
+    - title: Application backup
+      entries:
+      - title: Overview
+        url: "/reference/application_backup_endpoints.html"
+      - title: List all application backups
+        url: "/reference/get-accounts-topology-v1-appbackups.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/appBackups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/appBackups"
+        data-summary: Retrieve application backup details for a specified account.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: Retrieve an application backup
+        url: "/reference/get-accounts-topology-v1-appbackups-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}"
+        data-summary: Retrieve the details of a specific application backup by account
+          and backup ID.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: Delete an application backup
+        url: "/reference/delete-accounts-topology-v1-appbackups-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/appBackups/{appBackup_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}"
+        data-summary: Delete an application backup and cancel any ongoing backup processes.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: Create a new application backup for an app
+        url: "/reference/post-accounts-k8s-v1-apps-appbackups.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups"
+        data-summary: Create a new application backup for the specified account and
+          app.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: List the application backups for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups"
+        data-summary: Retrieve a list of app backups for a specified account and app.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: Retrieve an application backup for an app
+        url: "/reference/get-accounts-k8s-v1-apps-appbackups-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}"
+        data-summary: Retrieve application backup details by account, app, and backup
+          IDs.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+      - title: Delete an application backup for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-appbackups-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}"
+        data-summary: Delete an application backup, canceling in-progress backups
+          and removing backup data.
+        data-deprecated: false
+        data-category: Application Backup
+        data-tag-description: The Application Backup API enables a user to create
+          and view backups of a managed application.
+        data-introduced: ''
+    - title: Bucket
+      entries:
+      - title: Overview
+        url: "/reference/bucket_endpoints.html"
+      - title: Create a new bucket
+        url: "/reference/post-accounts-topology-v1-buckets.html"
+        swagger-title: POST /accounts/{account_id}/topology/v1/buckets
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v1/buckets"
+        data-summary: Create a new bucket for the specified account using the account
+          ID.
+        data-deprecated: false
+        data-category: Bucket
+        data-tag-description: The Bucket API provides access to buckets used to store
+          application backups in Astra.
+        data-introduced: ''
+      - title: List all buckets
+        url: "/reference/get-accounts-topology-v1-buckets.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/buckets
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/buckets"
+        data-summary: Retrieve a list of bucket resources for a specified account.
+        data-deprecated: false
+        data-category: Bucket
+        data-tag-description: The Bucket API provides access to buckets used to store
+          application backups in Astra.
+        data-introduced: ''
+      - title: Retrieve a bucket
+        url: "/reference/get-accounts-topology-v1-buckets-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/buckets/{bucket_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/buckets/{bucket_id}"
+        data-summary: Retrieve details of a specific bucket within an account.
+        data-deprecated: false
+        data-category: Bucket
+        data-tag-description: The Bucket API provides access to buckets used to store
+          application backups in Astra.
+        data-introduced: ''
+      - title: Modify a bucket
+        url: "/reference/put-accounts-topology-v1-buckets-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/buckets/{bucket_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/buckets/{bucket_id}"
+        data-summary: Update a buckets details while keeping non-editable values intact.
+        data-deprecated: false
+        data-category: Bucket
+        data-tag-description: The Bucket API provides access to buckets used to store
+          application backups in Astra.
+        data-introduced: ''
+      - title: Delete a bucket
+        url: "/reference/delete-accounts-topology-v1-buckets-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/buckets/{bucket_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/buckets/{bucket_id}"
+        data-summary: Delete a specific bucket from the accounts resource list.
+        data-deprecated: false
+        data-category: Bucket
+        data-tag-description: The Bucket API provides access to buckets used to store
+          application backups in Astra.
+        data-introduced: ''
+    - title: Certificate
+      entries:
+      - title: Overview
+        url: "/reference/certificate_endpoints.html"
+      - title: Create a new certificate
+        url: "/reference/post-accounts-core-v1-certificates.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/certificates
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/certificates"
+        data-summary: Create a new certificate for a specified account.
+        data-deprecated: false
+        data-category: Certificate
+        data-tag-description: The Certificate API represents admin-trusted certificates
+          that are used for establishing outgoing connections.
+        data-introduced: ''
+      - title: List all certificates
+        url: "/reference/get-accounts-core-v1-certificates.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/certificates
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/certificates"
+        data-summary: Retrieve a list of certificates for a specified account.
+        data-deprecated: false
+        data-category: Certificate
+        data-tag-description: The Certificate API represents admin-trusted certificates
+          that are used for establishing outgoing connections.
+        data-introduced: ''
+      - title: Retrieve a certificate
+        url: "/reference/get-accounts-core-v1-certificates-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/certificates/{certificate_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/certificates/{certificate_id}"
+        data-summary: Retrieve the stored certificate details for a specified account
+          and certificate ID.
+        data-deprecated: false
+        data-category: Certificate
+        data-tag-description: The Certificate API represents admin-trusted certificates
+          that are used for establishing outgoing connections.
+        data-introduced: ''
+      - title: Modify a certificate
+        url: "/reference/put-accounts-core-v1-certificates-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/certificates/{certificate_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/certificates/{certificate_id}"
+        data-summary: Update a CA certificate in the trust store with a new JSON request
+          body.
+        data-deprecated: false
+        data-category: Certificate
+        data-tag-description: The Certificate API represents admin-trusted certificates
+          that are used for establishing outgoing connections.
+        data-introduced: ''
+      - title: Delete a certificate
+        url: "/reference/delete-accounts-core-v1-certificates-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/certificates/{certificate_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/certificates/{certificate_id}"
+        data-summary: Delete a specific certificate from an account using its ID.
+        data-deprecated: false
+        data-category: Certificate
+        data-tag-description: The Certificate API represents admin-trusted certificates
+          that are used for establishing outgoing connections.
+        data-introduced: ''
+    - title: Cloud
+      entries:
+      - title: Overview
+        url: "/reference/cloud_endpoints.html"
+      - title: Create a new cloud
+        url: "/reference/post-accounts-topology-v1-clouds.html"
+        swagger-title: POST /accounts/{account_id}/topology/v1/clouds
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds"
+        data-summary: Create a new Cloud API resource for a specified account.
+        data-deprecated: false
+        data-category: Cloud
+        data-tag-description: The Cloud API provides access to cloud resources to
+          allow clients to connect to specific clouds to manage clusters and applications.
+        data-introduced: ''
+      - title: List all clouds
+        url: "/reference/get-accounts-topology-v1-clouds.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds"
+        data-summary: Retrieve cloud topology details for a specific account.
+        data-deprecated: false
+        data-category: Cloud
+        data-tag-description: The Cloud API provides access to cloud resources to
+          allow clients to connect to specific clouds to manage clusters and applications.
+        data-introduced: ''
+      - title: Retrieve a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}"
+        data-summary: Retrieve the stored Cloud API resource for a specific account
+          and cloud.
+        data-deprecated: false
+        data-category: Cloud
+        data-tag-description: The Cloud API provides access to cloud resources to
+          allow clients to connect to specific clouds to manage clusters and applications.
+        data-introduced: ''
+      - title: Modify a cloud
+        url: "/reference/put-accounts-topology-v1-clouds-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/clouds/{cloud_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}"
+        data-summary: Update the cloud resource to replace stored data, triggering
+          rediscovery of SAs and clusters.
+        data-deprecated: false
+        data-category: Cloud
+        data-tag-description: The Cloud API provides access to cloud resources to
+          allow clients to connect to specific clouds to manage clusters and applications.
+        data-introduced: ''
+      - title: Delete a cloud
+        url: "/reference/delete-accounts-topology-v1-clouds-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/clouds/{cloud_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}"
+        data-summary: Delete a cloud instance and its non-managed clusters and volumes.
+        data-deprecated: false
+        data-category: Cloud
+        data-tag-description: The Cloud API provides access to cloud resources to
+          allow clients to connect to specific clouds to manage clusters and applications.
+        data-introduced: ''
+    - title: Cluster
+      entries:
+      - title: Overview
+        url: "/reference/cluster_endpoints.html"
+      - title: Create a new cluster for a cloud
+        url: "/reference/post-accounts-topology-v1-clouds-clusters.html"
+        swagger-title: POST /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters"
+        data-summary: Create a new cluster within a specified cloud and account.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: List the clusters for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters"
+        data-summary: Retrieve details of all clusters within a specified cloud and
+          account.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Retrieve a cluster for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}"
+        data-summary: Retrieve cluster details using account, cloud, and cluster identifiers.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Modify a cluster for a cloud
+        url: "/reference/put-accounts-topology-v1-clouds-clusters-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}"
+        data-summary: Update the entire cluster resource with new data, keeping non-modifiable
+          key values intact.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Delete a cluster for a cloud
+        url: "/reference/delete-accounts-topology-v1-clouds-clusters-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}"
+        data-summary: Delete a specific cluster from a cloud within an account.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: List all clusters
+        url: "/reference/get-accounts-topology-v1-clusters.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters"
+        data-summary: Retrieve cluster topology details for a specified account.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Retrieve a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}"
+        data-summary: Retrieve cluster details for a specified account and cluster
+          ID.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Modify a cluster
+        url: "/reference/put-accounts-topology-v1-clusters-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/clusters/{cluster_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}"
+        data-summary: Update cluster details while preserving unmodifiable key values.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+      - title: Delete a cluster
+        url: "/reference/delete-accounts-topology-v1-clusters-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/clusters/{cluster_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}"
+        data-summary: Delete a specified cluster from an accounts topology.
+        data-deprecated: false
+        data-category: Cluster
+        data-tag-description: The Cluster API represents unmanaged Kubernetes clusters.
+        data-introduced: ''
+    - title: Cluster node
+      entries:
+      - title: Overview
+        url: "/reference/cluster_node_endpoints.html"
+      - title: List the cluster nodes for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-clusternodes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes"
+        data-summary: Retrieve cluster node details for a specified account, cloud,
+          and cluster.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+      - title: Retrieve a cluster node for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-clusternodes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes/{clusterNode_id}"
+        data-summary: Retrieve details of a specific cluster node within a cloud cluster
+          account.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+      - title: List the cluster nodes for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-clusternodes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes"
+        data-summary: Retrieve a list of cluster nodes for a specified account and
+          cluster.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+      - title: Retrieve a cluster node for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-clusternodes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}"
+        data-summary: Retrieve a cluster nodes details using account, cluster, and
+          node IDs.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+      - title: List the cluster nodes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-clusternodes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes"
+        data-summary: Retrieve a list of node details for a specific managed cluster
+          within an account.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+      - title: Retrieve a cluster node for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-clusternodes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/clusterNodes/{clusterNode_id}"
+        data-summary: Retrieve details of a specific cluster node within a managed
+          cluster.
+        data-deprecated: false
+        data-category: Cluster Node
+        data-tag-description: The Cluster Node API provides access to the nodes associated
+          with a cluster.
+        data-introduced: ''
+    - title: Credential
+      entries:
+      - title: Overview
+        url: "/reference/credential_endpoints.html"
+      - title: Create a new credential
+        url: "/reference/post-accounts-core-v1-credentials.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/credentials
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/credentials"
+        data-summary: Create new credentials for a specific account.
+        data-deprecated: false
+        data-category: Credential
+        data-tag-description: The Credential API provides access to securely persist
+          objects containing sensitive information.
+        data-introduced: ''
+      - title: List all credentials
+        url: "/reference/get-accounts-core-v1-credentials.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/credentials
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/credentials"
+        data-summary: Retrieve a list of credentials for a specified account.
+        data-deprecated: false
+        data-category: Credential
+        data-tag-description: The Credential API provides access to securely persist
+          objects containing sensitive information.
+        data-introduced: ''
+      - title: Retrieve a credential
+        url: "/reference/get-accounts-core-v1-credentials-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/credentials/{credential_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/credentials/{credential_id}"
+        data-summary: Retrieve stored credentials for a specified account and credential
+          ID.
+        data-deprecated: false
+        data-category: Credential
+        data-tag-description: The Credential API provides access to securely persist
+          objects containing sensitive information.
+        data-introduced: ''
+      - title: Modify a credential
+        url: "/reference/put-accounts-core-v1-credentials-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/credentials/{credential_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/credentials/{credential_id}"
+        data-summary: Replace credential resource while preserving non-modifiable
+          key values.
+        data-deprecated: false
+        data-category: Credential
+        data-tag-description: The Credential API provides access to securely persist
+          objects containing sensitive information.
+        data-introduced: ''
+      - title: Delete a credential
+        url: "/reference/delete-accounts-core-v1-credentials-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/credentials/{credential_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/credentials/{credential_id}"
+        data-summary: Delete a specified credential from an account, potentially affecting
+          related resources.
+        data-deprecated: false
+        data-category: Credential
+        data-tag-description: The Credential API provides access to securely persist
+          objects containing sensitive information.
+        data-introduced: ''
+    - title: Entitlement
+      entries:
+      - title: Overview
+        url: "/reference/entitlement_endpoints.html"
+      - title: List all entitlements
+        url: "/reference/get-accounts-core-v1-entitlements.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/entitlements
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/entitlements"
+        data-summary: Retrieve a list of entitlements for a specified account.
+        data-deprecated: false
+        data-category: Entitlement
+        data-tag-description: The Entitlement API represents which features or capacities
+          are enabled by the licenses and subscriptions active for an account.
+        data-introduced: ''
+      - title: Retrieve an entitlement
+        url: "/reference/get-accounts-core-v1-entitlements-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/entitlements/{entitlement_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/entitlements/{entitlement_id}"
+        data-summary: Retrieve the details of a specific entitlement for a given account.
+        data-deprecated: false
+        data-category: Entitlement
+        data-tag-description: The Entitlement API represents which features or capacities
+          are enabled by the licenses and subscriptions active for an account.
+        data-introduced: ''
+    - title: Event
+      entries:
+      - title: Overview
+        url: "/reference/event_endpoints.html"
+      - title: List all events
+        url: "/reference/get-accounts-core-v1-events.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/events
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/events"
+        data-summary: Retrieve a list of events for a specified account, with options
+          to filter and customize the output.
+        data-deprecated: false
+        data-category: Event
+        data-tag-description: The Event API provides access to events occurring in
+          the system.
+        data-introduced: ''
+      - title: Retrieve an event
+        url: "/reference/get-accounts-core-v1-events-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/events/{event_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/events/{event_id}"
+        data-summary: Retrieve event details using account and event IDs.
+        data-deprecated: false
+        data-category: Event
+        data-tag-description: The Event API provides access to events occurring in
+          the system.
+        data-introduced: ''
+    - title: Execution hook
+      entries:
+      - title: Overview
+        url: "/reference/execution_hook_endpoints.html"
+      - title: Create a new execution hook
+        url: "/reference/post-accounts-core-v1-executionhooks.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/executionHooks
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/executionHooks"
+        data-summary: Create a new execution hook for the specified account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: List all execution hooks
+        url: "/reference/get-accounts-core-v1-executionhooks.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/executionHooks
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/executionHooks"
+        data-summary: Retrieve execution hook details for a specific account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Retrieve an execution hook
+        url: "/reference/get-accounts-core-v1-executionhooks-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/executionHooks/{executionHook_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}"
+        data-summary: Retrieve execution hook details and related information for
+          a specified account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Modify an execution hook
+        url: "/reference/put-accounts-core-v1-executionhooks-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/executionHooks/{executionHook_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}"
+        data-summary: Modify an execution hook
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Delete an execution hook
+        url: "/reference/delete-accounts-core-v1-executionhooks-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/executionHooks/{executionHook_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/executionHooks/{executionHook_id}"
+        data-summary: Delete an execution hook from the specified account to stop
+          it from running in future actions.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Create a new execution hook for an app
+        url: "/reference/post-accounts-k8s-v1-apps-executionhooks.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks"
+        data-summary: Create execution hooks for a specified app within an account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: List the execution hooks for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhooks.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks"
+        data-summary: Retrieve execution hooks for a specific app within an account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Retrieve an execution hook for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhooks-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}"
+        data-summary: Retrieve execution hook details, including containers and images,
+          for a specified app account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Modify an execution hook for an app
+        url: "/reference/put-accounts-k8s-v1-apps-executionhooks-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}"
+        data-summary: Update an execution hook to replace the stored resource while
+          keeping unchanged key values.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+      - title: Delete an execution hook for an app
+        url: "/reference/delete-accounts-k8s-v1-apps-executionhooks-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}"
+        data-summary: Remove a specified execution hook from an app account.
+        data-deprecated: false
+        data-category: Execution Hook
+        data-tag-description: The Execution Hook API enables simple management of
+          execution hooks. Execution hooks contain additional configuration and references
+          to a hook source resource.
+        data-introduced: ''
+    - title: Execution hook override
+      entries:
+      - title: Overview
+        url: "/reference/execution_hook_override_endpoints.html"
+      - title: Create a new execution hook override resource for an app
+        url: "/reference/post-accounts-k8s-v1-apps-executionhookoverrides.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides"
+        data-summary: Create a new execution hook override resource for an app
+        data-deprecated: true
+        data-category: Execution Hook Override
+        data-tag-description: The Execution Hook Override API allows a user to disable
+          the preloaded "netapp" execution hooks for a specific application. (**NOTE
+          BELOW API DEPRECATIONS**)
+        data-introduced: ''
+      - title: List the execution hook override resources for an app
+        url: "/reference/get-accounts-k8s-v1-apps-executionhookoverrides.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides"
+        data-summary: Retrieve execution hook overrides for a specified app within
+          an account.
+        data-deprecated: true
+        data-category: Execution Hook Override
+        data-tag-description: The Execution Hook Override API allows a user to disable
+          the preloaded "netapp" execution hooks for a specific application. (**NOTE
+          BELOW API DEPRECATIONS**)
+        data-introduced: ''
+      - title: Retrieve an execution hook override resource
+        url: "/reference/get-accounts-k8s-v1-apps-executionhookoverrides-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}"
+        data-summary: Retrieve an execution hook override resource
+        data-deprecated: true
+        data-category: Execution Hook Override
+        data-tag-description: The Execution Hook Override API allows a user to disable
+          the preloaded "netapp" execution hooks for a specific application. (**NOTE
+          BELOW API DEPRECATIONS**)
+        data-introduced: ''
+      - title: Modify an execution hook override resource
+        url: "/reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}"
+        data-summary: Update execution hook overrides for an app by replacing stored
+          resource data.
+        data-deprecated: true
+        data-category: Execution Hook Override
+        data-tag-description: The Execution Hook Override API allows a user to disable
+          the preloaded "netapp" execution hooks for a specific application. (**NOTE
+          BELOW API DEPRECATIONS**)
+        data-introduced: ''
+      - title: Delete an execution hook override resource
+        url: "/reference/delete-accounts-k8s-v1-apps-executionhookoverrides-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}"
+        data-summary: Delete an Execution Hook Override for a specific application.
+        data-deprecated: true
+        data-category: Execution Hook Override
+        data-tag-description: The Execution Hook Override API allows a user to disable
+          the preloaded "netapp" execution hooks for a specific application. (**NOTE
+          BELOW API DEPRECATIONS**)
+        data-introduced: ''
+    - title: Feature
+      entries:
+      - title: Overview
+        url: "/reference/feature_endpoints.html"
+      - title: List all features
+        url: "/reference/get-accounts-core-v1-features.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/features
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/features"
+        data-summary: Retrieve a list of features for a specified account.
+        data-deprecated: false
+        data-category: Feature
+        data-tag-description: The Feature API provides read-only access to feature
+          flag resources in order to determine which features are enabled or disabled
+          in the system.
+        data-introduced: ''
+      - title: Retrieve a feature
+        url: "/reference/get-accounts-core-v1-features-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/features/{feature_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/features/{feature_id}"
+        data-summary: Get feature details from a specific account.
+        data-deprecated: false
+        data-category: Feature
+        data-tag-description: The Feature API provides read-only access to feature
+          flag resources in order to determine which features are enabled or disabled
+          in the system.
+        data-introduced: ''
+    - title: Group
+      entries:
+      - title: Overview
+        url: "/reference/group_endpoints.html"
+      - title: Create a new group
+        url: "/reference/post-accounts-core-v1-groups.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/groups
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/groups"
+        data-summary: Create a new group within the specified account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: List all groups
+        url: "/reference/get-accounts-core-v1-groups.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups"
+        data-summary: Retrieve a list of groups associated with a specific account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Retrieve a group
+        url: "/reference/get-accounts-core-v1-groups-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}"
+        data-summary: Retrieve details of a specific group within an account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Modify a group
+        url: "/reference/put-accounts-core-v1-groups-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/groups/{group_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}"
+        data-summary: Update a groups details while keeping non-editable key values
+          intact.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Delete a group
+        url: "/reference/delete-accounts-core-v1-groups-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}"
+        data-summary: Delete a specified group and its associated role bindings.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Create a new group for a user
+        url: "/reference/post-accounts-core-v1-users-groups.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/users/{user_id}/groups
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups"
+        data-summary: Add a user to a group within a specified account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: List groups for a user
+        url: "/reference/get-accounts-core-v1-users-groups.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/groups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups"
+        data-summary: Retrieve a list of groups for a specific user within an account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Retrieve a group for a user
+        url: "/reference/get-accounts-core-v1-users-groups-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}"
+        data-summary: Retrieve details of a specific group for a user within an account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Modify a group for a user
+        url: "/reference/put-accounts-core-v1-users-groups-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}"
+        data-summary: Update group information for a user while keeping non-editable
+          key values intact.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+      - title: Delete a group for a user
+        url: "/reference/delete-accounts-core-v1-users-groups-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}"
+        data-summary: Delete a specific group and its associated role bindings within
+          an account.
+        data-deprecated: false
+        data-category: Group
+        data-tag-description: The Group API provides access to Astra group resources.
+        data-introduced: ''
+    - title: Hook source
+      entries:
+      - title: Overview
+        url: "/reference/hook_source_endpoints.html"
+      - title: Create a new hook source
+        url: "/reference/post-accounts-core-v1-hooksources.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/hookSources
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/hookSources"
+        data-summary: Create a new hook source for the specified account.
+        data-deprecated: false
+        data-category: Hook Source
+        data-tag-description: The Hook Source API enables simple management of hook
+          sources separate from the management of the execution hook resources. For
+          example, a single hook source can be referenced by multiple execution hooks
+          to avoid duplicate hook sources and allow a single API call to update one
+          hook source, even if it is used by multiple execution hook resources.
+        data-introduced: ''
+      - title: List all hook sources
+        url: "/reference/get-accounts-core-v1-hooksources.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/hookSources
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/hookSources"
+        data-summary: List all hook sources
+        data-deprecated: false
+        data-category: Hook Source
+        data-tag-description: The Hook Source API enables simple management of hook
+          sources separate from the management of the execution hook resources. For
+          example, a single hook source can be referenced by multiple execution hooks
+          to avoid duplicate hook sources and allow a single API call to update one
+          hook source, even if it is used by multiple execution hook resources.
+        data-introduced: ''
+      - title: Retrieve a hook source
+        url: "/reference/get-accounts-core-v1-hooksources-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/hookSources/{hookSource_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}"
+        data-summary: Retrieve the details of a specific hook source for a given account.
+        data-deprecated: false
+        data-category: Hook Source
+        data-tag-description: The Hook Source API enables simple management of hook
+          sources separate from the management of the execution hook resources. For
+          example, a single hook source can be referenced by multiple execution hooks
+          to avoid duplicate hook sources and allow a single API call to update one
+          hook source, even if it is used by multiple execution hook resources.
+        data-introduced: ''
+      - title: Modify a hook source
+        url: "/reference/put-accounts-core-v1-hooksources-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/hookSources/{hookSource_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}"
+        data-summary: Update an existing source hook with new data while preserving
+          certain key values.
+        data-deprecated: false
+        data-category: Hook Source
+        data-tag-description: The Hook Source API enables simple management of hook
+          sources separate from the management of the execution hook resources. For
+          example, a single hook source can be referenced by multiple execution hooks
+          to avoid duplicate hook sources and allow a single API call to update one
+          hook source, even if it is used by multiple execution hook resources.
+        data-introduced: ''
+      - title: Delete a hook source
+        url: "/reference/delete-accounts-core-v1-hooksources-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/hookSources/{hookSource_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/hookSources/{hookSource_id}"
+        data-summary: Delete a hook source
+        data-deprecated: false
+        data-category: Hook Source
+        data-tag-description: The Hook Source API enables simple management of hook
+          sources separate from the management of the execution hook resources. For
+          example, a single hook source can be referenced by multiple execution hooks
+          to avoid duplicate hook sources and allow a single API call to update one
+          hook source, even if it is used by multiple execution hook resources.
+        data-introduced: ''
+    - title: Kubernetes API resource
+      entries:
+      - title: Overview
+        url: "/reference/kubernetes_api_resource_endpoints.html"
+      - title: List the K8s API resources for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-apiresources.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources"
+        data-summary: Retrieve a list of resources for a specified account and managed
+          cluster.
+        data-deprecated: false
+        data-category: Kubernetes API Resource
+        data-tag-description: The Kubernetes API Resource API provides read-only access
+          to Kubernetes API resources to filter the ones supported by Astra on a given
+          cluster.
+        data-introduced: ''
+      - title: Retrieve a K8s API resource
+        url: "/reference/get-accounts-topology-v1-managedclusters-apiresources-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}"
+        data-summary: Get details of a specific API resource within a managed cluster
+          account.
+        data-deprecated: false
+        data-category: Kubernetes API Resource
+        data-tag-description: The Kubernetes API Resource API provides read-only access
+          to Kubernetes API resources to filter the ones supported by Astra on a given
+          cluster.
+        data-introduced: ''
+    - title: LDAP group
+      entries:
+      - title: Overview
+        url: "/reference/ldap_group_endpoints.html"
+      - title: List all LDAP groups
+        url: "/reference/get-accounts-core-v1-ldapgroups.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/ldapGroups
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/ldapGroups"
+        data-summary: Retrieve LDAP group details for a specified account.
+        data-deprecated: false
+        data-category: LDAP Group
+        data-tag-description: The LDAP Group API provides read-only access to LDAP
+          groups within the configured LDAP server.
+        data-introduced: ''
+      - title: Retrieve an LDAP group
+        url: "/reference/get-accounts-core-v1-ldapgroups-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/ldapGroups/{ldapGroup_id}"
+        data-summary: Retrieve LDAP group details using account and group IDs.
+        data-deprecated: false
+        data-category: LDAP Group
+        data-tag-description: The LDAP Group API provides read-only access to LDAP
+          groups within the configured LDAP server.
+        data-introduced: ''
+    - title: LDAP user
+      entries:
+      - title: Overview
+        url: "/reference/ldap_user_endpoints.html"
+      - title: List all LDAP users
+        url: "/reference/get-accounts-core-v1-ldapusers.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/ldapUsers
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/ldapUsers"
+        data-summary: Retrieve LDAP user details for a specified account.
+        data-deprecated: false
+        data-category: LDAP User
+        data-tag-description: The LDAP User API provides read-only access to LDAP
+          users within the configured LDAP server.
+        data-introduced: ''
+      - title: Retrieve an LDAP user
+        url: "/reference/get-accounts-core-v1-ldapusers-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/ldapUsers/{ldapUser_id}"
+        data-summary: Retrieve LDAP user details from the specified account using
+          their unique ID.
+        data-deprecated: false
+        data-category: LDAP User
+        data-tag-description: The LDAP User API provides read-only access to LDAP
+          users within the configured LDAP server.
+        data-introduced: ''
+    - title: License
+      entries:
+      - title: Overview
+        url: "/reference/license_endpoints.html"
+      - title: Create a new license
+        url: "/reference/post-accounts-core-v1-licenses.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/licenses
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/licenses"
+        data-summary: Create a new license for a specified account.
+        data-deprecated: false
+        data-category: License
+        data-tag-description: The License API represents licenses loaded into the
+          account.
+        data-introduced: ''
+      - title: List all licenses
+        url: "/reference/get-accounts-core-v1-licenses.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/licenses
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/licenses"
+        data-summary: List all licenses
+        data-deprecated: false
+        data-category: License
+        data-tag-description: The License API represents licenses loaded into the
+          account.
+        data-introduced: ''
+      - title: Retrieve a license
+        url: "/reference/get-accounts-core-v1-licenses-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/licenses/{license_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/licenses/{license_id}"
+        data-summary: Retrieve the license details for a specified account.
+        data-deprecated: false
+        data-category: License
+        data-tag-description: The License API represents licenses loaded into the
+          account.
+        data-introduced: ''
+      - title: Modify a license
+        url: "/reference/put-accounts-core-v1-licenses-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/licenses/{license_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/licenses/{license_id}"
+        data-summary: Update a license by replacing it with new details while preserving
+          non-editable values.
+        data-deprecated: false
+        data-category: License
+        data-tag-description: The License API represents licenses loaded into the
+          account.
+        data-introduced: ''
+      - title: Delete a license
+        url: "/reference/delete-accounts-core-v1-licenses-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/licenses/{license_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/licenses/{license_id}"
+        data-summary: Delete a specified license from an account, except for evaluation
+          licenses.
+        data-deprecated: false
+        data-category: License
+        data-tag-description: The License API represents licenses loaded into the
+          account.
+        data-introduced: ''
+    - title: Managed cluster
+      entries:
+      - title: Overview
+        url: "/reference/managed_cluster_endpoints.html"
+      - title: Create a new managed cluster
+        url: "/reference/post-accounts-topology-v1-managedclusters.html"
+        swagger-title: POST /accounts/{account_id}/topology/v1/managedClusters
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters"
+        data-summary: Create a new managed cluster within a specified account.
+        data-deprecated: false
+        data-category: Managed Cluster
+        data-tag-description: The Managed Cluster API represents managed Kubernetes
+          clusters.
+        data-introduced: ''
+      - title: List all managed clusters
+        url: "/reference/get-accounts-topology-v1-managedclusters.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters"
+        data-summary: Retrieve a list of managed clusters for a specified account.
+        data-deprecated: false
+        data-category: Managed Cluster
+        data-tag-description: The Managed Cluster API represents managed Kubernetes
+          clusters.
+        data-introduced: ''
+      - title: Retrieve a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}"
+        data-summary: Retrieve managed cluster details for a specified account.
+        data-deprecated: false
+        data-category: Managed Cluster
+        data-tag-description: The Managed Cluster API represents managed Kubernetes
+          clusters.
+        data-introduced: ''
+      - title: Modify a managed cluster
+        url: "/reference/put-accounts-topology-v1-managedclusters-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}"
+        data-summary: Update the managed cluster in an account with new settings while
+          preserving non-modifiable values.
+        data-deprecated: false
+        data-category: Managed Cluster
+        data-tag-description: The Managed Cluster API represents managed Kubernetes
+          clusters.
+        data-introduced: ''
+      - title: Delete a managed cluster
+        url: "/reference/delete-accounts-topology-v1-managedclusters-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}"
+        data-summary: Delete a specified managed cluster from the account and clean
+          up internal data structures.
+        data-deprecated: false
+        data-category: Managed Cluster
+        data-tag-description: The Managed Cluster API represents managed Kubernetes
+          clusters.
+        data-introduced: ''
+    - title: Metrics
+      entries:
+      - title: Overview
+        url: "/reference/metrics_endpoints.html"
+      - title: Retrieve all metrics for an account
+        url: "/reference/get-accounts-metrics.html"
+        swagger-title: GET /accounts/{account_id}/metrics
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/metrics"
+        data-summary: Retrieve all metrics for a specified account.
+        data-deprecated: false
+        data-category: Metrics
+        data-tag-description: The Metrics API represents metrics associated with a
+          given account.
+        data-introduced: ''
+    - title: Namespace
+      entries:
+      - title: Overview
+        url: "/reference/namespace_endpoints.html"
+      - title: List the namespaces for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-namespaces.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces"
+        data-summary: Retrieve a list of namespaces for a specified account, cloud,
+          and cluster.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: Retrieve a namespace for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-namespaces-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}"
+        data-summary: Retrieve details of a specified namespace within a cloud cluster.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: List the namespaces for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-namespaces.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces"
+        data-summary: Retrieve a list of namespaces within a specified account and
+          cluster.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: Retrieve a namespace for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-namespaces-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces/{namespace_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/namespaces/{namespace_id}"
+        data-summary: Retrieve the details of a specific namespace within a cluster
+          for an account.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: List all namespaces
+        url: "/reference/get-accounts-topology-v1-namespaces.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/namespaces
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/namespaces"
+        data-summary: Retrieve a list of namespaces for a specific account with optional
+          field filtering and limits.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: Retrieve a namespace
+        url: "/reference/get-accounts-topology-v1-namespaces-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/namespaces/{namespace_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/namespaces/{namespace_id}"
+        data-summary: Retrieve the stored namespace details for a specified account
+          and namespace ID.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: List the namespaces for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-namespaces.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces"
+        data-summary: Retrieve a list of namespaces from a specified managed cluster.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+      - title: Retrieve a namespace for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-namespaces-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}"
+        data-summary: Retrieve the stored Namespace details for a specific account
+          and cluster.
+        data-deprecated: false
+        data-category: Namespace
+        data-tag-description: The Namespace API provides read-only access to namespace
+          resources in order to describe namespaces associated with a given cluster.
+        data-introduced: ''
+    - title: Notification
+      entries:
+      - title: Overview
+        url: "/reference/notification_endpoints.html"
+      - title: List all notifications
+        url: "/reference/get-accounts-core-v1-notifications.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/notifications
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/notifications"
+        data-summary: Retrieve a list of notifications for a specified account.
+        data-deprecated: false
+        data-category: Notification
+        data-tag-description: The Notification API provides per-user access to events
+          with a notification destination.
+        data-introduced: ''
+      - title: Retrieve a notification
+        url: "/reference/get-accounts-core-v1-notifications-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/notifications/{notification_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/notifications/{notification_id}"
+        data-summary: Retrieve notification details for a specified account and notification
+          ID.
+        data-deprecated: false
+        data-category: Notification
+        data-tag-description: The Notification API provides per-user access to events
+          with a notification destination.
+        data-introduced: ''
+    - title: Package
+      entries:
+      - title: Overview
+        url: "/reference/package_endpoints.html"
+      - title: Create a new package
+        url: "/reference/post-accounts-core-v1-packages.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/packages
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/packages"
+        data-summary: Create a new package for the specified account.
+        data-deprecated: false
+        data-category: Package
+        data-tag-description: The Package API represents installable software packages.
+        data-introduced: ''
+      - title: List all packages
+        url: "/reference/get-accounts-core-v1-packages.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/packages
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/packages"
+        data-summary: Retrieve a list of packages for a specified account.
+        data-deprecated: false
+        data-category: Package
+        data-tag-description: The Package API represents installable software packages.
+        data-introduced: ''
+      - title: Retrieve a package
+        url: "/reference/get-accounts-core-v1-packages-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/packages/{package_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/packages/{package_id}"
+        data-summary: Retrieve stored package details for a specified account and
+          package ID.
+        data-deprecated: false
+        data-category: Package
+        data-tag-description: The Package API represents installable software packages.
+        data-introduced: ''
+      - title: Delete a package
+        url: "/reference/delete-accounts-core-v1-packages-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/packages/{package_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/packages/{package_id}"
+        data-summary: Delete a specified package from an account using its ID.
+        data-deprecated: false
+        data-category: Package
+        data-tag-description: The Package API represents installable software packages.
+        data-introduced: ''
+    - title: Role binding
+      entries:
+      - title: Overview
+        url: "/reference/role_binding_endpoints.html"
+      - title: Create a new role binding for a group
+        url: "/reference/post-accounts-core-v1-groups-rolebindings.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings"
+        data-summary: Create a new role binding for a group
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: List the role bindings for a group
+        url: "/reference/get-accounts-core-v1-groups-rolebindings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings"
+        data-summary: Retrieve a list of role bindings for a specified group within
+          an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Retrieve a role binding for a group
+        url: "/reference/get-accounts-core-v1-groups-rolebindings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Retrieve a role binding for a group
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Modify a role binding for a group
+        url: "/reference/put-accounts-core-v1-groups-rolebindings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Modify a  role binding for a group
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Delete a role binding for a group
+        url: "/reference/delete-accounts-core-v1-groups-rolebindings-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Delete a role binding for a group
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Create a new role binding for a user in a group
+        url: "/reference/post-accounts-core-v1-groups-users-rolebindings.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings"
+        data-summary: Create a role binding for a user within a specified group and
+          account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: List the role bindings for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-rolebindings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings"
+        data-summary: Retrieve role bindings for a specific user within a group in
+          an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Retrieve a role binding for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-rolebindings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Retrieve a specific role binding for a user in a group within
+          an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Modify a role binding for a user in a group
+        url: "/reference/put-accounts-core-v1-groups-users-rolebindings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Update user role binding in a group while preserving non-modifiable
+          key values.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Delete a role binding for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-rolebindings-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Delete a specific role binding from a user, potentially removing
+          the user if its their last binding.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Create a new role binding
+        url: "/reference/post-accounts-core-v1-rolebindings.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/roleBindings
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/roleBindings"
+        data-summary: Create a new role binding for a specified account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: List all role bindings
+        url: "/reference/get-accounts-core-v1-rolebindings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/roleBindings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/roleBindings"
+        data-summary: Retrieve a list of role bindings for a specified account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Retrieve a role binding
+        url: "/reference/get-accounts-core-v1-rolebindings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}"
+        data-summary: Retrieve the specified Role Binding information for a given
+          account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Modify a role binding
+        url: "/reference/put-accounts-core-v1-rolebindings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}"
+        data-summary: Update a role binding for a specified account using the provided
+          JSON data.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Delete a role binding
+        url: "/reference/delete-accounts-core-v1-rolebindings-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}"
+        data-summary: Delete a specified role binding, potentially removing the user
+          if its their last local or cloud-central role.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Create a new role binding for a user
+        url: "/reference/post-accounts-core-v1-users-rolebindings.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/users/{user_id}/roleBindings
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings"
+        data-summary: Create a new role binding for a specified user within an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: List the role bindings for a user
+        url: "/reference/get-accounts-core-v1-users-rolebindings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/roleBindings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings"
+        data-summary: Retrieve role bindings for a specific user within an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Retrieve a role binding for a user
+        url: "/reference/get-accounts-core-v1-users-rolebindings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Retrieve role binding details for a specified user within an
+          account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Modify a role binding for a user
+        url: "/reference/put-accounts-core-v1-users-rolebindings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Update a users role binding in an account while preserving certain
+          key values.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Delete a role binding for a user
+        url: "/reference/delete-accounts-core-v1-users-rolebindings-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/roleBindings/{roleBinding_id}"
+        data-summary: Delete a specific role binding for a user, potentially removing
+          the user if its their last role binding.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Create a new role binding for a group associated with a user
+        url: "/reference/post-accounts-core-v1-users-groups-rolebindings.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings"
+        data-summary: Create a role binding for a user in a group within an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: List the role bindings for a group associated with a user
+        url: "/reference/get-accounts-core-v1-users-groups-rolebindings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings"
+        data-summary: Retrieve role bindings for a specified user in a group within
+          an account.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Retrieve a role binding for a group associated with a user
+        url: "/reference/get-accounts-core-v1-users-groups-rolebindings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Retrieve details of a specific role binding based on account,
+          user, and group IDs.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Modify a role binding for a group associated with a user
+        url: "/reference/put-accounts-core-v1-users-groups-rolebindings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Update role binding for a user in a group within an account
+          using provided JSON data.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+      - title: Delete a role binding for a group associated with a user
+        url: "/reference/delete-accounts-core-v1-users-groups-rolebindings-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}"
+        data-summary: Remove a specific role binding, potentially deleting the user
+          if its the last binding.
+        data-deprecated: false
+        data-category: Role Binding
+        data-tag-description: The Role Binding API describes the relationships between
+          the user-account pairs, or group-account pairs, along with the sets of permissions
+          they are granted (roles).
+        data-introduced: ''
+    - title: Schedule
+      entries:
+      - title: Overview
+        url: "/reference/schedule_endpoints.html"
+      - title: Create a new schedule for an app
+        url: "/reference/post-accounts-k8s-v1-apps-schedules.html"
+        swagger-title: POST /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules"
+        data-summary: Create a new schedule for an app
+        data-deprecated: false
+        data-category: Schedule
+        data-tag-description: The Schedule API allows various scheduled data protection
+          operations to be defined.
+        data-introduced: ''
+      - title: List the schedules for an app
+        url: "/reference/get-accounts-k8s-v1-apps-schedules.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules"
+        data-summary: Retrieve a list of schedules for a specific app within an account.
+        data-deprecated: false
+        data-category: Schedule
+        data-tag-description: The Schedule API allows various scheduled data protection
+          operations to be defined.
+        data-introduced: ''
+      - title: Retrieve a schedule
+        url: "/reference/get-accounts-k8s-v1-apps-schedules-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}"
+        data-summary: Retrieve a schedule
+        data-deprecated: false
+        data-category: Schedule
+        data-tag-description: The Schedule API allows various scheduled data protection
+          operations to be defined.
+        data-introduced: ''
+      - title: Modify a schedule
+        url: "/reference/put-accounts-k8s-v1-apps-schedules-.html"
+        swagger-title: PUT /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}"
+        data-summary: Update an existing schedule for a specified app within an account.
+        data-deprecated: false
+        data-category: Schedule
+        data-tag-description: The Schedule API allows various scheduled data protection
+          operations to be defined.
+        data-introduced: ''
+      - title: Delete a schedule
+        url: "/reference/delete-accounts-k8s-v1-apps-schedules-.html"
+        swagger-title: DELETE /accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}"
+        data-summary: Delete a specific schedule from a Kubernetes app within an account.
+        data-deprecated: false
+        data-category: Schedule
+        data-tag-description: The Schedule API allows various scheduled data protection
+          operations to be defined.
+        data-introduced: ''
+    - title: Setting
+      entries:
+      - title: Overview
+        url: "/reference/setting_endpoints.html"
+      - title: List all settings
+        url: "/reference/get-accounts-core-v1-settings.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/settings
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/settings"
+        data-summary: Retrieve settings for a specified account in JSON format.
+        data-deprecated: false
+        data-category: Setting
+        data-tag-description: An account setting is a collection of key/value pairs
+          that are important for a known feature in an Astra account. The Setting
+          API provides access to important information about an account setting.
+        data-introduced: ''
+      - title: Retrieve a setting
+        url: "/reference/get-accounts-core-v1-settings-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/settings/{setting_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/settings/{setting_id}"
+        data-summary: Get the stored setting details for a specific account and setting
+          ID.
+        data-deprecated: false
+        data-category: Setting
+        data-tag-description: An account setting is a collection of key/value pairs
+          that are important for a known feature in an Astra account. The Setting
+          API provides access to important information about an account setting.
+        data-introduced: ''
+      - title: Modify a setting
+        url: "/reference/put-accounts-core-v1-settings-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/settings/{setting_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/settings/{setting_id}"
+        data-summary: Update account setting with provided values while keeping non-editable
+          keys unchanged.
+        data-deprecated: false
+        data-category: Setting
+        data-tag-description: An account setting is a collection of key/value pairs
+          that are important for a known feature in an Astra account. The Setting
+          API provides access to important information about an account setting.
+        data-introduced: ''
+    - title: Storage backend
+      entries:
+      - title: Overview
+        url: "/reference/storage_backend_endpoints.html"
+      - title: Create a new storage backend
+        url: "/reference/post-accounts-topology-v1-storagebackends.html"
+        swagger-title: POST /accounts/{account_id}/topology/v1/storageBackends
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends"
+        data-summary: Create a new storage backend under a specified account.
+        data-deprecated: false
+        data-category: Storage Backend
+        data-tag-description: The Storage Backend API provides access to representations
+          of providers of storage services (storage backends) that can be used by
+          managed clusters and applications.
+        data-introduced: ''
+      - title: List all storage backends
+        url: "/reference/get-accounts-topology-v1-storagebackends.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/storageBackends
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends"
+        data-summary: Retrieve a list of storage backend resources for a specified
+          account.
+        data-deprecated: false
+        data-category: Storage Backend
+        data-tag-description: The Storage Backend API provides access to representations
+          of providers of storage services (storage backends) that can be used by
+          managed clusters and applications.
+        data-introduced: ''
+      - title: Retrieve a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}"
+        data-summary: Retrieve details of a specific storage backend for a given account.
+        data-deprecated: false
+        data-category: Storage Backend
+        data-tag-description: The Storage Backend API provides access to representations
+          of providers of storage services (storage backends) that can be used by
+          managed clusters and applications.
+        data-introduced: ''
+      - title: Modify a storage backend
+        url: "/reference/put-accounts-topology-v1-storagebackends-.html"
+        swagger-title: PUT /accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}"
+        data-summary: Update storage backend settings for an account using provided
+          JSON data.
+        data-deprecated: false
+        data-category: Storage Backend
+        data-tag-description: The Storage Backend API provides access to representations
+          of providers of storage services (storage backends) that can be used by
+          managed clusters and applications.
+        data-introduced: ''
+      - title: Delete a storage backend
+        url: "/reference/delete-accounts-topology-v1-storagebackends-.html"
+        swagger-title: DELETE /accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}"
+        data-summary: Delete a specified storage backend and its associated configurations
+          and nodes.
+        data-deprecated: false
+        data-category: Storage Backend
+        data-tag-description: The Storage Backend API provides access to representations
+          of providers of storage services (storage backends) that can be used by
+          managed clusters and applications.
+        data-introduced: ''
+    - title: Storage class
+      entries:
+      - title: Overview
+        url: "/reference/storage_class_endpoints.html"
+      - title: List the storage classes for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-storageclasses.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses"
+        data-summary: Retrieve storage class details for a specified cluster within
+          a cloud account.
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+      - title: Retrieve a storage class for a cloud
+        url: "/reference/get-accounts-topology-v1-clouds-clusters-storageclasses-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/storageClasses/{storageClass_id}"
+        data-summary: Retrieve a storage class for a cloud
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+      - title: List the storage classes for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-storageclasses.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses"
+        data-summary: Retrieve a list of storage classes for a specified account and
+          cluster.
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+      - title: Retrieve a storage class for a cluster
+        url: "/reference/get-accounts-topology-v1-clusters-storageclasses-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses/{storageClass_id}"
+        data-summary: Retrieve details of a specific storage class within a cluster
+          for a given account.
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+      - title: List the storage classes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-storageclasses.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses"
+        data-summary: Retrieve storage class details of a managed cluster for a specified
+          account.
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+      - title: Retrieve a storage class for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-storageclasses-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}"
+        data-summary: Retrieve storage class details for a specified managed cluster
+          account.
+        data-deprecated: false
+        data-category: Storage Class
+        data-tag-description: The Storage Class API describes storage classes known
+          to a given cluster.
+        data-introduced: ''
+    - title: Subscription
+      entries:
+      - title: Overview
+        url: "/reference/subscription_endpoints.html"
+      - title: Create a new subscription
+        url: "/reference/post-accounts-core-v1-subscriptions.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/subscriptions
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/subscriptions"
+        data-summary: Create a new subscription for a specified account.
+        data-deprecated: false
+        data-category: Subscription
+        data-tag-description: The Subscription API provides access to subscription
+          resources in order to represent active subscriptions.
+        data-introduced: ''
+      - title: List all subscriptions
+        url: "/reference/get-accounts-core-v1-subscriptions.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/subscriptions
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/subscriptions"
+        data-summary: Retrieve a list of subscription resources for a specific account.
+        data-deprecated: false
+        data-category: Subscription
+        data-tag-description: The Subscription API provides access to subscription
+          resources in order to represent active subscriptions.
+        data-introduced: ''
+      - title: Retrieve a subscription
+        url: "/reference/get-accounts-core-v1-subscriptions-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/subscriptions/{subscription_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/subscriptions/{subscription_id}"
+        data-summary: Retrieve subscription details using account and subscription
+          IDs.
+        data-deprecated: false
+        data-category: Subscription
+        data-tag-description: The Subscription API provides access to subscription
+          resources in order to represent active subscriptions.
+        data-introduced: ''
+      - title: Modify a subscription
+        url: "/reference/put-accounts-core-v1-subscriptions-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/subscriptions/{subscription_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/subscriptions/{subscription_id}"
+        data-summary: Update subscription details with provided JSON, maintaining
+          non-modifiable key values.
+        data-deprecated: false
+        data-category: Subscription
+        data-tag-description: The Subscription API provides access to subscription
+          resources in order to represent active subscriptions.
+        data-introduced: ''
+      - title: Delete a subscription
+        url: "/reference/delete-accounts-core-v1-subscriptions-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/subscriptions/{subscription_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/subscriptions/{subscription_id}"
+        data-summary: Delete a subscription and all associated charges for a specified
+          account.
+        data-deprecated: false
+        data-category: Subscription
+        data-tag-description: The Subscription API provides access to subscription
+          resources in order to represent active subscriptions.
+        data-introduced: ''
+    - title: Task
+      entries:
+      - title: Overview
+        url: "/reference/task_endpoints.html"
+      - title: List all tasks
+        url: "/reference/get-accounts-core-v1-tasks.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/tasks
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/tasks"
+        data-summary: Retrieve a list of tasks for a specified account, with optional
+          field selection and filtering.
+        data-deprecated: false
+        data-category: Task
+        data-tag-description: The Task App API provides access to managed task resources
+          in order to represent long-running tasks.
+        data-introduced: ''
+      - title: Retrieve a task
+        url: "/reference/get-accounts-core-v1-tasks-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/tasks/{task_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/tasks/{task_id}"
+        data-summary: Retrieve a tasks details using the account and task IDs.
+        data-deprecated: false
+        data-category: Task
+        data-tag-description: The Task App API provides access to managed task resources
+          in order to represent long-running tasks.
+        data-introduced: ''
+    - title: Token
+      entries:
+      - title: Overview
+        url: "/reference/token_endpoints.html"
+      - title: Create a new token for a user in a group
+        url: "/reference/post-accounts-core-v1-groups-users-tokens.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens"
+        data-summary: Create a token for a user within a specified group and account.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: List the tokens for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-tokens.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens"
+        data-summary: Retrieve a list of tokens for a specific user within a group
+          and account.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Retrieve a token for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-tokens-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}"
+        data-summary: Retrieve a stored tokens details for a specific user within
+          a group and account.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Modify a token for a user in a group
+        url: "/reference/put-accounts-core-v1-groups-users-tokens-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}"
+        data-summary: Update a users token information within a specific account and
+          group.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Delete a token for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-tokens-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/tokens/{token_id}"
+        data-summary: Delete a specific token and its credential from the system.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Create a new token for a user
+        url: "/reference/post-accounts-core-v1-users-tokens.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/users/{user_id}/tokens
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/tokens"
+        data-summary: Create a token for a specified user within an account.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: List the tokens for a user
+        url: "/reference/get-accounts-core-v1-users-tokens.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/tokens
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/tokens"
+        data-summary: Retrieve user tokens within an account based on specified criteria.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Retrieve a token
+        url: "/reference/get-accounts-core-v1-users-tokens-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}"
+        data-summary: Retrieve stored token information for a specific user without
+          the token key/value.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Modify a token
+        url: "/reference/put-accounts-core-v1-users-tokens-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}"
+        data-summary: Update a users token details with new information, preserving
+          non-editable values.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+      - title: Delete a token
+        url: "/reference/delete-accounts-core-v1-users-tokens-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}"
+        data-summary: Delete a specific API token for a user within an account.
+        data-deprecated: false
+        data-category: Token
+        data-tag-description: The Token API enables users to create and manage API
+          access tokens.
+        data-introduced: ''
+    - title: Unread notification
+      entries:
+      - title: Overview
+        url: "/reference/unread_notification_endpoints.html"
+      - title: List the unread notifications for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-unreadnotifications.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications"
+        data-summary: Retrieve unread notifications for a specified user within a
+          group and account.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+      - title: Retrieve an unread notification for a user in a group
+        url: "/reference/get-accounts-core-v1-groups-users-unreadnotifications-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}"
+        data-summary: Retrieve details of a specific unread notification for a user.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+      - title: Delete an unread notification for a user in a group
+        url: "/reference/delete-accounts-core-v1-groups-users-unreadnotifications-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}"
+        data-summary: Delete a specific unread notification for a user within a group
+          account.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+      - title: List the unread notifications for a user
+        url: "/reference/get-accounts-core-v1-users-unreadnotifications.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications"
+        data-summary: Retrieve a list of unread notifications for a specified user
+          within an account.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+      - title: Retrieve an unread notification
+        url: "/reference/get-accounts-core-v1-users-unreadnotifications-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}"
+        data-summary: Retrieve unread notification details for a specific user account.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+      - title: Delete an unread notification
+        url: "/reference/delete-accounts-core-v1-users-unreadnotifications-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}"
+        data-summary: Delete a specific unread notification for a user within an account.
+        data-deprecated: false
+        data-category: Unread Notification
+        data-tag-description: The Unread Notification API provides information on
+          notifications that have not been read by a given user and to allow them
+          to be marked as read.
+        data-introduced: ''
+    - title: Upgrade
+      entries:
+      - title: Overview
+        url: "/reference/upgrade_endpoints.html"
+      - title: List all upgrades
+        url: "/reference/get-accounts-core-v1-upgrades.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/upgrades
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/upgrades"
+        data-summary: Retrieve a list of upgrades for a specified account.
+        data-deprecated: false
+        data-category: Upgrade
+        data-tag-description: The Upgrade App API provides access to software components
+          that are eligible for upgrade, and to initiate upgrades. The availability
+          of upgrades is determined based on packages registered with the Packages
+          API.
+        data-introduced: ''
+      - title: Retrieve an upgrade
+        url: "/reference/get-accounts-core-v1-upgrades-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/upgrades/{upgrade_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/upgrades/{upgrade_id}"
+        data-summary: Retrieve upgrade details for a specified account and upgrade
+          ID.
+        data-deprecated: false
+        data-category: Upgrade
+        data-tag-description: The Upgrade App API provides access to software components
+          that are eligible for upgrade, and to initiate upgrades. The availability
+          of upgrades is determined based on packages registered with the Packages
+          API.
+        data-introduced: ''
+      - title: Modify an upgrade
+        url: "/reference/put-accounts-core-v1-upgrades-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/upgrades/{upgrade_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/upgrades/{upgrade_id}"
+        data-summary: Update an upgrade by replacing its entire stored resource while
+          preserving non-modifiable values.
+        data-deprecated: false
+        data-category: Upgrade
+        data-tag-description: The Upgrade App API provides access to software components
+          that are eligible for upgrade, and to initiate upgrades. The availability
+          of upgrades is determined based on packages registered with the Packages
+          API.
+        data-introduced: ''
+    - title: User
+      entries:
+      - title: Overview
+        url: "/reference/user_endpoints.html"
+      - title: Create a new user for a group
+        url: "/reference/post-accounts-core-v1-groups-users.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/groups/{group_id}/users
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users"
+        data-summary: Create a new user in a specified account group.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: List the users for a group
+        url: "/reference/get-accounts-core-v1-groups-users.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users"
+        data-summary: List the users for a group
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Retrieve a user for a group
+        url: "/reference/get-accounts-core-v1-groups-users-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}"
+        data-summary: Retrieve user details within a specific account and group.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Modify a user for a group
+        url: "/reference/put-accounts-core-v1-groups-users-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}"
+        data-summary: Update user details in a group while keeping certain key values
+          unchanged.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Delete a user for a group
+        url: "/reference/delete-accounts-core-v1-groups-users-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}"
+        data-summary: Delete a specific user and their associated resources from a
+          group account.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Create a new user
+        url: "/reference/post-accounts-core-v1-users.html"
+        swagger-title: POST /accounts/{account_id}/core/v1/users
+        data-api-method: POST
+        data-api-path: "/accounts/{account_id}/core/v1/users"
+        data-summary: Create a new user within the specified account.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: List all users
+        url: "/reference/get-accounts-core-v1-users.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users"
+        data-summary: Retrieve a list of users for a specified account.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Retrieve a user
+        url: "/reference/get-accounts-core-v1-users-.html"
+        swagger-title: GET /accounts/{account_id}/core/v1/users/{user_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}"
+        data-summary: Retrieve user details for a specified account and user ID.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Modify a user
+        url: "/reference/put-accounts-core-v1-users-.html"
+        swagger-title: PUT /accounts/{account_id}/core/v1/users/{user_id}
+        data-api-method: PUT
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}"
+        data-summary: Update a users details while maintaining non-editable key values.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+      - title: Delete a user
+        url: "/reference/delete-accounts-core-v1-users-.html"
+        swagger-title: DELETE /accounts/{account_id}/core/v1/users/{user_id}
+        data-api-method: DELETE
+        data-api-path: "/accounts/{account_id}/core/v1/users/{user_id}"
+        data-summary: Delete a user and associated resources from a specified account.
+        data-deprecated: false
+        data-category: User
+        data-tag-description: The User API represents users who are able to interact
+          with the system.
+        data-introduced: ''
+    - title: Volume
+      entries:
+      - title: Overview
+        url: "/reference/volume_endpoints.html"
+      - title: List the volumes for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-volumes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes"
+        data-summary: Retrieve a list of volumes for a specified account and managed
+          cluster.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: Retrieve a volume for a managed cluster
+        url: "/reference/get-accounts-topology-v1-managedclusters-volumes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes/{volume_id}"
+        data-summary: Retrieve volume details for a specific account and managed cluster.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: List the volumes for a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-volumes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes"
+        data-summary: Retrieve a list of volumes for a specified storage backend.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: Retrieve a volume for a storage backend
+        url: "/reference/get-accounts-topology-v1-storagebackends-volumes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}"
+        data-summary: Retrieve volume details from a specified storage backend using
+          account and volume IDs.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: List all volumes
+        url: "/reference/get-accounts-topology-v1-volumes.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/volumes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/volumes"
+        data-summary: List all volumes
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: Retrieve a volume
+        url: "/reference/get-accounts-topology-v1-volumes-.html"
+        swagger-title: GET /accounts/{account_id}/topology/v1/volumes/{volume_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/topology/v1/volumes/{volume_id}"
+        data-summary: Retrieve volume details for a specified account and volume ID.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: List the volumes for an app
+        url: "/reference/get-accounts-k8s-v1-apps-volumes.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/volumes
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes"
+        data-summary: Get a list of volumes for a specific app within an account.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+      - title: Retrieve a volume for an app
+        url: "/reference/get-accounts-k8s-v1-apps-volumes-.html"
+        swagger-title: GET /accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}
+        data-api-method: GET
+        data-api-path: "/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}"
+        data-summary: Retrieve volume details for a specific app within an account.
+        data-deprecated: false
+        data-category: Volume
+        data-tag-description: The Volume API provides visibility into Kubernetes volumes
+          associated with applications.
+        data-introduced: ''
+  - section: information
+  - title: Legal notices
+    url: "/legal-notices.html"
 product-family:
   name: Astra
   repo: astra-family
-
-    
