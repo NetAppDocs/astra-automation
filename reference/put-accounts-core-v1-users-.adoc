@@ -1,0 +1,737 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/put-accounts-core-v1-users-.html'
+summary: 'Modify a user'
+---
+
+= Modify a user
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
+
+
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|user_id
+|string
+|path
+|True
+a|ID of the user collection to list
+
+
+|===
+
+== Request Body
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-user"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|False
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|state
+|string
+|False
+a|JSON string containing a value indicating the operational state of the user.
+Defined values are:
+
+* "pending" - The user account is in the process of being created. The user can only read and modify the user resource (default value).
+* This state is not valid for a user with "authProvider" as "local"
+* "active" - The user account is operational (The user can log in if the account setting "isEnabled" is "true").
+* This is the default value for a user with "authProvider" as "local"
+* "suspended" - The user account is suspended (The user cannot log in regardless of account "isEnabled" setting).
+
+
+|isEnabled
+|string
+|False
+a|JSON string indicating if the user is allowed to log in.
+Defined values are:
+
+* "true" - The user is allowed to log in; default value on create.
+* "false" - The user is not allowed to log in.
+
+
+|authID
+|string
+|False
+a|JSON string containing the identifier associated with an external identity provider.
+The contents of this string depend on the specified authProvider.
+For a user with "authProvider" as "local", "authID" is set to the value of "email".
+For a user with "authProvider" as "ldap", "authID" is set to its Distinguished Name (DN) from the LDAP server.
+
+
+|authProvider
+|string
+|False
+a|JSON string indicating the context of the idAuth identifier.
+Defined values are:
+
+* "cloud-central" - User authentication comes from the NetApp Cloud Central service
+* "local" - User authentication comes from the local user/password store
+* "ldap" - User authentication comes from an external LDAP server
+In Astra Control Center, all users are required to have a value of "local", or "ldap". If a value is not specified, a default value of "local" is chosen.
+In Astra Control Service, "authProvider" as "local", or "ldap" is not supported. If a value is not specified, it will default to "cloud-central".
+
+
+|firstName
+|string
+|False
+a|JSON string containing a user-specified long form first name.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks
+
+
+|lastName
+|string
+|False
+a|JSON string containing a user-specified long-form last name.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks
+
+
+|companyName
+|string
+|False
+a|JSON string containing the company name associated with the user. If this key does not exist, it indicates that a company name has not been provided.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks
+
+
+|email
+|string
+|False
+a|JSON strings containing a user-specified email address.
+
+
+|phone
+|string
+|False
+a|JSON string containing the phone number of the user. If this key does not exist, it indicates that a phone number has not been provided.
+
+
+|postalAddress
+|link:#postalAddress[postalAddress]
+|False
+a|JSON object containing a collection of fields that specifies an address. If this key does not exist, it indicates that an address has not been provided.
+If this key exists, all six of the contained fields will be present. If nothing was provided by the user, the string will be empty.
+
+
+|sendWelcomeEmail
+|string
+|False
+a|JSON string indicating whether a welcome email will be sent after validation. If not specified on create, the value will be set to "true" for ACS and "false" for Astra Control Center.
+Defined values are:
+
+* "true" - A welcome email will be sent; default value on create
+* "false" - A welcome email will not be sent
+For a user with "authProvider" as "local" or "ldap", this value is ignored and is set to "false".
+
+
+|enableTimestamp
+|string
+|False
+a|JSON string containing an ISO-8601 formatted timestamp indicating when the user was last enabled.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|lastActTimestamp
+|string
+|False
+a|JSON string containing an ISO-8601 formatted timestamp indicating when the identity API was last invoked on behalf of this user. (Note: This is expensive.)
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-user",
+  "version": "1.2",
+  "firstName": "John",
+  "lastName": "Dale",
+  "email": "jdale@example.com"
+}
+====
+
+== Response
+
+```
+Status: 204, Indicates if the user resource was updated.
+```
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#postalAddress]
+[.api-collapsible-fifth-title]
+postalAddress
+
+JSON object containing a collection of fields that specifies an address. If this key does not exist, it indicates that an address has not been provided.
+If this key exists, all six of the contained fields will be present. If nothing was provided by the user, the string will be empty.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|addressCountry
+|string
+|True
+a|JSON string containing the country name or country code associated with the postal address, as specified in ISO 3166 Alpha-2.
+Defined values are:
+
+* Minimum length: 2
+* Maximum length: 2
+
+
+|addressLocality
+|string
+|True
+a|JSON string containing the locality (for example, city) associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|addressRegion
+|string
+|True
+a|JSON string containing the region (for example, state) associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|postalCode
+|string
+|True
+a|JSON string containing the postal code associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|streetAddress1
+|string
+|True
+a|JSON string containing the street address associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|streetAddress2
+|string
+|False
+a|JSON string containing optional ancillary street address information, post office box, and so on.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

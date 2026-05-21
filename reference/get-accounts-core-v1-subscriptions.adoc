@@ -1,0 +1,787 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-subscriptions.html'
+summary: 'List all subscriptions'
+---
+
+= List all subscriptions
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|continue
+|
+|query
+|False
+a|Indicates the token to resume listing from.
+
+URL examples: "continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI examples: "+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++</continue>
+
+
+|count
+|string
+|query
+|False
+a|Indicates if the total number of resources should be returned in the metadata object.
+
+URL examples: "count=true"
+
+OpenAPI examples: "true"
+
+
+|filter
+|string
+|query
+|False
+a|Indicates which fields should be matched in order to return a resource when listing a collection.
+
+Supported operators are:
+
+* eq - Equality
+* lt/gt - Less than/Greater than
+* lte/gte - Less than or equals to/Greater than or equals to
+
+URL example: "filter=field%20eq%20%27value%27"
+
+OpenAPI examples: "field eq 'value'"
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|orderBy
+|string
+|query
+|False
+a|Indicates the sort order of resource when listing a collection.
+
+URL examples: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI examples: "name desc"
+
+
+|skip
+|string
+|query
+|False
+a|Indicates the number of resources to skip over when listing a collection.
+
+URL examples: "skip=1"
+
+OpenAPI examples: "1"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#subscription_1_2_get_response_body[subscription_1.2_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-subscriptions",
+  "version": "1.2",
+  "items": [
+    {
+      "type": "application/astra-subscription",
+      "version": "1.1",
+      "id": "d4c865c9-64a7-4661-ae4a-3307dffcd3da",
+      "customerProfileID": "2157047189",
+      "paymentProfileID": "E7CEB0A9F1BECA32A02493E1B31D5955",
+      "paymentExpiry": "2022-02-01T00:00:00Z",
+      "purchaseOrderNumber": "72384632",
+      "marketplace": "netapp",
+      "licenseSN": "278343",
+      "terms": "trial",
+      "status": "inactive",
+      "appLimit": 0,
+      "namespaceLimit": 10,
+      "subscriptionPeriod": 90,
+      "gracePeriod": 7,
+      "reminderBeforePeriod": 30,
+      "onboardStatus": "success",
+      "costPerAppUnit": 0,
+      "costPerNamespaceUnit": 0.005,
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-05-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-05-06T12:24:52.256624Z",
+        "createdBy": "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa"
+      }
+    },
+    {
+      "type": "application/astra-subscription",
+      "version": "1.1",
+      "id": "4c43ed8b-078f-4fe3-b8c6-5d515f6382e6",
+      "customerProfileID": "2157047189",
+      "paymentProfileID": "E7CEB0A9F1BECA32A02493E1B31D5955",
+      "paymentExpiry": "2022-05-01T00:00:00Z",
+      "purchaseOrderNumber": "92374658",
+      "marketplace": "netapp",
+      "licenseSN": "374623",
+      "terms": "paid",
+      "status": "active",
+      "appLimit": 0,
+      "namespaceLimit": -1,
+      "subscriptionPeriod": -1,
+      "gracePeriod": -1,
+      "reminderBeforePeriod": -1,
+      "onboardStatus": "success",
+      "costPerAppUnit": 0,
+      "costPerNamespaceUnit": 0.005,
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa"
+      }
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#subscription_1_2_get_response_body]
+[.api-collapsible-fifth-title]
+subscription_1.2_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-subscription"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|customerProfileID
+|string
+|True
+a|JSON string containing the customer profile ID from http://authorize.net[Authorize.net], which was invoked by the UI, is not set for the trial term. Returns an empty string during read operation, if not set.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|paymentProfileID
+|string
+|False
+a|JSON string containing the payment profile ID from http://Authorize.net[Authorize.net] that was invoked by the UI, not set for trial term. Returns an empty string during read operation if not set.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|paymentExpiry
+|string
+|False
+a|JSON string containing a timestamp indicating when the payment method expires. This is obtained from authorize.net](http://authorize.net) and is set by the UI.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+This field is not returned for trial terms.
+
+
+|purchaseOrderNumber
+|string
+|False
+a|JSON string containing the purchase order number for the payment method.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|marketplace
+|string
+|False
+a|JSON string indicating the marketplace for an account where payments will be recorded.
+Defined values:
+
+* "netapp"
+* "azure"
+* "aws"
+* "gcp"
+
+
+|licenseSN
+|string
+|False
+a|JSON string containing the license serial number for the payment method.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|terms
+|string
+|True
+a|JSON string indicating the current tier of the account.
+Defined values are:
+
+* "trial"
+* "paid"
+
+
+|status
+|string
+|True
+a|JSON string indicating the current status of the subscription.
+Defined values are:
+
+* "active"
+* "inactive"
+
+
+|appLimit
+|number
+|True
+a|JSON number indicating the application limit for this subscription. Value of -1 indicates no limit.
+
+
+|namespaceLimit
+|number
+|True
+a|JSON number indicating the namespace limit for this subscription. Value of -1 indicates no limit.
+
+
+|subscriptionPeriod
+|number
+|True
+a|JSON number indicating the subscription period. Value of -1 indicates no limit. Unit: days
+
+
+|gracePeriod
+|number
+|True
+a|JSON number indicating the grace period after the trial subscription has expired or a paid subscription is canceled. Unit: days
+
+
+|reminderBeforePeriod
+|number
+|True
+a|JSON number indicating the number of days before the end of the trial subscription when the customer notifications will begin. The value is expressed in days with a value of -1 indicating it's not applicable.
+
+
+|onboardStatus
+|string
+|True
+a|JSON string indicating the current status of customer onboarding. Valid values are "not started", "in progress", "success", "failed".
+Defined values are:
+
+* "not started"
+* "in progress"
+* "success"
+* "failed"
+
+
+|costPerAppUnit
+|number
+|True
+a|JSON number indicating the cost per app unit. For a trial version, the value is 0. Unit: US dollars
+
+
+|costPerNamespaceUnit
+|number
+|True
+a|JSON number indicating the cost per namespace unit. For a trial version, the value is 0. Unit: US dollars
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

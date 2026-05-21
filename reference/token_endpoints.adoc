@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/token_endpoints.html'
+summary: 'Astra API (ACC) token endpoints'
+---
+
+= Astra API (ACC) token endpoints
+
+
+
+The Token API enables users to create and manage API access tokens.
+
+

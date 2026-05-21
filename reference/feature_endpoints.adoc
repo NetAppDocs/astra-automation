@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/feature_endpoints.html'
+summary: 'Astra API (ACC) feature endpoints'
+---
+
+= Astra API (ACC) feature endpoints
+
+
+
+The Feature API provides read-only access to feature flag resources in order to determine which features are enabled or disabled in the system.
+
+

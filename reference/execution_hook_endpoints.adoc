@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/execution_hook_endpoints.html'
+summary: 'Astra API (ACC) execution hook endpoints'
+---
+
+= Astra API (ACC) execution hook endpoints
+
+
+
+The Execution Hook API enables simple management of execution hooks. Execution hooks contain additional configuration and references to a hook source resource.
+
+

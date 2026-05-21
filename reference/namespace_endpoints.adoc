@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/namespace_endpoints.html'
+summary: 'Astra API (ACC) namespace endpoints'
+---
+
+= Astra API (ACC) namespace endpoints
+
+
+
+The Namespace API provides read-only access to namespace resources in order to describe namespaces associated with a given cluster.
+
+

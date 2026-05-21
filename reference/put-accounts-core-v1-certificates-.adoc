@@ -1,0 +1,752 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/put-accounts-core-v1-certificates-.html'
+summary: 'Modify a certificate'
+---
+
+= Modify a certificate
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
+
+
+
+Replaces the entire stored resource with the supplied JSON request body.
+
+*Side Effects*
+
+* An updated CA certificate will be updated in the trust store.
+* If an existing trusted CA certificate becomes untrusted, it will be removed from the trust store.
+* If a certificate body is updated ("cert" field), the "isSelfSigned" indicator must be included to indicate the state of the new certificate. If the "isSelfSigned" indicator is not included in this case, the value will be set to "false".
+* If an update does not modify the certificate body ("cert" field), the "isSelfSigned" indicator is optional and the existing value will be retained if not provided.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|certificate_id
+|string
+|path
+|True
+a|ID of the certificate collection to list
+
+
+|===
+
+== Request Body
+
+Replaces the entire stored resource with the supplied JSON request body.
+
+*Side Effects*
+
+* An updated CA certificate will be updated in the trust store.
+* If an existing trusted CA certificate becomes untrusted, it will be removed from the trust store.
+* If a certificate body is updated ("cert" field), the "isSelfSigned" indicator must be included to indicate the state of the new certificate. If the "isSelfSigned" indicator is not included in this case, the value will be set to "false".
+* If an update does not modify the certificate body ("cert" field), the "isSelfSigned" indicator is optional and the existing value will be retained if not provided.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-certificate"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|False
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|certUse
+|string
+|False
+a|JSON string indicating the use of the certificate. If not specified, defaults to "rootCA".
+Defined values are:
+
+* "rootCA" - The certificate is a certificate authority (CA) certificate used to trust any certificate signed by that CA.
+* "intermediateCA" - The certificate is an intermediate CA certificate issued by a root CA.
+
+
+|cert
+|string
+|False
+a|JSON string containing a base64 encoded PKCS-11 formatted certificate (PEM).
+Defined values are:
+
+* Conforms to the base64 Encoded Data Schema
+
+
+|cn
+|string
+|False
+a|JSON string containing a common name extracted from the certificate.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 511
+
+
+|expiryTimestamp
+|string
+|False
+a|JSON string containing a timestamp indicating when the certificate expires.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|isSelfSigned
+|string
+|False
+a|JSON string indicating whether the certificate is self-signed.
+If not provided on create, the value defaults to "false".
+On update:
+
+* If the value is provided, that value will be used.
+* If the value is not provided and the "cert" field is included in the update, the value will be set to "false".
+* If the value is not provided and the "cert" field is not included in the update, the existing value will be retained.
+Defined values are:
+* "true" - The certificate is self-signed.
+* "false" - The certificate is not self-signed.
+
+
+|trustState
+|string
+|False
+a|JSON string containing one of a set of enumerated values indicating whether the certificate is trusted.
+Defined values are:
+
+* "untrusted" - The certificate is not trusted.
+* "trusted" - The certificate is marked as trusted.
+* "expired" - The certificate is expired, so is neither trusted or not trusted.
+
+
+|trustStateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|False
+a|JSON array of JSON objects, each representing the set of permitted state transitions from a given defined state.
+Each JSON object contains the fields "from" and "to", where the "from" value is the name of a state, and the "to" value is an array of permitted destination states.
+
+
+|trustStateDesired
+|string
+|False
+a|JSON string containing a value indicating whether the certificate is trusted.
+If not specified on create, the default value is "trusted".
+Defined values are:
+
+* "untrusted" - The certificate is not trusted.
+* "trusted" - The certificate is marked as trusted.
+
+
+|trustStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects that lists additional details about the trust state of the certificate.
+If no details are available, this array will be empty.
+
+* Minimum Items: 0
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-certificate",
+  "version": "1.1",
+  "trustStateDesired": "trusted"
+}
+====
+
+== Response
+
+```
+Status: 204, Indicates if the certificate resource was updated.
+```
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Response
+
+```
+Status: 503, Service unavailable
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/41",
+  "title": "Service not ready",
+  "detail": "Currently, the service can't respond to this request.",
+  "status": "503"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_stateTransition]
+[.api-collapsible-fifth-title]
+type_astra_stateTransition
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|from
+|string
+|True
+a|
+
+|to
+|array[string]
+|True
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,813 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-settings.html'
+summary: 'List all settings'
+---
+
+= List all settings
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|filter
+|string
+|query
+|False
+a|Indicates which fields should be matched in order to return a resource when listing a collection.
+
+Supported operators are:
+
+* eq - Equality
+* lt/gt - Less than/Greater than
+* lte/gte - Less than or equals to/Greater than or equals to
+
+URL example: "filter=field%20eq%20%27value%27"
+
+OpenAPI examples: "field eq 'value'"
+
+
+|count
+|string
+|query
+|False
+a|Indicates if the total number of resources should be returned in the metadata object.
+
+URL examples: "count=true"
+
+OpenAPI examples: "true"
+
+
+|orderBy
+|string
+|query
+|False
+a|Indicates the sort order of resource when listing a collection.
+
+URL examples: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI examples: "name desc"
+
+
+|skip
+|string
+|query
+|False
+a|Indicates the number of resources to skip over when listing a collection.
+
+URL examples: "skip=1"
+
+OpenAPI examples: "1"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#setting_1_1_get_response_body[setting_1.1_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-settings",
+  "version": "1.1",
+  "items": [
+    {
+      "type": "application/astra-setting",
+      "version": "1.0",
+      "id": "5da0a2ed-c51d-4d91-8b98-ed3aa8a88cc5",
+      "name": "astra.account.smtp",
+      "currentConfig": {
+        "credential": "",
+        "isEnabled": "false",
+        "port": 587,
+        "relayServer": "smtp.sendgrid.net"
+      },
+      "configSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "astra.account.smtp",
+        "type": "object",
+        "properties": {
+          "credential": {
+            "type": "string",
+            "description": "The credential ID for SMTP authentication."
+          },
+          "isEnabled": {
+            "type": "string",
+            "description": "This property determines if this setting is enabled or not."
+          },
+          "port": {
+            "type": "integer",
+            "description": "The SMTP port. For an unencrypted or a TLS connection, use port 25, 2525, or 587."
+          },
+          "relayServer": {
+            "type": "string",
+            "description": "This setting is sometimes referred to as the external SMTP server or the SMTP relay."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "relayServer",
+          "port",
+          "isEnabled"
+        ]
+      },
+      "state": "valid",
+      "stateUnready": [],
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2021-06-04T20:14:52Z",
+        "modificationTimestamp": "2021-06-04T20:14:52Z",
+        "createdBy": "c9550bbb-e70b-4578-8504-07397f875bcb",
+        "modifiedBy": "65e1571b-1b46-4f05-95b0-7d7f5a93da6a"
+      }
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Response
+
+```
+Status: 503, Service unavailable
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/41",
+  "title": "Service not ready",
+  "detail": "Currently, the service can't respond to this request.",
+  "status": "503"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_json]
+[.api-collapsible-fifth-title]
+type_json
+
+JSON object containing keys and values that make up the current configuration for this setting.
+The contents of this object must conform to the JSON Schema contained in the configSchema field.
+Default values are supplied by the configmap. After defaults are changed by the user, they will not be overwritten.
+
+
+
+[#type_json]
+[.api-collapsible-fifth-title]
+type_json
+
+JSON object containing keys and values that make up the requested configuration for this setting.
+The contents of this object must conform to the JSON schema contained in the configSchema field.
+The object does not exist until specified. When specified, this triggers the feature service to notify the corresponding service to request that the desired configuration can be applied. The corresponding service can then perform validation and apply the desired configuration to the current configuration.
+
+
+
+[#properties]
+[.api-collapsible-fifth-title]
+properties
+
+
+[#type_json_schema]
+[.api-collapsible-fifth-title]
+type_json_schema
+
+JSON object containing the JSON schema for the config property in this resource. Must conform to JSON Schema Draft 7.
+If config values are present in the resource, validation against the indicated configSchema is mandatory.
+As a common convention, configurations are recommended to have an "isEnabled" field, when appropriate. The "isEnabled" field contains a value that indicates whether the setting is turned on ("true") or off ("false").
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|$schema
+|string
+|True
+a|
+
+|type
+|string
+|True
+a|
+
+|properties
+|link:#properties[properties]
+|True
+a|
+
+|additionalProperties
+|boolean
+|True
+a|
+
+|required
+|array[string]
+|True
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#setting_1_1_get_response_body]
+[.api-collapsible-fifth-title]
+setting_1.1_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-setting"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a name for the setting, in hierarchal dot notation (.).
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+This value is specified by the configmap that is loaded at runtime and cannot be updated by the user.
+
+
+|currentConfig
+|link:#type_json[type_json]
+|True
+a|JSON object containing keys and values that make up the current configuration for this setting.
+The contents of this object must conform to the JSON Schema contained in the configSchema field.
+Default values are supplied by the configmap. After defaults are changed by the user, they will not be overwritten.
+
+
+|desiredConfig
+|link:#type_json[type_json]
+|False
+a|JSON object containing keys and values that make up the requested configuration for this setting.
+The contents of this object must conform to the JSON schema contained in the configSchema field.
+The object does not exist until specified. When specified, this triggers the feature service to notify the corresponding service to request that the desired configuration can be applied. The corresponding service can then perform validation and apply the desired configuration to the current configuration.
+
+
+|configSchema
+|link:#type_json_schema[type_json_schema]
+|True
+a|JSON object containing the JSON schema for the config property in this resource. Must conform to JSON Schema Draft 7.
+If config values are present in the resource, validation against the indicated configSchema is mandatory.
+As a common convention, configurations are recommended to have an "isEnabled" field, when appropriate. The "isEnabled" field contains a value that indicates whether the setting is turned on ("true") or off ("false").
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the application.
+Defined values are:
+
+* "valid" - The current configuration matches the desired config.
+* "pending" - The desired configuration is being applied.
+* "error" - The desired configuration cannot be applied.
+
+
+|stateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why the setting was not successfully applied.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

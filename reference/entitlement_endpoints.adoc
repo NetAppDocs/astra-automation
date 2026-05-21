@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/entitlement_endpoints.html'
+summary: 'Astra API (ACC) entitlement endpoints'
+---
+
+= Astra API (ACC) entitlement endpoints
+
+
+
+The Entitlement API represents which features or capacities are enabled by the licenses and subscriptions active for an account.
+
+

@@ -1,0 +1,592 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-groups.html'
+summary: 'List all groups'
+---
+
+= List all groups
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: id,authProvider,authID
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|filter
+|string
+|query
+|False
+a|Indicates which fields should be matched in order to return a resource when listing a collection.
+
+Supported operators are:
+
+* eq - Equality
+* lt/gt - Less than/Greater than
+* lte/gte - Less than or equals to/Greater than or equals to
+
+URL example: "filter=field%20eq%20%27value%27"
+
+OpenAPI examples: "field eq 'value'"
+
+
+|orderBy
+|string
+|query
+|False
+a|Indicates the sort order of resource when listing a collection.
+
+URL examples: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI examples: "name desc"
+
+
+|skip
+|string
+|query
+|False
+a|Indicates the number of resources to skip over when listing a collection.
+
+URL examples: "skip=1"
+
+OpenAPI examples: "1"
+
+
+|count
+|string
+|query
+|False
+a|Indicates if the total number of resources should be returned in the metadata object.
+
+URL examples: "count=true"
+
+OpenAPI examples: "true"
+
+
+|continue
+|
+|query
+|False
+a|Indicates the token to resume listing from.
+
+URL examples: "continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI examples: "+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++</continue>
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#group_1_1_get_response_body[group_1.1_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-groups",
+  "version": "1.1",
+  "items": [
+    [
+      "11c0cfa1-4f27-4ef7-a21c-cb452fc5c9aa",
+      "ldap",
+      "CN=Testers,CN=groups,DC=example,DC=com"
+    ],
+    [
+      "e324ec3a-706d-4f57-a95d-1d88c03e7b73",
+      "ldap",
+      "CN=Admins,CN=groups,DC=example,DC=com"
+    ],
+    [
+      "3070c84d-129b-4017-82a8-2c26a42dd77e",
+      "ldap",
+      "CN=SREs,CN=groups,DC=example,DC=com"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 500, Internal server error
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/34",
+  "title": "Internal server error",
+  "detail": "The server was unable to process this request.",
+  "status": "500"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#group_1_1_get_response_body]
+[.api-collapsible-fifth-title]
+group_1.1_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-group"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|The name of the group resource.
+If not specified on create, the value will be set to
+
+* first Common Name (CN) Relative Distinguished Names (RDN) if found in the authID,
+* authID, otherwise.
+If not specified on update, the value will be preserved without modification.
+Defined values are:
+* Minimum length: 1
+* Maximum length: 2048
+
+
+|authProvider
+|string
+|True
+a|The authentication provider for the group resource.
+Defined values are:
+
+* "ldap"
+
+
+|authID
+|string
+|True
+a|The Distinguished Name (DN) for an LDAP group.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 2048
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,656 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-licenses-.html'
+summary: 'Retrieve a license'
+---
+
+= Retrieve a license
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
+
+
+
+Returns the stored License API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|license_id
+|string
+|path
+|True
+a|ID of the license collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored License API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-license"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|allocation
+|string
+|False
+a|JSON string containing an ID indicating what the license is allocated to. Only present when the license is allocated.
+For Astra Control Center licenses, this field must be populated with the account ID and must match the account ID specified in the POST URI.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|hostID
+|string
+|False
+a|JSON string containing a host identifier that a license is bound to. Only present if the license is host-locked.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|deviceCredentialID
+|string
+|False
+a|JSON string containing the identifier of the deviceCredential associated with the Credential API. Only present for Astra Data Store licenses.
+Defined value are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|isEvaluation
+|string
+|True
+a|JSON string indicating whether the license is an evaluation license.
+Defined values are:
+
+* "true"
+* "false"
+
+
+|licenseProtocol
+|string
+|True
+a|JSON string containing the license protocol extracted from the license.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|licenseText
+|string
+|True
+a|JSON string containing a base64 encoded representation of the license JSON as obtained from the NetApp license system. This must be provided in the original byte-level order to allow signature verification.
+Defined values are:
+
+* Conforms to the base64 Encoded Data Schema
+
+
+|validFromTimestamp
+|string
+|True
+a|JSON string containing a timestamp indicating when the license becomes valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|validUntilTimestamp
+|string
+|True
+a|JSON string containing a timestamp indicating when the license is no longer valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|product
+|string
+|True
+a|JSON string containing the product string extracted from the license.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|productVersion
+|string
+|True
+a|JSON string containing the version string extracted from the license.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|productSN
+|string
+|True
+a|JSON string containing the serial number string extracted from the license.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|features
+|string
+|True
+a|JSON string containing the package value extracted from the license.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|capacity
+|string
+|True
+a|JSON string containing the capacity extracted from the license.
+
+
+|capacity2
+|string
+|True
+a|JSON string containing the secondary capacity extracted from the license.
+
+
+|addons
+|array[link:#addons[addons]]
+|False
+a|JSON array of JSON objects containing the list of add-ons from the license.
+An add-on is a change in license occurring at a potential future date.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-license",
+  "version": "1.0",
+  "id": "6db53b32-8417-5d3c-8ef0-552fc602c78f",
+  "allocation": "4185d09b-6687-4801-a832-c005a9d94f41",
+  "hostID": "99132549-e0c2-4203-9d1e-598628b4ff9b",
+  "isEvaluation": "false",
+  "licenseProtocol": "ASTRASDS-ENT-SUBS",
+  "licenseText": "ewogICAic3RhdHVzUmVzcCI6ewogMTYwNzAwIgp9",
+  "validFromTimestamp": "2020-08-06T00:00:00.000000Z",
+  "validUntilTimestamp": "2021-08-06T00:00:00.000000Z",
+  "product": "Astra Control Center",
+  "productVersion": "1.0",
+  "productSN": "320000046",
+  "features": "ASTRA-ENT-STD",
+  "capacity": "4000",
+  "capacity2": "0",
+  "addons": [
+    {
+      "startDate": "2020-08-06T00:00:00.000000Z",
+      "endDate": "2021-08-06T00:00:00.000000Z",
+      "capacity": "4000",
+      "licenseProtocol": "ASTRA-ENT-STD",
+      "features": "p-nfs,dm-storage-policy-based-pvs-for-k8s,dm-spbm-based-vvols-for-vms,dm-storage-efficiency,dm-data-at-rest-encryption"
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#addons]
+[.api-collapsible-fifth-title]
+addons
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|startDate
+|string
+|False
+a|JSON string containing a timestamp indicating when this add-on becomes valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|endDate
+|string
+|False
+a|JSON string containing a timestamp indicating when this add-on is no longer valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|features
+|string
+|False
+a|JSON string containing the list of features associated with this add-on.
+Defined values are:
+
+* String contents not validated by the schema.
+
+
+|capacity
+|string
+|False
+a|JSON string containing the capacity extracted from the add-on.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|licenseProtocol
+|string
+|False
+a|JSON string containing the license protocol associated with this add-on.
+Defined values are:
+
+* String contents not validated by the schema
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,1081 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-packages.html'
+summary: 'List all packages'
+---
+
+= List all packages
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|filter
+|string
+|query
+|False
+a|Indicates which fields should be matched in order to return a resource when listing a collection.
+
+Supported operators are:
+
+* eq - Equality
+* lt/gt - Less than/Greater than
+* lte/gte - Less than or equals to/Greater than or equals to
+
+URL example: "filter=field%20eq%20%27value%27"
+
+OpenAPI examples: "field eq 'value'"
+
+
+|orderBy
+|string
+|query
+|False
+a|Indicates the sort order of resource when listing a collection.
+
+URL examples: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI examples: "name desc"
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: id,packageName,packageVersion,softwareType
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#package_1_0_get_response_body[package_1.0_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-packages",
+  "version": "1.0",
+  "items": [
+    [
+      "e280ff62-be35-4f31-a31b-a210a1ad1b33",
+      "acc",
+      "22.01.0",
+      "install"
+    ],
+    [
+      "e8507dad-d33f-44b3-9c15-ec55ba6f6473",
+      "acc",
+      "22.01.1",
+      "patch"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_stateTransition]
+[.api-collapsible-fifth-title]
+type_astra_stateTransition
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|from
+|string
+|True
+a|
+
+|to
+|array[string]
+|True
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#dependsOnImages]
+[.api-collapsible-fifth-title]
+dependsOnImages
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|imagePath
+|string
+|True
+a|JSON string containing the path to this Docker image. It must not contain the name of the registry, only the absolute path from root to image.
+      Example: /globalcicd/acc
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 1023
+
+
+|imageName
+|string
+|True
+a|JSON string containing the Docker image name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|imageTag
+|string
+|True
+a|JSON string representing the tag/version of this image.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|===
+
+
+[#images]
+[.api-collapsible-fifth-title]
+images
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|imageName
+|string
+|True
+a|JSON string containing the Docker image name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|imagePath
+|string
+|True
+a|JSON string containing the path to this Docker image. It must not contain the name of the registry, only the absolute path from root to image.
+      Example: /globalcicd/acc
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 1023
+
+
+|imageTag
+|string
+|True
+a|JSON string representing the tag/version of this image.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|imageDigest
+|string
+|True
+a|JSON string representing the digest of this image.
+Defined values are:
+
+* Defined regex is: "{caret}(sha256:)[0-9a-f]\{64}$"
+
+
+|dependsOnImages
+|array[link:#dependsOnImages[dependsOnImages]]
+|False
+a|JSON array of JSON objects describing the images required to install or upgrade the current image.
+
+
+|===
+
+
+[#dependsOnComponents]
+[.api-collapsible-fifth-title]
+dependsOnComponents
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|componentName
+|string
+|True
+a|JSON string describing the name of the component.
+Defined values are:
+
+* "acc"
+* "acs"
+* "trident"
+* "kubernetes"
+
+
+|versions
+|array[string]
+|True
+a|JSON array of JSON strings defining the component version required to install the current image.
+
+
+|===
+
+
+[#artifacts]
+[.api-collapsible-fifth-title]
+artifacts
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|artifactName
+|string
+|True
+a|JSON string containing the file name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|artifactIdentifier
+|string
+|True
+a|JSON string containing an identifier for this file. Between versions of the same package type, the file name might change but the identifier usually stays the same.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 511
+
+
+|artifactPath
+|string
+|True
+a|JSON string containing the path to this artifact from the root of a known Astra Control Center Data Store/location.
+      Example: /vmware/1.0/
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 1023
+
+
+|artifactVersion
+|string
+|False
+a|JSON string containing the version of that artifact, if provided.
+Defined values are:
+
+* Conforms to the SemVer Schema
+* Minimum length: 1
+* Maximum length: 31
+
+
+|dependsOnComponents
+|array[link:#dependsOnComponents[dependsOnComponents]]
+|False
+a|JSON array of JSON objects describing the installed components required to install/upgrade the current image.
+
+
+|===
+
+
+[#files]
+[.api-collapsible-fifth-title]
+files
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|fileName
+|string
+|True
+a|JSON string containing the file name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|fileIdentifier
+|string
+|True
+a|JSON string containing an identifier of this file. Between versions of the same package type, the file name might change but the identifier usually stays the same.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 511
+
+
+|fileMediaType
+|string
+|True
+a|JSON string containing the file media-type.
+Defined values are any media type defined by https://www.iana.org/assignments/media-types/media-types.xhtml[IANA].
+In addition, application/x-yaml or application/x-yaml for yaml files is supported.
+
+* Minimum length: 1
+* Maximum length: 211
+
+
+|fileContents
+|string
+|True
+a|JSON string containing the file content.
+Defined values are:
+
+* Conforms to the Base64 Schema
+FIXME - How do we specify that this is compressed? What algorithm ,etc?
+
+
+|===
+
+
+[#upgradableVersions]
+[.api-collapsible-fifth-title]
+upgradableVersions
+
+JSON object containing the minimum and maximum versions that can be upgraded to the package version.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|minVersion
+|string
+|False
+a|JSON string describing the minimum version that can be upgraded to the package version.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|maxVersion
+|string
+|False
+a|JSON string describing the maximum version that can be upgraded to the package version.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|===
+
+
+[#dependencies]
+[.api-collapsible-fifth-title]
+dependencies
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|componentName
+|string
+|True
+a|JSON string describing the name of the component.
+Defined values are:
+
+* "acc"
+* "acs"
+* "trident"
+* "kubernetes"
+
+
+|componentMinVersion
+|string
+|False
+a|JSON string describing the minimum version required of that component.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|componentMaxVersion
+|string
+|False
+a|JSON string describing the maximum version required of that component.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#package_1_0_get_response_body]
+[.api-collapsible-fifth-title]
+package_1.0_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-package"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|packageName
+|string
+|True
+a|JSON string containing the package name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+Example values are:
+* "acc"
+* "acs"
+* "trident"
+
+
+|packageVersion
+|string
+|True
+a|JSON string containing the SemVer of the package.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|packageType
+|string
+|True
+a|JSON string containing the package type, indicating whether this is a full installation package or a patch.
+Defined values are:
+
+* "install"
+* "patch"
+
+
+|bundleName
+|array[string]
+|False
+a|JSON array of JSON strings containing the name of the bundle that the package is contained in.
+
+
+|severityLevel
+|string
+|True
+a|JSON string describing the severity level of this patch or installation.
+Defined values are:
+
+* "recommended" - Installation is recommended - Default value
+* "critical" - Installation is strongly recommended to address critical bug fixes and/or security patches
+
+
+|packageState
+|string
+|True
+a|JSON string containing a value indicating the operational state of the package.
+After verification of the package and after import, the state will indicate "complete". Otherwise, the state will indicate "incomplete".
+Defined values are:
+
+* "verifying" - The package is in the process of being validated
+* "corrupt" - The package is corrupt
+* "incomplete" - The package is missing elements
+* "available" - All elements associated with the package are available and the package is ready for use
+
+
+|packageStateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|True
+a|JSON array of JSON objects, each representing the set of permitted state transitions from a given defined state.
+Each JSON object contains the fields "from" and "to", where the "from" value is the name of a state and the "to" value is an array of permitted destination states.
+Defined values are:
+
+* Conforms to the State Transition Schema
+
+
+|packageStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about the current "state".
+If no details are available, this array will be empty.
+
+* Minimum Items: 0
+
+
+|images
+|array[link:#images[images]]
+|False
+a|JSON array of JSON objects, each containing a Docker image that is part of the package.
+
+
+|artifacts
+|array[link:#artifacts[artifacts]]
+|False
+a|JSON array of JSON objects describing the additional artifacts (binaries and others) associated with this package.
+
+
+|files
+|array[link:#files[files]]
+|False
+a|JSON array of JSON objects, each representing a non-image artifact associated with this package.
+
+
+|upgradableVersions
+|link:#upgradableVersions[upgradableVersions]
+|False
+a|JSON object containing the minimum and maximum versions that can be upgraded to the package version.
+
+
+|dependencies
+|array[link:#dependencies[dependencies]]
+|False
+a|JSON array of JSON objects describing what minimum version of a given dependency is required for this package to be installed
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/license_endpoints.html'
+summary: 'Astra API (ACC) license endpoints'
+---
+
+= Astra API (ACC) license endpoints
+
+
+
+The License API represents licenses loaded into the account.
+
+

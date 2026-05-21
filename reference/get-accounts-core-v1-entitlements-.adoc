@@ -1,0 +1,527 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-entitlements-.html'
+summary: 'Retrieve an entitlement'
+---
+
+= Retrieve an entitlement
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/entitlements/{entitlement_id}`#
+
+
+
+Returns the stored Entitlement API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|entitlement_id
+|string
+|path
+|True
+a|ID of the entitlement collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Entitlement API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-entitlement"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|allocation
+|string
+|False
+a|JSON string containing the ID of the object that the entitlement is allocated to. Only present when the entitlement is allocated.
+String contents not validated by the schema.
+
+
+|product
+|string
+|False
+a|JSON string containing the product string extracted from the license or subscription.
+String contents not validated by the schema.
+
+
+|productVersion
+|string
+|False
+a|JSON string containing the version string extracted from the license or subscription.
+String contents not validated by the schema.
+
+
+|entitlementType
+|string
+|True
+a|JSON string containing the type of the entitlement. This is extracted from the license or subscription.
+String contents not validated by the schema.
+
+
+|entitlementValue
+|string
+|True
+a|JSON string containing the capacity associated with the entitlement.
+String contents not validated by the schema.
+
+
+|entitlementConsumption
+|string
+|False
+a|JSON string containing the amount of the capacity associated with the entitlement that is currently in use.
+String contents not validated by the schema.
+
+
+|sourceLicense
+|string
+|False
+a|JSON string containing the license object ID that the entitlement is sourced from.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|sourceSubscription
+|string
+|False
+a|JSON string containing the ID of the subscription object that the entitlement is sourced from.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|validFromTimestamp
+|string
+|False
+a|JSON string containing a timestamp indicating when the entitlement becomes valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|validUntilTimestamp
+|string
+|False
+a|JSON string containing a timestamp indicating when the entitlement is no longer valid.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-entitlement",
+  "version": "1.0",
+  "id": "8bdafc19-bde6-5f45-9808-4893c845c9f5",
+  "product": "Astra SDS",
+  "productVersion": "1.0",
+  "entitlementType": "capacity",
+  "entitlementValue": "2",
+  "entitlementConsumption": "1",
+  "sourceLicense": "c8aa757a-5318-489f-8134-a2a1a6956a3e",
+  "validFromTimestamp": "2020-08-06T00:00:00.000000Z",
+  "validUntilTimestamp": "2021-08-06T00:00:00.000000Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

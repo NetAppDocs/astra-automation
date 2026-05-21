@@ -1,0 +1,673 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v1-managedclusters-storageclasses.html'
+summary: 'List the storage classes for a managed cluster'
+---
+
+= List the storage classes for a managed cluster
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|managedCluster_id
+|string
+|path
+|True
+a|ID of the containing managedCluster resource
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: id,name
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#storageClass_1_1_get_response_body[storageClass_1.1_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-storageClasses",
+  "version": "1.1",
+  "items": [
+    [
+      "e280ff62-be35-4f31-a31b-a210a1ad1b33",
+      "my-storage-class"
+    ],
+    [
+      "e8507dad-d33f-44b3-9c15-ec55ba6f6473",
+      "standard"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#storageClass_1_1_get_response_body]
+[.api-collapsible-fifth-title]
+storageClass_1.1_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-storageClass"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a value indicating the name of the storage class.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|provisioner
+|string
+|True
+a|JSON string containing a value indicating the provisioner associated with the storage class.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|available
+|string
+|True
+a|JSON string indicating whether the storage class is available for the cluster or is eligible to be added to the cluster when under management.
+Defined values are:
+
+* "available" - The storage class is available for use
+* "eligible" - The storage class is eligible to be used by the cluster when it is under management
+* "ineligible" - The storage class is ineligible to be used by the cluster when it is under management
+
+
+|allowVolumeExpansion
+|string
+|True
+a|JSON string indicating whether the storage class allows volume expansion.
+Defined values are:
+
+* "true" - The storage class allows volume expansion
+* "false" - The storage class does not allow volume expansion
+* "unavailable" - It is unknown whether the storage class allows volume expansion
+
+
+|reclaimPolicy
+|string
+|True
+a|JSON string containing a cloud-specific value indicating the retention policy of the storage class.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|volumeBindingMode
+|string
+|True
+a|JSON string containing a cloud-specific value indicating the binding mode for the storage class.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|isDefault
+|string
+|False
+a|JSON string indicating whether the storage class contains the default annotation.
+Defined values are:
+
+* "true" - The storage class contains the default annotation
+
+
+|maxSnapshotCount
+|number
+|False
+a|JSON number indicating how many snapshots are supported.
+This information is attached to storage classes provided by NetApp.
+
+
+|maxBackupCount
+|number
+|False
+a|JSON number indicating how many backups are supported.
+This information is attached to storage classes provided by NetApp.
+
+
+|price
+|string
+|False
+a|JSON string indicating the currency units per unit of time for the storage class.
+This information is attached to storage classes provided by NetApp.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|currency
+|string
+|False
+a|JSON string indicating the ISO 4217 three-letter code for the currency that the price is measured in.
+This information is attached to storage classes provided by NetApp.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|performance
+|number
+|False
+a|JSON number indicating the performance service-level objective (SLO) in MBps.
+This information is attached to storage classes provided by NetApp.
+
+
+|resilience
+|string
+|False
+a|JSON string indicating the resilience configuration for the storage.
+This information is attached to storage classes provided by NetApp.
+Defined values are:
+
+* "regional" - The volume will become unavailable if a given region becomes unavailable
+* "multisite" - The volume will continue to be available if a given region becomes unavailable
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

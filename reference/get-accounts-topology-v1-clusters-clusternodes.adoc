@@ -1,0 +1,733 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v1-clusters-clusternodes.html'
+summary: 'List the cluster nodes for a cluster'
+---
+
+= List the cluster nodes for a cluster
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|cluster_id
+|string
+|path
+|True
+a|ID of the containing cluster resource
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: name,instanceType
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#clusterNode_1_0_get_response_body[clusterNode_1.0_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-clusterNodes",
+  "version": "1.0",
+  "items": [
+    [
+      "test-0",
+      "e2-medium"
+    ],
+    [
+      "test-1",
+      "e2-medium"
+    ],
+    [
+      "test-2",
+      "e2-medium"
+    ],
+    [
+      "test-3",
+      "e2-micro"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#labels]
+[.api-collapsible-fifth-title]
+labels
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|JSON string containing the label name
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Defined regex is: "{caret}([\S.]{1,253}\/)?([a-z0-9A-Z_.-]){1,63}$"
+
+
+|value
+|string
+|True
+a|JSON string containing the label value
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Defined regex is: "{caret}([a-z0-9A-Z_.-]){1,63}$"
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#clusterNode_1_0_get_response_body]
+[.api-collapsible-fifth-title]
+clusterNode_1.0_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-clusterNode"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a value that indicates the Kubernetes name for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|role
+|string
+|True
+a|JSON string containing a value that indicates the Kubernetes role for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|labels
+|array[link:#labels[labels]]
+|True
+a|JSON array of JSON objects, each containing Kubernetes labels associated with the node.
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|creationTime
+|string
+|True
+a|JSON string containing an ISO 8601 timestamp that indicates when the node was created.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|externalIP
+|string
+|True
+a|JSON string containing a value that indicates the internal IP address for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|internalIP
+|string
+|True
+a|JSON string containing a value that indicates the external IP address for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|zone
+|string
+|True
+a|JSON string containing a value that indicates the Kubernetes zone for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|region
+|string
+|True
+a|JSON string containing a value that indicates the Kubernetes region for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|instanceType
+|string
+|True
+a|JSON string containing a value that indicates the Kubernetes instance type for the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|kernelVersion
+|string
+|True
+a|JSON string containing a value that indicates the kernel version used by the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|osImage
+|string
+|True
+a|JSON string containing a value that indicates the operating system image used by the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|numCpus
+|string
+|True
+a|JSON string containing a value that indicates the number of CPUs assigned to the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|memory
+|string
+|True
+a|JSON string containing a value that indicates the amount of memory assigned to the node.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the node.
+Defined values are:
+
+* "running" - The node is running normally
+* "provisioning" - The node is in the process of being provisioned
+* "discovering" - Aspects of the node are in the process of being discovered
+* "pending" - The node is scheduled for discovery
+* "failed" - The node is in a failure state
+* "unknown" - The state of the node cannot be determined
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

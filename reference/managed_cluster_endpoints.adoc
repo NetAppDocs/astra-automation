@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/managed_cluster_endpoints.html'
+summary: 'Astra API (ACC) managed cluster endpoints'
+---
+
+= Astra API (ACC) managed cluster endpoints
+
+
+
+The Managed Cluster API represents managed Kubernetes clusters.
+
+

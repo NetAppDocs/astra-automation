@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/notification_endpoints.html'
+summary: 'Astra API (ACC) notification endpoints'
+---
+
+= Astra API (ACC) notification endpoints
+
+
+
+The Notification API provides per-user access to events with a notification destination.
+
+

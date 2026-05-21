@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/package_endpoints.html'
+summary: 'Astra API (ACC) package endpoints'
+---
+
+= Astra API (ACC) package endpoints
+
+
+
+The Package API represents installable software packages.
+
+

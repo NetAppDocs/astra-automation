@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/ldap_user_endpoints.html'
+summary: 'Astra API (ACC) LDAP user endpoints'
+---
+
+= Astra API (ACC) LDAP user endpoints
+
+
+
+The LDAP User API provides read-only access to LDAP users within the configured LDAP server.
+
+

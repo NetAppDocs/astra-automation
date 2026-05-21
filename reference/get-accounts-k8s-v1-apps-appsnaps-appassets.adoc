@@ -1,0 +1,717 @@
+---
+sidebar: sidebar
+api: true
+explorer: true
+permalink: 'reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html'
+summary: 'List application assets for an application snapshot'
+---
+
+= List application assets for an application snapshot
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|app_id
+|string
+|path
+|True
+a|ID of the containing app resource
+
+
+|appSnap_id
+|string
+|path
+|True
+a|ID of the containing appSnap resource
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: assetType,assetName
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#appAsset_1_1_get_response_body[appAsset_1.1_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-appAssets",
+  "version": "1.1",
+  "items": [
+    [
+      "Pod",
+      "mediawiki-69c6fcf864-2wx6l"
+    ],
+    [
+      "ReplicaSet",
+      "mediawiki-69c6fcf864"
+    ],
+    [
+      "Service",
+      "mediawiki"
+    ],
+    [
+      "Deployment",
+      "mediawiki"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#GVK]
+[.api-collapsible-fifth-title]
+GVK
+
+JSON object containing a Kubernetes group/version/kind.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|group
+|string
+|False
+a|JSON string containing a group identifier assigned by Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|kind
+|string
+|False
+a|JSON string containing a kind identifier assigned by Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|version
+|string
+|False
+a|JSON string containing a version identifier assigned by Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|===
+
+
+[#type_json]
+[.api-collapsible-fifth-title]
+type_json
+
+JSON object containing the entire content of the Kubernetes resource definition.
+
+
+
+[#labels]
+[.api-collapsible-fifth-title]
+labels
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|JSON string containing the label name
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Defined regex is: "{caret}([\S.]{1,253}\/)?([a-z0-9A-Z_.-]){1,63}$"
+
+
+|value
+|string
+|True
+a|JSON string containing the label value
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Defined regex is: "{caret}([a-z0-9A-Z_.-]){1,63}$"
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#appAsset_1_1_get_response_body]
+[.api-collapsible-fifth-title]
+appAsset_1.1_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-appAsset"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|assetType
+|string
+|True
+a|JSON string containing a value indicating what type of asset is being described as obtained from Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|creationTimestamp
+|string
+|True
+a|JSON string containing a timestamp indicating when the Kubernetes metadata was created.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|GVK
+|link:#GVK[GVK]
+|True
+a|JSON object containing a Kubernetes group/version/kind.
+
+
+|resource
+|link:#type_json[type_json]
+|False
+a|JSON object containing the entire content of the Kubernetes resource definition.
+
+
+|assetID
+|string
+|True
+a|JSON string containing an identifier assigned by Kubernetes.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|labels
+|array[link:#labels[labels]]
+|True
+a|JSON array of JSON objects, each containing a Kubernetes labels associated with the asset.
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|assetName
+|string
+|True
+a|JSON string containing a name assigned by Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|namespace
+|string
+|False
+a|JSON string containing a namespace assigned by Kubernetes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 254
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

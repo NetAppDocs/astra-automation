@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/certificate_endpoints.html'
+summary: 'Astra API (ACC) certificate endpoints'
+---
+
+= Astra API (ACC) certificate endpoints
+
+
+
+The Certificate API represents admin-trusted certificates that are used for establishing outgoing connections.
+
+

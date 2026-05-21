@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/kubernetes_api_resource_endpoints.html'
+summary: 'Astra API (ACC) kubernetes API resource endpoints'
+---
+
+= Astra API (ACC) kubernetes API resource endpoints
+
+
+
+The Kubernetes API Resource API provides read-only access to Kubernetes API resources to filter the ones supported by Astra on a given cluster.
+
+

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/ldap_group_endpoints.html'
+summary: 'Astra API (ACC) LDAP group endpoints'
+---
+
+= Astra API (ACC) LDAP group endpoints
+
+
+
+The LDAP Group API provides read-only access to LDAP groups within the configured LDAP server.
+
+

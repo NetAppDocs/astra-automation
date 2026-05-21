@@ -1,0 +1,707 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-tasks-.html'
+summary: 'Retrieve a task'
+---
+
+= Retrieve a task
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks/{task_id}`#
+
+
+
+Returns the stored Task API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|task_id
+|string
+|path
+|True
+a|ID of the task collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Task API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-task"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a dot notation (.) hierarchical name for the task.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 127
+* Defined regex is: "{caret}(([a-z])_(\.))_([a-z])+$"
+
+
+|summary
+|string
+|True
+a|JSON string containing the short-form summary of the task.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 63
+
+
+|description
+|string
+|True
+a|JSON string containing a description of the task.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 511
+
+
+|service
+|string
+|False
+a|JSON string containing the name of the service that is managing the task.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|parentTaskID
+|string
+|False
+a|JSON string containing a globally unique identifier of a parent task of the task.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|userID
+|string
+|False
+a|JSON string containing the user ID associated with a task. Only included for tasks associated with user-initiated actions.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|resourceID
+|string
+|True
+a|JSON string containing a globally unique identifier of the resource associated with the task.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|resourceURI
+|string
+|True
+a|JSON string containing the URI associated with the task.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|resourceCollectionURI
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating the fully-expanded access URL of the resource associated with the task.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the task.
+Defined values are:
+
+* "notStarted" - The task has not started executing.
+* "running" - The task is running.
+* "completed" - The task has completed.
+* "pausing" - The task was requested to pause.
+* "paused" - The task is paused.
+* "cancelling" - The task was requested to cancel.
+* "cancelled" - The task is cancelled.
+* "failed" - The task has failed.
+* Minimum length: 1
+* Maximum length: 31
+
+
+|stateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|True
+a|JSON array of JSON objects, each representing the set of permitted state transitions from a given defined state.
+Each JSON object contains the fields "from" and "to", where the "from" value is the name of a state, and the "to" value is an array of permitted destination states.
+
+* Minimum length: 1
+* Maximum length: 31
+For example:
+"stateTransitions" : [   { "from": "running", "to": ["paused", "cancelled"] },   { "from": "paused", "to": ["running", "cancelled"] },   ]
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about the current "state". This field indicates when there are conditions or errors that prevent the actual state from matching the desired state.
+If no details are available, this array will be empty.
+
+* Minimum Items: 0
+
+
+|orderHint
+|number
+|False
+a|JSON number representing the order of subtasks.
+This field can be used by the client to sort subtasks from smallest to largest.
+
+
+|percentDone
+|number
+|False
+a|JSON number containing the percentage complete for a running task.
+When the task is completed, this is set to "100".
+
+
+|startTime
+|string
+|False
+a|JSON string containing the timestamp indicating when the task started.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|endTime
+|string
+|False
+a|JSON string containing the timestamp indicating when the task ended.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|cancelTime
+|string
+|False
+a|JSON string containing the timestamp indicating when the task was cancelled.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-task",
+  "version": "1.1",
+  "id": "26e8e8ef-5549-5928-98dd-2c3d43a608e8",
+  "name": "astra.backup.prep",
+  "summary": "Backup preparation",
+  "description": "Task to prepare for the application backup",
+  "service": "nautilus",
+  "userID": "abda967f-cd2c-4237-908e-99266648c553",
+  "parentTaskID": "9cc8c321-6af1-406c-8158-2c6582c247f8",
+  "resourceID": "626a0978-d55f-4841-8b7c-dc0c0f592c6f",
+  "resourceURI": "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/k8s/v1/apps/7c8bef49-697e-4fb4-810c-675cef4cf6c9/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130",
+  "resourceCollectionURI": [
+    "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/f8b58091-4b9c-4c64-9b40-018dbaf7c5de/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130",
+    "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/923708f8-0435-45b5-8c00-fbdef3ffaf25/apps/f670bf11-8850-44bd-b330-815af6186a06/appSnaps/2b6dafc3-2172-4431-a482-6306b2703130"
+  ],
+  "state": "running",
+  "stateTransitions": [
+    {
+      "from": "running",
+      "to": [
+        "paused",
+        "cancelled"
+      ]
+    },
+    {
+      "from": "paused",
+      "to": [
+        "running",
+        "cancelled"
+      ]
+    }
+  ],
+  "stateDetails": [],
+  "orderHint": 0,
+  "percentDone": 20.25,
+  "startTime": "2020-08-06T12:24:52.256624Z",
+  "endTime": "2020-08-06T12:26:52.256624Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_stateTransition]
+[.api-collapsible-fifth-title]
+type_astra_stateTransition
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|from
+|string
+|True
+a|
+
+|to
+|array[string]
+|True
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

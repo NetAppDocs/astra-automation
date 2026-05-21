@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/cloud_endpoints.html'
+summary: 'Astra API (ACC) cloud endpoints'
+---
+
+= Astra API (ACC) cloud endpoints
+
+
+
+The Cloud API provides access to cloud resources to allow clients to connect to specific clouds to manage clusters and applications.
+
+

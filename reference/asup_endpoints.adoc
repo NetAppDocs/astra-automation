@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/asup_endpoints.html'
+summary: 'Astra API (ACC) ASUP endpoints'
+---
+
+= Astra API (ACC) ASUP endpoints
+
+
+
+The ASUP API provides access to ASUP resources in order to create and optionally upload the AutoSupport bundles.
+
+

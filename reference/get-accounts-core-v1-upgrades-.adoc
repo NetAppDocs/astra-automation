@@ -1,0 +1,586 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-upgrades-.html'
+summary: 'Retrieve an upgrade'
+---
+
+= Retrieve an upgrade
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
+
+
+
+Returns the stored Upgrade API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|upgrade_id
+|string
+|path
+|True
+a|ID of the upgrade collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Upgrade API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-upgrade"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|componentName
+|string
+|True
+a|JSON string containing the name of the type of software that can be upgraded.
+Defined values are:
+
+* "acc"
+* "acs"
+* "trident"
+* "kubernetes"
+
+
+|componentInstance
+|string
+|True
+a|JSON string containing the URI of the component that can be upgraded.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|componentID
+|string
+|True
+a|JSON string containing a globally unique identifier of the component that can be upgraded.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|upgradeVersion
+|string
+|True
+a|JSON string containing the SemVer of the software image file that can be upgraded to.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|currentVersion
+|string
+|True
+a|JSON string containing the current SemVer of the entity to be upgraded.
+Defined values are:
+
+* Conforms to the SemVer Schema
+
+
+|dependencies
+|array[string]
+|True
+a|JSON array of JSON strings, each containing the UUID of an upgrade that must be completed before this upgrade can proceed. Used to determine which upgrades will be performed as prerequisites and in which order.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the upgrade.
+If auto-upgrade is enabled, upgrades will start in the "scheduled" state. Otherwise, upgrades will start in the "proposed" state.
+Defined values are:
+
+* "unavailable" - The upgrade is not available at this time
+* "proposed" - The upgrade is proposed but will not automatically run until approved
+* "scheduled" - The upgrade is approved but is not ready to be installed due to dependencies, time windows, or available resources
+* "running" - The upgrade is in progress
+* "complete" - The upgrade has completed
+* "failed" - The upgrade did not complete
+
+
+|stateDesired
+|string
+|True
+a|JSON string containing a value indicating the desired state for "state".
+This field is only included when the user can directly request a change in the state of the resource.
+Defined values are:
+
+* "proposed" - The upgrade is not approved and must not be performed
+* "scheduled" - The upgrade is approved and must be performed in the specified time window
+* "running" - The upgrade must be performed immediately, regardless of the time window
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about the current "state".
+If no details are available, this array will be empty.
+
+* Minimum Items: 0
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-upgrade",
+  "version": "1.1",
+  "id": "aa9a8e88-c012-55b1-b514-7cd94dc79008",
+  "componentName": "trident",
+  "componentInstance": "https://<dns_name>/accounts/0b311ae7-d89a-4a11-a52c-1349ca090415/topology/v1/clouds/fdda3ff3-a46a-43a4-902e-444fde2baeba/storageBackends/72d19c3c-eb43-4bec-b23e-a228c900aded",
+  "componentID": "72d19c3c-eb43-4bec-b23e-a228c900aded",
+  "upgradeVersion": "21.07.1",
+  "currentVersion": "21.04.1",
+  "dependencies": [],
+  "state": "scheduled",
+  "stateDesired": "scheduled",
+  "stateDetails": [],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

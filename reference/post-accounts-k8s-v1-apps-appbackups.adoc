@@ -1,0 +1,830 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/post-accounts-k8s-v1-apps-appbackups.html'
+summary: 'Create a new application backup for an app'
+---
+
+= Create a new application backup for an app
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups`#
+
+
+
+Indicates the desired values for the Application Backup API resource to be created.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|app_id
+|string
+|path
+|True
+a|ID of the containing app resource
+
+
+|===
+
+== Request Body
+
+Indicates the desired values for the Application Backup API resource to be created.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-appBackup"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|name
+|string
+|False
+a|JSON string containing a user-specified name for the backup. If not specified, or when backups are initiated by a schedule, the system assigns a name for the backup.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema
+
+
+|bucketID
+|string
+|False
+a|JSON string containing an optional bucket ID that indicates where the backup will be stored on create. If not specified, a system-selected bucket is used. If no buckets are available, an error will be returned on create.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|snapshotID
+|string
+|False
+a|JSON string containing the snapshot that was used to create the backup. To create the backup, a snapshot ID associated with the application being backed up can be specified on create. If not specified, a new snapshot will be created for the backup.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-appBackup",
+  "version": "1.2",
+  "name": "app-name-245"
+}
+====
+
+== Response
+
+```
+Status: 201, Returns the newly created appBackup resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-appBackup"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a user-specified name for the backup. If not specified, or when backups are initiated by a schedule, the system assigns a name for the backup.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema
+
+
+|bucketID
+|string
+|True
+a|JSON string containing an optional bucket ID that indicates where the backup will be stored on create. If not specified, a system-selected bucket is used. If no buckets are available, an error will be returned on create.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|snapshotID
+|string
+|False
+a|JSON string containing the snapshot that was used to create the backup. To create the backup, a snapshot ID associated with the application being backed up can be specified on create. If not specified, a new snapshot will be created for the backup.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|scheduleID
+|string
+|False
+a|JSON string containing an optional schedule ID that indicates that the backup was triggered by a schedule and which schedule triggered the backup. Only present for backups initiated by a schedule.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the backup.
+Defined values are:
+
+* "pending" - The application backup is scheduled for discovery
+* "discovering" - The application backup is in the process of being discovered
+* "running" - The application backup is running normally
+* "completed" - The application backup has completed successfully
+* "failed" - The application backup is in a permanent failure state
+* "removed" - The application backup is not currently accessible
+* "unknown" - The application backup state cannot be determined
+* "deleting" - The application backup is scheduled for deletion
+
+
+|stateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why an application backup is unable to transition to "running", or why it has transitioned to "failed" or "removed".
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|hookState
+|string
+|False
+a|JSON string containing a value indicating the state of any execution hooks run as part of a snapshot.
+Defined values are:
+
+* "failed" - One or more execution hooks have failed
+* "success" - There were zero or more applicable hooks and all were successful
+
+
+|hookStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects which lists additional details about why "hookState" transitioned into "failed".
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|backupCreationTimestamp
+|string
+|False
+a|JSON string containing a timestamp indicating when the backup was taken.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|totalBytes
+|number
+|False
+a|JSON number containing the total number of bytes in the backup.
+
+
+|bytesDone
+|number
+|False
+a|JSON number containing the number of bytes backed up for a running backup.
+When the backup is completed, it matches with the totalBytes field.
+
+
+|percentDone
+|number
+|False
+a|JSON number containing the percentage complete for a running backup.
+When the backup is completed, it is set to "100".
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-appBackup",
+  "version": "1.2",
+  "id": "bab39d53-2d04-5297-b92e-58df89a2117b",
+  "name": "app-name-245",
+  "bucketID": "0afbe357-a717-4c7a-8b3d-d0368959c8de",
+  "scheduleID": "1fe83650-9b3c-41ef-bb25-a2910c19c33e",
+  "state": "pending",
+  "stateUnready": [],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Response
+
+```
+Status: 500, Internal server error
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/94",
+  "title": "Backup not created",
+  "detail": "The backup wasn't created because of an internal server issue.",
+  "status": "500"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

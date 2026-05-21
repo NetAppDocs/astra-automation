@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/account_endpoints.html'
+summary: 'Astra API (ACC) account endpoints'
+---
+
+= Astra API (ACC) account endpoints
+
+
+
+The Account API represents isolated tenants in a multitenant system.
+
+

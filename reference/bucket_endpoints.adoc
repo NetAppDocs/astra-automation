@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/bucket_endpoints.html'
+summary: 'Astra API (ACC) bucket endpoints'
+---
+
+= Astra API (ACC) bucket endpoints
+
+
+
+The Bucket API provides access to buckets used to store application backups in Astra.
+
+

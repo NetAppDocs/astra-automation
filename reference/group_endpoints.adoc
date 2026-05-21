@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/group_endpoints.html'
+summary: 'Astra API (ACC) group endpoints'
+---
+
+= Astra API (ACC) group endpoints
+
+
+
+The Group API provides access to Astra group resources.
+
+

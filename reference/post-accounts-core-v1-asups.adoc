@@ -1,0 +1,732 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/post-accounts-core-v1-asups.html'
+summary: 'Create a new ASUP resource'
+---
+
+= Create a new ASUP resource
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/asups`#
+
+
+
+Indicates the desired values for the ASUP API resource to be created.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|===
+
+== Request Body
+
+Indicates the desired values for the ASUP API resource to be created.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-asup"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|upload
+|string
+|True
+a|JSON string containing a value indicating whether to upload the AutoSupport bundle after successful creation.
+Defined values are:
+
+* "true" - Upload the AutoSupport bundle.
+* "false" - Do not upload the AutoSupport bundle.
+
+
+|dataWindowStart
+|string
+|False
+a|JSON string containing a timestamp indicating the start time of the AutoSupport bundle data collection window. Defaults to 24 hours before the "dataWindowEnd" key value. Must occur before the "dataWindowEnd" key value. Maximum is 7 days before the current time of the request.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|dataWindowEnd
+|string
+|False
+a|JSON string containing a timestamp indicating the end time of the AutoSupport bundle data collection window. Defaults to the current time of the request.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-asup",
+  "version": "1.0",
+  "upload": "true"
+}
+====
+
+== Response
+
+```
+Status: 201, Returns the newly created asup resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-asup"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|creationState
+|string
+|True
+a|JSON string containing a value indicating the creation state of the AutoSupport bundle. For "completed" and "partial" states, the bundle can be downloaded by performing a GET of the resource URI with an Accept header containing "_/_" or "application/gzip".
+Defined values are:
+
+* "running" - AutoSupport bundle generation is running normally.
+* "completed" - AutoSupport bundle generation has completed.
+* "partial" - AutoSupport bundle generation has completed but some data was not included in the bundle.
+* "failed" - AutoSupport bundle generation is in a permanent failure state.
+
+
+|creationStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about why "creationState" transitioned into "partial" or "failed".
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|upload
+|string
+|True
+a|JSON string containing a value indicating whether to upload the AutoSupport bundle after successful creation.
+Defined values are:
+
+* "true" - Upload the AutoSupport bundle.
+* "false" - Do not upload the AutoSupport bundle.
+
+
+|uploadState
+|string
+|False
+a|JSON string containing a value that indicates the state of the AutoSupport bundle upload if it was requested.
+Defined values are:
+
+* "pending" - AutoSupport bundle upload is scheduled for when AutoSupport bundle creation completes ("creationState" is "running").
+* "blocked" - AutoSupport bundle upload was not attempted because the bundle was not created ("creationState" is "failed") or upload was blocked because there is no license.
+* "running" - AutoSupport bundle upload is running normally ("creationState" is "completed" or "partial").
+* "completed" - AutoSupport bundle upload has completed.
+* "failed" - AutoSupport bundle upload is in a permanent failure state.
+
+
+|uploadStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects that lists additional details about why "uploadState" transitioned into "failed".
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|triggerType
+|string
+|True
+a|JSON string containing a value that indicates what triggered the creation of the ASUP resource.
+Defined values are:
+
+* "manual" - The ASUP resource and associated AutoSupport bundle were created manually.
+* "scheduled" - The ASUP resource and associated AutoSupport bundle were created according to a configured schedule.
+
+
+|dataWindowStart
+|string
+|True
+a|JSON string containing a timestamp indicating the start time of the AutoSupport bundle data collection window. Defaults to 24 hours before the "dataWindowEnd" key value. Must occur before the "dataWindowEnd" key value. Maximum is 7 days before the current time of the request.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|dataWindowEnd
+|string
+|True
+a|JSON string containing a timestamp indicating the end time of the AutoSupport bundle data collection window. Defaults to the current time of the request.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-asup",
+  "version": "1.0",
+  "id": "9950003f-a1c7-5ca7-8930-06eec25f60aa",
+  "creationState": "running",
+  "creationStateDetails": [],
+  "upload": "true",
+  "uploadState": "pending",
+  "uploadStateDetails": [],
+  "triggerType": "manual",
+  "dataWindowStart": "2020-08-05T12:24:00.000000Z",
+  "dataWindowEnd": "2020-08-06T12:24:52.000000Z",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,896 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v1-clusters-.html'
+summary: 'Retrieve a cluster'
+---
+
+= Retrieve a cluster
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
+
+
+
+Returns the stored Cluster API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|cluster_id
+|string
+|path
+|True
+a|ID of the cluster collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Cluster API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-cluster"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+* "1.5"
+* "1.6"
+* "1.7"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a name for the cluster. If not specified, the Kubernetes name of the cluster will be used.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the cluster.
+Defined values are:
+
+* "pending" - The cluster is scheduled for discovery
+* "discovering" - The cluster is in the process of being discovered
+* "provisioning" - The cluster is in the process of being provisioned
+* "running" - The cluster is running normally
+* "failed" - The cluster is in a permanent failure state
+* "removed" - The cluster is not currently accessible
+* "unknown" - The cluster state cannot be determined
+
+
+|stateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why the cluster is unable to transition to "running" state, when there are issues while in "running" state, or why it has transitioned to "failed" or "removed" state.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|managedState
+|string
+|True
+a|JSON string containing a value indicating the management state of the cluster.
+Defined values are:
+
+* "pending" - The cluster is scheduled to be discovered or added
+* "ineligible" - The cluster is in "running" state, is not under management, and is not eligible for management. The reasons for this ineligibility are provided in the unready key value
+* "deleting" - The cluster is in the process of being deleted
+* "unmanaged" - The cluster is in "running" or "failed" state, is not under management, and is eligible for management
+* "managing" - The cluster is in "running" state and is in the process of being managed
+* "managed" - The cluster is in "running", "failed", or "removed" state and is under management
+
+
+|managedStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|protectionState
+|string
+|True
+a|JSON string containing a value indicating the protection state of the cluster.
+Defined values are:
+
+* "full" - The clusters default storage class supports snapshots
+* "partial" - The cluster has only storageClasses that do not support snapshots
+* "atRisk" - The default storage class of the cluster does not support snapshots
+
+
+|protectionStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects which lists additional details about the current protection state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|restoreTargetSupported
+|string
+|False
+a|JSON string containing a value indicating the ability of the cluster to be a _target_ of application data management operations.
+Defined values are:
+
+* "true" - Cluster is an eligible target for app data management operations.
+* "false" - Cluster is _not_ an eligible target for app data management operations.
+
+
+|snapshotSupported
+|string
+|False
+a|JSON string containing a value indicating the ability of the cluster to perform application data management backup-like operations.
+Defined values are:
+
+* "true" - Cluster is eligible to perform app data management operations.
+* "false" - Cluster is _not_ eligible to perform app data management operations.
+
+
+|managedStateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why the cluster is ineligible to be managed, or that the cluster is managed but non-fatal errors were encountered while managing the cluster.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|managedTimestamp
+|string
+|False
+a|JSON string containing the timestamp indicating when the cluster was brought under management.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+This key is only returned when a cluster has a managedState of "managed".
+
+
+|tridentVersion
+|string
+|False
+a|JSON string containing the version of Trident installed on the cluster.
+Defined values are:
+
+* Conforms to the Software Version Schema
+
+
+|acpVersion
+|string
+|False
+a|JSON string containing the version of Astra Control Provisioner installed on the cluster.
+Defined values are:
+
+* Conforms to the Software Version Schema
+
+
+|tridentManagedState
+|string
+|False
+a|JSON string containing one of a set of enumerated values indicating the management state of Trident on this cluster.
+Defined values are:
+
+* "managed" - Trident instance on the cluster is managed by Astra
+* "unmanaged" - Trident instance on the cluster is not managed by Astra
+
+
+|tridentManagedStateDesired
+|string
+|False
+a|JSON string containing a value indicating the desired management state for Trident.
+Defined values are:
+
+* "managed" - Manage Trident on this cluster
+* "unmanaged" - Do not manage Trident on this cluster
+
+
+|tridentManagedStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|JSON array of JSON objects that lists additional details about why the state transitioned to "managed" or "unmanaged". +
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|tridentManagedStateAllowed
+|array[string]
+|False
+a|States that can be requested in a given tridentManagedState.
+The following states can be requested in each defined state:
+
+* "managed": "managed"
+* "unmanaged": "unmanaged"
+
+
+|inUse
+|string
+|True
+a|JSON string containing a value indicating if the cluster has any managed applications and therefore cannot be deleted.
+Defined values are:
+
+* "false" - The cluster is not managed or is managed but has no managed applications associated with it
+* "true" - The cluster is managed and has managed applications associated with it
+
+
+|accHost
+|string
+|False
+a|JSON string that indicates that this cluster hosts the instance of Astra Control Center that is currently being accessed.
+Defined values are:
+
+* "true" - This cluster is hosting the instance of Astra Control Center that is currently being accessed.
+
+
+|clusterType
+|string
+|True
+a|JSON string containing a value indicating the type of cluster.
+Defined values are:
+
+* "gke" - Kubernetes hosted on Google Kubernetes Engine
+* "aks" - Kubernetes hosted on Microsoft Azure Kubernetes Service
+* "eks" - Kubernetes hosted on Amazon Elastic Kubernetes Service
+* "rke" - The cluster is of type Rancher
+* "tanzu" -The cluster is of type Tanzu Kubernetes Grid
+* "openshift" - The cluster is of type OpenShift
+* "anthos" - The cluster is of type GKE Anthos
+* "kubernetes" - The cluster is generic Kubernetes
+
+
+|clusterVersion
+|string
+|False
+a|JSON string containing a value indicating the semantic versioning representation of the cluster environment.
+For Kubernetes clusters, this is the Kubernetes version.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|clusterVersionString
+|string
+|False
+a|JSON string containing a value indicating the extended versioning information for the cluster environment.
+For Kubernetes clusters, this is the full Kubernetes version.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|clusterCreationTimestamp
+|string
+|False
+a|JSON string containing the timestamp indicating when the cluster was originally created.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|namespaces
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating a namespace within the cluster.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+
+
+|defaultStorageClass
+|string
+|False
+a|JSON string containing a storage class ID that corresponds to the default storage class set in Kubernetes.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|cloudID
+|string
+|True
+a|JSON string containing a value indicating the ID of the cloud the cluster is running on.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|credentialID
+|string
+|False
+a|JSON string containing a value indicating the ID of the credential that contains the kubeconfig file for the cluster.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+ If privateRouteID and connectorCapabilities with the connectorV2 option are provided, credentialID is optional. If they are not provided, credentialID is required, otherwise, an error is generated.
+If credentialID and a relay capable connector is provided, an error is generated.
+
+
+|location
+|string
+|False
+a|JSON string containing a value provided by the cloud that the cluster is running on, indicating the cloud-specific location of the cluster.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|isMultizonal
+|string
+|False
+a|JSON string containing a value provided by the cloud the cluster is running on, indicating whether the cluster spans two or more availability zones.
+Defined values are:
+
+* "true" - The cluster spans two or more availability zones
+* "false" - The cluster is wholly located within a single availability zone
+
+
+|privateRouteID
+|string
+|False
+a|JSON string containing the location ID for private clusters.
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|connectorCapabilities
+|array[string]
+|False
+a|Capabilities of the connector that is associated with this cluster.  Optional for backwards compatibility.  If not present, proxy is the assumed capability.
+
+
+|apiServiceID
+|string
+|False
+a|JSON string containing the UUID from the Kubernetes (k8s) API service object. Used to uniquely identify a cluster.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-cluster",
+  "version": "1.7",
+  "id": "dd95ce34-55ce-5f74-bb49-2f734fe5da30",
+  "name": "GKE-22",
+  "state": "running",
+  "stateUnready": [],
+  "managedState": "unmanaged",
+  "managedStateUnready": [],
+  "protectionState": "full",
+  "protectionStateDetails": [],
+  "tridentVersion": "23.10.0",
+  "acpVersion": "23.10.0",
+  "tridentManagedState": "managed",
+  "tridentManagedStateDetails": [],
+  "inUse": "false",
+  "clusterType": "kubernetes",
+  "clusterVersion": "1.91.1",
+  "clusterVersionString": "1.19.1",
+  "clusterCreationTimestamp": "2020-08-06T12:24:52.256624Z",
+  "namespaces": [
+    "kube-system",
+    "kube-public",
+    "my-app-1"
+  ],
+  "defaultStorageClass": "31c95aba-99d9-4987-b1bb-000dfce5952c",
+  "cloudID": "548bdc1f-f00e-4a23-a062-83265d224d46",
+  "credentialID": "6fa2f917-f730-41b8-9c15-17f531843b31",
+  "location": "europe-west4",
+  "isMultizonal": "false",
+  "apiServiceID": "6bf33af2-872a-4553-a891-26b510c3edbe",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Response
+
+```
+Status: 500, Internal server error
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/65",
+  "title": "Cluster GET not performed",
+  "detail": "The cluster GET call didn't perform the lookup operation on the cluster.",
+  "status": "500"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

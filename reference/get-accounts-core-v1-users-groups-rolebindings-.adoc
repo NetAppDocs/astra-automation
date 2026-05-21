@@ -1,0 +1,567 @@
+---
+sidebar: sidebar
+api: true
+explorer: true
+permalink: 'reference/get-accounts-core-v1-users-groups-rolebindings-.html'
+summary: 'Retrieve a role binding for a group associated with a user'
+---
+
+= Retrieve a role binding for a group associated with a user
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
+
+
+
+Returns the stored Role Binding API resource in the JSON response body.
+If the request is against /accounts/\{account_id}/core/v1/users/\{user_id}/roleBindings endpoint, only roleBinding resources where the user ID matches the user ID in the request URL will be permitted to be read.
+If the request is against /accounts/\{account_id}/core/v1/groups/\{group_id}/roleBindings, only roleBinding resources where the group ID matches the group ID in the request URL will be permitted to be read.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|user_id
+|string
+|path
+|True
+a|ID of the containing user resource
+
+
+|group_id
+|string
+|path
+|True
+a|ID of the containing group resource
+
+
+|roleBinding_id
+|string
+|path
+|True
+a|ID of the roleBinding collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200
+```
+
+Returns the stored Role Binding API resource in the JSON response body.
+If the request is against /accounts/\{account_id}/core/v1/users/\{user_id}/roleBindings endpoint, only roleBinding resources where the user ID matches the user ID in the request URL will be permitted to be read.
+If the request is against /accounts/\{account_id}/core/v1/groups/\{group_id}/roleBindings, only roleBinding resources where the group ID matches the group ID in the request URL will be permitted to be read.
+
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-roleBinding"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|principalType
+|string
+|True
+a|JSON string representing the type of the principal this binding is associated with.
+Defined values are:
+
+* "user"
+* "group"
+For principalType "user", a non-nil user ID is required.
+For principalType "group", a non-nil group ID is required.
+
+
+|userID
+|string
+|True
+a|JSON string containing a user resource ID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+If not specified on create, a nil UUID will be used.
+Only userID or groupID can be specified on create.
+
+
+|groupID
+|string
+|True
+a|JSON string containing a group resource ID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+If not specified on create, a nil UUID will be used.
+Only userID or groupID can be specified on create.
+
+
+|accountID
+|string
+|True
+a|JSON string containing the ID of an account resource.
+For create, this must match the account ID in the request URI.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|role
+|string
+|True
+a|JSON string containing one of the four defined roles.
+Defined values are:
+
+* "viewer"
+* "member"
+* "admin"
+* "owner"
+
+
+|roleConstraints
+|array[string]
+|False
+a|:doctype: book
+
+JSON array of JSON strings specifying the scope of the role assignment.
+Defined values are:
+
+* Conforms to Astra Role Constraints Schema
+If not specified on create, the value will be set to an array of size 1 containing string "*" representing "full scope".
+If not specified on update, the value will be preserved without modification.
+An empty array represents "no scope".
+Examples:
+* {blank}
++
+= Allow access to any resource:   "roleConstraints": ["*"]
+* {blank}
++
+= deny access to all resources:   "roleConstraints": []
+* {blank}
++
+= Allow access to a specific namespace resource only:   "roleConstraints": [ "namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'" ]
+* {blank}
++
+= Allow access to a specific namespace and everything under it:   "roleConstraints": [ "namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*" ]
+* {blank}
++
+= Allow access to all namespaces labelled "dev" in any cluster in any cloud, and everything under them:   "roleConstraints": [ "namespaces:kubernetesLabels='http://dev.example.com/appname=dev[dev.example.com/appname=dev'.*]" ]
+* {blank}
++
+= Allow access to all namespace resources only:   "roleConstraints": [ "namespaces:*" ]
+* {blank}
++
+= Allow access to all namespace resources and everything under them:   "roleConstraints": [ "namespaces:__.__" ]
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-roleBinding",
+  "version": "1.1",
+  "id": "a198f052-5cd7-59d3-9f27-9ea32a21fbca",
+  "principalType": "user",
+  "userID": "4c27d25a-9edb-4e85-9438-48dc8e917231",
+  "groupID": "00000000-0000-0000-0000-000000000000",
+  "accountID": "9fd87309-067f-48c9-a331-527796c14cf3",
+  "role": "viewer",
+  "roleConstraints": [
+    "*"
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

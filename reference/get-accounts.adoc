@@ -1,0 +1,819 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts.html'
+summary: 'List all accounts'
+---
+
+= List all accounts
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|filter
+|string
+|query
+|False
+a|Indicates which fields should be matched in order to return a resource when listing a collection.
+
+Supported operators are:
+
+* eq - Equality
+* lt/gt - Less than/Greater than
+* lte/gte - Less than or equals to/Greater than or equals to
+
+URL example: "filter=field%20eq%20%27value%27"
+
+OpenAPI examples: "field eq 'value'"
+
+
+|orderBy
+|string
+|query
+|False
+a|Indicates the sort order of resource when listing a collection.
+
+URL examples: "orderBy=name", "orderBy=name%20desc"
+
+OpenAPI examples: "name desc"
+
+
+|skip
+|string
+|query
+|False
+a|Indicates the number of resources to skip over when listing a collection.
+
+URL examples: "skip=1"
+
+OpenAPI examples: "1"
+
+
+|count
+|string
+|query
+|False
+a|Indicates if the total number of resources should be returned in the metadata object.
+
+URL examples: "count=true"
+
+OpenAPI examples: "true"
+
+
+|continue
+|
+|query
+|False
+a|Indicates the token to resume listing from.
+
+URL examples: "continue=+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++
+
+OpenAPI examples: "+++<continue token="" from="" collection="" metadata="">+++"+++</continue>+++</continue>
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#account_1_0_get_response_body[account_1.0_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-accounts",
+  "version": "1.0",
+  "items": [
+    {
+      "type": "application/astra-account",
+      "version": "1.0",
+      "id": "70796606-79ba-480b-966c-e4c600fbf622",
+      "name": "fraught-pines",
+      "state": "active",
+      "isEnabled": "true",
+      "enabledTimestamp": "2020-08-06T12:24:52.256624Z",
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "1723a17e-9fd1-4636-86e1-2ec9e04bce51"
+      }
+    },
+    {
+      "type": "application/astra-account",
+      "version": "1.0",
+      "id": "7976114d-35ec-48a7-ba31-22d8e94a8bb2",
+      "name": "sad-dino",
+      "state": "active",
+      "isEnabled": "true",
+      "enabledTimestamp": "2020-08-06T12:24:52.256624Z",
+      "metadata": {
+        "labels": [],
+        "creationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "modificationTimestamp": "2020-08-06T12:24:52.256624Z",
+        "createdBy": "1723a17e-9fd1-4636-86e1-2ec9e04bce51"
+      }
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#postalAddress]
+[.api-collapsible-fifth-title]
+postalAddress
+
+JSON object containing a collection of JSON strings specifying an address. If this key does not exist, it indicates that an address has not been provided.
+If this key exists, all six of the contained JSON strings will be present. If you provide nothing, the string will be empty.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|addressCountry
+|string
+|True
+a|JSON string containing the country name or country code associated with the postal address, as specified in ISO 3166 Alpha-2.
+Defined values are:
+
+* Minimum length: 2
+* Maximum length: 2
+
+
+|addressLocality
+|string
+|True
+a|JSON string containing the locality (for example, city) associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|addressRegion
+|string
+|True
+a|JSON string containing the region (for example, state) associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|postalCode
+|string
+|True
+a|JSON string containing the postal code associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|streetAddress1
+|string
+|True
+a|JSON string containing the street address associated with the postal address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|streetAddress2
+|string
+|False
+a|JSON string containing optional ancillary street address information, post office box, and more.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|===
+
+
+[#accountContact]
+[.api-collapsible-fifth-title]
+accountContact
+
+JSON object containing user contact information to create an owner user at the time of account activation.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|firstName
+|string
+|True
+a|JSON string containing a user specified long-form first name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+
+
+|lastName
+|string
+|True
+a|JSON string containing a user specified long-form last name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+
+
+|companyName
+|string
+|False
+a|JSON string containing the company name associated with the user. If this key does not exist, it indicates that a company name has not been provided.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+
+
+|email
+|string
+|True
+a|JSON strings containing a user specified email address.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|phone
+|string
+|False
+a|JSON string containing the phone number of the user. If this key does not exist, it indicates that a phone number has not been provided.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|postalAddress
+|link:#postalAddress[postalAddress]
+|True
+a|JSON object containing a collection of JSON strings specifying an address. If this key does not exist, it indicates that an address has not been provided.
+If this key exists, all six of the contained JSON strings will be present. If you provide nothing, the string will be empty.
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#account_1_0_get_response_body]
+[.api-collapsible-fifth-title]
+account_1.0_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-account"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a name for the account.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the account.
+Defined values are:
+
+* "pending" - Changes can only be made to user and role resources under the account (default value)
+* "active" - Changes can be made to any resource under the account
+* "deletePending" - Users cannot log in, data protection operations are suspended, charges no longer accrue
+
+
+|isEnabled
+|string
+|True
+a|JSON string indicating the account is enabled.
+Defined values are:
+
+* "false" - Users are not permitted to use this account
+* "true" - Users are permitted to use this account
+
+
+|enabledTimestamp
+|string
+|False
+a|JSON string containing the timestamp indicating when the account was last enabled.
+If the account has never been enabled, this field is absent.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|accountContact
+|link:#accountContact[accountContact]
+|False
+a|JSON object containing user contact information to create an owner user at the time of account activation.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

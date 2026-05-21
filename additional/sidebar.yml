@@ -1,0 +1,11 @@
+section: additional
+title: Additional considerations
+entries:
+  - title: RBAC security
+    url: /additional/rbac.html
+  - title: Work with collections
+    url: /additional/work_with_collections.html
+  - title: Diagnostics
+    url: /additional/diagnostics_support.html
+  - title: Revoke an API token
+    url: /additional/revoke_token.html

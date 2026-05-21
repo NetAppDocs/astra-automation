@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/execution_hook_override_endpoints.html'
+summary: 'Astra API (ACC) execution hook override endpoints'
+---
+
+= Astra API (ACC) execution hook override endpoints
+
+
+
+The Execution Hook Override API allows a user to disable the preloaded "netapp" execution hooks for a specific application. (*NOTE BELOW API DEPRECATIONS*)
+
+

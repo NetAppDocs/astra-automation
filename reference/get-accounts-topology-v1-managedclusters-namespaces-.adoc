@@ -1,0 +1,690 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v1-managedclusters-namespaces-.html'
+summary: 'Retrieve a namespace for a managed cluster'
+---
+
+= Retrieve a namespace for a managed cluster
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}`#
+
+
+
+Returns the stored Namespace API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|managedCluster_id
+|string
+|path
+|True
+a|ID of the containing managedCluster resource
+
+
+|namespace_id
+|string
+|path
+|True
+a|ID of the namespace collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Namespace API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-namespace"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|links
+|array[link:#type_astra_link[type_astra_link]]
+|True
+a|Links describing supported operations against the resource.
+
+
+|name
+|string
+|True
+a|JSON string containing a value indicating the name of the namespace.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|namespaceState
+|string
+|True
+a|JSON string containing a value indicating the state of the namespace.
+Defined values are:
+
+* "discovered" - The namespace has been found in the cluster
+* "removed" - The namespace has been deleted from the cluster, or the cluster is not managed but there might be resources referring to the namespace
+
+
+|namespaceStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about why "state" transitioned into "state a", "state b", or "state c".
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum items: 0
+
+
+|kubernetesLabels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|JSON array of JSON objects, each containing a Kubernetes label associated with the namespace.
+Defined values are:
+
+* Conforms to the Kubernetes Label Array Schema
+
+
+|kubernetesUID
+|string
+|True
+a|JSON string containing the Kubernetes generated UID of the namespace resource
+
+
+|clusterID
+|string
+|True
+a|JSON string containing a globally unique identifier of the cluster that the namespace is contained in.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|systemType
+|string
+|False
+a|JSON string that denotes that the namespace is a type of system namespace. This field identifies what type of system namespace, if any, the namespace is (version 1.1 only).
+Defined values are:
+
+* "kubernetes" - A generic Kubernetes (K8s) system namespace, for example, "kube-system"
+* "netapp" - A NetApp system namespace, for example, "trident" or "netapp-monitoring"
+* "openshift" - An OpenShift system namespace, for example, "openshift-monitoring"
+* "rke" - A Rancher namespace, for example, "cattle-logging"
+* "other" - Common system namespaces that don't necessarily fit elsewhere, for example, "ingress-nginx", "tekton-system"
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-namespace",
+  "version": "1.2",
+  "id": "214dc2eb-19a6-5444-b156-f4b6b551a81a",
+  "links": [
+    {
+      "rel": "canonical",
+      "href": "/accounts/0b311ae7-d89a-4a11-a52c-1349ca090415/topology/v1/namespaces/7d451d2f-196e-4234-aee9-7e2376047e63",
+      "type": "application/vnd.netapp.astra.namespace"
+    },
+    {
+      "rel": "collection",
+      "href": "/accounts/0b311ae7-d89a-4a11-a52c-1349ca090415/topology/v1/clouds/e0490197-872e-4de8-9287-b04a938e801f/clusters/0f284377-e5dc-4dcd-bacd-3197f2b8a347/namespaces",
+      "type": "application/vnd.netapp.astra.namespaces"
+    }
+  ],
+  "name": "kube-system",
+  "namespaceState": "discovered",
+  "namespaceStateDetails": [
+    {
+      "type": "https://astra.netapp.io/stateDetails/9",
+      "title": "Namespace Discovered",
+      "detail": "The namespace was discovered in the indicated managed cluster"
+    }
+  ],
+  "kubernetesLabels": [
+    {
+      "name": "app.kubernetes.io/environment",
+      "value": "dev"
+    }
+  ],
+  "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+  "kubernetesUID": "4f28c377-e5dc-4dcd-b7cd-319cf2b8a345",
+  "systemType": "kubernetes",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#targetSchema]
+[.api-collapsible-fifth-title]
+targetSchema
+
+
+[#accept-post]
+[.api-collapsible-fifth-title]
+accept-post
+
+
+[#accept-put]
+[.api-collapsible-fifth-title]
+accept-put
+
+
+[#hints]
+[.api-collapsible-fifth-title]
+hints
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|status
+|string
+|False
+a|
+
+|allow
+|array[string]
+|False
+a|
+
+|accept-post
+|link:#accept-post[accept-post]
+|False
+a|
+
+|permissions
+|array[string]
+|False
+a|
+
+|accept-put
+|link:#accept-put[accept-put]
+|False
+a|
+
+|===
+
+
+[#type_astra_link]
+[.api-collapsible-fifth-title]
+type_astra_link
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|rel
+|string
+|True
+a|
+
+|href
+|string
+|True
+a|
+
+|type
+|string
+|False
+a|
+
+|targetSchema
+|link:#targetSchema[targetSchema]
+|False
+a|
+
+|title
+|string
+|False
+a|
+
+|hints
+|link:#hints[hints]
+|False
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,889 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/post-accounts-topology-v1-buckets.html'
+summary: 'Create a new bucket'
+---
+
+= Create a new bucket
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
+
+
+
+Indicates the desired values for the Bucket API resource to be created.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|===
+
+== Request Body
+
+Indicates the desired values for the Bucket API resource to be created.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-bucket"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|name
+|string
+|False
+a|JSON string containing a user-assigned name for the bucket.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 256
+
+
+|credentialID
+|string
+|True
+a|JSON string containing the identifier of the credentials used to access the bucket.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|provider
+|string
+|True
+a|JSON string indicating the bucket protocol that can be used to access the bucket.
+Defined values are:
+
+* "ontap-s3"
+* "storagegrid-s3"
+* "generic-s3"
+* "gcp"
+* "azure"
+* "aws"
+
+
+|bucketParameters
+|link:#bucketParameters[bucketParameters]
+|True
+a|JSON object that provides bucket provider-specific information required to access the bucket. The specific values in this bucket vary per provider.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-bucket",
+  "version": "1.2",
+  "name": "Test Bucket",
+  "credentialID": "d5b3854c-38de-42c6-9269-b5c052aba76f",
+  "provider": "gcp",
+  "bucketParameters": {
+    "gcp": {
+      "bucketName": "bucketName"
+    }
+  }
+}
+====
+
+== Response
+
+```
+Status: 201, Returns the newly created bucket resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-bucket"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a user-assigned name for the bucket.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 256
+
+
+|credentialID
+|string
+|True
+a|JSON string containing the identifier of the credentials used to access the bucket.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the bucket.
+Defined values are:
+
+* "pending" - The bucket is scheduled for discovery
+* "available" - The bucket is available for use
+* "failed" - The bucket is in a permanent failure state
+* "removed" - The bucket is not currently accessible
+* "unknown" - The bucket state cannot be determined
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about why "state" transitioned to "removed" or "failed".
+If no details are available, this array will be empty.
+
+* Minimum items: 0
+
+
+|retentionTime
+|number
+|False
+a|Number of seconds representing the time a file on this bucket will be retained for. Defined values are:
+
+* -1 (Unsupported bucket)
+* 0 (No known retention policy)
+* {blank}
++
+____
+0 (Known retention policy)
+____
+
+
+|provider
+|string
+|True
+a|JSON string indicating the bucket protocol that can be used to access the bucket.
+Defined values are:
+
+* "ontap-s3"
+* "storagegrid-s3"
+* "generic-s3"
+* "gcp"
+* "azure"
+* "aws"
+
+
+|bucketParameters
+|link:#bucketParameters[bucketParameters]
+|True
+a|JSON object that provides bucket provider-specific information required to access the bucket. The specific values in this bucket vary per provider.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-bucket",
+  "version": "1.2",
+  "id": "9b296ce0-c545-5022-acfa-1980c5aaea97",
+  "name": "Test Bucket",
+  "credentialID": "8f039324-7795-40bf-a5ca-4442580f7ab0",
+  "state": "available",
+  "stateDetails": [],
+  "provider": "gcp",
+  "bucketParameters": {
+    "gcp": {
+      "bucketName": "bucketName"
+    }
+  },
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#s3]
+[.api-collapsible-fifth-title]
+s3
+
+JSON object that provides Simple Storage Service (S3) protocol parameters. (Use this object for all S3 type providers).
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|serverURL
+|string
+|True
+a|JSON string containing a URL to the base path for the bucket.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 1023
+
+
+|bucketName
+|string
+|True
+a|JSON string containing the name of the S3 bucket.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|===
+
+
+[#gcp]
+[.api-collapsible-fifth-title]
+gcp
+
+JSON object that provides Google Cloud protocol parameters.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|bucketName
+|string
+|True
+a|JSON string containing the name of the backing Google Cloud bucket name.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|===
+
+
+[#azure]
+[.api-collapsible-fifth-title]
+azure
+
+JSON object that provides Azure protocol parameters.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|storageAccount
+|string
+|True
+a|JSON string containing the Azure storage account name.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|bucketName
+|string
+|True
+a|JSON string containing the name of the backing Azure blob name.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|===
+
+
+[#bucketParameters]
+[.api-collapsible-fifth-title]
+bucketParameters
+
+JSON object that provides bucket provider-specific information required to access the bucket. The specific values in this bucket vary per provider.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|s3
+|link:#s3[s3]
+|False
+a|JSON object that provides Simple Storage Service (S3) protocol parameters. (Use this object for all S3 type providers).
+
+
+|gcp
+|link:#gcp[gcp]
+|False
+a|JSON object that provides Google Cloud protocol parameters.
+
+
+|azure
+|link:#azure[azure]
+|False
+a|JSON object that provides Azure protocol parameters.
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

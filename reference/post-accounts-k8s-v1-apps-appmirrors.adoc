@@ -1,0 +1,1082 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/post-accounts-k8s-v1-apps-appmirrors.html'
+summary: 'Create a new AppMirror resource for an app'
+---
+
+= Create a new AppMirror resource for an app
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors`#
+
+
+
+Indicates the desired values for the AppMirror API resource to be created.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|app_id
+|string
+|path
+|True
+a|ID of the containing app resource
+
+
+|===
+
+== Request Body
+
+Indicates the desired values for the AppMirror API resource to be created.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-appMirror"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|sourceAppID
+|string
+|True
+a|Identifier of the source application.
+Only updated when swapping the sourceAppID with the destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|destinationClusterID
+|string
+|True
+a|Identifier of the managed cluster to host the destination application.
+Must be provided on create because it determines what cluster the destination application will be created on.
+If provided on update, it must match the cluster ID of the destination application, so it can only change when swapping sourceAppID with destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|namespaceMapping
+|array[link:#namespaceMapping[namespaceMapping]]
+|False
+a|The namespace or namespaces to use when creating the destination application, corresponding to the namespaces of the source application.
+Each JSON object contains the fields "clusterID" and "namespaces", where the "clusterID" value is the JSON string ID of the source or destination cluster, and the "namespaces" value is a JSON array of JSON strings. There must be exactly one JSON object for each cluster, and the namespaces will be correlated by index.
+If not provided, the same namespace from the source cluster will be used in the destination cluster.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 2
+
+
+|storageClasses
+|array[link:#storageClasses[storageClasses]]
+|False
+a|The storage class to be used on the destination cluster when creating new Persistent Volume Claims (PVCs).
+Each JSON object contains the fields "clusterID" and "storageClassName", where the "clusterID" value is the JSON string ID of the source or destination cluster, and the "storageClassName" is the storage class to use when creating PVCs on that cluster.
+If not provided or if the value is missing for a cluster, the default storage class will be used for that cluster.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 2
+
+
+|stateDesired
+|string
+|True
+a|The desired state for the relationship.
+At creation, the only valid value is "established".
+Defined values are:
+
+* "established" - The relationship is created.
+* "failedOver" - Failover of the application to the destination cluster has completed.
+* "deleted" - The relationship was successfully cleaned up and deleted.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-appMirror",
+  "version": "1.1",
+  "sourceAppID": "efd639b6-fc92-4112-8841-0c0ab7890ae0",
+  "destinationClusterID": "c5d023a9-4061-4a8a-bfbf-3be11ff06226",
+  "stateDesired": "established"
+}
+====
+
+== Response
+
+```
+Status: 201, Returns the newly created appMirror resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-appMirror"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|sourceAppID
+|string
+|True
+a|Identifier of the source application.
+Only updated when swapping the sourceAppID with the destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|sourceClusterID
+|string
+|True
+a|Identifier of the managed cluster hosting the source application.
+This field is read-only and is determined based on the host cluster of the source application.
+If provided in an update, it must match the cluster ID of the source application, so it can only change when swapping the sourceAppID with destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|destinationAppID
+|string
+|False
+a|Identifier of the destination application.
+Cannot be provided on create because a new app ID will be generated as part of relationship initialization.
+Can only be updated when swapping sourceAppID with the destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|destinationClusterID
+|string
+|True
+a|Identifier of the managed cluster to host the destination application.
+Must be provided on create because it determines what cluster the destination application will be created on.
+If provided on update, it must match the cluster ID of the destination application, so it can only change when swapping sourceAppID with destinationAppID.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|namespaceMapping
+|array[link:#namespaceMapping[namespaceMapping]]
+|False
+a|The namespace or namespaces to use when creating the destination application, corresponding to the namespaces of the source application.
+Each JSON object contains the fields "clusterID" and "namespaces", where the "clusterID" value is the JSON string ID of the source or destination cluster, and the "namespaces" value is a JSON array of JSON strings. There must be exactly one JSON object for each cluster, and the namespaces will be correlated by index.
+If not provided, the same namespace from the source cluster will be used in the destination cluster.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 2
+
+
+|storageClasses
+|array[link:#storageClasses[storageClasses]]
+|False
+a|The storage class to be used on the destination cluster when creating new Persistent Volume Claims (PVCs).
+Each JSON object contains the fields "clusterID" and "storageClassName", where the "clusterID" value is the JSON string ID of the source or destination cluster, and the "storageClassName" is the storage class to use when creating PVCs on that cluster.
+If not provided or if the value is missing for a cluster, the default storage class will be used for that cluster.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 2
+
+
+|state
+|string
+|True
+a|The state of the relationship.
+Defined values are:
+
+* "establishing" - The relationship is being created.
+* "established" - The relationship is created.
+* "failingOver" - Failover of the application to the destination cluster is in progress.
+* "failedOver" - Failover of the application to the destination cluster has completed.
+* "deleting" - Resources created by the relationship are being cleaned up.
+* "deleted" - The relationship was cleaned up and deleted.
+
+
+|stateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|False
+a|Permitted state transitions.
+The following state transitions are possible for this resource:
+
+* "establishing": "established", "deleting"
+* "established": "failingOver", "deleting"
+* "failingOver": "failedOver", "deleting"
+* "failedOver": "establishing", "deleting"
+* "deleting": "deleted"
+* "deleted":
+
+
+|stateDesired
+|string
+|True
+a|The desired state for the relationship.
+At creation, the only valid value is "established".
+Defined values are:
+
+* "established" - The relationship is created.
+* "failedOver" - Failover of the application to the destination cluster has completed.
+* "deleted" - The relationship was successfully cleaned up and deleted.
+
+
+|stateAllowed
+|array[string]
+|False
+a|States that can be requested in a given state.
+The following states can be requested in each defined state:
+
+* "establishing": "established", "deleted"
+* "established": "failedOver", "deleted"
+* "failingOver": "failedOver", "deleted"
+* "failedOver": "established", "deleted"
+* "deleting": "deleted"
+* "deleted": "deleted"
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|Additional details about the current state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|transferState
+|string
+|False
+a|State of the current or most recent snapshot transfer.
+Defined values are:
+
+* "transferring" - A new snapshot was created and is now being replicated to the destination cluster. This state also covers the transfers that have failed on previous attempts and are being continually retried.
+* "idle" - There is currently no transfer in progress.
+
+
+|transferStateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|False
+a|Permitted state transitions from a given defined state.
+The following state transitions are possible for this resource:
+
+* "transferring": "idle"
+* "idle": "transferring"
+
+
+|transferStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|False
+a|Additional details about the current state including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|healthState
+|string
+|True
+a|Health state of the resource.
+Defined values are:
+
+* "indeterminate" - The health of the resource cannot be determined (for example, due to lack of connectivity)
+* "normal" - The resource has no known issues and can provide services in accordance with the interface specification
+* "warning" - The resource has known issues that do not prevent it providing services in accordance with the interface specification
+* "critical" - The resource has known issues that prevent it from providing services in accordance with the interface specification
+
+
+|healthStateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|True
+a|Permitted state transitions from a given defined state.
+The following state transitions are possible for this resource:
+
+* "indeterminate": "normal", "warning", "critical"
+* "normal": "indeterminate", "warning", "critical"
+* "warning": "indeterminate", "normal", "critical"
+* "critical": "indeterminate", "normal", "warning"
+
+
+|healthStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|Additional details about the current state including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-appMirror",
+  "version": "1.1",
+  "id": "512c8dac-b7d4-5be9-836e-ee672965866a",
+  "sourceAppID": "efd639b6-fc92-4112-8841-0c0ab7890ae0",
+  "sourceClusterID": "5789e026-c2e2-41e9-ab00-9766bcfa8951",
+  "destinationAppID": "cd7b6d91-fc19-4983-a754-9a7bb4d80a7b",
+  "destinationClusterID": "c5d023a9-4061-4a8a-bfbf-3be11ff06226",
+  "state": "establishing",
+  "stateTransitions": [
+    {
+      "from": "establishing",
+      "to": [
+        "established",
+        "deleting"
+      ]
+    },
+    {
+      "from": "established",
+      "to": [
+        "failingOver",
+        "deleting"
+      ]
+    },
+    {
+      "from": "failingOver",
+      "to": [
+        "failedOver",
+        "deleting"
+      ]
+    },
+    {
+      "from": "failedOver",
+      "to": [
+        "establishing",
+        "deleting"
+      ]
+    },
+    {
+      "from": "deleting",
+      "to": [
+        "deleted"
+      ]
+    }
+  ],
+  "stateDesired": "established",
+  "stateAllowed": [
+    "deleted"
+  ],
+  "stateDetails": [
+    {
+      "type": "https://astra.netapp.io/stateDetails/3",
+      "title": "AppMirror is being established",
+      "detail": "The AppMirror relationship is in the process of being established."
+    }
+  ],
+  "healthState": "warning",
+  "healthStateTransitions": [
+    {
+      "from": "indeterminate",
+      "to": [
+        "normal",
+        "warning",
+        "critical"
+      ]
+    },
+    {
+      "from": "normal",
+      "to": [
+        "indeterminate",
+        "warning",
+        "critical"
+      ]
+    },
+    {
+      "from": "warning",
+      "to": [
+        "indeterminate",
+        "normal",
+        "critical"
+      ]
+    },
+    {
+      "from": "critical",
+      "to": [
+        "indeterminate",
+        "normal",
+        "warning"
+      ]
+    }
+  ],
+  "healthStateDetails": [
+    {
+      "type": "https://astra.netapp.io/stateDetails/4",
+      "title": "AppMirror not yet established",
+      "detail": "The AppMirror relationship is not protecting the app data yet because the relationship is in the process of being established."
+    }
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#namespaceMapping]
+[.api-collapsible-fifth-title]
+namespaceMapping
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|clusterID
+|string
+|False
+a|Identifier of the cluster for which the namespaces are specified.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|namespaces
+|array[string]
+|False
+a|List of namespaces to use on the cluster. Correlated with the other cluster namespace list by index.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema
+
+
+|role
+|string
+|False
+a|The initial role for this namespace definition.
+This parameter is optional except for when a same-cluster replication configuration is used.
+Defined values are:
+
+* "source"
+* "destination"
+
+
+|===
+
+
+[#storageClasses]
+[.api-collapsible-fifth-title]
+storageClasses
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|clusterID
+|string
+|False
+a|Identifier of the cluster for which the storage class is specified.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|storageClassName
+|string
+|False
+a|Name of the storage class to use when creating PVCs on the cluster specified in "clusterID".
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|role
+|string
+|False
+a|The initial role for this storage class definition.
+This parameter is optional except for when a same-cluster replication configuration is used.
+Defined values are:
+
+* "source"
+* "destination"
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#type_astra_stateTransition]
+[.api-collapsible-fifth-title]
+type_astra_stateTransition
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|from
+|string
+|True
+a|
+
+|to
+|array[string]
+|True
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

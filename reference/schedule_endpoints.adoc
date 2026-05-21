@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/schedule_endpoints.html'
+summary: 'Astra API (ACC) schedule endpoints'
+---
+
+= Astra API (ACC) schedule endpoints
+
+
+
+The Schedule API allows various scheduled data protection operations to be defined.
+
+

@@ -1,0 +1,744 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-core-v1-events-.html'
+summary: 'Retrieve an event'
+---
+
+= Retrieve an event
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/events/{event_id}`#
+
+
+
+Returns the stored Event API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|event_id
+|string
+|path
+|True
+a|ID of the event collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Event API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-event"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+* "1.4"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a dot notation (.) hierarchical name for the event.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 127
+* Defined regex is: "{caret}(([a-z])_(\.))_([a-z])+$"
+
+
+|sequenceCount
+|number
+|True
+a|JSON number containing a sequence count.
+The number is incremented by the system each time a new event is received.
+
+
+|summary
+|string
+|True
+a|JSON string containing the short-form (less than 40 characters) summary of the event.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 79
+
+
+|eventTime
+|string
+|True
+a|JSON string containing a timestamp that indicates when an event occurred.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|source
+|string
+|True
+a|JSON string containing the lowercase name of the service generating an event.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 19
+* Defined regex is: "{caret}([a-z-])*$"
+
+
+|resourceID
+|string
+|True
+a|JSON string containing the resource ID associated with an event.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|additionalResourceIDs
+|array[string]
+|True
+a|JSON array of JSON strings, each containing a resource ID of an additional resource associated with the event. While the "resourceID" field contains the primary resource associated with this event, this field contains any number of additional resource IDs to be associated with the same events.
+If no additional resources are associated with the event, the array will be empty.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|resourceType
+|string
+|True
+a|JSON string containing the media type of the resource associated with an event.
+Defined values are:
+
+* Minimum length: 4
+* Maximum length: 79
+* Defined regex is: "{caret}application\/astra-([a-zA-Z])+$"
+
+
+|correlationID
+|string
+|True
+a|JSON string containing a UUIDv4 correlation ID that allows related events to be grouped together.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|severity
+|string
+|True
+a|JSON string containing one of the following values that indicate the severity of an event.
+Defined values are:
+
+* "cleared" - Indicates that a previously reported event describing a condition is no longer active. An event with severity "cleared" will use the same summary and correlation ID to allow it to be matched up.
+* "indeterminate" - Indicates that the severity cannot be determined.
+* "informational" - Indicates a change in state that is both expected and normal (not defined in X.733).
+* "warning" - Indicates the detection of a potential or impending service affecting fault before any significant effects have been felt.
+* "critical" - Indicates that a service affecting condition has occurred and immediate corrective action is required.
+Definitions for "cleared", "indeterminate", "warning" and "critical" are based on definitions in clause 8.1.2.3 of CCITT X.733.
+
+
+|class
+|string
+|True
+a|JSON string containing one of the following values that indicate the class of the event.
+Defined values are:
+
+* "system" - The event is related to an internal event or request.
+* "user" - The event is related to a user-initiated event or request.
+* "security" - The event is related to a security issue.
+
+
+|description
+|string
+|True
+a|JSON string containing a long-form descriptive text about the event.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 1023
+
+
+|descriptionURL
+|string
+|False
+a|JSON string containing the URL that enables and links a button in the banner to external documentation.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|correctiveAction
+|string
+|False
+a|JSON string containing a long-form descriptive text about what corrective action must be taken in response to the event.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 1023
+
+
+|correctiveActionURL
+|string
+|False
+a|JSON string containing the URL that links a button in the banner to a page within the UI to fix the issue.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|visibility
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating an RBAC role permitted to view the event. Roles are OR-defined together. Optional.
+If omitted, a user with any RBAC role can view the event.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|destinations
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating an additional destination for the event. These strings allow a service to provide hints about where an event should be routed in addition to the activity log. Optional.
+Defined values are:
+
+* "notification" - The event is marked as a notification, and will be accessible through the notifications API endpoint.
+* "banner" - The event is marked as a banner.
+* "support" - The event is marked as a support-related event.
+
+
+|resourceURI
+|string
+|False
+a|JSON string containing the URI associated with the event. Only included for events related to API operations.
+Defined values are:
+
+* Minimum length: 3
+* Maximum length: 4095
+
+
+|resourceCollectionURL
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating the fully-expanded access URL of the resource associated with the event.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 1023
+
+
+|resourceMethod
+|string
+|False
+a|JSON string containing the HTTP method invoked. Only included for events related to API operations.
+Defined values are:
+
+* "options" - OPTIONS API operation
+* "post" - POST API operation
+* "get" - GET API operation
+* "put" - PUT API operation
+* "delete" - DELETE API operation
+
+
+|resourceMethodResult
+|string
+|False
+a|JSON string containing the result of the HTTP method invoked. Only included for events related to the API operations.
+Defined values are:
+
+* Defined regex is: "{caret}[1-5][0-9]\{2}$"
+
+
+|userID
+|string
+|False
+a|JSON string containing the user ID associated with an event. Only included for events associated with the user-initiated actions.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|accountID
+|string
+|False
+a|JSON string containing the account ID associated with an event. Only included for events associated with an account.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|data
+|link:#data[data]
+|False
+a|JSON object containing additional event-specific information.
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-event",
+  "version": "1.4",
+  "id": "c32df10b-8cfb-5a1e-9510-2a262b476009",
+  "name": "astra.app.discovery.failed",
+  "sequenceCount": 48923,
+  "summary": "Application Discovery Failed",
+  "eventTime": "2020-08-06T12:24:51.846543Z",
+  "source": "composite-compute",
+  "resourceID": "f670bf11-8850-44bd-b330-815af6186a06",
+  "additionalResourceIDs": [
+    "84dfee99-b7b2-46d2-9021-0a1a9a5df1d6",
+    "abb32003-07b9-49b1-9938-1cf6d2f33566"
+  ],
+  "resourceType": "application/astra-app",
+  "correlationID": "3c603442-cfca-4af9-9f1b-40dde5c7a806",
+  "severity": "warning",
+  "class": "user",
+  "description": "Discovering the application 'mysql' was unsuccessful. K8s error 442. Application marked in state 'error'.",
+  "resourceURI": "/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/managedClusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/apps/f670bf11-8850-44bd-b330-815af6186a06",
+  "resourceCollectionURL": [
+    "https://www.astra.io/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/f8b58091-4b9c-4c64-9b40-018dbaf7c5de/apps/f670bf11-8850-44bd-b330-815af6186a06",
+    "https://www.astra.io/accounts/fdaa655c-15ab-4d34-aa61-1e9098e67be0/topology/v1/clouds/0df3f1a0-7203-4c12-aabf-a7bee6302671/clusters/dfd9de2d-6f0b-437b-a737-c8f7f176cd14/namespaces/923708f8-0435-45b5-8c00-fbdef3ffaf25/apps/f670bf11-8850-44bd-b330-815af6186a06"
+  ],
+  "userID": "abda967f-cd2c-4237-908e-99266648c553",
+  "accountID": "f126d214-bccf-4558-86b4-2137a41e734f",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#data]
+[.api-collapsible-fifth-title]
+data
+
+JSON object containing additional event-specific information.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|ttl
+|number
+|False
+a|JSON number indicating the number of seconds (since the eventTime) that the event will be retained.
+This field is only included when an event is automatically deleted after the specified number of seconds.
+When deleted, if the event has a notification destination, all associated notifications are also deleted.
+When deleted, if the event has a banner destination, the banner is also removed.
+The absence of this field (or a value of "0") means that an event will not be automatically deleted.
+
+
+|isAcknowledgeable
+|string
+|False
+a|JSON string indicating whether the banner is dismissible.
+Defined values are:
+
+* "true" - The banner is dismissible
+* "false" - The banner is not dismissible
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

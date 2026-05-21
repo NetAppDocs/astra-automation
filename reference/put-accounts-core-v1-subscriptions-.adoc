@@ -1,0 +1,784 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/put-accounts-core-v1-subscriptions-.html'
+summary: 'Modify a subscription'
+---
+
+= Modify a subscription
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
+
+
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+
+*Side Effects*
+
+* If the user cancels the subscription, the PUT endpoint must be called with "status": "inactive".
+* When the status is set to "inactive", the pending charges for this subscription are sent to Zuora and the Zuora subscription will be marked as "inactive" in some way.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|subscription_id
+|string
+|path
+|True
+a|ID of the subscription collection to list
+
+
+|===
+
+== Request Body
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+
+*Side Effects*
+
+* If the user cancels the subscription, the PUT endpoint must be called with "status": "inactive".
+* When the status is set to "inactive", the pending charges for this subscription are sent to Zuora and the Zuora subscription will be marked as "inactive" in some way.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-subscription"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|False
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|customerProfileID
+|string
+|False
+a|JSON string containing the customer profile ID from http://authorize.net[Authorize.net], which was invoked by the UI, is not set for the trial term. Returns an empty string during read operation, if not set.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|paymentFirstName
+|string
+|False
+a|JSON string containing a user-specified long-form first name used for payment billing. Specified only when the subscription is being rebilled.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|paymentLastName
+|string
+|False
+a|JSON string containing a user-specified long-form last name used for payment billing. Specified only when the subscription is being rebilled.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|paymentAddress
+|link:#paymentAddress[paymentAddress]
+|False
+a|JSON object containing a collection of JSON strings specifying a billing address. Specified only when the subscription is being rebilled.
+If this key exists, all six of the contained JSON strings will be present. If nothing was provided by the user, the string will be empty.
+
+
+|paymentProfileID
+|string
+|False
+a|JSON string containing the payment profile ID from http://Authorize.net[Authorize.net] that was invoked by the UI, not set for trial term. Returns an empty string during read operation if not set.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|paymentExpiry
+|string
+|False
+a|JSON string containing a timestamp indicating when the payment method expires. This is obtained from authorize.net](http://authorize.net) and is set by the UI.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+This field is not returned for trial terms.
+
+
+|purchaseOrderNumber
+|string
+|False
+a|JSON string containing the purchase order number for the payment method.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|marketplace
+|string
+|False
+a|JSON string indicating the marketplace for an account where payments will be recorded.
+Defined values:
+
+* "netapp"
+* "azure"
+* "aws"
+* "gcp"
+
+
+|licenseSN
+|string
+|False
+a|JSON string containing the license serial number for the payment method.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 31
+
+
+|terms
+|string
+|False
+a|JSON string indicating the current tier of the account.
+Defined values are:
+
+* "trial"
+* "paid"
+
+
+|status
+|string
+|False
+a|JSON string indicating the current status of the subscription.
+Defined values are:
+
+* "active"
+* "inactive"
+
+
+|appLimit
+|number
+|False
+a|JSON number indicating the application limit for this subscription. Value of -1 indicates no limit.
+
+
+|namespaceLimit
+|number
+|False
+a|JSON number indicating the namespace limit for this subscription. Value of -1 indicates no limit.
+
+
+|subscriptionPeriod
+|number
+|False
+a|JSON number indicating the subscription period. Value of -1 indicates no limit. Unit: days
+
+
+|gracePeriod
+|number
+|False
+a|JSON number indicating the grace period after the trial subscription has expired or a paid subscription is canceled. Unit: days
+
+
+|reminderBeforePeriod
+|number
+|False
+a|JSON number indicating the number of days before the end of the trial subscription when the customer notifications will begin. The value is expressed in days with a value of -1 indicating it's not applicable.
+
+
+|onboardStatus
+|string
+|False
+a|JSON string indicating the current status of customer onboarding. Valid values are "not started", "in progress", "success", "failed".
+Defined values are:
+
+* "not started"
+* "in progress"
+* "success"
+* "failed"
+
+
+|costPerAppUnit
+|number
+|False
+a|JSON number indicating the cost per app unit. For a trial version, the value is 0. Unit: US dollars
+
+
+|costPerNamespaceUnit
+|number
+|False
+a|JSON number indicating the cost per namespace unit. For a trial version, the value is 0. Unit: US dollars
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-subscription",
+  "version": "1.2",
+  "customerProfileID": "2157047189",
+  "paymentProfileID": "E7CEB0A9F1BECA32A02493E1B31D5955",
+  "paymentExpiry": "2022-05-01T00:00:00Z"
+}
+====
+
+== Response
+
+```
+Status: 204, Indicates if the subscription resource was updated.
+```
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/1",
+  "title": "Resource not found",
+  "detail": "The resource specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#paymentAddress]
+[.api-collapsible-fifth-title]
+paymentAddress
+
+JSON object containing a collection of JSON strings specifying a billing address. Specified only when the subscription is being rebilled.
+If this key exists, all six of the contained JSON strings will be present. If nothing was provided by the user, the string will be empty.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|addressCountry
+|string
+|True
+a|JSON string containing the country name or country code associated with the postal address, as specified in ISO 3166 Alpha-2.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 2
+
+
+|addressLocality
+|string
+|True
+a|JSON string containing the locality (for example, city) associated with the postal address.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|addressRegion
+|string
+|True
+a|JSON string containing the region (for example, state) associated with the postal address.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|postalCode
+|string
+|True
+a|JSON string containing the postal code associated with the postal address.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|streetAddress1
+|string
+|True
+a|JSON string containing the street address associated with the postal address.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|streetAddress2
+|string
+|False
+a|JSON string containing optional ancillary street address information, post office box, and more.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 63
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/application_asset_endpoints.html'
+summary: 'Astra API (ACC) application asset endpoints'
+---
+
+= Astra API (ACC) application asset endpoints
+
+
+
+The Application Asset API provides access to internal collections of state information used to manage applications.
+
+

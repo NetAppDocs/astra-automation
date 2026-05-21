@@ -1,0 +1,1272 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v2-managedclusters-apps-.html'
+summary: 'Retrieve an app for a managed cluster'
+---
+
+= Retrieve an app for a managed cluster
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}`#
+
+
+
+Returns the stored App API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|managedCluster_id
+|string
+|path
+|True
+a|ID of the containing managedCluster resource
+
+
+|app_id
+|string
+|path
+|True
+a|ID of the app collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored App API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-app"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "2.0"
+* "2.1"
+* "2.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|links
+|array[link:#type_astra_link[type_astra_link]]
+|True
+a|Links describing supported operations against the resource.
+
+
+|name
+|string
+|True
+a|JSON string containing a name for the application.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+* Conforms to the DNS 1123 Label Schema
+
+
+|clusterScopedResources
+|array[link:#clusterScopedResources[clusterScopedResources]]
+|False
+a|JSON array of JSON objects describing the cluster-scoped resources that are part of this app
+
+
+|namespaceScopedResources
+|array[link:#namespaceScopedResources[namespaceScopedResources]]
+|True
+a|JSON array of JSON objects describing the resources that are part of this app
+
+
+|lastResourceCollectionTimestamp
+|string
+|False
+a|JSON string containing the timestamp when the last resource collection was performed. This field is unset if no resource collection has been performed for this application yet.
+Defined values are:
+
+* Conforms to the ISO-8601 Date Time Schema
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the application.
+Defined values are:
+
+* "pending" - The application is scheduled for discovery
+* "discovering" - The application is in the process of being discovered
+* "provisioning" - The application is in the process of being provisioned
+* "ready" - The application is running normally
+* "failed" - The application is in a permanent failure state
+* "restoring" - The application is being restored from backup or snapshot
+* "unavailable" - The application is not currently accessible
+* "unknown" - The application state cannot be determined
+* "deleting" - The application is in the process of being deleted
+
+
+|stateTransitions
+|array[link:#type_astra_stateTransition[type_astra_stateTransition]]
+|False
+a|JSON array of JSON objects, each representing the set of permitted state transitions from a given defined state.
+Each JSON object contains the fields "from" and "to", where the "from" value is the name of a state, and the "to" value is an array of permitted destination states.
+
+
+|stateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects which lists additional details about the current state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|protectionState
+|string
+|True
+a|JSON string containing a value indicating the protection state of the application.
+Defined values are:
+
+* "protected" - The application has a protection policy defined and is in conformance with that policy
+* "partial" - The application has a protection policy defined, but is out of conformance with that policy
+* "none" - The application does not have a protection policy defined
+* "atRisk" - The default storage class on the cluster does not support snapshots, the application is at risk of gaining an unsupported volume
+
+
+|protectionStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects which lists additional details about the current protection state, including why the current state was reached.
+If no details are available, this array will be empty.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|appDetectedType
+|string
+|False
+a|JSON string that uniquely represents the specific type of application that is detected.
+Defined values are:
+
+* "system" - The application contains a resource that identifies it as part of the Kubernetes environment
+* "acc" - The application contains resources that identify it as an Astra Control Center instance
+
+
+|namespaces
+|array[string]
+|True
+a|JSON array of JSON strings containing the names of the namespaces in which the application is running.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+* Conforms to the DNS 1123 Label Schema
+
+
+|namespaceMapping
+|array[link:#namespaceMapping[namespaceMapping]]
+|False
+a|JSON array of JSON objects, each mapping a source namespace to a destination namespace for a clone operation.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|storageClassMapping
+|array[link:#storageClassMapping[storageClassMapping]]
+|False
+a|JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used.
+Defined values are:
+
+* Minimum Items: 0
+
+
+|clusterName
+|string
+|False
+a|JSON string containing the name of the cluster that the application is running on.
+Not returned if the application is not currently running.
+
+
+|clusterID
+|string
+|False
+a|JSON string containing the ID of the cluster that the application is running on.
+Not returned if the application is not currently running.
+When specified on create, clusterID indicates which cluster the application must be cloned into. If the specified cluster does not exist, or if the cluster specified does not match the clusterID specified in the request URI, the clone will fail.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|clusterType
+|string
+|False
+a|JSON string containing a value indicating the type of cluster.
+Defined values are:
+
+* "gke" - Kubernetes hosted on Google Kubernetes Engine (GKE)
+* "aks" - Kubernetes hosted on Microsoft Azure Kubernetes Service (AKS)
+* "eks" - Kubernetes hosted on Amazon Elastic Kubernetes Service (Amazon EKS)
+* "openshift" - The cluster is of type OpenShift
+* "kubernetes" - The cluster is generic Kubernetes
+
+
+|sourceAppID
+|string
+|False
+a|JSON string containing the ID of a source application. Only returned if the application was cloned from another application, or was restored from a backup or snapshot.
+When specified on create, the sourceAppID is used in conjunction with the sourceClusterID and indicates which running application will be cloned. If the specified application does not exist on the specified source cluster, the clone will fail.
+Only one of sourceAppID, backupID, or snapshotID can be specified when creating an application.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|sourceClusterName
+|string
+|False
+a|JSON string containing the name of the cluster the application was previously running on.
+Only returned if the application was cloned from another cluster.
+
+
+|sourceClusterID
+|string
+|False
+a|JSON string containing the ID of the cluster the application was previously running on.
+Only returned if the application was cloned from another cluster.
+When specified on create, the sourceClusterID is used in conjunction with the sourceAppID and indicates the source cluster of the application to be cloned. If the specified source cluster does not exist, the clone will fail.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|backupID
+|string
+|False
+a|JSON string containing the ID of the backup that the application was restored from.
+Only returned if the application was restored from a backup.
+When specified on create, backupID indicates that an application will be cloned from an existing backup. If the specified backup does not exist, the clone will fail. Only one of sourceAppID, backupID, or snapshotID can be specified when creating an application.
+When specified on a replace, backupID indicates the application backup from which the application will be in-place restored. If the specified backup does not exist, the restore will fail. Only one of backupID or snapshotID can be specified when updating an application
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|snapshotID
+|string
+|False
+a|JSON string containing the ID of the snapshot that the application was restored from.
+Only returned if the application was restored from a snapshot.
+When specified on create, snapshotID indicates that an application will be cloned from an existing snapshot. If the specified snapshot does not exist, the clone will fail. Only one of sourceAppID, backupID, or snapshotID can be specified when creating an application.
+When specified on a replace, snapshotID indicates the application snapshot from which the application will be in-place restored. If the specified snapshot does not exist, the restore will fail. Only one of backupID or snapshotID can be specified when updating an application.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|replicationSourceAppID
+|string
+|False
+a|JSON string containing the ID of the application that is being replicated to this application.
+Only returned if the application is currently the destination in an AppMirror relationship, and the relationship is not in the failedOver state. When the relationship is in the failedOver state, this field is not returned.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|restoreFilter
+|link:#restoreFilter[restoreFilter]
+|False
+a|JSON object containing a list of filters that describe which resources are included or excluded from a selective restore operation. Include and exclude are mutually exclusive, and a selective restore can only use one kind of filter.
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-app",
+  "version": "2.2",
+  "id": "39c1c79f-efab-5357-88fb-20e628c4dd96",
+  "links": [
+    {
+      "rel": "canonical",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/topology/v2/managedClusters/6a358976-c3ac-49aa-b043-9c9b425c90ac/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f"
+    },
+    {
+      "rel": "collection",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/topology/v1/clouds/892814c9-77a1-46f3-b54a-82c34cdf0032/clusters/6a358976-c3ac-49aa-b043-9c9b425c90ac/namespaces/da78daf6-8e11-4220-a461-6b1d4a6dc231/apps"
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v1/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f/appBackups",
+      "type": "application/astra-appBackup",
+      "title": "disruptiveBackup",
+      "hints": {
+        "allow": [],
+        "permissions": [
+          "appBackup-create"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v1/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f/appBackups",
+      "type": "application/astra-appBackup",
+      "title": "nonDisruptiveBackup",
+      "hints": {
+        "allow": [
+          "POST"
+        ],
+        "permissions": [
+          "appBackup-create"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v2/apps",
+      "type": "application/astra-app",
+      "title": "restore",
+      "hints": {
+        "allow": [
+          "POST"
+        ],
+        "permissions": [
+          "app-create"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v1/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f/appSnaps",
+      "type": "application/astra-appSnap",
+      "title": "snapshot",
+      "hints": {
+        "allow": [
+          "POST"
+        ],
+        "permissions": [
+          "appSnap-create"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v2/apps",
+      "type": "application/astra-app",
+      "title": "clone",
+      "hints": {
+        "allow": [
+          "POST"
+        ],
+        "permissions": [
+          "app-create"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v2/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f",
+      "type": "application/astra-app",
+      "title": "inPlaceRestore",
+      "hints": {
+        "allow": [
+          "PUT"
+        ],
+        "permissions": [
+          "app-update"
+        ]
+      }
+    },
+    {
+      "rel": "related",
+      "href": "/accounts/652f7a18-d4ed-47b2-b467-15bf2154d079/k8s/v1/apps/27467088-2e99-4bd8-aa9b-014d5f44a62f/appMirrors",
+      "type": "application/astra-appMirror",
+      "title": "replication",
+      "hints": {
+        "allow": [
+          "POST"
+        ],
+        "permissions": [
+          "appMirror-create"
+        ]
+      }
+    }
+  ],
+  "name": "jenkins",
+  "namespaceScopedResources": [
+    {
+      "namespace": "production-clone",
+      "labelSelectors": [
+        "app = jenkins,release = production"
+      ]
+    }
+  ],
+  "namespaceMapping": [
+    {
+      "source": "production",
+      "destination": "production-clone"
+    }
+  ],
+  "state": "ready",
+  "stateDetails": [],
+  "protectionState": "none",
+  "protectionStateDetails": [],
+  "namespaces": [
+    "production-clone"
+  ],
+  "snapshotID": "8d561930-0437-4647-b3e6-49b8a5362e3d",
+  "clusterName": "GKE-24",
+  "clusterID": "0f284377-e5dc-4dcd-bacd-3197f2b8a347",
+  "clusterType": "kubernetes",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#targetSchema]
+[.api-collapsible-fifth-title]
+targetSchema
+
+
+[#accept-post]
+[.api-collapsible-fifth-title]
+accept-post
+
+
+[#accept-put]
+[.api-collapsible-fifth-title]
+accept-put
+
+
+[#hints]
+[.api-collapsible-fifth-title]
+hints
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|status
+|string
+|False
+a|
+
+|allow
+|array[string]
+|False
+a|
+
+|accept-post
+|link:#accept-post[accept-post]
+|False
+a|
+
+|permissions
+|array[string]
+|False
+a|
+
+|accept-put
+|link:#accept-put[accept-put]
+|False
+a|
+
+|===
+
+
+[#type_astra_link]
+[.api-collapsible-fifth-title]
+type_astra_link
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|rel
+|string
+|True
+a|
+
+|href
+|string
+|True
+a|
+
+|type
+|string
+|False
+a|
+
+|targetSchema
+|link:#targetSchema[targetSchema]
+|False
+a|
+
+|title
+|string
+|False
+a|
+
+|hints
+|link:#hints[hints]
+|False
+a|
+
+|===
+
+
+[#GVK]
+[.api-collapsible-fifth-title]
+GVK
+
+JSON object containing a Kubernetes group/version/kind.
+
+* This object is internally validated against Astra /apiResources.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|group
+|string
+|True
+a|JSON string containing a group identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|kind
+|string
+|True
+a|JSON string containing a kind identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|version
+|string
+|True
+a|JSON string containing a version identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|===
+
+
+[#clusterScopedResources]
+[.api-collapsible-fifth-title]
+clusterScopedResources
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|GVK
+|link:#GVK[GVK]
+|True
+a|JSON object containing a Kubernetes group/version/kind.
+
+* This object is internally validated against Astra /apiResources.
+
+
+|labelSelectors
+|array[string]
+|False
+a|JSON array of JSON strings representing a label selector for the cluster-scoped GroupVersionKinds (GVKs) within the cluster. If this is empty, then all GVK instances on the cluster are included.
+Each element in this array is a Kubernetes label selector string and follows the same grammar for those values.
+Examples:
+
+* [ "app=mysql" ] -- Select all resources that have a label whose name is app and whose value is mysql
+More examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement
+
+
+|===
+
+
+[#namespaceScopedResources]
+[.api-collapsible-fifth-title]
+namespaceScopedResources
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|namespace
+|string
+|True
+a|JSON string containing the name of a namespace in which the application is defined.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+* Conforms to the DNS 1123 Label Schema
+
+
+|labelSelectors
+|array[string]
+|True
+a|JSON array of JSON strings representing a label selector within the namespace. If this is empty, then all resources in the namespace are included.
+Each element in this array is a Kubernetes label selector string and follows the grammar for those values.
+Examples:
+
+* [ "app=mysql" ] -- Select all resources that have a label whose name is app and whose value is mysql
+* [ "app != mysql" ] -- Select all resources that have a label whose name is app and whose value is not mysql
+* [ "app in (mysql, mariadb)" ] -- Select all resources that have a label whose name is app and value is mysql or mariadb
+* [ "app notin (nginx, wordpress)" ] -- Select all resources that do not have a label whose name is app and whose values are nginx or wordpress
+* [ "app" ] -- Select all resources that have a label named app
+* [ "!app" ] -- Select all resources that do not have a label named app
+Note that multiple selection operators can be included in a single selector, separated by commas. In that case, the results of the individual selection operators are AND-ed:
+* [ "app=mysql,version=2" ] -- Select all resources that have a label whose name is app and whose value is mysql and a label whose name is version and whose value is 2
+
+
+|===
+
+
+[#type_astra_stateTransition]
+[.api-collapsible-fifth-title]
+type_astra_stateTransition
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|from
+|string
+|True
+a|
+
+|to
+|array[string]
+|True
+a|
+
+|===
+
+
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#namespaceMapping]
+[.api-collapsible-fifth-title]
+namespaceMapping
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|source
+|string
+|True
+a|JSON string containing the name of the namespace on the source cluster.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+* Conforms to the DNS 1123 Label Schema
+
+
+|destination
+|string
+|True
+a|JSON string containing the name of the namespace on the destination cluster.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+* Conforms to the DNS 1123 Label Schema
+
+
+|===
+
+
+[#storageClassMapping]
+[.api-collapsible-fifth-title]
+storageClassMapping
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|source
+|string
+|True
+a|JSON string containing the name of the source storage class. Can also be '*' to specify all source storage classes.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema if Storage Class name is used
+* '*' to specify all storage classes
+
+
+|destination
+|string
+|True
+a|JSON string containing the name of the destination storage class.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema
+
+
+|===
+
+
+[#GVKN]
+[.api-collapsible-fifth-title]
+GVKN
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|group
+|string
+|False
+a|JSON string containing a group identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|version
+|string
+|False
+a|JSON string containing a version identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|kind
+|string
+|False
+a|JSON string containing a kind identifier assigned by Kubernetes.
+
+* This string is internally validated against Astra /apiResources
+
+
+|namespaces
+|array[string]
+|False
+a|JSON array of JSON strings describing namespaces to include or exclude resources from.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* Conforms to the DNS 1123 Label Schema
+
+
+|names
+|array[string]
+|False
+a|JSON array of JSON strings describing Kubernetes resource names to include or exclude from the selective restore.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 253
+* Conforms to the DNS 1123 Label Schema
+
+
+|labelSelectors
+|array[string]
+|False
+a|JSON array of JSON strings describing Kubernetes label selectors used to include or exclude resources from the selective restore.
+Each element in this array is a Kubernetes label selector string and follows the same grammar for those values.
+Examples:
+
+* [ "app=mysql" ] -- Select all resources that have a label whose name is app and whose value is mysql
+More examples can be found here: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#set-based-requirement
+
+
+|===
+
+
+[#restoreFilter]
+[.api-collapsible-fifth-title]
+restoreFilter
+
+JSON object containing a list of filters that describe which resources are included or excluded from a selective restore operation. Include and exclude are mutually exclusive, and a selective restore can only use one kind of filter.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|resourceSelectionCriteria
+|string
+|False
+a|JSON string containing a value that indicates how resource filters select resources.  Valid values are include or exclude.
+
+
+|GVKN
+|array[link:#GVKN[GVKN]]
+|False
+a|JSON array of JSON objects that describe resources to filter during a selective restore. A resource matches a single GVKN filter element if all of the specified filter fields match the corresponding resource field. Filter fields that are arrays (for example, namespaces and names) match if any of its elements match the corresponding resource field. The labelSelectors field requires that all selectors match. A resource that matches any filter in the array of GVKN filter objects is included or excluded from the restore based on the resourceSelectionCriteria value. Specifying empty GVKN objects results in a validation error.
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

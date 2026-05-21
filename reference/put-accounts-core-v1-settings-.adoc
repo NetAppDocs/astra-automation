@@ -1,0 +1,713 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/put-accounts-core-v1-settings-.html'
+summary: 'Modify a setting'
+---
+
+= Modify a setting
+
+[.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
+
+
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|setting_id
+|string
+|path
+|True
+a|ID of the setting collection to list
+
+
+|===
+
+== Request Body
+
+Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-setting"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+
+
+|id
+|string
+|False
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|False
+a|JSON string containing a name for the setting, in hierarchal dot notation (.).
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+* This string is internally validated to prevent XSS, Unicode, directory traversal, and SQL-injection attacks.
+This value is specified by the configmap that is loaded at runtime and cannot be updated by the user.
+
+
+|currentConfig
+|link:#type_json[type_json]
+|False
+a|JSON object containing keys and values that make up the current configuration for this setting.
+The contents of this object must conform to the JSON Schema contained in the configSchema field.
+Default values are supplied by the configmap. After defaults are changed by the user, they will not be overwritten.
+
+
+|desiredConfig
+|link:#type_json[type_json]
+|False
+a|JSON object containing keys and values that make up the requested configuration for this setting.
+The contents of this object must conform to the JSON schema contained in the configSchema field.
+The object does not exist until specified. When specified, this triggers the feature service to notify the corresponding service to request that the desired configuration can be applied. The corresponding service can then perform validation and apply the desired configuration to the current configuration.
+
+
+|configSchema
+|link:#type_json_schema[type_json_schema]
+|False
+a|JSON object containing the JSON schema for the config property in this resource. Must conform to JSON Schema Draft 7.
+If config values are present in the resource, validation against the indicated configSchema is mandatory.
+As a common convention, configurations are recommended to have an "isEnabled" field, when appropriate. The "isEnabled" field contains a value that indicates whether the setting is turned on ("true") or off ("false").
+
+
+|state
+|string
+|False
+a|JSON string containing a value indicating the operational state of the application.
+Defined values are:
+
+* "valid" - The current configuration matches the desired config.
+* "pending" - The desired configuration is being applied.
+* "error" - The desired configuration cannot be applied.
+
+
+|stateUnready
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating a reason why the setting was not successfully applied.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-setting",
+  "version": "1.1",
+  "desiredConfig": {
+    "credential": "e3d2ea77-398e-49be-85fd-ec66d9426a06",
+    "port": 587,
+    "relayServer": "link:http://smtp.sendgrid.net[smtp.sendgrid.net]",
+    "isEnabled": "true"
+  }
+}
+====
+
+== Response
+
+```
+Status: 204, Indicates if the setting resource was updated.
+```
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Response
+
+```
+Status: 503, Service unavailable
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/41",
+  "title": "Service not ready",
+  "detail": "Currently, the service can't respond to this request.",
+  "status": "503"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_json]
+[.api-collapsible-fifth-title]
+type_json
+
+JSON object containing keys and values that make up the current configuration for this setting.
+The contents of this object must conform to the JSON Schema contained in the configSchema field.
+Default values are supplied by the configmap. After defaults are changed by the user, they will not be overwritten.
+
+
+
+[#type_json]
+[.api-collapsible-fifth-title]
+type_json
+
+JSON object containing keys and values that make up the requested configuration for this setting.
+The contents of this object must conform to the JSON schema contained in the configSchema field.
+The object does not exist until specified. When specified, this triggers the feature service to notify the corresponding service to request that the desired configuration can be applied. The corresponding service can then perform validation and apply the desired configuration to the current configuration.
+
+
+
+[#properties]
+[.api-collapsible-fifth-title]
+properties
+
+
+[#type_json_schema]
+[.api-collapsible-fifth-title]
+type_json_schema
+
+JSON object containing the JSON schema for the config property in this resource. Must conform to JSON Schema Draft 7.
+If config values are present in the resource, validation against the indicated configSchema is mandatory.
+As a common convention, configurations are recommended to have an "isEnabled" field, when appropriate. The "isEnabled" field contains a value that indicates whether the setting is turned on ("true") or off ("false").
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|$schema
+|string
+|True
+a|
+
+|type
+|string
+|True
+a|
+
+|properties
+|link:#properties[properties]
+|True
+a|
+
+|additionalProperties
+|boolean
+|True
+a|
+
+|required
+|array[string]
+|True
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

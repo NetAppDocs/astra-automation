@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/user_endpoints.html'
+summary: 'Astra API (ACC) user endpoints'
+---
+
+= Astra API (ACC) user endpoints
+
+
+
+The User API represents users who are able to interact with the system.
+
+

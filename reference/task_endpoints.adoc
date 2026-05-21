@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/task_endpoints.html'
+summary: 'Astra API (ACC) task endpoints'
+---
+
+= Astra API (ACC) task endpoints
+
+
+
+The Task App API provides access to managed task resources in order to represent long-running tasks.
+
+

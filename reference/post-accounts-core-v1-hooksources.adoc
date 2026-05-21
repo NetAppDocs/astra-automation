@@ -1,0 +1,703 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/post-accounts-core-v1-hooksources.html'
+summary: 'Create a new hook source'
+---
+
+= Create a new hook source
+
+[.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources`#
+
+
+
+Indicates the desired values for the Hook Source API resource to be created.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|===
+
+== Request Body
+
+Indicates the desired values for the Hook Source API resource to be created.
+                   
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-hookSource"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|name
+|string
+|True
+a|JSON string containing a user-specified name for the resource.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+The name is required to be unique within all hook source resources.
+
+
+|sourceType
+|string
+|True
+a|JSON string defining the hook source type.
+Defined values are:
+
+* "script" - Shell script. The plaintext source must not contain binary data or carriage-return characters, otherwise, an error is returned.
+
+
+|source
+|string
+|True
+a|JSON string containing the script to be run in base64 format.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 131072
+* Conforms to the base64 Encoded Data Schema
+The maximum size of a source value is 128 KiB when encoded using base64.
+
+
+|description
+|string
+|False
+a|JSON string containing a user-specified description of the hook source.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 511
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|False
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example request
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-hookSource",
+  "version": "1.0",
+  "name": "Payroll script",
+  "sourceType": "script",
+  "source": "ZWNobyAiVkhKaGJuTWdVbWxuYUhSeklRPT0iIHwgYmFzZTY0IC1k",
+  "description": "Pre and post hook script for payroll"
+}
+====
+
+== Response
+
+```
+Status: 201, Returns the newly created hookSource resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-hookSource"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing a user-specified name for the resource.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+The name is required to be unique within all hook source resources.
+
+
+|private
+|string
+|True
+a|JSON string indicating whether the source field will be exposed in APIs or be intentionally left blank.
+Defined values are:
+
+* "true" - The source value is private and will not be exposed through the API.
+* "false" - The source value is not private and will be exposed through the API.
+
+
+|preloaded
+|string
+|True
+a|JSON string that indicates whether the source was preloaded.
+Defined values are:
+
+* "true" - The source was preloaded.
+* "false" - The source was not preloaded.
+Preloaded hook source resources are read only.
+
+
+|sourceType
+|string
+|True
+a|JSON string defining the hook source type.
+Defined values are:
+
+* "script" - Shell script. The plaintext source must not contain binary data or carriage-return characters, otherwise, an error is returned.
+
+
+|source
+|string
+|False
+a|JSON string containing the script to be run in base64 format.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 131072
+* Conforms to the base64 Encoded Data Schema
+The maximum size of a source value is 128 KiB when encoded using base64.
+
+
+|sourceMD5Checksum
+|string
+|True
+a|JSON string containing the MD5 checksum computed for the value of the "source" key.
+Defined values are:
+
+* Defined regex is: "{caret}([0-9a-fA-F])\{32}$"
+
+
+|description
+|string
+|False
+a|JSON string containing a user-specified description of the hook source.
+Defined values are:
+
+* Minimum length: 0
+* Maximum length: 511
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-hookSource",
+  "version": "1.0",
+  "id": "fae6dfbb-ecb8-58ff-a116-6357eb7c956a",
+  "name": "Payroll script",
+  "private": "false",
+  "preloaded": "false",
+  "sourceType": "script",
+  "source": "ZWNobyAiVkhKaGJuTWdVbWxuYUhSeklRPT0iIHwgYmFzZTY0IC1k",
+  "sourceMD5Checksum": "b1a4b8b0144c3f6be553b626130ca145",
+  "description": "Pre and post hook script for payroll",
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 409, Conflict
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidFields
+|array[link:#invalidFields[invalidFields]]
+|False
+a|List of invalid request body fields
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/10",
+  "title": "JSON resource conflict",
+  "detail": "The request body JSON contains a field that conflicts with an idempotent value.",
+  "status": "409"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+[#invalidFields]
+[.api-collapsible-fifth-title]
+invalidFields
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid request body field
+
+
+|reason
+|string
+|True
+a|Reason why the request body field is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

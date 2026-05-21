@@ -1,0 +1,11 @@
+section: rest-core
+title: Core design
+entries:
+  - title: REST web services
+    url: /rest-core/rest_web_services.html
+  - title: Resources and collections
+    url: /rest-core/resources_collections.html
+  - title: HTTP details
+    url: /rest-core/http_details.html
+  - title: URL format
+    url: /rest-core/url_format.html

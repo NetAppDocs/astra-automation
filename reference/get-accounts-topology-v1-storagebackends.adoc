@@ -1,0 +1,791 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-topology-v1-storagebackends.html'
+summary: 'List all storage backends'
+---
+
+= List all storage backends
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends`#
+
+
+
+Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|include
+|string
+|query
+|False
+a|Indicates which fields should be returned when listing a collection.
+
+URL examples: "include=id", "include=id,name"
+
+OpenAPI examples: "id"
+
+* example: id,name,state
+
+
+|limit
+|string
+|query
+|False
+a|Indicates the maximum number of resources to return when listing a collection.
+
+URL examples: "limit=2"
+
+OpenAPI examples: "2"
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|items
+|array[Any of: link:#storageBackend_1_3_get_response_body[storageBackend_1.3_get_response_body], array[]]
+|True
+a|
+
+|metadata
+|link:#type_astra_metadata_list[type_astra_metadata_list]
+|True
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-storageBackends",
+  "version": "1.3",
+  "items": [
+    [
+      "d6ee1e51-d65f-415a-a3d4-6d7fa8b64943",
+      "st1-45",
+      "running"
+    ],
+    [
+      "a5c508b7-aacd-4d19-9455-53c0d183ab4e",
+      "st2-67",
+      "discovered"
+    ]
+  ],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#capabilities]
+[.api-collapsible-fifth-title]
+capabilities
+
+JSON object containing this Storage Backend capabilities.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|flexClone
+|string
+|True
+a|JSON string indicating if this Storage Backend supports FlexClone.
+
+
+|snapMirror
+|string
+|True
+a|JSON string indicating if this Storage Backend supports SnapMirror.
+
+
+|s3
+|string
+|True
+a|JSON string indicating if this Storage Backend supports s3.
+
+
+|===
+
+
+[#ontap]
+[.api-collapsible-fifth-title]
+ontap
+
+JSON object containing specific information related to ONTAP clusters.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|authenticationStyle
+|string
+|True
+a|JSON string indicating whether the ONTAP authentication is performed using a username/password combination or a certificate.
+Defined values are:
+
+* "basic" - Uses username/password
+* "certificate" - Uses certificate
+* enum: ["basic", "certificate"]
+* example: basic
+
+
+|backendManagementIP
+|string
+|False
+a|JSON string containing the IP address used to connect to this ONTAP cluster.
+
+
+|managementIPs
+|array[string]
+|False
+a|JSON array of JSON strings containing the list of all possible management IPs used to connect to this ONTAP cluster.
+This is used to correlate backends detected through Trident and storage backends in Astra.
+
+* uniqueItems: 1
+
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata_update]
+[.api-collapsible-fifth-title]
+type_astra_metadata_update
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#storageBackend_1_3_get_response_body]
+[.api-collapsible-fifth-title]
+storageBackend_1.3_get_response_body
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-storageBackend"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+* "1.3"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|backendName
+|string
+|True
+a|JSON string containing a user-specified name for the storage backend.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|backendType
+|string
+|True
+a|JSON string containing a value indicating the type of the storage backend being represented.
+Defined values are:
+
+* "ontap" - The storage backend represents a NetApp ONTAP system
+* enum: ["ontap"]
+* example: ontap
+
+
+|backendVersion
+|string
+|True
+a|JSON string containing a value indicating the version of the storage backend being represented.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|backendCredentialsName
+|string
+|True
+a|JSON string containing a value indicating the name of one or more credential resources used for the storage backend. Allows for credential rotation where multiple credential objects have the same name.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|configVersion
+|string
+|False
+a|JSON string containing a value indicating the active configuration to be used by the storage backend.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 63
+
+
+|state
+|string
+|True
+a|JSON string containing a value indicating the operational state of the storage backend.
+Defined values are:
+
+* "discovered" - The storage backend has been discovered from a managed cluster
+* "running" - The storage backend is running normally
+* "unknown" - The state of the storage backend cannot be determined
+* "failed" - The storage backend is in an unavailable state
+
+
+|stateDesired
+|string
+|False
+a|JSON string containing a value indicating the desired operational state of the storage backend.
+Defined values are:
+
+* "running" - The storage backend will be in a normal running state
+
+
+|stateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why a storage backend is unable to transition to "running", why it has transitioned to "failed" or "unknown", and/or why it is at risk of transitioning to "failed".
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|managedState
+|string
+|True
+a|JSON string containing a value indicating the management state of the storage backend.
+Defined values are:
+
+* "pending" - The storage backend is scheduled to be discovered or added
+* "unmanaged" - The storage backend is in a "discovered" state, is not under management, and is eligible for management
+* "managed" - The storage backend is in a "running" or "unknown" state and is under management
+
+
+|managedStateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why the storage backend is ineligible to be managed.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|healthState
+|string
+|False
+a|JSON string containing a value indicating the health state of the storage backend.
+Defined values are:
+
+* "indeterminate" - The health of the resource cannot be determined (for example, due to lack of connectivity)
+* "normal" - The resource has no known issues and can provide services in accordance with the interface specification
+* "warning" - The resource has known issues that do not prevent it providing services in accordance with the interface specification
+* "critical" - The resource has known issues that prevent it from providing services in accordance with the interface specification
+
+
+|healthStateUnready
+|array[string]
+|False
+a|JSON array of JSON strings, each indicating a reason why a storage backend is not in a normal health state.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|protectionState
+|string
+|True
+a|JSON string containing a value indicating the protection state of the storage backend. "unknown" for ONTAP.
+Defined values are:
+
+* "protected" - The storage backend has a protection policy defined and is in conformance with that policy
+* "partial" - The storage backend has a protection policy defined but is out of conformance with that policy
+* "none" - The storage backend is not protected
+* "unknown" - The storage backend protection policy conformance cannot be determined
+* enum: ["protected", "partial", "none", "unknown"]
+* example: protected
+
+
+|protectionStateUnready
+|array[string]
+|True
+a|JSON array of JSON strings, each indicating a reason why a protection policy is out of conformance.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 127
+
+
+|capabilities
+|link:#capabilities[capabilities]
+|True
+a|JSON object containing this Storage Backend capabilities.
+
+
+|ontap
+|link:#ontap[ontap]
+|False
+a|JSON object containing specific information related to ONTAP clusters.
+
+* additionalProperties: false
+
+
+|metadata
+|link:#type_astra_metadata_update[type_astra_metadata_update]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+If not specified on create, a metadata object will be created with no labels.
+If not specified on update, the metadata object's labels, creationTimestamp and createdBy, will be preserved without modification.
+
+
+|===
+
+
+[#type_astra_metadata_list]
+[.api-collapsible-fifth-title]
+type_astra_metadata_list
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|continue
+|string
+|False
+a|
+
+|count
+|number
+|False
+a|
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|False
+a|
+
+|creationTimestamp
+|string
+|False
+a|
+
+|modificationTimestamp
+|string
+|False
+a|
+
+|createdBy
+|string
+|False
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

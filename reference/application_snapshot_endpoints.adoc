@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/application_snapshot_endpoints.html'
+summary: 'Astra API (ACC) application Snapshot endpoints'
+---
+
+= Astra API (ACC) application Snapshot endpoints
+
+
+
+The Application Snapshot API enables a user to create and view snapshots of a managed application.
+
+

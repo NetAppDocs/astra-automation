@@ -1,0 +1,668 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/get-accounts-k8s-v1-apps-volumes-.html'
+summary: 'Retrieve a volume for an app'
+---
+
+= Retrieve a volume for an app
+
+[.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}`#
+
+
+
+Returns the stored Volume API resource in the JSON response body.
+
+
+== Parameters
+
+[cols=5*,options=header]
+|===
+|Name
+|Type
+|In
+|Required
+|Description
+
+|account_id
+|string
+|path
+|True
+a|ID of the containing account resource
+
+* example: {{.Account}}
+
+
+|app_id
+|string
+|path
+|True
+a|ID of the containing app resource
+
+
+|volume_id
+|string
+|path
+|True
+a|ID of the volume collection to list
+
+
+|===
+
+== Response
+
+```
+Status: 200, Returns the stored Volume API resource in the JSON response body.
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|Media type of the resource.
+Defined values are:
+
+* "application/astra-volume"
+
+
+|version
+|string
+|True
+a|Version of the resource.
+Defined values are:
+
+* "1.0"
+* "1.1"
+* "1.2"
+
+
+|id
+|string
+|True
+a|Globally unique identifier of the resource.
+Defined values are:
+
+* Conforms to the UUIDv4 Schema
+
+
+|name
+|string
+|True
+a|JSON string containing the name of the volume.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|state
+|string
+|False
+a|JSON string containing a value indicating the operational state of the volume.
+
+
+|size
+|string
+|False
+a|JSON string containing the size of the volume.
+
+
+|used
+|number
+|False
+a|JSON number containing the number of bytes of quota used by the provisioned volume.
+
+
+|usedPercentage
+|number
+|False
+a|JSON number containing the percentage of volume used.
+
+
+|total
+|number
+|False
+a|JSON number containing the total bytes of volumes provisioned.
+
+
+|creationToken
+|string
+|False
+a|JSON string containing the creation token of the volume.
+Defined values are:
+
+* Minimum length: 1
+* Maximum length: 255
+
+
+|snapshotPossible
+|string
+|False
+a|JSON string indicating whether the driver can perform a snapshot of the volume.
+Defined values are:
+
+* "true" - Driver can take a snapshot of the volume
+* "false" - Driver cannot take a snapshot of the volume
+
+
+|storageClass
+|string
+|False
+a|JSON string containing the storage class for the volume.
+
+* Defined values are:
+* Minimum length: 1
+* Maximum length: 255
+
+
+|pvcName
+|string
+|False
+a|JSON string containing the PersistentVolumeClaim (PVC) name of the volume.
+
+* Defined values are:
+* Minimum length: 1
+* Maximum length: 255
+
+
+|internalName
+|string
+|False
+a|JSON string containing the internal name of the volume on the target storage cluster, if available. This name is obtained from the Kubernetes CSI driver.
+
+* Defined values are:
+* Minimum length: 1
+* Maximum length: 255
+
+
+|appsUsing
+|array[string]
+|True
+a|JSON array of JSON strings, each containing the ID of an application that is using the volume.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|storageBackendID
+|string
+|False
+a|JSON string containing the ID of the storage backend that provides the volume.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|orchestrator
+|string
+|False
+a|JSON string containing the orchestrator for this volume. This will be defined for Astra Data Store volumes.
+Defined values are:
+
+* "trident" - Trident has provisioned this volume
+* "vasa" - NetApp VASA Provider has provisioned this volume
+* "other" - The volume has been provisioned manually or the orchestrator is not known
+
+
+|serviceLevel
+|string
+|False
+a|JSON string containing the quality of service (QoS) policy defined for this volume at the storage backend level. This will be defined for Astra Data Store volumes.
+
+
+|exportPolicy
+|string
+|False
+a|JSON string containing the export policy associated with this volume. This will be defined for Astra Data Store volumes.
+
+
+|nodeId
+|string
+|False
+a|JSON string containing the node ID serving the volume. This will be defined for Astra Data Store volumes.
+Defined values are:
+
+* Conforms to the Astra Identifier Schema
+
+
+|healthState
+|string
+|False
+a|JSON string containing a value indicating the health state of the volume. This will be defined for Astra Data Store volumes.
+Defined values are:
+
+* "indeterminate" - The health of the resource cannot be determined (for example, due to lack of connectivity)
+* "normal" - The resource has no known issues and can provide services in accordance with the interface specification
+* "warning" - The resource has known issues that do not prevent it providing services in accordance with the interface specification
+* "critical" - The resource has known issues that prevent it from providing services in accordance with the interface specification
+
+
+|healthStateDetails
+|array[link:#type_astra_stateDetail[type_astra_stateDetail]]
+|True
+a|JSON array of JSON objects that lists additional details about the current health.
+If no details are available, this array will be empty.
+
+* Minimum Items: 0
+
+
+|metadata
+|link:#type_astra_metadata[type_astra_metadata]
+|True
+a|Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "application/astra-volume",
+  "version": "1.2",
+  "id": "ab5c9fb8-ddba-526f-8bd3-8d5b72cf4f7f",
+  "name": "myVolume",
+  "state": "ready",
+  "size": "512 GiB",
+  "used": 10000000000,
+  "usedPercentage": 10,
+  "total": 10000000000,
+  "creationToken": "ba7d4e0c-6ae3-4b6e-859d-9463e7ca4b4e",
+  "snapshotPossible": "true",
+  "storageClass": "gold",
+  "pvcName": "myVolume",
+  "internalName": "trident_sd234234_23424_897d_876sd65w",
+  "appsUsing": [],
+  "orchestrator": "trident",
+  "serviceLevel": "gold",
+  "exportPolicy": "astra-vp-default",
+  "nodeId": "94d16dd2-9beb-4edb-ab58-1a00e9a90052",
+  "healthState": "normal",
+  "healthStateDetails": [],
+  "metadata": {
+    "labels": [],
+    "creationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "modificationTimestamp": "2022-10-06T20:58:16.305662Z",
+    "createdBy": "8f84cf09-8036-51e4-b579-bd30cb07b269"
+  }
+}
+====
+
+== Response
+
+```
+Status: 401, Unauthorized
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/3",
+  "title": "Missing bearer token",
+  "detail": "The request is missing the required bearer token.",
+  "status": "401"
+}
+====
+
+== Response
+
+```
+Status: 400, Bad request
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|invalidParams
+|array[link:#invalidParams[invalidParams]]
+|False
+a|List of invalid query parameters
+
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/5",
+  "title": "Invalid query parameters",
+  "detail": "The supplied query parameters are invalid.",
+  "status": "400"
+}
+====
+
+== Response
+
+```
+Status: 403, Forbidden
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/11",
+  "title": "Operation not permitted",
+  "detail": "The requested operation isn't permitted.",
+  "status": "403"
+}
+====
+
+== Error
+
+```
+Status: 404, Not found
+```
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|status
+|string
+|True
+a|
+
+|correlationID
+|string
+|False
+a|
+
+|===
+
+
+.Example error response
+[%collapsible%closed]
+====
+[source,json,subs=+macros]
+{
+  "type": "https://astra.netapp.io/problems/2",
+  "title": "Collection not found",
+  "detail": "The collection specified in the request URI wasn't found.",
+  "status": "404"
+}
+====
+
+== Definitions
+
+[.api-def-first-level]
+.See Definitions
+[%collapsible%closed]
+//Start collapsible Definitions block
+====                
+[#additionalDetails]
+[.api-collapsible-fifth-title]
+additionalDetails
+
+
+[#type_astra_stateDetail]
+[.api-collapsible-fifth-title]
+type_astra_stateDetail
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|type
+|string
+|True
+a|
+
+|title
+|string
+|True
+a|
+
+|detail
+|string
+|True
+a|
+
+|additionalDetails
+|link:#additionalDetails[additionalDetails]
+|False
+a|
+
+|===
+
+
+[#type_astra_label]
+[.api-collapsible-fifth-title]
+type_astra_label
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|
+
+|value
+|string
+|True
+a|
+
+|===
+
+
+[#type_astra_metadata]
+[.api-collapsible-fifth-title]
+type_astra_metadata
+
+Client and service-specified metadata associated with the resource.
+Defined values are:
+
+* Conforms to the Astra Metadata Schema
+
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|labels
+|array[link:#type_astra_label[type_astra_label]]
+|True
+a|
+
+|creationTimestamp
+|string
+|True
+a|
+
+|modificationTimestamp
+|string
+|True
+a|
+
+|createdBy
+|string
+|True
+a|
+
+|modifiedBy
+|string
+|False
+a|
+
+|===
+
+
+[#invalidParams]
+[.api-collapsible-fifth-title]
+invalidParams
+
+[cols=4*,options=header]
+|===
+|Name
+|Type
+|Required
+|Description
+
+|name
+|string
+|True
+a|Name of the invalid query parameter
+
+
+|reason
+|string
+|True
+a|Reason why the query parameter is invalid
+
+
+|===
+
+
+//end collapsible .Definitions block
+====

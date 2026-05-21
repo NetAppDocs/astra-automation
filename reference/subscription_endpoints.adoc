@@ -1,0 +1,15 @@
+---
+sidebar: sidebar
+api: true
+explorer: false
+permalink: 'reference/subscription_endpoints.html'
+summary: 'Astra API (ACC) subscription endpoints'
+---
+
+= Astra API (ACC) subscription endpoints
+
+
+
+The Subscription API provides access to subscription resources in order to represent active subscriptions.
+
+
