@@ -1,7 +1,7 @@
 ---
 settings:
   name: Astra Automation
-  lipi_enabled: false
+  lipi_enabled: true
   internal:
     pdf_enabled: true
     api_enabled: true
