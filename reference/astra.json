@@ -4281,7 +4281,7 @@
         "tags": [
           "Group"
         ],
-        "description": "Removes the specified Group API resource.\n\n**Side Effects**\n* The following resources associated with the group are deleted:   \n* Role bindings referring to the group",
+        "description": "Removes the specified Group API resource.\n\n**Side Effects**\n* The following resources associated with the group are deleted:\n* Role bindings referring to the group",
         "parameters": [
           {
             "name": "account_id",
@@ -6021,7 +6021,7 @@
         "tags": [
           "User"
         ],
-        "description": "Removes the specified User API resource.\n\n**Side Effects**\n* The following resources associated with the user are deleted: notificationMarks, tokens, and all roleBindings referring to the user.  \n* For a user with \"authProvider\" as \"local\", the linked credential with \"keyType\" as \"passwordHash\" will also be deleted.",
+        "description": "Removes the specified User API resource.\n\n**Side Effects**\n* The following resources associated with the user are deleted: notificationMarks, tokens, and all roleBindings referring to the user.\n* For a user with \"authProvider\" as \"local\", the linked credential with \"keyType\" as \"passwordHash\" will also be deleted.",
         "parameters": [
           {
             "name": "account_id",
@@ -7846,7 +7846,7 @@
         "tags": [
           "Token"
         ],
-        "description": "Removes the specified Token API resource.\n\n**Side Effects**\n* The corresponding API token credential is removed from the credential service as a side effect.  ",
+        "description": "Removes the specified Token API resource.\n\n**Side Effects**\n* The corresponding API token credential is removed from the credential service as a side effect.",
         "parameters": [
           {
             "name": "account_id",
@@ -10552,7 +10552,7 @@
                       "type": "application/astra-hookSource",
                       "version": "1.0",
                       "id": "682fe9d2-52d2-4c30-bcec-ecefddde359c",
-                      "name": "NetApp preloaded ",
+                      "name": "NetApp preloaded",
                       "private": "true",
                       "preloaded": "false",
                       "sourceType": "script",
@@ -16736,7 +16736,7 @@
         "tags": [
           "User"
         ],
-        "description": "Removes the specified User API resource.\n\n**Side Effects**\n* The following resources associated with the user are deleted: notificationMarks, tokens, and all roleBindings referring to the user.  \n* For a user with \"authProvider\" as \"local\", the linked credential with \"keyType\" as \"passwordHash\" will also be deleted.",
+        "description": "Removes the specified User API resource.\n\n**Side Effects**\n* The following resources associated with the user are deleted: notificationMarks, tokens, and all roleBindings referring to the user.\n* For a user with \"authProvider\" as \"local\", the linked credential with \"keyType\" as \"passwordHash\" will also be deleted.",
         "parameters": [
           {
             "name": "account_id",
@@ -18471,7 +18471,7 @@
         "tags": [
           "Token"
         ],
-        "description": "Removes the specified Token API resource.\n\n**Side Effects**\n* The corresponding API token credential is removed from the credential service as a side effect.  ",
+        "description": "Removes the specified Token API resource.\n\n**Side Effects**\n* The corresponding API token credential is removed from the credential service as a side effect.",
         "parameters": [
           {
             "name": "account_id",
@@ -19766,7 +19766,7 @@
         "tags": [
           "Group"
         ],
-        "description": "Removes the specified Group API resource.\n\n**Side Effects**\n* The following resources associated with the group are deleted:   \n* Role bindings referring to the group",
+        "description": "Removes the specified Group API resource.\n\n**Side Effects**\n* The following resources associated with the group are deleted:\n* Role bindings referring to the group",
         "parameters": [
           {
             "name": "account_id",
@@ -42832,7 +42832,8 @@
         "pattern": "^[0-9]{4}-(0[1-9]|1[0-2])-([0][1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])(|[.,]([0-9]{1,9}))Z$"
       },
       "type_json": {
-        "type": "object"
+        "type": "object",
+        "additionalProperties": true
       },
       "type_json_schema": {
         "type": "object",
@@ -42857,7 +42858,8 @@
             ]
           },
           "properties": {
-            "type": "object"
+            "type": "object",
+            "additionalProperties": true
           },
           "additionalProperties": {
             "type": "boolean",
@@ -42985,7 +42987,8 @@
             "maxLength": 511
           },
           "additionalDetails": {
-            "type": "object"
+            "type": "object",
+            "additionalProperties": true
           }
         },
         "additionalProperties": false
@@ -43116,7 +43119,8 @@
             ]
           },
           "targetSchema": {
-            "type": "object"
+            "type": "object",
+            "additionalProperties": true
           },
           "title": {
             "type": "string",
@@ -43145,7 +43149,8 @@
                 }
               },
               "accept-post": {
-                "type": "object"
+                "type": "object",
+                "additionalProperties": true
               },
               "permissions": {
                 "type": "array",
@@ -43155,7 +43160,8 @@
                 }
               },
               "accept-put": {
-                "type": "object"
+                "type": "object",
+                "additionalProperties": true
               }
             }
           }
@@ -43783,12 +43789,12 @@
             "example": "977ca735-7051-5c98-8330-45bd70010018"
           },
           "apiVersion": {
-            "description": "JSON string representing the API version of the resource, as set in or by Kubernetes.\nAPIVersion defines the versioned schema for this object representation. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. \nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
+            "description": "JSON string representing the API version of the resource, as set in or by Kubernetes.\nAPIVersion defines the versioned schema for this object representation. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources",
             "type": "string",
             "example": "rbac.authorization.k8s.io/v1"
           },
           "kind": {
-            "description": "JSON string representing the kind of the resource, as set in or by Kubernetes.\nThe kind field uses camel case and contains a string value representing the REST resource this object represents. Servers might infer this from the endpoint the client submits requests to. It cannot be updated. \nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
+            "description": "JSON string representing the kind of the resource, as set in or by Kubernetes.\nThe kind field uses camel case and contains a string value representing the REST resource this object represents. Servers might infer this from the endpoint the client submits requests to. It cannot be updated.\nMore info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds",
             "type": "string",
             "example": "ClusterRole"
           },
@@ -44480,7 +44486,7 @@
             "$ref": "#/components/schemas/type_astra_stateTransitions"
           },
           "stateDesired": {
-            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.  \n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
+            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.\n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
             "type": "string",
             "enum": [
               "established",
@@ -44690,7 +44696,7 @@
             }
           },
           "stateDesired": {
-            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.  \n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
+            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.\n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
             "type": "string",
             "enum": [
               "established",
@@ -44858,7 +44864,7 @@
             "$ref": "#/components/schemas/type_astra_stateTransitions"
           },
           "stateDesired": {
-            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.  \n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
+            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.\n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
             "type": "string",
             "enum": [
               "established",
@@ -45075,7 +45081,7 @@
             "$ref": "#/components/schemas/type_astra_stateTransitions"
           },
           "stateDesired": {
-            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.  \n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
+            "description": "The desired state for the relationship.\nAt creation, the only valid value is \"established\".\nDefined values are:\n* \"established\" - The relationship is created.\n* \"failedOver\" - Failover of the application to the destination cluster has completed.\n* \"deleted\" - The relationship was successfully cleaned up and deleted.",
             "type": "string",
             "enum": [
               "established",
@@ -45672,7 +45678,7 @@
             }
           },
           "storageClassMapping": {
-            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used. \nDefined values are:\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used.\nDefined values are:\n* Minimum Items: 0",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -45999,7 +46005,7 @@
             }
           },
           "storageClassMapping": {
-            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used. \nDefined values are:\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used.\nDefined values are:\n* Minimum Items: 0",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -46364,7 +46370,7 @@
             }
           },
           "storageClassMapping": {
-            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used. \nDefined values are:\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used.\nDefined values are:\n* Minimum Items: 0",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -46720,7 +46726,7 @@
             }
           },
           "storageClassMapping": {
-            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used. \nDefined values are:\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects, each mapping a source storage class to a destination storage class for a restore operation. If no elements or not present, original source storage class names will be used.\nDefined values are:\n* Minimum Items: 0",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -46917,7 +46923,7 @@
             "example": "9950003f-a1c7-5ca7-8930-06eec25f60aa"
           },
           "creationState": {
-            "description": "JSON string containing a value indicating the creation state of the AutoSupport bundle. For \"completed\" and \"partial\" states, the bundle can be downloaded by performing a GET of the resource URI with an Accept header containing \"*/*\" or \"application/gzip\".\nDefined values are:\n* \"running\" - AutoSupport bundle generation is running normally.\n* \"completed\" - AutoSupport bundle generation has completed.\n* \"partial\" - AutoSupport bundle generation has completed but some data was not included in the bundle.\n* \"failed\" - AutoSupport bundle generation is in a permanent failure state.  ",
+            "description": "JSON string containing a value indicating the creation state of the AutoSupport bundle. For \"completed\" and \"partial\" states, the bundle can be downloaded by performing a GET of the resource URI with an Accept header containing \"*/*\" or \"application/gzip\".\nDefined values are:\n* \"running\" - AutoSupport bundle generation is running normally.\n* \"completed\" - AutoSupport bundle generation has completed.\n* \"partial\" - AutoSupport bundle generation has completed but some data was not included in the bundle.\n* \"failed\" - AutoSupport bundle generation is in a permanent failure state.",
             "type": "string",
             "enum": [
               "running",
@@ -47104,7 +47110,7 @@
             "example": "9950003f-a1c7-5ca7-8930-06eec25f60aa"
           },
           "creationState": {
-            "description": "JSON string containing a value indicating the creation state of the AutoSupport bundle. For \"completed\" and \"partial\" states, the bundle can be downloaded by performing a GET of the resource URI with an Accept header containing \"*/*\" or \"application/gzip\".\nDefined values are:\n* \"running\" - AutoSupport bundle generation is running normally.\n* \"completed\" - AutoSupport bundle generation has completed.\n* \"partial\" - AutoSupport bundle generation has completed but some data was not included in the bundle.\n* \"failed\" - AutoSupport bundle generation is in a permanent failure state.  ",
+            "description": "JSON string containing a value indicating the creation state of the AutoSupport bundle. For \"completed\" and \"partial\" states, the bundle can be downloaded by performing a GET of the resource URI with an Accept header containing \"*/*\" or \"application/gzip\".\nDefined values are:\n* \"running\" - AutoSupport bundle generation is running normally.\n* \"completed\" - AutoSupport bundle generation has completed.\n* \"partial\" - AutoSupport bundle generation has completed but some data was not included in the bundle.\n* \"failed\" - AutoSupport bundle generation is in a permanent failure state.",
             "type": "string",
             "enum": [
               "running",
@@ -48955,7 +48961,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -49384,7 +49390,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -49682,7 +49688,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why the state transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -49869,7 +49875,7 @@
             "example": "Test Certs"
           },
           "keyType": {
-            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.  \n* Extended validation is performed as follows:    \n* One or more strings must exist in the keyStore.    \n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.  \n* Extended validation is performed as follows:    \n* The name of the credential must be unique.    \n* The name of the credential must be equal to a valid user resource ID.    \n* The name of the credential must not be altered.    \n* The corresponding user resource must have an \"authProvider\" of \"local\".    \n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:      \n* The password cleartext must conform to the account's password policy.      \n* The password is stored as a hash.    \n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".    \n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.  \n* Extended validation is performed as follows:    \n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.  \n* Extended validation is performed as follows:    \n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.    \n* The kubeconfig file must only describe a single cluster.    \n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate  \n* Extended validation is performed as follows:    \n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.  \n* Extended validation is performed as follows:    \n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.  \n* Extended validation is performed as follows:    \n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.    \n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
+            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.\n* Extended validation is performed as follows:\n* One or more strings must exist in the keyStore.\n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.\n* Extended validation is performed as follows:\n* The name of the credential must be unique.\n* The name of the credential must be equal to a valid user resource ID.\n* The name of the credential must not be altered.\n* The corresponding user resource must have an \"authProvider\" of \"local\".\n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:\n* The password cleartext must conform to the account's password policy.\n* The password is stored as a hash.\n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".\n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.\n* Extended validation is performed as follows:\n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.\n* Extended validation is performed as follows:\n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.\n* The kubeconfig file must only describe a single cluster.\n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate\n* Extended validation is performed as follows:\n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.\n* Extended validation is performed as follows:\n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.\n* Extended validation is performed as follows:\n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.\n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
             "type": "string",
             "enum": [
               "generic",
@@ -49970,7 +49976,7 @@
             "example": "Test Certs"
           },
           "keyType": {
-            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.  \n* Extended validation is performed as follows:    \n* One or more strings must exist in the keyStore.    \n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.  \n* Extended validation is performed as follows:    \n* The name of the credential must be unique.    \n* The name of the credential must be equal to a valid user resource ID.    \n* The name of the credential must not be altered.    \n* The corresponding user resource must have an \"authProvider\" of \"local\".    \n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:      \n* The password cleartext must conform to the account's password policy.      \n* The password is stored as a hash.    \n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".    \n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.  \n* Extended validation is performed as follows:    \n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.  \n* Extended validation is performed as follows:    \n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.    \n* The kubeconfig file must only describe a single cluster.    \n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate  \n* Extended validation is performed as follows:    \n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.  \n* Extended validation is performed as follows:    \n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.  \n* Extended validation is performed as follows:    \n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.    \n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
+            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.\n* Extended validation is performed as follows:\n* One or more strings must exist in the keyStore.\n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.\n* Extended validation is performed as follows:\n* The name of the credential must be unique.\n* The name of the credential must be equal to a valid user resource ID.\n* The name of the credential must not be altered.\n* The corresponding user resource must have an \"authProvider\" of \"local\".\n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:\n* The password cleartext must conform to the account's password policy.\n* The password is stored as a hash.\n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".\n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.\n* Extended validation is performed as follows:\n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.\n* Extended validation is performed as follows:\n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.\n* The kubeconfig file must only describe a single cluster.\n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate\n* Extended validation is performed as follows:\n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.\n* Extended validation is performed as follows:\n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.\n* Extended validation is performed as follows:\n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.\n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
             "type": "string",
             "enum": [
               "generic",
@@ -50061,7 +50067,7 @@
             "example": "Test Certs"
           },
           "keyType": {
-            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.  \n* Extended validation is performed as follows:    \n* One or more strings must exist in the keyStore.    \n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.  \n* Extended validation is performed as follows:    \n* The name of the credential must be unique.    \n* The name of the credential must be equal to a valid user resource ID.    \n* The name of the credential must not be altered.    \n* The corresponding user resource must have an \"authProvider\" of \"local\".    \n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:      \n* The password cleartext must conform to the account's password policy.      \n* The password is stored as a hash.    \n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".    \n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.  \n* Extended validation is performed as follows:    \n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.  \n* Extended validation is performed as follows:    \n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.    \n* The kubeconfig file must only describe a single cluster.    \n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate  \n* Extended validation is performed as follows:    \n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.  \n* Extended validation is performed as follows:    \n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.  \n* Extended validation is performed as follows:    \n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.    \n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
+            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.\n* Extended validation is performed as follows:\n* One or more strings must exist in the keyStore.\n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.\n* Extended validation is performed as follows:\n* The name of the credential must be unique.\n* The name of the credential must be equal to a valid user resource ID.\n* The name of the credential must not be altered.\n* The corresponding user resource must have an \"authProvider\" of \"local\".\n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:\n* The password cleartext must conform to the account's password policy.\n* The password is stored as a hash.\n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".\n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.\n* Extended validation is performed as follows:\n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.\n* Extended validation is performed as follows:\n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.\n* The kubeconfig file must only describe a single cluster.\n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate\n* Extended validation is performed as follows:\n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.\n* Extended validation is performed as follows:\n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.\n* Extended validation is performed as follows:\n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.\n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
             "type": "string",
             "enum": [
               "generic",
@@ -50142,7 +50148,7 @@
             "example": "Test Certs"
           },
           "keyType": {
-            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.  \n* Extended validation is performed as follows:    \n* One or more strings must exist in the keyStore.    \n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.  \n* Extended validation is performed as follows:    \n* The name of the credential must be unique.    \n* The name of the credential must be equal to a valid user resource ID.    \n* The name of the credential must not be altered.    \n* The corresponding user resource must have an \"authProvider\" of \"local\".    \n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:      \n* The password cleartext must conform to the account's password policy.      \n* The password is stored as a hash.    \n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".    \n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.  \n* Extended validation is performed as follows:    \n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.  \n* Extended validation is performed as follows:    \n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.    \n* The kubeconfig file must only describe a single cluster.    \n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate  \n* Extended validation is performed as follows:    \n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.  \n* Extended validation is performed as follows:    \n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.  \n* Extended validation is performed as follows:    \n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.    \n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
+            "description": "JSON string containing an optional user-specified data validation type descriptor for the contents of the keyStore.\nExtended update constraints:\n* If a keyType does not exist in the resource and is not specified in an update, the keyType must not continue to exist in the updated resource.\n* If a keyType does not exist in the resource and is specified in an update, the keyType must be added to the resource and validation must be performed. If the validation fails, the update will fail.\n* If a keyType exists in the resource and is not specified in an update, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified matches the existing keyType, the keyType must be preserved.\n* If a keyType exists in the resource and is specified in an update, and the keyType specified is different from the existing keyType, the update will fail.\nDefined values are:\n* \"generic\" - The credential is a generic collection of data. This is equivalent to not including a keyType.\n* Extended validation is performed as follows:\n* One or more strings must exist in the keyStore.\n* Every string in the keyStore must have a value encoded in base64.\n* \"passwordHash\" - The credential is a password hash.\n* Extended validation is performed as follows:\n* The name of the credential must be unique.\n* The name of the credential must be equal to a valid user resource ID.\n* The name of the credential must not be altered.\n* The corresponding user resource must have an \"authProvider\" of \"local\".\n* A \"cleartext\" string must exist within the keyStore with a value containing a base64-encoded cleartext password:\n* The password cleartext must conform to the account's password policy.\n* The password is stored as a hash.\n* A \"change\" string must exist within the keyStore with a value containing a base64-encoded string \"true\" or \"false\".\n* A credential of type passwordHash can only be deleted if the user ID indicated by the name does not exist.\n* \"apikey\" - The credential is an API key.\n* Extended validation is performed as follows:\n* An \"apikey\" string must exist within the keyStore, with a value containing a base64-encoded arbitrary string.\n* \"kubeconfig\" - The credential is a kubeconfig.\n* Extended validation is performed as follows:\n* A \"base64\" string must exist within the keyStore, with a value containing a base64-encoded JSON kubeconfig file.\n* The kubeconfig file must only describe a single cluster.\n* No other fields can exist within the keyStore.\n* \"certificate\" - The credential is a PEM-encoded certificate\n* Extended validation is performed as follows:\n* A \"certificate\" string must exist within the keyStore, with a value containing a base64-encoded PEM certificate.\n* \"privkey\" - The credential is a PEM-encoded private key.\n* Extended validation is performed as follows:\n* A \"privkey\" string must exist within the keyStore, with a value containing a base64-encoded PEM private key.\n* \"s3\" - Indicates the credentials are for Simple Storage Service (S3) access.\n* Extended validation is performed as follows:\n* An \"accessKey\" string must exist within the keyStore with a value containing a base64-encoded S3 access key.\n* An \"accessSecret\" string must exist within the keyStore with a value containing a base64-encoded S3 access secret.",
             "type": "string",
             "enum": [
               "generic",
@@ -53183,7 +53189,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum Items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -53584,7 +53590,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum Items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -53878,7 +53884,7 @@
             ]
           },
           "tridentManagedStateDetails": {
-            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".  \nIf no details are available, this array will be empty.\n* Minimum Items: 0",
+            "description": "JSON array of JSON objects that lists additional details about why \"state\" transitioned to \"managed\" or \"unmanaged\".\nIf no details are available, this array will be empty.\n* Minimum Items: 0",
             "type": "array",
             "$ref": "#/components/schemas/type_astra_stateDetails"
           },
@@ -55523,7 +55529,7 @@
             "example": "viewer"
           },
           "roleConstraints": {
-            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
+            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='`[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)`\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -55620,7 +55626,7 @@
             "example": "viewer"
           },
           "roleConstraints": {
-            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
+            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='`[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)`\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -55711,7 +55717,7 @@
             "example": "viewer"
           },
           "roleConstraints": {
-            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
+            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='`[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)`\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -55787,7 +55793,7 @@
             "example": "viewer"
           },
           "roleConstraints": {
-            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
+            "description": "JSON array of JSON strings specifying the scope of the role assignment.\nDefined values are:\n* Conforms to Astra Role Constraints Schema\nIf not specified on create, the value will be set to an array of size 1 containing string \"*\" representing \"full scope\".\nIf not specified on update, the value will be preserved without modification.\nAn empty array represents \"no scope\".\nExamples:\n* # Allow access to any resource:   \"roleConstraints\": [\"*\"]\n* # deny access to all resources:   \"roleConstraints\": []\n* # Allow access to a specific namespace resource only:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'\" ]\n* # Allow access to a specific namespace and everything under it:   \"roleConstraints\": [ \"namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*\" ]\n* # Allow access to all namespaces labelled \"dev\" in any cluster in any cloud, and everything under them:   \"roleConstraints\": [ \"namespaces:kubernetesLabels='`[dev.example.com/appname=dev'.*](http://dev.example.com/appname=dev)`\" ]\n* # Allow access to all namespace resources only:   \"roleConstraints\": [ \"namespaces:*\" ]\n* # Allow access to all namespace resources and everything under them:   \"roleConstraints\": [ \"namespaces:*.*\" ]",
             "type": "array",
             "uniqueItems": true,
             "items": {
@@ -58914,7 +58920,7 @@
             "example": "5bad8e04-e2fd-5c43-98d7-300580993f49"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).  \n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").  \n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
+            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).\n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").\n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
             "type": "string",
             "enum": [
               "pending",
@@ -59262,7 +59268,7 @@
             "example": "5bad8e04-e2fd-5c43-98d7-300580993f49"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).  \n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").  \n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
+            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).\n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").\n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
             "type": "string",
             "enum": [
               "pending",
@@ -59437,7 +59443,7 @@
             "example": "5bad8e04-e2fd-5c43-98d7-300580993f49"
           },
           "state": {
-            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).  \n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").  \n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
+            "description": "JSON string containing a value indicating the operational state of the user.\nDefined values are:\n* \"pending\" - The user account is in the process of being created. The user can only read and modify the user resource (default value).\n* This state is not valid for a user with \"authProvider\" as \"local\"\n* \"active\" - The user account is operational (The user can log in if the account setting \"isEnabled\" is \"true\").\n* This is the default value for a user with \"authProvider\" as \"local\"\n* \"suspended\" - The user account is suspended (The user cannot log in regardless of account \"isEnabled\" setting).",
             "type": "string",
             "enum": [
               "pending",
@@ -59665,21 +59671,21 @@
             "example": "true"
           },
           "storageClass": {
-            "description": "JSON string containing the storage class for the volume.\n* Defined values are:\n \n* Minimum length: 1  \n* Maximum length: 255",
+            "description": "JSON string containing the storage class for the volume.\n* Defined values are:\n\n* Minimum length: 1\n* Maximum length: 255",
             "type": "string",
             "minLength": 1,
             "maxLength": 255,
             "example": "gold"
           },
           "pvcName": {
-            "description": "JSON string containing the PersistentVolumeClaim (PVC) name of the volume.\n* Defined values are:\n \n* Minimum length: 1  \n* Maximum length: 255",
+            "description": "JSON string containing the PersistentVolumeClaim (PVC) name of the volume.\n* Defined values are:\n\n* Minimum length: 1\n* Maximum length: 255",
             "type": "string",
             "minLength": 1,
             "maxLength": 255,
             "example": "myVolume"
           },
           "internalName": {
-            "description": "JSON string containing the internal name of the volume on the target storage cluster, if available. This name is obtained from the Kubernetes CSI driver.\n* Defined values are:\n \n* Minimum length: 1  \n* Maximum length: 255",
+            "description": "JSON string containing the internal name of the volume on the target storage cluster, if available. This name is obtained from the Kubernetes CSI driver.\n* Defined values are:\n\n* Minimum length: 1\n* Maximum length: 255",
             "type": "string",
             "minLength": 1,
             "maxLength": 255,
