@@ -1,7 +1,7 @@
 ---
 name: rest-standardization-skill
 description: Complete defect taxonomy, auto-correct/flag policy, and output-format contract for the Engineering Spec Standardization Specialist. Loaded by the companion agent stub at STEP 0.
-compatibility: Companion to the Engineering Spec Standardization Specialist agent stub (version v2.3). Deploy both files together; they version in lockstep.
+compatibility: Companion to the Engineering Spec Standardization Specialist agent stub (version v2.3), located at .github/agents/standardize-engineering-spec.md. Deploy both files together; they version in lockstep.
 user-invocable: false
 disable-model-invocation: true
 ---
@@ -478,6 +478,8 @@ If a single flagged finding type produces **more than 25 instances** (e.g., miss
 ---
 
 ## Changelog
+
+**v2.3 (2026-08-27) — relocated** from `.github/agents/skills/rest-standardization-skill.md` to `.github/skills/rest-standardization-skill/SKILL.md`. GitHub Copilot cloud agent runs against `astra-automation-internal` repeatedly fail-stopped at STEP 0, unable to read anything nested under `.github/agents/` even though the file existed there and was byte-correct. Moving it to the plain `.github/skills/` path (outside `.github/agents/`) resolves this; no rule content changed.
 
 **v2.3 (2026-08-27)** — split into agent stub + skill file, mirroring the CLI companion's architecture: the monolithic v2.3 profile ran ~47K characters, over GitHub Copilot Chat's 30,000-character limit, blocking GitHub.com invocation for `astra-automation-internal`. No rule changes in the split — content moved, not altered. Stub keeps the contract (scope, safety invariants, task process, final quality check); this skill file carries the full defect taxonomy, policy table, and output-format contract, loaded by the stub at STEP 0 with a version-matched fail-stop.
 
