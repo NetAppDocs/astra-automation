@@ -7,7 +7,6 @@ settings:
     api_enabled: true
     api_preserve_adoc: true
     api_standardize: false
-    api_preserve_adoc: true
   prod:
     pdf_enabled: true
     harmony_enabled: true
