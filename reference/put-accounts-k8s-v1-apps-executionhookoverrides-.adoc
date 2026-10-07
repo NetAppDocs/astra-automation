@@ -7,6 +7,7 @@ summary: 'Modify an execution hook override resource'
 ---
 
 = Modify an execution hook override resource
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}`#
 

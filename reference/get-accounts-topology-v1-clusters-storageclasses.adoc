@@ -7,6 +7,7 @@ summary: 'List the storage classes for a cluster'
 ---
 
 = List the storage classes for a cluster
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/storageClasses`#
 

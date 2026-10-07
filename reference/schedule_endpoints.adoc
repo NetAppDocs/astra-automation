@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) schedule endpoints'
 ---
 
 = Astra API (ACC) schedule endpoints
+:imagesdir: ../media/
 
 
 

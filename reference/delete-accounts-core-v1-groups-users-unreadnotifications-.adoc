@@ -7,6 +7,7 @@ summary: 'Delete an unread notification for a user in a group'
 ---
 
 = Delete an unread notification for a user in a group
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 

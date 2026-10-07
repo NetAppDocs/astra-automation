@@ -7,6 +7,7 @@ summary: 'Retrieve an app'
 ---
 
 = Retrieve an app
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v2/apps/{app_id}`#
 

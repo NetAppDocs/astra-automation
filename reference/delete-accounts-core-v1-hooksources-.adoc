@@ -7,6 +7,7 @@ summary: 'Delete a hook source'
 ---
 
 = Delete a hook source
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
 

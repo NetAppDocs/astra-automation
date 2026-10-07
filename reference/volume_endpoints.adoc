@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) volume endpoints'
 ---
 
 = Astra API (ACC) volume endpoints
+:imagesdir: ../media/
 
 
 

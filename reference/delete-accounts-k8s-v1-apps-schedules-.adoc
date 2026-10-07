@@ -7,6 +7,7 @@ summary: 'Delete a schedule'
 ---
 
 = Delete a schedule
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}`#
 

@@ -7,6 +7,7 @@ summary: 'Delete an AppMirror resource for an app'
 ---
 
 = Delete an AppMirror resource for an app
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
 

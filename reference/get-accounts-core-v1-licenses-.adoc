@@ -7,6 +7,7 @@ summary: 'Retrieve a license'
 ---
 
 = Retrieve a license
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
 

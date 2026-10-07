@@ -7,6 +7,7 @@ summary: 'Retrieve a cluster node for a cluster'
 ---
 
 = Retrieve a cluster node for a cluster
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}/clusterNodes/{clusterNode_id}`#
 

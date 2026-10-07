@@ -7,6 +7,7 @@ summary: 'Retrieve an application asset for an application snapshot and app'
 ---
 
 = Retrieve an application asset for an application snapshot and app
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets/{appAsset_id}`#
 

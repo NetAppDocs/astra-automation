@@ -7,6 +7,7 @@ summary: 'Modify a user for a group'
 ---
 
 = Modify a user for a group
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}`#
 

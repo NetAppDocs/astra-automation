@@ -7,6 +7,7 @@ summary: 'List all volumes'
 ---
 
 = List all volumes
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/volumes`#
 

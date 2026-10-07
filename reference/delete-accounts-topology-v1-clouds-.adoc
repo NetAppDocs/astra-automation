@@ -7,6 +7,7 @@ summary: 'Delete a cloud'
 ---
 
 = Delete a cloud
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}`#
 

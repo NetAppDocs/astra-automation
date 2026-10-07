@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) upgrade endpoints'
 ---
 
 = Astra API (ACC) upgrade endpoints
+:imagesdir: ../media/
 
 
 

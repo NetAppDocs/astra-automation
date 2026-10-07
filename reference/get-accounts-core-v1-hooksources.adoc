@@ -7,6 +7,7 @@ summary: 'List all hook sources'
 ---
 
 = List all hook sources
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources`#
 

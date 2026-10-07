@@ -7,6 +7,7 @@ summary: 'Delete a role binding'
 ---
 
 = Delete a role binding
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}`#
 

@@ -7,6 +7,7 @@ summary: 'List the cluster nodes for a cloud'
 ---
 
 = List the cluster nodes for a cloud
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes`#
 

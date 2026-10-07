@@ -7,6 +7,7 @@ summary: 'Retrieve a notification'
 ---
 
 = Retrieve a notification
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/notifications/{notification_id}`#
 

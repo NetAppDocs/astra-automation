@@ -7,6 +7,7 @@ summary: 'Modify a license'
 ---
 
 = Modify a license
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
 

@@ -7,6 +7,7 @@ summary: 'Retrieve a task'
 ---
 
 = Retrieve a task
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks/{task_id}`#
 

@@ -7,6 +7,7 @@ summary: 'List all notifications'
 ---
 
 = List all notifications
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/notifications`#
 

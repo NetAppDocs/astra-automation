@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) namespace endpoints'
 ---
 
 = Astra API (ACC) namespace endpoints
+:imagesdir: ../media/
 
 
 

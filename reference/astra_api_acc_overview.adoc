@@ -2,11 +2,12 @@
 sidebar: sidebar
 api: true
 explorer: false
-permalink: 'reference/astra_api_(acc)_overview.html'
+permalink: 'reference/astra_api_acc_overview.html'
 summary: 'Astra API (ACC) overview'
 ---
 
 = Astra API (ACC) overview
+:imagesdir: ../media/
 
 
 

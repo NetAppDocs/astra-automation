@@ -7,6 +7,7 @@ summary: 'Retrieve an unread notification'
 ---
 
 = Retrieve an unread notification
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 

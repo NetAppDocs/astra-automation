@@ -7,6 +7,7 @@ summary: 'Delete a package'
 ---
 
 = Delete a package
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages/{package_id}`#
 
