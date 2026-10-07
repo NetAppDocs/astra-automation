@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) bucket endpoints'
 ---
 
 = Astra API (ACC) bucket endpoints
+:imagesdir: ../media/
 
 
 

@@ -7,6 +7,7 @@ summary: 'Modify a role binding for a group associated with a user'
 ---
 
 = Modify a role binding for a group associated with a user
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
 
@@ -168,7 +169,7 @@ Examples:
 = Allow access to a specific namespace and everything under it:   "roleConstraints": [ "namespaces:id='6fa2f917-f730-41b8-9c15-17f531843b31'.*" ]
 * {blank}
 +
-= Allow access to all namespaces labelled "dev" in any cluster in any cloud, and everything under them:   "roleConstraints": [ "namespaces:kubernetesLabels='http://dev.example.com/appname=dev[dev.example.com/appname=dev'.*]" ]
+= Allow access to all namespaces labelled "dev" in any cluster in any cloud, and everything under them:   "roleConstraints": [ "namespaces:kubernetesLabels='dev.example.com/appname=dev'.*" ]
 * {blank}
 +
 = Allow access to all namespace resources only:   "roleConstraints": [ "namespaces:*" ]

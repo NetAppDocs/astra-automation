@@ -7,6 +7,7 @@ summary: 'Create a new license'
 ---
 
 = Create a new license
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
 

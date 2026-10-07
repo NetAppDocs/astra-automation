@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) setting endpoints'
 ---
 
 = Astra API (ACC) setting endpoints
+:imagesdir: ../media/
 
 
 

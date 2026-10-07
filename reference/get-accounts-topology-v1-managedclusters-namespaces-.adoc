@@ -7,6 +7,7 @@ summary: 'Retrieve a namespace for a managed cluster'
 ---
 
 = Retrieve a namespace for a managed cluster
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces/{namespace_id}`#
 

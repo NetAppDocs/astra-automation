@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) role binding endpoints'
 ---
 
 = Astra API (ACC) role binding endpoints
+:imagesdir: ../media/
 
 
 

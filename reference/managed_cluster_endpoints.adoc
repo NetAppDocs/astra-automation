@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) managed cluster endpoints'
 ---
 
 = Astra API (ACC) managed cluster endpoints
+:imagesdir: ../media/
 
 
 

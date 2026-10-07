@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) AppMirror endpoints'
 ---
 
 = Astra API (ACC) AppMirror endpoints
+:imagesdir: ../media/
 
 
 

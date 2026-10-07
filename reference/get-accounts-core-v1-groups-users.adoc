@@ -7,6 +7,7 @@ summary: 'List the users for a group'
 ---
 
 = List the users for a group
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users`#
 

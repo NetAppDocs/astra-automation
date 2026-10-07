@@ -7,6 +7,7 @@ summary: 'List all buckets'
 ---
 
 = List all buckets
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
 

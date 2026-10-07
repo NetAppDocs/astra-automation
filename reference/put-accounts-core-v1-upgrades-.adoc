@@ -7,6 +7,7 @@ summary: 'Modify an upgrade'
 ---
 
 = Modify an upgrade
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
 

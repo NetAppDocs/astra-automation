@@ -7,6 +7,7 @@ summary: 'Delete a cluster'
 ---
 
 = Delete a cluster
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
 
