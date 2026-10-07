@@ -7,6 +7,7 @@ summary: 'List the volumes for a managed cluster'
 ---
 
 = List the volumes for a managed cluster
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/volumes`#
 

@@ -7,6 +7,7 @@ summary: 'Delete a role binding for a group associated with a user'
 ---
 
 = Delete a role binding for a group associated with a user
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
 

@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) subscription endpoints'
 ---
 
 = Astra API (ACC) subscription endpoints
+:imagesdir: ../media/
 
 
 

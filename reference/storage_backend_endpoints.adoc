@@ -7,6 +7,7 @@ summary: 'Astra API (ACC) storage backend endpoints'
 ---
 
 = Astra API (ACC) storage backend endpoints
+:imagesdir: ../media/
 
 
 

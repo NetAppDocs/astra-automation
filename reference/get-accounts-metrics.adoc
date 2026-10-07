@@ -7,6 +7,7 @@ summary: 'Retrieve all metrics for an account'
 ---
 
 = Retrieve all metrics for an account
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/metrics`#
 

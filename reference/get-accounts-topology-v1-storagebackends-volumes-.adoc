@@ -7,6 +7,7 @@ summary: 'Retrieve a volume for a storage backend'
 ---
 
 = Retrieve a volume for a storage backend
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes/{volume_id}`#
 

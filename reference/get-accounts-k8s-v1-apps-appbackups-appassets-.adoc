@@ -7,6 +7,7 @@ summary: 'Retrieve an application asset from an application backup for an app'
 ---
 
 = Retrieve an application asset from an application backup for an app
+:imagesdir: ../media/
 
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets/{appAsset_id}`#
 
