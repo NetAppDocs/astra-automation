@@ -1,4 +1,5 @@
 ---
+jekyll: cb-test-suppress-redundant-sentence
 settings:
   name: Astra Automation
   lipi_enabled: true
@@ -6,7 +7,8 @@ settings:
     pdf_enabled: true
     api_enabled: true
     api_preserve_adoc: true
-    api_standardize: false
+    api_standardize: true
+    api_standardize_fields: keywords,lead
   prod:
     pdf_enabled: true
     harmony_enabled: true
