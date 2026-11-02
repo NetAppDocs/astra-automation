@@ -7,7 +7,11 @@
           "category": "Account",
           "filename": "post-accounts.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "create account,account resource,new account,account creation,account setup",
+            "lead": "Creates a new account, specifying the desired values for the Account API resource. Use this to set up and configure account details for accessing the services."
+          }
         }
       },
       "get": {
@@ -16,7 +20,11 @@
           "category": "Account",
           "filename": "get-accounts.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "accounts collection,resource listing,json array,resource fields,resource order",
+            "lead": "Retrieves all accounts in Astra API, returning a JSON array of matching resources in the collection. Use this to view account details based on specified fields."
+          }
         }
       }
     },
@@ -27,7 +35,11 @@
           "category": "Account",
           "filename": "get-accounts-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account id,account resource,stored account,account collection,json response",
+            "lead": "Retrieves an account, returning the stored account resource details in the response. Use this to access account information for management or review purposes."
+          }
         }
       },
       "put": {
@@ -36,7 +48,11 @@
           "category": "Account",
           "filename": "put-accounts-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,account collection,enabled timestamp,preserve key values,modify account",
+            "lead": "Modifies an account by replacing the stored resource with the provided JSON request body, ensuring key values that are not user-modifiable remain intact."
+          }
         }
       },
       "delete": {
@@ -45,7 +61,11 @@
           "category": "Account",
           "filename": "delete-accounts-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove account,delete account,account removal,account management,account id,deletion effects",
+            "lead": "Deletes an account, removing the specified Account API resource from access and operations."
+          }
         }
       }
     },
@@ -56,7 +76,11 @@
           "category": "Metrics",
           "filename": "get-accounts-metrics.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account metrics,metrics retrieval,account performance,account data,performance metrics",
+            "lead": "Retrieves all metrics for an account, offering insights into performance and utilization."
+          }
         }
       }
     },
@@ -67,7 +91,11 @@
           "category": "ASUP",
           "filename": "post-accounts-core-v1-asups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "asup creation,account resource,core v1,account id,netapp ontap",
+            "lead": "Creates an ASUP resource to specify the desired values for automated support uploads."
+          }
         }
       },
       "get": {
@@ -76,7 +104,11 @@
           "category": "ASUP",
           "filename": "get-accounts-core-v1-asups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,collection fields,resource list,account collection,resource limit",
+            "lead": "Retrieves a list of ASUP resources, providing detailed information for each resource in the collection. You can specify individual fields to tailor the output to your needs."
+          }
         }
       }
     },
@@ -87,7 +119,11 @@
           "category": "ASUP",
           "filename": "get-accounts-core-v1-asups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "autosupport download,asup resource,autosupport bundle,creation state,asup collection",
+            "lead": "Retrieves an ASUP resource, allowing access to the stored AutoSupport data for monitoring and diagnostic purposes."
+          }
         }
       }
     },
@@ -98,7 +134,11 @@
           "category": "Certificate",
           "filename": "post-accounts-core-v1-certificates.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "certificate creation,account certificate,certificate resource,create certificate,account id",
+            "lead": "Creates a new certificate for the Certificate API resource, allowing you to specify the desired values for secure communications."
+          }
         }
       },
       "get": {
@@ -107,7 +147,11 @@
           "category": "Certificate",
           "filename": "get-accounts-core-v1-certificates.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "certificates,resource collection,include fields,sort order,filter fields,account id",
+            "lead": "Retrieves all certificates, providing a comprehensive list of certificate resources in the collection. Use this to view and manage certificate configurations effectively."
+          }
         }
       }
     },
@@ -118,7 +162,11 @@
           "category": "Certificate",
           "filename": "get-accounts-core-v1-certificates-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "certificate resource,certificate collection,stored certificate,account certificate,certificate id",
+            "lead": "Retrieves a certificate to provide the stored Certificate API resource details in the response."
+          }
         }
       },
       "put": {
@@ -127,7 +175,11 @@
           "category": "Certificate",
           "filename": "put-accounts-core-v1-certificates-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace certificate,trust store update,self signed certificate,certificate trust,certificate management,certificate update",
+            "lead": "Modifies a certificate, updating the trust store to reflect changes in the certificate's status or content. Use this endpoint to ensure the trust store accurately represents trusted and untrusted certificates."
+          }
         }
       },
       "delete": {
@@ -136,7 +188,11 @@
           "category": "Certificate",
           "filename": "delete-accounts-core-v1-certificates-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "certificate removal,account certificate,delete certificate,certificate management,remove certificate",
+            "lead": "Deletes a certificate. Use this endpoint to remove a specific Certificate API resource when it is no longer needed."
+          }
         }
       }
     },
@@ -147,7 +203,11 @@
           "category": "Credential",
           "filename": "post-accounts-core-v1-credentials.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "credentials,create credentials,account credentials,credential resource,account id",
+            "lead": "Creates a new credential, specifying the desired values for the Credential API resource. This allows you to manage access and authentication settings effectively."
+          }
         }
       },
       "get": {
@@ -156,7 +216,11 @@
           "category": "Credential",
           "filename": "get-accounts-core-v1-credentials.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "credentials,account id,resource collection,json array,field filter,sort order",
+            "lead": "Retrieves a list of all credentials. Use this to view the available credentials in the collection."
+          }
         }
       }
     },
@@ -167,7 +231,11 @@
           "category": "Credential",
           "filename": "get-accounts-core-v1-credentials-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "stored credential,account resource,credential collection,resource id,json response",
+            "lead": "Retrieves a credential, providing the stored credential information in the response body."
+          }
         }
       },
       "put": {
@@ -176,7 +244,11 @@
           "category": "Credential",
           "filename": "put-accounts-core-v1-credentials-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace credentials,update credentials,stored resource,credential collection,account resource",
+            "lead": "Modifies a credential by replacing its stored resource with the provided JSON request body, ensuring that key values which cannot be modified by you are preserved."
+          }
         }
       },
       "delete": {
@@ -185,7 +257,11 @@
           "category": "Credential",
           "filename": "delete-accounts-core-v1-credentials-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove credential,credential deletion,delete credential resource,remove account credential,credential side effects",
+            "lead": "Deletes a credential resource, removing access associated with the specified credential. This is useful when you need to revoke access or remove outdated credentials from the system."
+          }
         }
       }
     },
@@ -196,7 +272,11 @@
           "category": "Entitlement",
           "filename": "get-accounts-core-v1-entitlements.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "entitlements,account resources,field selection,resource collection,collection filtering,resource sorting",
+            "lead": "Retrieves a list of entitlements, providing information on all matching resources in the collection. Use this to access specific resource details based on your request criteria."
+          }
         }
       }
     },
@@ -207,7 +287,11 @@
           "category": "Entitlement",
           "filename": "get-accounts-core-v1-entitlements-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account entitlement,entitlement resource,entitlement collection,account information,stored entitlement",
+            "lead": "Retrieves an entitlement, providing the stored Entitlement API resource in the JSON response body."
+          }
         }
       }
     },
@@ -218,7 +302,11 @@
           "category": "Group",
           "filename": "post-accounts-core-v1-groups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "group creation,core groups,account group,group resource,ontap group",
+            "lead": "Creates a new group, defining the desired values for the Group API resource. Use this to organize and manage resources effectively within your environment."
+          }
         }
       },
       "get": {
@@ -227,7 +315,11 @@
           "category": "Group",
           "filename": "get-accounts-core-v1-groups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account groups,resource collection,field filter,sort order,count resources",
+            "lead": "Retrieves all groups in the Astra API, providing a JSON array of matching resources in the collection."
+          }
         }
       }
     },
@@ -238,7 +330,11 @@
           "category": "Group",
           "filename": "get-accounts-core-v1-groups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,group collection,stored group,group resource,json response,account id",
+            "lead": "Retrieves a group, providing the stored group resource details for review or integration purposes."
+          }
         }
       },
       "put": {
@@ -247,7 +343,11 @@
           "category": "Group",
           "filename": "put-accounts-core-v1-groups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,preserve values,group collection,account resource,stored resource",
+            "lead": "Modifies a group by replacing its stored resource with the provided JSON request body, ensuring key values that cannot be altered by you are preserved."
+          }
         }
       },
       "delete": {
@@ -256,7 +356,11 @@
           "category": "Group",
           "filename": "delete-accounts-core-v1-groups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove group,group resource,delete group,role binding removal,group deletion",
+            "lead": "Deletes the specified group resource. Use this to remove a group along with its associated role bindings from the system."
+          }
         }
       }
     },
@@ -267,7 +371,11 @@
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-groups-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,create role,group role,account role,role management",
+            "lead": "Creates a new role binding for a group, assigning specific permissions to the group within the Astra environment. Use this endpoint to manage access controls effectively for group-based operations."
+          }
         }
       },
       "get": {
@@ -276,7 +384,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role bindings,group roles,account resources,collection filters,resource sorting",
+            "lead": "Retrieves the role bindings for a group, providing a list of matching resources in the collection. Use this to access detailed information about specific role bindings associated with the group."
+          }
         }
       }
     },
@@ -287,7 +399,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,group role,account role,role permissions,stored role bindings",
+            "lead": "Retrieves a role binding for a group, providing the details of the role binding associated with the specified group ID. Use this to examine the permissions and associations configured for the group within the Astra API."
+          }
         }
       },
       "put": {
@@ -296,7 +412,11 @@
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-groups-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,role bindings,account group,modify role,update role bindings",
+            "lead": "Modifies a role binding for a group, allowing you to update access permissions associated with specific user groups within your environment."
+          }
         }
       },
       "delete": {
@@ -305,7 +425,11 @@
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-groups-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,remove role,delete role binding,user removal,group resource,account resource",
+            "lead": "Deletes a role binding for a group, removing the association between the group and the specified role within the Astra API environment."
+          }
         }
       }
     },
@@ -316,7 +440,11 @@
           "category": "Execution Hook",
           "filename": "post-accounts-core-v1-executionhooks.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,account resource,execution values,create execution,execution setup",
+            "lead": "Creates a new execution hook, specifying the values for the Execution Hook API resource. Use this to define custom automation tasks for your workflows."
+          }
         }
       },
       "get": {
@@ -325,7 +453,11 @@
           "category": "Execution Hook",
           "filename": "get-accounts-core-v1-executionhooks.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hooks,account resources,matching resources,collection fields,resource filter",
+            "lead": "Retrieves all execution hooks, providing a JSON array of resources that match the specified criteria. Use this to view detailed information about each hook in the collection."
+          }
         }
       }
     },
@@ -336,7 +468,11 @@
           "category": "Execution Hook",
           "filename": "get-accounts-core-v1-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,execution hook resource,matching containers,matching images,matching criteria,execution hook collection",
+            "lead": "Retrieves an execution hook, providing stored resource details and matching container and image information based on current criteria."
+          }
         }
       },
       "put": {
@@ -345,7 +481,11 @@
           "category": "Execution Hook",
           "filename": "put-accounts-core-v1-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,resource update,account management,application impact,json request",
+            "lead": "Modifies an execution hook to update its stored resource with new configuration values. Use this to ensure that future actions of applications utilizing the execution hook reflect the updated settings."
+          }
         }
       },
       "delete": {
@@ -354,7 +494,11 @@
           "category": "Execution Hook",
           "filename": "delete-accounts-core-v1-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,execution removal,delete execution,remove execution hook,account resource,execution collection",
+            "lead": "Deletes an execution hook, preventing it from running in future actions."
+          }
         }
       }
     },
@@ -365,7 +509,11 @@
           "category": "Event",
           "filename": "get-accounts-core-v1-events.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "events collection,resource fields,account events,resource limit,resource filter,sort order",
+            "lead": "Retrieves a list of events. Use this to view all matching resources in the collection based on specified criteria."
+          }
         }
       }
     },
@@ -376,7 +524,11 @@
           "category": "Event",
           "filename": "get-accounts-core-v1-events-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "stored event,account resource,event collection,response body,event id",
+            "lead": "Retrieves an event, returning the stored event resource for analysis or monitoring purposes."
+          }
         }
       }
     },
@@ -387,7 +539,11 @@
           "category": "Feature",
           "filename": "get-accounts-core-v1-features.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account features,resource collection,field filtering,sort order,resource count,skip resources",
+            "lead": "Retrieves all features available in Astra API, providing a comprehensive list of resources in the collection. Use this to view specific fields for each feature according to your request criteria."
+          }
         }
       }
     },
@@ -398,7 +554,11 @@
           "category": "Feature",
           "filename": "get-accounts-core-v1-features-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "feature resource,feature collection,account id,feature id,stored feature",
+            "lead": "Retrieves a feature, providing the stored Feature API resource for examination or integration purposes."
+          }
         }
       }
     },
@@ -409,7 +569,11 @@
           "category": "Hook Source",
           "filename": "post-accounts-core-v1-hooksources.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "hook source,create resource,account id,core hook,hook values,source creation",
+            "lead": "Creates a new hook source, specifying the values for the Hook Source API resource to initiate the creation process. Use this endpoint when you need to establish a hook source for automation or integration tasks."
+          }
         }
       },
       "get": {
@@ -418,7 +582,11 @@
           "category": "Hook Source",
           "filename": "get-accounts-core-v1-hooksources.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "hook sources,resource collection,field filter,field limit,account resource",
+            "lead": "Retrieves all hook sources in the collection. Use this to view the available fields for each resource as specified in your request."
+          }
         }
       }
     },
@@ -429,7 +597,11 @@
           "category": "Hook Source",
           "filename": "get-accounts-core-v1-hooksources-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "hook source,hook collection,account resource,stored resource,json response",
+            "lead": "Retrieves a hook source, returning the stored Hook Source API resource in the response. Use this to access specific hook source configurations for integration tasks."
+          }
         }
       },
       "put": {
@@ -438,7 +610,11 @@
           "category": "Hook Source",
           "filename": "put-accounts-core-v1-hooksources-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,source hook,snapshot impact,md5 checksum,execution hooks",
+            "lead": "Modifies a hook source in Astra API. You might use this endpoint to update the source code for execution hooks associated with application snapshots."
+          }
         }
       },
       "delete": {
@@ -447,7 +623,11 @@
           "category": "Hook Source",
           "filename": "delete-accounts-core-v1-hooksources-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "hook source,remove resource,delete hook,account management,remove hook",
+            "lead": "Deletes a hook source, removing the specified resource from the system."
+          }
         }
       }
     },
@@ -458,7 +638,11 @@
           "category": "License",
           "filename": "post-accounts-core-v1-licenses.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "license creation,account license,license resource,create license,license values",
+            "lead": "Creates a new license, specifying the desired values for the License API resource. Use this endpoint to manage licensing needs effectively within your environment."
+          }
         }
       },
       "get": {
@@ -467,7 +651,11 @@
           "category": "License",
           "filename": "get-accounts-core-v1-licenses.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "licenses,account licenses,license list,resource collection,license fields,account resources",
+            "lead": "Retrieves all licenses in the collection, returning a JSON array of the matching resources. You can specify individual fields in the request to customize the information returned for each license."
+          }
         }
       }
     },
@@ -478,7 +666,11 @@
           "category": "License",
           "filename": "get-accounts-core-v1-licenses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "license resource,license collection,account resource,license id,account id",
+            "lead": "Retrieves a license, providing details of the stored License API resource. Use this to examine the current license configuration and ensure compliance with licensing requirements."
+          }
         }
       },
       "put": {
@@ -487,7 +679,11 @@
           "category": "License",
           "filename": "put-accounts-core-v1-licenses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace license,license entitlements,account licenses,license collection,entitlement recalculation",
+            "lead": "Modifies a license resource by replacing the stored data with the supplied information while preserving certain key values. You might use this endpoint to update license entitlements efficiently."
+          }
         }
       },
       "delete": {
@@ -496,7 +692,11 @@
           "category": "License",
           "filename": "delete-accounts-core-v1-licenses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "license removal,account license,license deletion,remove license,license entitlements,entitlement recalculation",
+            "lead": "Deletes a specified license from the system. Use this endpoint to manage your license entitlements effectively."
+          }
         }
       }
     },
@@ -507,7 +707,11 @@
           "category": "Notification",
           "filename": "get-accounts-core-v1-notifications.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account notifications,collection resources,field inclusion,resource filtering,sort order",
+            "lead": "Retrieves a list of notifications. Use this to review all relevant alerts and updates for your resources."
+          }
         }
       }
     },
@@ -518,7 +722,11 @@
           "category": "Notification",
           "filename": "get-accounts-core-v1-notifications-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "notification resource,stored notification,notification retrieval,account notification,notification collection",
+            "lead": "Retrieves a notification, providing the stored notification resource in the response body. Use this to access detailed information about specific notifications within the system."
+          }
         }
       }
     },
@@ -529,7 +737,11 @@
           "category": "Package",
           "filename": "post-accounts-core-v1-packages.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "package creation,core packages,account package,create package,package resource",
+            "lead": "Creates a package in the Astra API, specifying desired values for the Package API resource. Use this to define the package's attributes and configurations."
+          }
         }
       },
       "get": {
@@ -538,7 +750,11 @@
           "category": "Package",
           "filename": "get-accounts-core-v1-packages.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account packages,matching resources,collection fields,resource filter,resource sort order",
+            "lead": "Retrieves all package resources in the collection, providing detailed information for each matching resource. Use this to view specific fields of interest in the returned data."
+          }
         }
       }
     },
@@ -549,7 +765,11 @@
           "category": "Package",
           "filename": "get-accounts-core-v1-packages-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "stored package,package resource,package collection,account resource,account id",
+            "lead": "Retrieves a stored package, providing access to the package's API resource details."
+          }
         }
       },
       "delete": {
@@ -558,7 +778,11 @@
           "category": "Package",
           "filename": "delete-accounts-core-v1-packages-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove package,package resource,delete package,account id,package id",
+            "lead": "Deletes a package, removing the specified Package API resource from the system."
+          }
         }
       }
     },
@@ -569,7 +793,11 @@
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,create role,account role,core role binding,role management",
+            "lead": "Creates a role binding in the Astra API, specifying desired values for the Role Binding resource. Use this to define permissions and access control for users within your environment."
+          }
         }
       },
       "get": {
@@ -578,7 +806,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role bindings,account resources,resource collection,json array,field matching,sort order",
+            "lead": "Retrieves a list of role bindings, providing the matching resources in the collection. Use this to view the specified fields for each resource in the order requested."
+          }
         }
       }
     },
@@ -589,7 +821,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,roleBinding resource,account role binding,user role binding,group role binding,role authorization",
+            "lead": "Retrieves a role binding, providing access to the stored Role Binding API resource details. Use this endpoint to view role bindings associated with specific user or group IDs."
+          }
         }
       },
       "put": {
@@ -598,7 +834,11 @@
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,role binding,resource modification,account role,role management",
+            "lead": "Modifies a role binding to update its configuration based on the provided JSON request body."
+          }
         }
       },
       "delete": {
@@ -607,7 +847,11 @@
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,delete role,remove role binding,user deletion,local auth provider,cloud central auth provider",
+            "lead": "Deletes a role binding, removing the specified API resource from the system."
+          }
         }
       }
     },
@@ -618,7 +862,11 @@
           "category": "Setting",
           "filename": "get-accounts-core-v1-settings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account settings,resource collection,field filtering,resource limit,sort order",
+            "lead": "Retrieves a list of settings within the Astra API, providing the current configurations for each resource in the collection."
+          }
         }
       }
     },
@@ -629,7 +877,11 @@
           "category": "Setting",
           "filename": "get-accounts-core-v1-settings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "settings retrieval,account settings,stored settings,setting collection,resource settings",
+            "lead": "Retrieves a setting, providing the stored configuration details for reference or modification."
+          }
         }
       },
       "put": {
@@ -638,7 +890,11 @@
           "category": "Setting",
           "filename": "put-accounts-core-v1-settings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account settings,replace resource,modify settings,stored resource,setting collection",
+            "lead": "Modifies a setting by replacing the stored resource with the provided JSON request body, preserving key values that are not user-modifiable. Use this endpoint to update configuration settings efficiently while maintaining essential system parameters."
+          }
         }
       }
     },
@@ -649,7 +905,11 @@
           "category": "Subscription",
           "filename": "post-accounts-core-v1-subscriptions.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "subscription,create subscription,account subscription,account id,subscription resource",
+            "lead": "Creates a new subscription, specifying the desired values for the Subscription API resource. Use this to initiate a subscription with customized settings tailored to your requirements."
+          }
         }
       },
       "get": {
@@ -658,7 +918,11 @@
           "category": "Subscription",
           "filename": "get-accounts-core-v1-subscriptions.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "subscriptions,matching resources,collection fields,account id,resource listing,sort order",
+            "lead": "Retrieves a list of subscriptions, providing details for each subscription in the collection. Use this to view and manage your subscriptions efficiently."
+          }
         }
       }
     },
@@ -669,7 +933,11 @@
           "category": "Subscription",
           "filename": "get-accounts-core-v1-subscriptions-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "subscription resource,subscription id,account resource,account id,subscription collection",
+            "lead": "Retrieves a subscription, returning the stored Subscription API resource for monitoring or management purposes."
+          }
         }
       },
       "put": {
@@ -678,7 +946,11 @@
           "category": "Subscription",
           "filename": "put-accounts-core-v1-subscriptions-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "subscription management,account update,resource replacement,status inactive,zuora integration",
+            "lead": "Modifies a subscription by replacing the stored resource with the provided JSON request body while maintaining key values that cannot be changed by users. Use this endpoint if you need to update subscription details while ensuring certain values remain unchanged."
+          }
         }
       },
       "delete": {
@@ -687,7 +959,11 @@
           "category": "Subscription",
           "filename": "delete-accounts-core-v1-subscriptions-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "subscription removal,delete subscription,subscription charges,account subscription,subscription deletion",
+            "lead": "Deletes a subscription, removing the specified Subscription API resource along with all associated charges."
+          }
         }
       }
     },
@@ -698,7 +974,11 @@
           "category": "Upgrade",
           "filename": "get-accounts-core-v1-upgrades.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account upgrades,collection resources,matching resources,resource fields,field order",
+            "lead": "Retrieves a list of upgrades, providing details of all matching resources in the collection. Use this to access specific fields for each resource in the order specified."
+          }
         }
       }
     },
@@ -709,7 +989,11 @@
           "category": "Upgrade",
           "filename": "get-accounts-core-v1-upgrades-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "upgrade resource,upgrade details,upgrade collection,account upgrade,upgrade json",
+            "lead": "Retrieves an upgrade resource, providing the stored upgrade configuration for review or management purposes."
+          }
         }
       },
       "put": {
@@ -718,7 +1002,11 @@
           "category": "Upgrade",
           "filename": "put-accounts-core-v1-upgrades-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "upgrade resource,replacing resource,schedule upgrade,run upgrade,desired state",
+            "lead": "Modifies an upgrade by replacing the entire stored resource with the supplied JSON request body. Use this endpoint to schedule or run upgrades based on the desired state."
+          }
         }
       }
     },
@@ -729,7 +1017,11 @@
           "category": "User",
           "filename": "post-accounts-core-v1-users.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "user creation,user resource,account user,create user,account management",
+            "lead": "Creates a new user in Astra API, specifying desired values for the User API resource. Use this to manage user access and permissions within your Astra environment."
+          }
         }
       },
       "get": {
@@ -738,7 +1030,11 @@
           "category": "User",
           "filename": "get-accounts-core-v1-users.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "users collection,account users,resource fields,collection list,resource sort,collection filter",
+            "lead": "Retrieves a list of all users in the system, providing access to user information and configurations. Use this to review or manage user accounts efficiently."
+          }
         }
       }
     },
@@ -749,7 +1045,11 @@
           "category": "User",
           "filename": "get-accounts-core-v1-users-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account user,account resource,user collection,stored user,core user",
+            "lead": "Retrieves a user, returning the stored User API resource in the JSON response body. Use this to access user details for management and integration tasks."
+          }
         }
       },
       "put": {
@@ -758,7 +1058,11 @@
           "category": "User",
           "filename": "put-accounts-core-v1-users-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,user management,account update,user collection,modify user,user replace",
+            "lead": "Modifies a user by replacing the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable. Use this endpoint to update user details efficiently without affecting immutable attributes."
+          }
         }
       },
       "delete": {
@@ -767,7 +1071,11 @@
           "category": "User",
           "filename": "delete-accounts-core-v1-users-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove user,delete user,delete account user,remove account user,user role bindings,user notification marks",
+            "lead": "Deletes a user from the Astra API, removing associated resources such as notification marks, tokens, and role bindings."
+          }
         }
       }
     },
@@ -778,7 +1086,11 @@
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-users-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,create role,account role,user role,role management,assign role",
+            "lead": "Creates a role binding for a user, specifying the desired values for the Role Binding API resource. Use this to assign specific roles and permissions to users within your application."
+          }
         }
       },
       "get": {
@@ -787,7 +1099,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-rolebindings.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role bindings,account id,user id,collection fields,resource filtering,sort order",
+            "lead": "Retrieves role bindings for a user, providing you with the necessary information to manage user permissions effectively."
+          }
         }
       }
     },
@@ -798,7 +1114,11 @@
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,role permissions,user role,group role,account role,user permissions",
+            "lead": "Retrieves a role binding for a user, providing the specific permissions associated with the user's roles. Use this to view the role assignments that govern access to resources within your account or group."
+          }
         }
       },
       "put": {
@@ -807,7 +1127,11 @@
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-users-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "update role,role binding,replace resource,user role,account resource,user management",
+            "lead": "Modifies a role binding for a user, updating the stored resource according to the provided specifications. Use this endpoint to adjust user permissions within the Astra API environment."
+          }
         }
       },
       "delete": {
@@ -816,7 +1140,11 @@
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-users-rolebindings-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove role binding,delete role binding,user role binding,role binding removal,delete user role,remove user role",
+            "lead": "Deletes a role binding for a user, removing the specified Role Binding API resource."
+          }
         }
       }
     },
@@ -827,7 +1155,11 @@
           "category": "Token",
           "filename": "post-accounts-core-v1-users-tokens.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account token,create token,user token,core token,user identifier,account identifier",
+            "lead": "Creates a new token for a user, specifying the values needed for the Token API resource. Use this when you need to authenticate and access Astra API services securely."
+          }
         }
       },
       "get": {
@@ -836,7 +1168,11 @@
           "category": "Token",
           "filename": "get-accounts-core-v1-users-tokens.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account tokens,user tokens,resource collection,field filtering,resource sorting,resource pagination",
+            "lead": "Retrieves a list of tokens for a user, providing the available tokens associated with the user's account."
+          }
         }
       }
     },
@@ -847,7 +1183,11 @@
           "category": "Token",
           "filename": "get-accounts-core-v1-users-tokens-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,token collection,user resource,stored token,json response",
+            "lead": "Retrieves a token, providing the stored Token API resource in the response."
+          }
         }
       },
       "put": {
@@ -856,7 +1196,11 @@
           "category": "Token",
           "filename": "put-accounts-core-v1-users-tokens-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,modify token,user resource,account resource,token collection",
+            "lead": "Modifies a token by replacing the stored resource with the provided JSON request body, while maintaining key values that are not modifiable by the user."
+          }
         }
       },
       "delete": {
@@ -865,7 +1209,11 @@
           "category": "Token",
           "filename": "delete-accounts-core-v1-users-tokens-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove token,credential removal,delete token,token resource,remove credential",
+            "lead": "Deletes a specified token, removing its associated credential from the credential service."
+          }
         }
       }
     },
@@ -876,7 +1224,11 @@
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-users-unreadnotifications.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "unread notifications,account notifications,user notifications,notification list,resource collection,notification fields",
+            "lead": "Retrieves unread notifications for a user, providing you with the latest alerts and updates that require attention."
+          }
         }
       }
     },
@@ -887,7 +1239,11 @@
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-users-unreadnotifications-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "unread notifications,user notifications,notification list,account notifications,user unread,notification resource",
+            "lead": "Retrieves an unread notification, providing the stored notification details for review or action."
+          }
         }
       },
       "delete": {
@@ -896,7 +1252,11 @@
           "category": "Unread Notification",
           "filename": "delete-accounts-core-v1-users-unreadnotifications-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove unread notification,unread notification delete,delete unread notification,user notification remove,account notification delete",
+            "lead": "Deletes an unread notification, removing the specified notification resource from your notification list."
+          }
         }
       }
     },
@@ -907,7 +1267,11 @@
           "category": "Application Backup",
           "filename": "get-accounts-topology-v1-appbackups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,backup resources,collection fields,resource limit,account data",
+            "lead": "Retrieves all application backups, providing a comprehensive list of backup resources available in the collection. You can specify individual fields in your request to tailor the information returned."
+          }
         }
       }
     },
@@ -918,7 +1282,11 @@
           "category": "Application Backup",
           "filename": "get-accounts-topology-v1-appbackups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,application backup,stored backup,backup resource,app backup collection",
+            "lead": "Retrieves an application backup, providing access to the stored backup resource for further inspection or recovery purposes."
+          }
         }
       },
       "delete": {
@@ -927,7 +1295,11 @@
           "category": "Application Backup",
           "filename": "delete-accounts-topology-v1-appbackups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application backup,delete backup,backup removal,backup data delete,delete app backup",
+            "lead": "Deletes an application backup, removing the specified backup resource and its associated data. Use this to manage storage space or remove outdated backups from your application resources."
+          }
         }
       }
     },
@@ -938,7 +1310,11 @@
           "category": "Bucket",
           "filename": "post-accounts-topology-v1-buckets.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "bucket creation,topology buckets,account resource,bucket values,ontap endpoint",
+            "lead": "Creates a new bucket in the Astra API, specifying the desired values for the Bucket API resource to be established."
+          }
         }
       },
       "get": {
@@ -947,7 +1323,11 @@
           "category": "Bucket",
           "filename": "get-accounts-topology-v1-buckets.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,bucket resources,collection fields,resource collection,matching resources",
+            "lead": "Retrieves a list of buckets, providing a JSON array of all matching resources in the collection. Use this to examine the available buckets and their specified fields."
+          }
         }
       }
     },
@@ -958,7 +1338,11 @@
           "category": "Bucket",
           "filename": "get-accounts-topology-v1-buckets-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "bucket resource,stored bucket,account bucket,topology bucket,bucket collection",
+            "lead": "Retrieves a bucket, providing the stored bucket configuration details in the response."
+          }
         }
       },
       "put": {
@@ -967,7 +1351,11 @@
           "category": "Bucket",
           "filename": "put-accounts-topology-v1-buckets-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,bucket management,data storage,account bucket,bucket topology",
+            "lead": "Modifies a bucket by updating its stored resource with the provided JSON request body, while preserving essential key values. Use this to ensure the bucket's configuration reflects your desired settings while maintaining system integrity."
+          }
         }
       },
       "delete": {
@@ -976,7 +1364,11 @@
           "category": "Bucket",
           "filename": "delete-accounts-topology-v1-buckets-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "bucket removal,delete bucket,remove bucket,internal cleanup,account bucket,topology bucket",
+            "lead": "Deletes a bucket. Use this operation to remove an unwanted or obsolete bucket from your storage resources."
+          }
         }
       }
     },
@@ -987,7 +1379,11 @@
           "category": "Cloud",
           "filename": "post-accounts-topology-v1-clouds.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "netapp ontap,cloud resource,account resource,cloud topology,create cloud",
+            "lead": "Creates a new cloud resource in Astra API. Use this to specify desired values for your cloud configuration."
+          }
         }
       },
       "get": {
@@ -996,7 +1392,11 @@
           "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,cloud resources,collection fields,resource limit,resource filter",
+            "lead": "Retrieves a list of cloud resources. Use this to view the available clouds in your environment."
+          }
         }
       }
     },
@@ -1007,7 +1407,11 @@
           "category": "Cloud",
           "filename": "get-accounts-topology-v1-clouds-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cloud resource,cloud topology,stored cloud,cloud collection,account resource",
+            "lead": "Retrieves a cloud resource, providing the stored configuration details for cloud management tasks."
+          }
         }
       },
       "put": {
@@ -1016,7 +1420,11 @@
           "category": "Cloud",
           "filename": "put-accounts-topology-v1-clouds-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,cloud topology,update rediscovery,sa cluster,stored resource",
+            "lead": "Modifies a cloud resource by replacing the existing configuration with the supplied JSON request body while maintaining non-modifiable key values. Use this to initiate a rediscovery of storage arrays and clusters."
+          }
         }
       },
       "delete": {
@@ -1025,7 +1433,11 @@
           "category": "Cloud",
           "filename": "delete-accounts-topology-v1-clouds-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cloud instance,deletion,non-managed clusters,non-managed volumes,cloud id",
+            "lead": "Deletes the requested cloud instance along with any non-managed clusters and volumes associated with it. Use this operation to remove cloud resources that are no longer needed."
+          }
         }
       }
     },
@@ -1036,7 +1448,11 @@
           "category": "Cluster",
           "filename": "post-accounts-topology-v1-clouds-clusters.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster creation,cloud clusters,account clusters,cloud resource,cluster resource",
+            "lead": "Creates a cluster for a cloud environment, specifying the desired configuration for the Cluster API resource."
+          }
         }
       },
       "get": {
@@ -1045,7 +1461,11 @@
           "category": "Cluster",
           "filename": "get-accounts-topology-v1-clouds-clusters.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,cloud clusters,resource collection,field filtering,limit resources",
+            "lead": "Retrieves a list of clusters for a cloud. Use this to view the clusters available in your specified cloud environment."
+          }
         }
       }
     },
@@ -1056,7 +1476,11 @@
           "category": "Cluster",
           "filename": "get-accounts-topology-v1-clouds-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster resource,cloud cluster,account resource,topology cloud,cluster collection",
+            "lead": "Retrieves a cluster for a cloud, providing access to the stored Cluster API resource data."
+          }
         }
       },
       "put": {
@@ -1065,7 +1489,11 @@
           "category": "Cluster",
           "filename": "put-accounts-topology-v1-clouds-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,managed cluster,modify cluster,cloud topology,cluster update",
+            "lead": "Modifies a cloud cluster by replacing the stored resource with the provided JSON request body. Use this to update cluster configurations while maintaining non-modifiable key values."
+          }
         }
       },
       "delete": {
@@ -1074,7 +1502,11 @@
           "category": "Cluster",
           "filename": "delete-accounts-topology-v1-clouds-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster removal,delete cluster,remove cluster,cloud cleanup,internal data cleanup",
+            "lead": "Deletes a cluster from the cloud. Use this operation to remove the specified Cluster API resource and clean up internal data structures."
+          }
         }
       }
     },
@@ -1085,7 +1517,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cloud topology,cluster nodes,resource collection,matching resources,field request",
+            "lead": "Retrieves the cluster nodes for a cloud, providing details on the available nodes within the specified cloud environment."
+          }
         }
       }
     },
@@ -1096,7 +1532,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clouds-clusters-clusternodes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster node,cloud cluster,account resource,cloud resource,cluster resource,stored resource",
+            "lead": "Retrieves a cluster node for a cloud, providing access to the stored node configuration for cloud resource management."
+          }
         }
       }
     },
@@ -1107,7 +1547,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "topology cloud,storage classes,cluster storage,cloud clusters,resource fields",
+            "lead": "Retrieves a list of storage classes for a cloud, providing details on available configurations for cloud storage resources."
+          }
         }
       }
     },
@@ -1118,7 +1562,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clouds-clusters-storageclasses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account storage class,cloud storage class,cluster storage class,storage class topology,storage class resource,storage class list",
+            "lead": "Retrieves a storage class for a cloud, providing the available class configuration for storage resources."
+          }
         }
       }
     },
@@ -1129,7 +1577,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clouds-clusters-namespaces.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cloud topology,resource collection,namespace list,field filter,cluster resources",
+            "lead": "Retrieves the namespaces for a cloud, providing a list of all matching resources available in the collection."
+          }
         }
       }
     },
@@ -1140,7 +1592,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clouds-clusters-namespaces-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "namespace resource,stored namespace,namespace collection,cloud resource,cluster resource",
+            "lead": "Retrieves a namespace for a cloud, providing the stored Namespace API resource for cloud operations."
+          }
         }
       }
     },
@@ -1151,7 +1607,11 @@
           "category": "Cluster",
           "filename": "get-accounts-topology-v1-clusters.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "clusters,topology,account id,resource collection,field filter,field limit",
+            "lead": "Retrieves a list of clusters, providing detailed information for each cluster in the collection. Use this to evaluate the current configurations and statuses of your clusters."
+          }
         }
       }
     },
@@ -1162,7 +1622,11 @@
           "category": "Cluster",
           "filename": "get-accounts-topology-v1-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster resource,stored cluster,response body,cluster collection,account resource",
+            "lead": "Retrieves a stored cluster resource, providing the cluster details for management and operational tasks."
+          }
         }
       },
       "put": {
@@ -1171,7 +1635,11 @@
           "category": "Cluster",
           "filename": "put-accounts-topology-v1-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,cluster update,managed cluster,cluster collection,account resource",
+            "lead": "Modifies a cluster by replacing the entire stored resource with the supplied JSON request body. If the cluster is in a managed state, any update to credentialID will eventually trigger another attempt to collect the cluster."
+          }
         }
       },
       "delete": {
@@ -1180,7 +1648,11 @@
           "category": "Cluster",
           "filename": "delete-accounts-topology-v1-clusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove cluster,cluster deletion,delete cluster resource,account cluster management,cluster cleanup",
+            "lead": "Deletes the specified cluster, removing its associated API resource and cleaning up internal data structures."
+          }
         }
       }
     },
@@ -1191,7 +1663,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster nodes,cluster topology,account id,cluster id,resource collection,fields requested",
+            "lead": "Retrieves the cluster nodes for a cluster. Use this to view all nodes within the specified cluster and their details."
+          }
         }
       }
     },
@@ -1202,7 +1678,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-clusters-clusternodes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster node,cluster topology,account cluster,cluster details,node resource,cluster node list",
+            "lead": "Retrieves a cluster node for a cluster, offering details about the node's configuration and status within the specified cluster."
+          }
         }
       }
     },
@@ -1213,7 +1693,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage classes,cluster topology,resource collection,cluster storage,account clusters",
+            "lead": "Retrieves the storage classes for a cluster. Use this to access detailed information about available storage configurations within the specified cluster."
+          }
         }
       }
     },
@@ -1224,7 +1708,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-clusters-storageclasses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster storage,class resource,storage collection,account resource,storage class",
+            "lead": "Retrieves a storage class for a cluster, providing the stored configuration details for managing storage resources within the cluster."
+          }
         }
       }
     },
@@ -1235,7 +1723,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster topology,namespaces list,resource collection,account cluster,namespaces fields",
+            "lead": "Retrieves the namespaces for a cluster, providing a list of all matching resources in the collection. Use this to view specific fields for each resource as needed."
+          }
         }
       }
     },
@@ -1246,7 +1738,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-clusters-namespaces-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster namespace,namespace resource,stored namespace,cluster resource,namespace collection",
+            "lead": "Retrieves a namespace for a cluster, providing the stored Namespace API resource details."
+          }
         }
       }
     },
@@ -1257,7 +1753,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-namespaces.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,namespaces collection,resource fields,collection limit,field filter",
+            "lead": "Retrieves a list of all namespaces in the collection. Use this to view the available namespaces and their configurations."
+          }
         }
       }
     },
@@ -1268,7 +1768,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-namespaces-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "namespace resource,namespace collection,stored namespace,account id,namespace id",
+            "lead": "Retrieves a namespace, providing access to the stored Namespace API resource for managing application data."
+          }
         }
       }
     },
@@ -1279,7 +1783,11 @@
           "category": "Managed Cluster",
           "filename": "post-accounts-topology-v1-managedclusters.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,create managed cluster,cluster topology,account cluster,cluster resource",
+            "lead": "Creates a managed cluster, specifying desired values for the Managed Cluster API resource. Use this to configure and deploy clusters tailored to your specific requirements."
+          }
         }
       },
       "get": {
@@ -1288,7 +1796,11 @@
           "category": "Managed Cluster",
           "filename": "get-accounts-topology-v1-managedclusters.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,account topology,resource collection,field filter,field limit",
+            "lead": "Retrieves all managed clusters in Astra API, providing a list of clusters that match the specified criteria. Use this to view and manage the clusters within your environment."
+          }
         }
       }
     },
@@ -1299,7 +1811,11 @@
           "category": "Managed Cluster",
           "filename": "get-accounts-topology-v1-managedclusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed cluster,cluster resource,account resource,cluster topology,cluster collection",
+            "lead": "Retrieves a managed cluster, providing the details stored in the Managed Cluster API resource. Use this information to understand the current configuration and status of your cluster."
+          }
         }
       },
       "put": {
@@ -1308,7 +1824,11 @@
           "category": "Managed Cluster",
           "filename": "put-accounts-topology-v1-managedclusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,replace resource,kubernetes storage class,default storage class,account management,cluster management",
+            "lead": "Modifies a managed cluster by replacing the entire stored resource with the supplied JSON request body. This operation preserves key values that are not user-modifiable, ensuring essential configurations remain intact while updating other aspects of the cluster."
+          }
         }
       },
       "delete": {
@@ -1317,7 +1837,11 @@
           "category": "Managed Cluster",
           "filename": "delete-accounts-topology-v1-managedclusters-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove managed cluster,delete managed cluster,managed cluster removal,clean data structures,account cluster cleanup",
+            "lead": "Deletes a managed cluster. Use this operation to remove the specified API resource and clean up associated internal data structures."
+          }
         }
       }
     },
@@ -1328,7 +1852,11 @@
           "category": "App",
           "filename": "post-accounts-topology-v2-managedclusters-apps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,app creation,account resource,app resource,cluster management",
+            "lead": "Creates a new app for a managed cluster, specifying the desired values for the App API resource configuration. Use this endpoint to initiate applications within your managed cluster environment."
+          }
         }
       },
       "get": {
@@ -1337,7 +1865,11 @@
           "category": "App",
           "filename": "get-accounts-topology-v2-managedclusters-apps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,resource collection,fields requested,collection limit,resource filter",
+            "lead": "Retrieves a list of applications for a managed cluster. Use this to view the applications currently managed within the cluster environment."
+          }
         }
       }
     },
@@ -1348,7 +1880,11 @@
           "category": "App",
           "filename": "get-accounts-topology-v2-managedclusters-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "stored app,app resource,managed cluster,app collection,account resource",
+            "lead": "Retrieves an app for a managed cluster, providing the stored App API resource details in the JSON response body."
+          }
         }
       },
       "put": {
@@ -1357,7 +1893,11 @@
           "category": "App",
           "filename": "put-accounts-topology-v2-managedclusters-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,managed cluster,app resource,replace resource,force update",
+            "lead": "Modifies an app for a managed cluster, replacing the entire stored resource with the supplied JSON request body. Use this to update the app configuration while preserving key values that are not user-modifiable."
+          }
         }
       },
       "delete": {
@@ -1366,7 +1906,11 @@
           "category": "App",
           "filename": "delete-accounts-topology-v2-managedclusters-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove app,delete application,cluster management,app resource removal,application state deletion,snapshot deletion",
+            "lead": "Deletes an app for a managed cluster, removing the application from management and associated resources like schedules and backups."
+          }
         }
       }
     },
@@ -1377,7 +1921,11 @@
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,app assets,resource collection,account resources,field inclusion,resource limit",
+            "lead": "Retrieves the application assets for a managed cluster, providing a list of resources related to the cluster's applications. Use this to identify and access specific application resources within the managed cluster."
+          }
         }
       }
     },
@@ -1388,7 +1936,11 @@
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-managedclusters-apps-appassets-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application asset,managed cluster,app assets,stored resource,json response",
+            "lead": "Retrieves an application asset for a managed cluster, providing access to stored resource details for management tasks."
+          }
         }
       }
     },
@@ -1399,7 +1951,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,managed clusters,cluster nodes,resource collection,field selection,resource limit",
+            "lead": "Retrieves the cluster nodes for a managed cluster, providing a detailed view of the nodes within the cluster."
+          }
         }
       }
     },
@@ -1410,7 +1966,11 @@
           "category": "Cluster Node",
           "filename": "get-accounts-topology-v1-managedclusters-clusternodes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "cluster node,managed cluster,cluster topology,account resource,stored resource",
+            "lead": "Retrieves a cluster node for a managed cluster, providing details about the node's configuration and status within the cluster."
+          }
         }
       }
     },
@@ -1421,7 +1981,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,storage classes,resource collection,field include,collection limit",
+            "lead": "Retrieves the storage classes for a managed cluster, providing the available configurations for storage resources within the cluster."
+          }
         }
       }
     },
@@ -1432,7 +1996,11 @@
           "category": "Storage Class",
           "filename": "get-accounts-topology-v1-managedclusters-storageclasses-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "managed clusters,storage class,storage topology,account resource,cluster resource,storage resource",
+            "lead": "Retrieves a storage class for a managed cluster, providing details on the stored configurations for resource management."
+          }
         }
       }
     },
@@ -1443,7 +2011,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,managed cluster volumes,resource collection,volume listing,field inclusion,resource limit",
+            "lead": "Retrieves a list of volumes for a managed cluster. Use this to view the available storage resources within the cluster."
+          }
         }
       }
     },
@@ -1454,7 +2026,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-managedclusters-volumes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "volume resource,volume collection,managed cluster,account id,stored volume,volume json",
+            "lead": "Retrieves a volume for a managed cluster, providing access to the stored volume information for further management or analysis."
+          }
         }
       }
     },
@@ -1465,7 +2041,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-managedclusters-namespaces.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,managed cluster,namespaces list,resource collection,field filter",
+            "lead": "Retrieves the namespaces for a managed cluster. Use this to view the namespaces associated with the cluster and manage them effectively."
+          }
         }
       }
     },
@@ -1476,7 +2056,11 @@
           "category": "Namespace",
           "filename": "get-accounts-topology-v1-managedclusters-namespaces-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "namespace resource,managed cluster,namespaces list,stored namespace,account id",
+            "lead": "Retrieves a namespace for a managed cluster, providing the stored configuration details for namespace resources within the cluster."
+          }
         }
       }
     },
@@ -1487,7 +2071,11 @@
           "category": "Kubernetes API Resource",
           "filename": "get-accounts-topology-v1-managedclusters-apiresources.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "topology resources,managed clusters,resource collection,include fields,limit resources",
+            "lead": "Retrieves a list of Kubernetes API resources for a managed cluster. Use this to view the available resources within the specified cluster."
+          }
         }
       }
     },
@@ -1498,7 +2086,11 @@
           "category": "Kubernetes API Resource",
           "filename": "get-accounts-topology-v1-managedclusters-apiresources-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,managed cluster,api resource,resource collection,resource id",
+            "lead": "Retrieves a K8s API resource, providing the specific resource in the JSON response body for further inspection or integration."
+          }
         }
       }
     },
@@ -1509,7 +2101,11 @@
           "category": "Storage Backend",
           "filename": "post-accounts-topology-v1-storagebackends.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage backend,account storage,create storage,backend creation,topology storage",
+            "lead": "Creates a new storage backend, specifying the desired configuration values for the resource. Use this endpoint to set up a storage backend tailored to your requirements."
+          }
         }
       },
       "get": {
@@ -1518,7 +2114,11 @@
           "category": "Storage Backend",
           "filename": "get-accounts-topology-v1-storagebackends.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,storage backends,collection fields,matching resources,resource limit",
+            "lead": "Retrieves a list of storage backends. Use this to view all available storage resources for management and configuration purposes."
+          }
         }
       }
     },
@@ -1529,7 +2129,11 @@
           "category": "Storage Backend",
           "filename": "get-accounts-topology-v1-storagebackends-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage backend,account resource,topology storage,backend collection,storage resource",
+            "lead": "Retrieves a storage backend, providing the stored configuration details for backend resources."
+          }
         }
       },
       "put": {
@@ -1538,7 +2142,11 @@
           "category": "Storage Backend",
           "filename": "put-accounts-topology-v1-storagebackends-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage backend,topology storage,configuration version,storage class,resource replacement",
+            "lead": "Modifies a storage backend by replacing the entire stored resource with the supplied JSON request body. This operation can result in storage backend type-specific configuration changes, including the initial installation of a storage backend."
+          }
         }
       },
       "delete": {
@@ -1547,7 +2155,11 @@
           "category": "Storage Backend",
           "filename": "delete-accounts-topology-v1-storagebackends-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage backend,remove storage backend,delete storage backend,backend config removal,backend node removal,remove backend resources",
+            "lead": "Deletes a storage backend. Use this action to remove all associated backendConfig and backendNode resources from the system."
+          }
         }
       }
     },
@@ -1558,7 +2170,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "storage backends,volume collection,resource fields,account storage,volume topology",
+            "lead": "Retrieves a list of volumes for a storage backend, providing access to the volume configurations for management or analysis."
+          }
         }
       }
     },
@@ -1569,7 +2185,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-storagebackends-volumes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "volume resource,storage backend,account volume,volume collection,stored volume,volume details",
+            "lead": "Retrieves a volume for a storage backend, providing the stored Volume API resource for further inspection or management."
+          }
         }
       }
     },
@@ -1580,7 +2200,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-volumes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account topology,volume list,resource collection,field order,account resources",
+            "lead": "Retrieves a list of volumes, providing details of each volume in the collection. Use this to view specific fields of interest across all matching volumes."
+          }
         }
       }
     },
@@ -1591,7 +2215,11 @@
           "category": "Volume",
           "filename": "get-accounts-topology-v1-volumes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "volume resource,volume collection,stored volume,account id,topology volumes",
+            "lead": "Retrieves a volume, providing the stored configuration details for the specified volume resource. Use this to examine the current state of the volume in your storage environment."
+          }
         }
       }
     },
@@ -1602,7 +2230,11 @@
           "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-appmirrors.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "app mirror,app creation,container account,kubernetes mirror,k8s app",
+            "lead": "Creates a new AppMirror resource, specifying the desired values for replication and synchronization of applications across environments."
+          }
         }
       },
       "get": {
@@ -1611,7 +2243,11 @@
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "accounts collection,k8s app mirrors,resource fields,matching resources,collection limit",
+            "lead": "Retrieves a list of AppMirror resources, providing the available resource configurations for your applications."
+          }
         }
       }
     },
@@ -1622,7 +2258,11 @@
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "app mirror,appMirror id,account resource,k8s appMirror,appMirror collection",
+            "lead": "Retrieves an AppMirror resource to provide the stored configuration details for application mirroring activities."
+          }
         }
       },
       "put": {
@@ -1631,7 +2271,11 @@
           "category": "AppMirror",
           "filename": "put-accounts-k8s-v1-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "resource replacement,k8s app mirror,account resource,app mirror collection,desired state",
+            "lead": "Modifies an AppMirror resource by replacing the stored resource with the supplied JSON request body while preserving key values that are not user-modifiable. Use this endpoint to update the state of an AppMirror as needed for your application workflows."
+          }
         }
       },
       "delete": {
@@ -1640,7 +2284,11 @@
           "category": "AppMirror",
           "filename": "delete-accounts-k8s-v1-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "appMirror remove,appMirror delete,mirror relationship,source cluster,delete persistent volume claims",
+            "lead": "Deletes an AppMirror resource, initiating the removal of associated resources on both source and destination clusters. Use this endpoint to clean up resources linked to an AppMirror relationship."
+          }
         }
       }
     },
@@ -1651,7 +2299,11 @@
           "category": "App",
           "filename": "post-accounts-k8s-v2-apps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "apps creation,k8s apps,kubernetes apps,account resource,app resource",
+            "lead": "Creates a new app in Astra API. Use this endpoint to specify the desired values for the App API resource to support your application's configuration needs."
+          }
         }
       },
       "get": {
@@ -1660,7 +2312,11 @@
           "category": "App",
           "filename": "get-accounts-k8s-v2-apps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "netapp ontap,kubernetes apps,resource collection,field filter,account resources",
+            "lead": "Retrieves a list of all applications, providing details for each matching resource in the collection. Use this to access specific fields for the applications you are interested in."
+          }
         }
       }
     },
@@ -1671,7 +2327,11 @@
           "category": "App",
           "filename": "get-accounts-k8s-v2-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,app collection,stored app,k8s resource,json response",
+            "lead": "Retrieves an app from the Astra API, providing the stored application details for further analysis or management."
+          }
         }
       },
       "put": {
@@ -1680,7 +2340,11 @@
           "category": "App",
           "filename": "put-accounts-k8s-v2-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,app update,k8s app,resource overwrite,account app",
+            "lead": "Modifies an app by replacing the entire stored resource with the provided JSON request body."
+          }
         }
       },
       "delete": {
@@ -1689,7 +2353,11 @@
           "category": "App",
           "filename": "delete-accounts-k8s-v2-apps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove app,kubernetes app,delete application,app management,application state,deleting app",
+            "lead": "Deletes an app from Astra, removing the specified App API resource and dissociating it from management."
+          }
         }
       }
     },
@@ -1700,7 +2368,11 @@
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,k8s apps,app assets,resource collection,matching resources,field specification",
+            "lead": "Retrieves the application assets for an app, providing information on the available resources within the collection. Use this endpoint to view specific fields for each asset as needed."
+          }
         }
       }
     },
@@ -1711,7 +2383,11 @@
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appassets-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application asset,stored asset,app resource,account resource,asset collection",
+            "lead": "Retrieves an application asset for an app, providing the stored asset details for further processing or analysis."
+          }
         }
       }
     },
@@ -1722,7 +2398,11 @@
           "category": "AppMirror",
           "filename": "post-accounts-k8s-v1-apps-appmirrors.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "appmirror,app mirrors,k8s apps,app resource,account resource",
+            "lead": "Creates an AppMirror resource for an application, specifying the desired configuration values for mirroring. Use this to establish mirroring settings tailored to your application's needs."
+          }
         }
       },
       "get": {
@@ -1731,7 +2411,11 @@
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,app resources,field matching,resource collection,k8s apps,app mirrors",
+            "lead": "Retrieves the AppMirror resources for an app, returning a JSON array of all matching resources in the collection. Use this to access specific fields for each resource in your application environment."
+          }
         }
       }
     },
@@ -1742,7 +2426,11 @@
           "category": "AppMirror",
           "filename": "get-accounts-k8s-v1-apps-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,app resource,appMirror collection,appMirror resource,k8s apps",
+            "lead": "Retrieves an AppMirror resource for an app, providing access to the stored configuration details for application mirroring."
+          }
         }
       },
       "put": {
@@ -1751,7 +2439,11 @@
           "category": "AppMirror",
           "filename": "put-accounts-k8s-v1-apps-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "app replacement,k8s apps,resource mirror,desired state,app mirror",
+            "lead": "Modifies an AppMirror resource for an app, preserving key values while replacing the rest of the resource with new data. This is useful when you need to update an AppMirror configuration without altering certain underlying properties."
+          }
         }
       },
       "delete": {
@@ -1760,7 +2452,11 @@
           "category": "AppMirror",
           "filename": "delete-accounts-k8s-v1-apps-appmirrors-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "appMirror removal,appMirror delete,resource deletion,source cluster,mirror relationship",
+            "lead": "Deletes an AppMirror resource for an app, initiating the removal of associated resources on both the source and destination clusters based on the current relationship state."
+          }
         }
       }
     },
@@ -1771,7 +2467,11 @@
           "category": "Volume",
           "filename": "get-accounts-k8s-v1-apps-volumes.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "accounts volumes,k8s apps,resource collection,fields listing,account resource",
+            "lead": "Retrieves a list of volumes for a specified app. Use this to view detailed configurations and properties of each volume associated with the app."
+          }
         }
       }
     },
@@ -1782,7 +2482,11 @@
           "category": "Volume",
           "filename": "get-accounts-k8s-v1-apps-volumes-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "volume resource,volume collection,stored volume,app resource,k8s volumes",
+            "lead": "Retrieves a volume for an app, providing details about the stored volume resource."
+          }
         }
       }
     },
@@ -1793,7 +2497,11 @@
           "category": "Schedule",
           "filename": "post-accounts-k8s-v1-apps-schedules.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account schedule,kubernetes app,app schedule,create schedule,account resource",
+            "lead": "Creates a new schedule for an app, specifying the desired parameters for scheduling tasks or events. Use this to automate app operations according to the defined schedule."
+          }
         }
       },
       "get": {
@@ -1802,7 +2510,11 @@
           "category": "Schedule",
           "filename": "get-accounts-k8s-v1-apps-schedules.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "accounts schedules,k8s schedules,app schedules,resource collection,listing collection",
+            "lead": "Retrieves a list of schedules for an app. Use this to view the scheduling configurations associated with the application."
+          }
         }
       }
     },
@@ -1813,7 +2525,11 @@
           "category": "Schedule",
           "filename": "get-accounts-k8s-v1-apps-schedules-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account schedule,k8s schedule,app schedule,stored schedule,schedule listing",
+            "lead": "Retrieves a stored schedule, allowing you to access and review the schedule configuration details."
+          }
         }
       },
       "put": {
@@ -1822,7 +2538,11 @@
           "category": "Schedule",
           "filename": "put-accounts-k8s-v1-apps-schedules-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,schedule update,account management,app scheduling,modify schedule",
+            "lead": "Modifies a schedule by replacing the stored resource with the supplied JSON request body, while preserving key values that are not user-modifiable."
+          }
         }
       },
       "delete": {
@@ -1831,7 +2551,11 @@
           "category": "Schedule",
           "filename": "delete-accounts-k8s-v1-apps-schedules-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove schedule,k8s schedule,app schedule delete,delete schedule resource,account schedule removal",
+            "lead": "Deletes a schedule, removing the specified Schedule API resource from Astra."
+          }
         }
       }
     },
@@ -1842,7 +2566,11 @@
           "category": "Application Backup",
           "filename": "post-accounts-k8s-v1-apps-appbackups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application backup,account resource,app resource,k8s apps,kubernetes backup",
+            "lead": "Creates an application backup for an app, specifying the desired configuration for the backup resource. Use this to preserve the current state of your application for future recovery or analysis."
+          }
         }
       },
       "get": {
@@ -1851,7 +2579,11 @@
           "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account backups,kubernetes apps,resource collection,app id,account id",
+            "lead": "Retrieves application backups for an app, allowing you to inspect the backup configurations and statuses associated with the application."
+          }
         }
       }
     },
@@ -1862,7 +2594,11 @@
           "category": "Application Backup",
           "filename": "get-accounts-k8s-v1-apps-appbackups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application backup,kubernetes apps,account resource,app collection,stored resource",
+            "lead": "Retrieves an application backup for an app, providing the stored backup resource information in the JSON response body."
+          }
         }
       },
       "delete": {
@@ -1871,7 +2607,11 @@
           "category": "Application Backup",
           "filename": "delete-accounts-k8s-v1-apps-appbackups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application backup,delete backup,container app,app backup removal,kubernetes app,backup data delete",
+            "lead": "Deletes an application backup for an app. Use this endpoint to manage storage space by removing unnecessary or outdated backups."
+          }
         }
       }
     },
@@ -1882,7 +2622,11 @@
           "category": "Application Snapshot",
           "filename": "post-accounts-k8s-v1-apps-appsnaps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application snapshot,create snapshot,k8s apps,account resource,app resource",
+            "lead": "Creates a new application snapshot for an app, capturing the app's current state for backup or recovery purposes."
+          }
         }
       },
       "get": {
@@ -1891,7 +2635,11 @@
           "category": "Application Snapshot",
           "filename": "get-accounts-k8s-v1-apps-appsnaps.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,k8s apps,app snapshots,collection fields,resource limit",
+            "lead": "Retrieves the application snapshots for an app, providing a comprehensive view of the snapshots available for your applications."
+          }
         }
       }
     },
@@ -1902,7 +2650,11 @@
           "category": "Application Snapshot",
           "filename": "get-accounts-k8s-v1-apps-appsnaps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application snapshot,k8s apps,stored snapshot,account resource,appSnap collection",
+            "lead": "Retrieves an application snapshot, providing the stored snapshot data for review or analysis."
+          }
         }
       },
       "delete": {
@@ -1911,7 +2663,11 @@
           "category": "Application Snapshot",
           "filename": "delete-accounts-k8s-v1-apps-appsnaps-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application snapshot,delete snapshot,remove app snapshot,app snapshot removal,delete appSnap",
+            "lead": "Deletes an application snapshot, removing the specified snapshot data from the resource."
+          }
         }
       }
     },
@@ -1922,7 +2678,11 @@
           "category": "Execution Hook",
           "filename": "post-accounts-k8s-v1-apps-executionhooks.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hooks,k8s apps,create execution hook,account resource,app resource",
+            "lead": "Creates a new execution hook for an app to specify the desired values for automated processes or integrations."
+          }
         }
       },
       "get": {
@@ -1931,7 +2691,11 @@
           "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hooks,k8s apps,collection resources,app resource,account resource",
+            "lead": "Retrieves the execution hooks for an app, providing a JSON array of all matching resources in the collection. Use this to view specific fields for each matching resource as needed."
+          }
         }
       }
     },
@@ -1942,7 +2706,11 @@
           "category": "Execution Hook",
           "filename": "get-accounts-k8s-v1-apps-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,matching containers,matching images,kubernetes apps,execution criteria",
+            "lead": "Retrieves an execution hook for an app. Use this to examine the stored execution hook resource and its associated containers and images based on current criteria."
+          }
         }
       },
       "put": {
@@ -1951,7 +2719,11 @@
           "category": "Execution Hook",
           "filename": "put-accounts-k8s-v1-apps-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,resource update,account resource,app resource,stored resource",
+            "lead": "Modifies an execution hook for an app, affecting future application actions that utilize the updated hook."
+          }
         }
       },
       "delete": {
@@ -1960,7 +2732,11 @@
           "category": "Execution Hook",
           "filename": "delete-accounts-k8s-v1-apps-executionhooks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook removal,delete execution hook,remove execution hook,kubernetes app,execution hook delete,execution hook actions",
+            "lead": "Deletes an execution hook for an app, preventing it from running in future actions."
+          }
         }
       }
     },
@@ -1971,7 +2747,11 @@
           "category": "Execution Hook Override",
           "filename": "post-accounts-k8s-v1-apps-executionhookoverrides.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,hook override,app resource,account resource,k8s app",
+            "lead": "Creates an execution hook override resource for an app, specifying the desired values for customization. Use this to tailor execution hooks according to specific application requirements."
+          }
         }
       },
       "get": {
@@ -1980,7 +2760,11 @@
           "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,resource collection,kubernetes apps,account resources,app resources",
+            "lead": "Retrieves the execution hook override resources for an app, providing access to custom configurations that modify application behavior during specific operations."
+          }
         }
       }
     },
@@ -1991,7 +2775,11 @@
           "category": "Execution Hook Override",
           "filename": "get-accounts-k8s-v1-apps-executionhookoverrides-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,execution override,execution hook override,k8s apps,account resource,app resource",
+            "lead": "Retrieves an execution hook override resource, providing the stored configuration details for integration and automation workflows."
+          }
         }
       },
       "put": {
@@ -2000,7 +2788,11 @@
           "category": "Execution Hook Override",
           "filename": "put-accounts-k8s-v1-apps-executionhookoverrides-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook,hook override,replace resource,app execution,netapp hook,execution enable",
+            "lead": "Modifies an execution hook override resource by replacing the entire stored resource with the provided JSON request body. Use this operation to update execution hooks that apply to a specified application."
+          }
         }
       },
       "delete": {
@@ -2009,7 +2801,11 @@
           "category": "Execution Hook Override",
           "filename": "delete-accounts-k8s-v1-apps-executionhookoverrides-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "execution hook override,override removal,delete execution hook,execution hook enable,hook type netapp",
+            "lead": "Deletes an execution hook override resource. Use this to remove custom configurations for execution hooks within your application."
+          }
         }
       }
     },
@@ -2020,7 +2816,11 @@
           "category": "LDAP Group",
           "filename": "get-accounts-core-v1-ldapgroups.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "ldap groups,account resources,list collection,field filter,resource limit",
+            "lead": "Retrieves a list of LDAP groups, providing access to group configurations for management and integration purposes."
+          }
         }
       }
     },
@@ -2031,7 +2831,11 @@
           "category": "LDAP Group",
           "filename": "get-accounts-core-v1-ldapgroups-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "ldap resource,ldap groups,account resource,ldap collection,ldap group id",
+            "lead": "Retrieves an LDAP group, providing the stored LDAP resource configuration details."
+          }
         }
       }
     },
@@ -2042,7 +2846,11 @@
           "category": "LDAP User",
           "filename": "get-accounts-core-v1-ldapusers.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "ldap users,account id,core v1,list ldap users,user management,resource limit",
+            "lead": "Retrieves a list of LDAP users, providing a comprehensive view of all users in the LDAP directory."
+          }
         }
       }
     },
@@ -2053,7 +2861,11 @@
           "category": "LDAP User",
           "filename": "get-accounts-core-v1-ldapusers-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "ldap users,ldap resource,account id,ldap user collection,stored ldap",
+            "lead": "Retrieves an LDAP user, providing the stored resource configuration for user management and authentication tasks."
+          }
         }
       }
     },
@@ -2064,7 +2876,11 @@
           "category": "Task",
           "filename": "get-accounts-core-v1-tasks.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account tasks,field selection,resource collection,field filter,maximum resources,task list",
+            "lead": "Retrieves all tasks within the collection, providing a complete view of the available task resources. Use this to identify and manage tasks efficiently in your workflow."
+          }
         }
       }
     },
@@ -2075,7 +2891,11 @@
           "category": "Task",
           "filename": "get-accounts-core-v1-tasks-.html",
           "explorer": false,
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "tasks,task resource,account task,task collection,task details",
+            "lead": "Retrieves a task, providing details about the stored Task API resource for monitoring and management purposes."
+          }
         }
       }
     },
@@ -2085,7 +2905,11 @@
           "title": "Create a new user for a group",
           "category": "User",
           "filename": "post-accounts-core-v1-groups-users.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "create user,account management,group management,user resource,user creation,group access",
+            "lead": "Creates a new user for a group, allowing you to manage group memberships and permissions effectively."
+          }
         }
       },
       "get": {
@@ -2093,7 +2917,11 @@
           "title": "List the users for a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,group resource,collection fields,json array,resource listing,metadata object",
+            "lead": "Retrieves the users for a group, providing a JSON array of all matching resources in the collection."
+          }
         }
       }
     },
@@ -2103,7 +2931,11 @@
           "title": "Retrieve a user for a group",
           "category": "User",
           "filename": "get-accounts-core-v1-groups-users-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account user,group user,user resource,account group,user collection",
+            "lead": "Retrieves a user for a group, providing access to the stored User API resource details."
+          }
         }
       },
       "put": {
@@ -2111,7 +2943,11 @@
           "title": "Modify a user for a group",
           "category": "User",
           "filename": "put-accounts-core-v1-groups-users-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "update user,replacement operation,modify resource,group user management,account resource",
+            "lead": "Modifies a user for a group by replacing the entire stored resource with the provided JSON request body. Use this endpoint to update user details while preserving non-modifiable key values."
+          }
         }
       },
       "delete": {
@@ -2119,7 +2955,11 @@
           "title": "Delete a user for a group",
           "category": "User",
           "filename": "delete-accounts-core-v1-groups-users-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove user,delete user,role bindings,user credentials,notification marks,password hash",
+            "lead": "Deletes a user for a group, removing the specified User API resource and associated resources such as notification marks, tokens, and role bindings."
+          }
         }
       }
     },
@@ -2129,7 +2969,11 @@
           "title": "Create a new role binding for a user in a group",
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-groups-users-rolebindings.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,group roles,user roles,account role binding,user role binding",
+            "lead": "Creates a new role binding for a user in a group, establishing permissions for the user to perform actions within the specified group context."
+          }
         }
       },
       "get": {
@@ -2137,7 +2981,11 @@
           "title": "List the role bindings for a user in a group",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-users-rolebindings.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role bindings,resource collection,user role,group resource,account resource",
+            "lead": "Retrieves the role bindings for a user within a group. Use this to view the roles assigned to a user and manage access permissions effectively."
+          }
         }
       }
     },
@@ -2147,7 +2995,11 @@
           "title": "Retrieve a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-groups-users-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,read role binding,group role binding,user role binding,role binding resource,role binding collection",
+            "lead": "Retrieves a role binding for a user in a group, providing the role associations specific to the user or group context. Use this to review the roles assigned to a user or group within your account."
+          }
         }
       },
       "put": {
@@ -2155,7 +3007,11 @@
           "title": "Modify a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-groups-users-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,role binding,group resource,user role,account resource,stored resource",
+            "lead": "Modifies a role binding for a user in a group, updating the stored resource with the provided details while maintaining key values that are not user-modifiable."
+          }
         }
       },
       "delete": {
@@ -2163,7 +3019,11 @@
           "title": "Delete a role binding for a user in a group",
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-groups-users-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,remove role,delete user,group resource,user role,account role",
+            "lead": "Deletes a role binding for a user in a group, removing the specified role-binding association from the group."
+          }
         }
       }
     },
@@ -2173,7 +3033,11 @@
           "title": "Create a new token for a user in a group",
           "category": "Token",
           "filename": "post-accounts-core-v1-groups-users-tokens.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "token creation,account token,user token,group token,user management",
+            "lead": "Creates a new token for a user in a group, specifying the desired values to authenticate and authorize group actions."
+          }
         }
       },
       "get": {
@@ -2181,7 +3045,11 @@
           "title": "List the tokens for a user in a group",
           "category": "Token",
           "filename": "get-accounts-core-v1-groups-users-tokens.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account tokens,group users,user tokens,resource collection,field matching,sort order",
+            "lead": "Retrieves the tokens associated with a user in a group, providing access details for authentication and authorization purposes."
+          }
         }
       }
     },
@@ -2191,7 +3059,11 @@
           "title": "Retrieve a token for a user in a group",
           "category": "Token",
           "filename": "get-accounts-core-v1-groups-users-tokens-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,group resource,user resource,token collection,stored token",
+            "lead": "Retrieves a token for a user in a group, returning the stored API token resource. Use this to authenticate and access group-specific resources securely."
+          }
         }
       },
       "put": {
@@ -2199,7 +3071,11 @@
           "title": "Modify a token for a user in a group",
           "category": "Token",
           "filename": "put-accounts-core-v1-groups-users-tokens-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,account group,user token,core group,user replace,token id",
+            "lead": "Modifies a token for a user in a group, updating the stored resource based on the provided JSON request body."
+          }
         }
       },
       "delete": {
@@ -2207,7 +3083,11 @@
           "title": "Delete a token for a user in a group",
           "category": "Token",
           "filename": "delete-accounts-core-v1-groups-users-tokens-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove token,delete token,credential removal,token deletion,account token removal",
+            "lead": "Deletes a token for a user in a group. This action removes the specified token API resource and its associated credential from the service."
+          }
         }
       }
     },
@@ -2217,7 +3097,11 @@
           "title": "List the unread notifications for a user in a group",
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-groups-users-unreadnotifications.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "unread notifications,user notifications,notification list,resource collection,field filtering",
+            "lead": "Retrieves unread notifications for a user in a group, providing a JSON array of the matching resources."
+          }
         }
       }
     },
@@ -2227,7 +3111,11 @@
           "title": "Retrieve an unread notification for a user in a group",
           "category": "Unread Notification",
           "filename": "get-accounts-core-v1-groups-users-unreadnotifications-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account notifications,unread notifications,user notifications,notification resource,group notifications",
+            "lead": "Retrieves an unread notification for a user in a group, providing the details of notifications that have not yet been acknowledged."
+          }
         }
       },
       "delete": {
@@ -2235,7 +3123,11 @@
           "title": "Delete an unread notification for a user in a group",
           "category": "Unread Notification",
           "filename": "delete-accounts-core-v1-groups-users-unreadnotifications-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove notification,unread notification,delete notification,user notification,notification management,notification removal",
+            "lead": "Deletes an unread notification for a user in a group. Use this to manage and maintain the notification status within group interactions."
+          }
         }
       }
     },
@@ -2289,7 +3181,11 @@
           "title": "Create a new group for a user",
           "category": "Group",
           "filename": "post-accounts-core-v1-users-groups.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "create group,user groups,group resource,user account,group creation",
+            "lead": "Creates a new group for a user, specifying the desired values for the group resource. Use this endpoint to organize users into groups for better management and access control."
+          }
         }
       },
       "get": {
@@ -2297,7 +3193,11 @@
           "title": "List groups for a user",
           "category": "Group",
           "filename": "get-accounts-core-v1-users-groups.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account groups,users groups,user fields,resource collection,matching resources",
+            "lead": "Retrieves a list of groups associated with a user, providing access to detailed group information for management or analysis purposes."
+          }
         }
       }
     },
@@ -2307,7 +3207,11 @@
           "title": "Retrieve a group for a user",
           "category": "Group",
           "filename": "get-accounts-core-v1-users-groups-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,user resource,group collection,stored group,group resource",
+            "lead": "Retrieves a group for a user, providing the stored group information in a structured format."
+          }
         }
       },
       "put": {
@@ -2315,7 +3219,11 @@
           "title": "Modify a group for a user",
           "category": "Group",
           "filename": "put-accounts-core-v1-users-groups-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,group management,user groups,user resource,account resource,modify group",
+            "lead": "Modifies a group for a user, updating the group configuration based on the provided JSON request body."
+          }
         }
       },
       "delete": {
@@ -2323,7 +3231,11 @@
           "title": "Delete a group for a user",
           "category": "Group",
           "filename": "delete-accounts-core-v1-users-groups-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "remove group,group resource,role bindings,user group,user resource,account resource",
+            "lead": "Deletes a group for a user, removing the specified Group API resource. Associated resources, such as role bindings referring to the group, are also deleted."
+          }
         }
       }
     },
@@ -2333,7 +3245,11 @@
           "title": "Create a new role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "post-accounts-core-v1-users-groups-rolebindings.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,account role,user role,group role,core role binding,role creation",
+            "lead": "Creates a role binding for a group associated with a user. Use this to assign specific permissions to a group within the Astra API environment."
+          }
         }
       },
       "get": {
@@ -2341,7 +3257,11 @@
           "title": "List the role bindings for a group associated with a user",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-groups-rolebindings.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,role bindings,user groups,resource collection,matching resources",
+            "lead": "Retrieves the role bindings for a group associated with a user, helping you understand the access permissions assigned to that group."
+          }
         }
       }
     },
@@ -2351,7 +3271,11 @@
           "title": "Retrieve a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "get-accounts-core-v1-users-groups-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding,account role,group role,user role,role permissions,role access",
+            "lead": "Retrieves a role binding for a group associated with a user, providing details of the role binding configuration linked to the specified group."
+          }
         }
       },
       "put": {
@@ -2359,7 +3283,11 @@
           "title": "Modify a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "put-accounts-core-v1-users-groups-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "replace resource,user groups,role bindings,group roles,resource modification",
+            "lead": "Modifies a role binding for a group associated with a user, allowing you to update access permissions for specific user groups."
+          }
         }
       },
       "delete": {
@@ -2367,7 +3295,11 @@
           "title": "Delete a role binding for a group associated with a user",
           "category": "Role Binding",
           "filename": "delete-accounts-core-v1-users-groups-rolebindings-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "role binding removal,user deletion,group role bindings,account management,local auth provider,cloud central provider",
+            "lead": "Deletes a role binding for a group associated with a user. Use this to manage access and permissions within your system effectively."
+          }
         }
       }
     },
@@ -2421,7 +3353,11 @@
           "title": "List the application assets for an application backup",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-appbackups-appassets.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "topology resources,account resources,app assets,app backup,id fields,collection limit",
+            "lead": "Retrieves application assets for an application backup, providing a JSON array of all matching resources in the collection. Use this to view specific fields for each resource in the order specified."
+          }
         }
       }
     },
@@ -2431,7 +3367,11 @@
           "title": "Retrieve an application asset from an application backup",
           "category": "Application Asset",
           "filename": "get-accounts-topology-v1-appbackups-appassets-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application asset,app asset,app backup,account resource,app asset collection",
+            "lead": "Retrieves an application asset from an application backup. Use this to access the stored asset configuration for recovery or analysis purposes."
+          }
         }
       }
     },
@@ -2441,7 +3381,11 @@
           "title": "List the application assets from an application backup for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appbackups-appassets.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,k8s apps,app backups,collection fields,resource limit",
+            "lead": "Retrieves application assets from an application backup, allowing you to access the details of resources included in the backup."
+          }
         }
       }
     },
@@ -2451,7 +3395,11 @@
           "title": "Retrieve an application asset from an application backup for an app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appbackups-appassets-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resource,app resource,app backup,app asset,stored resource,json response",
+            "lead": "Retrieves an application asset from an application backup, providing the stored resource in the JSON response body. Use this endpoint to access specific assets for recovery or analysis."
+          }
         }
       }
     },
@@ -2461,7 +3409,11 @@
           "title": "List application assets for an application snapshot",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appsnaps-appassets.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "account resources,app resources,k8s apps,app snapshots,app assets",
+            "lead": "Retrieves application assets for an application snapshot, providing a detailed view of resources associated with the snapshot."
+          }
         }
       }
     },
@@ -2471,7 +3423,11 @@
           "title": "Retrieve an application asset for an application snapshot and app",
           "category": "Application Asset",
           "filename": "get-accounts-k8s-v1-apps-appsnaps-appassets-.html",
-          "subcategory": null
+          "subcategory": null,
+          "ai-gen": {
+            "keywords": "application asset,app resource,app snap,app asset,stored asset,k8s application",
+            "lead": "Retrieves an application asset for an application snapshot, providing the stored asset details in the JSON response body."
+          }
         }
       }
     }
