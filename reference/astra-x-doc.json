@@ -137,7 +137,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "certificate creation,account certificate,certificate resource,create certificate,account id",
-            "lead": "Creates a new certificate for the Certificate API resource, allowing you to specify the desired values for secure communications."
+            "lead": "Creates a new certificate for the Certificate API resource. Use this to specify the desired values for secure communications."
           }
         }
       },
@@ -206,7 +206,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "credentials,create credentials,account credentials,credential resource,account id",
-            "lead": "Creates a new credential, specifying the desired values for the Credential API resource. This allows you to manage access and authentication settings effectively."
+            "lead": "Creates a new credential, specifying the desired values for the Credential API resource. Use this to manage access and authentication settings effectively."
           }
         }
       },
@@ -415,7 +415,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "replace resource,role bindings,account group,modify role,update role bindings",
-            "lead": "Modifies a role binding for a group, allowing you to update access permissions associated with specific user groups within your environment."
+            "lead": "Modifies a role binding for a group. Use this to update access permissions associated with specific user groups within your environment."
           }
         }
       },
@@ -2528,7 +2528,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "account schedule,k8s schedule,app schedule,stored schedule,schedule listing",
-            "lead": "Retrieves a stored schedule, allowing you to access and review the schedule configuration details."
+            "lead": "Retrieves a stored schedule. Use this to access and review the schedule configuration details."
           }
         }
       },
@@ -2582,7 +2582,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "account backups,kubernetes apps,resource collection,app id,account id",
-            "lead": "Retrieves application backups for an app, allowing you to inspect the backup configurations and statuses associated with the application."
+            "lead": "Retrieves application backups for an app. Use this to inspect the backup configurations and statuses associated with the application."
           }
         }
       }
@@ -2908,7 +2908,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "create user,account management,group management,user resource,user creation,group access",
-            "lead": "Creates a new user for a group, allowing you to manage group memberships and permissions effectively."
+            "lead": "Creates a new user for a group. Use this to manage group memberships and permissions effectively."
           }
         }
       },
@@ -3286,7 +3286,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "replace resource,user groups,role bindings,group roles,resource modification",
-            "lead": "Modifies a role binding for a group associated with a user, allowing you to update access permissions for specific user groups."
+            "lead": "Modifies a role binding for a group associated with a user. Use this to update access permissions for specific user groups."
           }
         }
       },
@@ -3384,7 +3384,7 @@
           "subcategory": null,
           "ai-gen": {
             "keywords": "account resources,k8s apps,app backups,collection fields,resource limit",
-            "lead": "Retrieves application assets from an application backup, allowing you to access the details of resources included in the backup."
+            "lead": "Retrieves application assets from an application backup. Use this to access the details of resources included in the backup."
           }
         }
       }
