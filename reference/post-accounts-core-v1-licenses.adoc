@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-core-v1-licenses.html'
+keywords: 'license creation,account license,license resource,create license,license values'
 summary: 'Create a new license'
 ---
 
 = Create a new license
 :imagesdir: ../media/
 
+[.lead]
+Creates a new license, specifying the desired values for the License API resource. Use this endpoint to manage licensing needs effectively within your environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
 
-
+== Usage notes
 
 Indicates the desired values for the License API resource to be created.
 

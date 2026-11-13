@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters.html'
+keywords: 'managed clusters,account topology,resource collection,field filter,field limit'
 summary: 'List all managed clusters'
 ---
 
 = List all managed clusters
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all managed clusters in Astra API, providing a list of clusters that match the specified criteria. Use this to view and manage the clusters within your environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

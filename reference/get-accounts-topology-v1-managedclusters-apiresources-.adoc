@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-apiresources-.html'
+keywords: 'account resource,managed cluster,api resource,resource collection,resource id'
 summary: 'Retrieve a K8s API resource'
 ---
 
 = Retrieve a K8s API resource
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a K8s API resource, providing the specific resource in the JSON response body for further inspection or integration.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources/{apiResource_id}`#
 
-
+== Usage notes
 
 Returns the specific API resource in the JSON response body.
 

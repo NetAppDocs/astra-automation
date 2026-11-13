@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-users-.html'
+keywords: 'account user,account resource,user collection,stored user,core user'
 summary: 'Retrieve a user'
 ---
 
 = Retrieve a user
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a user, returning the stored User API resource in the JSON response body. Use this to access user details for management and integration tasks.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}`#
 
-
+== Usage notes
 
 Returns the stored User API resource in the JSON response body.
 

@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/group_endpoints.html'
+keywords: 'astra groups,group management,group membership,user groups,group creation'
 summary: 'Astra API (ACC) group endpoints'
 ---
 
 = Astra API (ACC) group endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage groups in Astra Control, including the users that belong to them.
 
 The Group API provides access to Astra group resources.
 

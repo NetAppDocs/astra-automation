@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/delete-accounts-core-v1-groups-users-unreadnotifications-.html'
+keywords: 'remove notification,unread notification,delete notification,user notification,notification management,notification removal'
 summary: 'Delete an unread notification for a user in a group'
 ---
 
 = Delete an unread notification for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Deletes an unread notification for a user in a group. Use this to manage and maintain the notification status within group interactions.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 
-
+== Usage notes
 
 Removes the specified Unread Notification API resource.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/delete-accounts-core-v1-groups-users-.html'
+keywords: 'remove user,delete user,role bindings,user credentials,notification marks,password hash'
 summary: 'Delete a user for a group'
 ---
 
 = Delete a user for a group
 :imagesdir: ../media/
 
+[.lead]
+Deletes a user for a group, removing the specified User API resource and associated resources such as notification marks, tokens, and role bindings.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}`#
 
-
+== Usage notes
 
 Removes the specified User API resource.
 

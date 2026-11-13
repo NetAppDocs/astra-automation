@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-hooksources-.html'
+keywords: 'replace resource,source hook,snapshot impact,md5 checksum,execution hooks'
 summary: 'Modify a hook source'
 ---
 
 = Modify a hook source
 :imagesdir: ../media/
 
+[.lead]
+Modifies a hook source in Astra API. You might use this endpoint to update the source code for execution hooks associated with application snapshots.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

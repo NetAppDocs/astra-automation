@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-certificates-.html'
+keywords: 'certificate resource,certificate collection,stored certificate,account certificate,certificate id'
 summary: 'Retrieve a certificate'
 ---
 
 = Retrieve a certificate
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a certificate to provide the stored Certificate API resource details in the response.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
 
-
+== Usage notes
 
 Returns the stored Certificate API resource in the JSON response body.
 

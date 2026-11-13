@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-upgrades-.html'
+keywords: 'upgrade resource,replacing resource,schedule upgrade,run upgrade,desired state'
 summary: 'Modify an upgrade'
 ---
 
 = Modify an upgrade
 :imagesdir: ../media/
 
+[.lead]
+Modifies an upgrade by replacing the entire stored resource with the supplied JSON request body. Use this endpoint to schedule or run upgrades based on the desired state.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

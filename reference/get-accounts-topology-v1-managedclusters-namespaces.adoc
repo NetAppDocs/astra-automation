@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-namespaces.html'
+keywords: 'account topology,managed cluster,namespaces list,resource collection,field filter'
 summary: 'List the namespaces for a managed cluster'
 ---
 
 = List the namespaces for a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the namespaces for a managed cluster. Use this to view the namespaces associated with the cluster and manage them effectively.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/namespaces`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

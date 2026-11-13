@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-k8s-v1-apps-executionhookoverrides.html'
+keywords: 'execution hook,resource collection,kubernetes apps,account resources,app resources'
 summary: 'List the execution hook override resources for an app'
 ---
 
 = List the execution hook override resources for an app
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the execution hook override resources for an app, providing access to custom configurations that modify application behavior during specific operations.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

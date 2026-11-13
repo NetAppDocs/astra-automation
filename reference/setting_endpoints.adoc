@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/setting_endpoints.html'
+keywords: 'account settings,key value settings,feature settings,setting management,astra configuration'
 summary: 'Astra API (ACC) setting endpoints'
 ---
 
 = Astra API (ACC) setting endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage account settings, which are key/value pairs that configure a feature in an Astra Control account.
 
 An account setting is a collection of key/value pairs that are important for a known feature in an Astra account. The Setting API provides access to important information about an account setting.
 

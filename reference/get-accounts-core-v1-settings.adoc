@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-settings.html'
+keywords: 'account settings,resource collection,field filtering,resource limit,sort order'
 summary: 'List all settings'
 ---
 
 = List all settings
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of settings within the Astra API, providing the current configurations for each resource in the collection.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

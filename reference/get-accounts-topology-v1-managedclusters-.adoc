@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-.html'
+keywords: 'managed cluster,cluster resource,account resource,cluster topology,cluster collection'
 summary: 'Retrieve a managed cluster'
 ---
 
 = Retrieve a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a managed cluster, providing the details stored in the Managed Cluster API resource. Use this information to understand the current configuration and status of your cluster.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}`#
 
-
+== Usage notes
 
 Returns the stored Managed Cluster API resource in the JSON response body.
 

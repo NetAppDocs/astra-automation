@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-core-v1-groups-users-rolebindings.html'
+keywords: 'role bindings,resource collection,user role,group resource,account resource'
 summary: 'List the role bindings for a user in a group'
 ---
 
 = List the role bindings for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the role bindings for a user within a group. Use this to view the roles assigned to a user and manage access permissions effectively.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

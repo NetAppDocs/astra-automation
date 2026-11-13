@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-topology-v1-appbackups-appassets.html'
+keywords: 'topology resources,account resources,app assets,app backup,id fields,collection limit'
 summary: 'List the application assets for an application backup'
 ---
 
 = List the application assets for an application backup
 :imagesdir: ../media/
 
+[.lead]
+Retrieves application assets for an application backup, providing a JSON array of all matching resources in the collection. Use this to view specific fields for each resource in the order specified.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}/appAssets`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

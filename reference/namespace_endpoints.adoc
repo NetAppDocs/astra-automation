@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/namespace_endpoints.html'
+keywords: 'namespaces,kubernetes namespaces,cluster namespaces,namespace details,read-only access'
 summary: 'Astra API (ACC) namespace endpoints'
 ---
 
 = Astra API (ACC) namespace endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+View the namespaces that belong to a cluster. These endpoints are read-only.
 
 The Namespace API provides read-only access to namespace resources in order to describe namespaces associated with a given cluster.
 

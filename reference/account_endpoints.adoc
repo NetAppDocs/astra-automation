@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/account_endpoints.html'
+keywords: 'astra accounts,tenant accounts,multitenant,account management,account creation'
 summary: 'Astra API (ACC) account endpoints'
 ---
 
 = Astra API (ACC) account endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage the accounts that isolate tenants in a multitenant Astra Control environment.
 
 The Account API represents isolated tenants in a multitenant system.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-certificates-.html'
+keywords: 'certificate removal,account certificate,delete certificate,certificate management,remove certificate'
 summary: 'Delete a certificate'
 ---
 
 = Delete a certificate
 :imagesdir: ../media/
 
+[.lead]
+Deletes a certificate. Use this endpoint to remove a specific Certificate API resource when it is no longer needed.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates/{certificate_id}`#
 
-
+== Usage notes
 
 Removes the specified Certificate API resource.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-clouds-clusters-clusternodes.html'
+keywords: 'cloud topology,cluster nodes,resource collection,matching resources,field request'
 summary: 'List the cluster nodes for a cloud'
 ---
 
 = List the cluster nodes for a cloud
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the cluster nodes for a cloud, providing details on the available nodes within the specified cloud environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/clusterNodes`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

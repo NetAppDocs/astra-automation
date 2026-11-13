@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-storageclasses-.html'
+keywords: 'managed clusters,storage class,storage topology,account resource,cluster resource,storage resource'
 summary: 'Retrieve a storage class for a managed cluster'
 ---
 
 = Retrieve a storage class for a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a storage class for a managed cluster, providing details on the stored configurations for resource management.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/storageClasses/{storageClass_id}`#
 
-
+== Usage notes
 
 Returns the stored Storage Class API resource in the JSON response body.
 

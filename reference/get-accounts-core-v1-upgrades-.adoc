@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-upgrades-.html'
+keywords: 'upgrade resource,upgrade details,upgrade collection,account upgrade,upgrade json'
 summary: 'Retrieve an upgrade'
 ---
 
 = Retrieve an upgrade
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an upgrade resource, providing the stored upgrade configuration for review or management purposes.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades/{upgrade_id}`#
 
-
+== Usage notes
 
 Returns the stored Upgrade API resource in the JSON response body.
 

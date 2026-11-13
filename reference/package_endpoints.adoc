@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/package_endpoints.html'
+keywords: 'software packages,package registration,installable packages,upgrade packages,package management'
 summary: 'Astra API (ACC) package endpoints'
 ---
 
 = Astra API (ACC) package endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage the installable software packages registered in Astra Control. The packages you register determine which upgrades are available.
 
 The Package API represents installable software packages.
 

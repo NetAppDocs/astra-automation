@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-clouds-clusters-.html'
+keywords: 'cluster resource,cloud cluster,account resource,topology cloud,cluster collection'
 summary: 'Retrieve a cluster for a cloud'
 ---
 
 = Retrieve a cluster for a cloud
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a cluster for a cloud, providing access to the stored Cluster API resource data.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}`#
 
-
+== Usage notes
 
 Returns the stored Cluster API resource in the JSON response body.
 

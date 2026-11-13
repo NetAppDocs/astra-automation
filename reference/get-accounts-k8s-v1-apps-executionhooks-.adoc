@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-k8s-v1-apps-executionhooks-.html'
+keywords: 'execution hook,matching containers,matching images,kubernetes apps,execution criteria'
 summary: 'Retrieve an execution hook for an app'
 ---
 
 = Retrieve an execution hook for an app
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an execution hook for an app. Use this to examine the stored execution hook resource and its associated containers and images based on current criteria.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
 
-
+== Usage notes
 
 Returns the stored Execution Hook API resource in the JSON response body. Also populates matchingContainers and matchingImages based on the current matchingCriteria and the defined app.
 

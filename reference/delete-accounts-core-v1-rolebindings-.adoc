@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-rolebindings-.html'
+keywords: 'role binding,delete role,remove role binding,user deletion,local auth provider,cloud central auth provider'
 summary: 'Delete a role binding'
 ---
 
 = Delete a role binding
 :imagesdir: ../media/
 
+[.lead]
+Deletes a role binding, removing the specified API resource from the system.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Removes the specified Role Binding API resource.
 

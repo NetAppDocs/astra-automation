@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/application_asset_endpoints.html'
+keywords: 'application assets,application state,state information,managed applications,asset collections'
 summary: 'Astra API (ACC) application asset endpoints'
 ---
 
 = Astra API (ACC) application asset endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Access the internal collections of state information that Astra Control uses to manage your applications.
 
 The Application Asset API provides access to internal collections of state information used to manage applications.
 

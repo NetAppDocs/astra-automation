@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-users-unreadnotifications-.html'
+keywords: 'unread notifications,user notifications,notification list,account notifications,user unread,notification resource'
 summary: 'Retrieve an unread notification'
 ---
 
 = Retrieve an unread notification
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an unread notification, providing the stored notification details for review or action.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 
-
+== Usage notes
 
 Returns the stored Unread Notification API resource in the JSON response body.
 

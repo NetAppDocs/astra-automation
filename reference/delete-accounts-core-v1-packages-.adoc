@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-packages-.html'
+keywords: 'remove package,package resource,delete package,account id,package id'
 summary: 'Delete a package'
 ---
 
 = Delete a package
 :imagesdir: ../media/
 
+[.lead]
+Deletes a package, removing the specified Package API resource from the system.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages/{package_id}`#
 
-
+== Usage notes
 
 Removes the specified Package API resource.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-core-v1-groups-users-unreadnotifications.html'
+keywords: 'unread notifications,user notifications,notification list,resource collection,field filtering'
 summary: 'List the unread notifications for a user in a group'
 ---
 
 = List the unread notifications for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Retrieves unread notifications for a user in a group, providing a JSON array of the matching resources.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

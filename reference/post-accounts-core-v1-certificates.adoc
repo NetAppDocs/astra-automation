@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-core-v1-certificates.html'
+keywords: 'certificate creation,account certificate,certificate resource,create certificate,account id'
 summary: 'Create a new certificate'
 ---
 
 = Create a new certificate
 :imagesdir: ../media/
 
+[.lead]
+Creates a new certificate for the Certificate API resource. Use this to specify the desired values for secure communications.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates`#
 
-
+== Usage notes
 
 Indicates the desired values for the Certificate API resource to be created.
 

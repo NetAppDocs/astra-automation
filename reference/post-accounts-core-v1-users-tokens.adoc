@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-core-v1-users-tokens.html'
+keywords: 'account token,create token,user token,core token,user identifier,account identifier'
 summary: 'Create a new token for a user'
 ---
 
 = Create a new token for a user
 :imagesdir: ../media/
 
+[.lead]
+Creates a new token for a user, specifying the values needed for the Token API resource. Use this when you need to authenticate and access Astra API services securely.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens`#
 
-
+== Usage notes
 
 Indicates desired values for the Token API resource to be created.
 

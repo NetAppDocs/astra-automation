@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-licenses.html'
+keywords: 'licenses,account licenses,license list,resource collection,license fields,account resources'
 summary: 'List all licenses'
 ---
 
 = List all licenses
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all licenses in the collection, returning a JSON array of the matching resources. You can specify individual fields in the request to customize the information returned for each license.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

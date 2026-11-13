@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/metrics_endpoints.html'
+keywords: 'account metrics,usage metrics,astra control metrics,metrics retrieval,account monitoring'
 summary: 'Astra API (ACC) metrics endpoints'
 ---
 
 = Astra API (ACC) metrics endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Retrieve metrics for an Astra Control account to monitor its activity and resource usage.
 
 The Metrics API represents metrics associated with a given account.
 

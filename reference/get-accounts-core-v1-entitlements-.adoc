@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-entitlements-.html'
+keywords: 'account entitlement,entitlement resource,entitlement collection,account information,stored entitlement'
 summary: 'Retrieve an entitlement'
 ---
 
 = Retrieve an entitlement
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an entitlement, providing the stored Entitlement API resource in the JSON response body.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/entitlements/{entitlement_id}`#
 
-
+== Usage notes
 
 Returns the stored Entitlement API resource in the JSON response body.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-hooksources.html'
+keywords: 'hook sources,resource collection,field filter,field limit,account resource'
 summary: 'List all hook sources'
 ---
 
 = List all hook sources
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all hook sources in the collection. Use this to view the available fields for each resource as specified in your request.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

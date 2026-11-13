@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v2-managedclusters-apps-.html'
+keywords: 'stored app,app resource,managed cluster,app collection,account resource'
 summary: 'Retrieve an app for a managed cluster'
 ---
 
 = Retrieve an app for a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an app for a managed cluster, providing the stored App API resource details in the JSON response body.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v2/managedClusters/{managedCluster_id}/apps/{app_id}`#
 
-
+== Usage notes
 
 Returns the stored App API resource in the JSON response body.
 

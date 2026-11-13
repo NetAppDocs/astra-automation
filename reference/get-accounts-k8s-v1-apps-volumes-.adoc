@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-k8s-v1-apps-volumes-.html'
+keywords: 'volume resource,volume collection,stored volume,app resource,k8s volumes'
 summary: 'Retrieve a volume for an app'
 ---
 
 = Retrieve a volume for an app
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a volume for an app, providing details about the stored volume resource.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/volumes/{volume_id}`#
 
-
+== Usage notes
 
 Returns the stored Volume API resource in the JSON response body.
 

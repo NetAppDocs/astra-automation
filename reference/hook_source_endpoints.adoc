@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/hook_source_endpoints.html'
+keywords: 'hook sources,shared hook source,execution hooks,hook management,reusable hooks'
 summary: 'Astra API (ACC) hook source endpoints'
 ---
 
 = Astra API (ACC) hook source endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage hook sources separately from execution hooks so that several hooks can share one source. Updating a shared source applies the change everywhere it is used.
 
 The Hook Source API enables simple management of hook sources separate from the management of the execution hook resources. For example, a single hook source can be referenced by multiple execution hooks to avoid duplicate hook sources and allow a single API call to update one hook source, even if it is used by multiple execution hook resources.
 

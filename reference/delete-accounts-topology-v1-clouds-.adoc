@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-topology-v1-clouds-.html'
+keywords: 'cloud instance,deletion,non-managed clusters,non-managed volumes,cloud id'
 summary: 'Delete a cloud'
 ---
 
 = Delete a cloud
 :imagesdir: ../media/
 
+[.lead]
+Deletes the requested cloud instance along with any non-managed clusters and volumes associated with it. Use this operation to remove cloud resources that are no longer needed.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}`#
 
-
+== Usage notes
 
 Deletes the requested cloud instance and any non-managed clusters and volumes associated with that specific cloud.
 

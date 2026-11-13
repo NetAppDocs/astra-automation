@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/unread_notification_endpoints.html'
+keywords: 'unread notifications,notification status,mark as read,user notifications,notification tracking'
 summary: 'Astra API (ACC) unread notification endpoints'
 ---
 
 = Astra API (ACC) unread notification endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Find the notifications that a user hasn't read yet and mark them as read.
 
 The Unread Notification API provides information on notifications that have not been read by a given user and to allow them to be marked as read.
 

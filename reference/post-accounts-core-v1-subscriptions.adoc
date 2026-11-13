@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-core-v1-subscriptions.html'
+keywords: 'subscription,create subscription,account subscription,account id,subscription resource'
 summary: 'Create a new subscription'
 ---
 
 = Create a new subscription
 :imagesdir: ../media/
 
+[.lead]
+Creates a new subscription, specifying the desired values for the Subscription API resource. Use this to initiate a subscription with customized settings tailored to your requirements.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions`#
 
-
+== Usage notes
 
 Indicates desired values for the Subscription API resource to be created.
 

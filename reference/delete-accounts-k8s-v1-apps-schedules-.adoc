@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-k8s-v1-apps-schedules-.html'
+keywords: 'remove schedule,k8s schedule,app schedule delete,delete schedule resource,account schedule removal'
 summary: 'Delete a schedule'
 ---
 
 = Delete a schedule
 :imagesdir: ../media/
 
+[.lead]
+Deletes a schedule, removing the specified Schedule API resource from Astra.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/schedules/{schedule_id}`#
 
-
+== Usage notes
 
 Removes the specified Schedule API resource.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-executionhooks.html'
+keywords: 'execution hooks,account resources,matching resources,collection fields,resource filter'
 summary: 'List all execution hooks'
 ---
 
 = List all execution hooks
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all execution hooks, providing a JSON array of resources that match the specified criteria. Use this to view detailed information about each hook in the collection.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/executionHooks`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

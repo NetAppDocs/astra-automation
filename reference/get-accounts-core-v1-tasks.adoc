@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-tasks.html'
+keywords: 'account tasks,field selection,resource collection,field filter,maximum resources,task list'
 summary: 'List all tasks'
 ---
 
 = List all tasks
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all tasks within the collection, providing a complete view of the available task resources. Use this to identify and manage tasks efficiently in your workflow.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/tasks`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

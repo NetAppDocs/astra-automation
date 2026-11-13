@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-licenses-.html'
+keywords: 'license resource,license collection,account resource,license id,account id'
 summary: 'Retrieve a license'
 ---
 
 = Retrieve a license
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a license, providing details of the stored License API resource. Use this to examine the current license configuration and ensure compliance with licensing requirements.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
 
-
+== Usage notes
 
 Returns the stored License API resource in the JSON response body.
 

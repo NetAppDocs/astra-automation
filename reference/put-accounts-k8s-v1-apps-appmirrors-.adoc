@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-k8s-v1-apps-appmirrors-.html'
+keywords: 'app replacement,k8s apps,resource mirror,desired state,app mirror'
 summary: 'Modify an AppMirror resource for an app'
 ---
 
 = Modify an AppMirror resource for an app
 :imagesdir: ../media/
 
+[.lead]
+Modifies an AppMirror resource for an app, preserving key values while replacing the rest of the resource with new data. This is useful when you need to update an AppMirror configuration without altering certain underlying properties.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors/{appMirror_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

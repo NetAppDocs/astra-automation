@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/storage_backend_endpoints.html'
+keywords: 'storage backends,storage providers,storage services,managed clusters,backend management'
 summary: 'Astra API (ACC) storage backend endpoints'
 ---
 
 = Astra API (ACC) storage backend endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage the storage backends, which are the providers of storage services that your managed clusters and applications can use.
 
 The Storage Backend API provides access to representations of providers of storage services (storage backends) that can be used by managed clusters and applications.
 
