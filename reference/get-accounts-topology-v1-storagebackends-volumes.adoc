@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-storagebackends-volumes.html'
+keywords: 'storage backends,volume collection,resource fields,account storage,volume topology'
 summary: 'List the volumes for a storage backend'
 ---
 
 = List the volumes for a storage backend
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of volumes for a storage backend, providing access to the volume configurations for management or analysis.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/storageBackends/{storageBackend_id}/volumes`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

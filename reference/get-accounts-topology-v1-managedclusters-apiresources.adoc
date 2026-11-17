@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-apiresources.html'
+keywords: 'topology resources,managed clusters,resource collection,include fields,limit resources'
 summary: 'List the K8s API resources for a managed cluster'
 ---
 
 = List the K8s API resources for a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of Kubernetes API resources for a managed cluster. Use this to view the available resources within the specified cluster.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apiResources`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

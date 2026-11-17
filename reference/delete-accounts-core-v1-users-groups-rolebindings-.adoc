@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/delete-accounts-core-v1-users-groups-rolebindings-.html'
+keywords: 'role binding removal,user deletion,group role bindings,account management,local auth provider,cloud central provider'
 summary: 'Delete a role binding for a group associated with a user'
 ---
 
 = Delete a role binding for a group associated with a user
 :imagesdir: ../media/
 
+[.lead]
+Deletes a role binding for a group associated with a user. Use this to manage access and permissions within your system effectively.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Removes the specified Role Binding API resource.
 

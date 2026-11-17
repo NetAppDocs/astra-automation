@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-k8s-v1-apps-executionhookoverrides-.html'
+keywords: 'execution hook,hook override,replace resource,app execution,netapp hook,execution enable'
 summary: 'Modify an execution hook override resource'
 ---
 
 = Modify an execution hook override resource
 :imagesdir: ../media/
 
+[.lead]
+Modifies an execution hook override resource by replacing the entire stored resource with the provided JSON request body. Use this operation to update execution hooks that apply to a specified application.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides/{executionHookOverride_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

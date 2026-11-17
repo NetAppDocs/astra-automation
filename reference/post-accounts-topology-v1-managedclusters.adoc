@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-topology-v1-managedclusters.html'
+keywords: 'managed clusters,create managed cluster,cluster topology,account cluster,cluster resource'
 summary: 'Create a new managed cluster'
 ---
 
 = Create a new managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Creates a managed cluster, specifying desired values for the Managed Cluster API resource. Use this to configure and deploy clusters tailored to your specific requirements.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters`#
 
-
+== Usage notes
 
 Indicates desired values for the Managed Cluster API resource to be created.
 

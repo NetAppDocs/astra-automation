@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-users-tokens-.html'
+keywords: 'replace resource,modify token,user resource,account resource,token collection'
 summary: 'Modify a token'
 ---
 
 = Modify a token
 :imagesdir: ../media/
 
+[.lead]
+Modifies a token by replacing the stored resource with the provided JSON request body, while maintaining key values that are not modifiable by the user.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

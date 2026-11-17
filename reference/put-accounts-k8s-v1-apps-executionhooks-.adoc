@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-k8s-v1-apps-executionhooks-.html'
+keywords: 'execution hook,resource update,account resource,app resource,stored resource'
 summary: 'Modify an execution hook for an app'
 ---
 
 = Modify an execution hook for an app
 :imagesdir: ../media/
 
+[.lead]
+Modifies an execution hook for an app, affecting future application actions that utilize the updated hook.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

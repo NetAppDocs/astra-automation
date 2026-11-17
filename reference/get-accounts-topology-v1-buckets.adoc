@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-buckets.html'
+keywords: 'account topology,bucket resources,collection fields,resource collection,matching resources'
 summary: 'List all buckets'
 ---
 
 = List all buckets
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of buckets, providing a JSON array of all matching resources in the collection. Use this to examine the available buckets and their specified fields.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

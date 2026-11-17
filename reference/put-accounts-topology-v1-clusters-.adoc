@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-topology-v1-clusters-.html'
+keywords: 'replace resource,cluster update,managed cluster,cluster collection,account resource'
 summary: 'Modify a cluster'
 ---
 
 = Modify a cluster
 :imagesdir: ../media/
 
+[.lead]
+Modifies a cluster by replacing the entire stored resource with the supplied JSON request body. If the cluster is in a managed state, any update to credentialID will eventually trigger another attempt to collect the cluster.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-k8s-v1-apps-appmirrors.html'
+keywords: 'account resources,app resources,field matching,resource collection,k8s apps,app mirrors'
 summary: 'List the AppMirror resources for an app'
 ---
 
 = List the AppMirror resources for an app
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the AppMirror resources for an app, returning a JSON array of all matching resources in the collection. Use this to access specific fields for each resource in your application environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appMirrors`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

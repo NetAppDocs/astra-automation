@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-certificates.html'
+keywords: 'certificates,resource collection,include fields,sort order,filter fields,account id'
 summary: 'List all certificates'
 ---
 
 = List all certificates
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all certificates, providing a comprehensive list of certificate resources in the collection. Use this to view and manage certificate configurations effectively.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/certificates`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

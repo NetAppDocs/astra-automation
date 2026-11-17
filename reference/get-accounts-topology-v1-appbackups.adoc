@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-appbackups.html'
+keywords: 'account topology,backup resources,collection fields,resource limit,account data'
 summary: 'List all application backups'
 ---
 
 = List all application backups
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all application backups, providing a comprehensive list of backup resources available in the collection. You can specify individual fields in your request to tailor the information returned.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/appBackups`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/ldap_user_endpoints.html'
+keywords: 'ldap users,directory users,ldap server,read-only access,user lookup'
 summary: 'Astra API (ACC) LDAP user endpoints'
 ---
 
 = Astra API (ACC) LDAP user endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+View the users on the configured Lightweight Directory Access Protocol (LDAP) server. These endpoints are read-only.
 
 The LDAP User API provides read-only access to LDAP users within the configured LDAP server.
 

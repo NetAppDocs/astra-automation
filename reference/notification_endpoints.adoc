@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/notification_endpoints.html'
+keywords: 'notifications,user notifications,notification destinations,event notifications,notification management'
 summary: 'Astra API (ACC) notification endpoints'
 ---
 
 = Astra API (ACC) notification endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+View the events that are routed to a notification destination for each user.
 
 The Notification API provides per-user access to events with a notification destination.
 

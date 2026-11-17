@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/put-accounts-core-v1-groups-users-rolebindings-.html'
+keywords: 'replace resource,role binding,group resource,user role,account resource,stored resource'
 summary: 'Modify a role binding for a user in a group'
 ---
 
 = Modify a role binding for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Modifies a role binding for a user in a group, updating the stored resource with the provided details while maintaining key values that are not user-modifiable.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

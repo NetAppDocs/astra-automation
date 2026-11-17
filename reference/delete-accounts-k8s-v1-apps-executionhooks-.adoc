@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-k8s-v1-apps-executionhooks-.html'
+keywords: 'execution hook removal,delete execution hook,remove execution hook,kubernetes app,execution hook delete,execution hook actions'
 summary: 'Delete an execution hook for an app'
 ---
 
 = Delete an execution hook for an app
 :imagesdir: ../media/
 
+[.lead]
+Deletes an execution hook for an app, preventing it from running in future actions.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHooks/{executionHook_id}`#
 
-
+== Usage notes
 
 Removes the specified Execution Hook API resource.
 

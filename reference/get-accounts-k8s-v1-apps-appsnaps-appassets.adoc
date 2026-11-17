@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-k8s-v1-apps-appsnaps-appassets.html'
+keywords: 'account resources,app resources,k8s apps,app snapshots,app assets'
 summary: 'List application assets for an application snapshot'
 ---
 
 = List application assets for an application snapshot
 :imagesdir: ../media/
 
+[.lead]
+Retrieves application assets for an application snapshot, providing a detailed view of resources associated with the snapshot.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appSnaps/{appSnap_id}/appAssets`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

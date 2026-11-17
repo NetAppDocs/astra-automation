@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/entitlement_endpoints.html'
+keywords: 'entitlements,licensed features,enabled capacities,active subscriptions,account entitlements'
 summary: 'Astra API (ACC) entitlement endpoints'
 ---
 
 = Astra API (ACC) entitlement endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Check which features or capacities the active licenses and subscriptions enable for your account.
 
 The Entitlement API represents which features or capacities are enabled by the licenses and subscriptions active for an account.
 

@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/application_backup_endpoints.html'
+keywords: 'application backups,backup creation,managed applications,data protection,backup retrieval'
 summary: 'Astra API (ACC) application backup endpoints'
 ---
 
 = Astra API (ACC) application backup endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Create and view backups of a managed application to protect its data.
 
 The Application Backup API enables a user to create and view backups of a managed application.
 

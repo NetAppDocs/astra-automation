@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-features.html'
+keywords: 'account features,resource collection,field filtering,sort order,resource count,skip resources'
 summary: 'List all features'
 ---
 
 = List all features
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all features available in Astra API, providing a comprehensive list of resources in the collection. Use this to view specific fields for each feature according to your request criteria.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/features`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

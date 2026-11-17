@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-subscriptions-.html'
+keywords: 'subscription removal,delete subscription,subscription charges,account subscription,subscription deletion'
 summary: 'Delete a subscription'
 ---
 
 = Delete a subscription
 :imagesdir: ../media/
 
+[.lead]
+Deletes a subscription, removing the specified Subscription API resource along with all associated charges.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions/{subscription_id}`#
 
-
+== Usage notes
 
 Removes the specified Subscription API resource.
 

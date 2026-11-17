@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts.html'
+keywords: 'accounts collection,resource listing,json array,resource fields,resource order'
 summary: 'List all accounts'
 ---
 
 = List all accounts
 :imagesdir: ../media/
 
+[.lead]
+Retrieves all accounts in Astra API, returning a JSON array of matching resources in the collection. Use this to view account details based on specified fields.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

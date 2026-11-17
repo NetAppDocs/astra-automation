@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-core-v1-users-groups-.html'
+keywords: 'account resource,user resource,group collection,stored group,group resource'
 summary: 'Retrieve a group for a user'
 ---
 
 = Retrieve a group for a user
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a group for a user, providing the stored group information in a structured format.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}`#
 
-
+== Usage notes
 
 Returns the stored Group API resource in the JSON response body.
 

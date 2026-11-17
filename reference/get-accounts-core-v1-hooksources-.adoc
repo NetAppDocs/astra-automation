@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-hooksources-.html'
+keywords: 'hook source,hook collection,account resource,stored resource,json response'
 summary: 'Retrieve a hook source'
 ---
 
 = Retrieve a hook source
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a hook source, returning the stored Hook Source API resource in the response. Use this to access specific hook source configurations for integration tasks.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
 
-
+== Usage notes
 
 Returns the stored Hook Source API resource in the JSON response body.
 

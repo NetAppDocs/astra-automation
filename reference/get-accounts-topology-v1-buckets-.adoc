@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-buckets-.html'
+keywords: 'bucket resource,stored bucket,account bucket,topology bucket,bucket collection'
 summary: 'Retrieve a bucket'
 ---
 
 = Retrieve a bucket
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a bucket, providing the stored bucket configuration details in the response.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/buckets/{bucket_id}`#
 
-
+== Usage notes
 
 Returns the stored Bucket API resource in the JSON response body.
 

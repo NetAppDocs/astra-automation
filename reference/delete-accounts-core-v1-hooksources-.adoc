@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-hooksources-.html'
+keywords: 'hook source,remove resource,delete hook,account management,remove hook'
 summary: 'Delete a hook source'
 ---
 
 = Delete a hook source
 :imagesdir: ../media/
 
+[.lead]
+Deletes a hook source, removing the specified resource from the system.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/hookSources/{hookSource_id}`#
 
-
+== Usage notes
 
 Removes the specified Hook Source API resource.
 

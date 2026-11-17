@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-subscriptions.html'
+keywords: 'subscriptions,matching resources,collection fields,account id,resource listing,sort order'
 summary: 'List all subscriptions'
 ---
 
 = List all subscriptions
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of subscriptions, providing details for each subscription in the collection. Use this to view and manage your subscriptions efficiently.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/subscriptions`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

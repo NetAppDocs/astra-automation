@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-upgrades.html'
+keywords: 'account upgrades,collection resources,matching resources,resource fields,field order'
 summary: 'List all upgrades'
 ---
 
 = List all upgrades
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of upgrades, providing details of all matching resources in the collection. Use this to access specific fields for each resource in the order specified.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/upgrades`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

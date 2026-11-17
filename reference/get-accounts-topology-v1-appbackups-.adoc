@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-appbackups-.html'
+keywords: 'account topology,application backup,stored backup,backup resource,app backup collection'
 summary: 'Retrieve an application backup'
 ---
 
 = Retrieve an application backup
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an application backup, providing access to the stored backup resource for further inspection or recovery purposes.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/appBackups/{appBackup_id}`#
 
-
+== Usage notes
 
 Returns the stored Application Backup API resource in the JSON response body.
 

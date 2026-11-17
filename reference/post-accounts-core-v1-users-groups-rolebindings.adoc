@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/post-accounts-core-v1-users-groups-rolebindings.html'
+keywords: 'role binding,account role,user role,group role,core role binding,role creation'
 summary: 'Create a new role binding for a group associated with a user'
 ---
 
 = Create a new role binding for a group associated with a user
 :imagesdir: ../media/
 
+[.lead]
+Creates a role binding for a group associated with a user. Use this to assign specific permissions to a group within the Astra API environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/groups/{group_id}/roleBindings`#
 
-
+== Usage notes
 
 Indicates desired values for the Role Binding API resource to be created.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-core-v1-groups-users-unreadnotifications-.html'
+keywords: 'account notifications,unread notifications,user notifications,notification resource,group notifications'
 summary: 'Retrieve an unread notification for a user in a group'
 ---
 
 = Retrieve an unread notification for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an unread notification for a user in a group, providing the details of notifications that have not yet been acknowledged.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 
-
+== Usage notes
 
 Returns the stored Unread Notification API resource in the JSON response body.
 

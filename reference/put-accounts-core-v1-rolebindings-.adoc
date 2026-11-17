@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-rolebindings-.html'
+keywords: 'replace resource,role binding,resource modification,account role,role management'
 summary: 'Modify a role binding'
 ---
 
 = Modify a role binding
 :imagesdir: ../media/
 
+[.lead]
+Modifies a role binding to update its configuration based on the provided JSON request body.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

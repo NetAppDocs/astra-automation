@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-rolebindings-.html'
+keywords: 'role binding,roleBinding resource,account role binding,user role binding,group role binding,role authorization'
 summary: 'Retrieve a role binding'
 ---
 
 = Retrieve a role binding
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a role binding, providing access to the stored Role Binding API resource details. Use this endpoint to view role bindings associated with specific user or group IDs.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Returns the stored Role Binding API resource in the JSON response body.
 If the request is against /accounts/\{account_id}/core/v1/users/\{user_id}/roleBindings endpoint, only roleBinding resources where the user ID matches the user ID in the request URL will be permitted to be read.

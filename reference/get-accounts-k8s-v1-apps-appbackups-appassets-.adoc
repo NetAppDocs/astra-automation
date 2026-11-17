@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/get-accounts-k8s-v1-apps-appbackups-appassets-.html'
+keywords: 'account resource,app resource,app backup,app asset,stored resource,json response'
 summary: 'Retrieve an application asset from an application backup for an app'
 ---
 
 = Retrieve an application asset from an application backup for an app
 :imagesdir: ../media/
 
+[.lead]
+Retrieves an application asset from an application backup, providing the stored resource in the JSON response body. Use this endpoint to access specific assets for recovery or analysis.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/appBackups/{appBackup_id}/appAssets/{appAsset_id}`#
 
-
+== Usage notes
 
 Returns the stored Application Asset API resource in the JSON response body.
 

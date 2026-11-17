@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-packages-.html'
+keywords: 'stored package,package resource,package collection,account resource,account id'
 summary: 'Retrieve a package'
 ---
 
 = Retrieve a package
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a stored package, providing access to the package's API resource details.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/packages/{package_id}`#
 
-
+== Usage notes
 
 Returns the stored Package API resource in the JSON response body.
 

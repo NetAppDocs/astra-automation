@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/execution_hook_endpoints.html'
+keywords: 'execution hooks,hook configuration,hook sources,application hooks,hook management'
 summary: 'Astra API (ACC) execution hook endpoints'
 ---
 
 = Astra API (ACC) execution hook endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Create and manage execution hooks for your applications. Each hook holds additional configuration and refers to a hook source.
 
 The Execution Hook API enables simple management of execution hooks. Execution hooks contain additional configuration and references to a hook source resource.
 

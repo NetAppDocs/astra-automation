@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-clouds-clusters-namespaces-.html'
+keywords: 'namespace resource,stored namespace,namespace collection,cloud resource,cluster resource'
 summary: 'Retrieve a namespace for a cloud'
 ---
 
 = Retrieve a namespace for a cloud
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a namespace for a cloud, providing the stored Namespace API resource for cloud operations.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters/{cluster_id}/namespaces/{namespace_id}`#
 
-
+== Usage notes
 
 Returns the stored Namespace API resource in the JSON response body.
 

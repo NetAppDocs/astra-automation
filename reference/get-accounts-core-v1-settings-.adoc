@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-core-v1-settings-.html'
+keywords: 'settings retrieval,account settings,stored settings,setting collection,resource settings'
 summary: 'Retrieve a setting'
 ---
 
 = Retrieve a setting
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a setting, providing the stored configuration details for reference or modification.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/settings/{setting_id}`#
 
-
+== Usage notes
 
 Returns the stored Setting API resource in the JSON response body.
 

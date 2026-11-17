@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/post-accounts-k8s-v1-apps-executionhookoverrides.html'
+keywords: 'execution hook,hook override,app resource,account resource,k8s app'
 summary: 'Create a new execution hook override resource for an app'
 ---
 
 = Create a new execution hook override resource for an app
 :imagesdir: ../media/
 
+[.lead]
+Creates an execution hook override resource for an app, specifying the desired values for customization. Use this to tailor execution hooks according to specific application requirements.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/k8s/v1/apps/{app_id}/executionHookOverrides`#
 
-
+== Usage notes
 
 Indicates the desired values for the Execution Hook Override API resource to be created.
 

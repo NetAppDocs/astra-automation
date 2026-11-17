@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-licenses-.html'
+keywords: 'replace license,license entitlements,account licenses,license collection,entitlement recalculation'
 summary: 'Modify a license'
 ---
 
 = Modify a license
 :imagesdir: ../media/
 
+[.lead]
+Modifies a license resource by replacing the stored data with the supplied information while preserving certain key values. You might use this endpoint to update license entitlements efficiently.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/licenses/{license_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

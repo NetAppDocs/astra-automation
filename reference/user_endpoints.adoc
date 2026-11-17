@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/user_endpoints.html'
+keywords: 'astra users,user management,user accounts,user creation,user removal'
 summary: 'Astra API (ACC) user endpoints'
 ---
 
 = Astra API (ACC) user endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage the users who can interact with Astra Control.
 
 The User API represents users who are able to interact with the system.
 

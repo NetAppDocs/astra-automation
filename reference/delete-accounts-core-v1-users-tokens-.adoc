@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-users-tokens-.html'
+keywords: 'remove token,credential removal,delete token,token resource,remove credential'
 summary: 'Delete a token'
 ---
 
 = Delete a token
 :imagesdir: ../media/
 
+[.lead]
+Deletes a specified token, removing its associated credential from the credential service.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/tokens/{token_id}`#
 
-
+== Usage notes
 
 Removes the specified Token API resource.
 

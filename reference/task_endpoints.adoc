@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/task_endpoints.html'
+keywords: 'tasks,long-running tasks,task status,task monitoring,managed tasks'
 summary: 'Astra API (ACC) task endpoints'
 ---
 
 = Astra API (ACC) task endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+View the long-running tasks that Astra Control tracks so that you can monitor their progress.
 
 The Task App API provides access to managed task resources in order to represent long-running tasks.
 

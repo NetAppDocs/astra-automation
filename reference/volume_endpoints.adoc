@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/volume_endpoints.html'
+keywords: 'kubernetes volumes,application volumes,volume details,volume visibility,storage usage'
 summary: 'Astra API (ACC) volume endpoints'
 ---
 
 = Astra API (ACC) volume endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+View the Kubernetes volumes associated with your applications to see how they use storage.
 
 The Volume API provides visibility into Kubernetes volumes associated with applications.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-managedclusters-apps-appassets.html'
+keywords: 'managed clusters,app assets,resource collection,account resources,field inclusion,resource limit'
 summary: 'List the application assets for a managed cluster'
 ---
 
 = List the application assets for a managed cluster
 :imagesdir: ../media/
 
+[.lead]
+Retrieves the application assets for a managed cluster, providing a list of resources related to the cluster's applications. Use this to identify and access specific application resources within the managed cluster.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/managedClusters/{managedCluster_id}/apps/{app_id}/appAssets`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 

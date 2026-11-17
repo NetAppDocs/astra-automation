@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/appmirror_endpoints.html'
+keywords: 'appmirror,application mirroring,mirror relationships,relationship management,replication'
 summary: 'Astra API (ACC) AppMirror endpoints'
 ---
 
 = Astra API (ACC) AppMirror endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Manage AppMirror relationships for your applications.
 
 The AppMirror API enables management of AppMirror relationships.
 

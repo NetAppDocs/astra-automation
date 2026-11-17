@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-topology-v1-clusters-.html'
+keywords: 'remove cluster,cluster deletion,delete cluster resource,account cluster management,cluster cleanup'
 summary: 'Delete a cluster'
 ---
 
 = Delete a cluster
 :imagesdir: ../media/
 
+[.lead]
+Deletes the specified cluster, removing its associated API resource and cleaning up internal data structures.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clusters/{cluster_id}`#
 
-
+== Usage notes
 
 Removes the specified Cluster API resource.
 

@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: true
 permalink: 'reference/post-accounts-core-v1-groups-users-rolebindings.html'
+keywords: 'role binding,group roles,user roles,account role binding,user role binding'
 summary: 'Create a new role binding for a user in a group'
 ---
 
 = Create a new role binding for a user in a group
 :imagesdir: ../media/
 
+[.lead]
+Creates a new role binding for a user in a group, establishing permissions for the user to perform actions within the specified group context.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-post]#POST# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/users/{user_id}/roleBindings`#
 
-
+== Usage notes
 
 Indicates desired values for the Role Binding API resource to be created.
 

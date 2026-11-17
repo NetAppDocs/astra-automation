@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-users-unreadnotifications-.html'
+keywords: 'remove unread notification,unread notification delete,delete unread notification,user notification remove,account notification delete'
 summary: 'Delete an unread notification'
 ---
 
 = Delete an unread notification
 :imagesdir: ../media/
 
+[.lead]
+Deletes an unread notification, removing the specified notification resource from your notification list.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/users/{user_id}/unreadNotifications/{unreadNotification_id}`#
 
-
+== Usage notes
 
 Removes the specified Unread Notification API resource.
 

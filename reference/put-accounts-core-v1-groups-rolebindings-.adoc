@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/put-accounts-core-v1-groups-rolebindings-.html'
+keywords: 'replace resource,role bindings,account group,modify role,update role bindings'
 summary: 'Modify a  role binding for a group'
 ---
 
 = Modify a  role binding for a group
 :imagesdir: ../media/
 
+[.lead]
+Modifies a role binding for a group. Use this to update access permissions associated with specific user groups within your environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-put]#PUT# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}/roleBindings/{roleBinding_id}`#
 
-
+== Usage notes
 
 Replaces the entire stored resource with the supplied JSON request body while preserving key values that are not user-modifiable.
 

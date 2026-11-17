@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/delete-accounts-core-v1-groups-.html'
+keywords: 'remove group,group resource,delete group,role binding removal,group deletion'
 summary: 'Delete a group'
 ---
 
 = Delete a group
 :imagesdir: ../media/
 
+[.lead]
+Deletes the specified group resource. Use this to remove a group along with its associated role bindings from the system.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-delete]#DELETE# [.api-doc-code-block]#`/accounts/{account_id}/core/v1/groups/{group_id}`#
 
-
+== Usage notes
 
 Removes the specified Group API resource.
 

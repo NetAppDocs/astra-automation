@@ -3,13 +3,15 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/schedule_endpoints.html'
+keywords: 'protection schedules,scheduled operations,backup schedules,snapshot schedules,schedule management'
 summary: 'Astra API (ACC) schedule endpoints'
 ---
 
 = Astra API (ACC) schedule endpoints
 :imagesdir: ../media/
 
-
+[.lead]
+Define the schedules for data protection operations on your applications.
 
 The Schedule API allows various scheduled data protection operations to be defined.
 

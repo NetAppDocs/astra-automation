@@ -3,15 +3,21 @@ sidebar: sidebar
 api: true
 explorer: false
 permalink: 'reference/get-accounts-topology-v1-clouds-clusters.html'
+keywords: 'account topology,cloud clusters,resource collection,field filtering,limit resources'
 summary: 'List the clusters for a cloud'
 ---
 
 = List the clusters for a cloud
 :imagesdir: ../media/
 
+[.lead]
+Retrieves a list of clusters for a cloud. Use this to view the clusters available in your specified cloud environment.
+
+== HTTP method and endpoint
+
 [.api-doc-operation .api-doc-operation-get]#GET# [.api-doc-code-block]#`/accounts/{account_id}/topology/v1/clouds/{cloud_id}/clusters`#
 
-
+== Usage notes
 
 Returns a JSON array of all matching resources in the collection. If individual fields are specified in the request, the items JSON array will contain the fields requested for each matching resource in the order specified.
 
